@@ -28,7 +28,9 @@ const Inner: React.FC = () => {
   const { camera, scene, gl } = useThree();
   const world = useMemo(() => new World(), []);
   const env = useMemo(() => { const pm = new THREE.PMREMGenerator(gl); const e = pm.fromScene(new RoomEnvironment(), 0.03).texture; pm.dispose(); return e; }, [gl]);
-  useEffect(() => { scene.environment = env; scene.environmentIntensity = 1.7; gl.toneMappingExposure = 1.0; }, [scene, env, gl]);
+  // set synchronously so the very first rendered frame (stills) already has the environment
+  const envI = (getInputProps() as { envI?: number }).envI ?? 0.15;
+  scene.environment = env; scene.environmentIntensity = envI;
   const fx = useMemo(() => ({
     bloom: new BloomEffect({ blendFunction: BlendFunction.ADD, intensity: 0.55, luminanceThreshold: 1.05, luminanceSmoothing: 0.15, mipmapBlur: true, levels: 5, radius: 0.45 }),
     tone: new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC }),
@@ -230,7 +232,7 @@ const TickBadge: React.FC<{ t: number }> = ({ t }) => {
   const fr = quartzClock(t) % 1;
   const pop = 1 + 0.25 * Math.exp(-fr * 8);
   return (
-    <AbsoluteFill style={{ alignItems: "flex-end", top: 420, right: 90, opacity: k }}>
+    <AbsoluteFill style={{ alignItems: "center", top: 430, left: 330, opacity: k }}>
       <div style={{ transform: `scale(${pop})`, fontFamily: HF, fontWeight: 800, fontSize: 80, color: "#ff5a5a", textShadow: outline(5) }}>टिक!</div>
     </AbsoluteFill>
   );
