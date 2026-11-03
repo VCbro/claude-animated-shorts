@@ -246,7 +246,7 @@ export const SHOTS: Shot[] = [
   // 14. the hurt bird
   { a: 55.6, b: 61.0, dof: 10, cam: (t, u) => creep({ pos: [3.3, 0.85, -52.6], look: [1.7, 0.45, -50.0], fov: 42 }, u, 0.08), focus: () => [2.0, 0.4, -50.2] },
   // 15. planting the sapling; the glow bursts and we pull back
-  { a: 61.0, b: 68.0, dof: 8, cam: (t, u) => { const k = glide((t - T_BURST + 0.3) / 2.4); return { pos: lerp3([-0.4, 1.25, -53.6], [0.6, 4.2, -59.5], k), look: lerp3([-1.4, 0.45, -50.5], [-0.8, 0.8, -48.0], k), fov: lerp(40, 54, k) }; }, focus: () => [-1.5, 0.4, -50.5] },
+  { a: 61.0, b: 68.0, dof: 8, cam: (t, u) => { const k = glide((t - T_BURST + 0.3) / 2.4); return { pos: lerp3([-0.4, 1.25, -53.6], [0.6, 4.2, -59.5], k), look: lerp3([-1.4, 0.45, -50.5], [-0.8, 0.8, -48.0], k), fov: lerp(40 * (1 - 0.07 * smooth(clamp01((t - 61.0) / 4.4))), 54, k) }; }, focus: () => [-1.5, 0.4, -50.5] },
   // 16. the whole forest celebrates: slow orbit
   { a: 68.0, b: 75.0, dof: 0, cam: (t, u) => { const a = lerp(0.35, -0.35, glide(u)); return { pos: [Math.sin(a) * 10.5, 3.2, -47.8 + Math.cos(a) * 6.8], look: [0, 1.6, -52], fov: 52 }; } },
   // 17. laughing together
