@@ -256,3 +256,19 @@ export const SHOTS: Shot[] = [
 ];
 export const shotIndexAt = (t: number) => { const i = SHOTS.findIndex((s) => t >= s.a && t < s.b); return i < 0 ? SHOTS.length - 1 : i; };
 export const camAt = (t: number): Cam => { const s = SHOTS[shotIndexAt(t)]; return s.cam(t, (t - s.a) / (s.b - s.a)); };
+
+// ---------------- vertical (9:16 Shorts) framing ----------------
+// Same cameras, wider vertical lens: the 9:16 frame keeps ~K of the 16:9 frame's width (characters stay the
+// same pixel size) and gains sky/ground above and below. Per-shot nudges re-centre two-shots.
+export const VK = 0.6;
+export const VSHOT: Record<number, { look?: V3; pos?: V3; k?: number }> = {
+  14: { look: [0.55, 0, 0.2] }, // bird shot: keep Sheru in frame
+};
+export const vertCam = (t: number): Cam => {
+  const i = shotIndexAt(t), c = camAt(t), v = VSHOT[i] ?? {};
+  const k = v.k ?? VK;
+  const tv = k * (16 / 9) * (16 / 9) * Math.tan((c.fov * Math.PI) / 360);
+  const fov = Math.min(84, (Math.atan(tv) * 360) / Math.PI);
+  const add = (a: V3, b?: V3): V3 => (b ? [a[0] + b[0], a[1] + b[1], a[2] + b[2]] : a);
+  return { ...c, pos: add(c.pos, v.pos), look: add(c.look, v.look), fov };
+};

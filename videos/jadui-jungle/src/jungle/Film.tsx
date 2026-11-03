@@ -19,7 +19,6 @@ import { MoodGrade } from "./grade";
 import { FPS, TOTAL, SHOTS, shotIndexAt, glowAt, T_BURST, lineAt, clamp01 } from "./story";
 
 export const FILM_FRAMES = TOTAL;
-const W = 1920, H = 1080;
 
 type Toggles = { ink: boolean; lens: boolean; bloom: boolean; grade: boolean; overlay: boolean; msaa: number; shadows: boolean; dpr?: number };
 const toggles = (): Toggles => ({ ink: true, lens: false, bloom: true, grade: true, overlay: true, msaa: 0, shadows: true, ...((getInputProps() as { post?: Partial<Toggles> }).post ?? {}) });
@@ -79,14 +78,17 @@ const outline = (px: number, c = "#1d1030") => {
   return s.join(",");
 };
 
+const useV = () => { const { width, height } = useVideoConfig(); return height > width; };
+
 const Title: React.FC<{ t: number }> = ({ t }) => {
+  const V = useV();
   if (t > 5.0) return null;
   const a = interpolate(t, [0.3, 1.0, 4.1, 4.8], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const s = interpolate(t, [0.3, 1.1], [0.85, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(2)) });
   return (
-    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: 120, opacity: a }}>
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: V ? 300 : 120, opacity: a }}>
       <div style={{ transform: `scale(${s})`, textAlign: "center" }}>
-        <div style={{ fontFamily: HFONT, fontWeight: 800, fontSize: 104, color: "#ffe066", textShadow: outline(7) + ", 0 10px 24px rgba(0,0,0,0.35)", lineHeight: 1.15 }}>जादुई जंगल का रहस्य</div>
+        <div style={{ fontFamily: HFONT, fontWeight: 800, fontSize: V ? 96 : 104, color: "#ffe066", textShadow: outline(7) + ", 0 10px 24px rgba(0,0,0,0.35)", lineHeight: 1.15 }}>जादुई जंगल का रहस्य</div>
         <div style={{ fontFamily: HFONT, fontWeight: 700, fontSize: 56, color: "#ffffff", textShadow: outline(5), marginTop: 6 }}>एक छोटी सी दोस्ती</div>
       </div>
     </AbsoluteFill>
@@ -97,6 +99,7 @@ const SPK_COL: Record<string, string> = { narrator: "#ffffff", chintu: "#ffe14d"
 const SPK_NAME: Record<string, string> = { narrator: "", chintu: "चिंटू", sheru: "शेरू", tree: "जादुई पेड़" };
 
 const Subtitle: React.FC<{ t: number }> = ({ t }) => {
+  const V = useV();
   const L = lineAt(t);
   if (!L || L.t0 > 81) return null; // the moral has its own title
   const a = interpolate(t, [L.t0 - 0.1, L.t0 + 0.08, L.t1 + 0.3, L.t1 + 0.45], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -106,8 +109,8 @@ const Subtitle: React.FC<{ t: number }> = ({ t }) => {
   for (let i = 0; i < L.words.length; i++) if (t >= L.words[i].t) spoken = i + 1;
   const name = SPK_NAME[L.spk];
   return (
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 54, opacity: a }}>
-      <div style={{ maxWidth: 1760, textAlign: "center", fontFamily: SFONT, fontWeight: 700, fontSize: 46, lineHeight: 1.35, padding: "10px 34px 12px", borderRadius: 22, background: "rgba(20,10,35,0.42)" }}>
+    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: V ? 420 : 54, opacity: a }}>
+      <div style={{ maxWidth: V ? 960 : 1760, textAlign: "center", fontFamily: SFONT, fontWeight: 700, fontSize: V ? 52 : 46, lineHeight: 1.35, padding: "10px 34px 12px", borderRadius: 22, background: "rgba(20,10,35,0.42)" }}>
         {name ? <span style={{ color: SPK_COL[L.spk], textShadow: outline(3.5), marginRight: 18 }}>{name}:</span> : null}
         {words.map((w, i) => (
           <span key={i} style={{ color: i < spoken ? SPK_COL[L.spk] : "#ffffff", textShadow: outline(3.5), opacity: i < spoken || L.spk !== "narrator" ? 1 : 0.92 }}>{w}{i < words.length - 1 ? " " : ""}</span>
@@ -119,15 +122,16 @@ const Subtitle: React.FC<{ t: number }> = ({ t }) => {
 
 const Moral: React.FC<{ f: number }> = ({ f }) => {
   const { fps } = useVideoConfig();
+  const V = useV();
   const t = f / fps;
   if (t < 81.5) return null;
   const words = ["सच्ची", "दोस्ती", "और", "दया", "से", "दुनिया", "खूबसूरत", "बनती", "है!"];
   const tag = spring({ frame: f - Math.round(81.5 * fps), fps, config: { damping: 12 } });
   const out = interpolate(t, [85.2, 85.7], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: 70, opacity: out }}>
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: V ? 330 : 70, opacity: out }}>
       <div style={{ transform: `scale(${tag})`, fontFamily: HFONT, fontWeight: 800, fontSize: 70, color: "#ff8a3d", textShadow: outline(6, "#ffffff") + ", 0 6px 18px rgba(0,0,0,0.3)" }}>सीख</div>
-      <div style={{ marginTop: 6, maxWidth: 1500, textAlign: "center" }}>
+      <div style={{ marginTop: 6, maxWidth: V ? 980 : 1500, textAlign: "center" }}>
         {words.map((w, i) => {
           const k = spring({ frame: f - Math.round((81.9 + i * 0.32) * fps), fps, config: { damping: 9, stiffness: 140 } });
           return <span key={i} style={{ display: "inline-block", margin: "0 12px", transform: `translateY(${(1 - k) * 60}px) scale(${0.4 + 0.6 * k})`, opacity: clamp01(k * 1.5), fontFamily: HFONT, fontWeight: 800, fontSize: 84, color: i === 1 || i === 3 ? "#ffe066" : "#ffffff", textShadow: outline(7) + ", 0 8px 22px rgba(0,0,0,0.35)" }}>{w}</span>;
@@ -139,14 +143,15 @@ const Moral: React.FC<{ f: number }> = ({ f }) => {
 
 const EndCard: React.FC<{ f: number }> = ({ f }) => {
   const { fps } = useVideoConfig();
+  const V = useV();
   const t = f / fps;
   if (t < 85.4) return null;
   const k = spring({ frame: f - Math.round(85.4 * fps), fps, config: { damping: 14 } });
   const b = spring({ frame: f - Math.round(86.0 * fps), fps, config: { damping: 8, stiffness: 160 } });
   const ring = Math.sin((t - 86) * 9) * 14 * clamp01(1 - (t - 86.2) / 1.2) * (t > 86.2 ? 1 : 0);
   return (
-    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: 110 }}>
-      <div style={{ transform: `scale(${k})`, fontFamily: HFONT, fontWeight: 800, fontSize: 92, color: "#ffe066", textShadow: outline(7) + ", 0 10px 24px rgba(0,0,0,0.35)" }}>देखने के लिए धन्यवाद!</div>
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: V ? 330 : 110 }}>
+      <div style={{ transform: `scale(${k})`, fontFamily: HFONT, fontWeight: 800, fontSize: V ? 80 : 92, color: "#ffe066", textShadow: outline(7) + ", 0 10px 24px rgba(0,0,0,0.35)" }}>देखने के लिए धन्यवाद!</div>
       <div style={{ marginTop: 26, display: "flex", alignItems: "center", gap: 26, transform: `scale(${b})` }}>
         <div style={{ background: "linear-gradient(#ff3b3b, #d91414)", color: "white", fontFamily: HFONT, fontWeight: 800, fontSize: 50, padding: "8px 46px 4px", borderRadius: 60, border: "5px solid #fff", boxShadow: "0 10px 26px rgba(0,0,0,0.35)" }}>सब्सक्राइब करें</div>
         <svg width="84" height="84" viewBox="0 0 64 64" style={{ transform: `rotate(${ring}deg)`, filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.35))" }}>
@@ -154,7 +159,7 @@ const EndCard: React.FC<{ f: number }> = ({ f }) => {
           <circle cx="32" cy="57" r="5" fill="#ffd23a" stroke="#1d1030" strokeWidth="3" />
         </svg>
       </div>
-      <div style={{ marginTop: 18, transform: `scale(${b})`, fontFamily: HFONT, fontWeight: 700, fontSize: 44, color: "#ffffff", textShadow: outline(4) }}>👍 लाइक करें • शेयर करें • अगली कहानी के लिए जुड़े रहें!</div>
+      <div style={{ marginTop: 18, transform: `scale(${b})`, fontFamily: HFONT, fontWeight: 700, fontSize: 44, color: "#ffffff", textShadow: outline(4), textAlign: "center", lineHeight: 1.3 }}>{V ? <>👍 लाइक करें • शेयर करें<br />अगली कहानी के लिए जुड़े रहें!</> : "👍 लाइक करें • शेयर करें • अगली कहानी के लिए जुड़े रहें!"}</div>
     </AbsoluteFill>
   );
 };
@@ -171,6 +176,7 @@ const useFonts = () => {
 
 export const Film: React.FC = () => {
   const f = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const t = f / FPS;
   const on = toggles();
   useFonts();

@@ -1,21 +1,21 @@
 """Build voice.wav (48 kHz) + lines.json (absolute word times) + src/lines.ts from the script table below."""
-import json, sys, os
+import json, sys, os, re
 import numpy as np
 import soundfile as sf
 from scipy.signal import resample_poly, fftconvolve
 
 sys.path.insert(0, os.path.dirname(__file__))
-import espeak_tts as T
+import piper_tts as P
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = 48000
 TOTAL = 88.0
 
-VOICES = {  # espeak voice, rate, pitch, range, post pitch factor (resample), reverb
-    "narrator": ("hi+m3", 138, 42, 55, 1.0, 0.10),
-    "chintu": ("hi+f2", 160, 88, 70, 1.08, 0.04),
-    "sheru": ("hi+f4", 172, 99, 95, 1.18, 0.04),
-    "tree": ("hi+m7", 128, 18, 40, 0.80, 0.35),
+VOICES = {  # piper model, length scale, pitch factor (resample: >1 = higher, younger), reverb, gain
+    "narrator": ("rohan-medium", 1.04, 1.0, 0.08, 0.72),
+    "chintu": ("priyamvada-medium", 0.98, 1.13, 0.03, 0.74),
+    "sheru": ("priyamvada-medium", 0.92, 1.24, 0.03, 0.70),
+    "tree": ("pratham-medium", 1.30, 0.86, 0.30, 0.78),
 }
 
 LINES = [  # (start s, speaker, text)
@@ -51,17 +51,53 @@ def reverb(x, amt):
     return (out + amt * wet * np.max(np.abs(x))).astype(np.float32)
 
 
+PUNCT = re.compile(r"[,!?।:.]")
+
+
+def word_times(a, sr, text):
+    """Piper gives no word timings: map phrases (split at punctuation) onto the pauses in the audio,
+    then spread each phrase's words over its span by length."""
+    hop = int(sr * 0.01)
+    env = np.array([np.sqrt(np.mean(a[i:i + hop] ** 2)) for i in range(0, len(a) - hop, hop)])
+    on = env > max(env.max() * 0.06, 1e-4)
+    idx = np.nonzero(on)[0]
+    s0, s1 = idx[0], idx[-1] + 1
+    gaps = []  # (length, start, end) of silent runs inside the speech
+    i = s0
+    while i < s1:
+        if not on[i]:
+            j = i
+            while j < s1 and not on[j]:
+                j += 1
+            if j - i >= 8:
+                gaps.append((j - i, i, j))
+            i = j
+        else:
+            i += 1
+    phrases = [p.split() for p in PUNCT.split(text) if p.strip()]
+    k = len(phrases) - 1
+    cut = sorted(sorted(gaps, reverse=True)[:k], key=lambda g: g[1])
+    if len(cut) < k:  # fewer pauses than phrases: treat as one phrase
+        phrases = [sum(phrases, [])]; cut = []
+    bounds = [s0] + [x for g in cut for x in (g[1], g[2])] + [s1]
+    out = []
+    for p, (b0, b1) in zip(phrases, zip(bounds[0::2], bounds[1::2])):
+        wts = [len(w) + 1.5 for w in p]
+        tot = sum(wts); acc = 0.0
+        for w, wt in zip(p, wts):
+            out.append((round((b0 + (b1 - b0) * acc / tot) * 0.01, 3), w))
+            acc += wt
+    return out
+
+
 def render(text, spk):
-    v, rate, pitch, rng, pf, rv = VOICES[spk]
-    a, words = T.synth(text, v, rate, pitch, rng)
-    # 22050 -> 48000, with a resample pitch shift (pf>1 raises pitch and shortens time)
-    up, down = 480, 221
-    a48 = resample_poly(a, up, int(round(down * pf)))
-    words = [(t / pf, w) for t, w in words]
-    # gentle warmth: tilt-down highs a little, normalise
-    a48 = np.convolve(a48, [0.25, 0.5, 0.25], mode="same").astype(np.float32)
+    model, ls, pf, rv, gain = VOICES[spk]
+    a, sr = P.synth(text, model, length_scale=ls * pf)
+    # 22050 -> 48000 with a resample pitch shift (pf>1 raises pitch and formants -> younger voice)
+    a48 = resample_poly(a, 480, int(round(221 * pf))).astype(np.float32)
+    words = word_times(a48, SR, text)
     a48 /= np.max(np.abs(a48)) + 1e-9
-    a48 *= 0.7
+    a48 *= gain
     a48 = reverb(a48, rv)
     return a48, words
 

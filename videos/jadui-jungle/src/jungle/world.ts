@@ -5,7 +5,7 @@ import { NOINK } from "./ink";
 import { drawChintu, drawSheru, drawTreeFace, drawBird, drawRabbit, drawSquirrel, drawButterfly, drawFlower, FLOWER_CELLS, ChintuPose, SheruPose, Expr, Arms } from "./chars";
 import {
   V3, ground, pathX, standY, RIVER_Z, RIVER_HALF, WATER_Y, CLEARING, CLEAR_R, MAGIC, HIDE_TREE, BUSH, BIRD_AT, SAPLING, STONES,
-  glowAt, treeGlowAt, treeEyesAt, talkAt, blinkAt, chintuAt, sheruAt, camAt, Act, smooth, clamp01, T_BURST, lerp, shotIndexAt,
+  glowAt, treeGlowAt, treeEyesAt, talkAt, blinkAt, chintuAt, sheruAt, camAt, vertCam, Act, smooth, clamp01, T_BURST, lerp, shotIndexAt,
 } from "./story";
 
 // ---------------- helpers ----------------
@@ -539,7 +539,7 @@ export class World {
 
   // ---------- per frame ----------
   update(t: number, cam: THREE.PerspectiveCamera, size: { w: number; h: number }) {
-    const c = camAt(t);
+    const c = size.h > size.w ? vertCam(t) : camAt(t);
     cam.position.set(...c.pos); cam.lookAt(...c.look); cam.fov = c.fov; cam.aspect = size.w / size.h; cam.updateProjectionMatrix();
     cam.updateMatrixWorld();
     const G = glowAt(t), TG = treeGlowAt(t);

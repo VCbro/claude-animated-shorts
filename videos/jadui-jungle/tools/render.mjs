@@ -6,7 +6,7 @@ const [out, range, conc = "2"] = process.argv.slice(2);
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
 const browserExecutable = process.env.CHROME_PATH || "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell";
 const chromiumOptions = { gl: "swangle" };
-const composition = await selectComposition({ serveUrl, id: "JaduiJungle", browserExecutable, chromiumOptions });
+const composition = await selectComposition({ serveUrl, id: process.env.COMP || "JaduiJungle", browserExecutable, chromiumOptions });
 const frameRange = range && range !== "all" ? range.split("-").map(Number) : null;
 const t0 = Date.now(); let last = 0;
 await renderMedia({ serveUrl, composition, codec: "h264", crf: 17, outputLocation: out, browserExecutable, chromiumOptions, concurrency: Number(conc), frameRange, timeoutInMilliseconds: 180000,
