@@ -1,0 +1,20 @@
+{"title": "Meter zero tha. Par density?", "pace": 1.0,
+ "music": {"bpm": 98, "root": 48, "mode": "minor"},
+ "lines": [
+  {"id": "L1", "tts": "मीटर ज़ीरो था।", "cap": "Meter zero tha.", "hl": ["zero"], "gap": 0.0},
+  {"id": "L2", "tts": "पर डेंसिटी, किसी ने नहीं देखी।", "cap": "Par density, kisi ne nahi dekhi.", "hl": ["density,"], "gap": 0.15},
+  {"id": "L3", "tts": "ज़ीरो सिर्फ़ बताता है, कितना पेट्रोल गया।", "cap": "Zero sirf batata hai, kitna petrol gaya.", "hl": ["kitna"], "gap": 0.25},
+  {"id": "L4", "tts": "ये नहीं बताता, कि पेट्रोल कैसा है।", "cap": "Ye nahi batata, ki petrol kaisa hai.", "red": ["kaisa"]},
+  {"id": "L5", "tts": "इसलिए मशीन पे एक और नंबर होता है। डेंसिटी।", "cap": "Isliye machine pe ek aur number hota hai. Density.", "hl": ["Density."], "gap": 0.3},
+  {"id": "L6", "tts": "पेट्रोल के लिए, ये सात सौ बीस से सात सौ पचहत्तर के बीच होना चाहिए।", "cap": "Petrol ke liye, ye 720 se 775 ke beech hona chahiye.", "hl": ["720", "775"]},
+  {"id": "L7", "tts": "बाहर हो, या ज़ीरो दिखे? तो सवाल पूछो।", "cap": "Bahar ho, ya zero dikhe? Toh sawaal poochho.", "red": ["Bahar"], "hl": ["sawaal"], "gap": 0.2},
+  {"id": "L8", "tts": "क्योंकि मिलावट वाला पेट्रोल, इंजन को अंदर से खराब करता है।", "cap": "Kyunki milawat wala petrol, engine ko andar se kharab karta hai.", "red": ["milawat", "kharab"], "gap": 0.25},
+  {"id": "L9", "tts": "और ये चेक करवाना, तुम्हारा हक़ है। बिल्कुल फ्री।", "cap": "Aur ye check karwana, tumhara haq hai. Bilkul free.", "hl": ["haq", "free."], "gap": 0.25},
+  {"id": "L10", "tts": "तो तीन चीज़ें याद रखो।", "cap": "Toh 3 cheezein yaad rakho.", "hl": ["3"], "gap": 0.35},
+  {"id": "L11", "tts": "एक। भरवाने से पहले, मशीन पे डेंसिटी देखो।", "cap": "Ek. Bharwane se pehle, machine pe density dekho.", "hl": ["density"], "gap": 0.2},
+  {"id": "L12", "tts": "दो। शक हो, तो फ़िल्टर पेपर टेस्ट मांगो। दो बूंद, और दाग़? मतलब गड़बड़।", "cap": "Do. Shak ho, toh filter paper test maango. Do boond, aur daag? Matlab gadbad.", "hl": ["filter", "paper"], "red": ["daag?", "gadbad."], "gap": 0.3},
+  {"id": "L13", "tts": "तीन। पंप मना करे, तो बोर्ड पे लिखी हेल्पलाइन, या उन्नीस सौ पंद्रह पे शिकायत करो।", "cap": "Teen. Pump mana kare, toh board pe likhi helpline, ya 1915 pe shikayat karo.", "hl": ["1915"], "gap": 0.3},
+  {"id": "L14", "tts": "याद रखो। ज़ीरो भी, डेंसिटी भी।", "cap": "Yaad rakho. Zero bhi, density bhi.", "hl": ["density"], "gap": 0.35},
+  {"id": "L15", "tts": "अपने बाइक वाले दोस्त को, ये भेजो।", "cap": "Apne bike wale dost ko, ye bhejo.", "hl": ["bhejo."], "gap": 0.3},
+  {"id": "L16", "tts": "और बताओ, तुमने कभी डेंसिटी देखी है? हाँ या ना?", "cap": "Aur batao, tumne kabhi density dekhi hai? Haan ya na?", "hl": ["Haan"], "gap": 0.2}
+ ]}

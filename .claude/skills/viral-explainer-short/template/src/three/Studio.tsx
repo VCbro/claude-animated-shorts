@@ -102,3 +102,20 @@ export const Phone3D: React.FC<{ position?: V3; rotation?: V3; draw: (g: CanvasR
     {glow && <mesh position={[0, 0, -0.02]}><planeGeometry args={[0.5, 0.9]} /><meshBasicMaterial color={glow} transparent opacity={0.12} /></mesh>}
   </group>;
 };
+
+/** Fuel dispenser in 3D (our own design: graphite body, lime header, LCD face, hose + nozzle). Display from `draw`. */
+export const Dispenser3D: React.FC<{ position?: V3; rotY?: number; draw: (g: CanvasRenderingContext2D) => void; drawKey?: string }> = ({ position = [0, 0, 0], rotY = 0, draw, drawKey = "" }) => {
+  const face = useCanvasTex(512, 640, draw, [drawKey]);
+  const body = useMemo(() => new RoundedBoxGeometry(0.9, 1.9, 0.5, 6, 0.06), []);
+  const head = useMemo(() => new RoundedBoxGeometry(0.96, 0.22, 0.56, 4, 0.04), []);
+  const hose = useMemo(() => new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(0.46, 0.9, 0.05), new THREE.Vector3(0.62, 0.55, 0.15), new THREE.Vector3(0.6, 0.1, 0.25), new THREE.Vector3(0.52, 0.55, 0.3)]), 40, 0.022, 10), []);
+  return <group position={position} rotation={[0, rotY, 0]}>
+    <mesh geometry={body} position={[0, 0.95, 0]}><meshPhysicalMaterial color="#1c2120" roughness={0.35} metalness={0.55} clearcoat={0.6} /></mesh>
+    <mesh geometry={head} position={[0, 2.0, 0]}><meshStandardMaterial color="#C4F23C" emissive="#C4F23C" emissiveIntensity={0.35} roughness={0.4} /></mesh>
+    <mesh position={[0, 1.3, 0.252]}><planeGeometry args={[0.72, 0.9]} /><meshBasicMaterial map={face} toneMapped={false} /></mesh>
+    {[0.55, 0.42, 0.29].map((yy, i) => <mesh key={i} position={[0, yy, 0.253]}><planeGeometry args={[0.7, 0.05]} /><meshStandardMaterial color="#0b0d0d" /></mesh>)}
+    <mesh geometry={hose}><meshStandardMaterial color="#0a0b0b" roughness={0.6} /></mesh>
+    <mesh position={[0.52, 0.6, 0.3]} rotation={[0, 0, 0.5]}><cylinderGeometry args={[0.03, 0.04, 0.22, 16]} /><meshStandardMaterial color="#9aa29e" metalness={0.9} roughness={0.25} /></mesh>
+    <mesh position={[0, 0.02, 0]}><boxGeometry args={[1.2, 0.04, 0.8]} /><meshStandardMaterial color="#d8d8cf" roughness={0.7} /></mesh>
+  </group>;
+};

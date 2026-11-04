@@ -6,7 +6,7 @@ description: Make a 45-80 s vertical Hinglish "dark 3D explainer" reel for Insta
 # Viral explainer reel (Hinglish, dark 3D, Remotion + three.js)
 
 Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script and the picture vocabulary.
-The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice).
+The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser).
 
 ## Hard rules
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
@@ -64,10 +64,11 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 | `Chip`, `Pill`, `Stamp`, `Counter`, `Rings`, `StepDot`, `Flow`, `Lcd` | labels, mantra pills, SEALED/BLOCKED, ₹ counters, alert pings, 1-2-3 steps, dotted money/data paths, 7-segment meters |
 | `Phone` (CSS 3D tilt) + `StatusBar`, `ChatHead`, `Bubble`, `PinPad`, `Dialer`, `Toast`, `QR`, `IncomingCall`, `BalanceScreen` | phone UI stories |
 | `SmsCard ring=sender/body` | bank-style SMS with a highlight ring (fake-message stories) |
+| `DispenserPanel`, `RangeBar`, `FilterPaper` (kit/Dispenser.tsx) | fuel-pump LCD panel with a row ring, OK-range bar with a marker, filter-paper drop/stain test |
 | `XrayPhone` | wireframe glowing device for "phone ke andar" |
 | `IndiaMap pings spread arcs` | city cases, "har network", travel |
 | `EndCard`, `Poll` | Follow → Following ✓, yes/no comment bait |
-| `Studio3D` + `Phone3D`, `QrStand`, `Table`, `useCanvasTex`, `drawQR` | real 3D product shots (three.js PBR, transparent canvas over Bokeh) |
+| `Studio3D` + `Phone3D`, `QrStand`, `Dispenser3D`, `Table`, `useCanvasTex`, `drawQR` | real 3D product shots (three.js PBR, transparent canvas over Bokeh) |
 
 To add a new 3D object (a petrol dispenser, ATM, SIM card, gas cylinder, electricity meter), build it in `src/three/` from
 boxes, RoundedBoxGeometry and cylinders with `meshPhysicalMaterial` (roughness .2-.5, metalness .1-.85, clearcoat on plastics).
