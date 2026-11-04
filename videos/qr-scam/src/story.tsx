@@ -17,7 +17,7 @@ import { IndiaMap } from "./kit/Map";
 import { EndCard } from "./kit/EndCard";
 import { Phone3D, Studio3D, drawQR } from "./three/Studio";
 
-export const CHANNEL = { name: "Kaam Ki Baat", handle: "@kaamkibaat.in", tagline: "Roz ek scam, 60 second mein" };
+export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D", tagline: "Har cheez ka sach, 3D mein" };
 // Caption placement overrides / lines whose words are shown as graphics instead.
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
 export const CAPTION_HIDE = ["L8"];
@@ -199,7 +199,7 @@ const S9: React.FC<SceneP> = ({ o, d }) => (
 // 10 ── CTA end card
 const S10: React.FC<SceneP> = ({ o }) => (
   <Ground><Bokeh n={16} hue="lime" opacity={0.2} seed={2} />
-    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L10", "Save")) + 6} logo="₹" />
+    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L10", "Save")) + 6} logo="3D" />
     <Vignette />
   </Ground>
 );

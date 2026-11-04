@@ -128,10 +128,11 @@
   },
   {
    "id": "L14",
-   "tts": "घर में जो भी यू पी आई चलाता है, उसे ये भेजो।",
-   "cap": "Ghar mein jo bhi UPI chalata hai, usse ye bhejo.",
+   "tts": "फॉलो और सब्सक्राइब करो। और घर में जो भी यू पी आई चलाता है, उसे ये भेजो।",
+   "cap": "Follow aur subscribe karo. Aur ghar mein jo bhi UPI chalata hai, usse ye bhejo.",
    "hl": [
-    "bhejo."
+    "Follow",
+    "subscribe"
    ],
    "gap": 0.3
   },

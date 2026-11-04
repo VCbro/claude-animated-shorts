@@ -10,7 +10,7 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 
 ## Hard rules
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
-  branding, and never upload them anywhere. The channel name and handle on the end card come from the user (`CHANNEL` in story.tsx).
+  branding, and never upload them anywhere. The channel is **Kaise Chalta Hai 3D, @KaiseChaltaHai3D** (`CHANNEL` in story.tsx). The end card shows Follow + Subscribe, and the CTA line always opens with "Follow aur subscribe karo."
 - **Facts are real and sourced.** Research every number, law, helpline and case with WebSearch (mode "extended" for
   recent cases) and write the sources at the top of `SCRIPT.md`. If a fact can't be verified, cut it. No made-up
   cities, fines or counts. Helplines go on screen exactly (1930 cyber fraud, 1915 consumer, 112 emergency, etc.).

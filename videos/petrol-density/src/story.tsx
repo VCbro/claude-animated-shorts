@@ -17,7 +17,7 @@ import { EndCard, Poll } from "./kit/EndCard";
 import { DispenserPanel, FilterPaper, RangeBar } from "./kit/Dispenser";
 import { Dispenser3D, Studio3D, Table } from "./three/Studio";
 
-export const CHANNEL = { name: "Kaam Ki Baat", handle: "@kaamkibaat.in", tagline: "Roz ek kaam ki baat, 60 second mein" };
+export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D", tagline: "Har cheez ka sach, 3D mein" };
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
 export const CAPTION_HIDE = ["L14"];
 
@@ -258,7 +258,7 @@ const S14: React.FC<SceneP> = ({ o, d }) => (
 // 15 ── CTA end card
 const S15: React.FC<SceneP> = ({ o }) => (
   <Ground><Bokeh n={16} hue="lime" opacity={0.2} seed={2} />
-    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L15", "dost"))} logo="₹" />
+    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L15", "Follow"))} logo="3D" />
     <Vignette />
   </Ground>
 );
@@ -278,6 +278,6 @@ export const SCENES = [
   P(at("L14"), S14), P(at("L15"), S15), P(at("L16"), S16),
 ];
 export const IMPACTS = [hit("L7", "zero"), hit("L8", "kharab")];
-export const POPS = [hit("L2", "density"), hit("L3", "kitna"), hit("L4", "kaisa"), hit("L5", "Density"), hit("L6", "beech"), hit("L7", "sawaal"), hit("L8", "milawat"), hit("L9", "haq"), hit("L9", "free"), hit("L11", "density"), hit("L12", "boond"), hit("L12", "daag"), hit("L13", "1915"), hit("L14", "Zero"), hit("L14", "density"), hit("L15", "dost"), hit("L16", "Haan")];
+export const POPS = [hit("L2", "density"), hit("L3", "kitna"), hit("L4", "kaisa"), hit("L5", "Density"), hit("L6", "beech"), hit("L7", "sawaal"), hit("L8", "milawat"), hit("L9", "haq"), hit("L9", "free"), hit("L11", "density"), hit("L12", "boond"), hit("L12", "daag"), hit("L13", "1915"), hit("L14", "Zero"), hit("L14", "density"), hit("L15", "Follow"), hit("L16", "Haan")];
 export const RISERS = [hit("L8", "kharab"), at("L14")];
 export const DURATION = TOTAL;

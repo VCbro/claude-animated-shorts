@@ -16,7 +16,7 @@ import { IndiaMap } from "./kit/Map";
 import { EndCard, Poll } from "./kit/EndCard";
 import { Phone3D, Studio3D } from "./three/Studio";
 
-export const CHANNEL = { name: "Kaam Ki Baat", handle: "@kaamkibaat.in", tagline: "Roz ek scam, 60 second mein" };
+export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D", tagline: "Har cheez ka sach, 3D mein" };
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
 export const CAPTION_HIDE = ["L13"];
 
@@ -258,7 +258,7 @@ const S13: React.FC<SceneP> = ({ o, d }) => (
 // 14 ── CTA: send it to whoever uses UPI at home
 const S14: React.FC<SceneP> = ({ o }) => (
   <Ground><Bokeh n={16} hue="lime" opacity={0.2} seed={2} />
-    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L14", "UPI"))} logo="₹" />
+    <EndCard channel={CHANNEL.name} handle={CHANNEL.handle} tagline={CHANNEL.tagline} flipAt={G(o, hit("L14", "Follow"))} logo="3D" />
     <Vignette />
   </Ground>
 );
@@ -279,6 +279,6 @@ export const SCENES = [
 ];
 // Sound cues: tools/cues.mjs exports cuts (scene starts) + IMPACTS + POPS + RISERS to out/cues.json for tools/audio.py
 export const IMPACTS = [hit("L4", "nahi"), hit("L8", "gaye")];
-export const POPS = [3, hit("L1", "call"), hit("L5", "Fake"), hit("L6", "naam"), hit("L6", "line"), hit("L8", "call"), hit("L9", "yaad"), hit("L10", "balance"), hit("L11", "mat"), hit("L11", "bank"), hit("L11", "reversal"), hit("L12", "1930"), hit("L13", "Message"), hit("L13", "balance"), hit("L14", "UPI"), hit("L15", "Haan")];
+export const POPS = [3, hit("L1", "call"), hit("L5", "Fake"), hit("L6", "naam"), hit("L6", "line"), hit("L8", "call"), hit("L9", "yaad"), hit("L10", "balance"), hit("L11", "mat"), hit("L11", "bank"), hit("L11", "reversal"), hit("L12", "1930"), hit("L13", "Message"), hit("L13", "balance"), hit("L14", "Follow"), hit("L15", "Haan")];
 export const RISERS = [hit("L4", "nahi"), at("L13")];
 export const DURATION = TOTAL;
