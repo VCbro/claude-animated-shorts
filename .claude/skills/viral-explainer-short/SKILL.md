@@ -51,6 +51,10 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
    `CONC=3` sets parallel tabs. On 4 CPUs with software GL a 33 s reel took about 25 min at 1080p. Never `pgrep -f "remotion render"` in a wait loop: it matches the loop itself.
 7. **QA** (`tools/qa.sh`, run automatically): no black or frozen spans, -14 LUFS, peak ≤ -1 dBTP, contact sheet every 2 s.
    Look at the sheet. Then send the mp4 with SendUserFile, commit the source (never commit mp4/wav renders, models or node_modules) and push.
+8. **Post kit (always, every reel)**: write `videos/<name>/INSTAGRAM.md` and send it with the mp4. Copy the format of
+   `videos/upi-galti-se/INSTAGRAM.md`: an on-cover title plus 3 alternatives, a copy-paste caption (hook, why, ✅ 1-2-3 steps with exact
+   helplines, mantra, share-to-whom line, HAAN/NA question, "Follow karo @KaiseChaltaHai3D"), 20-25 hashtags (topic + Indian
+   reach + #KaiseChaltaHai3D), cover-frame pick, pinned comment, and a YouTube Shorts title. Emoji are fine here (only the video can't have them). Facts must match SCRIPT.md.
 
 ## Kit (`src/kit/`, `src/three/`)
 | Component | Use |
