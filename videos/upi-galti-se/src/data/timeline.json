@@ -1,7 +1,7 @@
 {
  "fps": 30,
- "duration": 49.496,
- "frames": 1485,
+ "duration": 51.42,
+ "frames": 1543,
  "lines": [
   {
    "id": "L1",
@@ -578,59 +578,80 @@
   {
    "id": "L14",
    "t0": 41.053,
-   "t1": 44.466,
-   "cap": "Ghar mein jo bhi UPI chalata hai, usse ye bhejo.",
+   "t1": 46.39,
+   "cap": "Follow aur subscribe karo. Aur ghar mein jo bhi UPI chalata hai, usse ye bhejo.",
    "hl": [
-    "bhejo."
+    "Follow",
+    "subscribe"
    ],
    "red": [],
    "words": [
     {
-     "w": "Ghar",
+     "w": "Follow",
      "t": 41.053
     },
     {
+     "w": "aur",
+     "t": 41.518
+    },
+    {
+     "w": "subscribe",
+     "t": 41.75
+    },
+    {
+     "w": "karo.",
+     "t": 42.447
+    },
+    {
+     "w": "Aur",
+     "t": 42.864
+    },
+    {
+     "w": "ghar",
+     "t": 43.097
+    },
+    {
      "w": "mein",
-     "t": 41.319
+     "t": 43.353
     },
     {
      "w": "jo",
-     "t": 41.585
+     "t": 43.609
     },
     {
      "w": "bhi",
-     "t": 41.801
+     "t": 43.818
     },
     {
      "w": "UPI",
-     "t": 42.041
+     "t": 44.05
     },
     {
      "w": "chalata",
-     "t": 42.448
+     "t": 44.443
     },
     {
      "w": "hai,",
-     "t": 43.121
+     "t": 45.092
     },
     {
      "w": "usse",
-     "t": 43.362
+     "t": 45.324
     },
     {
      "w": "ye",
-     "t": 43.793
+     "t": 45.741
     },
     {
      "w": "bhejo.",
-     "t": 44.009
+     "t": 45.949
     }
    ]
   },
   {
    "id": "L15",
-   "t0": 44.666,
-   "t1": 47.896,
+   "t0": 46.59,
+   "t1": 49.82,
    "cap": "Aur batao, tumhe kabhi aisa call aaya? Haan ya na?",
    "hl": [
     "Haan"
@@ -639,43 +660,43 @@
    "words": [
     {
      "w": "Aur",
-     "t": 44.666
+     "t": 46.59
     },
     {
      "w": "batao,",
-     "t": 44.904
+     "t": 46.828
     },
     {
      "w": "tumhe",
-     "t": 45.354
+     "t": 47.278
     },
     {
      "w": "kabhi",
-     "t": 45.805
+     "t": 47.729
     },
     {
      "w": "aisa",
-     "t": 46.256
+     "t": 48.18
     },
     {
      "w": "call",
-     "t": 46.682
+     "t": 48.606
     },
     {
      "w": "aaya?",
-     "t": 46.945
+     "t": 48.869
     },
     {
      "w": "Haan",
-     "t": 47.207
+     "t": 49.131
     },
     {
      "w": "ya",
-     "t": 47.469
+     "t": 49.393
     },
     {
      "w": "na?",
-     "t": 47.682
+     "t": 49.606
     }
    ]
   }
