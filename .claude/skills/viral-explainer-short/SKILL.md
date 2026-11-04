@@ -44,7 +44,7 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 5. **Look check**: `node tools/stills.mjs out/s_ <10 frames> 0.5` gives JPGs plus a contact sheet. Read the sheet and fix
    overlaps, empty frames, tiny text and caption-on-subject collisions. Repeat until it is clean. A still takes ~3 s, and a 3D still ~9 s.
 6. **Render**: `bash tools/render.sh` (voice → cues → sound → render → QA). `SKIP_VOICE=1` keeps the voice, `SCALE=1.3333` gives 2K and
-   `CONC=3` sets parallel tabs. On 4 CPUs with software GL a 33 s reel took about 20 min at 1080p.
+   `CONC=3` sets parallel tabs. On 4 CPUs with software GL a 33 s reel took about 25 min at 1080p. Never `pgrep -f "remotion render"` in a wait loop: it matches the loop itself.
 7. **QA** (`tools/qa.sh`, run automatically): no black or frozen spans, -14 LUFS, peak ≤ -1 dBTP, contact sheet every 2 s.
    Look at the sheet. Then send the mp4 with SendUserFile, commit the source (never commit mp4/wav renders, models or node_modules) and push.
 

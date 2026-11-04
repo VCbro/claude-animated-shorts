@@ -2,7 +2,8 @@
 //  STORY = the only file that changes per video (plus script.json).
 //  Each scene: id, start frame (tied to a voice word), component. A scene ends where the next begins.
 //  Rules: cut every 1.5-3 s · every hit lands 0-3 f before its word · every hold creeps (Cam) ·
-//  one idea per shot · HUD on most shots · red only for loss/danger.
+//  one idea per shot · HUD on most shots · red only for loss/danger ·
+//  the main subject is on screen from frame 2 of its shot (no empty frame waiting for a word).
 // ─────────────────────────────────────────────────────────────────────────────
 import React from "react";
 import { useCurrentFrame } from "remotion";
