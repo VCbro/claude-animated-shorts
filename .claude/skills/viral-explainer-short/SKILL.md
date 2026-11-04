@@ -6,7 +6,7 @@ description: Make a 45-80 s vertical Hinglish "dark 3D explainer" reel for Insta
 # Viral explainer reel (Hinglish, dark 3D, Remotion + three.js)
 
 Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script and the picture vocabulary.
-The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye").
+The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice).
 
 ## Hard rules
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
@@ -31,7 +31,11 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
    - Show the script to the user for approval before rendering. When the user says "just do it", go straight through.
 3. **Voice**: `python3 tools/voice.py [--engine piper|sarvam|eleven|files]`. This writes `voice/voice.wav` and
    `src/data/timeline.json`, with exact line times and estimated word times.
-   - `piper` is offline neural Hindi and the default, using the `hi_IN-rohan-medium` voice (`bash tools/get_models.sh`).
+   - `kokoro` is the default: offline Kokoro-82M, the most human-sounding offline Hindi. Set `KOKORO_VOICE` to `hm_psi` (male, default),
+     `hm_omega` (male), `hf_alpha` or `hf_beta` (female). `bash tools/get_models.sh` downloads it from GitHub releases.
+   - `piper` (`hi_IN-rohan-medium`) is the older offline fallback and sounds more robotic.
+   - Pronunciation fixes for Kokoro: write "पांच" (anusvara), not "पाँच". Say "मैसेज" instead of spelling out SMS. Put a word before a number
+     that opens a sentence ("पूरे पांच हज़ार…"). Keep nukta on ज़/फ़ only where you need the z/f sound.
    - `sarvam` (Bulbul) and `eleven` (ElevenLabs multilingual v2) sound far more human. They need `SARVAM_API_KEY` or `ELEVENLABS_API_KEY` set
      as an environment variable, with `api.sarvam.ai` or `api.elevenlabs.io` allowed in the environment's network settings.
    - `files` uses the user's own recording: one `voice/lines/<id>.wav` per line. This is the most natural voice.
@@ -58,7 +62,8 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 | `GridFloor` | inside / data / rule shots |
 | `Captions` (in Short.tsx) | automatic word-by-word captions from timeline.json |
 | `Chip`, `Pill`, `Stamp`, `Counter`, `Rings`, `StepDot`, `Flow`, `Lcd` | labels, mantra pills, SEALED/BLOCKED, ₹ counters, alert pings, 1-2-3 steps, dotted money/data paths, 7-segment meters |
-| `Phone` (CSS 3D tilt) + `StatusBar`, `ChatHead`, `Bubble`, `PinPad`, `Dialer`, `Toast`, `QR` | phone UI stories |
+| `Phone` (CSS 3D tilt) + `StatusBar`, `ChatHead`, `Bubble`, `PinPad`, `Dialer`, `Toast`, `QR`, `IncomingCall`, `BalanceScreen` | phone UI stories |
+| `SmsCard ring=sender/body` | bank-style SMS with a highlight ring (fake-message stories) |
 | `XrayPhone` | wireframe glowing device for "phone ke andar" |
 | `IndiaMap pings spread arcs` | city cases, "har network", travel |
 | `EndCard`, `Poll` | Follow → Following ✓, yes/no comment bait |
@@ -77,4 +82,5 @@ Labels and screens are `useCanvasTex` textures. Keep 3D shots to 1-3 per reel: t
 - `tools/cues.mjs` bundles story.tsx with esbuild to read the cue frames. Keep story.tsx free of top-level DOM access.
 - Captions merge 1-word tails into the previous phrase. Keep `cap` punctuation meaningful, because `.`, `?` and `!` end a phrase.
 - Words are timed by syllable weight inside each line. For tighter sync, split long lines into shorter ones (each line is timed exactly).
+- SVG masks on a straight line need `maskUnits="userSpaceOnUse"`, otherwise the zero-height bounding box hides them. `Flow` already does this.
 - Keep text out of the bottom 22 % and right 12 % (the Reels UI covers them). See `SAFE` in theme.ts.

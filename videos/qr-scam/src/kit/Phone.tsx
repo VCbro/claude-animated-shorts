@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { C, F } from "./theme";
-import { io, lerp, pop, rng } from "./anim";
+import { inr, io, lerp, pop, rng } from "./anim";
 
 /**
  * 3D-tilted phone (CSS 3D): glossy black slab with a metal rim, a moving specular sweep, a soft floor shadow.
@@ -143,6 +143,58 @@ export const XrayPhone: React.FC<{ x?: number; y?: number; scale?: number; color
         {Array.from({ length: 14 }).map((_, i) => <rect key={`p${i}`} x={110 + i * 24} y={H - 90} width={12} height={34} fill={color} opacity={0.6 * io(f, at + 20, 8)} />)}
       </svg>
       {children}
+    </div>
+  );
+};
+
+/** Incoming-call screen (full phone screen). Pulsing answer button; `at` = when it rings in. */
+export const IncomingCall: React.FC<{ at?: number; name: string; number?: string; label?: string; danger?: boolean }> = ({ at = 0, name, number, label = "INCOMING CALL", danger = false }) => {
+  const f = useCurrentFrame();
+  if (f < at) return null;
+  const k = io(f, at, 6), p = 1 + 0.08 * Math.abs(Math.sin((f - at) / 5));
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: k, background: "linear-gradient(180deg,#1b2420 0%,#07090A 70%)", fontFamily: F.sans, color: C.white, textAlign: "center" }}>
+      <div style={{ marginTop: 200, fontFamily: F.mono, fontSize: 22, letterSpacing: 3, color: danger ? C.red : C.lime }}>{label}</div>
+      <div style={{ marginTop: 26, fontSize: 60, fontWeight: 800 }}>{name}</div>
+      {number && <div style={{ marginTop: 10, fontSize: 30, color: C.grey, fontFamily: F.mono }}>{number}</div>}
+      <div style={{ margin: "80px auto 0", width: 180, height: 180, borderRadius: 90, border: `3px solid ${C.line}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 90, fontWeight: 900, color: C.grey }}>{name[0]}</div>
+      <div style={{ position: "absolute", bottom: 150, left: 0, right: 0, display: "flex", justifyContent: "space-around" }}>
+        <div style={{ width: 130, height: 130, borderRadius: 65, background: "#E5484D", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 26 }}>END</div>
+        <div style={{ width: 130, height: 130, borderRadius: 65, background: "#2FBF5A", transform: `scale(${p})`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 26, color: "#06210F", boxShadow: "0 0 40px #2FBF5A88" }}>CALL</div>
+      </div>
+    </div>
+  );
+};
+
+/** Bank-style SMS card (can be used inside a Phone or on its own). `ring` highlights a part: "sender" | "body" | "amount". */
+export const SmsCard: React.FC<{ x: number; y: number; w?: number; sender: string; body: string; time?: string; at?: number; ring?: "sender" | "body" | "amount"; ringAt?: number; ringColor?: string; scale?: number; rot?: number }> = ({ x, y, w = 820, sender, body, time = "18:42", at = 0, ring, ringAt = 0, ringColor = C.lime, scale = 1, rot = -2 }) => {
+  const f = useCurrentFrame();
+  const s = pop(f, at, 13);
+  const on = ring && f >= ringAt;
+  const R = (k: string): React.CSSProperties => (on && ring === k ? { boxShadow: `0 0 0 5px ${ringColor}, 0 0 40px ${ringColor}88`, borderRadius: 12 } : {});
+  return (
+    <div style={{ position: "absolute", left: x, top: y, width: w, transform: `scale(${s * scale}) rotate(${rot}deg)`, transformOrigin: "50% 50%", background: "#1A201E", borderRadius: 36, padding: "34px 40px", fontFamily: F.sans, boxShadow: "0 30px 80px rgba(0,0,0,.6)", border: `2px solid ${C.line}` }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span style={{ fontFamily: F.mono, fontSize: 34, color: C.white, fontWeight: 700, padding: "4px 10px", ...R("sender") }}>{sender}</span>
+        <span style={{ fontSize: 26, color: C.grey }}>{time}</span>
+      </div>
+      <div style={{ marginTop: 22, fontSize: 38, lineHeight: 1.3, color: "#D9DED7", padding: "4px 10px", ...R("body") }}>{body}</div>
+    </div>
+  );
+};
+
+/** Bank-app balance screen (inside a Phone). Counter rolls from `from` to `to` starting at `rollAt`. */
+export const BalanceScreen: React.FC<{ bank?: string; from: number; to: number; rollAt?: number; color?: string; note?: string; noteColor?: string }> = ({ bank = "MY BANK", from, to, rollAt = 0, color = C.white, note, noteColor = C.lime }) => {
+  const f = useCurrentFrame();
+  const v = lerp(f, [rollAt, rollAt + 18], [from, to]);
+  return (
+    <div style={{ position: "absolute", inset: 0, fontFamily: F.sans, color: C.white }}>
+      <div style={{ position: "absolute", top: 120, left: 40, fontFamily: F.mono, fontSize: 24, letterSpacing: 3, color: C.grey }}>{bank}</div>
+      <div style={{ position: "absolute", top: 300, width: "100%", textAlign: "center", fontFamily: F.mono, fontSize: 24, letterSpacing: 4, color: C.grey }}>AVAILABLE BALANCE</div>
+      <div style={{ position: "absolute", top: 350, width: "100%", textAlign: "center", fontFamily: F.mono, fontSize: 92, fontWeight: 700, color, letterSpacing: -3 }}>₹{inr(v)}</div>
+      {note && <div style={{ position: "absolute", top: 500, width: "100%", textAlign: "center", fontSize: 30, fontWeight: 700, color: noteColor, opacity: io(f, rollAt + 10, 6) }}>{note}</div>}
+      {[0, 1, 2].map((i) => <div key={i} style={{ position: "absolute", left: 40, right: 40, top: 640 + i * 130, height: 100, borderRadius: 20, background: "#141917", display: "flex", alignItems: "center", padding: "0 26px", justifyContent: "space-between", fontSize: 26, color: C.grey }}>
+        <span>{["Grocery · UPI", "Recharge · UPI", "Salary · NEFT"][i]}</span><span style={{ fontFamily: F.mono, color: i === 2 ? C.lime : C.grey }}>{["−₹640", "−₹299", "+₹18,000"][i]}</span></div>)}
     </div>
   );
 };

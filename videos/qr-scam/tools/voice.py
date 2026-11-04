@@ -5,7 +5,9 @@ Each line is synthesized on its own, trimmed, gently processed, then laid end to
 inside a line are estimated from syllable weight (good enough for word-by-word caption pops).
 
 Backends (pick with --engine or env VOICE_ENGINE):
-  piper      offline neural Hindi (default). Model: $PIPER_MODEL or models/hi_IN-rohan-medium.onnx
+  kokoro     offline Kokoro-82M, most human offline Hindi (default). Voice $KOKORO_VOICE (hm_psi | hm_omega male,
+             hf_alpha | hf_beta female). Model: models/kokoro-v1.0.onnx + voices-v1.0.bin (tools/get_models.sh)
+  piper      offline neural Hindi (older, more robotic). Model: $PIPER_MODEL or models/hi_IN-rohan-medium.onnx
   sarvam     Sarvam AI Bulbul (best Hindi/Hinglish). Needs SARVAM_API_KEY + api.sarvam.ai allowed in network.
   eleven     ElevenLabs multilingual v2. Needs ELEVENLABS_API_KEY (+ ELEVEN_VOICE_ID) + api.elevenlabs.io allowed.
   files      your own recording: voice/lines/<id>.wav per line (record on phone, export wav).
@@ -39,6 +41,15 @@ def tts_piper(text, pace):
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     a, sr = sf.read(out, dtype="float32"); os.unlink(out)
     return to48(a if a.ndim == 1 else a.mean(1), sr)
+
+
+_KOK = None
+def tts_kokoro(text, pace):
+    global _KOK
+    from kokoro_onnx import Kokoro
+    if _KOK is None: _KOK = Kokoro(os.path.join(ROOT, "models", "kokoro-v1.0.onnx"), os.path.join(ROOT, "models", "voices-v1.0.bin"))
+    a, sr = _KOK.create(text, voice=os.environ.get("KOKORO_VOICE", "hm_psi"), speed=round(1.08 * pace, 3), lang="hi")
+    return to48(np.asarray(a, np.float32), sr)
 
 
 def _post(url, body, headers):
@@ -105,14 +116,14 @@ def word_times(cap, t0, t1):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--engine", default=os.environ.get("VOICE_ENGINE", "piper"))
+    ap.add_argument("--engine", default=os.environ.get("VOICE_ENGINE", "kokoro"))
     ap.add_argument("--script", default=os.path.join(ROOT, "script.json"))
     ap.add_argument("--lead", type=float, default=0.25, help="silence before the first line")
     ap.add_argument("--tail", type=float, default=1.6, help="silence after the last line (end card)")
     args = ap.parse_args()
     S = json.load(open(args.script, encoding="utf-8"))
     pace = S.get("pace", 1.0)
-    fn = {"piper": tts_piper, "sarvam": tts_sarvam, "eleven": tts_eleven}.get(args.engine)
+    fn = {"kokoro": tts_kokoro, "piper": tts_piper, "sarvam": tts_sarvam, "eleven": tts_eleven}.get(args.engine)
     os.makedirs(os.path.join(ROOT, "voice", "cache"), exist_ok=True)
     clips, t, lines = [], args.lead, []
     for ln in S["lines"]:

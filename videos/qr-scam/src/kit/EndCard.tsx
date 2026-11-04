@@ -17,7 +17,7 @@ export const EndCard: React.FC<{ channel: string; handle: string; tagline?: stri
         <div style={{ marginTop: 8, color: C.grey, fontSize: 26, fontFamily: F.mono }}>{handle}</div>
         <div style={{ marginTop: 14, color: C.grey, fontSize: 26 }}>{tagline}</div>
         <div style={{ margin: "50px auto 0", width: 380, height: 86, borderRadius: 43, background: on ? "transparent" : C.lime, border: `4px solid ${C.lime}`, color: on ? C.lime : "#0A0D0C",
-          display: "flex", alignItems: "center", justifyContent: "center", fontSize: 36, fontWeight: 800, transform: `scale(${on ? pop(f, flipAt, 9) : 1})` }}>{on ? "Following ✓" : "Follow"}</div>
+          display: "flex", alignItems: "center", justifyContent: "center", fontSize: 36, fontWeight: 800, transform: `scale(${on ? 0.8 + 0.2 * pop(f, flipAt, 9) : 1})` }}>{on ? "Following ✓" : "Follow"}</div>
         <div style={{ marginTop: 60, display: "flex", justifyContent: "center", gap: 18, color: C.white, fontSize: 24, opacity: io(f, flipAt + 10, 8) }}>
           {["Save", "Share", "Comment"].map((t) => <div key={t} style={{ border: `2px solid ${C.line}`, borderRadius: 16, padding: "14px 20px", fontWeight: 700 }}>{t}</div>)}
         </div>

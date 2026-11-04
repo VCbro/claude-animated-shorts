@@ -74,7 +74,7 @@ export const Flow: React.FC<{ d: string; at: number; dur?: number; color?: strin
   const len = 4000;
   return (
     <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-      <defs><mask id={`m${at}`}><path d={d} stroke="white" strokeWidth={60} fill="none" strokeDasharray={len} strokeDashoffset={len * (1 - k)} /></mask></defs>
+      <defs><mask id={`m${at}`} maskUnits="userSpaceOnUse" x={0} y={0} width={1080} height={1920}><path d={d} stroke="white" strokeWidth={60} fill="none" strokeDasharray={len} strokeDashoffset={len * (1 - k)} /></mask></defs>
       <g mask={`url(#m${at})`} style={{ filter: `drop-shadow(0 0 10px ${color})` }}>
         {solid ? <path d={d} stroke={color} strokeWidth={width} fill="none" strokeLinecap="round" />
           : <path d={d} stroke={color} strokeWidth={dot} fill="none" strokeLinecap="round" strokeDasharray={`0 ${gap}`} strokeDashoffset={-f * speed} />}

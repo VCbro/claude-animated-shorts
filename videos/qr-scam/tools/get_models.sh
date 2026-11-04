@@ -9,6 +9,9 @@ for v in ${VOICES:-rohan}; do
   curl -sL $B/tts-models/vits-piper-hi_IN-$v-medium.tar.bz2 | tar xj
   mv vits-piper-hi_IN-$v-medium/hi_IN-$v-medium.onnx* . && rm -rf vits-piper-hi_IN-$v-medium
 done
+# Kokoro-82M (default voice engine, most natural offline Hindi: hm_psi / hm_omega / hf_alpha / hf_beta)
+K=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+for f in kokoro-v1.0.onnx voices-v1.0.bin; do [ -f $f ] || curl -sL -o $f $K/$f; done
 if [ -n "$WHISPER" ] && [ ! -d sherpa-onnx-whisper-small ]; then curl -sL $B/asr-models/sherpa-onnx-whisper-small.tar.bz2 | tar xj; fi
-pip install -q piper-tts soundfile scipy numpy sherpa-onnx 2>/dev/null || true
+pip install -q kokoro-onnx piper-tts soundfile scipy numpy sherpa-onnx 2>/dev/null || true
 ls -la
