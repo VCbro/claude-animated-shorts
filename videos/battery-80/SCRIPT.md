@@ -26,3 +26,7 @@ L13 Teen. Zero tak mat girao. 20 pe lagao, 80 pe hatao.
 L14 Yaad rakho. 20 se 80.
 L15 Follow aur subscribe karo. Aur jo dost raat bhar charge lagata hai, usse ye bhejo.
 L16 Aur batao, tum bhi raat bhar charge lagate ho? Haan ya na?
+
+## As recorded (final)
+The creator recorded the script in one take (voice/clean.wav, engine `take`). The final captions in script.json follow what was actually said.
+Line "Teen. Zero tak mat girao..." was not in the recording, so step 3 is shown as a graphic with the mantra "20 se 80".

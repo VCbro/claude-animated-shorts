@@ -6,7 +6,7 @@ description: Make a 45-80 s vertical Hinglish "dark 3D explainer" reel for Insta
 # Viral explainer reel (Hinglish, dark 3D, Remotion + three.js)
 
 Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script and the picture vocabulary.
-The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser).
+The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions).
 
 ## Hard rules
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
@@ -38,11 +38,20 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
      that opens a sentence ("पूरे पांच हज़ार…"). Keep nukta on ज़/फ़ only where you need the z/f sound.
    - `sarvam` (Bulbul) and `eleven` (ElevenLabs multilingual v2) sound far more human. They need `SARVAM_API_KEY` or `ELEVENLABS_API_KEY` set
      as an environment variable, with `api.sarvam.ai` or `api.elevenlabs.io` allowed in the environment's network settings.
-   - `files` uses the user's own recording: one `voice/lines/<id>.wav` per line. This is the most natural voice.
+   - `take` (best, the creator's own voice): ONE phone recording of the whole script. Convert + denoise it to
+     `voice/clean.wav` (`ffmpeg -i rec.m4a -af "highpass=f=75,afftdn=nr=12:nf=-42:tn=1" -ar 48000 voice/clean.wav`), transcribe it in
+     pieces with Whisper turbo (sherpa-onnx-whisper-turbo from the k2-fsa asr-models release; split on 0.2 s silences, pad 1 s of zeros
+     or it truncates), then give each line `"src": [[t0,t1],...]` in script.json: pick the clean take, skip stumbles and retakes, and
+     make `cap` match what was actually said. Set `"voice_src": "voice/clean.wav"` and `"speed": 1.06`. voice.py squeezes inner pauses,
+     time-stretches, and times caption words on the voiced frames. Proven on `videos/battery-80/`. When a scripted line is missing from
+     the take, show it as a graphic instead of re-ordering the story.
+   - `files` uses the user's own recording split per line: one `voice/lines/<id>.wav` per line.
    - Check the result with Whisper (`WHISPER=1 bash tools/get_models.sh`, then transcribe): every line must be intelligible.
 4. **Story** (`src/story.tsx`): one component per shot. Start each shot on a word with `at("L5")`, `hit("L5","QR")` or
    `wordAt("L5",2)`, and convert to local frames with `G(o, …)`. Cut every 1.5-3 s. Use the kit (below) and nothing ad hoc
    unless a new prop is needed. When you add one, put it in `src/kit/` so later videos can reuse it.
+   - `CAPTION_MODE = "karaoke"` (new default): the phrase shows dim, the spoken word gets a lime (red for `red` words) marker box, and
+     keywords punch 1.22x. `"rise"` is the older word-by-word rise.
    - `CAPTION_HIDE` lists lines whose words are shown as graphics (the mantra). `CAPTION_PLACE` moves captions.
    - `IMPACTS`, `POPS` and `RISERS` feed the sound.
 5. **Look check**: `node tools/stills.mjs out/s_ <10 frames> 0.5` gives JPGs plus a contact sheet. Read the sheet and fix
@@ -69,6 +78,7 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 | `Phone` (CSS 3D tilt) + `StatusBar`, `ChatHead`, `Bubble`, `PinPad`, `Dialer`, `Toast`, `QR`, `IncomingCall`, `BalanceScreen` | phone UI stories |
 | `SmsCard ring=sender/body` | bank-style SMS with a highlight ring (fake-message stories) |
 | `DispenserPanel`, `RangeBar`, `FilterPaper` (kit/Dispenser.tsx) | fuel-pump LCD panel with a row ring, OK-range bar with a marker, filter-paper drop/stain test |
+| `BatteryIcon`, `Gauge`, `CellXray`, `Settings`, `HealthScreen` (kit/Battery.tsx) | charge level with heat glow and 20-80 band, stress gauge, Li-ion ion x-ray, phone settings rows with toggles, health % roll-down |
 | `XrayPhone` | wireframe glowing device for "phone ke andar" |
 | `IndiaMap pings spread arcs` | city cases, "har network", travel |
 | `EndCard`, `Poll` | Follow → Following ✓, yes/no comment bait |

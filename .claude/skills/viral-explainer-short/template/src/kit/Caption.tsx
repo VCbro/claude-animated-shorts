@@ -30,7 +30,10 @@ const phrases = (l: Line) => {
   return out;
 };
 
-export const Captions: React.FC<{ place?: Record<string, Place>; hide?: string[]; size?: number }> = ({ place = {}, hide = [], size = 78 }) => {
+/** mode "rise" = classic word-by-word rise. mode "karaoke" = whole phrase shows dim, the spoken word gets a lime
+ *  (or red) marker box, keywords (hl/red) punch 1.22x bigger. */
+export type CaptionMode = "rise" | "karaoke";
+export const Captions: React.FC<{ place?: Record<string, Place>; hide?: string[]; size?: number; mode?: CaptionMode }> = ({ place = {}, hide = [], size = 78, mode = "rise" }) => {
   const f = useCurrentFrame();
   const t = f / FPS;
   // active phrase across all lines
@@ -56,9 +59,22 @@ export const Captions: React.FC<{ place?: Record<string, Place>; hide?: string[]
       textShadow: "0 4px 28px rgba(0,0,0,.75), 0 1px 2px rgba(0,0,0,.6)" }}>
       {l.words.slice(s, e).map((w, i) => {
         const wf = Math.round(w.t * FPS) - 1;
-        const k = io(f, wf, 4);
         const c = clean(w.w);
-        const col = red.includes(c) || red.includes(w.w.toLowerCase()) ? C.red : hl.includes(c) ? C.lime : C.white;
+        const isRed = red.includes(c) || red.includes(w.w.toLowerCase()), isHl = hl.includes(c);
+        const col = isRed ? C.red : isHl ? C.lime : C.white;
+        if (mode === "karaoke") {
+          const idx = s + i, nextT = l.words[idx + 1]?.t ?? l.t1 + 0.2;
+          const on = t >= w.t - 0.03, live = on && t < nextT - 0.03;
+          const k = io(f, wf, 3), big = isRed || isHl ? 1.22 : 1;
+          const box = live ? (isRed ? C.red : C.lime) : "transparent";
+          return (
+            <span key={i} style={{ display: "inline-block", marginRight: size * 0.18, padding: `0 ${size * 0.1}px`, borderRadius: size * 0.16,
+              background: box, color: live ? "#0A0D0C" : on ? col : "rgba(243,245,239,.38)", fontSize: size * big,
+              transform: `scale(${live ? 1 + 0.08 * (1 - k) + 0.04 : 1})`, transformOrigin: "50% 60%",
+              textShadow: live ? "none" : undefined, boxShadow: live ? `0 0 30px ${box}88` : "none" }}>{w.w}</span>
+          );
+        }
+        const k = io(f, wf, 4);
         return (
           <span key={i} style={{ display: "inline-block", marginRight: size * 0.24, color: col, opacity: k,
             transform: `translateY(${(1 - k) * 14}px)` }}>{w.w}</span>

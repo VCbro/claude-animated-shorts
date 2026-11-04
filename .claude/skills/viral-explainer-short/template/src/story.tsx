@@ -21,6 +21,7 @@ export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D
 // Caption placement overrides / lines whose words are shown as graphics instead.
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
 export const CAPTION_HIDE = ["L8"];
+export const CAPTION_MODE: import("./kit/Caption").CaptionMode = "karaoke";
 
 type SceneP = { o: number; d: number }; // o = scene start (global frame), d = duration
 const G = (o: number, g: number) => g - o; // global → local frame
