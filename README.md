@@ -31,3 +31,16 @@ Claude then follows `SKILL.md`: topic and facts, then script, then voice, then t
 
 ## License
 The code and docs are MIT (see `LICENSE`). The reference frames are included for style study only.
+
+---
+
+# Skill 2: Viral explainer reel (Hinglish, dark 3D)
+
+`.claude/skills/viral-explainer-short/` makes 45-80 s Hinglish reels in the viral "scam / sach" format: a near-black tech-noir
+look with an acid-lime accent, HUD labels, word-by-word captions, 3D phones and product shots, x-ray views, a dot-matrix
+India map, counters, stamps, 1-2-3 steps, a callback mantra and a Follow/poll end card. It adds a Hindi neural voice-over,
+a synthesized tension bed and SFX at -14 LUFS.
+
+- Skill: `.claude/skills/viral-explainer-short/SKILL.md`, with `references/STYLE_BIBLE.md` and `references/SCRIPT_GUIDE.md`.
+- Template and demo: `videos/qr-scam/` ("QR scan karte hi paise gaye", 33 s).
+- In Claude Code, say: *"Use the viral explainer skill: topic = …"*.
