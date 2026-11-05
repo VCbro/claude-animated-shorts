@@ -88,7 +88,7 @@ def build():
   <h1>Medical-Surgical<br><span>Nursing (MSN)</span></h1>
   <div class="sub">Complete Colourful Notes · Diagrams · Mnemonics · MCQs</div>
   <img class="art" src="../images/svg/cover_art.svg">
-  <div class="chips"><span>{len(files)} Chapters</span><span>15 Coloured Diagrams</span><span>Nursing Management</span><span>Normal Values</span><span>Drugs &amp; Antidotes</span><span>Practice MCQs + Answers</span></div>
+  <div class="chips"><span>{len(files)} Chapters</span><span>14 Coloured Diagrams</span><span>Nursing Management</span><span>Normal Values</span><span>Drugs &amp; Antidotes</span><span>Practice MCQs + Answers</span></div>
   <div class="foot">Hinglish explanation + English exam terms</div>
   <div class="teacher"><img src="../images/svg/avatar_nurse.svg"><div><b>Sister Asha</b><small>Aapki MSN teacher</small></div></div>
 </div>'''

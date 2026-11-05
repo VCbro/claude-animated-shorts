@@ -29,4 +29,4 @@ Har naye subject ke andar bhi yahi `pdf/`, `images/`, `source/` pattern rahega.
 
 | Subject | PDF | Pages | Content |
 |---|---|---|---|
-| **MSN** | [`MSN/pdf/MSN_Complete_Notes_GSSSB.pdf`](MSN/pdf/MSN_Complete_Notes_GSSSB.pdf) | 158 | 20 chapters, 15 coloured diagrams, mnemonics, normal values, drugs & antidotes, 330+ MCQs with answer keys |
+| **MSN** | [`MSN/pdf/MSN_Complete_Notes_GSSSB.pdf`](MSN/pdf/MSN_Complete_Notes_GSSSB.pdf) | 158 | 20 chapters, 14 coloured diagrams + avatar, mnemonics, normal values, drugs & antidotes, 330+ MCQs with answer keys |
