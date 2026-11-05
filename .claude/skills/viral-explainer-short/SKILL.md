@@ -6,7 +6,7 @@ description: Make a 45-80 s vertical Hinglish "dark 3D explainer" reel for Insta
 # Viral explainer reel (Hinglish, dark 3D, Remotion + three.js)
 
 Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script and the picture vocabulary.
-The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions).
+The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions). Fifth: `videos/plane-window/` (58 s, own voice at speed 1.22, 8 three.js shots).
 
 ## Hard rules
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
@@ -42,7 +42,9 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
      `voice/clean.wav` (`ffmpeg -i rec.m4a -af "highpass=f=75,afftdn=nr=12:nf=-42:tn=1" -ar 48000 voice/clean.wav`), transcribe it in
      pieces with Whisper turbo (sherpa-onnx-whisper-turbo from the k2-fsa asr-models release; split on 0.2 s silences, pad 1 s of zeros
      or it truncates), then give each line `"src": [[t0,t1],...]` in script.json: pick the clean take, skip stumbles and retakes, and
-     make `cap` match what was actually said. Set `"voice_src": "voice/clean.wav"` and `"speed": 1.06`. voice.py squeezes inner pauses,
+     make `cap` match what was actually said. If the room is noisy (no -33 dB silences), split on energy dips instead (percentile 22-32 of
+     the 20 ms RMS) and transcribe candidate windows to place each boundary. The creator wants reels SHORT: use `speed` 1.15-1.22 and
+     `pause_keep` 0.07 to land under 60 s. Set `"voice_src": "voice/clean.wav"` and `"speed": 1.06`. voice.py squeezes inner pauses,
      time-stretches, and times caption words on the voiced frames. Proven on `videos/battery-80/`. When a scripted line is missing from
      the take, show it as a graphic instead of re-ordering the story.
    - `files` uses the user's own recording split per line: one `voice/lines/<id>.wav` per line.
@@ -82,6 +84,7 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
 | `XrayPhone` | wireframe glowing device for "phone ke andar" |
 | `IndiaMap pings spread arcs` | city cases, "har network", travel |
 | `EndCard`, `Poll` | Follow → Following ✓, yes/no comment bait |
+| `Airliner3D inflate stress round shake`, `SkinPanel3D round heat lines crack split`, `Clouds3D` (three/Plane.tsx) | our own generic jet (pivot at centre, frame it from ~9-10 units away for vertical), fuselage skin close-up with a live stress heat-map, flowing stress lines, a growing crack and a tear-apart with debris |
 | `Studio3D` + `Phone3D`, `QrStand`, `Dispenser3D`, `Table`, `useCanvasTex`, `drawQR` | real 3D product shots (three.js PBR, transparent canvas over Bokeh) |
 
 To add a new 3D object (a petrol dispenser, ATM, SIM card, gas cylinder, electricity meter), build it in `src/three/` from
