@@ -90,3 +90,5 @@ figcaption { font-size: 9pt; color: #546e7a; margin-top: 1.5mm; font-style: ital
 .opt { color: #37474f; font-size: 9.6pt; }
 thead th strong, thead th em { color: #fff; background: none; }
 h3 strong { color: #fff59d; }
+.book-mcq .box.ans { break-inside: auto; }
+.book-mcq .box.ans p { column-count: 2; column-gap: 8mm; }
