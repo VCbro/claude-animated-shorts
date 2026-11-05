@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Noto Sans Gujarati, DejaVu Sans">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbf8ff"/><stop offset="1" stop-color="#fce4ec"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="900" height="600" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#6a1b9a">અલંકાર અને છંદ – એક નજરે</text>
+  <g filter="url(#s)"><rect x="25" y="60" width="420" height="520" rx="16" fill="#fff" stroke="#ba68c8" stroke-width="2"/><rect x="25" y="60" width="420" height="44" rx="16" fill="#8e24aa"/></g>
+  <text x="235" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">અલંકાર – ભાષાનું સૌંદર્ય</text>
+  <g font-size="14" fill="#263238">
+    <text x="40" y="132" font-weight="bold" fill="#6a1b9a">શબ્દાલંકાર (શબ્દ પર આધારિત)</text>
+    <text x="50" y="156">• વર્ણાનુપ્રાસ – એક વર્ણનું પુનરાવર્તન</text>
+    <text x="50" y="178">• શબ્દાનુપ્રાસ (યમક) – શબ્દ ફરી, અર્થ જુદો</text>
+    <text x="50" y="200">• અંત્યાનુપ્રાસ – ચરણને અંતે પ્રાસ</text>
+    <text x="50" y="222">• આંતરપ્રાસ – ચરણ વચ્ચે પ્રાસ</text>
+    <text x="40" y="258" font-weight="bold" fill="#6a1b9a">અર્થાલંકાર (અર્થ પર આધારિત)</text>
+    <text x="50" y="282">• ઉપમા – જેવું, સમું, શું, સરખું, પેઠે</text>
+    <text x="50" y="304">• ઉત્પ્રેક્ષા – જાણે, રખે, શકે</text>
+    <text x="50" y="326">• રૂપક – ઉપમેય = ઉપમાન (અભેદ)</text>
+    <text x="50" y="348">• વ્યતિરેક – ઉપમેય ઉપમાનથી ચડિયાતું</text>
+    <text x="50" y="370">• અનન્વય – ઉપમેય પોતે જ ઉપમાન</text>
+    <text x="50" y="392">• શ્લેષ – એક શબ્દ, બે અર્થ</text>
+    <text x="50" y="414">• વ્યાજસ્તુતિ – નિંદા દ્વારા સ્તુતિ/ ઊલટું</text>
+    <text x="50" y="436">• અતિશયોક્તિ – વધારીને કહેવું</text>
+    <text x="50" y="458">• સજીવારોપણ – નિર્જીવમાં જીવંતતા</text>
+    <text x="50" y="480">• દૃષ્ટાંત – બે વાક્યોમાં બિંબ-પ્રતિબિંબ</text>
+    <text x="50" y="502">• અર્થાંતરન્યાસ – વિશેષ ↔ સામાન્ય સમર્થન</text>
+    <text x="40" y="540" font-size="13" fill="#6d4c41">ઉપમેય = જેની સરખામણી; ઉપમાન = જેની સાથે</text>
+    <text x="40" y="562" font-size="13" fill="#6d4c41">સાધારણ ધર્મ = સમાન ગુણ; ઉપમાવાચક = જેવું વગેરે</text>
+  </g>
+  <g filter="url(#s)"><rect x="465" y="60" width="410" height="520" rx="16" fill="#fff" stroke="#f06292" stroke-width="2"/><rect x="465" y="60" width="410" height="44" rx="16" fill="#d81b60"/></g>
+  <text x="670" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">છંદ – લઘુ (।) / ગુરુ (S)</text>
+  <g font-size="14" fill="#263238">
+    <text x="480" y="132" font-weight="bold" fill="#ad1457">ગણ (યમાતારાજભાનસલગા)</text>
+    <text x="490" y="156">ય ISS · મ SSS · ત SSI · ર SIS</text>
+    <text x="490" y="178">જ ISI · ભ SII · ન III · સ IIS</text>
+    <text x="480" y="214" font-weight="bold" fill="#ad1457">અક્ષરમેળ (ગણ આધારિત)</text>
+    <text x="490" y="238">• શિખરિણી – 17 અક્ષર, યમનસભલગા</text>
+    <text x="490" y="260">• મંદાક્રાંતા – 17, મભનતતગાગા</text>
+    <text x="490" y="282">• પૃથ્વી – 17, જસજસયલગા</text>
+    <text x="490" y="304">• વસંતતિલકા – 14, તભજજગાગા</text>
+    <text x="490" y="326">• શાર્દૂલવિક્રીડિત – 19, મસજસતતગા</text>
+    <text x="490" y="348">• મનહર – 31 (અક્ષરસંખ્યા)</text>
+    <text x="480" y="384" font-weight="bold" fill="#ad1457">માત્રામેળ (માત્રા આધારિત)</text>
+    <text x="490" y="408">• દોહરો – 13 + 11 = 24 માત્રા</text>
+    <text x="490" y="430">• ચોપાઈ – 16 માત્રા પ્રતિ ચરણ</text>
+    <text x="490" y="452">• હરિગીત – 28 માત્રા</text>
+    <text x="490" y="474">• સવૈયા – 31/32 માત્રા</text>
+    <text x="490" y="496">• ઝૂલણા – 37 માત્રા</text>
+    <text x="480" y="536" font-size="13" fill="#6d4c41">લઘુ = 1 માત્રા (અ, ઇ, ઉ, ઋ)</text>
+    <text x="480" y="558" font-size="13" fill="#6d4c41">ગુરુ = 2 માત્રા (આ, ઈ, ઊ, એ, ઐ, ઓ, ઔ, અનુસ્વાર)</text>
+  </g>
+</svg>

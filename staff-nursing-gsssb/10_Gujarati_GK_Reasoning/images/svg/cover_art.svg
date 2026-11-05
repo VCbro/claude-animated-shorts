@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Noto Sans Gujarati, DejaVu Sans">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="book1" x1="0" x2="1"><stop offset="0" stop-color="#b71c1c"/><stop offset=".5" stop-color="#ef5350"/><stop offset="1" stop-color="#7f0000"/></linearGradient>
+    <linearGradient id="book2" x1="0" x2="1"><stop offset="0" stop-color="#0d47a1"/><stop offset=".5" stop-color="#42a5f5"/><stop offset="1" stop-color="#0a2f6b"/></linearGradient>
+    <linearGradient id="page" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fffef7"/><stop offset="1" stop-color="#f3e9cf"/></linearGradient>
+    <radialGradient id="b1" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ffb300"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <radialGradient id="b2" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#66bb6a"/><stop offset="1" stop-color="#1b5e20"/></radialGradient>
+    <radialGradient id="b3" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ab47bc"/><stop offset="1" stop-color="#4a148c"/></radialGradient>
+    <filter id="s" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".33"/></filter>
+  </defs>
+  <circle cx="300" cy="215" r="205" fill="url(#glow)"/>
+  <g filter="url(#s)">
+    <rect x="170" y="290" width="260" height="38" rx="6" fill="url(#book1)"/><rect x="180" y="296" width="240" height="8" fill="#fff8e1" opacity=".8"/>
+    <rect x="190" y="252" width="230" height="38" rx="6" fill="url(#book2)"/><rect x="200" y="258" width="210" height="8" fill="#fff8e1" opacity=".8"/>
+  </g>
+  <g filter="url(#s)">
+    <path d="M300 120 C250 100 190 105 160 120 L160 240 C190 225 250 222 300 242 Z" fill="url(#page)" stroke="#c5a96a" stroke-width="2"/>
+    <path d="M300 120 C350 100 410 105 440 120 L440 240 C410 225 350 222 300 242 Z" fill="url(#page)" stroke="#c5a96a" stroke-width="2"/>
+  </g>
+  <text x="230" y="185" text-anchor="middle" font-size="46" font-weight="bold" fill="#b71c1c">ક</text>
+  <text x="372" y="185" text-anchor="middle" font-size="46" font-weight="bold" fill="#0d47a1">અ</text>
+  <text x="230" y="220" text-anchor="middle" font-size="14" fill="#5d4037">વ્યંજન</text>
+  <text x="372" y="220" text-anchor="middle" font-size="14" fill="#5d4037">સ્વર</text>
+  <g filter="url(#s)">
+    <circle cx="95" cy="140" r="38" fill="url(#b1)"/><circle cx="510" cy="150" r="38" fill="url(#b2)"/><circle cx="90" cy="300" r="34" fill="url(#b3)"/><circle cx="515" cy="300" r="34" fill="url(#b1)"/>
+  </g>
+  <g font-weight="bold" fill="#fff" text-anchor="middle">
+    <text x="95" y="152" font-size="30">ગ</text><text x="510" y="162" font-size="30">જ</text><text x="90" y="311" font-size="26">ળ</text><text x="515" y="311" font-size="26">જ્ઞ</text>
+  </g>
+</svg>

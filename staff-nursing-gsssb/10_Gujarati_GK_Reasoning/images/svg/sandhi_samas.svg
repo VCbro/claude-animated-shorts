@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Noto Sans Gujarati, DejaVu Sans">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7fbff"/><stop offset="1" stop-color="#e8f5e9"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="900" height="600" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#0d47a1">સંધિ અને સમાસ – એક નજરે</text>
+  <g filter="url(#s)">
+    <rect x="25" y="60" width="270" height="520" rx="16" fill="#fff" stroke="#e57373" stroke-width="2"/>
+    <rect x="25" y="60" width="270" height="44" rx="16" fill="#e53935"/>
+  </g>
+  <text x="160" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">સંધિના પ્રકાર (3)</text>
+  <g font-size="14.5" fill="#263238">
+    <text x="40" y="130" font-weight="bold" fill="#c62828">1. સ્વરસંધિ (સ્વર + સ્વર)</text>
+    <text x="50" y="154">દીર્ઘ: હિમ + આલય = હિમાલય</text>
+    <text x="50" y="176">ગુણ: મહા + ઈશ = મહેશ</text>
+    <text x="50" y="198">વૃદ્ધિ: સદા + એવ = સદૈવ</text>
+    <text x="50" y="220">યણ્: ઇતિ + આદિ = ઇત્યાદિ</text>
+    <text x="50" y="242">અયાદિ: ને + અન = નયન</text>
+    <text x="40" y="280" font-weight="bold" fill="#c62828">2. વ્યંજનસંધિ</text>
+    <text x="50" y="304">વાક્ + ઈશ = વાગીશ</text>
+    <text x="50" y="326">સત્ + જન = સજ્જન</text>
+    <text x="50" y="348">ઉત્ + લાસ = ઉલ્લાસ</text>
+    <text x="50" y="370">સમ્ + કલ્પ = સંકલ્પ</text>
+    <text x="40" y="408" font-weight="bold" fill="#c62828">3. વિસર્ગસંધિ</text>
+    <text x="50" y="432">મનઃ + રથ = મનોરથ</text>
+    <text x="50" y="454">નિઃ + ધન = નિર્ધન</text>
+    <text x="50" y="476">દુઃ + ચરિત્ર = દુશ્ચરિત્ર</text>
+    <text x="50" y="498">નિઃ + રોગ = નીરોગ</text>
+    <text x="40" y="536" font-size="13" fill="#6d4c41">સંધિ = બે વર્ણોનું જોડાણ</text>
+    <text x="40" y="558" font-size="13" fill="#6d4c41">સંધિવિગ્રહ = છૂટા પાડવા</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="315" y="60" width="560" height="520" rx="16" fill="#fff" stroke="#81c784" stroke-width="2"/>
+    <rect x="315" y="60" width="560" height="44" rx="16" fill="#43a047"/>
+  </g>
+  <text x="595" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">સમાસના પ્રકાર (8) – પદ અને ઉદાહરણ</text>
+  <g font-size="14.5" fill="#263238">
+    <text x="330" y="134"><tspan font-weight="bold" fill="#2e7d32">1. દ્વંદ્વ</tspan> – બંને પદ પ્રધાન, "અને/ કે/ વગેરે": માબાપ, રાતદિવસ</text>
+    <text x="330" y="170"><tspan font-weight="bold" fill="#2e7d32">2. તત્પુરુષ</tspan> – ઉત્તરપદ પ્રધાન, વિભક્તિ લોપ: રાજમહેલ</text>
+    <text x="330" y="206"><tspan font-weight="bold" fill="#2e7d32">3. કર્મધારય</tspan> – વિશેષણ + વિશેષ્ય: નીલકમલ, મહાપુરુષ</text>
+    <text x="330" y="242"><tspan font-weight="bold" fill="#2e7d32">4. દ્વિગુ</tspan> – પૂર્વપદ સંખ્યા, સમૂહ: ત્રિભુવન, નવરાત્રિ</text>
+    <text x="330" y="278"><tspan font-weight="bold" fill="#2e7d32">5. બહુવ્રીહિ</tspan> – અન્ય પદ પ્રધાન: નીલકંઠ (શિવ), દશાનન</text>
+    <text x="330" y="314"><tspan font-weight="bold" fill="#2e7d32">6. ઉપપદ</tspan> – ઉત્તરપદ ક્રિયાવાચક (કૃદંત): જળચર, ગ્રંથકાર</text>
+    <text x="330" y="350"><tspan font-weight="bold" fill="#2e7d32">7. મધ્યમપદલોપી</tspan> – વચ્ચેનું પદ લુપ્ત: દહીંવડાં, ઘોડાગાડી</text>
+    <text x="330" y="386"><tspan font-weight="bold" fill="#2e7d32">8. અવ્યયીભાવ</tspan> – પૂર્વપદ અવ્યય, આખું અવ્યય: યથાશક્તિ</text>
+    <text x="330" y="430" font-weight="bold" fill="#1b5e20" font-size="15">પ્રધાનપદ પરથી ઓળખ</text>
+    <text x="340" y="456">• બંને પદ પ્રધાન → દ્વંદ્વ</text>
+    <text x="340" y="480">• ઉત્તરપદ પ્રધાન → તત્પુરુષ, કર્મધારય, દ્વિગુ, ઉપપદ, મધ્યમપદલોપી</text>
+    <text x="340" y="504">• પૂર્વપદ પ્રધાન → અવ્યયીભાવ</text>
+    <text x="340" y="528">• બંને ગૌણ, ત્રીજો અર્થ પ્રધાન → બહુવ્રીહિ</text>
+    <text x="330" y="562" font-size="13" fill="#6d4c41">સમાસ = બે કે વધુ પદો જોડાઈ એક પદ બને; વિગ્રહ = પદોને છૂટા પાડી અર્થ સમજાવવો</text>
+  </g>
+</svg>

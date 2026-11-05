@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="skin" cx="45%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#ffe0c7"/><stop offset="0.7" stop-color="#f5b98f"/><stop offset="1" stop-color="#d9946a"/>
+    </radialGradient>
+    <radialGradient id="hair" cx="40%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#5a3a2a"/><stop offset="1" stop-color="#1e120c"/>
+    </radialGradient>
+    <linearGradient id="uniform" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fd3f7"/><stop offset="1" stop-color="#1f8fc9"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d7e6ef"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#fff6d6"/><stop offset="1" stop-color="#ffd27a"/>
+    </radialGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#bg)" stroke="#f0a020" stroke-width="4"/>
+  <!-- body -->
+  <path d="M38 196 Q42 140 100 136 Q158 140 162 196 Z" fill="url(#uniform)" stroke="#0d5a85" stroke-width="3" filter="url(#sh)"/>
+  <path d="M82 138 L100 162 L118 138" fill="#fff" stroke="#0d5a85" stroke-width="2.5"/>
+  <!-- stethoscope -->
+  <path d="M74 144 Q70 176 96 180 Q122 176 126 144" fill="none" stroke="#2d2d2d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="96" cy="182" r="7" fill="#c0c7cc" stroke="#2d2d2d" stroke-width="3"/>
+  <!-- neck -->
+  <rect x="88" y="118" width="24" height="22" rx="8" fill="url(#skin)"/>
+  <!-- hair back -->
+  <ellipse cx="100" cy="86" rx="50" ry="52" fill="url(#hair)"/>
+  <!-- face -->
+  <ellipse cx="100" cy="92" rx="40" ry="43" fill="url(#skin)" stroke="#a8673f" stroke-width="2.5" filter="url(#sh)"/>
+  <!-- fringe -->
+  <path d="M60 84 Q66 50 100 50 Q136 50 141 84 Q124 64 100 70 Q78 64 60 84 Z" fill="url(#hair)"/>
+  <!-- cap -->
+  <path d="M62 56 Q100 22 138 56 L132 66 Q100 50 68 66 Z" fill="url(#cap)" stroke="#0d5a85" stroke-width="2.5" filter="url(#sh)"/>
+  <rect x="94" y="36" width="12" height="20" rx="2" fill="#e53935"/>
+  <rect x="90" y="40" width="20" height="12" rx="2" fill="#e53935"/>
+  <!-- eyes -->
+  <ellipse cx="84" cy="94" rx="6.5" ry="8" fill="#fff"/>
+  <ellipse cx="116" cy="94" rx="6.5" ry="8" fill="#fff"/>
+  <circle cx="85" cy="96" r="4.6" fill="#3b2314"/>
+  <circle cx="117" cy="96" r="4.6" fill="#3b2314"/>
+  <circle cx="86.6" cy="94" r="1.6" fill="#fff"/>
+  <circle cx="118.6" cy="94" r="1.6" fill="#fff"/>
+  <path d="M75 83 Q84 78 92 83" stroke="#3b2314" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M108 83 Q116 78 125 83" stroke="#3b2314" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- bindi, cheeks, smile -->
+  <circle cx="100" cy="80" r="2.6" fill="#d81b60"/>
+  <ellipse cx="74" cy="110" rx="7" ry="4" fill="#ff8a80" opacity="0.55"/>
+  <ellipse cx="126" cy="110" rx="7" ry="4" fill="#ff8a80" opacity="0.55"/>
+  <path d="M86 114 Q100 128 114 114" stroke="#8a3b2a" stroke-width="3" fill="#ff6f61" stroke-linecap="round"/>
+</svg>
