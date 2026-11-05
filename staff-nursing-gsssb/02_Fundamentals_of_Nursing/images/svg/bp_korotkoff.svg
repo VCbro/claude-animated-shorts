@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 490" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="arm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9c2"/><stop offset=".5" stop-color="#f4b48e"/><stop offset="1" stop-color="#c47c55"/></linearGradient>
+    <linearGradient id="cuff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7986cb"/><stop offset=".5" stop-color="#3949ab"/><stop offset="1" stop-color="#1a237e"/></linearGradient>
+    <radialGradient id="gauge" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset=".85" stop-color="#eceff1"/><stop offset="1" stop-color="#78909c"/></radialGradient>
+    <radialGradient id="bell" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#cfd8dc"/><stop offset="1" stop-color="#455a64"/></radialGradient>
+    <radialGradient id="bulb" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#616161"/><stop offset="1" stop-color="#111"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="720" height="490" fill="#f8faff"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a237e">Blood Pressure Measurement &amp; Korotkoff Sounds</text>
+  <g filter="url(#s)" transform="translate(0,45)">
+    <path d="M20 120 L330 135 Q345 160 330 185 L20 200 Z" fill="url(#arm)"/>
+    <path d="M330 135 Q380 140 400 170 Q380 190 330 185 Z" fill="url(#arm)"/>
+    <rect x="70" y="112" width="160" height="96" rx="14" fill="url(#cuff)"/>
+    <rect x="80" y="118" width="140" height="10" rx="5" fill="#fff" opacity=".25"/>
+    <circle cx="262" cy="165" r="18" fill="url(#bell)" stroke="#263238" stroke-width="2"/>
+    <path d="M262 147 Q262 90 300 80" stroke="#263238" stroke-width="5" fill="none"/>
+    <path d="M150 112 Q150 70 200 65" stroke="#212121" stroke-width="5" fill="none"/>
+    <path d="M90 208 Q80 240 55 250" stroke="#212121" stroke-width="5" fill="none"/>
+    <ellipse cx="45" cy="275" rx="22" ry="30" fill="url(#bulb)"/><ellipse cx="38" cy="265" rx="6" ry="11" fill="#fff" opacity=".25"/>
+    <circle cx="235" cy="60" r="40" fill="url(#gauge)" stroke="#37474f" stroke-width="5"/>
+    <g stroke="#263238" stroke-width="2"><line x1="235" y1="26" x2="235" y2="34"/><line x1="269" y1="60" x2="261" y2="60"/><line x1="201" y1="60" x2="209" y2="60"/><line x1="259" y1="36" x2="253" y2="42"/><line x1="211" y1="36" x2="217" y2="42"/></g>
+    <line x1="235" y1="60" x2="255" y2="40" stroke="#d50000" stroke-width="3"/><circle cx="235" cy="60" r="5" fill="#263238"/>
+  </g>
+  <g font-size="11.5">
+    <text x="95" y="285"><tspan font-weight="bold" fill="#1a237e">Cuff bladder:</tspan> width 40 %, length 80 % of arm</text>
+    <text x="95" y="302">Lower edge <tspan font-weight="bold">2.5 cm (1 inch)</tspan> above antecubital fossa</text>
+    <text x="95" y="319"><tspan font-weight="bold" fill="#c62828">Arm at HEART level</tspan>, palm upward, supported</text>
+    <text x="95" y="336">Stethoscope diaphragm/bell on <tspan font-weight="bold">brachial artery</tspan></text>
+    <text x="95" y="360"><tspan font-weight="bold" fill="#1565c0">Palpatory method first:</tspan> radial pulse gayab</text>
+    <text x="95" y="377">hone ke baad 30 mmHg aur inflate;</text><text x="95" y="394">deflate 2–3 mmHg/sec</text>
+  </g>
+  <!-- Korotkoff ladder -->
+  <g transform="translate(420,60)">
+    <text x="0" y="0" font-weight="bold" font-size="14" fill="#1a237e">Korotkoff sounds (5 phases)</text>
+    <g filter="url(#s)">
+      <rect x="0" y="15" width="280" height="56" rx="10" fill="#ef5350"/>
+      <rect x="0" y="77" width="280" height="44" rx="10" fill="#ff9800"/>
+      <rect x="0" y="127" width="280" height="44" rx="10" fill="#fdd835"/>
+      <rect x="0" y="177" width="280" height="44" rx="10" fill="#66bb6a"/>
+      <rect x="0" y="227" width="280" height="56" rx="10" fill="#42a5f5"/>
+    </g>
+    <g fill="#fff" font-weight="bold"><text x="12" y="38">Phase I – first clear tapping</text><text x="12" y="56" font-weight="normal">= SYSTOLIC BP</text></g>
+    <g font-weight="bold"><text x="12" y="104" fill="#fff">Phase II – swishing / murmur</text></g>
+    <g font-weight="bold"><text x="12" y="154" fill="#5d4037">Phase III – crisp, intense tapping</text></g>
+    <g font-weight="bold"><text x="12" y="204" fill="#fff">Phase IV – muffled (children diastolic)</text></g>
+    <g fill="#fff" font-weight="bold"><text x="12" y="250">Phase V – sound disappears</text><text x="12" y="268" font-weight="normal">= DIASTOLIC BP (adults)</text></g>
+    <text x="0" y="310" fill="#c62828" font-weight="bold">Auscultatory gap</text><text x="0" y="325">Phase I ke baad sound kuch der gayab –</text><text x="0" y="340">palpation pehle karne se galti nahi hoti</text>
+  </g>
+  <g font-size="11.5" transform="translate(20,425)">
+    <text x="0" y="0"><tspan font-weight="bold" fill="#c62828">Cuff too narrow / loose / arm below heart</tspan> → falsely HIGH BP</text>
+    <text x="0" y="18"><tspan font-weight="bold" fill="#1565c0">Cuff too wide / arm above heart</tspan> → falsely LOW BP · Repeat after 1–2 min</text><text x="0" y="36" fill="#6a1b9a">BP NOT on: AV fistula arm, mastectomy side, IV line / injured / plastered arm</text>
+  </g>
+</svg>

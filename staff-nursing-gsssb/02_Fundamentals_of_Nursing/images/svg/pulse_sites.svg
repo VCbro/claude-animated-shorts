@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="bd" x1="0" x2="1"><stop offset="0" stop-color="#9fa8da"/><stop offset=".45" stop-color="#e8eaf6"/><stop offset="1" stop-color="#7986cb"/></linearGradient>
+    <radialGradient id="hd" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f3f4ff"/><stop offset="1" stop-color="#7986cb"/></radialGradient>
+    <radialGradient id="p" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#ff5252"/><stop offset="1" stop-color="#8e0000"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="7" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="680" height="520" fill="#fbfbff"/>
+  <text x="340" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">Pulse Sites (Arterial pulse points)</text>
+  <g filter="url(#s)" fill="url(#bd)" stroke="#5c6bc0" stroke-width="2">
+    <circle cx="340" cy="85" r="34" fill="url(#hd)"/>
+    <rect x="325" y="115" width="30" height="22"/>
+    <path d="M280 135 L400 135 Q415 140 415 160 L410 290 L270 290 L265 160 Q265 140 280 135 Z"/>
+    <path d="M265 150 L225 270 L215 330 L232 333 L248 275 L280 175 Z"/>
+    <path d="M415 150 L455 270 L465 330 L448 333 L432 275 L400 175 Z"/>
+    <path d="M272 288 L265 400 L262 470 L298 470 L310 400 L338 300 Z"/>
+    <path d="M408 288 L415 400 L418 470 L382 470 L370 400 L342 300 Z"/>
+  </g>
+  <g filter="url(#s)">
+    <circle cx="318" cy="78" r="7" fill="url(#p)"/>
+    <circle cx="352" cy="128" r="7" fill="url(#p)"/>
+    <circle cx="372" cy="172" r="7" fill="url(#p)"/>
+    <circle cx="440" cy="235" r="7" fill="url(#p)"/>
+    <circle cx="460" cy="318" r="7" fill="url(#p)"/>
+    <circle cx="300" cy="300" r="7" fill="url(#p)"/>
+    <circle cx="295" cy="390" r="7" fill="url(#p)"/>
+    <circle cx="275" cy="455" r="7" fill="url(#p)"/>
+    <circle cx="392" cy="462" r="7" fill="url(#p)"/>
+  </g>
+  <g stroke="#78909c">
+    <line x1="311" y1="78" x2="190" y2="70"/><line x1="345" y1="128" x2="190" y2="128"/><line x1="379" y1="172" x2="500" y2="140"/>
+    <line x1="447" y1="235" x2="500" y2="215"/><line x1="467" y1="318" x2="500" y2="300"/><line x1="293" y1="300" x2="190" y2="290"/>
+    <line x1="288" y1="390" x2="190" y2="380"/><line x1="268" y1="455" x2="190" y2="450"/><line x1="399" y1="462" x2="500" y2="440"/>
+  </g>
+  <g>
+    <text x="20" y="66" font-weight="bold" fill="#b71c1c">Temporal</text><text x="20" y="80">infants/ head injury me</text>
+    <text x="20" y="124" font-weight="bold" fill="#b71c1c">Carotid ★</text><text x="20" y="138">cardiac arrest (adult)</text><text x="20" y="152" fill="#c62828">ek time pe ek hi side!</text>
+    <text x="505" y="128" font-weight="bold" fill="#b71c1c">Apical ★</text><text x="505" y="142">L 5th ICS, mid-clavicular</text><text x="505" y="156">line · infants &lt;2 yr, digoxin</text>
+    <text x="505" y="210" font-weight="bold" fill="#b71c1c">Brachial</text><text x="505" y="224">BP lene ki jagah;</text><text x="505" y="238">infant CPR pulse check</text>
+    <text x="505" y="296" font-weight="bold" fill="#b71c1c">Radial ★</text><text x="505" y="310">most common, routine</text><text x="505" y="324">(thumb side of wrist)</text>
+    <text x="20" y="286" font-weight="bold" fill="#b71c1c">Femoral</text><text x="20" y="300">shock, child CPR</text>
+    <text x="20" y="376" font-weight="bold" fill="#b71c1c">Popliteal</text><text x="20" y="390">knee ke peeche; thigh BP</text>
+    <text x="20" y="446" font-weight="bold" fill="#b71c1c">Posterior tibial</text><text x="20" y="460">medial malleolus ke peeche</text>
+    <text x="505" y="436" font-weight="bold" fill="#b71c1c">Dorsalis pedis</text><text x="505" y="450">foot ke upar – peripheral</text><text x="505" y="464">circulation check</text>
+  </g>
+  <text x="340" y="494" text-anchor="middle" font-size="12" fill="#1a237e">Pulse 2–3 fingers (index + middle) se lo – <tspan font-weight="bold">thumb se NAHI</tspan> (thumb ki apni pulse hoti hai)</text><text x="340" y="512" text-anchor="middle" font-size="12" fill="#1a237e">Regular pulse – 30 sec × 2 · Irregular pulse / first time / digoxin – full 1 minute</text>
+</svg>

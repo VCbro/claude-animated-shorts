@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3f2fd"/><stop offset="1" stop-color="#64b5f6"/></linearGradient>
+    <radialGradient id="hd" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe0c7"/><stop offset="1" stop-color="#d9946a"/></radialGradient>
+    <filter id="s" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="720" height="440" fill="#fffdf7"/>
+  <text x="360" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a237e">Important Patient Positions</text>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Fowler -->
+    <g transform="translate(20,50)">
+      <rect x="0" y="80" width="200" height="14" rx="5" fill="url(#bed)" stroke="#1565c0"/>
+      <path d="M20 80 L60 20" stroke="#1565c0" stroke-width="5"/>
+      <g filter="url(#s)"><path d="M60 78 L35 35" stroke="#29b6f6" stroke-width="18"/><path d="M60 78 L150 72 L180 78" stroke="#5c6bc0" stroke-width="14" fill="none"/><circle cx="30" cy="24" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="115" font-weight="bold" fill="#1565c0">Fowler's (45-60°) / High (90°)</text>
+      <text x="0" y="130" fill="#555">Dyspnoea, HF, COPD, post-thyroid</text>
+    </g>
+    <!-- Trendelenburg -->
+    <g transform="translate(260,50)">
+      <path d="M0 50 L200 95 L200 109 L0 64 Z" fill="url(#bed)" stroke="#1565c0"/>
+      <g filter="url(#s)"><path d="M40 50 L170 80" stroke="#29b6f6" stroke-width="18"/><path d="M40 50 L10 43" stroke="#5c6bc0" stroke-width="14"/><circle cx="188" cy="82" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="130" font-weight="bold" fill="#1565c0">Trendelenburg (head low)</text>
+      <text x="0" y="145" fill="#555">Pelvic surgery; (shock me ab NOT preferred)</text>
+    </g>
+    <!-- Sims -->
+    <g transform="translate(500,50)">
+      <rect x="0" y="80" width="200" height="14" rx="5" fill="url(#bed)" stroke="#1565c0"/>
+      <g filter="url(#s)"><path d="M40 68 L130 68" stroke="#29b6f6" stroke-width="18"/><path d="M130 66 L160 40 L190 60" stroke="#5c6bc0" stroke-width="13" fill="none"/><path d="M130 72 L175 76" stroke="#3949ab" stroke-width="13"/><circle cx="25" cy="66" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="115" font-weight="bold" fill="#1565c0">Sim's (left lateral, R knee bent)</text>
+      <text x="0" y="130" fill="#555">Enema, rectal exam, unconscious</text>
+    </g>
+    <!-- Supine -->
+    <g transform="translate(20,230)">
+      <rect x="0" y="60" width="200" height="14" rx="5" fill="url(#bed)" stroke="#1565c0"/>
+      <g filter="url(#s)"><path d="M40 48 L120 48" stroke="#29b6f6" stroke-width="18"/><path d="M120 48 L190 48" stroke="#5c6bc0" stroke-width="14"/><circle cx="22" cy="46" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="95" font-weight="bold" fill="#1565c0">Supine / Dorsal recumbent</text>
+      <text x="0" y="110" fill="#555">Spinal injury, post spinal anaes.</text>
+    </g>
+    <!-- Prone -->
+    <g transform="translate(260,230)">
+      <rect x="0" y="60" width="200" height="14" rx="5" fill="url(#bed)" stroke="#1565c0"/>
+      <g filter="url(#s)"><path d="M40 50 L120 50" stroke="#ef5350" stroke-width="18"/><path d="M120 50 L190 50" stroke="#5c6bc0" stroke-width="14"/><circle cx="22" cy="48" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="95" font-weight="bold" fill="#1565c0">Prone (pet ke bal)</text>
+      <text x="0" y="110" fill="#555">ARDS (proning), back surgery</text>
+    </g>
+    <!-- Lithotomy -->
+    <g transform="translate(500,230)">
+      <rect x="0" y="60" width="140" height="14" rx="5" fill="url(#bed)" stroke="#1565c0"/>
+      <g filter="url(#s)"><path d="M40 48 L120 48" stroke="#29b6f6" stroke-width="18"/><path d="M125 48 L150 10 L185 18" stroke="#5c6bc0" stroke-width="13" fill="none"/><circle cx="22" cy="46" r="13" fill="url(#hd)" stroke="#8d5a3b"/></g>
+      <text x="0" y="95" font-weight="bold" fill="#1565c0">Lithotomy (legs in stirrups)</text>
+      <text x="0" y="110" fill="#555">Vaginal exam, delivery, TURP, cysto</text>
+    </g>
+  </g>
+  <g font-size="12" transform="translate(20,370)">
+    <text x="0" y="0" font-weight="bold" fill="#c62828">More yaad rakho:</text>
+    <text x="0" y="18">Knee-chest → sigmoidoscopy, cord prolapse · Orthopneic (table pe jhukna) → severe dyspnoea</text>
+    <text x="0" y="36">Left lateral → enema, liver biopsy ke baad RIGHT side · Semi-Fowler (30°) → ↑ICP, NG feed, post-op</text>
+    <text x="0" y="54">Modified Trendelenburg (sirf legs up) → shock · Pneumonectomy → operated side down / supine</text>
+  </g>
+</svg>

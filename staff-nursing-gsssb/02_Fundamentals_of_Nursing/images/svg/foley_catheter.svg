@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="tube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3e0"/><stop offset=".4" stop-color="#ffcc80"/><stop offset="1" stop-color="#c77800"/></linearGradient>
+    <radialGradient id="bal" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#ffe0b2"/><stop offset="1" stop-color="#e09a3a"/></radialGradient>
+    <radialGradient id="blad" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff9c4"/><stop offset=".6" stop-color="#fbc02d"/><stop offset="1" stop-color="#b28704"/></radialGradient>
+    <linearGradient id="bag" x1="0" x2="1"><stop offset="0" stop-color="#eef6ff"/><stop offset=".4" stop-color="#ffffff"/><stop offset="1" stop-color="#bcd6ef"/></linearGradient>
+    <linearGradient id="urine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff176"/><stop offset="1" stop-color="#f9a825"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="7" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="720" height="520" fill="#fffdf7"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">Foley (Indwelling) Catheter &amp; Closed Drainage</text>
+  <!-- catheter -->
+  <g filter="url(#s)">
+    <path d="M80 110 L470 110" stroke="#f0a24a" stroke-width="18" stroke-linecap="round"/><path d="M84 104 L466 104" stroke="#fff3e0" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="95" cy="110" rx="30" ry="24" fill="url(#bal)" stroke="#c77800" stroke-width="1.5" opacity=".95"/>
+    <path d="M58 110 Q60 100 70 104" stroke="#c77800" stroke-width="2" fill="none"/>
+    <ellipse cx="62" cy="108" rx="4" ry="3" fill="#5d4037"/>
+    <path d="M470 110 L520 80" stroke="#f0a24a" stroke-width="12" stroke-linecap="round"/>
+    <path d="M470 110 L530 125" stroke="#f0a24a" stroke-width="16" stroke-linecap="round"/>
+    <path d="M470 110 L515 150" stroke="#f0a24a" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="522" cy="78" r="9" fill="#ef5350"/>
+  </g>
+  <g font-size="11.5">
+    <text x="40" y="160" font-weight="bold" fill="#c62828">Eye / drainage hole</text><text x="40" y="175">tip par</text>
+    <text x="95" y="72" text-anchor="middle" font-weight="bold" fill="#e65100">Balloon</text><text x="95" y="86" text-anchor="middle">5–10 ml (adult)</text>
+    <text x="540" y="76" font-weight="bold" fill="#c62828">Balloon port</text><text x="540" y="90">sterile water se fill</text>
+    <text x="545" y="128" font-weight="bold" fill="#1565c0">Drainage port</text><text x="545" y="142">→ urine bag</text>
+    <text x="530" y="170" font-weight="bold" fill="#2e7d32">3rd port (3-way)</text><text x="530" y="184">CBI irrigation (TURP)</text>
+  </g>
+  <!-- bladder + bag -->
+  <g transform="translate(80,215)" filter="url(#s)">
+    <path d="M0 40 Q0 0 60 0 Q120 0 120 40 Q120 95 75 105 L75 140 L45 140 L45 105 Q0 95 0 40 Z" fill="url(#blad)" stroke="#8a6500" stroke-width="2"/>
+    <ellipse cx="60" cy="88" rx="16" ry="12" fill="url(#bal)" stroke="#c77800"/>
+    <path d="M60 100 L60 150 Q60 175 140 175 L330 175" stroke="#f0a24a" stroke-width="8" fill="none"/>
+    <rect x="330" y="120" width="110" height="130" rx="14" fill="url(#bag)" stroke="#78909c" stroke-width="2"/>
+    <path d="M332 190 L438 190 L438 236 Q385 248 332 236 Z" fill="url(#urine)" opacity=".85"/>
+    <g stroke="#546e7a"><line x1="340" y1="150" x2="355" y2="150"/><line x1="340" y1="170" x2="355" y2="170"/><line x1="340" y1="210" x2="355" y2="210"/></g>
+    <rect x="340" y="126" width="8" height="110" rx="4" fill="#fff" opacity=".7"/>
+    <rect x="378" y="250" width="14" height="22" rx="3" fill="#78909c"/>
+    <line x1="-20" y1="60" x2="460" y2="60" stroke="#c62828" stroke-dasharray="6 4"/>
+  </g>
+  <g font-size="11.5">
+    <text x="545" y="270" font-weight="bold" fill="#c62828">Bag ALWAYS below</text><text x="545" y="285" font-weight="bold" fill="#c62828">bladder level</text><text x="545" y="300">(red line) – backflow → UTI</text>
+    <text x="545" y="325">Floor par nahi · no kinks</text><text x="545" y="340">Empty when 2/3 full</text><text x="545" y="355">Closed system rakho</text>
+    <text x="20" y="508" fill="#4e342e"><tspan font-weight="bold">Insertion:</tspan> Female 5–7.5 cm (2–3 inch) till urine, then 2.5 cm more · Male: penis 60–90° up, 17–22 cm (7–9 inch)</text>
+  </g>
+</svg>

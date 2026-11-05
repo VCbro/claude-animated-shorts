@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a237e"/><stop offset="1" stop-color="#5c6bc0"/></linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b39ddb" stop-opacity=".9"/><stop offset="1" stop-color="#4527a0" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="moon" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fffde7"/><stop offset="1" stop-color="#fbc02d"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="5" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="720" height="380" fill="url(#sky)"/>
+  <g fill="#fff" opacity=".8"><circle cx="40" cy="40" r="1.6"/><circle cx="120" cy="60" r="1.2"/><circle cx="300" cy="30" r="1.5"/><circle cx="500" cy="55" r="1.3"/><circle cx="560" cy="25" r="1.6"/><circle cx="420" cy="40" r="1"/></g>
+  <circle cx="650" cy="55" r="28" fill="url(#moon)" filter="url(#s)"/><circle cx="662" cy="47" r="24" fill="#2b3593"/>
+  <text x="20" y="32" font-size="17" font-weight="bold" fill="#fff" text-anchor="start">Sleep Cycle (Hypnogram) – ~90 min cycle, 4–6 cycles/night</text>
+  <g transform="translate(110,70)">
+    <g stroke="#9fa8da" stroke-width="1" opacity=".6"><line x1="0" y1="20" x2="560" y2="20"/><line x1="0" y1="80" x2="560" y2="80"/><line x1="0" y1="140" x2="560" y2="140"/><line x1="0" y1="200" x2="560" y2="200"/></g>
+    <path d="M0 20 L20 80 L40 140 L70 200 L110 200 L130 140 L150 80 L165 20 L185 20 L200 80 L220 140 L240 200 L265 200 L285 140 L300 80 L320 20 L355 20 L370 80 L390 140 L410 140 L425 80 L445 20 L485 20 L500 80 L520 80 L535 20 L560 20 L560 230 L0 230 Z" fill="url(#area)" filter="url(#s)"/>
+    <path d="M0 20 L20 80 L40 140 L70 200 L110 200 L130 140 L150 80 L165 20 L185 20 L200 80 L220 140 L240 200 L265 200 L285 140 L300 80 L320 20 L355 20 L370 80 L390 140 L410 140 L425 80 L445 20 L485 20 L500 80 L520 80 L535 20 L560 20" fill="none" stroke="#ffeb3b" stroke-width="3"/>
+    <g fill="#ff4081"><rect x="165" y="14" width="20" height="12" rx="3"/><rect x="320" y="14" width="35" height="12" rx="3"/><rect x="445" y="14" width="40" height="12" rx="3"/><rect x="535" y="14" width="25" height="12" rx="3"/></g>
+    <g fill="#e8eaf6" font-size="11.5" text-anchor="end"><text x="-8" y="24">REM / Awake</text><text x="-8" y="84">N1 (light)</text><text x="-8" y="144">N2</text><text x="-8" y="204">N3 (deep)</text></g>
+    <g fill="#e8eaf6" font-size="11" text-anchor="middle"><text x="0" y="248">11 pm</text><text x="140" y="248">1 am</text><text x="280" y="248">3 am</text><text x="420" y="248">5 am</text><text x="560" y="248">7 am</text></g>
+  </g>
+  <g transform="translate(20,340)" font-size="11.5" fill="#fff">
+    <text x="0" y="0"><tspan fill="#ff80ab" font-weight="bold">REM (pink)</tspan> = dreaming, brain active, muscles relaxed · ~20–25 % · subah ki taraf lamba</text>
+    <text x="0" y="20"><tspan fill="#ffeb3b" font-weight="bold">N3 (deep / slow-wave / delta)</tspan> = repair, GH ↑, hardest to wake · sleepwalking, bedwetting</text>
+  </g>
+</svg>

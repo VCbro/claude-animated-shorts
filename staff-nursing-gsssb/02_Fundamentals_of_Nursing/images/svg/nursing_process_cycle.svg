@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+    <radialGradient id="g1" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#90caf9"/><stop offset="1" stop-color="#0d47a1"/></radialGradient>
+    <radialGradient id="g2" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#ce93d8"/><stop offset="1" stop-color="#4a148c"/></radialGradient>
+    <radialGradient id="g3" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#a5d6a7"/><stop offset="1" stop-color="#1b5e20"/></radialGradient>
+    <radialGradient id="g4" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#ffcc80"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <radialGradient id="g5" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#ef9a9a"/><stop offset="1" stop-color="#b71c1c"/></radialGradient>
+    <radialGradient id="c" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fffde7"/><stop offset="1" stop-color="#ffca28"/></radialGradient>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#455a64"/></marker>
+  </defs>
+  <rect width="680" height="440" fill="#f8fbff"/>
+  <text x="340" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">Nursing Process – ADPIE (cyclic &amp; dynamic)</text>
+  <circle cx="340" cy="235" r="145" fill="none" stroke="#b0bec5" stroke-width="16" stroke-dasharray="4 10" opacity=".6"/>
+  <g stroke="#455a64" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M390 108 Q450 125 470 165"/><path d="M490 260 Q485 320 440 350"/><path d="M300 380 Q240 375 210 340"/><path d="M190 250 Q185 190 215 150"/><path d="M265 105 Q300 90 330 92"/>
+  </g>
+  <g filter="url(#s)">
+    <circle cx="340" cy="235" r="62" fill="url(#c)"/>
+    <circle cx="340" cy="90" r="48" fill="url(#g1)"/>
+    <circle cx="478" cy="205" r="48" fill="url(#g2)"/>
+    <circle cx="420" cy="368" r="48" fill="url(#g3)"/>
+    <circle cx="260" cy="368" r="48" fill="url(#g4)"/>
+    <circle cx="200" cy="205" r="48" fill="url(#g5)"/>
+  </g>
+  <g text-anchor="middle" font-weight="bold" fill="#fff" font-size="26">
+    <text x="340" y="100">A</text><text x="478" y="215">D</text><text x="420" y="378">P</text><text x="260" y="378">I</text><text x="200" y="215">E</text>
+  </g>
+  <g text-anchor="middle" font-weight="bold" fill="#5d4037"><text x="340" y="230">PATIENT</text><text x="340" y="248" font-weight="normal" font-size="11">centre me</text></g>
+  <g font-size="12">
+    <text x="400" y="62" font-weight="bold" fill="#0d47a1">1. Assessment</text><text x="400" y="77">Data collect – subjective</text><text x="400" y="92">&amp; objective (1st step)</text>
+    <text x="535" y="185" font-weight="bold" fill="#4a148c">2. Diagnosis</text><text x="535" y="200">NANDA · PES format</text><text x="535" y="215">(actual / risk / wellness)</text>
+    <text x="478" y="395" font-weight="bold" fill="#1b5e20">3. Planning</text><text x="478" y="410">Priority + SMART goals</text><text x="478" y="425">(expected outcomes)</text>
+    <text x="70" y="395" font-weight="bold" fill="#e65100">4. Implementation</text><text x="70" y="410">Independent / dependent</text><text x="70" y="425">/ interdependent actions</text>
+    <text x="20" y="160" font-weight="bold" fill="#b71c1c">5. Evaluation</text><text x="20" y="175">Goal met / partly /</text><text x="20" y="190">not met → revise</text>
+  </g>
+</svg>

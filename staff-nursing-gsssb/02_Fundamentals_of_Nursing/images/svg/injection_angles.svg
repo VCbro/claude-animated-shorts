@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <linearGradient id="epi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe0cc"/><stop offset="1" stop-color="#f3b896"/></linearGradient>
+    <linearGradient id="derm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7a6a0"/><stop offset="1" stop-color="#e57373"/></linearGradient>
+    <linearGradient id="fat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6c2"/><stop offset="1" stop-color="#f6dc74"/></linearGradient>
+    <linearGradient id="mus" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9534f"/><stop offset="1" stop-color="#8e1f1b"/></linearGradient>
+    <linearGradient id="topE" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd2b8"/><stop offset="1" stop-color="#ffeadc"/></linearGradient>
+    <linearGradient id="barrel" x1="0" x2="1"><stop offset="0" stop-color="#cfe6fb"/><stop offset=".4" stop-color="#ffffff"/><stop offset="1" stop-color="#90caf9"/></linearGradient>
+    <radialGradient id="vein" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#90caf9"/><stop offset="1" stop-color="#1e3f8a"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+    <g id="syr"><rect x="-6" y="-120" width="12" height="70" rx="3" fill="url(#barrel)" stroke="#607d8b" stroke-width="1.5"/><rect x="-3" y="-150" width="6" height="32" fill="#90a4ae"/><rect x="-9" y="-154" width="18" height="6" rx="2" fill="#607d8b"/><line x1="0" y1="-50" x2="0" y2="0" stroke="#78909c" stroke-width="2.4"/></g>
+  </defs>
+  <rect width="720" height="420" fill="#f6fbff"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">Injection Routes – Angle &amp; Depth (3D skin block)</text>
+  <!-- 3D tissue block -->
+  <g filter="url(#s)">
+    <path d="M60 200 L140 150 L680 150 L600 200 Z" fill="url(#topE)" stroke="#c98b6c"/>
+    <path d="M600 200 L680 150 L680 390 L600 400 Z" fill="#b44a46"/>
+    <rect x="60" y="200" width="540" height="18" fill="url(#epi)"/>
+    <rect x="60" y="218" width="540" height="42" fill="url(#derm)"/>
+    <rect x="60" y="260" width="540" height="62" fill="url(#fat)"/>
+    <rect x="60" y="322" width="540" height="78" fill="url(#mus)"/>
+    <ellipse cx="455" cy="290" rx="22" ry="14" fill="url(#vein)" stroke="#0d2a5c"/>
+    <path d="M600 209 L680 159 M600 239 L680 189 M600 291 L680 241 M600 361 L680 311" stroke="#7a2a27" stroke-width="1" opacity=".5"/>
+    <g stroke="#a33" stroke-width="1" opacity=".4" fill="none"><path d="M70 340 q40 10 80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/><path d="M70 370 q40 10 80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/></g>
+  </g>
+  <!-- syringes -->
+  <g transform="translate(140,236) rotate(78)"><use href="#syr"/></g>
+  <g transform="translate(270,262) rotate(45)"><use href="#syr"/></g>
+  <g transform="translate(455,282) rotate(65)"><use href="#syr"/></g>
+  <g transform="translate(560,345)"><use href="#syr"/></g>
+  <!-- labels -->
+  <g font-weight="bold">
+    <text x="20" y="70" fill="#6a1b9a">INTRADERMAL (ID)</text><text x="20" y="86" font-weight="normal">10–15° · bevel UP</text><text x="20" y="102" font-weight="normal">Dermis me · Mantoux,</text><text x="20" y="118" font-weight="normal">BCG, test dose</text><text x="20" y="134" font-weight="normal" fill="#c62828">Wheal (bleb) bane</text>
+    <text x="200" y="70" fill="#e65100">SUBCUTANEOUS (SC)</text><text x="200" y="86" font-weight="normal">45° (90° obese)</text><text x="200" y="102" font-weight="normal">Insulin, Heparin</text><text x="200" y="118" font-weight="normal">≤ 1 ml (max 2 ml)</text>
+    <text x="385" y="70" fill="#1565c0">INTRAVENOUS (IV)</text><text x="385" y="86" font-weight="normal">15–30° (≈ 25°)</text><text x="385" y="102" font-weight="normal">Fastest action</text><text x="385" y="118" font-weight="normal">bevel UP in vein</text>
+    <text x="555" y="70" fill="#b71c1c">INTRAMUSCULAR</text><text x="555" y="86" font-weight="normal">(IM) 90° · muscle</text><text x="555" y="102" font-weight="normal">Deltoid ≤ 1 ml</text><text x="555" y="118" font-weight="normal">Gluteal/thigh ≤ 3–5 ml</text>
+  </g>
+  <g font-size="11.5" fill="#333">
+    <text x="5" y="213" fill="#8d5a3b">Epidermis</text>
+    <text x="5" y="243" fill="#b71c1c">Dermis</text>
+    <text x="5" y="295" fill="#8a6d00">Subcut fat</text>
+    <text x="5" y="365" fill="#7f1d1a">Muscle</text>
+  </g>
+  <text x="360" y="414" text-anchor="middle" font-size="12" fill="#0d47a1">Speed of absorption: IV &gt; IM &gt; SC &gt; ID (fastest → slowest) · ID slowest absorption – isliye allergy test ke liye</text>
+</svg>
