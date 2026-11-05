@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <radialGradient id="rbc" cx="38%" cy="35%" r="70%"><stop offset="0" stop-color="#ff8a80"/><stop offset="0.7" stop-color="#d32f2f"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <linearGradient id="bag" x1="0" x2="1"><stop offset="0" stop-color="#e3f2fd"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#bbdefb"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1565c0"/></marker>
+  </defs>
+  <rect width="700" height="330" fill="#f7fbff"/>
+  <text x="350" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#0d47a1">IV Fluids – Tonicity ka Cell (RBC) par Asar</text>
+  <g transform="translate(120,150)">
+    <circle r="90" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+    <ellipse rx="45" ry="45" fill="url(#rbc)" filter="url(#s)"/>
+    <g stroke="#1565c0" stroke-width="2.5" marker-end="url(#a)"><path d="M-80 0 L-55 0"/><path d="M55 0 L80 0"/></g>
+    <text y="125" text-anchor="middle" font-weight="bold" fill="#2e7d32">ISOTONIC</text>
+    <text y="142" text-anchor="middle" fill="#555">No change (normal)</text>
+  </g>
+  <g transform="translate(350,150)">
+    <circle r="90" fill="#e3f2fd" stroke="#42a5f5" stroke-width="2"/>
+    <circle r="62" fill="url(#rbc)" filter="url(#s)"/>
+    <g stroke="#1565c0" stroke-width="2.5" marker-end="url(#a)"><path d="M-88 0 L-66 0"/><path d="M88 0 L66 0"/><path d="M0 -88 L0 -66"/></g>
+    <text y="125" text-anchor="middle" font-weight="bold" fill="#1565c0">HYPOTONIC</text>
+    <text y="142" text-anchor="middle" fill="#555">Paani cell ke ANDAR → swell</text>
+  </g>
+  <g transform="translate(580,150)">
+    <circle r="90" fill="#fff3e0" stroke="#ffa726" stroke-width="2"/>
+    <path d="M-30 -10 Q-20 -35 0 -25 Q20 -38 30 -12 Q38 8 22 22 Q5 35 -12 25 Q-36 18 -30 -10 Z" fill="url(#rbc)" filter="url(#s)"/>
+    <g stroke="#1565c0" stroke-width="2.5" marker-end="url(#a)"><path d="M-36 0 L-70 0"/><path d="M38 0 L72 0"/><path d="M0 34 L0 66"/></g>
+    <text y="125" text-anchor="middle" font-weight="bold" fill="#ef6c00">HYPERTONIC</text>
+    <text y="142" text-anchor="middle" fill="#555">Paani cell se BAHAR → shrink</text>
+  </g>
+  <g font-size="11.5" text-anchor="middle">
+    <text x="120" y="320" fill="#2e7d32">0.9% NS · Ringer Lactate · D5W*</text>
+    <text x="350" y="320" fill="#1565c0">0.45% NS (½ NS) · 0.33% NS</text>
+    <text x="580" y="320" fill="#ef6c00">3% NS · D10W · D5NS · D5RL</text>
+  </g>
+</svg>

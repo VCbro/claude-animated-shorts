@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <g id="layers">
+      <rect x="0" y="0" width="150" height="16" fill="#f6c9a8"/>
+      <rect x="0" y="16" width="150" height="40" fill="#f19a8c"/>
+      <rect x="0" y="56" width="150" height="50" fill="#fff3b0"/>
+      <rect x="0" y="106" width="150" height="50" fill="#c74a4a"/>
+      <rect x="0" y="156" width="150" height="34" fill="#eeeeee"/>
+      <rect x="0" y="0" width="150" height="190" fill="none" stroke="#6d4c41" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="700" height="350" fill="#fffaf5"/>
+  <text x="350" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#6d4c41">Pressure Ulcer / Bed Sore – Stages (NPIAP)</text>
+  <g transform="translate(15,60)"><use href="#layers"/><ellipse cx="75" cy="6" rx="38" ry="8" fill="#e53935" opacity="0.6"/></g>
+  <g transform="translate(185,60)"><use href="#layers"/><path d="M45 0 Q75 40 105 0 Z" fill="#ff8a80" stroke="#b71c1c" stroke-width="2"/></g>
+  <g transform="translate(355,60)"><use href="#layers"/><path d="M35 0 Q75 170 115 0 Z" fill="#8d3b2f" stroke="#4e1b14" stroke-width="2"/></g>
+  <g transform="translate(525,60)"><use href="#layers"/><path d="M28 0 Q75 330 122 0 Z" fill="#5d1f17" stroke="#2b0b07" stroke-width="2"/><rect x="62" y="160" width="26" height="14" fill="#fafafa" stroke="#999"/></g>
+  <g font-weight="bold" fill="#b71c1c" font-size="14">
+    <text x="20" y="52">Stage I</text><text x="190" y="52">Stage II</text><text x="360" y="52">Stage III</text><text x="530" y="52">Stage IV</text>
+  </g>
+  <g font-size="11.5">
+    <text x="15" y="268">Non-blanchable redness,</text><text x="15" y="283">skin intact</text>
+    <text x="185" y="268">Partial thickness – epidermis</text><text x="185" y="283">+ dermis; blister/shallow</text>
+    <text x="355" y="268">Full thickness skin loss,</text><text x="355" y="283">fat visible (no bone)</text>
+    <text x="525" y="268">Bone, tendon, muscle</text><text x="525" y="283">exposed</text>
+  </g>
+  <g font-size="10.5" fill="#333">
+  </g>
+  <text x="15" y="315" font-size="12" fill="#1565c0">Layers (upar se neeche): Epidermis · Dermis · Subcutaneous fat · Muscle · Bone</text><text x="15" y="335" font-size="12"><tspan fill="#c62828" font-weight="bold">Unstageable</tspan> = base slough/eschar se dhaka · <tspan fill="#2e7d32" font-weight="bold">Prevention:</tspan> turn every 2 hours, Braden scale</text>
+</svg>

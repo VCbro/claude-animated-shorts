@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 460" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <radialGradient id="g1" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#bbdefb"/><stop offset="1" stop-color="#1e88e5"/></radialGradient>
+    <radialGradient id="g2" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#c8e6c9"/><stop offset="1" stop-color="#43a047"/></radialGradient>
+    <radialGradient id="g3" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#fff9c4"/><stop offset="1" stop-color="#fbc02d"/></radialGradient>
+    <radialGradient id="g4" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#f8bbd0"/><stop offset="1" stop-color="#d81b60"/></radialGradient>
+    <radialGradient id="g5" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#e1bee7"/><stop offset="1" stop-color="#8e24aa"/></radialGradient>
+    <radialGradient id="g6" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#ffccbc"/><stop offset="1" stop-color="#e64a19"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="5" stdDeviation="5" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="660" height="460" fill="#f7f9ff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#283593">Brain – Lobes &amp; Functions (Lateral view)</text>
+  <g transform="translate(150,60)" filter="url(#s)" stroke="#263238" stroke-width="2.5">
+    <!-- frontal -->
+    <path d="M150 20 Q60 20 20 110 Q5 170 40 210 L120 200 Q150 150 175 90 Z" fill="url(#g1)"/>
+    <!-- parietal -->
+    <path d="M150 20 Q250 0 300 60 L250 140 L175 90 Z" fill="url(#g2)"/>
+    <!-- occipital -->
+    <path d="M300 60 Q350 110 340 190 Q320 220 280 215 L250 140 Z" fill="url(#g4)"/>
+    <!-- temporal -->
+    <path d="M40 210 L120 200 Q150 150 175 90 L250 140 L280 215 Q220 260 140 255 Q70 250 40 210 Z" fill="url(#g3)"/>
+    <!-- cerebellum -->
+    <path d="M230 245 Q280 215 335 205 Q350 250 300 280 Q250 290 230 245 Z" fill="url(#g5)"/>
+    <!-- brain stem -->
+    <path d="M180 250 Q200 255 220 250 L215 340 Q200 350 190 340 Z" fill="url(#g6)"/>
+    <!-- gyri hint -->
+    <g fill="none" stroke="#263238" stroke-width="1" opacity="0.5">
+      <path d="M60 110 Q90 90 110 130 Q130 160 100 180"/><path d="M200 50 Q230 60 220 100"/><path d="M290 120 Q310 150 300 180"/><path d="M90 230 Q140 215 200 230"/>
+    </g>
+  </g>
+  <g>
+    <text x="20" y="80" font-weight="bold" fill="#1565c0">FRONTAL lobe</text>
+    <text x="20" y="95">Personality, judgement,</text><text x="20" y="110">voluntary movement</text>
+    <text x="20" y="125" fill="#c62828">Broca's area → speech</text><text x="20" y="140" fill="#c62828">bolna (Expressive aphasia)</text>
+    <text x="470" y="70" font-weight="bold" fill="#2e7d32">PARIETAL lobe</text>
+    <text x="470" y="85">Sensation – touch, pain,</text><text x="470" y="100">temperature, position</text>
+    <text x="510" y="200" font-weight="bold" fill="#ad1457">OCCIPITAL lobe</text>
+    <text x="510" y="215">Vision (dekhna)</text>
+    <text x="20" y="330" font-weight="bold" fill="#f57f17">TEMPORAL lobe</text>
+    <text x="20" y="345">Hearing, memory</text><text x="20" y="360" fill="#c62828">Wernicke's area → speech</text><text x="20" y="375" fill="#c62828">samajhna (Receptive aphasia)</text>
+    <text x="500" y="330" font-weight="bold" fill="#6a1b9a">CEREBELLUM</text>
+    <text x="500" y="345">Balance, coordination,</text><text x="500" y="360">posture</text>
+    <text x="400" y="415" font-weight="bold" fill="#bf360c">BRAIN STEM</text>
+    <text x="400" y="430">Midbrain · Pons · Medulla</text><text x="400" y="445" fill="#c62828">Medulla = Vital centres (resp, cardiac)</text>
+    <line x1="350" y1="395" x2="398" y2="410" stroke="#555"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 470" font-family="DejaVu Sans, Arial" font-size="13">
+  <defs>
+    <linearGradient id="sk" x1="0" x2="1"><stop offset="0" stop-color="#f3c6a5"/><stop offset="0.5" stop-color="#ffe1cc"/><stop offset="1" stop-color="#d9a07b"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="660" height="470" fill="#fff8f0"/>
+  <text x="330" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">Burns – Rule of Nines (Wallace) · Adult</text>
+  <g id="fig" filter="url(#s)" stroke="#8d5a3b" stroke-width="2">
+    <circle cx="160" cy="85" r="30" fill="#ffcc80"/>
+    <rect x="115" y="120" width="90" height="140" rx="16" fill="#ef9a9a"/>
+    <rect x="78" y="124" width="32" height="140" rx="14" fill="#90caf9"/>
+    <rect x="210" y="124" width="32" height="140" rx="14" fill="#90caf9"/>
+    <rect x="117" y="265" width="40" height="170" rx="16" fill="#a5d6a7"/>
+    <rect x="163" y="265" width="40" height="170" rx="16" fill="#a5d6a7"/>
+    <rect x="150" y="258" width="20" height="14" rx="4" fill="#ce93d8"/>
+  </g>
+  <g filter="url(#s)" stroke="#8d5a3b" stroke-width="2" transform="translate(220,0)">
+    <circle cx="160" cy="85" r="30" fill="#ffcc80"/>
+    <rect x="115" y="120" width="90" height="140" rx="16" fill="#f48fb1"/>
+    <rect x="78" y="124" width="32" height="140" rx="14" fill="#90caf9"/>
+    <rect x="210" y="124" width="32" height="140" rx="14" fill="#90caf9"/>
+    <rect x="117" y="265" width="40" height="170" rx="16" fill="#a5d6a7"/>
+    <rect x="163" y="265" width="40" height="170" rx="16" fill="#a5d6a7"/>
+  </g>
+  <g font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    <text x="160" y="90">4.5%</text><text x="160" y="195">18%</text><text x="94" y="200" font-size="11">4.5</text><text x="226" y="200" font-size="11">4.5</text>
+    <text x="137" y="355" font-size="12">9%</text><text x="183" y="355" font-size="12">9%</text>
+    <text x="380" y="90">4.5%</text><text x="380" y="195">18%</text><text x="314" y="200" font-size="11">4.5</text><text x="446" y="200" font-size="11">4.5</text>
+    <text x="357" y="355" font-size="12">9%</text><text x="403" y="355" font-size="12">9%</text>
+    <text x="160" y="460" fill="#6a1b9a">FRONT</text><text x="380" y="460" fill="#6a1b9a">BACK</text>
+  </g>
+  <line x1="152" y1="268" x2="70" y2="300" stroke="#6a1b9a"/><text x="10" y="315" font-size="11.5" fill="#6a1b9a" font-weight="bold">Perineum 1%</text>
+  <g transform="translate(480,60)" font-size="13">
+    <rect x="-8" y="-8" width="180" height="300" rx="12" fill="#fff" stroke="#ffb74d" stroke-width="2"/>
+    <text x="0" y="14" font-weight="bold" fill="#e65100">Total = 100%</text>
+    <rect x="0" y="30" width="14" height="14" fill="#ffcc80"/><text x="20" y="42">Head &amp; neck 9%</text>
+    <rect x="0" y="56" width="14" height="14" fill="#90caf9"/><text x="20" y="68">Each arm 9%</text><text x="20" y="84" fill="#555" font-size="11.5">(2 arms = 18%)</text>
+    <rect x="0" y="96" width="14" height="14" fill="#ef9a9a"/><text x="20" y="108">Trunk front 18%</text>
+    <rect x="0" y="122" width="14" height="14" fill="#f48fb1"/><text x="20" y="134">Trunk back 18%</text>
+    <rect x="0" y="148" width="14" height="14" fill="#a5d6a7"/><text x="20" y="160">Each leg 18%</text><text x="20" y="176" fill="#555" font-size="11.5">(2 legs = 36%)</text>
+    <rect x="0" y="188" width="14" height="14" fill="#ce93d8"/><text x="20" y="200">Perineum 1%</text>
+    <text x="0" y="232" font-size="12" fill="#c62828" font-weight="bold">Palm rule:</text>
+    <text x="0" y="248" font-size="12">Patient ki palm</text><text x="0" y="264" font-size="12">(fingers sahit) ≈ 1% TBSA</text>
+  </g>
+  <text x="480" y="390" font-size="12" fill="#1565c0" font-weight="bold">Children me:</text>
+  <text x="480" y="406" font-size="12">Lund &amp; Browder chart</text>
+  <text x="480" y="422" font-size="12">(Head bada, legs chhote)</text>
+</svg>

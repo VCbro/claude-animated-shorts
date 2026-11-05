@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <radialGradient id="kid" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#ffab91"/><stop offset="0.6" stop-color="#d84315"/><stop offset="1" stop-color="#6d1b00"/></radialGradient>
+    <radialGradient id="glom" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ff8a80"/><stop offset="1" stop-color="#b71c1c"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="720" height="440" fill="#fffdf6"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#bf360c">Kidney &amp; Nephron (functional unit)</text>
+  <!-- kidney -->
+  <g transform="translate(30,60)" filter="url(#s)">
+    <path d="M90 0 Q10 10 5 140 Q10 270 95 280 Q150 280 150 210 Q120 175 125 140 Q120 105 150 70 Q150 0 90 0 Z" fill="url(#kid)" stroke="#4e1500" stroke-width="2.5"/>
+    <path d="M90 25 Q35 35 32 140 Q35 245 92 255 Q120 250 125 210" fill="none" stroke="#ffccbc" stroke-width="2" stroke-dasharray="5 3"/>
+    <path d="M140 140 Q175 150 180 270" stroke="#fdd835" stroke-width="10" fill="none"/>
+  </g>
+  <g font-size="12">
+    <text x="20" y="360">Cortex (outer) · Medulla (pyramids)</text>
+    <text x="20" y="376" fill="#f9a825" font-weight="bold">Ureter → Bladder</text>
+    <text x="20" y="392" fill="#555">1 kidney ≈ 1 million nephrons</text>
+    <text x="20" y="408" fill="#555">Right kidney slightly lower (liver)</text>
+  </g>
+  <!-- nephron -->
+  <g transform="translate(230,50)">
+    <circle cx="60" cy="60" r="38" fill="#e3f2fd" stroke="#1565c0" stroke-width="3"/>
+    <circle cx="60" cy="60" r="24" fill="url(#glom)" stroke="#7f0000" stroke-width="2"/>
+    <path d="M0 40 L36 52" stroke="#e53935" stroke-width="6"/><path d="M36 72 L0 86" stroke="#c62828" stroke-width="5"/>
+    <path d="M98 60 Q140 40 150 80 Q160 120 120 120 Q90 125 110 160 Q130 190 150 200" fill="none" stroke="#ffb74d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M150 200 L150 340 Q170 365 190 340 L190 200" fill="none" stroke="#81c784" stroke-width="10" stroke-linecap="round"/>
+    <path d="M190 200 Q200 150 230 160 Q270 170 250 120 Q235 80 270 70" fill="none" stroke="#64b5f6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M270 70 L330 70 L330 360" fill="none" stroke="#ba68c8" stroke-width="12" stroke-linecap="round"/>
+    <g font-size="12">
+      <text x="-10" y="-8" font-weight="bold" fill="#1565c0">Bowman's capsule + Glomerulus</text>
+      <text x="-10" y="6" fill="#555">= Filtration (GFR ≈ 125 ml/min)</text>
+      <text x="-25" y="36" fill="#e53935">Afferent</text><text x="-25" y="104" fill="#c62828">Efferent</text>
+      <text x="-10" y="140" fill="#e65100" font-weight="bold">PCT</text><text x="-10" y="154" fill="#555">65% reabsorb</text><text x="-10" y="168" fill="#555">glucose, AA</text><text x="-10" y="182" fill="#555">100% yahan</text>
+      <text x="10" y="300" fill="#2e7d32" font-weight="bold">Loop of Henle</text><text x="10" y="314" fill="#555">Countercurrent –</text><text x="10" y="328" fill="#555">concentrates</text>
+      <text x="205" y="235" fill="#1565c0" font-weight="bold">DCT</text><text x="205" y="249" fill="#555">Aldosterone:</text><text x="205" y="263" fill="#555">Na⁺ in, K⁺ out</text>
+      <text x="345" y="140" fill="#6a1b9a" font-weight="bold">Collecting duct</text><text x="345" y="154" fill="#555">ADH → water</text><text x="345" y="168" fill="#555">reabsorption</text>
+      <text x="345" y="355" fill="#6a1b9a">→ Renal pelvis</text>
+    </g>
+  </g>
+</svg>

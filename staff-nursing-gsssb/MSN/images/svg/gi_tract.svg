@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 540" font-family="DejaVu Sans, Arial" font-size="12.5">
+  <defs>
+    <radialGradient id="liv" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#bc6c4c"/><stop offset="1" stop-color="#5d2412"/></radialGradient>
+    <radialGradient id="sto" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#ffccbc"/><stop offset="1" stop-color="#e57373"/></radialGradient>
+    <radialGradient id="gb" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#c5e1a5"/><stop offset="1" stop-color="#558b2f"/></radialGradient>
+    <radialGradient id="pan" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#fff59d"/><stop offset="1" stop-color="#f9a825"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="660" height="540" fill="#fffaf5"/>
+  <text x="330" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#6d4c41">Digestive System (GI Tract) – Organs &amp; Landmarks</text>
+  <!-- body outline -->
+  <path d="M250 50 Q330 40 410 50 L440 120 Q470 300 450 500 L210 500 Q190 300 220 120 Z" fill="#fde7d6" stroke="#d7a98c" stroke-width="2"/>
+  <!-- esophagus -->
+  <path d="M330 50 L335 150" stroke="#ef9a9a" stroke-width="14" stroke-linecap="round"/>
+  <!-- large intestine -->
+  <path d="M265 420 L262 280 Q262 260 285 258 L395 258 Q418 260 418 282 L420 420 Q410 450 360 440" fill="none" stroke="#a1887f" stroke-width="26" stroke-linejoin="round" filter="url(#s)"/>
+  <path d="M265 420 L262 280 Q262 260 285 258 L395 258 Q418 260 418 282 L420 420 Q410 450 360 440" fill="none" stroke="#d7ccc8" stroke-width="12" stroke-dasharray="10 6"/>
+  <path d="M360 440 Q340 470 335 495" stroke="#8d6e63" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- appendix -->
+  <path d="M265 425 Q255 455 270 462" stroke="#e53935" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- small intestine -->
+  <path d="M300 300 q20 -15 40 0 t40 0 M295 330 q22 15 45 0 t45 0 M300 360 q20 -15 40 0 t40 0 M300 390 q22 15 45 0 t40 -5 M300 410 Q285 420 275 415" fill="none" stroke="#f48fb1" stroke-width="13" stroke-linecap="round" filter="url(#s)"/>
+  <!-- liver -->
+  <path d="M225 150 Q240 120 330 130 Q370 135 345 175 Q300 215 230 215 Q215 190 225 150 Z" fill="url(#liv)" stroke="#3e1608" stroke-width="2" filter="url(#s)"/>
+  <!-- gall bladder -->
+  <ellipse cx="290" cy="215" rx="14" ry="20" fill="url(#gb)" stroke="#33691e" stroke-width="2"/>
+  <!-- stomach -->
+  <path d="M338 150 Q420 135 425 185 Q425 240 360 240 Q330 238 335 220 Q370 215 365 190 Q350 175 338 165 Z" fill="url(#sto)" stroke="#b71c1c" stroke-width="2" filter="url(#s)"/>
+  <!-- pancreas -->
+  <path d="M320 245 Q360 235 405 240 Q420 248 400 252 Q360 256 320 258 Z" fill="url(#pan)" stroke="#f57f17" stroke-width="1.5"/>
+  <!-- McBurney -->
+  <circle cx="275" cy="405" r="8" fill="none" stroke="#d50000" stroke-width="3"/>
+  <line x1="275" y1="405" x2="230" y2="350" stroke="#d50000" stroke-dasharray="3 3"/>
+  <!-- labels left -->
+  <g>
+    <line x1="232" y1="172" x2="135" y2="158" stroke="#555"/><text x="20" y="135" font-weight="bold" fill="#5d2412">Liver</text><text x="20" y="149" fill="#555">Largest gland,</text><text x="20" y="163" fill="#555">bile banata hai</text>
+    <line x1="280" y1="222" x2="150" y2="215" stroke="#555"/><text x="20" y="210" font-weight="bold" fill="#33691e">Gall bladder</text><text x="20" y="224" fill="#555">bile store (30-50 ml)</text>
+    <line x1="263" y1="320" x2="150" y2="300" stroke="#555"/><text x="20" y="290" font-weight="bold" fill="#6d4c41">Ascending colon</text><text x="20" y="304" fill="#555">(Right side)</text>
+    <text x="20" y="345" font-weight="bold" fill="#d50000">McBurney's point</text><text x="20" y="359" fill="#555">Umbilicus → ASIS ka 2/3</text><text x="20" y="373" fill="#555">rasta = Appendicitis pain</text>
+    <line x1="262" y1="458" x2="150" y2="470" stroke="#555"/><text x="20" y="465" font-weight="bold" fill="#e53935">Appendix</text><text x="20" y="479" fill="#555">(Caecum se judi)</text>
+  </g>
+  <!-- labels right -->
+  <g>
+    <line x1="337" y1="90" x2="480" y2="80" stroke="#555"/><text x="485" y="76" font-weight="bold" fill="#c62828">Oesophagus</text><text x="485" y="90" fill="#555">25 cm · peristalsis</text>
+    <line x1="410" y1="180" x2="480" y2="160" stroke="#555"/><text x="485" y="150" font-weight="bold" fill="#b71c1c">Stomach</text><text x="485" y="164" fill="#555">HCl, pepsin, intrinsic</text><text x="485" y="178" fill="#555">factor (B12 absorption)</text>
+    <line x1="400" y1="248" x2="480" y2="225" stroke="#555"/><text x="485" y="220" font-weight="bold" fill="#f57f17">Pancreas</text><text x="485" y="234" fill="#555">Exocrine + Endocrine</text><text x="485" y="248" fill="#555">(insulin – β cells)</text>
+    <line x1="380" y1="330" x2="480" y2="310" stroke="#555"/><text x="485" y="300" font-weight="bold" fill="#ad1457">Small intestine</text><text x="485" y="314" fill="#555">Duodenum → Jejunum →</text><text x="485" y="328" fill="#555">Ileum (~6 m) · absorption</text>
+    <line x1="419" y1="380" x2="480" y2="380" stroke="#555"/><text x="485" y="375" font-weight="bold" fill="#6d4c41">Descending colon</text><text x="485" y="389" fill="#555">(Left side)</text>
+    <line x1="340" y1="485" x2="480" y2="470" stroke="#555"/><text x="485" y="460" font-weight="bold" fill="#4e342e">Sigmoid → Rectum</text><text x="485" y="474" fill="#555">→ Anus</text>
+  </g>
+  <text x="330" y="525" text-anchor="middle" fill="#6d4c41" font-size="12">Transverse colon stomach ke neeche horizontal chalti hai · Large intestine = water absorption</text>
+</svg>

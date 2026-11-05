@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" font-family="DejaVu Sans, Arial" font-size="13">
+  <defs>
+    <pattern id="sm" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0 L0 0 0 10" fill="none" stroke="#f6b3b3" stroke-width="0.6"/></pattern>
+    <pattern id="lg" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#sm)"/><path d="M50 0 L0 0 0 50" fill="none" stroke="#e57373" stroke-width="1.3"/></pattern>
+    <radialGradient id="pink" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd1d1"/><stop offset="1" stop-color="#e57373"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.25"/></filter>
+  </defs>
+  <rect width="680" height="450" fill="#fffaf2"/>
+  <text x="340" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#b71c1c">Conduction System &amp; Normal ECG (PQRST)</text>
+  <!-- mini heart with conduction -->
+  <g transform="translate(20,45)">
+    <path d="M40 40 Q10 120 60 190 Q110 250 150 262 Q210 220 235 150 Q255 70 215 40 Q130 15 40 40 Z" fill="url(#pink)" stroke="#8e1414" stroke-width="2.5" filter="url(#s)"/>
+    <circle cx="70" cy="60" r="9" fill="#ffeb3b" stroke="#333" stroke-width="2"/>
+    <circle cx="120" cy="120" r="8" fill="#ff9800" stroke="#333" stroke-width="2"/>
+    <path d="M70 60 Q95 90 120 120" stroke="#ffb300" stroke-width="4" fill="none" stroke-dasharray="5 4"/>
+    <path d="M120 120 L128 150" stroke="#43a047" stroke-width="5"/>
+    <path d="M128 150 Q95 200 110 235" stroke="#1e88e5" stroke-width="4" fill="none"/>
+    <path d="M128 150 Q180 175 175 225" stroke="#1e88e5" stroke-width="4" fill="none"/>
+    <g stroke="#8e24aa" stroke-width="2.5" fill="none">
+      <path d="M110 235 l-12 6 M110 235 l2 14 M175 225 l12 6 M175 225 l-4 14"/>
+    </g>
+    <g font-size="11.5">
+      <text x="2" y="16">1. SA node</text><text x="2" y="30" fill="#c62828">(Pacemaker 60-100/min)</text>
+      <line x1="66" y1="52" x2="50" y2="34" stroke="#555"/>
+      <text x="140" y="108">2. AV node (40-60)</text>
+      <text x="140" y="148" fill="#2e7d32">3. Bundle of His</text>
+      <text x="60" y="282" fill="#1565c0">4. Right &amp; Left bundle branches</text>
+      <text x="60" y="298" fill="#6a1b9a">5. Purkinje fibres (20-40)</text>
+    </g>
+  </g>
+  <!-- ECG grid -->
+  <g transform="translate(300,55)">
+    <rect width="360" height="230" fill="url(#lg)" stroke="#e57373"/>
+    <path d="M0 150 L40 150 Q55 120 70 150 L100 150 L108 162 L122 40 L136 185 L146 150 L180 150 Q210 100 240 150 L270 150 Q280 138 290 150 L360 150" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+    <g font-weight="bold" font-size="15" fill="#0d47a1" text-anchor="middle">
+      <text x="55" y="112">P</text><text x="106" y="182">Q</text><text x="122" y="32">R</text><text x="138" y="205">S</text><text x="210" y="96">T</text><text x="282" y="130">U</text>
+    </g>
+    <!-- intervals -->
+    <g stroke="#2e7d32" stroke-width="2"><line x1="40" y1="215" x2="108" y2="215"/><line x1="40" y1="209" x2="40" y2="221"/><line x1="108" y1="209" x2="108" y2="221"/></g>
+    <text x="50" y="211" font-size="11" fill="#2e7d32">PR</text>
+    <g stroke="#6a1b9a" stroke-width="2"><line x1="108" y1="226" x2="146" y2="226"/></g>
+    <text x="112" y="222" font-size="11" fill="#6a1b9a">QRS</text>
+    <g stroke="#ef6c00" stroke-width="2"><line x1="146" y1="140" x2="180" y2="140"/></g>
+    <text x="146" y="134" font-size="11" fill="#ef6c00">ST</text>
+  </g>
+  <!-- legend table -->
+  <g transform="translate(300,300)" font-size="12">
+    <text x="0" y="14"><tspan font-weight="bold" fill="#0d47a1">P wave</tspan> = Atrial depolarization</text>
+    <text x="0" y="32"><tspan font-weight="bold" fill="#6a1b9a">QRS</tspan> = Ventricular depolarization (0.06-0.10 s)</text>
+    <text x="0" y="50"><tspan font-weight="bold" fill="#0d47a1">T wave</tspan> = Ventricular repolarization</text>
+    <text x="0" y="68"><tspan font-weight="bold" fill="#2e7d32">PR interval</tspan> = 0.12 – 0.20 s</text>
+    <text x="0" y="86"><tspan font-weight="bold" fill="#c62828">1 small box</tspan> = 0.04 s · <tspan font-weight="bold" fill="#c62828">1 big box</tspan> = 0.20 s</text>
+  </g>
+  <text x="20" y="420" font-size="12" fill="#555">Atrial repolarization QRS ke andar chhup jata hai (dikhta nahi).</text><text x="20" y="438" font-size="12" fill="#b71c1c">ST elevation = MI (STEMI) · Tall peaked T = Hyperkalemia · U wave = Hypokalemia</text>
+</svg>
