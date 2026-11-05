@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="g0" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e1bee7"/><stop offset="1" stop-color="#7b1fa2"/></linearGradient>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c8e6c9"/><stop offset="1" stop-color="#2e7d32"/></linearGradient>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff9c4"/><stop offset="1" stop-color="#f9a825"/></linearGradient>
+    <linearGradient id="g3" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffcdd2"/><stop offset="1" stop-color="#c62828"/></linearGradient>
+    <linearGradient id="ar" x1="0" x2="1"><stop offset="0" stop-color="#90a4ae"/><stop offset="1" stop-color="#37474f"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="440" fill="#fbfbff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#311b92">Natural History of Disease &amp; Levels of Prevention</text>
+  <!-- natural history arrow -->
+  <g filter="url(#s)">
+    <path d="M30 60 H820 L850 80 L820 100 H30 Z" fill="url(#ar)"/>
+  </g>
+  <g fill="#fff" font-weight="bold" font-size="12.5" text-anchor="middle">
+    <text x="120" y="85">Pre-pathogenesis</text>
+    <text x="380" y="85">Early pathogenesis (no symptoms)</text>
+    <text x="580" y="85">Clinical disease</text>
+    <text x="750" y="85">Outcome</text>
+  </g>
+  <path d="M235 62 V98 M520 62 V98 M650 62 V98" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/>
+  <!-- cards -->
+  <g filter="url(#s)">
+    <rect x="20" y="120" width="200" height="250" rx="14" fill="url(#g0)"/>
+    <rect x="235" y="120" width="200" height="250" rx="14" fill="url(#g1)"/>
+    <rect x="450" y="120" width="200" height="250" rx="14" fill="url(#g2)"/>
+    <rect x="665" y="120" width="200" height="250" rx="14" fill="url(#g3)"/>
+  </g>
+  <g font-size="12">
+    <text x="120" y="148" text-anchor="middle" font-weight="bold" font-size="15" fill="#4a148c">PRIMORDIAL</text>
+    <text x="32" y="175">Prevent emergence of</text>
+    <text x="32" y="192">RISK FACTORS</text>
+    <text x="32" y="215">• Healthy lifestyle in</text>
+    <text x="42" y="232">children (diet, exercise)</text>
+    <text x="32" y="252">• No smoking culture</text>
+    <text x="32" y="272">Mode: individual &amp;</text>
+    <text x="32" y="289">mass education</text>
+    <text x="32" y="352" fill="#fff" font-weight="bold">e.g. obesity, HTN, CHD</text>
+
+    <text x="335" y="148" text-anchor="middle" font-weight="bold" font-size="15" fill="#1b5e20">PRIMARY</text>
+    <text x="247" y="175">Before disease occurs</text>
+    <text x="247" y="198" font-weight="bold">1. Health promotion</text>
+    <text x="257" y="215">education, nutrition,</text>
+    <text x="257" y="232">sanitation, lifestyle</text>
+    <text x="247" y="256" font-weight="bold">2. Specific protection</text>
+    <text x="257" y="273">immunization, iodised</text>
+    <text x="257" y="290">salt, helmets, chemo-</text>
+    <text x="257" y="307">prophylaxis, condoms</text>
+    <text x="247" y="352" fill="#fff" font-weight="bold">"Prevent occurrence"</text>
+
+    <text x="550" y="148" text-anchor="middle" font-weight="bold" font-size="15" fill="#e65100">SECONDARY</text>
+    <text x="462" y="175">Halt the disease early</text>
+    <text x="462" y="198" font-weight="bold">Early diagnosis &amp;</text>
+    <text x="462" y="215" font-weight="bold">prompt treatment</text>
+    <text x="462" y="239">• Screening (Pap/VIA,</text>
+    <text x="472" y="256">BP, sugar, mammography)</text>
+    <text x="462" y="276">• Case finding (TB</text>
+    <text x="472" y="293">sputum), treat contacts</text>
+    <text x="462" y="352" fill="#5d4037" font-weight="bold">"Prevent progression"</text>
+
+    <text x="765" y="148" text-anchor="middle" font-weight="bold" font-size="15" fill="#fff">TERTIARY</text>
+    <text x="677" y="175" fill="#fff">After disease occurred</text>
+    <text x="677" y="198" font-weight="bold" fill="#fff">1. Disability limitation</text>
+    <text x="687" y="215" fill="#fff">prevent complications</text>
+    <text x="677" y="239" font-weight="bold" fill="#fff">2. Rehabilitation</text>
+    <text x="687" y="256" fill="#fff">medical, vocational,</text>
+    <text x="687" y="273" fill="#fff">social, psychological</text>
+    <text x="677" y="296" fill="#fff">e.g. polio physiotherapy,</text>
+    <text x="687" y="313" fill="#fff">leprosy reconstructive</text>
+    <text x="677" y="352" fill="#fff" font-weight="bold">"Prevent disability"</text>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="20" y="398"><tspan font-weight="bold" fill="#311b92">Leavell &amp; Clark</tspan> – 5 modes of intervention: health promotion · specific protection · early diagnosis &amp; treatment · disability limitation · rehabilitation</text>
+    <text x="20" y="422"><tspan font-weight="bold" fill="#311b92">Iceberg of disease:</tspan> visible tip = clinical cases; hidden submerged part = subclinical, undiagnosed, carriers (screening finds them)</text>
+  </g>
+</svg>

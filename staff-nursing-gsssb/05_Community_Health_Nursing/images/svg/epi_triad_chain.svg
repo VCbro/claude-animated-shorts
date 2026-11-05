@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="a" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".55" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <radialGradient id="h" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#bbdefb"/><stop offset=".55" stop-color="#1e88e5"/><stop offset="1" stop-color="#0d3c7a"/></radialGradient>
+    <radialGradient id="e" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#c8e6c9"/><stop offset=".55" stop-color="#43a047"/><stop offset="1" stop-color="#1b5e20"/></radialGradient>
+    <radialGradient id="link" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#ffb74d"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="450" fill="#fffdfb"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">Epidemiological Triad &amp; Chain of Infection</text>
+  <!-- triad -->
+  <path d="M200 90 L90 280 L310 280 Z" fill="none" stroke="#90a4ae" stroke-width="4"/>
+  <g filter="url(#s)">
+    <circle cx="200" cy="90" r="46" fill="url(#a)"/>
+    <circle cx="90" cy="280" r="46" fill="url(#h)"/>
+    <circle cx="310" cy="280" r="46" fill="url(#e)"/>
+  </g>
+  <g fill="#fff" font-weight="bold" text-anchor="middle" font-size="14">
+    <text x="200" y="95">AGENT</text><text x="90" y="285">HOST</text><text x="310" y="285">ENVIRON-</text><text x="310" y="301" font-size="13">MENT</text>
+  </g>
+  <g font-size="11" fill="#37474f">
+    <text x="255" y="70">Biological, physical,</text><text x="255" y="85">chemical, nutrient,</text><text x="255" y="100">mechanical, social</text>
+    <text x="20" y="345">Age, sex, genetics,</text><text x="20" y="360">immunity, nutrition,</text><text x="20" y="375">habits, occupation</text>
+    <text x="250" y="345">Physical (climate, water),</text><text x="250" y="360">biological (vectors),</text><text x="250" y="375">psychosocial</text>
+  </g>
+  <text x="200" y="420" text-anchor="middle" font-size="11.5" fill="#455a64">Disease = imbalance among agent, host &amp; environment</text>
+  <!-- chain of infection -->
+  <g filter="url(#s)"><rect x="410" y="50" width="450" height="380" rx="14" fill="#fff" stroke="#ffcc80" stroke-width="2"/></g>
+  <text x="635" y="76" text-anchor="middle" font-weight="bold" font-size="15" fill="#e65100">Chain of Infection – break any link</text>
+  <g filter="url(#s)">
+    <circle cx="635" cy="130" r="32" fill="url(#link)"/>
+    <circle cx="755" cy="185" r="32" fill="url(#link)"/>
+    <circle cx="755" cy="300" r="32" fill="url(#link)"/>
+    <circle cx="635" cy="355" r="32" fill="url(#link)"/>
+    <circle cx="515" cy="300" r="32" fill="url(#link)"/>
+    <circle cx="515" cy="185" r="32" fill="url(#link)"/>
+  </g>
+  <path d="M665 140 L725 170 M755 217 V268 M725 315 L665 345 M605 345 L545 315 M515 268 V217 M545 170 L605 140" stroke="#ef6c00" stroke-width="3" fill="none"/>
+  <g font-size="10.5" font-weight="bold" text-anchor="middle" fill="#3e2723">
+    <text x="635" y="128">Infectious</text><text x="635" y="141">agent</text>
+    <text x="755" y="183">Reservoir</text><text x="755" y="196" font-size="9">(source)</text>
+    <text x="755" y="298">Portal of</text><text x="755" y="311">exit</text>
+    <text x="635" y="353">Mode of</text><text x="635" y="366">transmission</text>
+    <text x="515" y="298">Portal of</text><text x="515" y="311">entry</text>
+    <text x="515" y="183">Susceptible</text><text x="515" y="196">host</text>
+  </g>
+  <g font-size="10.5" fill="#455a64" text-anchor="middle">
+    <text x="635" y="88">sterilisation, antibiotics</text>
+    <text x="820" y="232">isolation,</text><text x="820" y="245">treat carriers</text>
+    <text x="820" y="345">masks,</text><text x="820" y="358">cover wounds</text>
+    <text x="635" y="405">hand hygiene, PPE, disinfection,</text><text x="635" y="419">vector control, safe water</text>
+    <text x="455" y="345">aseptic</text><text x="455" y="358">technique</text>
+    <text x="455" y="232">immunization,</text><text x="455" y="245">nutrition</text>
+  </g>
+</svg>
