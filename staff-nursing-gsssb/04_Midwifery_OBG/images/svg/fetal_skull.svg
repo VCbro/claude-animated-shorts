@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="sk" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fffaf2"/><stop offset=".6" stop-color="#f2dcc0"/><stop offset="1" stop-color="#c29a72"/></radialGradient>
+    <radialGradient id="font" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#ffe0e8"/><stop offset="1" stop-color="#f48fb1"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="800" height="460" fill="#fdfbf7"/>
+  <text x="400" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#6d4c41">Fetal Skull – Sutures, Fontanelles &amp; Diameters</text>
+  <!-- top view -->
+  <g transform="translate(70,55)" filter="url(#s)">
+    <ellipse cx="130" cy="180" rx="115" ry="165" fill="url(#sk)" stroke="#8d6e63" stroke-width="3"/>
+  </g>
+  <g transform="translate(70,55)" stroke="#6d4c41" stroke-width="3" fill="none">
+    <path d="M130 15 L130 92"/>
+    <path d="M130 140 L130 300"/>
+    <path d="M22 125 Q70 105 102 116 M158 116 Q190 105 238 125"/>
+    <path d="M30 290 Q80 300 118 310 M142 310 Q180 300 230 290"/>
+    <path d="M130 92 L102 116 L130 140 L158 116 Z" fill="url(#font)"/>
+    <path d="M118 310 L130 300 L142 310 Z" fill="url(#font)"/>
+  </g>
+  <g font-size="11.5">
+    <text x="210" y="80" fill="#6d4c41" font-weight="bold">Frontal suture</text>
+    <line x1="215" y1="160" x2="330" y2="150" stroke="#555"/><text x="335" y="146" font-weight="bold" fill="#d81b60">Anterior fontanelle (Bregma)</text><text x="335" y="160">Diamond · 3 × 2.5 cm</text><text x="335" y="174">closes 18 months</text>
+    <line x1="290" y1="182" x2="330" y2="195" stroke="#555"/><text x="335" y="198" font-weight="bold" fill="#6d4c41">Coronal suture</text>
+    <line x1="200" y1="270" x2="330" y2="250" stroke="#555"/><text x="335" y="250" font-weight="bold" fill="#6d4c41">Sagittal suture</text><text x="335" y="264">(longest; between parietals)</text>
+    <line x1="270" y1="350" x2="330" y2="305" stroke="#555"/><text x="335" y="302" font-weight="bold" fill="#6d4c41">Lambdoid suture</text>
+    <line x1="205" y1="362" x2="330" y2="345" stroke="#555"/><text x="335" y="340" font-weight="bold" fill="#d81b60">Posterior fontanelle (Lambda)</text><text x="335" y="354">Triangle · closes 6–8 weeks</text>
+    <text x="110" y="420" font-weight="bold" fill="#4e342e">Vertex = area between 2 fontanelles &amp; parietal eminences</text>
+  </g>
+  <g transform="translate(560,60)" font-size="11.5">
+    <rect x="-10" y="-14" width="240" height="210" rx="12" fill="#fff" stroke="#d7ccc8"/>
+    <text x="0" y="4" font-weight="bold" fill="#4e342e">Antero-posterior diameters</text>
+    <text x="0" y="24">Suboccipito-bregmatic <tspan font-weight="bold" fill="#2e7d32">9.5</tspan></text><text x="10" y="38" fill="#555" font-size="10.5">vertex, well flexed (normal)</text>
+    <text x="0" y="56">Suboccipito-frontal <tspan font-weight="bold">10</tspan></text>
+    <text x="0" y="74">Occipito-frontal <tspan font-weight="bold">11.5</tspan></text><text x="10" y="88" fill="#555" font-size="10.5">deflexed – OP position</text>
+    <text x="0" y="106">Mento-vertical <tspan font-weight="bold" fill="#c62828">13.5–14</tspan></text><text x="10" y="120" fill="#c62828" font-size="10.5">brow – longest, no delivery</text>
+    <text x="0" y="138">Submento-bregmatic <tspan font-weight="bold">9.5</tspan></text><text x="10" y="152" fill="#555" font-size="10.5">face presentation</text>
+    <text x="0" y="172" font-weight="bold" fill="#4e342e">Transverse</text>
+    <text x="0" y="190">Biparietal <tspan font-weight="bold">9.5</tspan> · Bitemporal <tspan font-weight="bold">8</tspan></text>
+  </g>
+  <text x="560" y="290" font-size="11.5" fill="#6d4c41">Head circumference at term:</text>
+  <text x="560" y="306" font-size="11.5" font-weight="bold" fill="#6d4c41">33–35 cm</text><text x="560" y="322" font-size="11.5" fill="#6d4c41">Moulding = bones overlap</text>
+</svg>

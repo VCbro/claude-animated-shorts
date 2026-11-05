@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="DejaVu Sans, Arial">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="dress" x1="0" x2="1"><stop offset="0" stop-color="#ad1457"/><stop offset=".45" stop-color="#f06292"/><stop offset="1" stop-color="#880e4f"/></linearGradient>
+    <radialGradient id="skin" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe3cf"/><stop offset="1" stop-color="#d99068"/></radialGradient>
+    <radialGradient id="hair" cx="40%" cy="30%" r="70%"><stop offset="0" stop-color="#5d4037"/><stop offset="1" stop-color="#1b0f0a"/></radialGradient>
+    <radialGradient id="womb" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff3f6"/><stop offset=".6" stop-color="#f8bbd0"/><stop offset="1" stop-color="#e57399"/></radialGradient>
+    <radialGradient id="baby" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffe9dc"/><stop offset="1" stop-color="#e8a27e"/></radialGradient>
+    <radialGradient id="heart" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ff8a80"/><stop offset=".6" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <linearGradient id="bottle" x1="0" x2="1"><stop offset="0" stop-color="#b3e5fc"/><stop offset=".4" stop-color="#ffffff"/><stop offset="1" stop-color="#81d4fa"/></linearGradient>
+    <filter id="s" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="5" dy="9" stdDeviation="8" flood-opacity=".35"/></filter>
+  </defs>
+  <circle cx="300" cy="215" r="205" fill="url(#glow)"/>
+  <!-- mother profile -->
+  <g filter="url(#s)">
+    <path d="M250 60 Q300 40 320 80 Q330 110 315 130 L305 150 Q290 160 280 150 Z" fill="url(#skin)"/>
+    <path d="M245 55 Q290 25 325 70 Q300 60 285 75 Q275 110 255 120 Q225 95 245 55 Z" fill="url(#hair)"/>
+    <path d="M270 150 Q250 170 245 230 Q240 300 250 400 L400 400 Q400 330 380 300 Q430 260 405 210 Q385 170 330 165 Q305 160 290 150 Z" fill="url(#dress)"/>
+    <ellipse cx="370" cy="255" rx="62" ry="70" fill="url(#womb)" stroke="#ad1457" stroke-width="3"/>
+    <g transform="translate(370,255)">
+      <circle cx="-14" cy="-22" r="20" fill="url(#baby)"/>
+      <path d="M-28 -6 Q-40 30 -5 42 Q30 40 30 10 Q28 -15 4 -10 Q-10 -5 -14 -2 Z" fill="url(#baby)"/>
+      <path d="M0 40 Q10 50 30 40" stroke="#d98a64" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M8 -10 Q40 -40 50 -60" stroke="#ef9a9a" stroke-width="4" fill="none" stroke-dasharray="3 3"/>
+      <path d="M-20 -26 q4 -3 8 0" stroke="#5d4037" stroke-width="2" fill="none"/>
+    </g>
+    <path d="M300 180 Q345 205 335 235" stroke="url(#skin)" stroke-width="16" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- heart -->
+  <g transform="translate(70,90) scale(.7)" filter="url(#s)">
+    <path d="M100 180 C20 120 0 70 30 35 C60 0 100 20 100 50 C100 20 140 0 170 35 C200 70 180 120 100 180 Z" fill="url(#heart)"/>
+    <ellipse cx="62" cy="55" rx="22" ry="12" fill="#fff" opacity=".45" transform="rotate(-35 62 55)"/>
+    <path d="M40 100 L75 100 L85 80 L100 125 L112 92 L120 100 L160 100" stroke="#fff" stroke-width="6" fill="none" stroke-linejoin="round"/>
+  </g>
+  <!-- feeding bottle -->
+  <g transform="translate(470,170)" filter="url(#s)">
+    <path d="M18 0 Q30 -25 42 0 Z" fill="#ffcc80"/>
+    <rect x="8" y="0" width="44" height="18" rx="5" fill="#ffb74d"/>
+    <rect x="4" y="18" width="52" height="130" rx="16" fill="url(#bottle)" stroke="#4fc3f7" stroke-width="2"/>
+    <rect x="8" y="80" width="44" height="64" rx="12" fill="#fffde7"/>
+    <g stroke="#0288d1" stroke-width="2"><line x1="40" y1="45" x2="52" y2="45"/><line x1="40" y1="70" x2="52" y2="70"/><line x1="40" y1="95" x2="52" y2="95"/></g>
+    <rect x="12" y="24" width="7" height="118" rx="3.5" fill="#fff" opacity=".7"/>
+  </g>
+  <g filter="url(#s)"><path d="M520 70 h14 v-14 h14 v14 h14 v14 h-14 v14 h-14 v-14 h-14 Z" fill="#e53935"/><path d="M60 330 h10 v-10 h10 v10 h10 v10 h-10 v10 h-10 v-10 h-10 Z" fill="#43a047"/></g>
+</svg>

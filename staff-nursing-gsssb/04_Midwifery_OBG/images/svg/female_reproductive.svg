@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="ut" cx="40%" cy="30%" r="75%"><stop offset="0" stop-color="#ffd1dc"/><stop offset=".6" stop-color="#f06292"/><stop offset="1" stop-color="#8e1846"/></radialGradient>
+    <radialGradient id="cav" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff0f4"/><stop offset="1" stop-color="#f8bbd0"/></radialGradient>
+    <radialGradient id="ov" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fffde7"/><stop offset=".6" stop-color="#ffd54f"/><stop offset="1" stop-color="#b8860b"/></radialGradient>
+    <linearGradient id="tube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8bbd0"/><stop offset=".5" stop-color="#ec407a"/><stop offset="1" stop-color="#ad1457"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="760" height="470" fill="#fff8fb"/>
+  <text x="380" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#ad1457">Female Reproductive Organs (Front view)</text>
+  <g filter="url(#s)">
+    <path d="M290 150 Q215 130 170 160 Q140 170 120 150" stroke="url(#tube)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M410 150 Q485 130 530 160 Q560 170 580 150" stroke="url(#tube)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M120 150 q-20 -15 -30 5 q-10 20 10 25 q-15 5 -5 20" stroke="#ec407a" stroke-width="6" fill="none"/>
+    <path d="M580 150 q20 -15 30 5 q10 20 -10 25 q15 5 5 20" stroke="#ec407a" stroke-width="6" fill="none"/>
+    <ellipse cx="175" cy="205" rx="34" ry="22" fill="url(#ov)"/>
+    <ellipse cx="525" cy="205" rx="34" ry="22" fill="url(#ov)"/>
+    <path d="M280 135 Q350 105 420 135 Q440 220 395 300 L380 340 L320 340 L305 300 Q260 220 280 135 Z" fill="url(#ut)"/>
+    <path d="M310 155 Q350 140 390 155 Q395 220 360 280 L340 280 Q305 220 310 155 Z" fill="url(#cav)"/>
+    <rect x="320" y="340" width="60" height="38" rx="10" fill="#d81b60"/>
+    <rect x="342" y="340" width="16" height="38" fill="#fce4ec"/>
+    <path d="M315 378 L385 378 L395 430 L305 430 Z" fill="#f48fb1"/>
+  </g>
+  <g fill="#ad1457" opacity=".35"><circle cx="350" cy="182" r="4"/></g>
+  <g font-size="11.5">
+    <line x1="350" y1="120" x2="350" y2="70" stroke="#555"/><text x="350" y="62" text-anchor="middle" font-weight="bold" fill="#880e4f">Fundus</text>
+    <line x1="420" y1="220" x2="560" y2="270" stroke="#555"/><text x="565" y="266" font-weight="bold" fill="#880e4f">Body (corpus)</text><text x="565" y="280">Myometrium – 3 layers</text><text x="565" y="294">(middle oblique – "living ligature")</text>
+    <line x1="360" y1="230" x2="560" y2="320" stroke="#555"/><text x="565" y="318" font-weight="bold" fill="#c2185b">Endometrium</text><text x="565" y="332">(menstruation, implantation)</text>
+    <line x1="390" y1="320" x2="560" y2="365" stroke="#555"/><text x="565" y="362" font-weight="bold" fill="#880e4f">Isthmus → Lower</text><text x="565" y="376">uterine segment (pregnancy)</text>
+    <line x1="320" y1="360" x2="140" y2="370" stroke="#555"/><text x="20" y="366" font-weight="bold" fill="#d81b60">Cervix</text><text x="20" y="380">2.5 cm; int. &amp; ext. os</text>
+    <line x1="310" y1="415" x2="190" y2="425" stroke="#555"/><text x="20" y="425" font-weight="bold" fill="#c2185b">Vagina</text><text x="20" y="439">7–10 cm, acidic pH 4–5</text>
+    <line x1="160" y1="225" x2="110" y2="280" stroke="#555"/><text x="20" y="296" font-weight="bold" fill="#b8860b">Ovary</text><text x="20" y="310">3×2×1 cm; ova, oestrogen,</text><text x="20" y="324">progesterone</text>
+    <line x1="230" y1="142" x2="250" y2="128" stroke="#555"/><text x="60" y="80" font-weight="bold" fill="#ad1457">Fallopian tube – 10 cm</text><text x="60" y="94">Interstitial · Isthmus · Ampulla</text><text x="60" y="108" fill="#c62828">(ampulla – fertilisation & ectopic)</text><text x="60" y="122">· Infundibulum + fimbriae</text>
+  </g>
+  <text x="380" y="460" text-anchor="middle" font-size="11.5" fill="#880e4f" font-weight="bold">Uterus: 7.5 × 5 × 2.5 cm · 50–60 g (non-pregnant) → ~1000 g at term · Anteverted &amp; anteflexed</text>
+</svg>

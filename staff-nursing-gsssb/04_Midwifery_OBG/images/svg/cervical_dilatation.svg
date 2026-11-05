@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="cx" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd6e2"/><stop offset=".6" stop-color="#ec6f98"/><stop offset="1" stop-color="#9c1d4f"/></radialGradient>
+    <radialGradient id="hd" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff0e6"/><stop offset="1" stop-color="#d98a64"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="760" height="380" fill="#fff9fb"/>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#ad1457">Cervical Effacement &amp; Dilatation (1st stage of labour)</text>
+  <g filter="url(#s)">
+    <g transform="translate(70,130)"><circle r="48" fill="url(#cx)"/><circle r="4" fill="#5d1031"/></g>
+    <g transform="translate(200,130)"><circle r="48" fill="url(#cx)"/><circle r="10" fill="url(#hd)"/></g>
+    <g transform="translate(330,130)"><circle r="50" fill="url(#cx)"/><circle r="24" fill="url(#hd)"/></g>
+    <g transform="translate(470,130)"><circle r="55" fill="url(#cx)"/><circle r="37" fill="url(#hd)"/></g>
+    <g transform="translate(640,130)"><circle r="68" fill="url(#cx)"/><circle r="58" fill="url(#hd)"/></g>
+  </g>
+  <g text-anchor="middle" font-weight="bold" fill="#880e4f">
+    <text x="70" y="205">Closed</text><text x="200" y="205">1–2 cm</text><text x="330" y="205">4 cm</text><text x="470" y="205">7 cm</text><text x="640" y="225">10 cm = FULL</text>
+  </g>
+  <g text-anchor="middle" fill="#455a64" font-size="11">
+    <text x="70" y="221">long, thick</text><text x="200" y="221">effacing</text><text x="330" y="221">active phase</text><text x="470" y="221">active</text><text x="640" y="241">2nd stage starts</text>
+  </g>
+  <g transform="translate(30,270)" font-size="12">
+    <text x="0" y="0"><tspan font-weight="bold" fill="#ad1457">Latent phase:</tspan> 0 → 4 cm (WHO 2018: active starts at 5 cm) · slow</text>
+    <text x="0" y="20"><tspan font-weight="bold" fill="#ad1457">Active phase:</tspan> ~1 cm/hr (primi) · 1.5 cm/hr (multi) – partograph</text>
+    <text x="0" y="40"><tspan font-weight="bold" fill="#1565c0">Effacement:</tspan> cervix ka chhota/ patla hona (%) – primi: effacement pehle, phir dilatation; multi: dono saath</text>
+    <text x="0" y="60"><tspan font-weight="bold" fill="#2e7d32">Stages:</tspan> I – onset → full dilatation · II – full dilatation → baby birth · III – baby → placenta · IV – 1 hr after placenta</text>
+    <text x="0" y="80"><tspan font-weight="bold" fill="#c62828">Duration:</tspan> 1st stage primi 12 hrs, multi 6 hrs · 2nd stage primi ~1 hr (max 2), multi 30 min · 3rd stage 15–30 min</text>
+  </g>
+</svg>

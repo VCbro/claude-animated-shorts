@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="bone" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#fffdf5"/><stop offset=".6" stop-color="#e8dcc0"/><stop offset="1" stop-color="#a08c66"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-opacity=".3"/></filter>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><circle cx="4" cy="4" r="3" fill="#1565c0"/></marker>
+  </defs>
+  <rect width="740" height="470" fill="#fbfaf5"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#5d4037">Female Pelvis – Inlet (Brim) Diameters</text>
+  <g filter="url(#s)" transform="translate(40,50)">
+    <path d="M200 20 Q60 20 20 120 Q0 200 60 250 Q120 290 200 280 Q280 290 340 250 Q400 200 380 120 Q340 20 200 20 Z" fill="url(#bone)" stroke="#8d7a55" stroke-width="3"/>
+    <ellipse cx="200" cy="150" rx="130" ry="105" fill="#fbfaf5" stroke="#8d7a55" stroke-width="3"/>
+    <path d="M160 40 Q200 70 240 40 L230 80 Q200 95 170 80 Z" fill="url(#bone)" stroke="#8d7a55" stroke-width="2"/>
+    <rect x="185" y="250" width="30" height="22" rx="5" fill="url(#bone)" stroke="#8d7a55"/>
+  </g>
+  <g transform="translate(40,50)" stroke-width="3">
+    <line x1="200" y1="85" x2="200" y2="252" stroke="#c62828" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="72" y1="150" x2="328" y2="150" stroke="#2e7d32"/>
+    <line x1="110" y1="75" x2="300" y2="230" stroke="#1565c0" stroke-dasharray="6 4"/>
+  </g>
+  <g font-weight="bold" font-size="12.5">
+    <text x="240" y="62" fill="#5d4037" font-size="11" text-anchor="middle">Sacral promontory (peeche)</text>
+    <text x="240" y="352" fill="#5d4037" font-size="11" text-anchor="middle">Symphysis pubis (aage)</text>
+    <rect x="40" y="380" width="14" height="14" fill="#c62828"/><text x="60" y="392" fill="#c62828">AP / True conjugate 11 cm</text>
+    <rect x="40" y="402" width="14" height="14" fill="#2e7d32"/><text x="60" y="414" fill="#2e7d32">Transverse 13 cm (inlet ka largest)</text>
+    <rect x="40" y="424" width="14" height="14" fill="#1565c0"/><text x="60" y="436" fill="#1565c0">Oblique 12 cm (dotted)</text>
+  </g>
+  <g transform="translate(470,60)" font-size="11.5">
+    <rect x="-10" y="-10" width="240" height="185" rx="12" fill="#fff" stroke="#bcaaa4"/>
+    <text x="0" y="8" font-weight="bold" fill="#4e342e">Pelvic diameters (cm)</text>
+    <text x="0" y="28">Plane</text><text x="80" y="28">AP</text><text x="120" y="28">Oblique</text><text x="180" y="28">Trans</text>
+    <line x1="0" y1="33" x2="220" y2="33" stroke="#bcaaa4"/>
+    <text x="0" y="50">Inlet</text><text x="80" y="50" fill="#c62828">11</text><text x="130" y="50">12</text><text x="185" y="50" fill="#2e7d32" font-weight="bold">13</text>
+    <text x="0" y="70">Cavity</text><text x="80" y="70">12</text><text x="130" y="70">12</text><text x="185" y="70">12</text>
+    <text x="0" y="90">Outlet</text><text x="80" y="90" fill="#c62828" font-weight="bold">13</text><text x="130" y="90">12</text><text x="185" y="90">11</text>
+    <text x="0" y="115" font-size="10.5" fill="#555">Inlet – transverse largest</text>
+    <text x="0" y="130" font-size="10.5" fill="#555">Outlet – AP largest</text>
+    <text x="0" y="148" font-size="10.5" fill="#c62828">Diagonal conjugate 12.5–13 cm</text>
+    <text x="0" y="163" font-size="10.5" fill="#c62828">Obstetric conjugate 10–10.5 cm</text>
+  </g>
+  <g transform="translate(470,265)" font-size="11.5">
+    <text x="0" y="0" font-weight="bold" fill="#4e342e">Caldwell-Moloy pelvis types</text>
+    <text x="0" y="20"><tspan font-weight="bold" fill="#ad1457">Gynaecoid</tspan> – round, ~50 %, ideal</text>
+    <text x="0" y="38"><tspan font-weight="bold" fill="#1565c0">Android</tspan> – heart-shaped (male)</text>
+    <text x="0" y="56"><tspan font-weight="bold" fill="#2e7d32">Anthropoid</tspan> – oval AP long (apes)</text>
+    <text x="0" y="74"><tspan font-weight="bold" fill="#ef6c00">Platypelloid</tspan> – flat, transverse</text>
+    <text x="0" y="98" fill="#555">Sub-pubic angle: female ≥ 90°,</text><text x="0" y="114" fill="#555">male 60–70°</text>
+  </g>
+</svg>

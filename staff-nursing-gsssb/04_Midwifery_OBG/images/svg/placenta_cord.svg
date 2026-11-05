@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="mat" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#e57373"/><stop offset=".6" stop-color="#b71c1c"/><stop offset="1" stop-color="#5d0c0c"/></radialGradient>
+    <radialGradient id="fet" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#e1f5fe"/><stop offset=".6" stop-color="#b3c7e0"/><stop offset="1" stop-color="#7a8db0"/></radialGradient>
+    <linearGradient id="cord" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f5f5"/><stop offset=".5" stop-color="#cfd8dc"/><stop offset="1" stop-color="#90a4ae"/></linearGradient>
+    <radialGradient id="cs" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b0bec5"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="720" height="470" fill="#fffafa"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">Placenta &amp; Umbilical Cord at Term</text>
+  <!-- maternal surface -->
+  <g transform="translate(150,190)" filter="url(#s)">
+    <ellipse rx="115" ry="95" fill="url(#mat)"/>
+    <g stroke="#3e0606" stroke-width="2" fill="none" opacity=".7"><path d="M-80 -30 Q-20 -10 0 -70 M0 -70 Q30 0 90 -20 M-90 30 Q-30 10 0 80 M0 80 Q30 10 85 40 M-30 -40 L30 40 M30 -40 L-30 40"/></g>
+  </g>
+  <text x="150" y="315" text-anchor="middle" font-weight="bold" fill="#b71c1c">MATERNAL surface</text>
+  <text x="150" y="331" text-anchor="middle">Dark red, rough, 15–20 cotyledons</text>
+  <text x="150" y="347" text-anchor="middle">"Dirty Duncan" – ise check karo</text>
+  <!-- fetal surface -->
+  <g transform="translate(420,190)" filter="url(#s)">
+    <ellipse rx="115" ry="95" fill="url(#fet)"/>
+    <g stroke="#1e3a8a" stroke-width="4" fill="none" opacity=".8"><path d="M0 0 Q-50 -30 -90 -20 M0 0 Q-30 50 -70 60 M0 0 Q40 -50 80 -50 M0 0 Q60 30 90 45 M0 0 L10 -85"/></g>
+    <g stroke="#b71c1c" stroke-width="2.5" fill="none" opacity=".8"><path d="M0 0 Q-55 -20 -95 -5 M0 0 Q50 -30 95 -25 M0 0 Q-20 55 -40 80"/></g>
+    <circle r="11" fill="#cfd8dc" stroke="#78909c" stroke-width="2"/>
+    <path d="M0 0 Q30 -60 120 -110" stroke="url(#cord)" stroke-width="16" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="420" y="315" text-anchor="middle" font-weight="bold" fill="#1e3a8a">FETAL surface</text>
+  <text x="420" y="331" text-anchor="middle">Shiny, smooth, bluish-grey (amnion)</text>
+  <text x="420" y="347" text-anchor="middle">"Shiny Schultze" – cord centrally</text>
+  <!-- cord cross section -->
+  <g transform="translate(640,120)" filter="url(#s)">
+    <circle r="48" fill="url(#cs)" stroke="#90a4ae" stroke-width="2"/>
+    <circle cx="-14" cy="-14" r="10" fill="#e53935"/><circle cx="14" cy="-14" r="10" fill="#e53935"/>
+    <circle cx="0" cy="16" r="15" fill="#1e88e5"/>
+  </g>
+  <g font-size="11" text-anchor="middle">
+    <text x="640" y="190" font-weight="bold">Cord cross-section</text>
+    <text x="640" y="206" fill="#c62828">2 arteries (impure)</text>
+    <text x="640" y="221" fill="#1565c0">1 vein (pure O₂ blood)</text>
+    <text x="640" y="236">Wharton's jelly</text>
+  </g>
+  <g font-size="11.5" transform="translate(20,380)">
+    <text x="0" y="0"><tspan font-weight="bold" fill="#b71c1c">Placenta:</tspan> 15–20 cm diameter, 2.5–3 cm thick, ~500 g (baby weight ka ~1/6)</text>
+    <text x="0" y="18">Functions: respiration, nutrition, excretion, barrier, hormones (hCG, hPL, oestrogen, progesterone)</text>
+    <text x="0" y="40"><tspan font-weight="bold" fill="#1565c0">Cord:</tspan> ~50 cm (30–100), 1–2 cm thick · Short &lt; 30 cm, long &gt; 100 cm</text>
+    <text x="0" y="58">Single umbilical artery → renal/ cardiac anomalies check karo</text>
+  </g>
+</svg>

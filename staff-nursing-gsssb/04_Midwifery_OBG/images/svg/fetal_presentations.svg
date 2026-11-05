@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="DejaVu Sans, Arial" font-size="11.5">
+  <defs>
+    <radialGradient id="ut" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#fff0f4"/><stop offset="1" stop-color="#f48fb1"/></radialGradient>
+    <radialGradient id="b" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffeadf"/><stop offset="1" stop-color="#d98a64"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+    <ellipse id="u" rx="62" ry="85" fill="url(#ut)" stroke="#ad1457" stroke-width="2.5"/>
+  </defs>
+  <rect width="760" height="430" fill="#fffafc"/>
+  <text x="380" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#ad1457">Lie &amp; Presentation of Fetus</text>
+  <!-- vertex -->
+  <g transform="translate(90,160)" filter="url(#s)"><use href="#u"/>
+    <circle cx="0" cy="48" r="26" fill="url(#b)"/><ellipse cx="2" cy="-12" rx="30" ry="40" fill="url(#b)"/><path d="M-20 -40 q10 30 25 25 M20 -20 q-10 30 -30 30" stroke="#c97a55" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+  <!-- breech -->
+  <g transform="translate(270,160)" filter="url(#s)"><use href="#u"/>
+    <circle cx="0" cy="-48" r="26" fill="url(#b)"/><ellipse cx="2" cy="12" rx="30" ry="40" fill="url(#b)"/><path d="M-18 40 q20 15 30 -30" stroke="#c97a55" stroke-width="8" fill="none" stroke-linecap="round"/></g>
+  <!-- transverse -->
+  <g transform="translate(470,160)" filter="url(#s)"><ellipse rx="85" ry="62" fill="url(#ut)" stroke="#ad1457" stroke-width="2.5"/>
+    <circle cx="-48" cy="0" r="25" fill="url(#b)"/><ellipse cx="12" cy="2" rx="40" ry="28" fill="url(#b)"/></g>
+  <!-- face -->
+  <g transform="translate(670,160)" filter="url(#s)"><use href="#u"/>
+    <circle cx="8" cy="50" r="25" fill="url(#b)"/><ellipse cx="-4" cy="-10" rx="30" ry="40" fill="url(#b)"/><path d="M-5 70 q10 6 20 0" stroke="#5d4037" stroke-width="2" fill="none"/></g>
+  <g font-weight="bold" font-size="13" text-anchor="middle" fill="#880e4f">
+    <text x="90" y="270">Cephalic – Vertex</text><text x="270" y="270">Breech</text><text x="470" y="270">Transverse lie</text><text x="670" y="270">Face (extended)</text>
+  </g>
+  <g text-anchor="middle" fill="#37474f">
+    <text x="90" y="288">~95–96 % · most common</text><text x="90" y="303">well-flexed head</text><text x="90" y="318">LOA – commonest position</text>
+    <text x="270" y="288">3–4 % at term</text><text x="270" y="303">Frank (commonest) –</text><text x="270" y="318">legs extended at knees</text>
+    <text x="470" y="288">Shoulder presentation</text><text x="470" y="303">Vaginal delivery NOT</text><text x="470" y="318">possible → LSCS</text>
+    <text x="670" y="288">Denominator – mentum</text><text x="670" y="303">Mento-anterior → vaginal</text><text x="670" y="318">Mento-posterior → LSCS</text>
+  </g>
+  <g transform="translate(20,350)" font-size="11.5">
+    <text x="0" y="0"><tspan font-weight="bold" fill="#ad1457">Lie</tspan> = fetus ki long axis vs mother ki long axis (longitudinal / transverse / oblique)</text><text x="0" y="20"><tspan font-weight="bold" fill="#ad1457">Presentation</tspan> = part jo pelvis me pehle aaye · <tspan font-weight="bold" fill="#ad1457">Attitude</tspan> = body parts ka relation (flexion)</text>
+    <text x="0" y="40"><tspan font-weight="bold" fill="#ad1457">Denominator</tspan>: vertex – occiput, face – mentum, breech – sacrum, shoulder – acromion</text>
+  </g>
+</svg>

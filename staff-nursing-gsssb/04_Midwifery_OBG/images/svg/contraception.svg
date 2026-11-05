@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 450" font-family="DejaVu Sans, Arial" font-size="11.5">
+  <defs>
+    <linearGradient id="pl" x1="0" x2="1"><stop offset="0" stop-color="#eceff1"/><stop offset=".4" stop-color="#ffffff"/><stop offset="1" stop-color="#b0bec5"/></linearGradient>
+    <linearGradient id="cu" x1="0" x2="1"><stop offset="0" stop-color="#8d4b16"/><stop offset=".45" stop-color="#f0a35e"/><stop offset="1" stop-color="#7a3a0c"/></linearGradient>
+    <radialGradient id="pill" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ec407a"/></radialGradient>
+    <radialGradient id="pill2" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#8d6e63"/></radialGradient>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0e0e0"/><stop offset=".5" stop-color="#fafafa"/><stop offset="1" stop-color="#9e9e9e"/></linearGradient>
+    <radialGradient id="cond" cx="40%" cy="30%" r="70%"><stop offset="0" stop-color="#e3f2fd"/><stop offset="1" stop-color="#64b5f6"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="8" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="740" height="450" fill="#fbfdff"/>
+  <text x="370" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#00695c">Contraceptive Methods – Basket of Choice</text>
+  <!-- Cu-T -->
+  <g transform="translate(110,60)" filter="url(#s)">
+    <path d="M-60 10 Q0 -8 60 10 L56 22 Q0 6 -56 22 Z" fill="url(#pl)" stroke="#78909c"/>
+    <rect x="-6" y="14" width="12" height="150" rx="5" fill="url(#pl)" stroke="#78909c"/>
+    <g fill="url(#cu)"><rect x="-8" y="40" width="16" height="100" rx="4"/><rect x="-58" y="8" width="22" height="12" rx="3"/><rect x="36" y="8" width="22" height="12" rx="3"/></g>
+    <g stroke="#5d4037" stroke-width="1" opacity=".5"><line x1="-8" y1="55" x2="8" y2="55"/><line x1="-8" y1="70" x2="8" y2="70"/><line x1="-8" y1="85" x2="8" y2="85"/><line x1="-8" y1="100" x2="8" y2="100"/><line x1="-8" y1="115" x2="8" y2="115"/></g>
+    <path d="M0 164 Q-6 190 4 215 M2 164 Q8 190 -2 215" stroke="#37474f" stroke-width="1.5" fill="none"/>
+  </g>
+  <g transform="translate(20,300)">
+    <text x="0" y="0" font-weight="bold" fill="#8d4b16" font-size="13">Cu-T 380A (IUCD)</text>
+    <text x="0" y="17">10 years · copper 380 mm²</text><text x="0" y="32">Cu-T 375 – 5 years</text>
+    <text x="0" y="47">Best time: within 10 days of LMP,</text><text x="0" y="62">PPIUCD within 48 hrs/ at LSCS</text>
+    <text x="0" y="77" fill="#c62828">Check thread after each period</text>
+  </g>
+  <!-- OCP strip -->
+  <g transform="translate(240,60)" filter="url(#s)">
+    <rect width="150" height="190" rx="12" fill="url(#foil)" stroke="#9e9e9e"/>
+    <g>
+      <circle cx="25" cy="25" r="10" fill="url(#pill)"/><circle cx="55" cy="25" r="10" fill="url(#pill)"/><circle cx="85" cy="25" r="10" fill="url(#pill)"/><circle cx="115" cy="25" r="10" fill="url(#pill)"/>
+      <circle cx="25" cy="55" r="10" fill="url(#pill)"/><circle cx="55" cy="55" r="10" fill="url(#pill)"/><circle cx="85" cy="55" r="10" fill="url(#pill)"/><circle cx="115" cy="55" r="10" fill="url(#pill)"/>
+      <circle cx="25" cy="85" r="10" fill="url(#pill)"/><circle cx="55" cy="85" r="10" fill="url(#pill)"/><circle cx="85" cy="85" r="10" fill="url(#pill)"/><circle cx="115" cy="85" r="10" fill="url(#pill)"/>
+      <circle cx="25" cy="115" r="10" fill="url(#pill)"/><circle cx="55" cy="115" r="10" fill="url(#pill)"/><circle cx="85" cy="115" r="10" fill="url(#pill)"/><circle cx="115" cy="115" r="10" fill="url(#pill)"/>
+      <circle cx="25" cy="145" r="10" fill="url(#pill)"/><circle cx="55" cy="145" r="10" fill="url(#pill)"/><circle cx="85" cy="145" r="10" fill="url(#pill)"/><circle cx="115" cy="145" r="10" fill="url(#pill)"/>
+      <circle cx="25" cy="172" r="10" fill="url(#pill)"/><circle cx="55" cy="172" r="10" fill="url(#pill2)"/><circle cx="85" cy="172" r="10" fill="url(#pill2)"/><circle cx="115" cy="172" r="10" fill="url(#pill2)"/>
+    </g>
+  </g>
+  <g transform="translate(225,300)">
+    <text x="0" y="0" font-weight="bold" fill="#ad1457" font-size="13">Combined OCP (Mala-N)</text>
+    <text x="0" y="17">21 hormonal + 7 iron (brown) = 28</text><text x="0" y="32">Start day 1–5 of cycle, same time daily</text>
+    <text x="0" y="47">Miss 1 pill → take ASAP</text><text x="0" y="62">Chhaya (Centchroman) – weekly,</text><text x="0" y="77">non-steroidal (twice weekly × 3 months)</text>
+  </g>
+  <!-- condom & injectable -->
+  <g transform="translate(480,80)" filter="url(#s)">
+    <rect width="100" height="100" rx="10" fill="url(#foil)" stroke="#9e9e9e"/>
+    <circle cx="50" cy="50" r="32" fill="url(#cond)" stroke="#1e88e5" stroke-width="3"/><circle cx="50" cy="50" r="22" fill="none" stroke="#1e88e5" stroke-width="2"/>
+  </g>
+  <g transform="translate(620,70)" filter="url(#s)">
+    <rect x="0" y="20" width="22" height="110" rx="4" fill="url(#pl)" stroke="#78909c"/><rect x="2" y="60" width="18" height="68" fill="#b2dfdb"/>
+    <rect x="-6" y="14" width="34" height="8" rx="2" fill="#607d8b"/><rect x="7" y="-20" width="8" height="36" fill="#90a4ae"/><line x1="11" y1="130" x2="11" y2="170" stroke="#78909c" stroke-width="2"/>
+  </g>
+  <g transform="translate(455,300)">
+    <text x="0" y="0" font-weight="bold" fill="#1565c0" font-size="13">Condom (Nirodh)</text><text x="0" y="17">Barrier + STI/ HIV protection</text>
+    <text x="0" y="40" font-weight="bold" fill="#00695c" font-size="13">Injectable MPA (Antara)</text><text x="0" y="57">DMPA 150 mg IM every 3 months</text>
+  </g>
+  <text x="20" y="410" font-size="12" fill="#00695c"><tspan font-weight="bold">Permanent:</tspan> Tubectomy (female – Pomeroy, laparoscopic) · Vasectomy (male – NSV)</text><text x="20" y="430" font-size="12" fill="#00695c">Vasectomy ke baad ~3 months/ 20 ejaculations tak condom · <tspan font-weight="bold">Emergency pill:</tspan> LNG 1.5 mg within 72 hrs</text>
+</svg>

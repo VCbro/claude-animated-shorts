@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="ht" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd0d0"/><stop offset="1" stop-color="#d04848"/></radialGradient>
+    <radialGradient id="lv" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#c57a5a"/><stop offset="1" stop-color="#5d2412"/></radialGradient>
+    <radialGradient id="pl" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ef9a9a"/><stop offset="1" stop-color="#8e1414"/></radialGradient>
+    <radialGradient id="lg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fce4ec"/><stop offset="1" stop-color="#d48aa6"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="720" height="460" fill="#fffafa"/>
+  <text x="360" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">Fetal Circulation – 3 Shunts</text>
+  <g filter="url(#s)">
+    <ellipse cx="200" cy="140" rx="45" ry="55" fill="url(#lg)"/><ellipse cx="330" cy="140" rx="45" ry="55" fill="url(#lg)"/>
+    <path d="M220 170 Q265 140 310 170 Q320 230 265 260 Q210 230 220 170 Z" fill="url(#ht)"/>
+    <path d="M200 300 Q270 280 330 305 Q330 345 265 350 Q200 345 200 300 Z" fill="url(#lv)"/>
+    <ellipse cx="265" cy="420" rx="80" ry="28" fill="url(#pl)"/>
+  </g>
+  <line x1="265" y1="190" x2="265" y2="250" stroke="#7f0000" stroke-width="2"/>
+  <circle cx="258" cy="205" r="7" fill="#fff59d" stroke="#f57f17" stroke-width="2"/>
+  <path d="M290 175 Q330 110 300 90" stroke="#7b1fa2" stroke-width="7" fill="none"/>
+  <path d="M245 175 Q230 110 260 80 Q290 60 320 90 L330 260 Q335 320 300 400" stroke="#e53935" stroke-width="6" fill="none"/>
+  <path d="M230 400 Q215 340 250 320" stroke="#1e88e5" stroke-width="7" fill="none"/>
+  <path d="M250 320 Q262 290 262 262" stroke="#ff9800" stroke-width="7" fill="none"/>
+  <g font-size="11.5">
+    <line x1="258" y1="205" x2="120" y2="215" stroke="#555"/><text x="20" y="208" font-weight="bold" fill="#f57f17">1. Foramen ovale</text><text x="20" y="222">RA → LA (bypass lungs)</text><text x="20" y="236" fill="#555">→ fossa ovalis</text>
+    <line x1="310" y1="105" x2="420" y2="90" stroke="#555"/><text x="425" y="86" font-weight="bold" fill="#7b1fa2">2. Ductus arteriosus</text><text x="425" y="100">Pulmonary artery → Aorta</text><text x="425" y="114" fill="#555">→ ligamentum arteriosum</text>
+    <line x1="258" y1="300" x2="420" y2="290" stroke="#555"/><text x="425" y="286" font-weight="bold" fill="#ef6c00">3. Ductus venosus</text><text x="425" y="300">Umbilical vein → IVC (bypass liver)</text><text x="425" y="314" fill="#555">→ ligamentum venosum</text>
+    <line x1="232" y1="385" x2="178" y2="362" stroke="#555"/><text x="20" y="366" font-weight="bold" fill="#1565c0">Umbilical vein (1)</text><text x="20" y="380">Oxygenated blood → fetus</text><text x="20" y="394" fill="#555">→ ligamentum teres</text>
+    <line x1="315" y1="380" x2="420" y2="370" stroke="#555"/><text x="425" y="366" font-weight="bold" fill="#c62828">Umbilical arteries (2)</text><text x="425" y="380">Deoxygenated → placenta</text><text x="425" y="394" fill="#555">→ medial umbilical ligaments</text>
+    <text x="180" y="72" fill="#ad1457">Lungs (non-functional)</text><text x="210" y="330" text-anchor="middle" fill="#fff" font-weight="bold">Liver</text><text x="265" y="425" text-anchor="middle" fill="#fff" font-weight="bold">Placenta</text>
+  </g>
+  <text x="360" y="455" text-anchor="middle" font-size="11.5" fill="#b71c1c">Highest O₂ blood – umbilical vein · Birth par pehli saans → lung pressure ↓ → shunts band</text>
+</svg>
