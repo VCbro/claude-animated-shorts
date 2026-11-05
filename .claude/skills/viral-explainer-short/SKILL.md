@@ -31,7 +31,13 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
    - Show the script to the user for approval before rendering. When the user says "just do it", go straight through.
 3. **Voice**: `python3 tools/voice.py [--engine piper|sarvam|eleven|files]`. This writes `voice/voice.wav` and
    `src/data/timeline.json`, with exact line times and estimated word times.
-   - `kokoro` is the default: offline Kokoro-82M, the most human-sounding offline Hindi. Set `KOKORO_VOICE` to `hm_psi` (male, default),
+   - `omnivoice` (PREFERRED, the creator's choice from their VoiceStudio repo VCbro/VoiceStudio): OmniVoice via
+     omnivoice.cpp on CPU, Hindi, one designed narrator (`OMNIVOICE_INSTRUCT`, default "male, young adult, moderate pitch,
+     indian accent"; valid tags: male/female · child/teenager/young adult/middle-aged/elderly · very low…very high pitch ·
+     whisper · american/british/indian… accent) made once into `voice/omni_ref.wav` and cloned for every line. Install with
+     `bash tools/get_omnivoice.sh` (builds the pinned runtime, downloads Serveurperso/omnivoice.cpp-GGUF Q8_0 + F32 codec;
+     needs huggingface.co allowed in the network settings). Set `"engine": "omnivoice"` in script.json.
+   - `kokoro` is the offline fallback: offline Kokoro-82M, the most human-sounding offline Hindi. Set `KOKORO_VOICE` to `hm_psi` (male, default),
      `hm_omega` (male), `hf_alpha` or `hf_beta` (female). `bash tools/get_models.sh` downloads it from GitHub releases.
    - `piper` (`hi_IN-rohan-medium`) is the older offline fallback and sounds more robotic.
    - Pronunciation fixes for Kokoro: write "पांच" (anusvara), not "पाँच". Say "मैसेज" instead of spelling out SMS. Put a word before a number

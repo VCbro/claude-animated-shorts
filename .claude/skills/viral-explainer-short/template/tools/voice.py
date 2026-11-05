@@ -10,6 +10,7 @@ Backends (pick with --engine or env VOICE_ENGINE):
   piper      offline neural Hindi (older, more robotic). Model: $PIPER_MODEL or models/hi_IN-rohan-medium.onnx
   sarvam     Sarvam AI Bulbul (best Hindi/Hinglish). Needs SARVAM_API_KEY + api.sarvam.ai allowed in network.
   eleven     ElevenLabs multilingual v2. Needs ELEVENLABS_API_KEY (+ ELEVEN_VOICE_ID) + api.elevenlabs.io allowed.
+  omnivoice  VoiceStudio's OmniVoice engine (best Hindi, designed voice): bash tools/get_omnivoice.sh first.
   take       your own ONE-FILE recording: script.json "voice_src" + per-line "src": [[t0,t1],...] pieces (retakes skipped).
   files      your own recording: voice/lines/<id>.wav per line (record on phone, export wav).
 
@@ -45,6 +46,42 @@ def tts_piper(text, pace):
 
 
 _KOK = None
+OV_DIR = os.environ.get("OMNIVOICE_DIR", "/home/user/vcbro/tools/omnivoice.cpp")
+OV_INSTRUCT = os.environ.get("OMNIVOICE_INSTRUCT", "male, young adult, moderate pitch, indian accent")
+OV_REF_TEXT = "नमस्ते दोस्तों। आज मैं तुम्हें एक ऐसी बात बताऊंगा, जो रोज़ तुम्हारे काम आएगी।"
+
+
+def _ov(args, text, out):
+    import subprocess
+    cmd = [f"{OV_DIR}/build/omnivoice-tts", "--model", os.environ.get("OMNIVOICE_MODEL", f"{OV_DIR}/models/omnivoice-base-Q8_0.gguf"),
+           "--codec", os.environ.get("OMNIVOICE_CODEC", f"{OV_DIR}/models/omnivoice-tokenizer-F32.gguf"),
+           "--lang", os.environ.get("OMNIVOICE_LANG", "Hindi"), "-o", out] + args
+    subprocess.run(cmd, input=text.encode("utf-8"), check=True, capture_output=True)
+
+
+def tts_omnivoice(text, pace):
+    """OmniVoice (VoiceStudio's engine, omnivoice.cpp GGUF on CPU). One designed voice is made once
+    (voice/omni_ref.wav, from OMNIVOICE_INSTRUCT + fixed seed) and every line is cloned from it, so the
+    narrator sounds identical across lines and videos. Put your own clip there to use your voice instead."""
+    import tempfile
+    ref = os.path.join(ROOT, "voice", "omni_ref.wav"); reft = ref + ".txt"
+    if not os.path.exists(ref):
+        os.makedirs(os.path.dirname(ref), exist_ok=True)
+        _ov(["--instruct", OV_INSTRUCT, "--seed", os.environ.get("OMNIVOICE_SEED", "7")], OV_REF_TEXT, ref)
+        open(reft, "w", encoding="utf-8").write(OV_REF_TEXT)
+    with tempfile.TemporaryDirectory() as td:
+        _ov(["--ref-wav", ref, "--ref-text", reft, "--seed", "7"], text, f"{td}/o.wav")
+        a, sr = sf.read(f"{td}/o.wav", dtype="float32")
+    a = to48(a if a.ndim == 1 else a.mean(1), sr)
+    if pace != 1.0:
+        import subprocess
+        with tempfile.TemporaryDirectory() as td:
+            sf.write(f"{td}/i.wav", a, SR)
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{td}/i.wav", "-af", f"atempo={pace}", f"{td}/o.wav"], check=True)
+            a, _ = sf.read(f"{td}/o.wav", dtype="float32")
+    return a
+
+
 def tts_kokoro(text, pace):
     global _KOK
     from kokoro_onnx import Kokoro
@@ -165,7 +202,7 @@ def main():
     S = json.load(open(args.script, encoding="utf-8"))
     pace = S.get("pace", 1.0)
     args.engine = args.engine or S.get("engine", "kokoro")
-    fn = {"kokoro": tts_kokoro, "piper": tts_piper, "sarvam": tts_sarvam, "eleven": tts_eleven}.get(args.engine)
+    fn = {"omnivoice": tts_omnivoice, "kokoro": tts_kokoro, "piper": tts_piper, "sarvam": tts_sarvam, "eleven": tts_eleven}.get(args.engine)
     os.makedirs(os.path.join(ROOT, "voice", "cache"), exist_ok=True)
     clips, t, lines = [], args.lead, []
     for ln in S["lines"]:
