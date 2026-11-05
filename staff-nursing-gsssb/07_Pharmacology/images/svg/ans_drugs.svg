@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="sy" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffcdd2"/><stop offset="1" stop-color="#e53935"/></linearGradient>
+    <linearGradient id="pa" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c8e6c9"/><stop offset="1" stop-color="#2e7d32"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="450" fill="#fcfcff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#263238">Autonomic Nervous System – Effects &amp; Key Drugs</text>
+  <g filter="url(#s)">
+    <rect x="20" y="50" width="415" height="385" rx="14" fill="#fff5f5" stroke="#ef9a9a" stroke-width="2"/>
+    <rect x="445" y="50" width="415" height="385" rx="14" fill="#f3fbf3" stroke="#a5d6a7" stroke-width="2"/>
+    <rect x="20" y="50" width="415" height="44" rx="14" fill="url(#sy)"/>
+    <rect x="445" y="50" width="415" height="44" rx="14" fill="url(#pa)"/>
+  </g>
+  <text x="227" y="78" text-anchor="middle" font-weight="bold" font-size="15" fill="#fff">SYMPATHETIC – "Fight or Flight"</text>
+  <text x="652" y="78" text-anchor="middle" font-weight="bold" font-size="15" fill="#fff">PARASYMPATHETIC – "Rest &amp; Digest"</text>
+  <g font-size="11.6">
+    <text x="35" y="118" font-weight="bold" fill="#b71c1c">Effects (noradrenaline)</text>
+    <text x="35" y="138">↑ HR &amp; BP (β1, α1) · bronchodilation (β2)</text>
+    <text x="35" y="156">Pupil dilation – mydriasis (α1)</text>
+    <text x="35" y="174">↓ GI motility · urinary retention · ↑ glucose</text>
+    <text x="35" y="200" font-weight="bold" fill="#b71c1c">Agonists (sympathomimetics)</text>
+    <text x="35" y="220"><tspan font-weight="bold">Adrenaline</tspan> – anaphylaxis, cardiac arrest</text>
+    <text x="35" y="238"><tspan font-weight="bold">Noradrenaline</tspan> – septic shock (vasopressor)</text>
+    <text x="35" y="256"><tspan font-weight="bold">Dopamine / dobutamine</tspan> – shock, HF</text>
+    <text x="35" y="274"><tspan font-weight="bold">Salbutamol</tspan> – β2 – asthma</text>
+    <text x="35" y="292"><tspan font-weight="bold">Phenylephrine</tspan> – α1 – decongestant</text>
+    <text x="35" y="318" font-weight="bold" fill="#b71c1c">Blockers (sympatholytics)</text>
+    <text x="35" y="338"><tspan font-weight="bold">Propranolol</tspan> – non-selective β (avoid asthma)</text>
+    <text x="35" y="356"><tspan font-weight="bold">Atenolol, metoprolol</tspan> – β1 selective</text>
+    <text x="35" y="374"><tspan font-weight="bold">Prazosin</tspan> – α1 (first-dose hypotension)</text>
+    <text x="35" y="392"><tspan font-weight="bold">Labetalol</tspan> – α + β (pregnancy HTN)</text>
+    <text x="35" y="418" fill="#455a64" font-size="10.8">β-blockers mask hypoglycaemia signs in diabetics</text>
+
+    <text x="460" y="118" font-weight="bold" fill="#1b5e20">Effects (acetylcholine – muscarinic)</text>
+    <text x="460" y="138">↓ HR · bronchoconstriction · ↑ secretions</text>
+    <text x="460" y="156">Pupil constriction – miosis</text>
+    <text x="460" y="174">↑ GI motility · urination (SLUDGE)</text>
+    <text x="460" y="200" font-weight="bold" fill="#1b5e20">Cholinergic agonists / anticholinesterases</text>
+    <text x="460" y="220"><tspan font-weight="bold">Pilocarpine</tspan> – glaucoma (miosis)</text>
+    <text x="460" y="238"><tspan font-weight="bold">Neostigmine</tspan> – myasthenia, reverse NM block</text>
+    <text x="460" y="256"><tspan font-weight="bold">Pyridostigmine</tspan> – myasthenia gravis</text>
+    <text x="460" y="274"><tspan font-weight="bold">Bethanechol</tspan> – urinary retention</text>
+    <text x="460" y="292"><tspan font-weight="bold">Physostigmine</tspan> – atropine poisoning antidote</text>
+    <text x="460" y="318" font-weight="bold" fill="#1b5e20">Anticholinergics (antimuscarinic)</text>
+    <text x="460" y="338"><tspan font-weight="bold">Atropine</tspan> – bradycardia, OP poisoning,</text>
+    <text x="470" y="354">pre-anaesthetic (↓ secretions)</text>
+    <text x="460" y="374"><tspan font-weight="bold">Ipratropium</tspan> – COPD · <tspan font-weight="bold">hyoscine</tspan> – colic</text>
+    <text x="460" y="392"><tspan font-weight="bold">Glycopyrrolate</tspan> – pre-op secretions</text>
+    <text x="460" y="418" fill="#455a64" font-size="10.8">Atropine toxicity: dry as bone, red as beet, hot as hare</text>
+  </g>
+</svg>

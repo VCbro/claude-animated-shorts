@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="r" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e53935" stop-opacity=".9"/><stop offset="1" stop-color="#e53935" stop-opacity=".1"/></linearGradient>
+    <linearGradient id="s2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fb8c00" stop-opacity=".85"/><stop offset="1" stop-color="#fb8c00" stop-opacity=".1"/></linearGradient>
+    <linearGradient id="n" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1e88e5" stop-opacity=".8"/><stop offset="1" stop-color="#1e88e5" stop-opacity=".1"/></linearGradient>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#43a047" stop-opacity=".8"/><stop offset="1" stop-color="#43a047" stop-opacity=".1"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="880" height="430" fill="#fbfdff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">Insulin Types – Action Profile (Onset · Peak · Duration)</text>
+  <path d="M60 300 H560" stroke="#37474f" stroke-width="2"/><path d="M60 300 V60" stroke="#37474f" stroke-width="2"/>
+  <g font-size="10.5" fill="#455a64" text-anchor="middle">
+    <text x="60" y="318">0</text><text x="140" y="318">4</text><text x="220" y="318">8</text><text x="300" y="318">12</text><text x="380" y="318">16</text><text x="460" y="318">20</text><text x="540" y="318">24 h</text>
+  </g>
+  <text x="310" y="340" text-anchor="middle" font-size="11" fill="#455a64">Hours after injection</text>
+  <g filter="url(#sh)">
+    <path d="M60 300 C75 120 90 110 110 160 C130 230 140 280 150 300 Z" fill="url(#r)" stroke="#c62828" stroke-width="2"/>
+    <path d="M60 300 C90 170 110 150 140 180 C170 230 190 290 200 300 Z" fill="url(#s2)" stroke="#ef6c00" stroke-width="2"/>
+    <path d="M60 300 C120 240 160 150 220 170 C300 200 360 290 420 300 Z" fill="url(#n)" stroke="#1565c0" stroke-width="2"/>
+    <path d="M60 300 C80 240 100 225 140 225 L520 225 C535 260 540 290 545 300 Z" fill="url(#g)" stroke="#2e7d32" stroke-width="2"/>
+  </g>
+  <g filter="url(#sh)"><rect x="590" y="60" width="270" height="345" rx="14" fill="#fff" stroke="#bbdefb" stroke-width="2"/></g>
+  <g font-size="11.5">
+    <rect x="605" y="78" width="14" height="14" fill="#e53935"/><text x="626" y="90" font-weight="bold">Rapid (lispro, aspart)</text>
+    <text x="626" y="107">Onset 10–15 min · peak 1 h</text><text x="626" y="123">Duration 3–5 h · with meal</text>
+    <rect x="605" y="143" width="14" height="14" fill="#fb8c00"/><text x="626" y="155" font-weight="bold">Short – Regular (clear)</text>
+    <text x="626" y="172">Onset 30–60 min · peak 2–4 h</text><text x="626" y="188">Duration 6–8 h · ONLY IV insulin</text>
+    <rect x="605" y="208" width="14" height="14" fill="#1e88e5"/><text x="626" y="220" font-weight="bold">Intermediate – NPH (cloudy)</text>
+    <text x="626" y="237">Onset 1–2 h · peak 4–12 h</text><text x="626" y="253">Duration 16–24 h</text>
+    <rect x="605" y="273" width="14" height="14" fill="#43a047"/><text x="626" y="285" font-weight="bold">Long – Glargine/ detemir</text>
+    <text x="626" y="302">Onset 1–2 h · NO peak</text><text x="626" y="318">Duration ~24 h · don't mix</text>
+    <text x="605" y="348" font-weight="bold" fill="#c62828">Mixing: draw CLEAR before CLOUDY</text>
+    <text x="605" y="368" fill="#455a64">Store unopened 2–8 °C; in-use vial</text>
+    <text x="605" y="384" fill="#455a64">room temp up to 28 days</text>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="40" y="375"><tspan font-weight="bold" fill="#0d47a1">Hypoglycaemia</tspan> risk is highest at the <tspan font-weight="bold">PEAK</tspan> time of each insulin</text>
+    <text x="40" y="397">Rotate sites (abdomen fastest absorption) · SC 45–90° · no massage after injection</text>
+  </g>
+</svg>
