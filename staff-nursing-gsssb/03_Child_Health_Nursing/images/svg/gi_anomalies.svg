@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="sk" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe6d5"/><stop offset="1" stop-color="#d48f69"/></radialGradient>
+    <linearGradient id="oes" x1="0" x2="1"><stop offset="0" stop-color="#c2185b"/><stop offset=".45" stop-color="#f48fb1"/><stop offset="1" stop-color="#880e4f"/></linearGradient>
+    <linearGradient id="tr" x1="0" x2="1"><stop offset="0" stop-color="#1565c0"/><stop offset=".45" stop-color="#90caf9"/><stop offset="1" stop-color="#0d47a1"/></linearGradient>
+    <radialGradient id="st" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe0b2"/><stop offset=".6" stop-color="#ffb74d"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <radialGradient id="ol" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f0f4c3"/><stop offset=".5" stop-color="#9ccc65"/><stop offset="1" stop-color="#33691e"/></radialGradient>
+    <linearGradient id="bw" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffccbc"/><stop offset=".5" stop-color="#ff8a65"/><stop offset="1" stop-color="#bf360c"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="520" fill="#fffcf8"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#bf360c">Common Congenital GI Anomalies – Key Signs</text>
+  <g filter="url(#s)">
+    <rect x="20" y="45" width="410" height="225" rx="14" fill="#fff" stroke="#ffab91" stroke-width="2"/>
+    <rect x="450" y="45" width="410" height="225" rx="14" fill="#fff" stroke="#f48fb1" stroke-width="2"/>
+    <rect x="20" y="285" width="410" height="225" rx="14" fill="#fff" stroke="#aed581" stroke-width="2"/>
+    <rect x="450" y="285" width="410" height="225" rx="14" fill="#fff" stroke="#90caf9" stroke-width="2"/>
+  </g>
+  <!-- 1 cleft lip -->
+  <g transform="translate(105,160)" filter="url(#s)">
+    <circle r="62" fill="url(#sk)"/>
+    <circle cx="-22" cy="-15" r="6" fill="#3e2723"/><circle cx="22" cy="-15" r="6" fill="#3e2723"/>
+    <ellipse cx="-8" cy="12" rx="5" ry="3" fill="#a1664a"/><ellipse cx="8" cy="12" rx="5" ry="3" fill="#a1664a"/>
+    <path d="M-26 32 Q-12 26 -6 30 L-2 16 L4 30 Q14 26 26 32 Q0 46 -26 32 Z" fill="#e57373"/>
+    <path d="M-4 14 L-2 34" stroke="#8e1b1b" stroke-width="3"/>
+  </g>
+  <g font-size="11.8">
+    <text x="190" y="72" font-weight="bold" font-size="14" fill="#bf360c">Cleft Lip &amp; Palate</text>
+    <text x="190" y="95">Feeding difficulty, aspiration</text>
+    <text x="190" y="114">Feed upright, special nipple/</text>
+    <text x="190" y="131">spoon/ ESSR, burp often</text>
+    <text x="190" y="152"><tspan font-weight="bold">Lip repair:</tspan> ~3 months</text>
+    <text x="190" y="169">(Rule of 10s)</text>
+    <text x="190" y="188"><tspan font-weight="bold">Palate:</tspan> 9–18 months</text>
+    <text x="190" y="205">(before speech)</text>
+    <text x="190" y="226">Post-op lip: elbow restraints,</text>
+    <text x="190" y="243">Logan bow, supine/ side</text>
+  </g>
+  <!-- 2 TEF type C -->
+  <g transform="translate(530,170) scale(.86)" filter="url(#s)">
+    <rect x="12" y="-90" width="26" height="190" rx="12" fill="url(#tr)"/>
+    <rect x="-40" y="-90" width="26" height="78" rx="12" fill="url(#oes)"/>
+    <rect x="-40" y="30" width="26" height="80" rx="12" fill="url(#oes)"/>
+    <path d="M-16 42 Q0 30 14 20" stroke="url(#oes)" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <text x="-27" y="-98" text-anchor="middle" font-size="10" fill="#880e4f">Oesophagus</text>
+    <text x="25" y="-98" text-anchor="middle" font-size="10" fill="#0d47a1">Trachea</text>
+    <text x="-27" y="8" text-anchor="middle" font-size="9" fill="#880e4f">blind pouch</text>
+  </g>
+  <g font-size="11.8">
+    <text x="615" y="72" font-weight="bold" font-size="14" fill="#ad1457">TEF – Type C (~85 %)</text>
+    <text x="615" y="95">Upper blind pouch + lower</text>
+    <text x="615" y="112">segment joined to trachea</text>
+    <text x="615" y="133"><tspan font-weight="bold">3 C's:</tspan> Coughing, Choking,</text>
+    <text x="615" y="150">Cyanosis on feeding</text>
+    <text x="615" y="169">Excess frothy saliva/ drooling</text>
+    <text x="615" y="186">Mother: polyhydramnios</text>
+    <text x="615" y="205">Catheter can't pass to stomach</text>
+    <text x="615" y="226"><tspan font-weight="bold">Nursing:</tspan> NPO, head-up 30°,</text>
+    <text x="615" y="243">continuous pouch suction</text>
+  </g>
+  <!-- 3 pyloric stenosis -->
+  <g transform="translate(115,400)" filter="url(#s)">
+    <path d="M-70 -50 Q-90 20 -30 45 Q20 60 45 20 L60 10 L58 -8 L40 -5 Q10 -20 -10 -60 Q-45 -80 -70 -50 Z" fill="url(#st)"/>
+    <ellipse cx="55" cy="2" rx="22" ry="14" fill="url(#ol)"/>
+    <path d="M76 0 Q95 5 98 30" stroke="#ffb74d" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <text x="55" y="-20" text-anchor="middle" font-size="10" font-weight="bold" fill="#33691e">"olive"</text>
+    <text x="-25" y="5" text-anchor="middle" font-size="10" fill="#bf360c">Stomach</text>
+  </g>
+  <g font-size="11.8">
+    <text x="230" y="312" font-weight="bold" font-size="14" fill="#33691e">Pyloric Stenosis</text>
+    <text x="230" y="335">2–6 weeks, first-born male</text>
+    <text x="230" y="354"><tspan font-weight="bold">Projectile, non-bilious</tspan></text>
+    <text x="230" y="371">vomiting after feeds</text>
+    <text x="230" y="390">Olive-shaped mass (RUQ)</text>
+    <text x="230" y="407">Visible peristalsis L → R</text>
+    <text x="230" y="426">Hypochloraemic hypokalaemic</text>
+    <text x="230" y="443">metabolic alkalosis</text>
+    <text x="230" y="464"><tspan font-weight="bold">Rx:</tspan> Ramstedt's</text>
+    <text x="230" y="481">pyloromyotomy</text>
+  </g>
+  <!-- 4 intussusception -->
+  <g transform="translate(545,400)" filter="url(#s)">
+    <rect x="-75" y="-24" width="150" height="48" rx="24" fill="url(#bw)"/>
+    <rect x="-20" y="-16" width="80" height="32" rx="16" fill="#ffab91" stroke="#bf360c" stroke-width="2"/>
+    <rect x="-90" y="-16" width="40" height="32" rx="14" fill="url(#bw)"/>
+    <path d="M-30 -10 L-5 0 L-30 10" stroke="#bf360c" stroke-width="3" fill="none"/>
+    <text x="0" y="45" text-anchor="middle" font-size="10" fill="#bf360c">Ileum telescopes into colon</text>
+  </g>
+  <g font-size="11.8">
+    <text x="650" y="312" font-weight="bold" font-size="14" fill="#0d47a1">Intussusception</text>
+    <text x="650" y="335">6 months – 2 yrs (ileocolic)</text>
+    <text x="650" y="354">Sudden colicky pain, draws</text>
+    <text x="650" y="371">legs up, vomiting</text>
+    <text x="650" y="390"><tspan font-weight="bold">Red currant jelly stool</tspan></text>
+    <text x="650" y="409">Sausage-shaped mass</text>
+    <text x="650" y="426">Dance's sign (empty RIF)</text>
+    <text x="650" y="445">USG: target/ doughnut sign</text>
+    <text x="650" y="464"><tspan font-weight="bold">Rx:</tspan> air/ hydrostatic</text>
+    <text x="650" y="481">enema reduction → surgery</text>
+  </g>
+</svg>

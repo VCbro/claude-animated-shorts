@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="pk" x1="0" x2="1"><stop offset="0" stop-color="#e3f2fd"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#90caf9"/></linearGradient>
+    <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#b3e5fc" stop-opacity=".9"/><stop offset=".4" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#4fc3f7" stop-opacity=".9"/></linearGradient>
+    <linearGradient id="liq" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffe082"/><stop offset="1" stop-color="#ffb300"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="450" fill="#f8fcff"/>
+  <text x="440" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#01579b">Dehydration Assessment &amp; Treatment Plans (IMNCI)</text>
+  <g filter="url(#s)">
+    <rect x="30" y="50" width="265" height="250" rx="14" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+    <rect x="308" y="50" width="265" height="250" rx="14" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>
+    <rect x="586" y="50" width="265" height="250" rx="14" fill="#fce4ec" stroke="#ec407a" stroke-width="2"/>
+  </g>
+  <g font-size="12">
+    <text x="45" y="76" font-weight="bold" font-size="14" fill="#2e7d32">NO dehydration → Plan A</text>
+    <text x="45" y="98">Not enough signs for some/ severe</text>
+    <text x="45" y="126" font-weight="bold" fill="#2e7d32">Home: 4 rules</text>
+    <text x="45" y="147">1. Extra fluids (ORS after each stool)</text>
+    <text x="55" y="166">&lt; 2 yrs: 50–100 ml</text>
+    <text x="55" y="184">2–10 yrs: 100–200 ml</text>
+    <text x="45" y="205">2. Zinc × 14 days</text>
+    <text x="45" y="224">3. Continue feeding/ breastfeeding</text>
+    <text x="45" y="243">4. When to return (danger signs)</text>
+    <text x="45" y="277" fill="#555" font-size="11">Zinc: 2–6 mo 10 mg · &gt; 6 mo 20 mg</text>
+
+    <text x="323" y="76" font-weight="bold" font-size="14" fill="#f57f17">SOME dehydration → Plan B</text>
+    <text x="323" y="98">Two of:</text>
+    <text x="323" y="118">• Restless, irritable</text>
+    <text x="323" y="137">• Sunken eyes</text>
+    <text x="323" y="156">• Drinks eagerly, thirsty</text>
+    <text x="323" y="175">• Skin pinch goes back slowly</text>
+    <text x="323" y="205" font-weight="bold" fill="#f57f17">ORS 75 ml/kg in 4 hours</text>
+    <text x="323" y="225">at health facility, small sips</text>
+    <text x="323" y="245">Reassess after 4 hrs</text>
+    <text x="323" y="277" fill="#555" font-size="11">e.g. 8 kg child → 600 ml in 4 hrs</text>
+
+    <text x="601" y="76" font-weight="bold" font-size="14" fill="#ad1457">SEVERE dehydration → Plan C</text>
+    <text x="601" y="98">Two of:</text>
+    <text x="601" y="118">• Lethargic / unconscious</text>
+    <text x="601" y="137">• Sunken eyes</text>
+    <text x="601" y="156">• Not able to drink / drinks poorly</text>
+    <text x="601" y="175">• Skin pinch goes back VERY slowly</text>
+    <text x="601" y="205" font-weight="bold" fill="#ad1457">IV Ringer lactate 100 ml/kg</text>
+    <text x="601" y="225">&lt; 12 mo: 30 ml/kg in 1 h, 70 in 5 h</text>
+    <text x="601" y="245">≥ 12 mo: 30 ml/kg in ½ h, 70 in 2½ h</text>
+    <text x="601" y="277" fill="#555" font-size="11">Skin pinch "very slowly" = &gt; 2 seconds</text>
+  </g>
+  <!-- ORS packet and glass -->
+  <g transform="translate(60,320)" filter="url(#s)">
+    <path d="M0 0 h90 l-6 110 h-78 z" fill="url(#pk)" stroke="#1565c0" stroke-width="2"/>
+    <rect x="10" y="30" width="70" height="34" rx="5" fill="#1e88e5"/>
+    <text x="45" y="53" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">ORS</text>
+    <text x="45" y="88" text-anchor="middle" fill="#0d47a1" font-size="9">Low osmolarity</text>
+    <text x="45" y="100" text-anchor="middle" fill="#0d47a1" font-size="9">WHO/ UNICEF</text>
+  </g>
+  <g transform="translate(175,330)" filter="url(#s)">
+    <path d="M0 0 h60 l-7 96 h-46 z" fill="url(#gl)" stroke="#0288d1" stroke-width="2"/>
+    <path d="M3 30 h54 l-5 64 h-44 z" fill="url(#liq)" opacity=".85"/>
+    <text x="30" y="20" text-anchor="middle" font-size="10" fill="#01579b">1 litre</text>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="270" y="335" font-weight="bold" fill="#01579b" font-size="13">Low-osmolarity ORS (per litre) – total 245 mOsm/L</text>
+    <text x="270" y="358">NaCl 2.6 g · Glucose anhydrous 13.5 g · KCl 1.5 g · Trisodium citrate 2.9 g</text>
+    <text x="270" y="380">Na⁺ 75 · Glucose 75 · Cl⁻ 65 · K⁺ 20 · Citrate 10 (mmol/L)</text>
+    <text x="270" y="402">Use within 24 hrs of preparation · 1 packet in 1 litre clean drinking water · don't boil</text>
+    <text x="270" y="424" fill="#c62828" font-weight="bold">If child vomits: wait 10 min, then give slowly (1 spoon every 1–2 min)</text>
+  </g>
+</svg>

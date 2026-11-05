@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="sk" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe9db"/><stop offset="1" stop-color="#d4916c"/></radialGradient>
+    <radialGradient id="csf" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#e1f5fe"/><stop offset="1" stop-color="#4fc3f7"/></radialGradient>
+    <linearGradient id="vb" x1="0" x2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset=".45" stop-color="#ffffff"/><stop offset="1" stop-color="#9e9e9e"/></linearGradient>
+    <linearGradient id="cord" x1="0" x2="1"><stop offset="0" stop-color="#f9a825"/><stop offset=".5" stop-color="#fff176"/><stop offset="1" stop-color="#f57f17"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="470" fill="#f9fcff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#01579b">Hydrocephalus &amp; Neural Tube Defects (Spina Bifida)</text>
+  <!-- hydrocephalus head -->
+  <g transform="translate(140,190)" filter="url(#s)">
+    <ellipse cx="0" cy="-20" rx="105" ry="100" fill="url(#sk)"/>
+    <ellipse cx="0" cy="-35" rx="62" ry="50" fill="url(#csf)" opacity=".85"/>
+    <ellipse cx="0" cy="60" rx="45" ry="32" fill="url(#sk)"/>
+    <circle cx="-20" cy="52" r="10" fill="#fff"/><circle cx="20" cy="52" r="10" fill="#fff"/>
+    <circle cx="-20" cy="59" r="6" fill="#3e2723"/><circle cx="20" cy="59" r="6" fill="#3e2723"/>
+    <path d="M-12 78 q12 5 24 0" stroke="#8d4a2f" stroke-width="2" fill="none"/>
+    <path d="M60 -10 Q120 30 110 140" stroke="#78909c" stroke-width="4" fill="none" stroke-dasharray="6 4"/>
+    <ellipse cx="0" cy="-118" rx="16" ry="7" fill="#ffccbc" stroke="#e64a19" stroke-width="2"/>
+  </g>
+  <g font-size="10.5" fill="#455a64">
+    <text x="165" y="66" font-weight="bold" fill="#e64a19">bulging, wide fontanelle</text>
+    <text x="140" y="160" text-anchor="middle" fill="#01579b">dilated ventricles (CSF)</text>
+    <text x="140" y="290" text-anchor="middle">"setting-sun" eyes</text>
+    <text x="270" y="335" text-anchor="middle">VP shunt → peritoneum</text>
+  </g>
+  <g font-size="11.8">
+    <text x="30" y="360" font-weight="bold" font-size="14" fill="#01579b">Hydrocephalus</text>
+    <text x="30" y="381">↑ Head circumference (serial OFC daily) · Macewen's (cracked-pot) sign</text>
+    <text x="30" y="400">Separated sutures · shiny scalp, dilated veins · vomiting</text>
+    <text x="30" y="419"><tspan font-weight="bold">VP shunt post-op:</tspan> flat/ unoperated side, raise head gradually; watch</text>
+    <text x="30" y="436">shunt block (↑ ICP signs) &amp; infection · support large head while lifting</text>
+  </g>
+  <!-- spina bifida types -->
+  <g filter="url(#s)"><rect x="470" y="45" width="390" height="285" rx="14" fill="#ffffff" stroke="#90caf9" stroke-width="2"/></g>
+  <g font-size="11" text-anchor="middle" font-weight="bold" fill="#37474f">
+    <text x="535" y="68">Occulta</text><text x="665" y="68">Meningocele</text><text x="790" y="68" font-size="10.5">Meningomyelocele</text>
+  </g>
+  <g filter="url(#s)">
+    <g transform="translate(535,170)">
+      <rect x="-40" y="-60" width="80" height="120" rx="8" fill="url(#vb)"/>
+      <rect x="-9" y="-60" width="18" height="120" fill="url(#cord)"/>
+      <path d="M-40 -15 h28 M12 -15 h28" stroke="#757575" stroke-width="3"/>
+      <path d="M-14 -66 q4 -12 8 0 q4 -12 8 0 q4 -12 8 0" stroke="#5d4037" stroke-width="2" fill="none"/>
+    </g>
+    <g transform="translate(665,170)">
+      <rect x="-40" y="-60" width="80" height="120" rx="8" fill="url(#vb)"/>
+      <rect x="-9" y="-60" width="18" height="120" fill="url(#cord)"/>
+      <ellipse cx="0" cy="-74" rx="32" ry="24" fill="url(#csf)" stroke="#0277bd" stroke-width="2"/>
+    </g>
+    <g transform="translate(795,170)">
+      <rect x="-40" y="-60" width="80" height="120" rx="8" fill="url(#vb)"/>
+      <path d="M-9 60 V0 Q-9 -70 0 -85 Q9 -70 9 0 V60 Z" fill="url(#cord)"/>
+      <ellipse cx="0" cy="-74" rx="34" ry="26" fill="url(#csf)" stroke="#c62828" stroke-width="2.5" opacity=".75"/>
+      <path d="M-6 -60 Q0 -95 6 -60" stroke="#f57f17" stroke-width="6" fill="none"/>
+    </g>
+  </g>
+  <g font-size="10.5" text-anchor="middle" fill="#455a64">
+    <text x="535" y="255">tuft of hair/ dimple</text><text x="535" y="270">no sac · often silent</text>
+    <text x="665" y="255">sac: meninges + CSF</text><text x="665" y="270">no neural deficit</text>
+    <text x="792" y="255" fill="#c62828" font-weight="bold">sac + cord/ nerves</text><text x="792" y="270">paralysis, incontinence</text>
+  </g>
+  <g font-size="11.4">
+    <text x="485" y="298"><tspan font-weight="bold" fill="#c62828">Pre-op care:</tspan> PRONE, sterile moist saline dressing,</text>
+    <text x="485" y="316">no pressure on sac, no rectal temp; measure OFC</text>
+  </g>
+  <g font-size="11.8">
+    <text x="470" y="360" font-weight="bold" font-size="14" fill="#2e7d32">Prevention &amp; associations</text>
+    <text x="470" y="381">Folic acid 400 µg preconception (4–5 mg if previous NTD)</text>
+    <text x="470" y="400">Maternal serum AFP ↑ · valproate in pregnancy ↑ risk</text>
+    <text x="470" y="419">Meningomyelocele + hydrocephalus (Arnold-Chiari II)</text>
+    <text x="470" y="436">Latex allergy precautions (repeated catheterisation)</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="pink" x1="0" x2="1"><stop offset="0" stop-color="#ad1457"/><stop offset=".5" stop-color="#f06292"/><stop offset="1" stop-color="#880e4f"/></linearGradient>
+    <linearGradient id="yel" x1="0" x2="1"><stop offset="0" stop-color="#f9a825"/><stop offset=".5" stop-color="#ffee58"/><stop offset="1" stop-color="#f57f17"/></linearGradient>
+    <linearGradient id="grn" x1="0" x2="1"><stop offset="0" stop-color="#2e7d32"/><stop offset=".5" stop-color="#81c784"/><stop offset="1" stop-color="#1b5e20"/></linearGradient>
+    <filter id="s" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="860" height="420" fill="#fbfbff"/>
+  <text x="430" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#4a148c">IMNCI – Colour-coded Classification (2 months – 5 years)</text>
+  <!-- pyramid -->
+  <g filter="url(#s)">
+    <path d="M200 60 L290 160 L110 160 Z" fill="url(#pink)"/>
+    <path d="M110 168 L290 168 L350 250 L50 250 Z" fill="url(#yel)"/>
+    <path d="M50 258 L350 258 L395 330 L5 330 Z" fill="url(#grn)"/>
+  </g>
+  <g text-anchor="middle" font-weight="bold">
+    <text x="200" y="130" fill="#fff" font-size="15">PINK</text><text x="200" y="148" fill="#fff" font-size="11">Urgent referral</text>
+    <text x="200" y="208" fill="#4e342e" font-size="15">YELLOW</text><text x="200" y="228" fill="#4e342e" font-size="11">Specific treatment (OPD/ home)</text>
+    <text x="200" y="292" fill="#fff" font-size="15">GREEN</text><text x="200" y="312" fill="#fff" font-size="11">Home care + advice</text>
+  </g>
+  <!-- right info -->
+  <g filter="url(#s)">
+    <rect x="440" y="58" width="395" height="128" rx="12" fill="#fce4ec" stroke="#f06292" stroke-width="2"/>
+    <rect x="440" y="196" width="395" height="134" rx="12" fill="#ede7f6" stroke="#9575cd" stroke-width="2"/>
+  </g>
+  <g font-size="12">
+    <text x="455" y="80" font-weight="bold" font-size="13.5" fill="#880e4f">General Danger Signs (any one = PINK)</text>
+    <text x="455" y="103">1. Not able to drink or breastfeed</text>
+    <text x="455" y="124">2. Vomits everything</text>
+    <text x="455" y="145">3. Convulsions (now or in this illness)</text>
+    <text x="455" y="166">4. Lethargic or unconscious</text>
+    <text x="455" y="218" font-weight="bold" font-size="13.5" fill="#4527a0">Fast breathing (count 1 full minute)</text>
+    <text x="455" y="242">&lt; 2 months  →  ≥ 60 / min</text>
+    <text x="455" y="263">2–12 months  →  ≥ 50 / min</text>
+    <text x="455" y="284">12 months – 5 yrs  →  ≥ 40 / min</text>
+    <text x="455" y="310" fill="#4527a0">Count when child is calm; look for chest indrawing</text>
+  </g>
+  <g font-size="12.2" fill="#263238">
+    <text x="30" y="360"><tspan font-weight="bold" fill="#4a148c">Age groups:</tspan> Young infant 0–2 months · Child 2 months – 5 years  ·  India launched IMNCI in 2003 (IMNCI = IMCI + newborn)</text>
+    <text x="30" y="383"><tspan font-weight="bold" fill="#4a148c">Steps:</tspan> Assess → Classify (colour) → Identify treatment → Treat → Counsel mother → Follow-up</text>
+    <text x="30" y="406"><tspan font-weight="bold" fill="#4a148c">Main symptoms asked:</tspan> cough/ difficult breathing · diarrhoea · fever · ear problem → then nutrition &amp; immunization</text>
+  </g>
+</svg>

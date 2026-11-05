@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="b" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#90caf9"/><stop offset="1" stop-color="#1565c0"/></radialGradient>
+    <radialGradient id="p" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f48fb1"/><stop offset="1" stop-color="#ad1457"/></radialGradient>
+    <radialGradient id="g" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#a5d6a7"/><stop offset="1" stop-color="#2e7d32"/></radialGradient>
+    <linearGradient id="road" x1="0" x2="1"><stop offset="0" stop-color="#ffcc80"/><stop offset="1" stop-color="#ef6c00"/></linearGradient>
+    <filter id="s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="2" dy="5" stdDeviation="3.5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="470" fill="#fbfdff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">Developmental Milestones – 0 to 5 Years (Key Ages)</text>
+  <rect x="40" y="148" width="820" height="16" rx="8" fill="url(#road)" filter="url(#s)"/>
+  <text x="450" y="64" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">GROSS MOTOR</text>
+  <g filter="url(#s)" text-anchor="middle">
+    <g transform="translate(80,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">3 mo</text></g>
+    <g transform="translate(180,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">5 mo</text></g>
+    <g transform="translate(280,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">6 mo</text></g>
+    <g transform="translate(380,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">8 mo</text></g>
+    <g transform="translate(480,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">9 mo</text></g>
+    <g transform="translate(580,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">12 mo</text></g>
+    <g transform="translate(680,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">18 mo</text></g>
+    <g transform="translate(780,156)"><circle r="26" fill="url(#b)"/><text y="5" font-weight="bold" fill="#0d47a1">2–3 y</text></g>
+  </g>
+  <g text-anchor="middle" fill="#263238" font-size="11.5">
+    <text x="80" y="94">Neck</text><text x="80" y="108">holding</text>
+    <text x="180" y="94">Rolls</text><text x="180" y="108">over</text>
+    <text x="280" y="94">Sits with</text><text x="280" y="108">support</text>
+    <text x="380" y="94">Sits without</text><text x="380" y="108">support</text>
+    <text x="480" y="94">Crawls, stands</text><text x="480" y="108">with support</text>
+    <text x="580" y="94">Walks</text><text x="580" y="108">alone</text>
+    <text x="680" y="94">Runs,</text><text x="680" y="108">climbs stairs</text>
+    <text x="780" y="94">Stairs (2 y) /</text><text x="780" y="108">tricycle (3 y)</text>
+  </g>
+  <!-- fine motor / language / social cards -->
+  <g filter="url(#s)">
+    <rect x="30" y="205" width="270" height="235" rx="14" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+    <rect x="315" y="205" width="270" height="235" rx="14" fill="#fce4ec" stroke="#f48fb1" stroke-width="2"/>
+    <rect x="600" y="205" width="270" height="235" rx="14" fill="#e8f5e9" stroke="#81c784" stroke-width="2"/>
+  </g>
+  <g font-size="12">
+    <text x="45" y="230" font-weight="bold" font-size="14" fill="#0d47a1">Fine motor</text>
+    <text x="45" y="255">4 mo – bidextrous reach</text>
+    <text x="45" y="276">6 mo – palmar grasp, transfers</text>
+    <text x="45" y="297">9–10 mo – <tspan font-weight="bold">pincer grasp</tspan></text>
+    <text x="45" y="318">15 mo – tower of 2 cubes</text>
+    <text x="45" y="339">2 y – 6 cubes · 3 y – 9 cubes</text>
+    <text x="45" y="360">Copies: circle 3 y · cross 4 y</text>
+    <text x="45" y="381">square 4 y · triangle 5 y</text>
+    <text x="45" y="402">diamond 6–7 y</text>
+    <text x="330" y="230" font-weight="bold" font-size="14" fill="#ad1457">Language</text>
+    <text x="330" y="255">1–2 mo – coos</text>
+    <text x="330" y="276">6 mo – monosyllables (ba, da)</text>
+    <text x="330" y="297">9–10 mo – bisyllables (mama)</text>
+    <text x="330" y="318">12 mo – 1–2 meaningful words</text>
+    <text x="330" y="339">2 y – 2-word phrases</text>
+    <text x="330" y="360">3 y – simple sentences,</text>
+    <text x="330" y="381">tells name, age, sex</text>
+    <text x="330" y="402">4–5 y – tells story</text>
+    <text x="615" y="230" font-weight="bold" font-size="14" fill="#2e7d32">Social / Adaptive</text>
+    <text x="615" y="255">2 mo – <tspan font-weight="bold">social smile</tspan></text>
+    <text x="615" y="276">3 mo – recognises mother</text>
+    <text x="615" y="297">6–9 mo – stranger anxiety</text>
+    <text x="615" y="318">9 mo – waves bye-bye</text>
+    <text x="615" y="339">12 mo – plays simple ball game</text>
+    <text x="615" y="360">2 y – parallel play</text>
+    <text x="615" y="381">3 y – shares toys, knows sex</text>
+    <text x="615" y="402">2–3 y – day bladder control</text>
+  </g>
+  <text x="450" y="462" text-anchor="middle" font-size="11.5" fill="#c62828" font-weight="bold">Red flag: no social smile by 3 mo · no head control by 4 mo · not sitting by 9 mo · not walking by 18 mo</text>
+</svg>

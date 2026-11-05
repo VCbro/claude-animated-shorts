@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="sk" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffeadf"/><stop offset="1" stop-color="#d79470"/></radialGradient>
+    <radialGradient id="ves" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#ffebee"/><stop offset="1" stop-color="#e57373"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="470" fill="#fffbfb"/>
+  <text x="450" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">Childhood Rash (Exanthematous) Fevers – Identify Quickly</text>
+  <g filter="url(#s)">
+    <rect x="20" y="45" width="205" height="410" rx="14" fill="#fff" stroke="#ef9a9a" stroke-width="2"/>
+    <rect x="240" y="45" width="205" height="410" rx="14" fill="#fff" stroke="#ce93d8" stroke-width="2"/>
+    <rect x="460" y="45" width="205" height="410" rx="14" fill="#fff" stroke="#90caf9" stroke-width="2"/>
+    <rect x="680" y="45" width="205" height="410" rx="14" fill="#fff" stroke="#a5d6a7" stroke-width="2"/>
+  </g>
+  <!-- measles child -->
+  <g transform="translate(122,140)" filter="url(#s)">
+    <circle cy="-20" r="38" fill="url(#sk)"/>
+    <path d="M-28 20 Q0 10 28 20 L34 70 L-34 70 Z" fill="url(#sk)"/>
+    <g fill="#c62828" opacity=".8">
+      <circle cx="-30" cy="-30" r="3.5"/><circle cx="-22" cy="-40" r="3"/><circle cx="25" cy="-34" r="3.5"/><circle cx="30" cy="-22" r="3"/><circle cx="-14" cy="-6" r="3"/><circle cx="14" cy="-4" r="3"/><circle cx="-6" cy="-48" r="3"/><circle cx="8" cy="-50" r="3"/>
+      <circle cx="-18" cy="32" r="3"/><circle cx="0" cy="40" r="3"/><circle cx="18" cy="30" r="3"/><circle cx="-10" cy="54" r="2.5"/><circle cx="12" cy="56" r="2.5"/>
+    </g>
+    <circle cx="-12" cy="-22" r="4" fill="#3e2723"/><circle cx="12" cy="-22" r="4" fill="#3e2723"/>
+    <path d="M-20 -14 q8 4 14 0 M6 -14 q8 4 14 0" stroke="#e57373" stroke-width="2" fill="none"/>
+  </g>
+  <!-- chickenpox -->
+  <g transform="translate(342,140)" filter="url(#s)">
+    <circle cy="-20" r="38" fill="url(#sk)"/>
+    <path d="M-28 20 Q0 10 28 20 L34 70 L-34 70 Z" fill="url(#sk)"/>
+    <g>
+      <circle cx="-14" cy="34" r="5" fill="url(#ves)"/><circle cx="6" cy="44" r="5" fill="url(#ves)"/><circle cx="18" cy="28" r="4" fill="#e57373"/><circle cx="-4" cy="58" r="5" fill="url(#ves)"/><circle cx="-22" cy="52" r="3.5" fill="#a1887f"/><circle cx="22" cy="56" r="4" fill="url(#ves)"/>
+      <circle cx="-20" cy="-36" r="3.5" fill="url(#ves)"/><circle cx="22" cy="-8" r="3.5" fill="#e57373"/>
+    </g>
+    <circle cx="-12" cy="-22" r="4" fill="#3e2723"/><circle cx="12" cy="-22" r="4" fill="#3e2723"/>
+  </g>
+  <!-- rubella -->
+  <g transform="translate(562,140)" filter="url(#s)">
+    <circle cy="-20" r="38" fill="url(#sk)"/>
+    <path d="M-28 20 Q0 10 28 20 L34 70 L-34 70 Z" fill="url(#sk)"/>
+    <g fill="#f06292" opacity=".55"><circle cx="-14" cy="-6" r="6"/><circle cx="14" cy="-6" r="6"/><circle cx="-8" cy="32" r="5"/><circle cx="12" cy="40" r="5"/></g>
+    <circle cx="-38" cy="-8" r="6" fill="#8d6e63" stroke="#fff"/><circle cx="38" cy="-8" r="6" fill="#8d6e63" stroke="#fff"/>
+    <circle cx="-12" cy="-22" r="4" fill="#3e2723"/><circle cx="12" cy="-22" r="4" fill="#3e2723"/>
+  </g>
+  <!-- mumps -->
+  <g transform="translate(782,140)" filter="url(#s)">
+    <circle cy="-20" r="38" fill="url(#sk)"/>
+    <ellipse cx="-34" cy="0" rx="18" ry="22" fill="url(#sk)" stroke="#d84315" stroke-width="2"/>
+    <ellipse cx="34" cy="0" rx="18" ry="22" fill="url(#sk)" stroke="#d84315" stroke-width="2"/>
+    <path d="M-28 20 Q0 10 28 20 L34 70 L-34 70 Z" fill="url(#sk)"/>
+    <circle cx="-12" cy="-26" r="4" fill="#3e2723"/><circle cx="12" cy="-26" r="4" fill="#3e2723"/>
+    <path d="M-8 -6 q8 -4 16 0" stroke="#5d4037" stroke-width="2" fill="none"/>
+  </g>
+  <g font-size="14" font-weight="bold" text-anchor="middle">
+    <text x="122" y="240" fill="#c62828">MEASLES</text><text x="342" y="240" fill="#8e24aa">CHICKENPOX</text><text x="562" y="240" fill="#1565c0">RUBELLA</text><text x="782" y="240" fill="#2e7d32">MUMPS</text>
+  </g>
+  <g font-size="11.2" fill="#263238">
+    <text x="32" y="265">Rubeola virus (paramyxo)</text>
+    <text x="32" y="285"><tspan font-weight="bold">Koplik's spots</tspan> – buccal</text>
+    <text x="32" y="302">mucosa (prodrome)</text>
+    <text x="32" y="322">3 C's: cough, coryza,</text>
+    <text x="32" y="339">conjunctivitis + fever</text>
+    <text x="32" y="359">Rash day 4: behind ears →</text>
+    <text x="32" y="376">face → trunk (downward)</text>
+    <text x="32" y="396">Vitamin A (2 doses)</text>
+    <text x="32" y="416">Complication: pneumonia</text>
+    <text x="32" y="433">(commonest), SSPE late</text>
+
+    <text x="252" y="265">Varicella-zoster virus</text>
+    <text x="252" y="285"><tspan font-weight="bold">Centripetal</tspan>, pleomorphic</text>
+    <text x="252" y="302">rash in crops</text>
+    <text x="252" y="322">Macule → papule → vesicle</text>
+    <text x="252" y="339">("dew drop on rose petal")</text>
+    <text x="252" y="359">→ crust; itchy</text>
+    <text x="252" y="379">Infectious till all crusted</text>
+    <text x="252" y="399">Acyclovir · calamine</text>
+    <text x="252" y="419" fill="#c62828" font-weight="bold">No aspirin (Reye's)</text>
+    <text x="252" y="436">Cut nails, prevent scratching</text>
+
+    <text x="472" y="265">"German / 3-day measles"</text>
+    <text x="472" y="285"><tspan font-weight="bold">Post-auricular &amp;</tspan></text>
+    <text x="472" y="302"><tspan font-weight="bold">sub-occipital nodes</tspan></text>
+    <text x="472" y="322">Mild fever, pink rash</text>
+    <text x="472" y="339">face → body, 3 days</text>
+    <text x="472" y="359">Forchheimer spots (palate)</text>
+    <text x="472" y="379" fill="#c62828" font-weight="bold">Danger in pregnancy:</text>
+    <text x="472" y="396">congenital rubella –</text>
+    <text x="472" y="413">cataract, deafness, PDA</text>
+    <text x="472" y="433">Prevent: MR vaccine</text>
+
+    <text x="692" y="265">Paramyxovirus</text>
+    <text x="692" y="285"><tspan font-weight="bold">Parotid swelling</tspan> –</text>
+    <text x="692" y="302">ear lobe pushed up/ out</text>
+    <text x="692" y="322">Pain on chewing, sour</text>
+    <text x="692" y="339">foods ↑ pain</text>
+    <text x="692" y="359">Complications: orchitis</text>
+    <text x="692" y="376">(after puberty), aseptic</text>
+    <text x="692" y="393">meningitis, pancreatitis</text>
+    <text x="692" y="413">Soft diet, warm/ cold</text>
+    <text x="692" y="430">compress, oral hygiene</text>
+  </g>
+</svg>
