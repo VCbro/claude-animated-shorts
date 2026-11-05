@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="w" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b3e5fc"/><stop offset="1" stop-color="#0277bd"/></linearGradient>
+    <linearGradient id="sand" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset="1" stop-color="#d7a85a"/></linearGradient>
+    <linearGradient id="grav" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#616161"/></linearGradient>
+    <linearGradient id="tank" x1="0" x2="1"><stop offset="0" stop-color="#90a4ae"/><stop offset=".45" stop-color="#eceff1"/><stop offset="1" stop-color="#607d8b"/></linearGradient>
+    <linearGradient id="well" x1="0" x2="1"><stop offset="0" stop-color="#8d6e63"/><stop offset=".5" stop-color="#d7ccc8"/><stop offset="1" stop-color="#5d4037"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="450" fill="#f5fbff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#01579b">Water Purification – Slow Sand Filter, Chlorination &amp; Well Disinfection</text>
+  <!-- slow sand filter -->
+  <g filter="url(#s)">
+    <rect x="30" y="60" width="250" height="250" rx="10" fill="url(#tank)"/>
+    <rect x="42" y="72" width="226" height="70" fill="url(#w)" opacity=".85"/>
+    <rect x="42" y="142" width="226" height="10" fill="#558b2f"/>
+    <rect x="42" y="152" width="226" height="90" fill="url(#sand)"/>
+    <rect x="42" y="242" width="226" height="40" fill="url(#grav)"/>
+    <rect x="42" y="282" width="226" height="16" fill="#455a64"/>
+  </g>
+  <g font-size="11" fill="#263238">
+    <text x="155" y="105" text-anchor="middle" fill="#fff" font-weight="bold">Supernatant water (1–1.5 m)</text>
+    <text x="155" y="150" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="bold">Vital layer (Schmutzdecke)</text>
+    <text x="155" y="200" text-anchor="middle" font-weight="bold">Sand bed (~1 m)</text>
+    <text x="155" y="266" text-anchor="middle" fill="#fff" font-weight="bold">Gravel</text>
+    <text x="155" y="294" text-anchor="middle" fill="#fff" font-size="10">Under-drainage</text>
+  </g>
+  <text x="155" y="330" text-anchor="middle" font-weight="bold" fill="#01579b" font-size="13">Slow Sand (Biological) Filter</text>
+  <text x="155" y="348" text-anchor="middle" font-size="11" fill="#455a64">Bacteria removal 99.9 %; rate 2–3 m³/m²/day</text>
+  <!-- chlorination card -->
+  <g filter="url(#s)"><rect x="305" y="60" width="270" height="300" rx="14" fill="#fff" stroke="#81d4fa" stroke-width="2"/></g>
+  <g font-size="12">
+    <text x="320" y="86" font-weight="bold" font-size="14" fill="#0277bd">Chlorination – key numbers</text>
+    <text x="320" y="112">Residual free chlorine:</text>
+    <text x="330" y="130" font-weight="bold" fill="#c62828">0.5 mg/L after 1 hr contact</text>
+    <text x="320" y="154">Chlorine demand → measured by</text>
+    <text x="330" y="172" font-weight="bold">Horrock's apparatus</text>
+    <text x="320" y="196">Residual chlorine test →</text>
+    <text x="330" y="214" font-weight="bold">Orthotolidine (OT) test</text>
+    <text x="320" y="238">Bleaching powder = </text>
+    <text x="330" y="256" font-weight="bold">33 % available chlorine</text>
+    <text x="320" y="280">Break-point chlorination –</text>
+    <text x="330" y="298">beyond it, free chlorine appears</text>
+    <text x="320" y="322">Chlorine tablet (Halazone):</text>
+    <text x="330" y="340">for small quantities of water</text>
+  </g>
+  <!-- well -->
+  <g transform="translate(720,230)" filter="url(#s)">
+    <rect x="-70" y="-60" width="140" height="150" rx="8" fill="url(#well)"/>
+    <ellipse cx="0" cy="-60" rx="70" ry="16" fill="#a1887f"/>
+    <ellipse cx="0" cy="-60" rx="55" ry="10" fill="#4fc3f7"/>
+    <path d="M-80 -120 V-60 M80 -120 V-60 M-90 -120 H90" stroke="#5d4037" stroke-width="7"/>
+    <path d="M0 -120 V-80" stroke="#795548" stroke-width="2"/>
+    <rect x="-10" y="-82" width="20" height="16" rx="3" fill="#90a4ae"/>
+  </g>
+  <g font-size="11.5">
+    <text x="720" y="70" text-anchor="middle" font-weight="bold" font-size="13.5" fill="#4e342e">Well disinfection</text>
+    <text x="610" y="345">1. Find volume of water in well</text>
+    <text x="610" y="363">2. Horrock's test → bleaching powder</text>
+    <text x="610" y="381">3. Make paste → dissolve → pour</text>
+    <text x="610" y="399">4. Contact 1 hr → OT test (0.5 mg/L)</text>
+    <text x="610" y="417">Best done at night; well ≥ 15 m from latrine</text>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="30" y="385"><tspan font-weight="bold" fill="#01579b">Safe water:</tspan> no coliform in 100 ml · fluoride ≤ 1 mg/L (max 1.5) · pH 6.5–8.5</text>
+    <text x="30" y="405"><tspan font-weight="bold" fill="#01579b">Rapid sand filter:</tspan> coagulation (alum) + frequent backwashing (urban)</text>
+    <text x="30" y="425"><tspan font-weight="bold" fill="#01579b">Household:</tspan> boiling (rolling boil 5–10 min) – best</text>
+    <text x="30" y="445"><tspan font-weight="bold" fill="#01579b">Jal Jeevan Mission (2019):</tspan> 55 litres/person/day tap water</text>
+  </g>
+</svg>

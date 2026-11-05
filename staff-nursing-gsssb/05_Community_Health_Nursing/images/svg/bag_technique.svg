@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="bag" x1="0" x2="1"><stop offset="0" stop-color="#4e342e"/><stop offset=".5" stop-color="#a1887f"/><stop offset="1" stop-color="#3e2723"/></linearGradient>
+    <linearGradient id="np" x1="0" x2="1"><stop offset="0" stop-color="#eceff1"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd8dc"/></linearGradient>
+    <radialGradient id="soap" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#80deea"/></radialGradient>
+    <linearGradient id="tbl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#bcaaa4"/><stop offset="1" stop-color="#6d4c41"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="430" fill="#fffaf5"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#4e342e">Bag Technique (Public Health / CHN Bag) – Home Visit</text>
+  <g filter="url(#s)">
+    <rect x="40" y="240" width="380" height="20" rx="4" fill="url(#tbl)"/>
+    <rect x="70" y="260" width="16" height="100" fill="#6d4c41"/><rect x="374" y="260" width="16" height="100" fill="#6d4c41"/>
+    <path d="M60 236 L400 236 L390 222 L70 222 Z" fill="url(#np)"/>
+    <rect x="150" y="150" width="160" height="80" rx="14" fill="url(#bag)"/>
+    <path d="M190 150 Q230 105 270 150" stroke="#3e2723" stroke-width="8" fill="none"/>
+    <g transform="translate(230,190)"><rect x="-5" y="-16" width="10" height="32" fill="#fff"/><rect x="-16" y="-5" width="32" height="10" fill="#fff"/></g>
+    <ellipse cx="355" cy="215" rx="22" ry="12" fill="url(#soap)"/>
+  </g>
+  <g font-size="11" fill="#455a64">
+    <text x="230" y="98" text-anchor="middle">Bag on a clean, flat, high surface</text>
+    <text x="230" y="290" text-anchor="middle">Newspaper / paper spread – folded side up</text>
+    <text x="355" y="198" text-anchor="middle">soap</text>
+  </g>
+  <g filter="url(#s)"><rect x="450" y="50" width="410" height="350" rx="14" fill="#fff" stroke="#d7ccc8" stroke-width="2"/></g>
+  <g font-size="12">
+    <text x="465" y="76" font-weight="bold" font-size="14" fill="#4e342e">Steps</text>
+    <text x="465" y="100">1. Choose a clean place, away from children</text>
+    <text x="465" y="120">2. Spread newspaper; place bag on it</text>
+    <text x="465" y="140">3. Take out soap dish &amp; towel; <tspan font-weight="bold">wash hands</tspan></text>
+    <text x="465" y="160">4. Take out apron, wear it (clean side in)</text>
+    <text x="465" y="180">5. Take out only needed articles → place</text>
+    <text x="480" y="198">on clean side of paper; close bag</text>
+    <text x="465" y="218">6. Give care; dirty articles on separate paper</text>
+    <text x="465" y="238">7. Clean/ disinfect articles; wash hands</text>
+    <text x="465" y="258">8. Replace articles, fold apron (soiled in)</text>
+    <text x="465" y="278">9. Wrap waste in paper → burn/ bury</text>
+    <text x="465" y="298">10. Wash hands, record &amp; give health talk</text>
+    <text x="465" y="326" font-weight="bold" fill="#c62828">Purpose: prevent cross-infection</text>
+    <text x="465" y="344">between nurse ↔ family ↔ other families</text>
+    <text x="465" y="370" font-weight="bold" fill="#4e342e">Never open bag with dirty hands;</text>
+    <text x="465" y="388" font-weight="bold" fill="#4e342e">never place bag on bed or floor</text>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="30" y="385" font-size="11"><tspan font-weight="bold" fill="#4e342e">Contents:</tspan> thermometer, BP set, stethoscope, scissors,</text>
+    <text x="30" y="402" font-size="11">forceps, gauze, cotton, spirit, soap, towel, apron, kidney tray,</text>
+    <text x="30" y="419" font-size="11">gloves, urine kit, ORS, IFA, records, IEC material</text>
+  </g>
+</svg>

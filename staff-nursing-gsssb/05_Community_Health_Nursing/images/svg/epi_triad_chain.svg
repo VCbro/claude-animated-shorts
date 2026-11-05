@@ -26,7 +26,7 @@
   <text x="200" y="420" text-anchor="middle" font-size="11.5" fill="#455a64">Disease = imbalance among agent, host &amp; environment</text>
   <!-- chain of infection -->
   <g filter="url(#s)"><rect x="410" y="50" width="450" height="380" rx="14" fill="#fff" stroke="#ffcc80" stroke-width="2"/></g>
-  <text x="635" y="76" text-anchor="middle" font-weight="bold" font-size="15" fill="#e65100">Chain of Infection – break any link</text>
+  <text x="635" y="72" text-anchor="middle" font-weight="bold" font-size="15" fill="#e65100">Chain of Infection – break any link</text>
   <g filter="url(#s)">
     <circle cx="635" cy="130" r="32" fill="url(#link)"/>
     <circle cx="755" cy="185" r="32" fill="url(#link)"/>
@@ -45,7 +45,7 @@
     <text x="515" y="183">Susceptible</text><text x="515" y="196">host</text>
   </g>
   <g font-size="10.5" fill="#455a64" text-anchor="middle">
-    <text x="635" y="88">sterilisation, antibiotics</text>
+    <text x="635" y="92" font-size="10">sterilisation, antibiotics</text>
     <text x="820" y="232">isolation,</text><text x="820" y="245">treat carriers</text>
     <text x="820" y="345">masks,</text><text x="820" y="358">cover wounds</text>
     <text x="635" y="405">hand hygiene, PPE, disinfection,</text><text x="635" y="419">vector control, safe water</text>

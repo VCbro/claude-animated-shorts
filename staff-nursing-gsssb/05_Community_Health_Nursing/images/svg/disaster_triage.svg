@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="c1" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#bbdefb"/><stop offset=".6" stop-color="#1e88e5"/><stop offset="1" stop-color="#0d3c7a"/></radialGradient>
+    <radialGradient id="c2" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#c8e6c9"/><stop offset=".6" stop-color="#43a047"/><stop offset="1" stop-color="#1b5e20"/></radialGradient>
+    <radialGradient id="c3" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".6" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <radialGradient id="c4" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffe0b2"/><stop offset=".6" stop-color="#fb8c00"/><stop offset="1" stop-color="#8d4100"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="430" fill="#fbfcff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a237e">Disaster Management Cycle &amp; Triage Colour Codes</text>
+  <circle cx="210" cy="215" r="120" fill="none" stroke="#b0bec5" stroke-width="6" stroke-dasharray="10 6"/>
+  <g filter="url(#s)">
+    <circle cx="210" cy="95" r="52" fill="url(#c3)"/>
+    <circle cx="330" cy="215" r="52" fill="url(#c4)"/>
+    <circle cx="210" cy="335" r="52" fill="url(#c2)"/>
+    <circle cx="90" cy="215" r="52" fill="url(#c1)"/>
+  </g>
+  <g fill="#fff" font-weight="bold" text-anchor="middle" font-size="12.5">
+    <text x="210" y="92">IMPACT /</text><text x="210" y="108">RESPONSE</text>
+    <text x="330" y="212">RECOVERY</text><text x="330" y="228" font-size="10">rehab, rebuild</text>
+    <text x="210" y="332">MITIGATION</text><text x="210" y="348" font-size="10">reduce risk</text>
+    <text x="90" y="212">PREPARED-</text><text x="90" y="228">NESS</text>
+  </g>
+  <text x="210" y="219" text-anchor="middle" font-size="11" fill="#455a64">Pre-disaster ↺</text>
+  <g font-size="11.5" fill="#263238">
+    <text x="20" y="410"><tspan font-weight="bold" fill="#1a237e">Disaster Management Act 2005</tspan> · NDMA chaired by <tspan font-weight="bold">Prime Minister</tspan> · NDRF · Gujarat: GSDMA (2001, after Bhuj earthquake)</text>
+  </g>
+  <!-- triage -->
+  <g filter="url(#s)"><rect x="410" y="50" width="450" height="330" rx="14" fill="#fff" stroke="#c5cae9" stroke-width="2"/></g>
+  <text x="635" y="76" text-anchor="middle" font-weight="bold" font-size="15" fill="#1a237e">Mass-casualty Triage (START)</text>
+  <g filter="url(#s)">
+    <rect x="425" y="92" width="80" height="58" rx="10" fill="#d32f2f"/>
+    <rect x="425" y="162" width="80" height="58" rx="10" fill="#fbc02d"/>
+    <rect x="425" y="232" width="80" height="58" rx="10" fill="#388e3c"/>
+    <rect x="425" y="302" width="80" height="58" rx="10" fill="#212121"/>
+  </g>
+  <g font-weight="bold" text-anchor="middle" font-size="12.5">
+    <text x="465" y="126" fill="#fff">RED</text><text x="465" y="196" fill="#3e2723">YELLOW</text><text x="465" y="266" fill="#fff">GREEN</text><text x="465" y="336" fill="#fff">BLACK</text>
+  </g>
+  <g font-size="12">
+    <text x="520" y="114" font-weight="bold" fill="#c62828">Immediate (Priority I)</text>
+    <text x="520" y="132">Life-threatening but salvageable – airway,</text><text x="520" y="146">shock, RR &gt; 30, CRT &gt; 2 sec</text>
+    <text x="520" y="184" font-weight="bold" fill="#f57f17">Delayed (Priority II)</text>
+    <text x="520" y="202">Serious, stable – can wait few hours</text><text x="520" y="216">(fractures, burns without shock)</text>
+    <text x="520" y="254" font-weight="bold" fill="#2e7d32">Minor (Priority III)</text>
+    <text x="520" y="272">"Walking wounded" – minor cuts,</text><text x="520" y="286">bruises; can walk</text>
+    <text x="520" y="324" font-weight="bold" fill="#212121">Dead / Expectant</text>
+    <text x="520" y="342">Not breathing after airway opened /</text><text x="520" y="356">unsurvivable injuries</text>
+  </g>
+</svg>
