@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="DejaVu Sans, Arial">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="plate" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".8" stop-color="#eceff1"/><stop offset="1" stop-color="#90a4ae"/></radialGradient>
+    <radialGradient id="apple" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".55" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <radialGradient id="orange" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff3e0"/><stop offset=".55" stop-color="#fb8c00"/><stop offset="1" stop-color="#bf360c"/></radialGradient>
+    <radialGradient id="leaf" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#e8f5e9"/><stop offset=".55" stop-color="#43a047"/><stop offset="1" stop-color="#1b5e20"/></radialGradient>
+    <radialGradient id="dal" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fffde7"/><stop offset=".55" stop-color="#fbc02d"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <radialGradient id="milk" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#e3f2fd"/><stop offset="1" stop-color="#90caf9"/></radialGradient>
+    <linearGradient id="carrot" x1="0" x2="1"><stop offset="0" stop-color="#e65100"/><stop offset=".5" stop-color="#ffb74d"/><stop offset="1" stop-color="#e65100"/></linearGradient>
+    <filter id="s" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".33"/></filter>
+  </defs>
+  <circle cx="300" cy="215" r="205" fill="url(#glow)"/>
+  <g filter="url(#s)"><ellipse cx="300" cy="235" rx="165" ry="120" fill="url(#plate)"/><ellipse cx="300" cy="235" rx="130" ry="92" fill="#fafafa" stroke="#cfd8dc" stroke-width="3"/></g>
+  <path d="M300 143 L300 327 M170 235 L430 235" stroke="#cfd8dc" stroke-width="3"/>
+  <g filter="url(#s)">
+    <circle cx="245" cy="190" r="22" fill="url(#leaf)"/><circle cx="270" cy="205" r="18" fill="url(#leaf)"/><circle cx="225" cy="212" r="16" fill="url(#leaf)"/>
+    <ellipse cx="355" cy="200" rx="45" ry="28" fill="url(#dal)"/>
+    <g fill="#fff8e1" stroke="#d7ccc8"><ellipse cx="240" cy="270" rx="12" ry="6"/><ellipse cx="262" cy="282" rx="12" ry="6"/><ellipse cx="225" cy="290" rx="12" ry="6"/><ellipse cx="252" cy="300" rx="12" ry="6"/><ellipse cx="275" cy="262" rx="12" ry="6"/></g>
+    <circle cx="345" cy="275" r="20" fill="url(#apple)"/><circle cx="380" cy="282" r="18" fill="url(#orange)"/>
+  </g>
+  <g filter="url(#s)"><rect x="470" y="150" width="60" height="110" rx="12" fill="url(#milk)" stroke="#90caf9" stroke-width="2"/><rect x="480" y="135" width="40" height="20" rx="5" fill="#64b5f6"/><text x="500" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">MILK</text></g>
+  <g filter="url(#s)" transform="translate(95,150) rotate(-35)"><path d="M0 -60 L14 50 L-14 50 Z" fill="url(#carrot)" transform="rotate(180)"/><path d="M-6 -50 L-14 -72 M0 -50 L0 -76 M6 -50 L14 -72" stroke="#2e7d32" stroke-width="5" stroke-linecap="round"/></g>
+  <g filter="url(#s)"><circle cx="110" cy="320" r="30" fill="url(#apple)"/><path d="M110 290 C112 280 118 276 124 274" stroke="#4e342e" stroke-width="4" fill="none"/><ellipse cx="125" cy="282" rx="10" ry="5" fill="url(#leaf)"/></g>
+  <g filter="url(#s)"><ellipse cx="500" cy="330" rx="34" ry="44" fill="#fff8e1" stroke="#d7ccc8" stroke-width="2"/></g>
+</svg>

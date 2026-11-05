@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#fff8e1"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity=".28"/></filter>
+    <radialGradient id="b1" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ff9800"/><stop offset="1" stop-color="#bf360c"/></radialGradient>
+    <radialGradient id="b2" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#29b6f6"/><stop offset="1" stop-color="#01579b"/></radialGradient>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#e65100">Vitamins – Sources &amp; Deficiency at a Glance</text>
+  <text x="225" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="#bf360c">Fat-soluble (A, D, E, K) – stored, toxic in excess</text>
+  <text x="675" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="#01579b">Water-soluble (B, C) – not stored</text>
+  <g font-size="13" fill="#263238">
+    <g filter="url(#s)"><circle cx="50" cy="118" r="22" fill="url(#b1)"/><circle cx="50" cy="218" r="22" fill="url(#b1)"/><circle cx="50" cy="318" r="22" fill="url(#b1)"/><circle cx="50" cy="418" r="22" fill="url(#b1)"/></g>
+    <g font-weight="bold" fill="#fff" font-size="17" text-anchor="middle"><text x="50" y="124">A</text><text x="50" y="224">D</text><text x="50" y="324">E</text><text x="50" y="424">K</text></g>
+    <text x="85" y="108" font-weight="bold">Retinol – carrot, GLV, mango, papaya, liver, milk</text>
+    <text x="85" y="126">Night blindness (earliest) → Bitot's spots</text>
+    <text x="85" y="144">→ xerophthalmia → keratomalacia (blindness)</text>
+    <text x="85" y="208" font-weight="bold">Calciferol – sunlight (skin), fish oil, egg yolk</text>
+    <text x="85" y="226">Rickets (children – bow legs, rickety rosary)</text>
+    <text x="85" y="244">Osteomalacia (adults)</text>
+    <text x="85" y="308" font-weight="bold">Tocopherol – vegetable oils, nuts, seeds</text>
+    <text x="85" y="326">Antioxidant; haemolytic anaemia in preterm,</text>
+    <text x="85" y="344">neuropathy; sterility (animals)</text>
+    <text x="85" y="408" font-weight="bold">Phylloquinone – GLV, gut bacteria</text>
+    <text x="85" y="426">Bleeding – haemorrhagic disease of newborn</text>
+    <text x="85" y="444">(1 mg IM at birth; 0.5 mg if &lt; 1 kg)</text>
+  </g>
+  <line x1="450" y1="90" x2="450" y2="470" stroke="#ffcc80" stroke-width="2" stroke-dasharray="6 5"/>
+  <g font-size="12.5" fill="#263238">
+    <g filter="url(#s)"><circle cx="485" cy="110" r="18" fill="url(#b2)"/><circle cx="485" cy="160" r="18" fill="url(#b2)"/><circle cx="485" cy="210" r="18" fill="url(#b2)"/><circle cx="485" cy="260" r="18" fill="url(#b2)"/><circle cx="485" cy="310" r="18" fill="url(#b2)"/><circle cx="485" cy="360" r="18" fill="url(#b2)"/><circle cx="485" cy="410" r="18" fill="url(#b2)"/><circle cx="485" cy="460" r="18" fill="url(#b2)"/></g>
+    <g font-weight="bold" fill="#fff" font-size="12" text-anchor="middle"><text x="485" y="115">B1</text><text x="485" y="165">B2</text><text x="485" y="215">B3</text><text x="485" y="265">B6</text><text x="485" y="315">B9</text><text x="485" y="365">B12</text><text x="485" y="415">C</text><text x="485" y="465">B7</text></g>
+    <text x="512" y="106" font-weight="bold">Thiamine – whole grains, pulses</text><text x="512" y="122">Beriberi (wet – heart; dry – neuritis), Wernicke</text>
+    <text x="512" y="156" font-weight="bold">Riboflavin – milk, eggs, GLV</text><text x="512" y="172">Angular stomatitis, cheilosis, magenta tongue</text>
+    <text x="512" y="206" font-weight="bold">Niacin – groundnut, meat, (tryptophan)</text><text x="512" y="222">Pellagra – 3 Ds: dermatitis, diarrhoea, dementia</text>
+    <text x="512" y="256" font-weight="bold">Pyridoxine – cereals, meat</text><text x="512" y="272">Neuropathy (INH), convulsions in infants</text>
+    <text x="512" y="306" font-weight="bold">Folic acid – GLV, liver, pulses</text><text x="512" y="322">Megaloblastic anaemia, neural tube defects</text>
+    <text x="512" y="356" font-weight="bold">Cobalamin – only animal foods</text><text x="512" y="372">Pernicious/ megaloblastic anaemia, neuropathy</text>
+    <text x="512" y="406" font-weight="bold">Ascorbic acid – amla, citrus, guava</text><text x="512" y="422">Scurvy – bleeding gums, poor wound healing</text>
+    <text x="512" y="456" font-weight="bold">Biotin – egg yolk (raw white – avidin)</text><text x="512" y="472">Dermatitis, hair loss</text>
+  </g>
+  <rect x="40" y="495" width="820" height="45" rx="12" fill="#fff" stroke="#ffb74d"/>
+  <text x="450" y="523" text-anchor="middle" font-size="14" fill="#4e342e">Richest sources: Vit C – <tspan font-weight="bold">amla</tspan> · Vit A – <tspan font-weight="bold">fish liver oil</tspan> · Vit D – <tspan font-weight="bold">sunlight</tspan> · B12 – <tspan font-weight="bold">liver</tspan> · Folate – <tspan font-weight="bold">GLV/ liver</tspan></text>
+</svg>

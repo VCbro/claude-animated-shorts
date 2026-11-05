@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbfff7"/><stop offset="1" stop-color="#f1f8e9"/></linearGradient>
+    <radialGradient id="plate" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".85" stop-color="#eceff1"/><stop offset="1" stop-color="#90a4ae"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#33691e">"My Plate for the Day" – ICMR-NIN Dietary Guidelines 2024</text>
+  <g filter="url(#s)"><circle cx="245" cy="300" r="215" fill="url(#plate)"/></g>
+  <g stroke="#fff" stroke-width="4">
+    <path d="M245 300 L245 115 A185 185 0 0 1 375.8 430.8 Z" fill="#43a047"/>
+    <path d="M245 300 L375.8 430.8 A185 185 0 0 1 245 485 Z" fill="#e53935"/>
+    <path d="M245 300 L245 485 A185 185 0 0 1 93.5 406.1 Z" fill="#fbc02d"/>
+    <path d="M245 300 L93.5 406.1 A185 185 0 0 1 62.8 332.1 Z" fill="#8d6e63"/>
+    <path d="M245 300 L62.8 332.1 A185 185 0 0 1 245 115 Z" fill="#ffb300"/>
+  </g>
+  <g font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">
+    <text x="340" y="265">Vegetables</text><text x="340" y="285" font-size="12">incl. green leafy</text>
+    <text x="290" y="430">Fruits</text>
+    <text x="175" y="420" font-size="13">Pulses/ egg</text><text x="175" y="436" font-size="11">/ meat / fish</text>
+    <text x="95" y="372" font-size="10">Nuts</text>
+    <text x="150" y="230">Cereals &amp;</text><text x="150" y="250">millets</text>
+  </g>
+  <g filter="url(#s)"><rect x="410" y="420" width="70" height="95" rx="12" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/><text x="445" y="465" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Milk/</text><text x="445" y="482" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">curd</text></g>
+  <rect x="510" y="70" width="370" height="465" rx="16" fill="#fff" stroke="#aed581" stroke-width="2"/>
+  <g font-size="13.5" fill="#263238">
+    <text x="695" y="98" text-anchor="middle" font-weight="bold" fill="#33691e" font-size="15">Per day (≈ 2000 kcal adult)</text>
+    <text x="528" y="128"><tspan fill="#ff8f00" font-weight="bold">■</tspan> Cereals &amp; millets – ~250 g (raw)</text>
+    <text x="528" y="154"><tspan fill="#fbc02d" font-weight="bold">■</tspan> Pulses/ egg/ flesh foods – ~85 g</text>
+    <text x="528" y="180"><tspan fill="#64b5f6" font-weight="bold">■</tspan> Milk/ curd – ~300 ml</text>
+    <text x="528" y="206"><tspan fill="#43a047" font-weight="bold">■</tspan> Vegetables (incl. GLV) – ~400 g</text>
+    <text x="528" y="232"><tspan fill="#e53935" font-weight="bold">■</tspan> Fruits – ~100 g</text>
+    <text x="528" y="258"><tspan fill="#8d6e63" font-weight="bold">■</tspan> Nuts &amp; seeds – ~35 g</text>
+    <text x="528" y="284"><tspan fill="#ffd54f" font-weight="bold">■</tspan> Fats &amp; oils – ~27 g (visible)</text>
+    <text x="528" y="318" font-weight="bold" fill="#c62828">Limits</text>
+    <text x="528" y="342">• Salt &lt; 5 g/day (WHO) · Sugar &lt; 25 g</text>
+    <text x="528" y="366">• Avoid ultra-processed (HFSS) foods</text>
+    <text x="528" y="396" font-weight="bold" fill="#1565c0">Energy split (approx.)</text>
+    <text x="528" y="420">• Carbohydrate 45–65 % · Protein 10–15 %</text>
+    <text x="528" y="444">• Fat 20–30 % (≤ 10 % saturated)</text>
+    <text x="528" y="474" font-weight="bold" fill="#6a1b9a">Half plate = vegetables + fruits</text>
+    <text x="528" y="498">Whole grains, millets, 8 glasses water,</text>
+    <text x="528" y="518">physical activity daily</text>
+  </g>
+</svg>

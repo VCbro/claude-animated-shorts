@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbf8ff"/><stop offset="1" stop-color="#ede7f6"/></linearGradient>
+    <radialGradient id="skin" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffe0b2"/><stop offset=".6" stop-color="#d7a77a"/><stop offset="1" stop-color="#8d5a3b"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#4527a0">Protein-Energy Malnutrition &amp; SAM Screening</text>
+  <rect x="30" y="60" width="270" height="300" rx="16" fill="#fff" stroke="#ef9a9a" stroke-width="2"/>
+  <text x="165" y="86" text-anchor="middle" font-size="17" font-weight="bold" fill="#c62828">Marasmus</text>
+  <g filter="url(#s)" fill="url(#skin)">
+    <circle cx="165" cy="125" r="26"/><rect x="152" y="150" width="26" height="70" rx="12"/>
+    <rect x="130" y="155" width="12" height="60" rx="6"/><rect x="188" y="155" width="12" height="60" rx="6"/>
+    <rect x="152" y="218" width="10" height="55" rx="5"/><rect x="168" y="218" width="10" height="55" rx="5"/>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="45" y="296">• Severe energy deficit; &lt; 1 yr</text><text x="45" y="314">• "Skin &amp; bones", old-man face</text>
+    <text x="45" y="332">• NO oedema; alert, hungry</text><text x="45" y="350">• Wt-for-age &lt; 60 %</text>
+  </g>
+  <rect x="315" y="60" width="270" height="300" rx="16" fill="#fff" stroke="#90caf9" stroke-width="2"/>
+  <text x="450" y="86" text-anchor="middle" font-size="17" font-weight="bold" fill="#1565c0">Kwashiorkor</text>
+  <g filter="url(#s)" fill="url(#skin)">
+    <circle cx="450" cy="125" r="28"/><ellipse cx="450" cy="190" rx="34" ry="42"/>
+    <rect x="410" y="160" width="14" height="50" rx="7"/><rect x="476" y="160" width="14" height="50" rx="7"/>
+    <rect x="432" y="225" width="16" height="50" rx="8"/><rect x="452" y="225" width="16" height="50" rx="8"/>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="330" y="296">• Protein deficit; 1–4 yrs (weaning)</text><text x="330" y="314">• OEDEMA (pitting – feet), moon face</text>
+    <text x="330" y="332">• Flaky-paint skin, flag sign hair</text><text x="330" y="350">• Apathy, fatty liver, pot belly</text>
+  </g>
+  <rect x="600" y="60" width="275" height="300" rx="16" fill="#fff" stroke="#a5d6a7" stroke-width="2"/>
+  <text x="737" y="86" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">MUAC tape (6–59 months)</text>
+  <g filter="url(#s)">
+    <rect x="620" y="110" width="80" height="34" fill="#e53935"/><rect x="700" y="110" width="60" height="34" fill="#fdd835"/><rect x="760" y="110" width="95" height="34" fill="#43a047"/>
+  </g>
+  <g font-size="12" fill="#263238">
+    <text x="625" y="168"><tspan font-weight="bold" fill="#c62828">Red</tspan> &lt; 11.5 cm → SAM</text>
+    <text x="625" y="188"><tspan font-weight="bold" fill="#f9a825">Yellow</tspan> 11.5–12.5 cm → MAM</text>
+    <text x="625" y="208"><tspan font-weight="bold" fill="#2e7d32">Green</tspan> &gt; 12.5 cm → normal</text>
+    <text x="625" y="236" font-weight="bold" fill="#4527a0">SAM (WHO) – any one:</text>
+    <text x="625" y="256">• Weight-for-height &lt; −3 SD</text>
+    <text x="625" y="276">• MUAC &lt; 11.5 cm</text>
+    <text x="625" y="296">• Bilateral pitting oedema</text>
+    <text x="625" y="324">Complicated SAM → NRC</text>
+    <text x="625" y="344">Uncomplicated → community (CMAM)</text>
+  </g>
+  <rect x="30" y="375" width="845" height="160" rx="16" fill="#fff" stroke="#b39ddb" stroke-width="2"/>
+  <g font-size="13" fill="#263238">
+    <text x="450" y="400" text-anchor="middle" font-weight="bold" fill="#4527a0" font-size="15">WHO 10 steps of SAM management (NRC)</text>
+    <text x="45" y="426">1. Treat/ prevent hypoglycaemia  2. Hypothermia  3. Dehydration (ReSoMal)  4. Electrolytes (K, Mg)</text>
+    <text x="45" y="450">5. Infection (antibiotics)  6. Micronutrients (no iron initially)  7. Cautious feeding (F-75)</text>
+    <text x="45" y="474">8. Catch-up growth (F-100/ RUTF)  9. Sensory stimulation  10. Prepare for follow-up</text>
+    <text x="45" y="504"><tspan font-weight="bold">Indicators:</tspan> Stunting = low height-for-age (chronic) · Wasting = low weight-for-height (acute) ·</text>
+    <text x="45" y="524">Underweight = low weight-for-age · Gomez (wt-for-age %) · IAP · Waterlow classification</text>
+  </g>
+</svg>
