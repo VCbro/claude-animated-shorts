@@ -1,0 +1,274 @@
+{
+ "title": "Plane ki khidki gol kyun?",
+ "engine": "take",
+ "pace": 1.0,
+ "speed": 1.22,
+ "pause_keep": 0.07,
+ "voice_src": "voice/clean.wav",
+ "music": {
+  "bpm": 100,
+  "root": 45,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "src": [
+    [
+     0.0,
+     7.35
+    ]
+   ],
+   "tts": "",
+   "cap": "Plane ki khidki gol hoti hai. Kyunki chaukor khidki wale plane, hawa mein hi toot gaye the.",
+   "hl": [
+    "gol"
+   ],
+   "red": [
+    "toot"
+   ],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "src": [
+    [
+     7.42,
+     11.3
+    ]
+   ],
+   "tts": "",
+   "cap": "Saal 1954. Duniya ka pehla jet airliner, Comet.",
+   "hl": [
+    "1954.",
+    "Comet."
+   ],
+   "red": [],
+   "gap": 0.22
+  },
+  {
+   "id": "L3",
+   "src": [
+    [
+     11.7,
+     15.6
+    ]
+   ],
+   "tts": "",
+   "cap": "Ek ke baad ek, do Comet plane, hawa mein hi toot gaye.",
+   "hl": [
+    "Comet"
+   ],
+   "red": [
+    "toot"
+   ],
+   "gap": 0.1
+  },
+  {
+   "id": "L4",
+   "src": [
+    [
+     16.2,
+     17.6
+    ]
+   ],
+   "tts": "",
+   "cap": "56 log mare.",
+   "hl": [],
+   "red": [
+    "56"
+   ],
+   "gap": 0.1
+  },
+  {
+   "id": "L5",
+   "src": [
+    [
+     17.9,
+     20.7
+    ]
+   ],
+   "tts": "",
+   "cap": "Sabko laga, bomb hai. Par sach kuchh aur tha.",
+   "hl": [
+    "sach"
+   ],
+   "red": [
+    "bomb"
+   ],
+   "gap": 0.1
+  },
+  {
+   "id": "L6",
+   "src": [
+    [
+     21.7,
+     24.76
+    ]
+   ],
+   "tts": "",
+   "cap": "Ise kehte hain, metal fatigue.",
+   "hl": [
+    "metal",
+    "fatigue."
+   ],
+   "red": [],
+   "gap": 0.22
+  },
+  {
+   "id": "L7",
+   "src": [
+    [
+     32.22,
+     40.45
+    ]
+   ],
+   "tts": "",
+   "cap": "Plane jab upar jaata hai, andar hawa bhari jaati hai. Body gubbaare jaisi phoolti hai. Neeche aate hi, wapas sikud jaati hai.",
+   "hl": [
+    "gubbaare",
+    "phoolti"
+   ],
+   "red": [],
+   "gap": 0.1
+  },
+  {
+   "id": "L8",
+   "src": [
+    [
+     40.5,
+     47.1
+    ]
+   ],
+   "tts": "",
+   "cap": "Socho, har flight mein ek baar aisa hota hai. Hazaaron flight, hazaaron baar.",
+   "hl": [
+    "Hazaaron"
+   ],
+   "red": [],
+   "gap": 0.1
+  },
+  {
+   "id": "L9",
+   "src": [
+    [
+     47.68,
+     51.9
+    ]
+   ],
+   "tts": "",
+   "cap": "Aur ye saara zor, jaake ruka khidki ke tez kone pe.",
+   "hl": [
+    "zor,"
+   ],
+   "red": [
+    "kone"
+   ],
+   "gap": 0.22
+  },
+  {
+   "id": "L10",
+   "src": [
+    [
+     53.12,
+     55.6
+    ],
+    [
+     56.58,
+     58.0
+    ]
+   ],
+   "tts": "",
+   "cap": "Kone se ek chhota sa crack shuru hua. Aur poori body phat gayi.",
+   "hl": [],
+   "red": [
+    "crack",
+    "phat"
+   ],
+   "gap": 0.1
+  },
+  {
+   "id": "L11",
+   "src": [
+    [
+     58.45,
+     61.6
+    ]
+   ],
+   "tts": "",
+   "cap": "Toh engineers ne kya kiya? Kone hi hata diye.",
+   "hl": [
+    "hata"
+   ],
+   "red": [],
+   "gap": 0.22
+  },
+  {
+   "id": "L12",
+   "src": [
+    [
+     62.0,
+     65.6
+    ]
+   ],
+   "tts": "",
+   "cap": "Gol khidki pe zor, chaaron taraf barabar batt jaata hai.",
+   "hl": [
+    "Gol",
+    "barabar"
+   ],
+   "red": [],
+   "gap": 0.1
+  },
+  {
+   "id": "L13",
+   "src": [
+    [
+     66.1,
+     72.15
+    ]
+   ],
+   "tts": "",
+   "cap": "Isliye aaj har plane ki khidki, gol kono wali hoti hai.",
+   "hl": [
+    "gol"
+   ],
+   "red": [],
+   "gap": 0.1
+  },
+  {
+   "id": "L14",
+   "src": [
+    [
+     72.4,
+     78.4
+    ]
+   ],
+   "tts": "",
+   "cap": "Follow aur subscribe karo. Aur jo dost window seat ke liye ladta hai, usse ye bhej do.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "gap": 0.22
+  },
+  {
+   "id": "L15",
+   "src": [
+    [
+     78.9,
+     81.32
+    ]
+   ],
+   "tts": "",
+   "cap": "Tumhe ye pata tha? Haan ya na?",
+   "hl": [
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "gap": 0.1
+  }
+ ]
+}

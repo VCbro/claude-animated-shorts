@@ -8,3 +8,7 @@
 
 ## Beats
 Hook L1-L2 · story/stakes L3-L5 · name it L6 · inside look (pressurise/shrink) L7-L8 · scale L9 · the crack L10-L11 · the fix L12-L14 · mantra L15 · CTA L16-L17
+
+## As recorded (final)
+One take (voice/clean.wav, engine `take`, speed 1.22 to keep it under a minute: 81 s raw → 58 s).
+"Yaad rakho. Kona nahi, gol." was not in the take, so the mantra appears as pills over L13.

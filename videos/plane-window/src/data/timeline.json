@@ -1,0 +1,870 @@
+{
+ "fps": 30,
+ "duration": 58.141,
+ "frames": 1745,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 6.082,
+   "cap": "Plane ki khidki gol hoti hai. Kyunki chaukor khidki wale plane, hawa mein hi toot gaye the.",
+   "hl": [
+    "gol"
+   ],
+   "red": [
+    "toot"
+   ],
+   "words": [
+    {
+     "w": "Plane",
+     "t": 0.25
+    },
+    {
+     "w": "ki",
+     "t": 0.68
+    },
+    {
+     "w": "khidki",
+     "t": 0.89
+    },
+    {
+     "w": "gol",
+     "t": 1.34
+    },
+    {
+     "w": "hoti",
+     "t": 1.57
+    },
+    {
+     "w": "hai.",
+     "t": 1.97
+    },
+    {
+     "w": "Kyunki",
+     "t": 2.2
+    },
+    {
+     "w": "chaukor",
+     "t": 2.66
+    },
+    {
+     "w": "khidki",
+     "t": 3.13
+    },
+    {
+     "w": "wale",
+     "t": 3.59
+    },
+    {
+     "w": "plane,",
+     "t": 4.0
+    },
+    {
+     "w": "hawa",
+     "t": 4.43
+    },
+    {
+     "w": "mein",
+     "t": 4.88
+    },
+    {
+     "w": "hi",
+     "t": 5.13
+    },
+    {
+     "w": "toot",
+     "t": 5.33
+    },
+    {
+     "w": "gaye",
+     "t": 5.58
+    },
+    {
+     "w": "the.",
+     "t": 5.83
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 6.302,
+   "t1": 9.399,
+   "cap": "Saal 1954. Duniya ka pehla jet airliner, Comet.",
+   "hl": [
+    "1954.",
+    "Comet."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Saal",
+     "t": 6.322
+    },
+    {
+     "w": "1954.",
+     "t": 6.552
+    },
+    {
+     "w": "Duniya",
+     "t": 7.062
+    },
+    {
+     "w": "ka",
+     "t": 7.472
+    },
+    {
+     "w": "pehla",
+     "t": 7.662
+    },
+    {
+     "w": "jet",
+     "t": 8.052
+    },
+    {
+     "w": "airliner,",
+     "t": 8.262
+    },
+    {
+     "w": "Comet.",
+     "t": 8.862
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 9.499,
+   "t1": 12.625,
+   "cap": "Ek ke baad ek, do Comet plane, hawa mein hi toot gaye.",
+   "hl": [
+    "Comet"
+   ],
+   "red": [
+    "toot"
+   ],
+   "words": [
+    {
+     "w": "Ek",
+     "t": 9.539
+    },
+    {
+     "w": "ke",
+     "t": 9.719
+    },
+    {
+     "w": "baad",
+     "t": 9.889
+    },
+    {
+     "w": "ek,",
+     "t": 10.109
+    },
+    {
+     "w": "do",
+     "t": 10.279
+    },
+    {
+     "w": "Comet",
+     "t": 10.509
+    },
+    {
+     "w": "plane,",
+     "t": 10.879
+    },
+    {
+     "w": "hawa",
+     "t": 11.249
+    },
+    {
+     "w": "mein",
+     "t": 11.699
+    },
+    {
+     "w": "hi",
+     "t": 11.909
+    },
+    {
+     "w": "toot",
+     "t": 12.089
+    },
+    {
+     "w": "gaye.",
+     "t": 12.339
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 12.725,
+   "t1": 13.968,
+   "cap": "56 log mare.",
+   "hl": [],
+   "red": [
+    "56"
+   ],
+   "words": [
+    {
+     "w": "56",
+     "t": 12.755
+    },
+    {
+     "w": "log",
+     "t": 13.155
+    },
+    {
+     "w": "mare.",
+     "t": 13.445
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 14.068,
+   "t1": 16.352,
+   "cap": "Sabko laga, bomb hai. Par sach kuchh aur tha.",
+   "hl": [
+    "sach"
+   ],
+   "red": [
+    "bomb"
+   ],
+   "words": [
+    {
+     "w": "Sabko",
+     "t": 14.098
+    },
+    {
+     "w": "laga,",
+     "t": 14.498
+    },
+    {
+     "w": "bomb",
+     "t": 14.858
+    },
+    {
+     "w": "hai.",
+     "t": 15.078
+    },
+    {
+     "w": "Par",
+     "t": 15.278
+    },
+    {
+     "w": "sach",
+     "t": 15.478
+    },
+    {
+     "w": "kuchh",
+     "t": 15.698
+    },
+    {
+     "w": "aur",
+     "t": 15.938
+    },
+    {
+     "w": "tha.",
+     "t": 16.128
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 16.572,
+   "t1": 19.163,
+   "cap": "Ise kehte hain, metal fatigue.",
+   "hl": [
+    "metal",
+    "fatigue."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Ise",
+     "t": 16.582
+    },
+    {
+     "w": "kehte",
+     "t": 17.042
+    },
+    {
+     "w": "hain,",
+     "t": 17.572
+    },
+    {
+     "w": "metal",
+     "t": 17.872
+    },
+    {
+     "w": "fatigue.",
+     "t": 18.392
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 19.263,
+   "t1": 25.847,
+   "cap": "Plane jab upar jaata hai, andar hawa bhari jaati hai. Body gubbaare jaisi phoolti hai. Neeche aate hi, wapas sikud jaati hai.",
+   "hl": [
+    "gubbaare",
+    "phoolti"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Plane",
+     "t": 19.313
+    },
+    {
+     "w": "jab",
+     "t": 19.643
+    },
+    {
+     "w": "upar",
+     "t": 19.823
+    },
+    {
+     "w": "jaata",
+     "t": 20.133
+    },
+    {
+     "w": "hai,",
+     "t": 20.473
+    },
+    {
+     "w": "andar",
+     "t": 20.643
+    },
+    {
+     "w": "hawa",
+     "t": 20.983
+    },
+    {
+     "w": "bhari",
+     "t": 21.293
+    },
+    {
+     "w": "jaati",
+     "t": 21.633
+    },
+    {
+     "w": "hai.",
+     "t": 21.963
+    },
+    {
+     "w": "Body",
+     "t": 22.143
+    },
+    {
+     "w": "gubbaare",
+     "t": 22.453
+    },
+    {
+     "w": "jaisi",
+     "t": 22.963
+    },
+    {
+     "w": "phoolti",
+     "t": 23.293
+    },
+    {
+     "w": "hai.",
+     "t": 23.663
+    },
+    {
+     "w": "Neeche",
+     "t": 23.843
+    },
+    {
+     "w": "aate",
+     "t": 24.193
+    },
+    {
+     "w": "hi,",
+     "t": 24.513
+    },
+    {
+     "w": "wapas",
+     "t": 24.663
+    },
+    {
+     "w": "sikud",
+     "t": 25.003
+    },
+    {
+     "w": "jaati",
+     "t": 25.333
+    },
+    {
+     "w": "hai.",
+     "t": 25.663
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 25.947,
+   "t1": 31.233,
+   "cap": "Socho, har flight mein ek baar aisa hota hai. Hazaaron flight, hazaaron baar.",
+   "hl": [
+    "Hazaaron"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Socho,",
+     "t": 25.947
+    },
+    {
+     "w": "har",
+     "t": 26.447
+    },
+    {
+     "w": "flight",
+     "t": 26.707
+    },
+    {
+     "w": "mein",
+     "t": 27.047
+    },
+    {
+     "w": "ek",
+     "t": 27.337
+    },
+    {
+     "w": "baar",
+     "t": 27.577
+    },
+    {
+     "w": "aisa",
+     "t": 27.867
+    },
+    {
+     "w": "hota",
+     "t": 28.337
+    },
+    {
+     "w": "hai.",
+     "t": 28.807
+    },
+    {
+     "w": "Hazaaron",
+     "t": 29.067
+    },
+    {
+     "w": "flight,",
+     "t": 29.827
+    },
+    {
+     "w": "hazaaron",
+     "t": 30.167
+    },
+    {
+     "w": "baar.",
+     "t": 30.927
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 31.453,
+   "t1": 34.998,
+   "cap": "Aur ye saara zor, jaake ruka khidki ke tez kone pe.",
+   "hl": [
+    "zor,"
+   ],
+   "red": [
+    "kone"
+   ],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 31.473
+    },
+    {
+     "w": "ye",
+     "t": 31.703
+    },
+    {
+     "w": "saara",
+     "t": 31.913
+    },
+    {
+     "w": "zor,",
+     "t": 32.363
+    },
+    {
+     "w": "jaake",
+     "t": 32.593
+    },
+    {
+     "w": "ruka",
+     "t": 33.033
+    },
+    {
+     "w": "khidki",
+     "t": 33.453
+    },
+    {
+     "w": "ke",
+     "t": 33.923
+    },
+    {
+     "w": "tez",
+     "t": 34.133
+    },
+    {
+     "w": "kone",
+     "t": 34.363
+    },
+    {
+     "w": "pe.",
+     "t": 34.783
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 35.098,
+   "t1": 38.529,
+   "cap": "Kone se ek chhota sa crack shuru hua. Aur poori body phat gayi.",
+   "hl": [],
+   "red": [
+    "crack",
+    "phat"
+   ],
+   "words": [
+    {
+     "w": "Kone",
+     "t": 35.148
+    },
+    {
+     "w": "se",
+     "t": 35.458
+    },
+    {
+     "w": "ek",
+     "t": 35.618
+    },
+    {
+     "w": "chhota",
+     "t": 35.768
+    },
+    {
+     "w": "sa",
+     "t": 36.248
+    },
+    {
+     "w": "crack",
+     "t": 36.518
+    },
+    {
+     "w": "shuru",
+     "t": 36.728
+    },
+    {
+     "w": "hua.",
+     "t": 37.058
+    },
+    {
+     "w": "Aur",
+     "t": 37.308
+    },
+    {
+     "w": "poori",
+     "t": 37.488
+    },
+    {
+     "w": "body",
+     "t": 37.818
+    },
+    {
+     "w": "phat",
+     "t": 38.128
+    },
+    {
+     "w": "gayi.",
+     "t": 38.318
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 38.749,
+   "t1": 41.426,
+   "cap": "Toh engineers ne kya kiya? Kone hi hata diye.",
+   "hl": [
+    "hata"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Toh",
+     "t": 38.769
+    },
+    {
+     "w": "engineers",
+     "t": 38.969
+    },
+    {
+     "w": "ne",
+     "t": 39.529
+    },
+    {
+     "w": "kya",
+     "t": 39.699
+    },
+    {
+     "w": "kiya?",
+     "t": 39.889
+    },
+    {
+     "w": "Kone",
+     "t": 40.179
+    },
+    {
+     "w": "hi",
+     "t": 40.659
+    },
+    {
+     "w": "hata",
+     "t": 40.829
+    },
+    {
+     "w": "diye.",
+     "t": 41.159
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "t0": 41.526,
+   "t1": 44.481,
+   "cap": "Gol khidki pe zor, chaaron taraf barabar batt jaata hai.",
+   "hl": [
+    "Gol",
+    "barabar"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Gol",
+     "t": 41.556
+    },
+    {
+     "w": "khidki",
+     "t": 41.766
+    },
+    {
+     "w": "pe",
+     "t": 42.136
+    },
+    {
+     "w": "zor,",
+     "t": 42.286
+    },
+    {
+     "w": "chaaron",
+     "t": 42.496
+    },
+    {
+     "w": "taraf",
+     "t": 42.966
+    },
+    {
+     "w": "barabar",
+     "t": 43.296
+    },
+    {
+     "w": "batt",
+     "t": 43.776
+    },
+    {
+     "w": "jaata",
+     "t": 43.966
+    },
+    {
+     "w": "hai.",
+     "t": 44.296
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "t0": 44.581,
+   "t1": 49.375,
+   "cap": "Isliye aaj har plane ki khidki, gol kono wali hoti hai.",
+   "hl": [
+    "gol"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 44.591
+    },
+    {
+     "w": "aaj",
+     "t": 45.181
+    },
+    {
+     "w": "har",
+     "t": 45.481
+    },
+    {
+     "w": "plane",
+     "t": 45.771
+    },
+    {
+     "w": "ki",
+     "t": 46.331
+    },
+    {
+     "w": "khidki,",
+     "t": 46.601
+    },
+    {
+     "w": "gol",
+     "t": 47.191
+    },
+    {
+     "w": "kono",
+     "t": 47.481
+    },
+    {
+     "w": "wali",
+     "t": 48.011
+    },
+    {
+     "w": "hoti",
+     "t": 48.541
+    },
+    {
+     "w": "hai.",
+     "t": 49.071
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "t0": 49.595,
+   "t1": 54.49,
+   "cap": "Follow aur subscribe karo. Aur jo dost window seat ke liye ladta hai, usse ye bhej do.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 49.605
+    },
+    {
+     "w": "aur",
+     "t": 50.015
+    },
+    {
+     "w": "subscribe",
+     "t": 50.225
+    },
+    {
+     "w": "karo.",
+     "t": 50.845
+    },
+    {
+     "w": "Aur",
+     "t": 51.225
+    },
+    {
+     "w": "jo",
+     "t": 51.425
+    },
+    {
+     "w": "dost",
+     "t": 51.615
+    },
+    {
+     "w": "window",
+     "t": 51.845
+    },
+    {
+     "w": "seat",
+     "t": 52.255
+    },
+    {
+     "w": "ke",
+     "t": 52.485
+    },
+    {
+     "w": "liye",
+     "t": 52.675
+    },
+    {
+     "w": "ladta",
+     "t": 52.905
+    },
+    {
+     "w": "hai,",
+     "t": 53.295
+    },
+    {
+     "w": "usse",
+     "t": 53.505
+    },
+    {
+     "w": "ye",
+     "t": 53.875
+    },
+    {
+     "w": "bhej",
+     "t": 54.065
+    },
+    {
+     "w": "do.",
+     "t": 54.285
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "t0": 54.59,
+   "t1": 56.541,
+   "cap": "Tumhe ye pata tha? Haan ya na?",
+   "hl": [
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Tumhe",
+     "t": 54.61
+    },
+    {
+     "w": "ye",
+     "t": 55.04
+    },
+    {
+     "w": "pata",
+     "t": 55.25
+    },
+    {
+     "w": "tha?",
+     "t": 55.65
+    },
+    {
+     "w": "Haan",
+     "t": 55.88
+    },
+    {
+     "w": "ya",
+     "t": 56.13
+    },
+    {
+     "w": "na?",
+     "t": 56.34
+    }
+   ]
+  }
+ ]
+}
