@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <radialGradient id="i" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#b39ddb"/><stop offset="1" stop-color="#4527a0"/></radialGradient>
+    <linearGradient id="ice" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e3f2fd"/><stop offset=".3" stop-color="#90caf9"/><stop offset="1" stop-color="#1565c0"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="460" fill="#fbfaff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#4527a0">Freud's Mind Model, Defence Mechanisms &amp; Mental Status Examination</text>
+  <!-- iceberg -->
+  <rect x="20" y="150" width="260" height="290" fill="#e1f5fe"/>
+  <path d="M20 150 H280" stroke="#0277bd" stroke-width="2" stroke-dasharray="6 4"/>
+  <g filter="url(#s)"><path d="M150 60 L205 150 L235 260 L210 400 L90 400 L65 260 L95 150 Z" fill="url(#ice)"/></g>
+  <g font-weight="bold" text-anchor="middle" fill="#0d47a1" font-size="12">
+    <text x="150" y="120">CONSCIOUS</text><text x="150" y="200" fill="#fff">PRE-CONSCIOUS</text><text x="150" y="320" fill="#fff">UNCONSCIOUS</text>
+  </g>
+  <g font-size="10.5" fill="#37474f">
+    <text x="20" y="75">Ego – reality</text><text x="20" y="90">principle</text>
+    <text x="150" y="345" fill="#fff" text-anchor="middle">Id – pleasure principle</text>
+    <text x="30" y="430">Superego – conscience</text>
+  </g>
+  <!-- defence mechanisms -->
+  <g filter="url(#s)"><rect x="295" y="50" width="300" height="395" rx="14" fill="#fff" stroke="#d1c4e9" stroke-width="2"/></g>
+  <g font-size="11.2">
+    <text x="310" y="74" font-weight="bold" font-size="14" fill="#4527a0">Defence Mechanisms</text>
+    <text x="310" y="98"><tspan font-weight="bold">Denial</tspan> – refuses to accept reality</text>
+    <text x="310" y="118"><tspan font-weight="bold">Projection</tspan> – own feelings → others</text>
+    <text x="310" y="138"><tspan font-weight="bold">Rationalisation</tspan> – logical excuse</text>
+    <text x="310" y="158"><tspan font-weight="bold">Repression</tspan> – UNconscious forgetting</text>
+    <text x="310" y="178"><tspan font-weight="bold">Suppression</tspan> – CONscious forgetting</text>
+    <text x="310" y="198"><tspan font-weight="bold">Displacement</tspan> – anger to safer target</text>
+    <text x="310" y="218"><tspan font-weight="bold">Regression</tspan> – earlier childish behaviour</text>
+    <text x="310" y="238"><tspan font-weight="bold">Sublimation</tspan> – into acceptable/</text>
+    <text x="320" y="254">creative outlet (most mature)</text>
+    <text x="310" y="274"><tspan font-weight="bold">Reaction formation</tspan> – opposite</text>
+    <text x="320" y="290">behaviour shown</text>
+    <text x="310" y="310"><tspan font-weight="bold">Undoing</tspan> – act to cancel guilt</text>
+    <text x="310" y="330"><tspan font-weight="bold">Compensation</tspan> – excel in other area</text>
+    <text x="310" y="350"><tspan font-weight="bold">Identification</tspan> – copies admired person</text>
+    <text x="310" y="370"><tspan font-weight="bold">Intellectualisation</tspan> – facts, no feelings</text>
+    <text x="310" y="390"><tspan font-weight="bold">Conversion</tspan> – conflict → physical sx</text>
+    <text x="310" y="410"><tspan font-weight="bold">Dissociation</tspan> – split from awareness</text>
+    <text x="310" y="430"><tspan font-weight="bold">Fantasy</tspan> – day-dreaming</text>
+  </g>
+  <!-- MSE -->
+  <g filter="url(#s)"><rect x="610" y="50" width="250" height="395" rx="14" fill="#fff" stroke="#b39ddb" stroke-width="2"/></g>
+  <g font-size="11.5">
+    <text x="625" y="74" font-weight="bold" font-size="14" fill="#4527a0">MSE components</text>
+    <g filter="url(#s)">
+      <circle cx="635" cy="100" r="9" fill="url(#i)"/><circle cx="635" cy="135" r="9" fill="url(#i)"/><circle cx="635" cy="170" r="9" fill="url(#i)"/><circle cx="635" cy="205" r="9" fill="url(#i)"/>
+      <circle cx="635" cy="240" r="9" fill="url(#i)"/><circle cx="635" cy="275" r="9" fill="url(#i)"/><circle cx="635" cy="310" r="9" fill="url(#i)"/><circle cx="635" cy="345" r="9" fill="url(#i)"/>
+    </g>
+    <text x="652" y="104"><tspan font-weight="bold">Appearance &amp; behaviour</tspan></text>
+    <text x="652" y="139"><tspan font-weight="bold">Speech</tspan> (rate, tone, volume)</text>
+    <text x="652" y="174"><tspan font-weight="bold">Mood</tspan> (subjective) &amp;</text>
+    <text x="652" y="190"><tspan font-weight="bold">Affect</tspan> (objective)</text>
+    <text x="652" y="209"><tspan font-weight="bold">Thought</tspan> – stream, form,</text>
+    <text x="652" y="225">content (delusions)</text>
+    <text x="652" y="244"><tspan font-weight="bold">Perception</tspan> (hallucinations)</text>
+    <text x="652" y="279"><tspan font-weight="bold">Cognition</tspan> – orientation,</text>
+    <text x="652" y="295">memory, attention</text>
+    <text x="652" y="314"><tspan font-weight="bold">Judgement</tspan> &amp; abstraction</text>
+    <text x="652" y="349"><tspan font-weight="bold">Insight</tspan> (grades 1–6)</text>
+    <text x="625" y="385" fill="#455a64" font-size="10.5">Orientation – time is lost first,</text>
+    <text x="625" y="401" fill="#455a64" font-size="10.5">then place, person last</text>
+    <text x="625" y="425" fill="#455a64" font-size="10.5">MMSE score /30 – cognition</text>
+  </g>
+</svg>

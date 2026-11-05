@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="DejaVu Sans, Arial" font-size="12">
+  <defs>
+    <linearGradient id="ar" x1="0" x2="1"><stop offset="0" stop-color="#ffcc80"/><stop offset=".5" stop-color="#ff7043"/><stop offset="1" stop-color="#b71c1c"/></linearGradient>
+    <radialGradient id="c1" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ffb74d"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <radialGradient id="c2" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ef5350"/><stop offset="1" stop-color="#8e0000"/></radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="880" height="430" fill="#fffaf7"/>
+  <text x="440" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#bf360c">Antipsychotic Side Effects – Extrapyramidal Symptoms Timeline</text>
+  <g filter="url(#s)"><path d="M30 70 H820 L850 90 L820 110 H30 Z" fill="url(#ar)"/></g>
+  <g fill="#fff" font-weight="bold" font-size="12" text-anchor="middle">
+    <text x="120" y="95">Hours – 5 days</text><text x="320" y="95">Days – weeks</text><text x="520" y="95">Weeks – 3 months</text><text x="730" y="95">Months – years</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="20" y="125" width="195" height="215" rx="14" fill="#fff3e0" stroke="#ffb74d" stroke-width="2"/>
+    <rect x="225" y="125" width="195" height="215" rx="14" fill="#fff3e0" stroke="#ffb74d" stroke-width="2"/>
+    <rect x="430" y="125" width="195" height="215" rx="14" fill="#fff3e0" stroke="#ffb74d" stroke-width="2"/>
+    <rect x="635" y="125" width="225" height="215" rx="14" fill="#ffebee" stroke="#ef5350" stroke-width="2"/>
+  </g>
+  <g font-size="11.5">
+    <text x="117" y="150" text-anchor="middle" font-weight="bold" font-size="14" fill="#e65100">Acute Dystonia</text>
+    <text x="32" y="174">Sudden muscle spasm:</text>
+    <text x="32" y="192">torticollis, oculogyric</text>
+    <text x="32" y="210">crisis, trismus,</text>
+    <text x="32" y="228">opisthotonus</text>
+    <text x="32" y="252">Young males, high-</text>
+    <text x="32" y="270">potency (haloperidol)</text>
+    <text x="32" y="296" font-weight="bold" fill="#bf360c">Rx: IM promethazine/</text>
+    <text x="32" y="314" font-weight="bold" fill="#bf360c">benztropine</text>
+
+    <text x="322" y="150" text-anchor="middle" font-weight="bold" font-size="14" fill="#e65100">Akathisia</text>
+    <text x="237" y="174">Subjective restlessness,</text>
+    <text x="237" y="192">can't sit still, pacing,</text>
+    <text x="237" y="210">shifting legs</text>
+    <text x="237" y="234">Often mistaken for</text>
+    <text x="237" y="252">agitation/ worsening</text>
+    <text x="237" y="270">psychosis</text>
+    <text x="237" y="296" font-weight="bold" fill="#bf360c">Rx: propranolol,</text>
+    <text x="237" y="314" font-weight="bold" fill="#bf360c">reduce dose, BZD</text>
+
+    <text x="527" y="150" text-anchor="middle" font-weight="bold" font-size="14" fill="#e65100">Parkinsonism</text>
+    <text x="442" y="174">Tremor (pill-rolling),</text>
+    <text x="442" y="192">rigidity (cogwheel),</text>
+    <text x="442" y="210">bradykinesia, mask</text>
+    <text x="442" y="228">face, shuffling gait,</text>
+    <text x="442" y="246">drooling</text>
+    <text x="442" y="296" font-weight="bold" fill="#bf360c">Rx: trihexyphenidyl</text>
+    <text x="442" y="314" font-weight="bold" fill="#bf360c">(Pacitane), benztropine</text>
+
+    <text x="747" y="150" text-anchor="middle" font-weight="bold" font-size="14" fill="#b71c1c">Tardive Dyskinesia</text>
+    <text x="647" y="174">Involuntary orofacial</text>
+    <text x="647" y="192">movements – lip smacking,</text>
+    <text x="647" y="210">tongue protrusion,</text>
+    <text x="647" y="228">chewing; choreoathetoid</text>
+    <text x="647" y="252">Often IRREVERSIBLE;</text>
+    <text x="647" y="270">elderly women; AIMS scale</text>
+    <text x="647" y="296" font-weight="bold" fill="#b71c1c">Rx: stop/ switch (clozapine),</text>
+    <text x="647" y="314" font-weight="bold" fill="#b71c1c">tetrabenazine</text>
+  </g>
+  <g filter="url(#s)"><rect x="20" y="355" width="840" height="65" rx="12" fill="#b71c1c"/></g>
+  <g fill="#fff" font-size="12.5">
+    <text x="35" y="380"><tspan font-weight="bold">NMS (Neuroleptic Malignant Syndrome) – emergency:</tspan> high fever, lead-pipe rigidity, autonomic instability,</text>
+    <text x="35" y="402">altered consciousness, ↑ CPK → <tspan font-weight="bold">stop antipsychotic, cooling, IV fluids, dantrolene / bromocriptine</tspan></text>
+  </g>
+</svg>
