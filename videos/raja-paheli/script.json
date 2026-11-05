@@ -1,0 +1,136 @@
+{
+ "title": "Raja ki paheli",
+ "engine": "kokoro",
+ "pace": 1.05,
+ "music": {
+  "bpm": 92,
+  "root": 43,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "शेर का पिंजरा, या अंधा कुआं। आज तुम्हें इनमें से एक मिलेगा।",
+   "cap": "Sher ka pinjra, ya andha kuan. Aaj tumhe inme se ek milega.",
+   "hl": [
+    "pinjra,",
+    "kuan."
+   ],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "तुम राजा के क़ैदी हो।",
+   "cap": "Tum raja ke qaidi ho.",
+   "hl": [
+    "qaidi"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L3",
+   "tts": "राजा कहता है, सिर्फ़ एक लाइन बोलो।",
+   "cap": "Raja kehta hai, sirf ek line bolo.",
+   "hl": [
+    "ek",
+    "line"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L4",
+   "tts": "लाइन सच निकली, तो शेर का पिंजरा।",
+   "cap": "Line sach nikli, toh sher ka pinjra.",
+   "hl": [
+    "sach"
+   ],
+   "red": [
+    "pinjra."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L5",
+   "tts": "झूठ निकली, तो अंधा कुआं।",
+   "cap": "Jhooth nikli, toh andha kuan.",
+   "hl": [
+    "Jhooth"
+   ],
+   "red": [
+    "kuan."
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L6",
+   "tts": "और राजा अपनी बात से, कभी नहीं पलटता।",
+   "cap": "Aur raja apni baat se, kabhi nahi palatta.",
+   "hl": [],
+   "red": [
+    "nahi"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L7",
+   "tts": "सच बोलो, तो मौत। झूठ बोलो, तो भी मौत।",
+   "cap": "Sach bolo, toh maut. Jhooth bolo, toh bhi maut.",
+   "hl": [
+    "Sach",
+    "Jhooth"
+   ],
+   "red": [
+    "maut.",
+    "maut."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L8",
+   "tts": "पर एक लाइन ऐसी है, जिसे सुनकर राजा को तुम्हें छोड़ना ही पड़ेगा।",
+   "cap": "Par ek line aisi hai, jise sunkar raja ko tumhe chhodna hi padega.",
+   "hl": [
+    "chhodna"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L9",
+   "tts": "सिर्फ़ तेज़ दिमाग़ वाले ही इसे पकड़ पाएंगे।",
+   "cap": "Sirf tez dimaag wale hi ise pakad paayenge.",
+   "hl": [
+    "tez",
+    "dimaag"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L10",
+   "tts": "वो लाइन क्या है? कमेंट में लिखो।",
+   "cap": "Wo line kya hai? Comment mein likho.",
+   "hl": [
+    "Comment"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L11",
+   "tts": "जवाब, पार्ट दो में। फ़ॉलो और सब्सक्राइब करो, ताकि छूट न जाए।",
+   "cap": "Jawab, part 2 mein. Follow aur subscribe karo, taaki chhoot na jaaye.",
+   "hl": [
+    "part",
+    "2",
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "gap": 0.3
+  }
+ ]
+}

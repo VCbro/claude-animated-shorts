@@ -1,0 +1,525 @@
+{
+ "fps": 30,
+ "duration": 34.889,
+ "frames": 1047,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 4.273,
+   "cap": "Sher ka pinjra, ya andha kuan. Aaj tumhe inme se ek milega.",
+   "hl": [
+    "pinjra,",
+    "kuan."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Sher",
+     "t": 0.25
+    },
+    {
+     "w": "ka",
+     "t": 0.51
+    },
+    {
+     "w": "pinjra,",
+     "t": 0.721
+    },
+    {
+     "w": "ya",
+     "t": 1.193
+    },
+    {
+     "w": "andha",
+     "t": 1.404
+    },
+    {
+     "w": "kuan.",
+     "t": 1.851
+    },
+    {
+     "w": "Aaj",
+     "t": 2.111
+    },
+    {
+     "w": "tumhe",
+     "t": 2.347
+    },
+    {
+     "w": "inme",
+     "t": 2.794
+    },
+    {
+     "w": "se",
+     "t": 3.216
+    },
+    {
+     "w": "ek",
+     "t": 3.428
+    },
+    {
+     "w": "milega.",
+     "t": 3.639
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 4.573,
+   "t1": 6.033,
+   "cap": "Tum raja ke qaidi ho.",
+   "hl": [
+    "qaidi"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Tum",
+     "t": 4.573
+    },
+    {
+     "w": "raja",
+     "t": 4.798
+    },
+    {
+     "w": "ke",
+     "t": 5.202
+    },
+    {
+     "w": "qaidi",
+     "t": 5.404
+    },
+    {
+     "w": "ho.",
+     "t": 5.831
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 6.173,
+   "t1": 8.495,
+   "cap": "Raja kehta hai, sirf ek line bolo.",
+   "hl": [
+    "ek",
+    "line"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Raja",
+     "t": 6.173
+    },
+    {
+     "w": "kehta",
+     "t": 6.578
+    },
+    {
+     "w": "hai,",
+     "t": 7.006
+    },
+    {
+     "w": "sirf",
+     "t": 7.232
+    },
+    {
+     "w": "ek",
+     "t": 7.482
+    },
+    {
+     "w": "line",
+     "t": 7.684
+    },
+    {
+     "w": "bolo.",
+     "t": 8.09
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 8.795,
+   "t1": 11.043,
+   "cap": "Line sach nikli, toh sher ka pinjra.",
+   "hl": [
+    "sach"
+   ],
+   "red": [
+    "pinjra."
+   ],
+   "words": [
+    {
+     "w": "Line",
+     "t": 8.795
+    },
+    {
+     "w": "sach",
+     "t": 9.207
+    },
+    {
+     "w": "nikli,",
+     "t": 9.46
+    },
+    {
+     "w": "toh",
+     "t": 9.895
+    },
+    {
+     "w": "sher",
+     "t": 10.125
+    },
+    {
+     "w": "ka",
+     "t": 10.378
+    },
+    {
+     "w": "pinjra.",
+     "t": 10.584
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 11.183,
+   "t1": 12.911,
+   "cap": "Jhooth nikli, toh andha kuan.",
+   "hl": [
+    "Jhooth"
+   ],
+   "red": [
+    "kuan."
+   ],
+   "words": [
+    {
+     "w": "Jhooth",
+     "t": 11.183
+    },
+    {
+     "w": "nikli,",
+     "t": 11.497
+    },
+    {
+     "w": "toh",
+     "t": 11.952
+    },
+    {
+     "w": "andha",
+     "t": 12.192
+    },
+    {
+     "w": "kuan.",
+     "t": 12.647
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 13.051,
+   "t1": 15.768,
+   "cap": "Aur raja apni baat se, kabhi nahi palatta.",
+   "hl": [],
+   "red": [
+    "nahi"
+   ],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 13.051
+    },
+    {
+     "w": "raja",
+     "t": 13.259
+    },
+    {
+     "w": "apni",
+     "t": 13.632
+    },
+    {
+     "w": "baat",
+     "t": 14.005
+    },
+    {
+     "w": "se,",
+     "t": 14.234
+    },
+    {
+     "w": "kabhi",
+     "t": 14.421
+    },
+    {
+     "w": "nahi",
+     "t": 14.815
+    },
+    {
+     "w": "palatta.",
+     "t": 15.188
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 16.068,
+   "t1": 18.818,
+   "cap": "Sach bolo, toh maut. Jhooth bolo, toh bhi maut.",
+   "hl": [
+    "Sach",
+    "Jhooth"
+   ],
+   "red": [
+    "maut.",
+    "maut."
+   ],
+   "words": [
+    {
+     "w": "Sach",
+     "t": 16.068
+    },
+    {
+     "w": "bolo,",
+     "t": 16.339
+    },
+    {
+     "w": "toh",
+     "t": 16.779
+    },
+    {
+     "w": "maut.",
+     "t": 17.025
+    },
+    {
+     "w": "Jhooth",
+     "t": 17.295
+    },
+    {
+     "w": "bolo,",
+     "t": 17.617
+    },
+    {
+     "w": "toh",
+     "t": 18.057
+    },
+    {
+     "w": "bhi",
+     "t": 18.302
+    },
+    {
+     "w": "maut.",
+     "t": 18.548
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 19.118,
+   "t1": 23.647,
+   "cap": "Par ek line aisi hai, jise sunkar raja ko tumhe chhodna hi padega.",
+   "hl": [
+    "chhodna"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Par",
+     "t": 19.118
+    },
+    {
+     "w": "ek",
+     "t": 19.339
+    },
+    {
+     "w": "line",
+     "t": 19.536
+    },
+    {
+     "w": "aisi",
+     "t": 19.931
+    },
+    {
+     "w": "hai,",
+     "t": 20.327
+    },
+    {
+     "w": "jise",
+     "t": 20.547
+    },
+    {
+     "w": "sunkar",
+     "t": 20.942
+    },
+    {
+     "w": "raja",
+     "t": 21.383
+    },
+    {
+     "w": "ko",
+     "t": 21.778
+    },
+    {
+     "w": "tumhe",
+     "t": 21.975
+    },
+    {
+     "w": "chhodna",
+     "t": 22.393
+    },
+    {
+     "w": "hi",
+     "t": 22.857
+    },
+    {
+     "w": "padega.",
+     "t": 23.054
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 23.787,
+   "t1": 26.749,
+   "cap": "Sirf tez dimaag wale hi ise pakad paayenge.",
+   "hl": [
+    "tez",
+    "dimaag"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Sirf",
+     "t": 23.787
+    },
+    {
+     "w": "tez",
+     "t": 24.047
+    },
+    {
+     "w": "dimaag",
+     "t": 24.282
+    },
+    {
+     "w": "wale",
+     "t": 24.753
+    },
+    {
+     "w": "hi",
+     "t": 25.175
+    },
+    {
+     "w": "ise",
+     "t": 25.386
+    },
+    {
+     "w": "pakad",
+     "t": 25.784
+    },
+    {
+     "w": "paayenge.",
+     "t": 26.23
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 27.049,
+   "t1": 28.981,
+   "cap": "Wo line kya hai? Comment mein likho.",
+   "hl": [
+    "Comment"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Wo",
+     "t": 27.049
+    },
+    {
+     "w": "line",
+     "t": 27.226
+    },
+    {
+     "w": "kya",
+     "t": 27.58
+    },
+    {
+     "w": "hai?",
+     "t": 27.777
+    },
+    {
+     "w": "Comment",
+     "t": 27.974
+    },
+    {
+     "w": "mein",
+     "t": 28.389
+    },
+    {
+     "w": "likho.",
+     "t": 28.607
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 29.281,
+   "t1": 33.289,
+   "cap": "Jawab, part 2 mein. Follow aur subscribe karo, taaki chhoot na jaaye.",
+   "hl": [
+    "part",
+    "2",
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Jawab,",
+     "t": 29.281
+    },
+    {
+     "w": "part",
+     "t": 29.707
+    },
+    {
+     "w": "2",
+     "t": 29.956
+    },
+    {
+     "w": "mein.",
+     "t": 30.095
+    },
+    {
+     "w": "Follow",
+     "t": 30.343
+    },
+    {
+     "w": "aur",
+     "t": 30.793
+    },
+    {
+     "w": "subscribe",
+     "t": 31.018
+    },
+    {
+     "w": "karo,",
+     "t": 31.692
+    },
+    {
+     "w": "taaki",
+     "t": 32.095
+    },
+    {
+     "w": "chhoot",
+     "t": 32.522
+    },
+    {
+     "w": "na",
+     "t": 32.816
+    },
+    {
+     "w": "jaaye.",
+     "t": 33.018
+    }
+   ]
+  }
+ ]
+}
