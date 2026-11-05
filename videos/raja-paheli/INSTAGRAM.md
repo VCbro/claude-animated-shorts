@@ -5,7 +5,6 @@
 
 Other title options:
 - Sirf 1 line se raja ko chhodna padega
-- 99% log ye paheli nahi suljha paate (only use it if you are happy with a claim like that; otherwise "Tez dimaag test")
 - Tez dimaag test: Raja ki paheli
 
 ## Caption (copy-paste)
