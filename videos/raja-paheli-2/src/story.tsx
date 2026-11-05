@@ -124,7 +124,7 @@ const S4: React.FC<SceneP> = ({ o, d }) => (
   <Ground><GridFloor opacity={0.07} />
     <Cam dur={d} s0={1} s1={1.04}>
       <Chain breakAt={G(o, hit("L5", "jhooth"))} steps={[
-        { at: G(o, hit("L4", "sach")), t: "Line SACH hai", c: "#2f9e57" },
+        { at: 2, t: "Line SACH hai", c: "#2f9e57" },
         { at: G(o, hit("L4", "sher")), t: "Niyam: sher ka pinjra", c: C.amber, icon: <CageIcon s={110} /> },
         { at: G(o, hit("L5", "kuyein")), t: "Toh 'kuan' wali baat JHOOTH", c: C.red },
       ]} />
@@ -139,7 +139,7 @@ const S5: React.FC<SceneP> = ({ o, d }) => (
   <Ground><GridFloor opacity={0.07} />
     <Cam dur={d} s0={1} s1={1.04}>
       <Chain breakAt={G(o, hit("L7", "sach"))} steps={[
-        { at: G(o, hit("L6", "jhooth")), t: "Line JHOOTH hai", c: C.red },
+        { at: 2, t: "Line JHOOTH hai", c: C.red },
         { at: G(o, hit("L6", "kuan")), t: "Niyam: andha kuan", c: C.amber, icon: <WellIcon s={110} /> },
         { at: G(o, hit("L7", "toh")), t: "Toh line SACH ho gayi", c: "#2f9e57" },
       ]} />
