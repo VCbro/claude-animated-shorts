@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fffaf3"/><stop offset="1" stop-color="#fbe9e7"/></linearGradient>
+    <radialGradient id="glom" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".55" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <linearGradient id="tube" x1="0" x2="1"><stop offset="0" stop-color="#ffcc80"/><stop offset=".5" stop-color="#fff3e0"/><stop offset="1" stop-color="#fb8c00"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#bf360c">Nephron – Functional Unit of Kidney (~1 million/kidney)</text>
+  <g filter="url(#s)">
+    <circle cx="140" cy="140" r="52" fill="none" stroke="#8d6e63" stroke-width="10"/>
+    <circle cx="140" cy="140" r="34" fill="url(#glom)"/>
+    <path d="M190 150 C260 150 270 110 320 120 C370 130 360 180 320 190 C290 200 290 230 300 250 L300 450 C300 480 350 480 350 450 L350 260 C350 230 400 220 430 240 C470 265 460 300 500 300 L560 300 L560 500" stroke="url(#tube)" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g font-size="14" fill="#263238">
+    <text x="60" y="225" font-weight="bold" fill="#b71c1c">Glomerulus + Bowman's capsule</text>
+    <text x="60" y="244" font-size="12">= renal corpuscle → FILTRATION</text>
+    <text x="330" y="105" font-weight="bold" fill="#e65100">PCT</text>
+    <text x="370" y="120" font-size="12">reabsorbs ~65 % Na⁺, water,</text>
+    <text x="370" y="136" font-size="12">100 % glucose &amp; amino acids</text>
+    <text x="180" y="380" font-weight="bold" fill="#e65100">Loop of Henle</text>
+    <text x="150" y="398" font-size="12">counter-current; furosemide</text>
+    <text x="150" y="414" font-size="12">acts on thick ascending limb</text>
+    <text x="470" y="270" font-weight="bold" fill="#e65100">DCT</text>
+    <text x="440" y="235" font-size="12">aldosterone, PTH (Ca²⁺)</text>
+    <text x="580" y="420" font-weight="bold" fill="#e65100">Collecting duct</text>
+    <text x="580" y="438" font-size="12">ADH → water reabsorption</text>
+  </g>
+  <rect x="610" y="70" width="270" height="300" rx="14" fill="#fff" stroke="#ffab91" stroke-width="2"/>
+  <g font-size="13" fill="#263238">
+    <text x="745" y="98" text-anchor="middle" font-weight="bold" fill="#bf360c" font-size="15">Key numbers</text>
+    <text x="625" y="126">• GFR ≈ 125 ml/min (180 L/day)</text>
+    <text x="625" y="150">• Urine output 1–1.5 L/day</text>
+    <text x="625" y="174">• Normal ≥ 0.5 ml/kg/hr (≥ 30 ml/hr)</text>
+    <text x="625" y="198">• Oliguria &lt; 400 ml/day</text>
+    <text x="625" y="222">• Anuria &lt; 100 ml/day</text>
+    <text x="625" y="246">• Polyuria &gt; 2.5–3 L/day</text>
+    <text x="625" y="270">• Renal blood flow ≈ 20–25 % CO</text>
+    <text x="625" y="294">• Sp. gravity 1.010–1.025</text>
+    <text x="625" y="318">• pH ≈ 6 (4.5–8)</text>
+    <text x="625" y="342">• Renin – juxtaglomerular cells</text>
+  </g>
+  <text x="450" y="535" text-anchor="middle" font-size="14" fill="#4e342e">Urine formation = Filtration → Reabsorption → Secretion</text>
+</svg>

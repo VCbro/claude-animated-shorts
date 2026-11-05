@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="DejaVu Sans, Arial">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="heart" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".45" stop-color="#e53935"/><stop offset="1" stop-color="#7f0000"/></radialGradient>
+    <radialGradient id="lung" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fce4ec"/><stop offset=".5" stop-color="#f48fb1"/><stop offset="1" stop-color="#ad1457"/></radialGradient>
+    <radialGradient id="brain" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff3e0"/><stop offset=".5" stop-color="#ffb74d"/><stop offset="1" stop-color="#e65100"/></radialGradient>
+    <linearGradient id="bone" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#eeeeee"/><stop offset="1" stop-color="#9e9e9e"/></linearGradient>
+    <linearGradient id="vessel" x1="0" x2="1"><stop offset="0" stop-color="#1565c0"/><stop offset=".5" stop-color="#64b5f6"/><stop offset="1" stop-color="#0d47a1"/></linearGradient>
+    <filter id="s" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".33"/></filter>
+  </defs>
+  <circle cx="300" cy="215" r="205" fill="url(#glow)"/>
+  <g filter="url(#s)">
+    <path d="M215 150 C170 140 140 200 150 270 C158 330 210 345 245 315 C262 300 262 200 250 165 Z" fill="url(#lung)"/>
+    <path d="M385 150 C430 140 460 200 450 270 C442 330 390 345 355 315 C338 300 338 200 350 165 Z" fill="url(#lung)"/>
+    <rect x="290" y="80" width="20" height="80" rx="8" fill="#b0bec5" stroke="#78909c" stroke-width="2"/>
+    <path d="M300 155 L255 180 M300 155 L345 180" stroke="#78909c" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#s)">
+    <path d="M300 330 C240 285 225 240 245 210 C262 185 292 190 300 215 C308 190 338 185 355 210 C375 240 360 285 300 330 Z" fill="url(#heart)"/>
+    <path d="M285 200 C285 170 290 155 300 150" stroke="#c62828" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M318 205 C320 175 335 160 350 158" stroke="url(#vessel)" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <ellipse cx="275" cy="225" rx="12" ry="8" fill="#fff" opacity=".45"/>
+  </g>
+  <g transform="translate(110,95)" filter="url(#s)">
+    <path d="M-50 10 C-55 -30 -20 -45 5 -40 C30 -50 60 -30 55 0 C60 25 35 40 10 35 C-15 45 -45 35 -50 10 Z" fill="url(#brain)"/>
+    <path d="M-35 -10 C-25 -20 -15 -5 -5 -15 M5 -25 C15 -10 25 -25 35 -12 M-30 15 C-15 5 0 20 15 8 M20 20 C30 10 40 20 45 5" stroke="#bf360c" stroke-width="2.5" fill="none"/>
+  </g>
+  <g transform="translate(480,110) rotate(35)" filter="url(#s)">
+    <rect x="-10" y="-50" width="20" height="100" rx="8" fill="url(#bone)"/>
+    <circle cx="-11" cy="-52" r="14" fill="url(#bone)"/><circle cx="11" cy="-52" r="14" fill="url(#bone)"/>
+    <circle cx="-11" cy="52" r="14" fill="url(#bone)"/><circle cx="11" cy="52" r="14" fill="url(#bone)"/>
+  </g>
+  <g transform="translate(110,320)" filter="url(#s)">
+    <path d="M-30 -40 C0 -20 0 20 -30 40 M30 -40 C0 -20 0 20 30 40" stroke="#7e57c2" stroke-width="7" fill="none"/>
+    <line x1="-20" y1="-28" x2="20" y2="-28" stroke="#26a69a" stroke-width="4"/><line x1="-12" y1="-10" x2="12" y2="-10" stroke="#ffa726" stroke-width="4"/>
+    <line x1="-12" y1="10" x2="12" y2="10" stroke="#26a69a" stroke-width="4"/><line x1="-20" y1="28" x2="20" y2="28" stroke="#ffa726" stroke-width="4"/>
+  </g>
+  <g transform="translate(490,320)" filter="url(#s)">
+    <path d="M-35 -15 C-20 -40 25 -40 38 -10 C45 15 20 35 -5 30 C-30 28 -45 10 -35 -15 Z" fill="#8d6e63"/>
+    <path d="M-25 -10 C-10 -25 15 -25 25 -5 C30 10 15 22 -2 20" stroke="#d7ccc8" stroke-width="3" fill="none"/>
+    <text x="0" y="62" text-anchor="middle" font-size="13" fill="#4e342e" font-weight="bold">Kidney</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fffdf7"/><stop offset="1" stop-color="#fdecef"/></linearGradient>
+    <radialGradient id="red" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffcdd2"/><stop offset=".5" stop-color="#e53935"/><stop offset="1" stop-color="#8e0000"/></radialGradient>
+    <radialGradient id="blue" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#bbdefb"/><stop offset=".5" stop-color="#1e88e5"/><stop offset="1" stop-color="#0d2c6b"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#37474f"/></marker>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#b71c1c">Heart – Chambers, Valves &amp; Blood Flow</text>
+  <g filter="url(#s)">
+    <rect x="80" y="90" width="170" height="130" rx="30" fill="url(#blue)"/>
+    <rect x="80" y="250" width="170" height="190" rx="40" fill="url(#blue)"/>
+    <rect x="300" y="90" width="170" height="130" rx="30" fill="url(#red)"/>
+    <rect x="300" y="250" width="170" height="190" rx="40" fill="url(#red)"/>
+  </g>
+  <g font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">
+    <text x="165" y="150">Right Atrium</text><text x="165" y="172" font-size="12" font-weight="normal">SVC + IVC + coronary sinus</text>
+    <text x="165" y="335">Right Ventricle</text><text x="165" y="358" font-size="12" font-weight="normal">→ pulmonary artery</text>
+    <text x="385" y="150">Left Atrium</text><text x="385" y="172" font-size="12" font-weight="normal">4 pulmonary veins</text>
+    <text x="385" y="335">Left Ventricle</text><text x="385" y="358" font-size="12" font-weight="normal">thickest wall → aorta</text>
+  </g>
+  <g font-size="13" font-weight="bold">
+    <rect x="95" y="224" width="140" height="24" rx="12" fill="#fff8e1" stroke="#f9a825"/><text x="165" y="241" text-anchor="middle" fill="#5d4037">Tricuspid valve</text>
+    <rect x="315" y="224" width="140" height="24" rx="12" fill="#fff8e1" stroke="#f9a825"/><text x="385" y="241" text-anchor="middle" fill="#5d4037">Mitral (bicuspid)</text>
+  </g>
+  <rect x="265" y="100" width="22" height="330" rx="8" fill="#ffe0b2" stroke="#ef6c00"/>
+  <text x="276" y="470" text-anchor="middle" font-size="12" fill="#e65100">Septum</text>
+  <g font-size="15" fill="#263238">
+    <rect x="520" y="80" width="355" height="400" rx="16" fill="#ffffff" stroke="#ef9a9a" stroke-width="2"/>
+    <text x="545" y="110" font-weight="bold" fill="#b71c1c" font-size="17">Blood flow pathway</text>
+    <text x="545" y="140">1. Body → SVC / IVC</text>
+    <text x="545" y="166">2. Right atrium → tricuspid</text>
+    <text x="545" y="192">3. Right ventricle → pulmonary valve</text>
+    <text x="545" y="218">4. Pulmonary artery (deoxygenated)</text>
+    <text x="545" y="244">5. Lungs (gas exchange)</text>
+    <text x="545" y="270">6. Pulmonary veins (oxygenated)</text>
+    <text x="545" y="296">7. Left atrium → mitral valve</text>
+    <text x="545" y="322">8. Left ventricle → aortic valve</text>
+    <text x="545" y="348">9. Aorta → whole body</text>
+    <text x="545" y="384" font-weight="bold" fill="#1565c0" font-size="14">Conduction: SA node (pacemaker 60–100)</text>
+    <text x="545" y="406" font-size="14" fill="#1565c0">→ AV node (40–60) → Bundle of His</text>
+    <text x="545" y="428" font-size="14" fill="#1565c0">→ bundle branches → Purkinje (20–40)</text>
+    <text x="545" y="460" font-size="13" fill="#6a1b9a">Sounds: S1 "lub" (AV close) · S2 "dub" (semilunar)</text>
+  </g>
+  <text x="275" y="520" text-anchor="middle" font-size="14" fill="#37474f">Blue = deoxygenated (right side) · Red = oxygenated (left side)</text>
+</svg>

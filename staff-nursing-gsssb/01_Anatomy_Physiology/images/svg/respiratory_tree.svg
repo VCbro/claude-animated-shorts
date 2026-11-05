@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7fbff"/><stop offset="1" stop-color="#e3f2fd"/></linearGradient>
+    <radialGradient id="lung" cx="35%" cy="30%" r="85%"><stop offset="0" stop-color="#fce4ec"/><stop offset=".5" stop-color="#f48fb1"/><stop offset="1" stop-color="#ad1457"/></radialGradient>
+    <linearGradient id="tr" x1="0" x2="1"><stop offset="0" stop-color="#90a4ae"/><stop offset=".5" stop-color="#eceff1"/><stop offset="1" stop-color="#78909c"/></linearGradient>
+    <radialGradient id="alv" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#f8bbd0"/><stop offset="1" stop-color="#c2185b"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#0d47a1">Respiratory Tree &amp; Alveolus</text>
+  <g filter="url(#s)">
+    <path d="M195 170 C120 165 85 260 95 370 C105 450 175 470 230 440 C255 425 255 220 240 185 Z" fill="url(#lung)"/>
+    <path d="M375 170 C450 165 485 260 475 370 C465 450 395 470 340 440 C315 425 315 220 330 185 Z" fill="url(#lung)"/>
+    <rect x="274" y="70" width="22" height="125" rx="9" fill="url(#tr)" stroke="#607d8b"/>
+  </g>
+  <path d="M285 190 L215 235 L175 300 M215 235 L215 330 M285 190 L355 230 L395 300 M355 230 L360 340" stroke="#78909c" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <g font-size="14" fill="#263238">
+    <text x="305" y="95">Trachea (C6–T4/5)</text><text x="305" y="113" font-size="12">16–20 C-shaped cartilages</text>
+    <text x="300" y="208" font-size="12">Carina (T4/5)</text>
+    <text x="95" y="150" font-weight="bold" fill="#ad1457">Right lung – 3 lobes</text>
+    <text x="95" y="168" font-size="12">wider, shorter, vertical bronchus</text>
+    <text x="370" y="150" font-weight="bold" fill="#ad1457">Left lung – 2 lobes</text>
+    <text x="370" y="168" font-size="12">cardiac notch, lingula</text>
+    <text x="80" y="500" font-size="13">Diaphragm – main muscle of inspiration (phrenic nerve C3-4-5)</text>
+  </g>
+  <rect x="530" y="70" width="345" height="460" rx="16" fill="#fff" stroke="#90caf9" stroke-width="2"/>
+  <text x="702" y="100" text-anchor="middle" font-size="17" font-weight="bold" fill="#0d47a1">Alveolus – gas exchange unit</text>
+  <g filter="url(#s)">
+    <circle cx="640" cy="190" r="48" fill="url(#alv)"/><circle cx="725" cy="170" r="42" fill="url(#alv)"/><circle cx="700" cy="245" r="45" fill="url(#alv)"/>
+  </g>
+  <path d="M590 250 C640 300 760 300 800 230" stroke="#e53935" stroke-width="6" fill="none"/>
+  <path d="M590 265 C640 315 760 315 805 245" stroke="#1e88e5" stroke-width="6" fill="none"/>
+  <g font-size="13" fill="#263238">
+    <text x="555" y="350">• ~300 million alveoli; surface ≈ 70 m²</text>
+    <text x="555" y="374">• Type I cells – gas exchange (thin)</text>
+    <text x="555" y="398">• Type II cells – <tspan font-weight="bold">surfactant</tspan> (↓ surface</text>
+    <text x="567" y="418">tension; from ~24–28 wks, mature 35 wks)</text>
+    <text x="555" y="442">• O₂ & CO₂ move by <tspan font-weight="bold">diffusion</tspan></text>
+    <text x="555" y="466">• Tidal volume ≈ 500 ml · VC ≈ 4.8 L</text>
+    <text x="555" y="490">• RR adult 12–20/min · newborn 30–60</text>
+    <text x="555" y="514">• Respiratory centre – medulla &amp; pons</text>
+  </g>
+</svg>
