@@ -8,8 +8,8 @@
 | – | Child Health Nursing | `03_Child_Health_Nursing/` | ✔ Done |
 | 1 | Community Health Nursing | `05_Community_Health_Nursing/` | ✔ Done |
 | 2 | Mental Health Nursing | `06_Mental_Health_Nursing/` | ✔ Done |
-| 3 | Pharmacology | `07_Pharmacology/` | ⏳ In progress |
-| 4 | Anatomy & Physiology | `01_Anatomy_Physiology/` | Pending |
+| 3 | Pharmacology | `07_Pharmacology/` | ✔ Done |
+| 4 | Anatomy & Physiology | `01_Anatomy_Physiology/` | ⏳ In progress |
 | 5 | Microbiology | `08_Microbiology/` | Pending |
 | 6 | Nutrition | `09_Nutrition/` | Pending |
 | 7 | Gujarati Vyakaran (full book-type notes) | `10_Gujarati_GK_Reasoning/` | Pending |
