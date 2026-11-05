@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f6fbff"/><stop offset="1" stop-color="#e1f5fe"/></linearGradient>
+    <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#607d8b"/><stop offset=".45" stop-color="#eceff1"/><stop offset="1" stop-color="#455a64"/></linearGradient>
+    <radialGradient id="steam" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#b3e5fc" stop-opacity="0"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="4" dy="6" stdDeviation="5" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#01579b">Sterilisation &amp; Disinfection – Methods at a Glance</text>
+  <g filter="url(#s)">
+    <rect x="50" y="90" width="210" height="250" rx="30" fill="url(#steel)"/>
+    <ellipse cx="155" cy="90" rx="105" ry="22" fill="#90a4ae"/>
+    <circle cx="155" cy="75" r="20" fill="#37474f"/><rect x="149" y="45" width="12" height="25" fill="#263238"/>
+    <circle cx="210" cy="72" r="16" fill="#fff" stroke="#263238" stroke-width="3"/><line x1="210" y1="72" x2="218" y2="64" stroke="#d32f2f" stroke-width="3"/>
+  </g>
+  <g font-size="14" fill="#263238" text-anchor="middle">
+    <text x="155" y="180" font-weight="bold" fill="#01579b" font-size="17">AUTOCLAVE</text>
+    <text x="155" y="205" font-size="12.5">Moist heat under pressure</text>
+    <text x="155" y="230" font-weight="bold" font-size="13">121 °C · 15 psi</text><text x="155" y="247" font-weight="bold" font-size="13">15–20 min</text>
+    <text x="155" y="266" font-size="12">or 134 °C · 30 psi · 3–5 min</text>
+    <text x="155" y="286" font-size="12">Kills spores – most reliable</text>
+    <text x="155" y="302" font-size="12">Test: Geobacillus</text>
+    <text x="155" y="318" font-size="12">stearothermophilus spores</text>
+  </g>
+  <text x="155" y="370" text-anchor="middle" font-size="12" fill="#37474f">Linen, gowns, instruments, culture media</text>
+  <rect x="290" y="70" width="585" height="300" rx="16" fill="#fff" stroke="#81d4fa" stroke-width="2"/>
+  <g font-size="13" fill="#263238">
+    <text x="305" y="96" font-weight="bold" fill="#e65100" font-size="15">Physical methods</text>
+    <text x="305" y="120">• <tspan font-weight="bold">Hot air oven</tspan> (dry heat) – 160 °C × 2 hrs / 180 °C × 30 min –</text>
+    <text x="320" y="138">glassware, powders, oils, sharp instruments (Clostridium tetani spores)</text>
+    <text x="305" y="160">• <tspan font-weight="bold">Incineration</tspan> – anatomical waste · <tspan font-weight="bold">Flaming / red heat</tspan> – loops</text>
+    <text x="305" y="182">• <tspan font-weight="bold">Boiling</tspan> 100 °C × 10–30 min – disinfection only (spores survive)</text>
+    <text x="305" y="204">• <tspan font-weight="bold">Pasteurisation</tspan> – milk: 63 °C × 30 min / 72 °C × 15–20 s</text>
+    <text x="305" y="226">• <tspan font-weight="bold">Tyndallisation</tspan> – 100 °C × 20 min, 3 successive days</text>
+    <text x="305" y="248">• <tspan font-weight="bold">Radiation</tspan> – gamma (syringes, sutures – cold sterilisation); UV – surfaces/ air</text>
+    <text x="305" y="270">• <tspan font-weight="bold">Filtration</tspan> – heat-labile fluids (sera, antibiotics); HEPA – air</text>
+    <text x="305" y="300" font-weight="bold" fill="#2e7d32" font-size="15">Chemical methods</text>
+    <text x="305" y="324">• <tspan font-weight="bold">Ethylene oxide (ETO)</tspan> – heat-sensitive (plastics, catheters, heart-lung)</text>
+    <text x="305" y="346">• <tspan font-weight="bold">2 % glutaraldehyde (Cidex)</tspan> – endoscopes: 20 min HLD, 10 hrs sterile</text>
+  </g>
+  <rect x="25" y="395" width="850" height="140" rx="16" fill="#fff" stroke="#a5d6a7" stroke-width="2"/>
+  <g font-size="13" fill="#263238">
+    <text x="450" y="420" text-anchor="middle" font-weight="bold" fill="#1b5e20" font-size="15">Spaulding classification &amp; common disinfectants</text>
+    <text x="40" y="446"><tspan font-weight="bold" fill="#c62828">Critical</tspan> (enter sterile tissue – surgical instruments, needles) → <tspan font-weight="bold">STERILISATION</tspan></text>
+    <text x="40" y="468"><tspan font-weight="bold" fill="#ef6c00">Semi-critical</tspan> (mucous membrane – endoscopes, laryngoscope) → <tspan font-weight="bold">HIGH-level disinfection</tspan></text>
+    <text x="40" y="490"><tspan font-weight="bold" fill="#2e7d32">Non-critical</tspan> (intact skin – BP cuff, stethoscope, bedpan) → <tspan font-weight="bold">LOW-level disinfection</tspan></text>
+    <text x="40" y="516">Hypochlorite 1 % (spills) · 0.5 % (surfaces) · 70 % alcohol · Povidone-iodine · Chlorhexidine (hand/ skin) · Phenol (Lister)</text>
+  </g>
+</svg>

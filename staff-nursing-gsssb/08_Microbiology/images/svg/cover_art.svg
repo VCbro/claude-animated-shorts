@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="DejaVu Sans, Arial">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#455a64"/><stop offset=".45" stop-color="#cfd8dc"/><stop offset="1" stop-color="#263238"/></linearGradient>
+    <linearGradient id="body" x1="0" x2="1"><stop offset="0" stop-color="#00695c"/><stop offset=".45" stop-color="#4db6ac"/><stop offset="1" stop-color="#004d40"/></linearGradient>
+    <radialGradient id="bac" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#f3e5f5"/><stop offset=".55" stop-color="#ab47bc"/><stop offset="1" stop-color="#4a148c"/></radialGradient>
+    <radialGradient id="vir" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffebee"/><stop offset=".55" stop-color="#ef5350"/><stop offset="1" stop-color="#8e0000"/></radialGradient>
+    <radialGradient id="coc" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#e3f2fd"/><stop offset=".55" stop-color="#42a5f5"/><stop offset="1" stop-color="#0d47a1"/></radialGradient>
+    <radialGradient id="dish" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fffde7"/><stop offset=".7" stop-color="#ffe082"/><stop offset="1" stop-color="#ffb300"/></radialGradient>
+    <filter id="s" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".33"/></filter>
+  </defs>
+  <circle cx="300" cy="215" r="205" fill="url(#glow)"/>
+  <g filter="url(#s)">
+    <rect x="200" y="350" width="200" height="26" rx="10" fill="url(#body)"/>
+    <path d="M260 350 L260 300 C260 260 300 250 320 220 L345 180" stroke="url(#body)" stroke-width="26" fill="none" stroke-linecap="round"/>
+    <rect x="300" y="80" width="40" height="120" rx="10" fill="url(#metal)" transform="rotate(25 320 140)"/>
+    <rect x="300" y="60" width="50" height="22" rx="6" fill="#37474f" transform="rotate(25 325 70)"/>
+    <rect x="245" y="285" width="130" height="14" rx="5" fill="#263238"/>
+    <rect x="286" y="200" width="20" height="60" rx="6" fill="url(#metal)"/>
+  </g>
+  <g filter="url(#s)">
+    <circle cx="125" cy="170" r="55" fill="url(#vir)"/>
+    <g stroke="#b71c1c" stroke-width="6" stroke-linecap="round">
+      <line x1="125" y1="105" x2="125" y2="92"/><line x1="125" y1="235" x2="125" y2="248"/><line x1="60" y1="170" x2="47" y2="170"/><line x1="190" y1="170" x2="203" y2="170"/>
+      <line x1="80" y1="125" x2="70" y2="115"/><line x1="170" y1="215" x2="180" y2="225"/><line x1="170" y1="125" x2="180" y2="115"/><line x1="80" y1="215" x2="70" y2="225"/>
+    </g>
+    <g fill="#ffcdd2"><circle cx="125" cy="92" r="8"/><circle cx="125" cy="248" r="8"/><circle cx="47" cy="170" r="8"/><circle cx="203" cy="170" r="8"/><circle cx="70" cy="115" r="8"/><circle cx="180" cy="225" r="8"/><circle cx="180" cy="115" r="8"/><circle cx="70" cy="225" r="8"/></g>
+  </g>
+  <g filter="url(#s)" transform="translate(470,140) rotate(-25)">
+    <rect x="-60" y="-22" width="120" height="44" rx="22" fill="url(#bac)"/>
+    <path d="M60 0 C80 -10 90 15 110 5" stroke="#7b1fa2" stroke-width="4" fill="none"/>
+  </g>
+  <g filter="url(#s)">
+    <ellipse cx="470" cy="320" rx="80" ry="34" fill="url(#dish)" stroke="#ff8f00" stroke-width="3"/>
+    <g fill="url(#coc)"><circle cx="440" cy="315" r="10"/><circle cx="460" cy="322" r="10"/><circle cx="480" cy="312" r="10"/><circle cx="500" cy="325" r="10"/><circle cx="455" cy="305" r="9"/></g>
+  </g>
+  <g filter="url(#s)"><g fill="url(#coc)"><circle cx="110" cy="330" r="14"/><circle cx="138" cy="330" r="14"/><circle cx="166" cy="330" r="14"/><circle cx="194" cy="330" r="14"/></g></g>
+</svg>

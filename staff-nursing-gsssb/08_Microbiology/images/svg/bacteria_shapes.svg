@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="DejaVu Sans, Arial">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbf8ff"/><stop offset="1" stop-color="#f3e5f5"/></linearGradient>
+    <radialGradient id="pur" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#f3e5f5"/><stop offset=".55" stop-color="#8e24aa"/><stop offset="1" stop-color="#38006b"/></radialGradient>
+    <radialGradient id="pink" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fce4ec"/><stop offset=".55" stop-color="#ec407a"/><stop offset="1" stop-color="#880e4f"/></radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="900" height="560" rx="22" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="25" font-weight="bold" fill="#4a148c">Bacteria – Shapes, Arrangement &amp; Gram Stain</text>
+  <g font-size="14" fill="#263238" text-anchor="middle">
+    <rect x="30" y="65" width="200" height="185" rx="16" fill="#fff" stroke="#ce93d8"/>
+    <g filter="url(#s)" fill="url(#pur)"><circle cx="70" cy="110" r="13"/><circle cx="97" cy="110" r="13"/><circle cx="150" cy="100" r="11"/><circle cx="170" cy="112" r="11"/><circle cx="160" cy="130" r="11"/><circle cx="182" cy="96" r="11"/><circle cx="140" cy="122" r="11"/></g>
+    <text x="84" y="145" font-size="12">Diplococci</text><text x="162" y="160" font-size="12">Staphylococci</text>
+    <g filter="url(#s)" fill="url(#pur)"><circle cx="60" cy="195" r="11"/><circle cx="84" cy="195" r="11"/><circle cx="108" cy="195" r="11"/><circle cx="132" cy="195" r="11"/><circle cx="156" cy="195" r="11"/><circle cx="180" cy="195" r="11"/></g>
+    <text x="130" y="230" font-size="12">Streptococci (chain)</text>
+    <text x="130" y="85" font-weight="bold" fill="#6a1b9a">COCCI (round)</text>
+    <rect x="250" y="65" width="200" height="185" rx="16" fill="#fff" stroke="#f48fb1"/>
+    <text x="350" y="85" font-weight="bold" fill="#ad1457">BACILLI (rods)</text>
+    <g filter="url(#s)" fill="url(#pink)"><rect x="275" y="100" width="70" height="22" rx="11"/><rect x="355" y="100" width="70" height="22" rx="11"/><rect x="275" y="160" width="40" height="18" rx="9"/><rect x="318" y="160" width="40" height="18" rx="9"/><rect x="361" y="160" width="40" height="18" rx="9"/></g>
+    <text x="350" y="145" font-size="12">E. coli, Salmonella, TB</text><text x="350" y="200" font-size="12">Streptobacilli</text>
+    <text x="350" y="232" font-size="12">Club-shaped – Diphtheria</text>
+    <rect x="470" y="65" width="200" height="185" rx="16" fill="#fff" stroke="#80cbc4"/>
+    <text x="570" y="85" font-weight="bold" fill="#00695c">SPIRAL &amp; COMMA</text>
+    <path d="M495 120 q15 -20 30 0 t30 0 t30 0 t30 0" stroke="#00897b" stroke-width="8" fill="none" stroke-linecap="round" filter="url(#s)"/>
+    <text x="570" y="152" font-size="12">Spirochaetes – Treponema,</text><text x="570" y="168" font-size="12">Leptospira (hooked ends)</text>
+    <path d="M540 200 q30 -25 60 0" stroke="#00897b" stroke-width="12" fill="none" stroke-linecap="round" filter="url(#s)"/>
+    <text x="570" y="232" font-size="12">Vibrio (comma) – cholera</text>
+  </g>
+  <rect x="690" y="65" width="185" height="185" rx="16" fill="#fff" stroke="#ffcc80"/>
+  <g font-size="12.5" fill="#263238">
+    <text x="782" y="85" text-anchor="middle" font-weight="bold" fill="#e65100" font-size="14">Size &amp; units</text>
+    <text x="702" y="110">Bacteria ~0.5–5 µm</text><text x="702" y="132">Virus ~20–300 nm</text>
+    <text x="702" y="154">(smallest – parvo/ polio)</text><text x="702" y="176">1 µm = 1000 nm</text>
+    <text x="702" y="198">Seen by light microscope</text><text x="702" y="220">Virus – electron</text><text x="702" y="238">microscope</text>
+  </g>
+  <rect x="30" y="270" width="845" height="265" rx="16" fill="#fff" stroke="#b39ddb" stroke-width="2"/>
+  <text x="450" y="298" text-anchor="middle" font-size="18" font-weight="bold" fill="#4527a0">Gram staining (Hans Christian Gram, 1884) – 4 steps</text>
+  <g font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" filter="url(#s)">
+    <rect x="55" y="320" width="185" height="62" rx="12" fill="#6a1b9a"/><text x="147" y="346">1. Crystal violet</text><text x="147" y="366" font-weight="normal">primary stain – 1 min</text>
+    <rect x="255" y="320" width="185" height="62" rx="12" fill="#5d4037"/><text x="347" y="346">2. Gram's iodine</text><text x="347" y="366" font-weight="normal">mordant – 1 min</text>
+    <rect x="455" y="320" width="185" height="62" rx="12" fill="#546e7a"/><text x="547" y="346">3. Acetone/ alcohol</text><text x="547" y="366" font-weight="normal">decolouriser – KEY step</text>
+    <rect x="655" y="320" width="195" height="62" rx="12" fill="#d81b60"/><text x="752" y="346">4. Safranin</text><text x="752" y="366" font-weight="normal">counterstain</text>
+  </g>
+  <g font-size="14" fill="#263238">
+    <circle cx="80" cy="420" r="14" fill="url(#pur)"/><text x="105" y="415" font-weight="bold" fill="#4a148c">Gram-positive = PURPLE/ violet</text>
+    <text x="105" y="435">thick peptidoglycan wall – retains crystal violet (Staph, Strep, Clostridium, Bacillus, Corynebacterium)</text>
+    <circle cx="80" cy="480" r="14" fill="url(#pink)"/><text x="105" y="475" font-weight="bold" fill="#880e4f">Gram-negative = PINK/ red</text>
+    <text x="105" y="495">thin wall + outer membrane (endotoxin/ LPS) – loses violet (E. coli, Salmonella, Vibrio, Neisseria)</text>
+    <text x="105" y="522" fill="#bf360c">Acid-fast (Ziehl-Neelsen) – TB &amp; leprosy bacilli – RED on blue background</text>
+  </g>
+</svg>
