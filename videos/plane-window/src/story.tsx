@@ -230,8 +230,8 @@ const S8: React.FC<SceneP> = ({ o, d }) => {
           <polyline points={pts.split(" ").slice(0, show).join(" ")} fill="none" stroke={f >= hz ? C.amber : C.lime} strokeWidth={8} strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 10px ${f >= hz ? C.amber : C.lime})` }} />
           <text x={100} y={1250} fill={C.grey} fontFamily="JetBrains Mono" fontSize={30}>CABIN PRESSURE · har flight = 1 cycle</text>
         </svg>
-        <Counter at={hz - 4} dur={Math.max(10, d - hz)} from={1} to={10000} x={110} y={600} size={170} color={C.amber} suffix="+" />
-        <Chip at={hz} x={110} y={800} lines={["FLIGHTS"]} size={52} mono color={C.grey} />
+        <Counter at={hz - 4} dur={Math.max(10, d - hz)} from={1} to={10000} x={540} y={600} size={170} color={C.amber} suffix="+" align="center" />
+        <Chip at={hz} x={420} y={800} lines={["FLIGHTS"]} size={52} mono color={C.grey} />
       </Cam>
       <Hud left="Socho" right="har flight" clock="×1000s" />
       <Vignette />
