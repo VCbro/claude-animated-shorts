@@ -6,7 +6,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { C, F } from "./kit/theme";
 import { io, lerp } from "./kit/anim";
-import { at, hit, TOTAL } from "./kit/timeline";
+import { at, hit, LINES, TOTAL } from "./kit/timeline";
 import { Hud, Vignette } from "./kit/Frame";
 import { Chip, Pill, Stamp } from "./kit/Marks";
 import { EndCard } from "./kit/EndCard";
@@ -16,7 +16,7 @@ import type { CaptionMode } from "./kit/Caption";
 
 export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D", tagline: "Har cheez ka sach, 3D mein" };
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
-export const CAPTION_HIDE: string[] = [];
+export const CAPTION_HIDE: string[] = LINES.map((l) => l.id); // creator: no subtitles
 export const CAPTION_MODE: CaptionMode = "karaoke";
 
 type SceneP = { o: number; d: number };
