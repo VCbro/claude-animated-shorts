@@ -56,7 +56,8 @@ def _ov(args, text, out):
     cmd = [f"{OV_DIR}/build/omnivoice-tts", "--model", os.environ.get("OMNIVOICE_MODEL", f"{OV_DIR}/models/omnivoice-base-Q8_0.gguf"),
            "--codec", os.environ.get("OMNIVOICE_CODEC", f"{OV_DIR}/models/omnivoice-tokenizer-F32.gguf"),
            "--lang", os.environ.get("OMNIVOICE_LANG", "Hindi"), "-o", out] + args
-    subprocess.run(cmd, input=text.encode("utf-8"), check=True, capture_output=True)
+    env = {**os.environ, "OMNIVOICE_THREADS": os.environ.get("OMNIVOICE_THREADS", str(os.cpu_count() or 4))}
+    subprocess.run(cmd, input=text.encode("utf-8"), check=True, capture_output=True, env=env)
 
 
 def tts_omnivoice(text, pace):

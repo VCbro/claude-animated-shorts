@@ -36,7 +36,9 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
      indian accent"; valid tags: male/female · child/teenager/young adult/middle-aged/elderly · very low…very high pitch ·
      whisper · american/british/indian… accent) made once into `voice/omni_ref.wav` and cloned for every line. Install with
      `bash tools/get_omnivoice.sh` (builds the pinned runtime, downloads Serveurperso/omnivoice.cpp-GGUF Q8_0 + F32 codec;
-     needs huggingface.co allowed in the network settings). Set `"engine": "omnivoice"` in script.json.
+     repo `Serveurperso/OmniVoice-GGUF`; the environment `claude-animated-shorts` allows huggingface.co + us.aws.cdn.hf.co).
+     Set `"engine": "omnivoice"` in script.json. Speed on 4 CPU threads: ~20x real time (a 40 s reel ≈ 15 min of voice).
+     Samples A/B/C (young male / deep middle-aged male / young female, all "indian accent") are in `voice-samples/`.
    - `kokoro` is the offline fallback: offline Kokoro-82M, the most human-sounding offline Hindi. Set `KOKORO_VOICE` to `hm_psi` (male, default),
      `hm_omega` (male), `hf_alpha` or `hf_beta` (female). `bash tools/get_models.sh` downloads it from GitHub releases.
    - `piper` (`hi_IN-rohan-medium`) is the older offline fallback and sounds more robotic.
