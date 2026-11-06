@@ -1,0 +1,564 @@
+{
+ "fps": 30,
+ "duration": 32.877,
+ "frames": 987,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 2.884,
+   "cap": "Kile ke darwaze pe, ye nukeeli keelein kyun lagi hoti hain?",
+   "hl": [
+    "keelein"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Kile",
+     "t": 0.25
+    },
+    {
+     "w": "ke",
+     "t": 0.513
+    },
+    {
+     "w": "darwaze",
+     "t": 0.644
+    },
+    {
+     "w": "pe,",
+     "t": 1.054
+    },
+    {
+     "w": "ye",
+     "t": 1.185
+    },
+    {
+     "w": "nukeeli",
+     "t": 1.317
+    },
+    {
+     "w": "keelein",
+     "t": 1.726
+    },
+    {
+     "w": "kyun",
+     "t": 2.034
+    },
+    {
+     "w": "lagi",
+     "t": 2.196
+    },
+    {
+     "w": "hoti",
+     "t": 2.459
+    },
+    {
+     "w": "hain?",
+     "t": 2.722
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 3.024,
+   "t1": 3.778,
+   "cap": "Haathi ke liye.",
+   "hl": [
+    "Haathi"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Haathi",
+     "t": 3.024
+    },
+    {
+     "w": "ke",
+     "t": 3.401
+    },
+    {
+     "w": "liye.",
+     "t": 3.57
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 4.078,
+   "t1": 6.753,
+   "cap": "Puraane zamaane mein, dushman haathi se darwaza todta tha.",
+   "hl": [],
+   "red": [
+    "todta"
+   ],
+   "words": [
+    {
+     "w": "Puraane",
+     "t": 4.078
+    },
+    {
+     "w": "zamaane",
+     "t": 4.508
+    },
+    {
+     "w": "mein,",
+     "t": 4.938
+    },
+    {
+     "w": "dushman",
+     "t": 5.108
+    },
+    {
+     "w": "haathi",
+     "t": 5.431
+    },
+    {
+     "w": "se",
+     "t": 5.739
+    },
+    {
+     "w": "darwaza",
+     "t": 5.877
+    },
+    {
+     "w": "todta",
+     "t": 6.307
+    },
+    {
+     "w": "tha.",
+     "t": 6.599
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 6.893,
+   "t1": 10.434,
+   "cap": "Isliye darwaze pe, haathi ke sir ki unchai pe, lohe ki keelein lagaayi gayi.",
+   "hl": [
+    "lohe",
+    "keelein"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 6.893
+    },
+    {
+     "w": "darwaze",
+     "t": 7.225
+    },
+    {
+     "w": "pe,",
+     "t": 7.687
+    },
+    {
+     "w": "haathi",
+     "t": 7.836
+    },
+    {
+     "w": "ke",
+     "t": 8.167
+    },
+    {
+     "w": "sir",
+     "t": 8.315
+    },
+    {
+     "w": "ki",
+     "t": 8.481
+    },
+    {
+     "w": "unchai",
+     "t": 8.63
+    },
+    {
+     "w": "pe,",
+     "t": 8.961
+    },
+    {
+     "w": "lohe",
+     "t": 9.109
+    },
+    {
+     "w": "ki",
+     "t": 9.406
+    },
+    {
+     "w": "keelein",
+     "t": 9.555
+    },
+    {
+     "w": "lagaayi",
+     "t": 9.903
+    },
+    {
+     "w": "gayi.",
+     "t": 10.252
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 10.734,
+   "t1": 13.942,
+   "cap": "Aur darwaze tak ka raasta, seedha nahi, ghumaavdaar banaya gaya.",
+   "hl": [
+    "ghumaavdaar"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 10.734
+    },
+    {
+     "w": "darwaze",
+     "t": 10.915
+    },
+    {
+     "w": "tak",
+     "t": 11.418
+    },
+    {
+     "w": "ka",
+     "t": 11.599
+    },
+    {
+     "w": "raasta,",
+     "t": 11.76
+    },
+    {
+     "w": "seedha",
+     "t": 12.121
+    },
+    {
+     "w": "nahi,",
+     "t": 12.481
+    },
+    {
+     "w": "ghumaavdaar",
+     "t": 12.805
+    },
+    {
+     "w": "banaya",
+     "t": 13.383
+    },
+    {
+     "w": "gaya.",
+     "t": 13.743
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 14.082,
+   "t1": 16.116,
+   "cap": "Taaki haathi daud ke, speed na pakad sake.",
+   "hl": [],
+   "red": [
+    "speed"
+   ],
+   "words": [
+    {
+     "w": "Taaki",
+     "t": 14.082
+    },
+    {
+     "w": "haathi",
+     "t": 14.412
+    },
+    {
+     "w": "daud",
+     "t": 14.76
+    },
+    {
+     "w": "ke,",
+     "t": 14.952
+    },
+    {
+     "w": "speed",
+     "t": 15.108
+    },
+    {
+     "w": "na",
+     "t": 15.318
+    },
+    {
+     "w": "pakad",
+     "t": 15.474
+    },
+    {
+     "w": "sake.",
+     "t": 15.804
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 16.416,
+   "t1": 18.832,
+   "cap": "Kila pahaadi pe, taaki dushman ko upar chadhna pade.",
+   "hl": [
+    "pahaadi"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Kila",
+     "t": 16.416
+    },
+    {
+     "w": "pahaadi",
+     "t": 16.685
+    },
+    {
+     "w": "pe,",
+     "t": 17.105
+    },
+    {
+     "w": "taaki",
+     "t": 17.24
+    },
+    {
+     "w": "dushman",
+     "t": 17.525
+    },
+    {
+     "w": "ko",
+     "t": 17.841
+    },
+    {
+     "w": "upar",
+     "t": 17.976
+    },
+    {
+     "w": "chadhna",
+     "t": 18.246
+    },
+    {
+     "w": "pade.",
+     "t": 18.562
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 18.972,
+   "t1": 21.791,
+   "cap": "Aur deewaron mein chhed, jahan se sainik upar se vaar karte.",
+   "hl": [
+    "chhed,"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 18.972
+    },
+    {
+     "w": "deewaron",
+     "t": 19.141
+    },
+    {
+     "w": "mein",
+     "t": 19.63
+    },
+    {
+     "w": "chhed,",
+     "t": 19.816
+    },
+    {
+     "w": "jahan",
+     "t": 20.02
+    },
+    {
+     "w": "se",
+     "t": 20.341
+    },
+    {
+     "w": "sainik",
+     "t": 20.492
+    },
+    {
+     "w": "upar",
+     "t": 20.83
+    },
+    {
+     "w": "se",
+     "t": 21.133
+    },
+    {
+     "w": "vaar",
+     "t": 21.284
+    },
+    {
+     "w": "karte.",
+     "t": 21.471
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 22.091,
+   "t1": 24.435,
+   "cap": "Jodhpur ke Mehrangarh kile mein, saat darwaze hain.",
+   "hl": [
+    "Mehrangarh",
+    "saat"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Jodhpur",
+     "t": 22.091
+    },
+    {
+     "w": "ke",
+     "t": 22.443
+    },
+    {
+     "w": "Mehrangarh",
+     "t": 22.593
+    },
+    {
+     "w": "kile",
+     "t": 23.113
+    },
+    {
+     "w": "mein,",
+     "t": 23.413
+    },
+    {
+     "w": "saat",
+     "t": 23.598
+    },
+    {
+     "w": "darwaze",
+     "t": 23.783
+    },
+    {
+     "w": "hain.",
+     "t": 24.25
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 24.575,
+   "t1": 27.148,
+   "cap": "Aur ek darwaza, Loha Pol, aaj bhi keelon se bhara hai.",
+   "hl": [
+    "Loha",
+    "Pol,"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 24.575
+    },
+    {
+     "w": "ek",
+     "t": 24.743
+    },
+    {
+     "w": "darwaza,",
+     "t": 24.894
+    },
+    {
+     "w": "Loha",
+     "t": 25.365
+    },
+    {
+     "w": "Pol,",
+     "t": 25.667
+    },
+    {
+     "w": "aaj",
+     "t": 25.835
+    },
+    {
+     "w": "bhi",
+     "t": 26.004
+    },
+    {
+     "w": "keelon",
+     "t": 26.172
+    },
+    {
+     "w": "se",
+     "t": 26.509
+    },
+    {
+     "w": "bhara",
+     "t": 26.66
+    },
+    {
+     "w": "hai.",
+     "t": 26.98
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 27.448,
+   "t1": 31.277,
+   "cap": "Follow aur subscribe karo. Aur batao, tumne kaunsa kila dekha hai?",
+   "hl": [
+    "Follow",
+    "subscribe",
+    "kila"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 27.448
+    },
+    {
+     "w": "aur",
+     "t": 27.845
+    },
+    {
+     "w": "subscribe",
+     "t": 28.044
+    },
+    {
+     "w": "karo.",
+     "t": 28.64
+    },
+    {
+     "w": "Aur",
+     "t": 28.996
+    },
+    {
+     "w": "batao,",
+     "t": 29.195
+    },
+    {
+     "w": "tumne",
+     "t": 29.572
+    },
+    {
+     "w": "kaunsa",
+     "t": 29.948
+    },
+    {
+     "w": "kila",
+     "t": 30.346
+    },
+    {
+     "w": "dekha",
+     "t": 30.702
+    },
+    {
+     "w": "hai?",
+     "t": 31.079
+    }
+   ]
+  }
+ ]
+}

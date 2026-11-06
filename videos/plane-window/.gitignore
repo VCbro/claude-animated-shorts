@@ -1,0 +1,9 @@
+node_modules
+out
+*.tmp.mp4
+models
+voice/cache
+voice/*.wav
+public/*.wav
+audio/stems
+voice/lines

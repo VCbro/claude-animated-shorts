@@ -1,0 +1,149 @@
+{
+ "title": "Galti se paise bhej diye? Ruko.",
+ "pace": 1.0,
+ "music": {
+  "bpm": 100,
+  "root": 50,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "पूरे पांच हज़ार रुपये आए। फिर कॉल आया।",
+   "cap": "Poore ₹5,000 aaye. Phir call aaya.",
+   "hl": [
+    "₹5,000"
+   ],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "भाई, गलती से भेज दिए। प्लीज़ वापस कर दो।",
+   "cap": "\"Bhai, galti se bhej diye. Please wapas kar do.\"",
+   "hl": [
+    "galti"
+   ]
+  },
+  {
+   "id": "L3",
+   "tts": "तुमने भी, भले इंसान की तरह, भेज दिए।",
+   "cap": "Tumne bhi, bhale insaan ki tarah, bhej diye.",
+   "hl": [
+    "bhej"
+   ],
+   "gap": 0.2
+  },
+  {
+   "id": "L4",
+   "tts": "पर वो पांच हज़ार, कभी आए ही नहीं थे।",
+   "cap": "Par wo ₹5,000, kabhi aaye hi nahi the.",
+   "red": [
+    "nahi"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L5",
+   "tts": "आया था सिर्फ़ एक मैसेज। फेक मैसेज।",
+   "cap": "Aaya tha sirf ek message. Fake message.",
+   "red": [
+    "Fake"
+   ],
+   "gap": 0.25
+  },
+  {
+   "id": "L6",
+   "tts": "बैंक जैसा नाम। बैंक जैसी लाइन।",
+   "cap": "Bank jaisa naam. Bank jaisi line.",
+   "hl": [
+    "naam.",
+    "line."
+   ]
+  },
+  {
+   "id": "L7",
+   "tts": "पर पैसा? एक रुपया भी नहीं।",
+   "cap": "Par paisa? Ek rupaya bhi nahi.",
+   "red": [
+    "nahi."
+   ]
+  },
+  {
+   "id": "L8",
+   "tts": "एक कॉल, पांच मिनट, और तुम्हारे पांच हज़ार गए।",
+   "cap": "Ek call, paanch minute, aur tumhare ₹5,000 gaye.",
+   "red": [
+    "gaye."
+   ],
+   "gap": 0.25
+  },
+  {
+   "id": "L9",
+   "tts": "तो तीन चीज़ें याद रखो।",
+   "cap": "Toh 3 cheezein yaad rakho.",
+   "hl": [
+    "3"
+   ],
+   "gap": 0.35
+  },
+  {
+   "id": "L10",
+   "tts": "एक। मैसेज नहीं, बैंक ऐप खोलो, बैलेंस देखो।",
+   "cap": "Ek. Message nahi, bank app kholo, balance dekho.",
+   "hl": [
+    "balance"
+   ],
+   "gap": 0.2
+  },
+  {
+   "id": "L11",
+   "tts": "दो। पैसे सच में आए हों, तब भी खुद वापस मत भेजो। बोलो, अपने बैंक से रिवर्सल करवाओ।",
+   "cap": "Do. Paise sach mein aaye hon, tab bhi khud wapas mat bhejo. Bolo, apne bank se reversal karwao.",
+   "hl": [
+    "bank",
+    "reversal"
+   ],
+   "red": [
+    "mat"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L12",
+   "tts": "तीन। ऐसा कॉल आए, तो उन्नीस सौ तीस पे रिपोर्ट करो।",
+   "cap": "Teen. Aisa call aaye, toh 1930 pe report karo.",
+   "hl": [
+    "1930"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L13",
+   "tts": "याद रखो। मैसेज नहीं, बैलेंस।",
+   "cap": "Yaad rakho. Message nahi, balance.",
+   "hl": [
+    "balance."
+   ],
+   "gap": 0.35
+  },
+  {
+   "id": "L14",
+   "tts": "फॉलो और सब्सक्राइब करो। और घर में जो भी यू पी आई चलाता है, उसे ये भेजो।",
+   "cap": "Follow aur subscribe karo. Aur ghar mein jo bhi UPI chalata hai, usse ye bhejo.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L15",
+   "tts": "और बताओ, तुम्हें कभी ऐसा कॉल आया? हाँ या ना?",
+   "cap": "Aur batao, tumhe kabhi aisa call aaya? Haan ya na?",
+   "hl": [
+    "Haan"
+   ],
+   "gap": 0.2
+  }
+ ]
+}

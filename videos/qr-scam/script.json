@@ -1,0 +1,13 @@
+{"title": "QR scan karte hi paise gaye", "pace": 1.0,
+ "lines": [
+  {"id": "L1", "tts": "ओ एल एक्स पे सोफ़ा बेचा। बायर बोला, पैसे भेज रहा हूँ।", "cap": "OLX pe sofa becha. Buyer bola, paise bhej raha hoon.", "hl": ["paise"], "gap": 0.0},
+  {"id": "L2", "tts": "बस, ये क्यू आर स्कैन करो।", "cap": "Bas, ye QR scan karo.", "hl": ["QR"]},
+  {"id": "L3", "tts": "स्कैन किया। पिन डाला।", "cap": "Scan kiya. PIN daala.", "hl": ["PIN"]},
+  {"id": "L4", "tts": "पैसे आए नहीं। गए।", "cap": "Paise aaye nahi. Gaye.", "red": ["Gaye."], "gap": 0.18},
+  {"id": "L5", "tts": "क्योंकि क्यू आर का एक ही काम है। पैसे भेजना।", "cap": "Kyunki QR ka ek hi kaam hai. Paise bhejna.", "hl": ["bhejna."], "gap": 0.3},
+  {"id": "L6", "tts": "और यू पी आई पिन तभी लगता है, जब पैसा तुम्हारे खाते से जाता है।", "cap": "Aur UPI PIN tabhi lagta hai, jab paisa tumhare khaate se jaata hai.", "hl": ["PIN"], "red": ["jaata"]},
+  {"id": "L7", "tts": "पैसे लेने के लिए? ना स्कैन, ना पिन।", "cap": "Paise lene ke liye? Na scan, na PIN.", "hl": ["lene"], "gap": 0.25},
+  {"id": "L8", "tts": "तो याद रखो। पैसे लेने हैं? तो पिन नहीं।", "cap": "Toh yaad rakho. Paise lene hain? Toh PIN nahi.", "hl": ["PIN", "nahi."], "gap": 0.3},
+  {"id": "L9", "tts": "फ्रॉड हो गया? तुरंत उन्नीस सौ तीस पे कॉल करो।", "cap": "Fraud ho gaya? Turant 1930 pe call karo.", "hl": ["1930"], "gap": 0.25},
+  {"id": "L10", "tts": "सेव करो, और घर के ग्रुप में भेज दो।", "cap": "Save karo, aur ghar ke group mein bhej do.", "hl": ["Save", "group"], "gap": 0.25}
+ ]}

@@ -1,0 +1,854 @@
+{
+ "fps": 30,
+ "duration": 69.214,
+ "frames": 2077,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 3.211,
+   "cap": "Phone raat bhar charge kiya. 100%.",
+   "hl": [
+    "100%."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Phone",
+     "t": 0.27
+    },
+    {
+     "w": "raat",
+     "t": 0.74
+    },
+    {
+     "w": "bhar",
+     "t": 1.12
+    },
+    {
+     "w": "charge",
+     "t": 1.59
+    },
+    {
+     "w": "kiya.",
+     "t": 2.37
+    },
+    {
+     "w": "100%.",
+     "t": 2.65
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 3.351,
+   "t1": 6.091,
+   "cap": "Par battery ko 100 nahi, 80 pasand hai.",
+   "hl": [
+    "80"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Par",
+     "t": 3.371
+    },
+    {
+     "w": "battery",
+     "t": 3.551
+    },
+    {
+     "w": "ko",
+     "t": 4.211
+    },
+    {
+     "w": "100",
+     "t": 4.491
+    },
+    {
+     "w": "nahi,",
+     "t": 4.821
+    },
+    {
+     "w": "80",
+     "t": 5.281
+    },
+    {
+     "w": "pasand",
+     "t": 5.511
+    },
+    {
+     "w": "hai.",
+     "t": 5.861
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 6.391,
+   "t1": 10.5,
+   "cap": "Kyunki 100% pe, battery sabse zyada stress mein hoti hai.",
+   "hl": [],
+   "red": [
+    "stress"
+   ],
+   "words": [
+    {
+     "w": "Kyunki",
+     "t": 6.411
+    },
+    {
+     "w": "100%",
+     "t": 7.091
+    },
+    {
+     "w": "pe,",
+     "t": 7.451
+    },
+    {
+     "w": "battery",
+     "t": 7.651
+    },
+    {
+     "w": "sabse",
+     "t": 8.161
+    },
+    {
+     "w": "zyada",
+     "t": 8.561
+    },
+    {
+     "w": "stress",
+     "t": 8.911
+    },
+    {
+     "w": "mein",
+     "t": 9.711
+    },
+    {
+     "w": "hoti",
+     "t": 9.921
+    },
+    {
+     "w": "hai.",
+     "t": 10.301
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 10.64,
+   "t1": 13.12,
+   "cap": "Ise kehte hain, high voltage stress.",
+   "hl": [
+    "high",
+    "voltage"
+   ],
+   "red": [
+    "stress."
+   ],
+   "words": [
+    {
+     "w": "Ise",
+     "t": 10.68
+    },
+    {
+     "w": "kehte",
+     "t": 11.0
+    },
+    {
+     "w": "hain,",
+     "t": 11.41
+    },
+    {
+     "w": "high",
+     "t": 11.8
+    },
+    {
+     "w": "voltage",
+     "t": 12.0
+    },
+    {
+     "w": "stress.",
+     "t": 12.84
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 13.42,
+   "t1": 17.917,
+   "cap": "Phone ke andar lithium battery hai. Jitni full, utna zyada dabaav.",
+   "hl": [
+    "lithium"
+   ],
+   "red": [
+    "dabaav."
+   ],
+   "words": [
+    {
+     "w": "Phone",
+     "t": 13.44
+    },
+    {
+     "w": "ke",
+     "t": 13.77
+    },
+    {
+     "w": "andar",
+     "t": 13.91
+    },
+    {
+     "w": "lithium",
+     "t": 14.22
+    },
+    {
+     "w": "battery",
+     "t": 14.89
+    },
+    {
+     "w": "hai.",
+     "t": 15.35
+    },
+    {
+     "w": "Jitni",
+     "t": 15.78
+    },
+    {
+     "w": "full,",
+     "t": 16.21
+    },
+    {
+     "w": "utna",
+     "t": 16.44
+    },
+    {
+     "w": "zyada",
+     "t": 16.73
+    },
+    {
+     "w": "dabaav.",
+     "t": 17.55
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 18.057,
+   "t1": 23.223,
+   "cap": "Aur raat bhar charger pe, wo ghanton 100 pe atki rehti hai. Upar se garmi.",
+   "hl": [
+    "ghanton"
+   ],
+   "red": [
+    "garmi."
+   ],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 18.087
+    },
+    {
+     "w": "raat",
+     "t": 18.257
+    },
+    {
+     "w": "bhar",
+     "t": 18.447
+    },
+    {
+     "w": "charger",
+     "t": 18.777
+    },
+    {
+     "w": "pe,",
+     "t": 19.237
+    },
+    {
+     "w": "wo",
+     "t": 19.387
+    },
+    {
+     "w": "ghanton",
+     "t": 19.687
+    },
+    {
+     "w": "100",
+     "t": 20.207
+    },
+    {
+     "w": "pe",
+     "t": 20.707
+    },
+    {
+     "w": "atki",
+     "t": 20.867
+    },
+    {
+     "w": "rehti",
+     "t": 21.287
+    },
+    {
+     "w": "hai.",
+     "t": 21.867
+    },
+    {
+     "w": "Upar",
+     "t": 22.047
+    },
+    {
+     "w": "se",
+     "t": 22.697
+    },
+    {
+     "w": "garmi.",
+     "t": 22.847
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 23.523,
+   "t1": 28.53,
+   "cap": "Socho, saal ki 365 raatein. Har raat, ghanton ka stress.",
+   "hl": [
+    "365"
+   ],
+   "red": [
+    "stress."
+   ],
+   "words": [
+    {
+     "w": "Socho,",
+     "t": 23.673
+    },
+    {
+     "w": "saal",
+     "t": 24.413
+    },
+    {
+     "w": "ki",
+     "t": 24.683
+    },
+    {
+     "w": "365",
+     "t": 25.003
+    },
+    {
+     "w": "raatein.",
+     "t": 25.613
+    },
+    {
+     "w": "Har",
+     "t": 26.143
+    },
+    {
+     "w": "raat,",
+     "t": 26.563
+    },
+    {
+     "w": "ghanton",
+     "t": 26.833
+    },
+    {
+     "w": "ka",
+     "t": 27.833
+    },
+    {
+     "w": "stress.",
+     "t": 28.123
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 28.67,
+   "t1": 32.385,
+   "cap": "Isliye ek-do saal mein, battery health girne lagti hai.",
+   "hl": [
+    "health"
+   ],
+   "red": [
+    "girne"
+   ],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 28.72
+    },
+    {
+     "w": "ek-do",
+     "t": 29.12
+    },
+    {
+     "w": "saal",
+     "t": 29.69
+    },
+    {
+     "w": "mein,",
+     "t": 29.9
+    },
+    {
+     "w": "battery",
+     "t": 30.11
+    },
+    {
+     "w": "health",
+     "t": 30.68
+    },
+    {
+     "w": "girne",
+     "t": 31.11
+    },
+    {
+     "w": "lagti",
+     "t": 31.69
+    },
+    {
+     "w": "hai.",
+     "t": 32.16
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 32.525,
+   "t1": 38.351,
+   "cap": "Isliye Apple aur Samsung ne, khud aisa option diya hai. 80% tak wala.",
+   "hl": [
+    "Apple",
+    "Samsung",
+    "80%"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 32.565
+    },
+    {
+     "w": "Apple",
+     "t": 33.075
+    },
+    {
+     "w": "aur",
+     "t": 33.595
+    },
+    {
+     "w": "Samsung",
+     "t": 33.825
+    },
+    {
+     "w": "ne,",
+     "t": 34.415
+    },
+    {
+     "w": "khud",
+     "t": 34.815
+    },
+    {
+     "w": "aisa",
+     "t": 35.065
+    },
+    {
+     "w": "option",
+     "t": 36.085
+    },
+    {
+     "w": "diya",
+     "t": 36.895
+    },
+    {
+     "w": "hai.",
+     "t": 37.155
+    },
+    {
+     "w": "80%",
+     "t": 37.385
+    },
+    {
+     "w": "tak",
+     "t": 37.665
+    },
+    {
+     "w": "wala.",
+     "t": 37.905
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 38.651,
+   "t1": 40.323,
+   "cap": "Toh 3 cheezein yaad rakho.",
+   "hl": [
+    "3"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Toh",
+     "t": 38.691
+    },
+    {
+     "w": "3",
+     "t": 39.021
+    },
+    {
+     "w": "cheezein",
+     "t": 39.221
+    },
+    {
+     "w": "yaad",
+     "t": 39.581
+    },
+    {
+     "w": "rakho.",
+     "t": 39.771
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 40.463,
+   "t1": 48.402,
+   "cap": "Ek. Settings mein Battery kholo. iPhone pe Optimized ya 80% Limit set karo, Samsung pe Protect Battery.",
+   "hl": [
+    "Optimized",
+    "80%",
+    "Limit",
+    "Protect",
+    "Battery."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Ek.",
+     "t": 40.493
+    },
+    {
+     "w": "Settings",
+     "t": 40.843
+    },
+    {
+     "w": "mein",
+     "t": 41.403
+    },
+    {
+     "w": "Battery",
+     "t": 41.603
+    },
+    {
+     "w": "kholo.",
+     "t": 42.153
+    },
+    {
+     "w": "iPhone",
+     "t": 42.833
+    },
+    {
+     "w": "pe",
+     "t": 43.903
+    },
+    {
+     "w": "Optimized",
+     "t": 44.063
+    },
+    {
+     "w": "ya",
+     "t": 44.973
+    },
+    {
+     "w": "80%",
+     "t": 45.163
+    },
+    {
+     "w": "Limit",
+     "t": 45.393
+    },
+    {
+     "w": "set",
+     "t": 45.763
+    },
+    {
+     "w": "karo,",
+     "t": 45.943
+    },
+    {
+     "w": "Samsung",
+     "t": 46.273
+    },
+    {
+     "w": "pe",
+     "t": 46.783
+    },
+    {
+     "w": "Protect",
+     "t": 47.033
+    },
+    {
+     "w": "Battery.",
+     "t": 47.593
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "t0": 48.542,
+   "t1": 54.127,
+   "cap": "Do. Charging pe phone garam mat hone do. Takiye ke neeche nahi, game nahi charging pe.",
+   "hl": [
+    "garam"
+   ],
+   "red": [
+    "takiye",
+    "game"
+   ],
+   "words": [
+    {
+     "w": "Do.",
+     "t": 48.572
+    },
+    {
+     "w": "Charging",
+     "t": 48.732
+    },
+    {
+     "w": "pe",
+     "t": 49.272
+    },
+    {
+     "w": "phone",
+     "t": 49.432
+    },
+    {
+     "w": "garam",
+     "t": 49.842
+    },
+    {
+     "w": "mat",
+     "t": 50.182
+    },
+    {
+     "w": "hone",
+     "t": 50.352
+    },
+    {
+     "w": "do.",
+     "t": 50.862
+    },
+    {
+     "w": "Takiye",
+     "t": 51.152
+    },
+    {
+     "w": "ke",
+     "t": 51.652
+    },
+    {
+     "w": "neeche",
+     "t": 51.872
+    },
+    {
+     "w": "nahi,",
+     "t": 52.222
+    },
+    {
+     "w": "game",
+     "t": 52.802
+    },
+    {
+     "w": "nahi",
+     "t": 53.112
+    },
+    {
+     "w": "charging",
+     "t": 53.552
+    },
+    {
+     "w": "pe.",
+     "t": 53.932
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "t0": 54.427,
+   "t1": 56.413,
+   "cap": "Yaad rakho. 20 se 80.",
+   "hl": [
+    "20",
+    "80."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Yaad",
+     "t": 54.457
+    },
+    {
+     "w": "rakho.",
+     "t": 54.677
+    },
+    {
+     "w": "20",
+     "t": 55.477
+    },
+    {
+     "w": "se",
+     "t": 55.947
+    },
+    {
+     "w": "80.",
+     "t": 56.137
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "t0": 56.713,
+   "t1": 63.074,
+   "cap": "Follow aur subscribe karo. Aur jo dost raat bhar charge laga kar sota hai, usse ye bhej do.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 56.733
+    },
+    {
+     "w": "aur",
+     "t": 57.083
+    },
+    {
+     "w": "subscribe",
+     "t": 57.263
+    },
+    {
+     "w": "karo.",
+     "t": 58.223
+    },
+    {
+     "w": "Aur",
+     "t": 58.573
+    },
+    {
+     "w": "jo",
+     "t": 58.753
+    },
+    {
+     "w": "dost",
+     "t": 59.003
+    },
+    {
+     "w": "raat",
+     "t": 59.193
+    },
+    {
+     "w": "bhar",
+     "t": 59.393
+    },
+    {
+     "w": "charge",
+     "t": 59.613
+    },
+    {
+     "w": "laga",
+     "t": 60.063
+    },
+    {
+     "w": "kar",
+     "t": 60.973
+    },
+    {
+     "w": "sota",
+     "t": 61.403
+    },
+    {
+     "w": "hai,",
+     "t": 61.853
+    },
+    {
+     "w": "usse",
+     "t": 62.033
+    },
+    {
+     "w": "ye",
+     "t": 62.533
+    },
+    {
+     "w": "bhej",
+     "t": 62.703
+    },
+    {
+     "w": "do.",
+     "t": 62.893
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "t0": 63.214,
+   "t1": 67.614,
+   "cap": "Aur batao, tum bhi raat bhar charge lagate ho? Haan ya na?",
+   "hl": [
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 63.344
+    },
+    {
+     "w": "batao,",
+     "t": 63.704
+    },
+    {
+     "w": "tum",
+     "t": 64.274
+    },
+    {
+     "w": "bhi",
+     "t": 64.504
+    },
+    {
+     "w": "raat",
+     "t": 64.734
+    },
+    {
+     "w": "bhar",
+     "t": 65.044
+    },
+    {
+     "w": "charge",
+     "t": 65.354
+    },
+    {
+     "w": "lagate",
+     "t": 66.104
+    },
+    {
+     "w": "ho?",
+     "t": 66.734
+    },
+    {
+     "w": "Haan",
+     "t": 66.944
+    },
+    {
+     "w": "ya",
+     "t": 67.194
+    },
+    {
+     "w": "na?",
+     "t": 67.404
+    }
+   ]
+  }
+ ]
+}

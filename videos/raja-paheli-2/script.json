@@ -1,0 +1,129 @@
+{
+ "title": "Raja ki paheli – jawab",
+ "engine": "kokoro",
+ "pace": 1.05,
+ "music": {
+  "bpm": 92,
+  "root": 43,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "कल की पहेली का जवाब। क़ैदी ने बस इतना कहा।",
+   "cap": "Kal ki paheli ka jawab. Qaidi ne bas itna kaha.",
+   "hl": [
+    "jawab."
+   ],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "मुझे अंधे कुएं में डाला जाएगा।",
+   "cap": "\"Mujhe andhe kuyein mein daala jaayega.\"",
+   "hl": [
+    "andhe",
+    "kuyein"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L3",
+   "tts": "बस, राजा फंस गया।",
+   "cap": "Bas, raja phas gaya.",
+   "hl": [],
+   "red": [
+    "phas"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L4",
+   "tts": "अगर ये लाइन सच है, तो नियम कहता है, शेर का पिंजरा।",
+   "cap": "Agar ye line sach hai, toh niyam kehta hai, sher ka pinjra.",
+   "hl": [
+    "sach"
+   ],
+   "red": [
+    "pinjra."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L5",
+   "tts": "पर पिंजरे में डाला, तो कुएं वाली बात झूठ हो गई।",
+   "cap": "Par pinjre mein daala, toh kuyein wali baat jhooth ho gayi.",
+   "hl": [],
+   "red": [
+    "jhooth"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L6",
+   "tts": "और अगर लाइन झूठ है, तो नियम कहता है, कुआं।",
+   "cap": "Aur agar line jhooth hai, toh niyam kehta hai, kuan.",
+   "hl": [
+    "jhooth"
+   ],
+   "red": [
+    "kuan."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L7",
+   "tts": "पर कुएं में डाला, तो लाइन सच हो गई।",
+   "cap": "Par kuyein mein daala, toh line sach ho gayi.",
+   "hl": [
+    "sach"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L8",
+   "tts": "दोनों तरफ़, राजा की अपनी बात टूटती है।",
+   "cap": "Dono taraf, raja ki apni baat toot-ti hai.",
+   "hl": [],
+   "red": [
+    "toot-ti"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L9",
+   "tts": "इसलिए राजा को, क़ैदी को आज़ाद करना ही पड़ा।",
+   "cap": "Isliye raja ko, qaidi ko aazaad karna hi pada.",
+   "hl": [
+    "aazaad"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L10",
+   "tts": "तुमने सही जवाब दिया था? कमेंट में बताओ।",
+   "cap": "Tumne sahi jawab diya tha? Comment mein batao.",
+   "hl": [
+    "sahi",
+    "Comment"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L11",
+   "tts": "ऐसी और पहेलियों के लिए, फ़ॉलो और सब्सक्राइब करो।",
+   "cap": "Aisi aur paheliyon ke liye, follow aur subscribe karo.",
+   "hl": [
+    "follow",
+    "subscribe"
+   ],
+   "red": [],
+   "gap": 0.14
+  }
+ ]
+}

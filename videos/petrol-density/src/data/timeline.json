@@ -1,0 +1,769 @@
+{
+ "fps": 30,
+ "duration": 57.828,
+ "frames": 1735,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 1.425,
+   "cap": "Meter zero tha.",
+   "hl": [
+    "zero"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Meter",
+     "t": 0.25
+    },
+    {
+     "w": "zero",
+     "t": 0.725
+    },
+    {
+     "w": "tha.",
+     "t": 1.175
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 1.575,
+   "t1": 3.652,
+   "cap": "Par density, kisi ne nahi dekhi.",
+   "hl": [
+    "density,"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Par",
+     "t": 1.575
+    },
+    {
+     "w": "density,",
+     "t": 1.779
+    },
+    {
+     "w": "kisi",
+     "t": 2.349
+    },
+    {
+     "w": "ne",
+     "t": 2.716
+    },
+    {
+     "w": "nahi",
+     "t": 2.899
+    },
+    {
+     "w": "dekhi.",
+     "t": 3.265
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 3.902,
+   "t1": 6.685,
+   "cap": "Zero sirf batata hai, kitna petrol gaya.",
+   "hl": [
+    "kitna"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Zero",
+     "t": 3.902
+    },
+    {
+     "w": "sirf",
+     "t": 4.333
+    },
+    {
+     "w": "batata",
+     "t": 4.598
+    },
+    {
+     "w": "hai,",
+     "t": 5.244
+    },
+    {
+     "w": "kitna",
+     "t": 5.484
+    },
+    {
+     "w": "petrol",
+     "t": 5.94
+    },
+    {
+     "w": "gaya.",
+     "t": 6.42
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 6.805,
+   "t1": 9.107,
+   "cap": "Ye nahi batata, ki petrol kaisa hai.",
+   "hl": [],
+   "red": [
+    "kaisa"
+   ],
+   "words": [
+    {
+     "w": "Ye",
+     "t": 6.805
+    },
+    {
+     "w": "nahi",
+     "t": 6.99
+    },
+    {
+     "w": "batata,",
+     "t": 7.359
+    },
+    {
+     "w": "ki",
+     "t": 7.914
+    },
+    {
+     "w": "petrol",
+     "t": 8.098
+    },
+    {
+     "w": "kaisa",
+     "t": 8.51
+    },
+    {
+     "w": "hai.",
+     "t": 8.901
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 9.407,
+   "t1": 12.753,
+   "cap": "Isliye machine pe ek aur number hota hai. Density.",
+   "hl": [
+    "Density."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 9.407
+    },
+    {
+     "w": "machine",
+     "t": 9.848
+    },
+    {
+     "w": "pe",
+     "t": 10.464
+    },
+    {
+     "w": "ek",
+     "t": 10.662
+    },
+    {
+     "w": "aur",
+     "t": 10.859
+    },
+    {
+     "w": "number",
+     "t": 11.08
+    },
+    {
+     "w": "hota",
+     "t": 11.521
+    },
+    {
+     "w": "hai.",
+     "t": 11.916
+    },
+    {
+     "w": "Density.",
+     "t": 12.137
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 12.873,
+   "t1": 17.701,
+   "cap": "Petrol ke liye, ye 720 se 775 ke beech hona chahiye.",
+   "hl": [
+    "720",
+    "775"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Petrol",
+     "t": 12.873
+    },
+    {
+     "w": "ke",
+     "t": 13.495
+    },
+    {
+     "w": "liye,",
+     "t": 13.774
+    },
+    {
+     "w": "ye",
+     "t": 14.117
+    },
+    {
+     "w": "720",
+     "t": 14.396
+    },
+    {
+     "w": "se",
+     "t": 14.976
+    },
+    {
+     "w": "775",
+     "t": 15.255
+    },
+    {
+     "w": "ke",
+     "t": 15.834
+    },
+    {
+     "w": "beech",
+     "t": 16.113
+    },
+    {
+     "w": "hona",
+     "t": 16.488
+    },
+    {
+     "w": "chahiye.",
+     "t": 17.046
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 17.901,
+   "t1": 20.679,
+   "cap": "Bahar ho, ya zero dikhe? Toh sawaal poochho.",
+   "hl": [
+    "sawaal"
+   ],
+   "red": [
+    "Bahar"
+   ],
+   "words": [
+    {
+     "w": "Bahar",
+     "t": 17.901
+    },
+    {
+     "w": "ho,",
+     "t": 18.323
+    },
+    {
+     "w": "ya",
+     "t": 18.522
+    },
+    {
+     "w": "zero",
+     "t": 18.722
+    },
+    {
+     "w": "dikhe?",
+     "t": 19.121
+    },
+    {
+     "w": "Toh",
+     "t": 19.543
+    },
+    {
+     "w": "sawaal",
+     "t": 19.766
+    },
+    {
+     "w": "poochho.",
+     "t": 20.211
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 20.929,
+   "t1": 25.234,
+   "cap": "Kyunki milawat wala petrol, engine ko andar se kharab karta hai.",
+   "hl": [],
+   "red": [
+    "milawat",
+    "kharab"
+   ],
+   "words": [
+    {
+     "w": "Kyunki",
+     "t": 20.929
+    },
+    {
+     "w": "milawat",
+     "t": 21.362
+    },
+    {
+     "w": "wala",
+     "t": 21.968
+    },
+    {
+     "w": "petrol,",
+     "t": 22.356
+    },
+    {
+     "w": "engine",
+     "t": 22.79
+    },
+    {
+     "w": "ko",
+     "t": 23.373
+    },
+    {
+     "w": "andar",
+     "t": 23.567
+    },
+    {
+     "w": "se",
+     "t": 23.978
+    },
+    {
+     "w": "kharab",
+     "t": 24.172
+    },
+    {
+     "w": "karta",
+     "t": 24.606
+    },
+    {
+     "w": "hai.",
+     "t": 25.017
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 25.484,
+   "t1": 28.457,
+   "cap": "Aur ye check karwana, tumhara haq hai. Bilkul free.",
+   "hl": [
+    "haq",
+    "free."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 25.484
+    },
+    {
+     "w": "ye",
+     "t": 25.699
+    },
+    {
+     "w": "check",
+     "t": 25.893
+    },
+    {
+     "w": "karwana,",
+     "t": 26.153
+    },
+    {
+     "w": "tumhara",
+     "t": 26.755
+    },
+    {
+     "w": "haq",
+     "t": 27.357
+    },
+    {
+     "w": "hai.",
+     "t": 27.573
+    },
+    {
+     "w": "Bilkul",
+     "t": 27.788
+    },
+    {
+     "w": "free.",
+     "t": 28.219
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 28.807,
+   "t1": 30.643,
+   "cap": "Toh 3 cheezein yaad rakho.",
+   "hl": [
+    "3"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Toh",
+     "t": 28.807
+    },
+    {
+     "w": "3",
+     "t": 29.076
+    },
+    {
+     "w": "cheezein",
+     "t": 29.243
+    },
+    {
+     "w": "yaad",
+     "t": 29.837
+    },
+    {
+     "w": "rakho.",
+     "t": 30.133
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 30.843,
+   "t1": 34.104,
+   "cap": "Ek. Bharwane se pehle, machine pe density dekho.",
+   "hl": [
+    "density"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Ek.",
+     "t": 30.843
+    },
+    {
+     "w": "Bharwane",
+     "t": 31.039
+    },
+    {
+     "w": "se",
+     "t": 31.67
+    },
+    {
+     "w": "pehle,",
+     "t": 31.865
+    },
+    {
+     "w": "machine",
+     "t": 32.278
+    },
+    {
+     "w": "pe",
+     "t": 32.887
+    },
+    {
+     "w": "density",
+     "t": 33.082
+    },
+    {
+     "w": "dekho.",
+     "t": 33.691
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "t0": 34.404,
+   "t1": 39.526,
+   "cap": "Do. Shak ho, toh filter paper test maango. Do boond, aur daag? Matlab gadbad.",
+   "hl": [
+    "filter",
+    "paper"
+   ],
+   "red": [
+    "daag?",
+    "gadbad."
+   ],
+   "words": [
+    {
+     "w": "Do.",
+     "t": 34.404
+    },
+    {
+     "w": "Shak",
+     "t": 34.645
+    },
+    {
+     "w": "ho,",
+     "t": 34.94
+    },
+    {
+     "w": "toh",
+     "t": 35.181
+    },
+    {
+     "w": "filter",
+     "t": 35.449
+    },
+    {
+     "w": "paper",
+     "t": 35.985
+    },
+    {
+     "w": "test",
+     "t": 36.494
+    },
+    {
+     "w": "maango.",
+     "t": 36.789
+    },
+    {
+     "w": "Do",
+     "t": 37.326
+    },
+    {
+     "w": "boond,",
+     "t": 37.566
+    },
+    {
+     "w": "aur",
+     "t": 37.89
+    },
+    {
+     "w": "daag?",
+     "t": 38.158
+    },
+    {
+     "w": "Matlab",
+     "t": 38.453
+    },
+    {
+     "w": "gadbad.",
+     "t": 38.99
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "t0": 39.826,
+   "t1": 45.683,
+   "cap": "Teen. Pump mana kare, toh board pe likhi helpline, ya 1915 pe shikayat karo.",
+   "hl": [
+    "1915"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Teen.",
+     "t": 39.826
+    },
+    {
+     "w": "Pump",
+     "t": 40.12
+    },
+    {
+     "w": "mana",
+     "t": 40.414
+    },
+    {
+     "w": "kare,",
+     "t": 40.893
+    },
+    {
+     "w": "toh",
+     "t": 41.371
+    },
+    {
+     "w": "board",
+     "t": 41.637
+    },
+    {
+     "w": "pe",
+     "t": 41.959
+    },
+    {
+     "w": "likhi",
+     "t": 42.198
+    },
+    {
+     "w": "helpline,",
+     "t": 42.704
+    },
+    {
+     "w": "ya",
+     "t": 43.476
+    },
+    {
+     "w": "1915",
+     "t": 43.715
+    },
+    {
+     "w": "pe",
+     "t": 44.377
+    },
+    {
+     "w": "shikayat",
+     "t": 44.616
+    },
+    {
+     "w": "karo.",
+     "t": 45.205
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "t0": 46.033,
+   "t1": 48.265,
+   "cap": "Yaad rakho. Zero bhi, density bhi.",
+   "hl": [
+    "density"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Yaad",
+     "t": 46.033
+    },
+    {
+     "w": "rakho.",
+     "t": 46.29
+    },
+    {
+     "w": "Zero",
+     "t": 46.732
+    },
+    {
+     "w": "bhi,",
+     "t": 47.149
+    },
+    {
+     "w": "density",
+     "t": 47.382
+    },
+    {
+     "w": "bhi.",
+     "t": 48.032
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "t0": 48.565,
+   "t1": 52.677,
+   "cap": "Follow aur subscribe karo. Aur apne bike wale dost ko, ye bhejo.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 48.565
+    },
+    {
+     "w": "aur",
+     "t": 48.999
+    },
+    {
+     "w": "subscribe",
+     "t": 49.215
+    },
+    {
+     "w": "karo.",
+     "t": 49.866
+    },
+    {
+     "w": "Aur",
+     "t": 50.255
+    },
+    {
+     "w": "apne",
+     "t": 50.472
+    },
+    {
+     "w": "bike",
+     "t": 50.86
+    },
+    {
+     "w": "wale",
+     "t": 51.249
+    },
+    {
+     "w": "dost",
+     "t": 51.638
+    },
+    {
+     "w": "ko,",
+     "t": 51.877
+    },
+    {
+     "w": "ye",
+     "t": 52.072
+    },
+    {
+     "w": "bhejo.",
+     "t": 52.266
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "t0": 52.877,
+   "t1": 56.228,
+   "cap": "Aur batao, tumne kabhi density dekhi hai? Haan ya na?",
+   "hl": [
+    "Haan"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 52.877
+    },
+    {
+     "w": "batao,",
+     "t": 53.097
+    },
+    {
+     "w": "tumne",
+     "t": 53.513
+    },
+    {
+     "w": "kabhi",
+     "t": 53.929
+    },
+    {
+     "w": "density",
+     "t": 54.345
+    },
+    {
+     "w": "dekhi",
+     "t": 54.957
+    },
+    {
+     "w": "hai?",
+     "t": 55.373
+    },
+    {
+     "w": "Haan",
+     "t": 55.593
+    },
+    {
+     "w": "ya",
+     "t": 55.835
+    },
+    {
+     "w": "na?",
+     "t": 56.031
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+{
+ "title": "Phone 100% charge mat karo",
+ "pace": 1.0,
+ "speed": 1.06,
+ "voice_src": "voice/clean.wav",
+ "music": {
+  "bpm": 96,
+  "root": 45,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "src": [
+    [
+     8.01,
+     10.06
+    ],
+    [
+     5.95,
+     6.89
+    ]
+   ],
+   "tts": "",
+   "cap": "Phone raat bhar charge kiya. 100%.",
+   "hl": [
+    "100%."
+   ],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "src": [
+    [
+     10.55,
+     12.19
+    ],
+    [
+     15.13,
+     16.15
+    ]
+   ],
+   "tts": "",
+   "cap": "Par battery ko 100 nahi, 80 pasand hai.",
+   "hl": [
+    "80"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L3",
+   "src": [
+    [
+     19.11,
+     23.58
+    ]
+   ],
+   "tts": "",
+   "cap": "Kyunki 100% pe, battery sabse zyada stress mein hoti hai.",
+   "hl": [],
+   "red": [
+    "stress"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L4",
+   "src": [
+    [
+     24.35,
+     27.22
+    ]
+   ],
+   "tts": "",
+   "cap": "Ise kehte hain, high voltage stress.",
+   "hl": [
+    "high",
+    "voltage"
+   ],
+   "red": [
+    "stress."
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L5",
+   "src": [
+    [
+     27.88,
+     32.89
+    ]
+   ],
+   "tts": "",
+   "cap": "Phone ke andar lithium battery hai. Jitni full, utna zyada dabaav.",
+   "hl": [
+    "lithium"
+   ],
+   "red": [
+    "dabaav."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L6",
+   "src": [
+    [
+     33.51,
+     34.97
+    ],
+    [
+     41.17,
+     43.95
+    ],
+    [
+     44.53,
+     46.04
+    ]
+   ],
+   "tts": "",
+   "cap": "Aur raat bhar charger pe, wo ghanton 100 pe atki rehti hai. Upar se garmi.",
+   "hl": [
+    "ghanton"
+   ],
+   "red": [
+    "garmi."
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L7",
+   "src": [
+    [
+     56.92,
+     58.46
+    ],
+    [
+     59.59,
+     60.8
+    ],
+    [
+     61.31,
+     64.14
+    ]
+   ],
+   "tts": "",
+   "cap": "Socho, saal ki 365 raatein. Har raat, ghanton ka stress.",
+   "hl": [
+    "365"
+   ],
+   "red": [
+    "stress."
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L8",
+   "src": [
+    [
+     65.67,
+     70.03
+    ]
+   ],
+   "tts": "",
+   "cap": "Isliye ek-do saal mein, battery health girne lagti hai.",
+   "hl": [
+    "health"
+   ],
+   "red": [
+    "girne"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L9",
+   "src": [
+    [
+     70.68,
+     78.38
+    ]
+   ],
+   "tts": "",
+   "cap": "Isliye Apple aur Samsung ne, khud aisa option diya hai. 80% tak wala.",
+   "hl": [
+    "Apple",
+    "Samsung",
+    "80%"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L10",
+   "src": [
+    [
+     78.56,
+     80.28
+    ]
+   ],
+   "tts": "",
+   "cap": "Toh 3 cheezein yaad rakho.",
+   "hl": [
+    "3"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L11",
+   "src": [
+    [
+     80.71,
+     89.6
+    ]
+   ],
+   "tts": "",
+   "cap": "Ek. Settings mein Battery kholo. iPhone pe Optimized ya 80% Limit set karo, Samsung pe Protect Battery.",
+   "hl": [
+    "Optimized",
+    "80%",
+    "Limit",
+    "Protect",
+    "Battery."
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L12",
+   "src": [
+    [
+     89.79,
+     92.47
+    ],
+    [
+     96.5,
+     100.51
+    ]
+   ],
+   "tts": "",
+   "cap": "Do. Charging pe phone garam mat hone do. Takiye ke neeche nahi, game nahi charging pe.",
+   "hl": [
+    "garam"
+   ],
+   "red": [
+    "takiye",
+    "game"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L13",
+   "src": [
+    [
+     100.89,
+     103.53
+    ]
+   ],
+   "tts": "",
+   "cap": "Yaad rakho. 20 se 80.",
+   "hl": [
+    "20",
+    "80."
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L14",
+   "src": [
+    [
+     105.92,
+     113.16
+    ]
+   ],
+   "tts": "",
+   "cap": "Follow aur subscribe karo. Aur jo dost raat bhar charge laga kar sota hai, usse ye bhej do.",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L15",
+   "src": [
+    [
+     113.48,
+     118.21
+    ]
+   ],
+   "tts": "",
+   "cap": "Aur batao, tum bhi raat bhar charge lagate ho? Haan ya na?",
+   "hl": [
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "gap": 0.14
+  }
+ ],
+ "engine": "take"
+}
