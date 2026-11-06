@@ -1,0 +1,177 @@
+{
+ "title": "Rani ki Vav",
+ "engine": "omnivoice",
+ "pace": 1.0,
+ "music": {
+  "bpm": 88,
+  "root": 45,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "गुजरात की ज़मीन में एक मंदिर है, जो ऊपर नहीं, नीचे की तरफ़ बना है।",
+   "cap": "Gujarat ki zameen mein ek mandir hai, jo upar nahi, neeche ki taraf bana hai.",
+   "hl": [
+    "neeche"
+   ],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "नाम है, रानी की वाव।",
+   "cap": "Naam hai, Rani ki Vav.",
+   "hl": [
+    "Rani",
+    "Vav."
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L3",
+   "tts": "कहानी शुरू होती है एक सवाल से। गर्मी में पानी कहां से लाएं?",
+   "cap": "Kahani shuru hoti hai ek sawaal se. Garmi mein paani kahan se laayein?",
+   "hl": [
+    "paani"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L4",
+   "tts": "कुआं खोदो, तो गर्मी में पानी और नीचे चला जाता है।",
+   "cap": "Kuan khodo, toh garmi mein paani aur neeche chala jaata hai.",
+   "hl": [],
+   "red": [
+    "neeche"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L5",
+   "tts": "इसलिए बनाई गईं सीढ़ियां, जो सीधे पानी तक ले जाती हैं। इसे कहते हैं, वाव, यानी बावड़ी।",
+   "cap": "Isliye banaayi gayi seedhiyan, jo seedhe paani tak le jaati hain. Ise kehte hain, vav, yaani baoli.",
+   "hl": [
+    "seedhiyan,",
+    "vav,",
+    "baoli."
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L6",
+   "tts": "रानी उदयमती ने, राजा भीमदेव प्रथम की याद में, इसे बनवाया।",
+   "cap": "Rani Udayamati ne, raja Bhimdev pratham ki yaad mein, ise banwaaya.",
+   "hl": [
+    "Udayamati"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L7",
+   "tts": "सात मंज़िलें, ज़मीन के अंदर।",
+   "cap": "Saat manzilein, zameen ke andar.",
+   "hl": [
+    "Saat"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L8",
+   "tts": "हर दीवार पे नक्काशी। पांच सौ से ज़्यादा बड़ी मूर्तियां, और हज़ार से ज़्यादा छोटी।",
+   "cap": "Har deewar pe nakkashi. 500 se zyada badi moortiyan, aur 1000 se zyada chhoti.",
+   "hl": [
+    "nakkashi.",
+    "500",
+    "1000"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L9",
+   "tts": "पानी यहां पवित्र था, इसलिए बावड़ी को उल्टा मंदिर बनाया गया।",
+   "cap": "Paani yahan pavitra tha, isliye baoli ko ulta mandir banaya gaya.",
+   "hl": [
+    "pavitra",
+    "ulta",
+    "mandir"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L10",
+   "tts": "फिर सरस्वती नदी में बाढ़ आई, और पूरी बावड़ी मिट्टी में दब गई।",
+   "cap": "Phir Saraswati nadi mein baadh aayi, aur poori baoli mitti mein dab gayi.",
+   "hl": [
+    "Saraswati"
+   ],
+   "red": [
+    "baadh",
+    "dab"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L11",
+   "tts": "सदियों तक, किसी को पता ही नहीं चला।",
+   "cap": "Sadiyon tak, kisi ko pata hi nahi chala.",
+   "hl": [],
+   "red": [
+    "Sadiyon"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L12",
+   "tts": "उन्नीस सौ चालीस के दशक में इसे फिर से ढूंढा गया, और अस्सी के दशक में साफ़ किया गया।",
+   "cap": "1940s mein ise phir se dhoondha gaya, aur 1980s mein saaf kiya gaya.",
+   "hl": [
+    "1940s",
+    "1980s"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L13",
+   "tts": "और मिट्टी ने ही, नक्काशी को बचा के रखा।",
+   "cap": "Aur mitti ne hi, nakkashi ko bacha ke rakha.",
+   "hl": [
+    "bacha"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L14",
+   "tts": "आज ये यूनेस्को वर्ल्ड हेरिटेज है, और सौ रुपये के नोट पे भी छपी है।",
+   "cap": "Aaj ye UNESCO World Heritage hai, aur ₹100 ke note pe bhi chhapi hai.",
+   "hl": [
+    "UNESCO",
+    "₹100"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L15",
+   "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुमने रानी की वाव देखी है? हां या ना?",
+   "cap": "Follow aur subscribe karo. Aur batao, tumne Rani ki Vav dekhi hai? Haan ya na?",
+   "hl": [
+    "Follow",
+    "subscribe",
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "gap": 0.3
+  }
+ ]
+}

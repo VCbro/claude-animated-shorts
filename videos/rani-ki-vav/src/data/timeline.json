@@ -1,0 +1,898 @@
+{
+ "fps": 30,
+ "duration": 67.848,
+ "frames": 2036,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 4.984,
+   "cap": "Gujarat ki zameen mein ek mandir hai, jo upar nahi, neeche ki taraf bana hai.",
+   "hl": [
+    "neeche"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Gujarat",
+     "t": 0.25
+    },
+    {
+     "w": "ki",
+     "t": 0.831
+    },
+    {
+     "w": "zameen",
+     "t": 1.017
+    },
+    {
+     "w": "mein",
+     "t": 1.433
+    },
+    {
+     "w": "ek",
+     "t": 1.663
+    },
+    {
+     "w": "mandir",
+     "t": 1.849
+    },
+    {
+     "w": "hai,",
+     "t": 2.265
+    },
+    {
+     "w": "jo",
+     "t": 2.473
+    },
+    {
+     "w": "upar",
+     "t": 2.66
+    },
+    {
+     "w": "nahi,",
+     "t": 3.033
+    },
+    {
+     "w": "neeche",
+     "t": 3.406
+    },
+    {
+     "w": "ki",
+     "t": 3.822
+    },
+    {
+     "w": "taraf",
+     "t": 4.008
+    },
+    {
+     "w": "bana",
+     "t": 4.403
+    },
+    {
+     "w": "hai.",
+     "t": 4.776
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 5.124,
+   "t1": 6.662,
+   "cap": "Naam hai, Rani ki Vav.",
+   "hl": [
+    "Rani",
+    "Vav."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Naam",
+     "t": 5.124
+    },
+    {
+     "w": "hai,",
+     "t": 5.417
+    },
+    {
+     "w": "Rani",
+     "t": 5.682
+    },
+    {
+     "w": "ki",
+     "t": 6.159
+    },
+    {
+     "w": "Vav.",
+     "t": 6.397
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 6.962,
+   "t1": 11.208,
+   "cap": "Kahani shuru hoti hai ek sawaal se. Garmi mein paani kahan se laayein?",
+   "hl": [
+    "paani"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Kahani",
+     "t": 6.962
+    },
+    {
+     "w": "shuru",
+     "t": 7.525
+    },
+    {
+     "w": "hoti",
+     "t": 7.923
+    },
+    {
+     "w": "hai",
+     "t": 8.298
+    },
+    {
+     "w": "ek",
+     "t": 8.507
+    },
+    {
+     "w": "sawaal",
+     "t": 8.695
+    },
+    {
+     "w": "se.",
+     "t": 9.114
+    },
+    {
+     "w": "Garmi",
+     "t": 9.302
+    },
+    {
+     "w": "mein",
+     "t": 9.699
+    },
+    {
+     "w": "paani",
+     "t": 9.93
+    },
+    {
+     "w": "kahan",
+     "t": 10.327
+    },
+    {
+     "w": "se",
+     "t": 10.724
+    },
+    {
+     "w": "laayein?",
+     "t": 10.912
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 11.348,
+   "t1": 14.889,
+   "cap": "Kuan khodo, toh garmi mein paani aur neeche chala jaata hai.",
+   "hl": [],
+   "red": [
+    "neeche"
+   ],
+   "words": [
+    {
+     "w": "Kuan",
+     "t": 11.348
+    },
+    {
+     "w": "khodo,",
+     "t": 11.582
+    },
+    {
+     "w": "toh",
+     "t": 11.985
+    },
+    {
+     "w": "garmi",
+     "t": 12.197
+    },
+    {
+     "w": "mein",
+     "t": 12.599
+    },
+    {
+     "w": "paani",
+     "t": 12.833
+    },
+    {
+     "w": "aur",
+     "t": 13.235
+    },
+    {
+     "w": "neeche",
+     "t": 13.448
+    },
+    {
+     "w": "chala",
+     "t": 13.872
+    },
+    {
+     "w": "jaata",
+     "t": 14.274
+    },
+    {
+     "w": "hai.",
+     "t": 14.677
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 15.029,
+   "t1": 21.403,
+   "cap": "Isliye banaayi gayi seedhiyan, jo seedhe paani tak le jaati hain. Ise kehte hain, vav, yaani baoli.",
+   "hl": [
+    "seedhiyan,",
+    "vav,",
+    "baoli."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 15.029
+    },
+    {
+     "w": "banaayi",
+     "t": 15.506
+    },
+    {
+     "w": "gayi",
+     "t": 16.009
+    },
+    {
+     "w": "seedhiyan,",
+     "t": 16.272
+    },
+    {
+     "w": "jo",
+     "t": 16.824
+    },
+    {
+     "w": "seedhe",
+     "t": 17.038
+    },
+    {
+     "w": "paani",
+     "t": 17.516
+    },
+    {
+     "w": "tak",
+     "t": 17.969
+    },
+    {
+     "w": "le",
+     "t": 18.207
+    },
+    {
+     "w": "jaati",
+     "t": 18.422
+    },
+    {
+     "w": "hain.",
+     "t": 18.875
+    },
+    {
+     "w": "Ise",
+     "t": 19.138
+    },
+    {
+     "w": "kehte",
+     "t": 19.542
+    },
+    {
+     "w": "hain,",
+     "t": 19.994
+    },
+    {
+     "w": "vav,",
+     "t": 20.258
+    },
+    {
+     "w": "yaani",
+     "t": 20.497
+    },
+    {
+     "w": "baoli.",
+     "t": 20.95
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 21.703,
+   "t1": 26.214,
+   "cap": "Rani Udayamati ne, raja Bhimdev pratham ki yaad mein, ise banwaaya.",
+   "hl": [
+    "Udayamati"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Rani",
+     "t": 21.703
+    },
+    {
+     "w": "Udayamati",
+     "t": 22.12
+    },
+    {
+     "w": "ne,",
+     "t": 22.979
+    },
+    {
+     "w": "raja",
+     "t": 23.188
+    },
+    {
+     "w": "Bhimdev",
+     "t": 23.605
+    },
+    {
+     "w": "pratham",
+     "t": 24.095
+    },
+    {
+     "w": "ki",
+     "t": 24.585
+    },
+    {
+     "w": "yaad",
+     "t": 24.793
+    },
+    {
+     "w": "mein,",
+     "t": 25.05
+    },
+    {
+     "w": "ise",
+     "t": 25.307
+    },
+    {
+     "w": "banwaaya.",
+     "t": 25.701
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 26.354,
+   "t1": 28.473,
+   "cap": "Saat manzilein, zameen ke andar.",
+   "hl": [
+    "Saat"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Saat",
+     "t": 26.354
+    },
+    {
+     "w": "manzilein,",
+     "t": 26.617
+    },
+    {
+     "w": "zameen",
+     "t": 27.332
+    },
+    {
+     "w": "ke",
+     "t": 27.808
+    },
+    {
+     "w": "andar.",
+     "t": 28.021
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 28.613,
+   "t1": 34.553,
+   "cap": "Har deewar pe nakkashi. 500 se zyada badi moortiyan, aur 1000 se zyada chhoti.",
+   "hl": [
+    "nakkashi.",
+    "500",
+    "1000"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Har",
+     "t": 28.613
+    },
+    {
+     "w": "deewar",
+     "t": 28.862
+    },
+    {
+     "w": "pe",
+     "t": 29.361
+    },
+    {
+     "w": "nakkashi.",
+     "t": 29.584
+    },
+    {
+     "w": "500",
+     "t": 30.306
+    },
+    {
+     "w": "se",
+     "t": 30.771
+    },
+    {
+     "w": "zyada",
+     "t": 30.994
+    },
+    {
+     "w": "badi",
+     "t": 31.467
+    },
+    {
+     "w": "moortiyan,",
+     "t": 31.914
+    },
+    {
+     "w": "aur",
+     "t": 32.49
+    },
+    {
+     "w": "1000",
+     "t": 32.739
+    },
+    {
+     "w": "se",
+     "t": 33.358
+    },
+    {
+     "w": "zyada",
+     "t": 33.581
+    },
+    {
+     "w": "chhoti.",
+     "t": 34.054
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 34.693,
+   "t1": 39.074,
+   "cap": "Paani yahan pavitra tha, isliye baoli ko ulta mandir banaya gaya.",
+   "hl": [
+    "pavitra",
+    "ulta",
+    "mandir"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Paani",
+     "t": 34.693
+    },
+    {
+     "w": "yahan",
+     "t": 35.124
+    },
+    {
+     "w": "pavitra",
+     "t": 35.555
+    },
+    {
+     "w": "tha,",
+     "t": 36.19
+    },
+    {
+     "w": "isliye",
+     "t": 36.417
+    },
+    {
+     "w": "baoli",
+     "t": 36.872
+    },
+    {
+     "w": "ko",
+     "t": 37.303
+    },
+    {
+     "w": "ulta",
+     "t": 37.507
+    },
+    {
+     "w": "mandir",
+     "t": 37.914
+    },
+    {
+     "w": "banaya",
+     "t": 38.369
+    },
+    {
+     "w": "gaya.",
+     "t": 38.824
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 39.374,
+   "t1": 43.75,
+   "cap": "Phir Saraswati nadi mein baadh aayi, aur poori baoli mitti mein dab gayi.",
+   "hl": [
+    "Saraswati"
+   ],
+   "red": [
+    "baadh",
+    "dab"
+   ],
+   "words": [
+    {
+     "w": "Phir",
+     "t": 39.374
+    },
+    {
+     "w": "Saraswati",
+     "t": 39.617
+    },
+    {
+     "w": "nadi",
+     "t": 40.429
+    },
+    {
+     "w": "mein",
+     "t": 40.823
+    },
+    {
+     "w": "baadh",
+     "t": 41.066
+    },
+    {
+     "w": "aayi,",
+     "t": 41.331
+    },
+    {
+     "w": "aur",
+     "t": 41.574
+    },
+    {
+     "w": "poori",
+     "t": 41.794
+    },
+    {
+     "w": "baoli",
+     "t": 42.211
+    },
+    {
+     "w": "mitti",
+     "t": 42.628
+    },
+    {
+     "w": "mein",
+     "t": 43.045
+    },
+    {
+     "w": "dab",
+     "t": 43.287
+    },
+    {
+     "w": "gayi.",
+     "t": 43.507
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 43.89,
+   "t1": 46.17,
+   "cap": "Sadiyon tak, kisi ko pata hi nahi chala.",
+   "hl": [],
+   "red": [
+    "Sadiyon"
+   ],
+   "words": [
+    {
+     "w": "Sadiyon",
+     "t": 43.89
+    },
+    {
+     "w": "tak,",
+     "t": 44.284
+    },
+    {
+     "w": "kisi",
+     "t": 44.471
+    },
+    {
+     "w": "ko",
+     "t": 44.807
+    },
+    {
+     "w": "pata",
+     "t": 44.975
+    },
+    {
+     "w": "hi",
+     "t": 45.311
+    },
+    {
+     "w": "nahi",
+     "t": 45.479
+    },
+    {
+     "w": "chala.",
+     "t": 45.815
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "t0": 46.31,
+   "t1": 52.761,
+   "cap": "1940s mein ise phir se dhoondha gaya, aur 1980s mein saaf kiya gaya.",
+   "hl": [
+    "1940s",
+    "1980s"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "1940s",
+     "t": 46.31
+    },
+    {
+     "w": "mein",
+     "t": 46.799
+    },
+    {
+     "w": "ise",
+     "t": 47.245
+    },
+    {
+     "w": "phir",
+     "t": 47.93
+    },
+    {
+     "w": "se",
+     "t": 48.376
+    },
+    {
+     "w": "dhoondha",
+     "t": 48.739
+    },
+    {
+     "w": "gaya,",
+     "t": 49.633
+    },
+    {
+     "w": "aur",
+     "t": 50.08
+    },
+    {
+     "w": "1980s",
+     "t": 50.485
+    },
+    {
+     "w": "mein",
+     "t": 50.974
+    },
+    {
+     "w": "saaf",
+     "t": 51.42
+    },
+    {
+     "w": "kiya",
+     "t": 51.867
+    },
+    {
+     "w": "gaya.",
+     "t": 52.314
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "t0": 52.901,
+   "t1": 55.681,
+   "cap": "Aur mitti ne hi, nakkashi ko bacha ke rakha.",
+   "hl": [
+    "bacha"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 52.901
+    },
+    {
+     "w": "mitti",
+     "t": 53.112
+    },
+    {
+     "w": "ne",
+     "t": 53.512
+    },
+    {
+     "w": "hi,",
+     "t": 53.701
+    },
+    {
+     "w": "nakkashi",
+     "t": 53.891
+    },
+    {
+     "w": "ko",
+     "t": 54.502
+    },
+    {
+     "w": "bacha",
+     "t": 54.691
+    },
+    {
+     "w": "ke",
+     "t": 55.091
+    },
+    {
+     "w": "rakha.",
+     "t": 55.28
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "t0": 55.98,
+   "t1": 60.956,
+   "cap": "Aaj ye UNESCO World Heritage hai, aur ₹100 ke note pe bhi chhapi hai.",
+   "hl": [
+    "UNESCO",
+    "₹100"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aaj",
+     "t": 55.98
+    },
+    {
+     "w": "ye",
+     "t": 56.212
+    },
+    {
+     "w": "UNESCO",
+     "t": 56.42
+    },
+    {
+     "w": "World",
+     "t": 57.044
+    },
+    {
+     "w": "Heritage",
+     "t": 57.324
+    },
+    {
+     "w": "hai,",
+     "t": 58.156
+    },
+    {
+     "w": "aur",
+     "t": 58.388
+    },
+    {
+     "w": "₹100",
+     "t": 58.62
+    },
+    {
+     "w": "ke",
+     "t": 59.196
+    },
+    {
+     "w": "note",
+     "t": 59.404
+    },
+    {
+     "w": "pe",
+     "t": 59.82
+    },
+    {
+     "w": "bhi",
+     "t": 60.028
+    },
+    {
+     "w": "chhapi",
+     "t": 60.26
+    },
+    {
+     "w": "hai.",
+     "t": 60.724
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "t0": 61.256,
+   "t1": 66.248,
+   "cap": "Follow aur subscribe karo. Aur batao, tumne Rani ki Vav dekhi hai? Haan ya na?",
+   "hl": [
+    "Follow",
+    "subscribe",
+    "Haan",
+    "na?"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 61.256
+    },
+    {
+     "w": "aur",
+     "t": 61.708
+    },
+    {
+     "w": "subscribe",
+     "t": 61.934
+    },
+    {
+     "w": "karo.",
+     "t": 62.613
+    },
+    {
+     "w": "Aur",
+     "t": 63.018
+    },
+    {
+     "w": "batao,",
+     "t": 63.245
+    },
+    {
+     "w": "tumne",
+     "t": 63.674
+    },
+    {
+     "w": "Rani",
+     "t": 64.103
+    },
+    {
+     "w": "ki",
+     "t": 64.508
+    },
+    {
+     "w": "Vav",
+     "t": 64.711
+    },
+    {
+     "w": "dekhi",
+     "t": 64.937
+    },
+    {
+     "w": "hai?",
+     "t": 65.366
+    },
+    {
+     "w": "Haan",
+     "t": 65.592
+    },
+    {
+     "w": "ya",
+     "t": 65.842
+    },
+    {
+     "w": "na?",
+     "t": 66.045
+    }
+   ]
+  }
+ ]
+}
