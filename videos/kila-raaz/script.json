@@ -1,0 +1,127 @@
+{
+ "title": "Kile ki keelein",
+ "engine": "omnivoice",
+ "pace": 1.0,
+ "music": {
+  "bpm": 96,
+  "root": 45,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "किले के दरवाज़े पे, ये नुकीली कीलें क्यों लगी होती हैं?",
+   "cap": "Kile ke darwaze pe, ye nukeeli keelein kyun lagi hoti hain?",
+   "hl": [
+    "keelein"
+   ],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "हाथी के लिए।",
+   "cap": "Haathi ke liye.",
+   "hl": [
+    "Haathi"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L3",
+   "tts": "पुराने ज़माने में, दुश्मन हाथी से दरवाज़ा तोड़ता था।",
+   "cap": "Puraane zamaane mein, dushman haathi se darwaza todta tha.",
+   "hl": [],
+   "red": [
+    "todta"
+   ],
+   "gap": 0.3
+  },
+  {
+   "id": "L4",
+   "tts": "इसलिए दरवाज़े पे, हाथी के सिर की ऊंचाई पे, लोहे की कीलें लगाई गईं।",
+   "cap": "Isliye darwaze pe, haathi ke sir ki unchai pe, lohe ki keelein lagaayi gayi.",
+   "hl": [
+    "lohe",
+    "keelein"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L5",
+   "tts": "और दरवाज़े तक का रास्ता, सीधा नहीं, घुमावदार बनाया गया।",
+   "cap": "Aur darwaze tak ka raasta, seedha nahi, ghumaavdaar banaya gaya.",
+   "hl": [
+    "ghumaavdaar"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L6",
+   "tts": "ताकि हाथी दौड़ के, स्पीड न पकड़ सके।",
+   "cap": "Taaki haathi daud ke, speed na pakad sake.",
+   "hl": [],
+   "red": [
+    "speed"
+   ],
+   "gap": 0.14
+  },
+  {
+   "id": "L7",
+   "tts": "किला पहाड़ी पे, ताकि दुश्मन को ऊपर चढ़ना पड़े।",
+   "cap": "Kila pahaadi pe, taaki dushman ko upar chadhna pade.",
+   "hl": [
+    "pahaadi"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L8",
+   "tts": "और दीवारों में छेद, जहां से सैनिक ऊपर से वार करते।",
+   "cap": "Aur deewaron mein chhed, jahan se sainik upar se vaar karte.",
+   "hl": [
+    "chhed,"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L9",
+   "tts": "जोधपुर के मेहरानगढ़ किले में, सात दरवाज़े हैं।",
+   "cap": "Jodhpur ke Mehrangarh kile mein, saat darwaze hain.",
+   "hl": [
+    "Mehrangarh",
+    "saat"
+   ],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L10",
+   "tts": "और एक दरवाज़ा, लोहा पोल, आज भी कीलों से भरा है।",
+   "cap": "Aur ek darwaza, Loha Pol, aaj bhi keelon se bhara hai.",
+   "hl": [
+    "Loha",
+    "Pol,"
+   ],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L11",
+   "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुमने कौन सा किला देखा है?",
+   "cap": "Follow aur subscribe karo. Aur batao, tumne kaunsa kila dekha hai?",
+   "hl": [
+    "Follow",
+    "subscribe",
+    "kila"
+   ],
+   "red": [],
+   "gap": 0.3
+  }
+ ]
+}

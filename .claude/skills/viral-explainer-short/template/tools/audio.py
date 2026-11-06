@@ -5,7 +5,7 @@ Output : public/mix.wav (48 kHz stereo, -14 LUFS integrated, -1 dBTP), audio/ste
 
 Bed: minor-key pulse at `bpm` (default 104) – sub drone + 16th filtered pluck arpeggio + soft kick/hat.
 Reel tricks: the bed drops out for ~0.5 s on every impact (silence makes the hit land), risers into reveals,
-whoosh on cuts, soft UI clicks on pops, voice-keyed ducking (-9 dB). Mix: voice 0 dB, music ≈ -17 dB under, SFX -8 dB.
+silent cuts (no whoosh), soft UI clicks on pops, voice-keyed ducking (-9 dB). Mix: voice 0 dB, music ≈ -17 dB under, SFX -8 dB.
 """
 import json, os, sys
 import numpy as np
@@ -140,7 +140,7 @@ def main():
     m = m * (g * fade)[:, None]
 
     # ── sfx ──
-    for t in cues["cuts"]: sfx.add(whoosh(), t - 0.16, 0.5, pan=float(rng.uniform(-0.4, 0.4)))
+    # no sound on screen changes (creator's request): cuts are silent, only pops/impacts/risers make SFX
     for t in cues["impacts"]: sfx.add(impact(), t, 1.0)
     for t in cues["pops"]: sfx.add(click(), t, 0.55, pan=float(rng.uniform(-0.3, 0.3)))
     for t in cues["risers"]: sfx.add(riser(), t - 1.3, 0.6)

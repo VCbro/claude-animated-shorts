@@ -9,8 +9,15 @@ Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script a
 The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions). Fifth: `videos/plane-window/` (58 s, own voice at speed 1.22, 8 three.js shots).
 
 ## Hard rules
-- **2D by default** (creator's request, 2026-11-06): build shots from the 2D kit (SVG/CSS: Phone, Chip, Pill, Counter, Flow, IndiaMap, icons).
-  Use three.js 3D only when the user asks for 3D. 2D needs far less building/iterating and renders several times faster.
+- **2D flat-illustration by default** (creator's request, 2026-11-06; proven on `videos/kila-raaz/`). Lean recipe, low token cost:
+  1. ONE topic file `src/scenes/<Topic>.tsx` with 4-6 flat SVG props (thick ink outline `ink`, palette `P` from `kit/Flat2D.tsx`),
+     each with 1-3 numeric props that animate the story (e.g. `Gate spikes crack shake`, `Elephant x walk hurt`, `PathMap zig dot`).
+  2. Every shot = `SkyBG` (or a dark board) + `<Pan from to>` camera over the props + 1-2 kit labels (Chip/Pill/Stamp) at y ≥ 1240
+     (captions own y 200-500) + `Hud`. Reuse the same props across shots with different numbers instead of drawing new art.
+  3. One stills pass (one frame per line) → fix → render. No 3D unless the user asks; three.js costs many more iterations.
+- **No sound on cuts.** `tools/audio.py` makes no whoosh on screen changes; SFX only on pops/impacts/risers.
+- Viral checklist: hook = a question about something people see but never noticed (≤ 2 s), answer in the 2nd line, 3 quick
+  "jawab #1/#2/#3" beats, one real named example (place/number), CTA + question. Target 35-45 s.
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
   branding, and never upload them anywhere. The channel is **Kaise Chalta Hai 3D, @KaiseChaltaHai3D** (`CHANNEL` in story.tsx). The end card shows Follow + Subscribe, and the CTA line always opens with "Follow aur subscribe karo."
 - **Facts are real and sourced.** Research every number, law, helpline and case with WebSearch (mode "extended" for
