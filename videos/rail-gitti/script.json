@@ -1,0 +1,100 @@
+{
+ "title": "Railway track pe pathar kyun?",
+ "engine": "omnivoice",
+ "pace": 1.0,
+ "music": {
+  "bpm": 100,
+  "root": 43,
+  "mode": "minor"
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "tts": "रेलवे ट्रैक पे, ये पत्थर क्यों बिछे होते हैं?",
+   "cap": "Railway track pe, ye pathar kyun bichhe hote hain?",
+   "hl": [],
+   "red": [],
+   "gap": 0.0
+  },
+  {
+   "id": "L2",
+   "tts": "सजावट के लिए नहीं। इनके बिना, पटरी टिक ही नहीं पाएगी।",
+   "cap": "Sajaawat ke liye nahi. Inke bina, patri tik hi nahi paayegi.",
+   "hl": [],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L3",
+   "tts": "पहला काम। ट्रेन का भारी वज़न, पटरी से स्लीपर पे आता है।",
+   "cap": "Pehla kaam. Train ka bhaari wazan, patri se sleeper pe aata hai.",
+   "hl": [],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L4",
+   "tts": "और ये पत्थर, उस वज़न को नीचे ज़मीन पे, दूर तक फैला देते हैं।",
+   "cap": "Aur ye pathar, us wazan ko neeche zameen pe, door tak faila dete hain.",
+   "hl": [],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L5",
+   "tts": "दूसरा। बारिश का पानी, पत्थरों के बीच से तुरंत बह जाता है।",
+   "cap": "Doosra. Baarish ka paani, patharon ke beech se turant beh jaata hai.",
+   "hl": [],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L6",
+   "tts": "वरना मिट्टी गीली होकर, पटरी धंसने लगती।",
+   "cap": "Warna mitti geeli hokar, patri dhasne lagti.",
+   "hl": [],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L7",
+   "tts": "तीसरा। ये पत्थर स्लीपर को जकड़ के रखते हैं, ताकि पटरी खिसके नहीं।",
+   "cap": "Teesra. Ye pathar sleeper ko jakad ke rakhte hain, taaki patri khiske nahi.",
+   "hl": [],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L8",
+   "tts": "और इन पत्थरों में, घास भी आसानी से नहीं उगती।",
+   "cap": "Aur in patharon mein, ghaas bhi aasaani se nahi ugti.",
+   "hl": [],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L9",
+   "tts": "ध्यान दो, पत्थर गोल नहीं, नुकीले हैं। नुकीले पत्थर आपस में फंस जाते हैं।",
+   "cap": "Dhyan do, pathar gol nahi, nukeele hain. Nukeele pathar aapas mein phans jaate hain.",
+   "hl": [],
+   "red": [],
+   "gap": 0.3
+  },
+  {
+   "id": "L10",
+   "tts": "गोल होते, तो लुढ़क जाते।",
+   "cap": "Gol hote, toh ludhak jaate.",
+   "hl": [],
+   "red": [],
+   "gap": 0.14
+  },
+  {
+   "id": "L11",
+   "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, ये बात पहले पता थी? हां या ना?",
+   "cap": "Follow aur subscribe karo. Aur batao, ye baat pehle pata thi? Haan ya na?",
+   "hl": [],
+   "red": [],
+   "gap": 0.3
+  }
+ ]
+}

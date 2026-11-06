@@ -1,0 +1,601 @@
+{
+ "fps": 30,
+ "duration": 45.826,
+ "frames": 1375,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 3.131,
+   "cap": "Railway track pe, ye pathar kyun bichhe hote hain?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Railway",
+     "t": 0.25
+    },
+    {
+     "w": "track",
+     "t": 0.712
+    },
+    {
+     "w": "pe,",
+     "t": 0.978
+    },
+    {
+     "w": "ye",
+     "t": 1.175
+    },
+    {
+     "w": "pathar",
+     "t": 1.372
+    },
+    {
+     "w": "kyun",
+     "t": 1.812
+    },
+    {
+     "w": "bichhe",
+     "t": 2.054
+    },
+    {
+     "w": "hote",
+     "t": 2.494
+    },
+    {
+     "w": "hain?",
+     "t": 2.889
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 3.271,
+   "t1": 6.755,
+   "cap": "Sajaawat ke liye nahi. Inke bina, patri tik hi nahi paayegi.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Sajaawat",
+     "t": 3.271
+    },
+    {
+     "w": "ke",
+     "t": 3.833
+    },
+    {
+     "w": "liye",
+     "t": 4.007
+    },
+    {
+     "w": "nahi.",
+     "t": 4.221
+    },
+    {
+     "w": "Inke",
+     "t": 4.568
+    },
+    {
+     "w": "bina,",
+     "t": 4.916
+    },
+    {
+     "w": "patri",
+     "t": 5.264
+    },
+    {
+     "w": "tik",
+     "t": 5.632
+    },
+    {
+     "w": "hi",
+     "t": 5.825
+    },
+    {
+     "w": "nahi",
+     "t": 5.999
+    },
+    {
+     "w": "paayegi.",
+     "t": 6.347
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 7.055,
+   "t1": 11.166,
+   "cap": "Pehla kaam. Train ka bhaari wazan, patri se sleeper pe aata hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Pehla",
+     "t": 7.055
+    },
+    {
+     "w": "kaam.",
+     "t": 7.498
+    },
+    {
+     "w": "Train",
+     "t": 7.756
+    },
+    {
+     "w": "ka",
+     "t": 8.038
+    },
+    {
+     "w": "bhaari",
+     "t": 8.248
+    },
+    {
+     "w": "wazan,",
+     "t": 8.716
+    },
+    {
+     "w": "patri",
+     "t": 9.159
+    },
+    {
+     "w": "se",
+     "t": 9.602
+    },
+    {
+     "w": "sleeper",
+     "t": 9.812
+    },
+    {
+     "w": "pe",
+     "t": 10.304
+    },
+    {
+     "w": "aata",
+     "t": 10.513
+    },
+    {
+     "w": "hai.",
+     "t": 10.933
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 11.306,
+   "t1": 15.758,
+   "cap": "Aur ye pathar, us wazan ko neeche zameen pe, door tak faila dete hain.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 11.306
+    },
+    {
+     "w": "ye",
+     "t": 11.536
+    },
+    {
+     "w": "pathar,",
+     "t": 11.742
+    },
+    {
+     "w": "us",
+     "t": 12.201
+    },
+    {
+     "w": "wazan",
+     "t": 12.407
+    },
+    {
+     "w": "ko",
+     "t": 12.843
+    },
+    {
+     "w": "neeche",
+     "t": 13.049
+    },
+    {
+     "w": "zameen",
+     "t": 13.509
+    },
+    {
+     "w": "pe,",
+     "t": 13.968
+    },
+    {
+     "w": "door",
+     "t": 14.174
+    },
+    {
+     "w": "tak",
+     "t": 14.427
+    },
+    {
+     "w": "faila",
+     "t": 14.657
+    },
+    {
+     "w": "dete",
+     "t": 15.093
+    },
+    {
+     "w": "hain.",
+     "t": 15.505
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 16.058,
+   "t1": 20.17,
+   "cap": "Doosra. Baarish ka paani, patharon ke beech se turant beh jaata hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Doosra.",
+     "t": 16.058
+    },
+    {
+     "w": "Baarish",
+     "t": 16.498
+    },
+    {
+     "w": "ka",
+     "t": 16.961
+    },
+    {
+     "w": "paani,",
+     "t": 17.158
+    },
+    {
+     "w": "patharon",
+     "t": 17.576
+    },
+    {
+     "w": "ke",
+     "t": 18.213
+    },
+    {
+     "w": "beech",
+     "t": 18.41
+    },
+    {
+     "w": "se",
+     "t": 18.676
+    },
+    {
+     "w": "turant",
+     "t": 18.873
+    },
+    {
+     "w": "beh",
+     "t": 19.313
+    },
+    {
+     "w": "jaata",
+     "t": 19.533
+    },
+    {
+     "w": "hai.",
+     "t": 19.95
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 20.31,
+   "t1": 23.466,
+   "cap": "Warna mitti geeli hokar, patri dhasne lagti.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Warna",
+     "t": 20.31
+    },
+    {
+     "w": "mitti",
+     "t": 20.758
+    },
+    {
+     "w": "geeli",
+     "t": 21.205
+    },
+    {
+     "w": "hokar,",
+     "t": 21.652
+    },
+    {
+     "w": "patri",
+     "t": 22.1
+    },
+    {
+     "w": "dhasne",
+     "t": 22.547
+    },
+    {
+     "w": "lagti.",
+     "t": 23.019
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 23.766,
+   "t1": 28.499,
+   "cap": "Teesra. Ye pathar sleeper ko jakad ke rakhte hain, taaki patri khiske nahi.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Teesra.",
+     "t": 23.766
+    },
+    {
+     "w": "Ye",
+     "t": 24.209
+    },
+    {
+     "w": "pathar",
+     "t": 24.407
+    },
+    {
+     "w": "sleeper",
+     "t": 24.85
+    },
+    {
+     "w": "ko",
+     "t": 25.316
+    },
+    {
+     "w": "jakad",
+     "t": 25.514
+    },
+    {
+     "w": "ke",
+     "t": 25.934
+    },
+    {
+     "w": "rakhte",
+     "t": 26.132
+    },
+    {
+     "w": "hain,",
+     "t": 26.575
+    },
+    {
+     "w": "taaki",
+     "t": 26.819
+    },
+    {
+     "w": "patri",
+     "t": 27.239
+    },
+    {
+     "w": "khiske",
+     "t": 27.659
+    },
+    {
+     "w": "nahi.",
+     "t": 28.102
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 28.639,
+   "t1": 31.986,
+   "cap": "Aur in patharon mein, ghaas bhi aasaani se nahi ugti.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 28.639
+    },
+    {
+     "w": "in",
+     "t": 28.856
+    },
+    {
+     "w": "patharon",
+     "t": 29.052
+    },
+    {
+     "w": "mein,",
+     "t": 29.682
+    },
+    {
+     "w": "ghaas",
+     "t": 29.922
+    },
+    {
+     "w": "bhi",
+     "t": 30.185
+    },
+    {
+     "w": "aasaani",
+     "t": 30.402
+    },
+    {
+     "w": "se",
+     "t": 31.01
+    },
+    {
+     "w": "nahi",
+     "t": 31.206
+    },
+    {
+     "w": "ugti.",
+     "t": 31.596
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 32.286,
+   "t1": 37.331,
+   "cap": "Dhyan do, pathar gol nahi, nukeele hain. Nukeele pathar aapas mein phans jaate hain.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Dhyan",
+     "t": 32.286
+    },
+    {
+     "w": "do,",
+     "t": 32.553
+    },
+    {
+     "w": "pathar",
+     "t": 32.752
+    },
+    {
+     "w": "gol",
+     "t": 33.194
+    },
+    {
+     "w": "nahi,",
+     "t": 33.415
+    },
+    {
+     "w": "nukeele",
+     "t": 33.812
+    },
+    {
+     "w": "hain.",
+     "t": 34.43
+    },
+    {
+     "w": "Nukeele",
+     "t": 34.675
+    },
+    {
+     "w": "pathar",
+     "t": 35.293
+    },
+    {
+     "w": "aapas",
+     "t": 35.735
+    },
+    {
+     "w": "mein",
+     "t": 36.155
+    },
+    {
+     "w": "phans",
+     "t": 36.399
+    },
+    {
+     "w": "jaate",
+     "t": 36.667
+    },
+    {
+     "w": "hain.",
+     "t": 37.086
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 37.471,
+   "t1": 39.25,
+   "cap": "Gol hote, toh ludhak jaate.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Gol",
+     "t": 37.471
+    },
+    {
+     "w": "hote,",
+     "t": 37.702
+    },
+    {
+     "w": "toh",
+     "t": 38.117
+    },
+    {
+     "w": "ludhak",
+     "t": 38.348
+    },
+    {
+     "w": "jaate.",
+     "t": 38.811
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 39.55,
+   "t1": 44.226,
+   "cap": "Follow aur subscribe karo. Aur batao, ye baat pehle pata thi? Haan ya na?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 39.55
+    },
+    {
+     "w": "aur",
+     "t": 40.011
+    },
+    {
+     "w": "subscribe",
+     "t": 40.242
+    },
+    {
+     "w": "karo.",
+     "t": 40.933
+    },
+    {
+     "w": "Aur",
+     "t": 41.347
+    },
+    {
+     "w": "batao,",
+     "t": 41.578
+    },
+    {
+     "w": "ye",
+     "t": 42.015
+    },
+    {
+     "w": "baat",
+     "t": 42.222
+    },
+    {
+     "w": "pehle",
+     "t": 42.476
+    },
+    {
+     "w": "pata",
+     "t": 42.914
+    },
+    {
+     "w": "thi?",
+     "t": 43.327
+    },
+    {
+     "w": "Haan",
+     "t": 43.558
+    },
+    {
+     "w": "ya",
+     "t": 43.812
+    },
+    {
+     "w": "na?",
+     "t": 44.019
+    }
+   ]
+  }
+ ]
+}
