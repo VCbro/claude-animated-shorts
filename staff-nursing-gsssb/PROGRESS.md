@@ -12,6 +12,6 @@
 | 4 | Anatomy & Physiology | `01_Anatomy_Physiology/` | ✔ Done |
 | 5 | Microbiology | `08_Microbiology/` | ✔ Done |
 | 6 | Nutrition | `09_Nutrition/` | ✔ Done |
-| 7 | Gujarati Vyakaran (full book-type notes) | `10_Gujarati_GK_Reasoning/` | Pending |
+| 7 | Gujarati Vyakaran (full book-type notes) | `10_Gujarati_GK_Reasoning/` | ✔ Done |
 
 Format per subject: complete notes PDF + separate MCQ bank PDF (topic sections + 100-Q mock) + 3D-style SVG/PNG diagrams + README.

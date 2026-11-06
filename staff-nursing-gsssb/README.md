@@ -20,7 +20,7 @@ staff-nursing-gsssb/
 ├── 07_Pharmacology/              ← Notes + MCQ Bank (READY ✔)
 ├── 08_Microbiology/              ← Notes + MCQ Bank (READY ✔)
 ├── 09_Nutrition/                 ← Notes + MCQ Bank (READY ✔)
-└── 10_Gujarati_GK_Reasoning/     ← coming soon
+└── 10_Gujarati_GK_Reasoning/     ← ગુજરાતી વ્યાકરણ Notes + MCQ Bank (READY ✔)
 ```
 
 Har naye subject ke andar bhi yahi `pdf/`, `images/`, `source/` pattern rahega.
@@ -39,3 +39,4 @@ Har naye subject ke andar bhi yahi `pdf/`, `images/`, `source/` pattern rahega.
 | **Anatomy & Physiology** | [`Notes`](01_Anatomy_Physiology/pdf/AP_Complete_Notes_GSSSB.pdf) · [`MCQ Bank`](01_Anatomy_Physiology/pdf/AP_MCQ_Bank_GSSSB.pdf) | 66 + 46 | 13 chapters, 6 3D-style diagrams, normal values & largest/smallest tables, 460 MCQs incl. 100-Q mock test with explanations |
 | **Microbiology** | [`Notes`](08_Microbiology/pdf/MICRO_Complete_Notes_GSSSB.pdf) · [`MCQ Bank`](08_Microbiology/pdf/MICRO_MCQ_Bank_GSSSB.pdf) | 66 + 36 | 10 chapters, 4 3D-style diagrams, sterilisation/ BMW/ vaccine tables, 370 MCQs incl. 100-Q mock test with explanations |
 | **Nutrition** | [`Notes`](09_Nutrition/pdf/NUTRI_Complete_Notes_GSSSB.pdf) · [`MCQ Bank`](09_Nutrition/pdf/NUTRI_MCQ_Bank_GSSSB.pdf) | 62 + 36 | 10 chapters, 4 3D-style diagrams, RDA/ sources/ deficiency tables, 370 MCQs incl. 100-Q mock test with explanations |
+| **ગુજરાતી વ્યાકરણ (Gujarati Vyakaran)** | [`Notes`](10_Gujarati_GK_Reasoning/pdf/GUJ_Complete_Notes_GSSSB.pdf) · [`MCQ Bank`](10_Gujarati_GK_Reasoning/pdf/GUJ_MCQ_Bank_GSSSB.pdf) | 59 + 45 | 13 પ્રકરણ (full book-type), 3 diagrams, 460 MCQs incl. 100-Q mock test with explanations |
