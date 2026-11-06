@@ -9,7 +9,7 @@ import React from "react";
 import { useCurrentFrame } from "remotion";
 import { C, F } from "./kit/theme";
 import { io, lerp, pop } from "./kit/anim";
-import { at, hit, TOTAL } from "./kit/timeline";
+import { at, hit, TOTAL, LINES } from "./kit/timeline";
 import { Bokeh, Cam, GridFloor, Ground, Hud, Vignette } from "./kit/Frame";
 import { Chip, Counter, Flow, Pill, Rings, Stamp } from "./kit/Marks";
 import { Bubble, ChatHead, Dialer, Phone, PinPad, QR, StatusBar, Toast } from "./kit/Phone";
@@ -20,7 +20,7 @@ import { Phone3D, Studio3D, drawQR } from "./three/Studio";
 export const CHANNEL = { name: "Kaise Chalta Hai 3D", handle: "@KaiseChaltaHai3D", tagline: "Har cheez ka sach, 3D mein" };
 // Caption placement overrides / lines whose words are shown as graphics instead.
 export const CAPTION_PLACE: Record<string, "top" | "center" | "low"> = {};
-export const CAPTION_HIDE = ["L8"];
+export const CAPTION_HIDE: string[] = LINES.map((l) => l.id); // creator: no subtitles
 export const CAPTION_MODE: import("./kit/Caption").CaptionMode = "karaoke";
 
 type SceneP = { o: number; d: number }; // o = scene start (global frame), d = duration

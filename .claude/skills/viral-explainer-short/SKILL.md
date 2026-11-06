@@ -15,6 +15,8 @@ The project template is in `template/` (copy it to `videos/<name>/`, then `npm i
   2. Every shot = `SkyBG` (or a dark board) + `<Pan from to>` camera over the props + 1-2 kit labels (Chip/Pill/Stamp) at y ≥ 1240
      (captions own y 200-500) + `Hud`. Reuse the same props across shots with different numbers instead of drawing new art.
   3. One stills pass (one frame per line) → fix → render. No 3D unless the user asks; three.js costs many more iterations.
+- **No subtitles** (creator's request, 2026-11-06): `CAPTION_HIDE = LINES.map((l) => l.id)` in every story.tsx. Key words go on
+  screen as Chip/Pill/Stamp labels instead.
 - **No sound on cuts.** `tools/audio.py` makes no whoosh on screen changes; SFX only on pops/impacts/risers.
 - Viral checklist: hook = a question about something people see but never noticed (≤ 2 s), answer in the 2nd line, 3 quick
   "jawab #1/#2/#3" beats, one real named example (place/number), CTA + question. Target 35-45 s.
