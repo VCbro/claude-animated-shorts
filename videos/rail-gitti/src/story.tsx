@@ -20,7 +20,7 @@ export const CAPTION_MODE: CaptionMode = "karaoke";
 
 type SceneP = { o: number; d: number };
 const G = (o: number, g: number) => g - o;
-const Board: React.FC<{ children: React.ReactNode }> = ({ children }) => <AbsoluteFill style={{ background: "linear-gradient(#cfe6f2, #f3e4c6)" }}>{children}</AbsoluteFill>;
+const Board: React.FC<{ children: React.ReactNode }> = ({ children }) => <AbsoluteFill style={{ background: "linear-gradient(#cfe6f2 0%, #f3e4c6 55%, #8a6a45 55%)" }}>{children}</AbsoluteFill>;
 
 // 1 ── HOOK: why these stones? (train rolls past, push in on the stones)
 const S1: React.FC<SceneP> = ({ o, d }) => {
