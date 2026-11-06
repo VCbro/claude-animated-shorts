@@ -9,6 +9,8 @@ Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script a
 The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions). Fifth: `videos/plane-window/` (58 s, own voice at speed 1.22, 8 three.js shots).
 
 ## Hard rules
+- **2D by default** (creator's request, 2026-11-06): build shots from the 2D kit (SVG/CSS: Phone, Chip, Pill, Counter, Flow, IndiaMap, icons).
+  Use three.js 3D only when the user asks for 3D. 2D needs far less building/iterating and renders several times faster.
 - **Our own content only.** The reference reels are for style study. Never copy their lines, shots, channel name or
   branding, and never upload them anywhere. The channel is **Kaise Chalta Hai 3D, @KaiseChaltaHai3D** (`CHANNEL` in story.tsx). The end card shows Follow + Subscribe, and the CTA line always opens with "Follow aur subscribe karo."
 - **Facts are real and sourced.** Research every number, law, helpline and case with WebSearch (mode "extended" for
