@@ -31,3 +31,15 @@ Claude then follows `SKILL.md`: topic and facts, then script, then voice, then t
 
 ## License
 The code and docs are MIT (see `LICENSE`). The reference frames are included for style study only.
+
+## Lemo-Opuscar (66 code-rendered film styles)
+`.claude/skills/lemo-opuscar/` is the [Lemo-Opuscar](https://github.com/VCbro/lemo-opuscar) skill, pointed at the VCbro fork.
+On first use it installs the library into `~/lemo-opuscar`. To install it by hand:
+
+```sh
+sh .claude/skills/lemo-opuscar/scripts/setup.sh                    # library → ~/lemo-opuscar
+sh .claude/skills/lemo-opuscar/scripts/setup.sh deps voice music   # Node, browser, Python tiers, Kokoro voice
+```
+
+Needs Node 20+, Python 3.11+ (or uv) and **ffmpeg 7+** (Ubuntu ships 6.1; the cloud environment installs a static 9.x build).
+Then ask for a film in a named style, e.g. *"Make a 45-second film in the watercolor style about …"*, or type `/lemo-opuscar`.
