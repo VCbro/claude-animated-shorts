@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A short history of the internet</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #050506; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  A SHORT HISTORY OF THE INTERNET — 9:16, voice-led (~47s), 24fps, pixel style on 2s.
+//  1969 the first message gets "LO" out and crashes; today a phone sends the whole "LOGIN".
+//  Device: the year counter rolls forward and every era is drawn at a finer resolution (20 px -> 3 px pixels).
+//  Colour: the message (letters, the @, the page, the stream) is yellow; the hero is orange; each era its own palette.
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const DURATION = Math.round(VOICE.duration * 4) / 4;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const HAND = '"Segoe UI", "Helvetica Neue", Arial, sans-serif';   // only the storyboard sheet uses a system font
+const CX = 500;
+
+// ---- voice cues
+const VL = (id) => VOICE.lines.find((l) => l.id === id);
+function VW(id, word, n = 0) {
+  const norm = (w) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const ws = VL(id).words.filter((w) => norm(w.w) === norm(word));
+  return (ws[n] || ws[0] || { t0: VL(id).t0 }).t0;
+}
+const q4 = (t) => Math.round(t * 4) / 4;
+const gap = (a, b) => q4((VL(a).t1 + VL(b).t0) / 2);   // a morph centre in the pause between two lines
+const CU = {
+  login: VW('y69a', 'login'), letL: VW('y69b', 'out') + 0.15, letO: VW('y69b', 'out') + 0.55, crash: VW('y69b', 'crashes'),
+  m1: gap('y69b', 'y71'), email: VW('y71', 'sends'), at: VW('y71', 'at'),
+  m2: gap('y71', 'y91'), web: VW('y91', 'website'),
+  m3: gap('y91', 'y98'), modem: VW('y98', 'modem'), dial: VW('y98', 'dial'),
+  m4: gap('y98', 'y99'), wifi: VW('y99', 'name') + 0.2,
+  m5: gap('y99', 'y05'), speed: VW('y05', 'high'), video: VW('y05', 'video'),
+  m6: gap('y05', 'y07'), pocket: VW('y07', 'pocket'),
+  m7: gap('y07', 'today'), carry: VW('today', 'carry'),
+  todayEnd: VL('today').t1, end: VL('end').t0, whole: VW('end', 'whole'),
+};
+CU.hit = q4(CU.todayEnd + 0.95);      // the "N" lands in the pause before "And this time..."
+CU.silence = CU.todayEnd + 0.1;
+const YEARS = ['1969', '1971', '1991', '1998', '1999', '2005', '2007', 'TODAY'];
+const M = [CU.m1, CU.m2, CU.m3, CU.m4, CU.m5, CU.m6, CU.m7];
+const ERA_T = [0, ...M, DURATION];
+const ERA_LIST = YEARS.map((y, i) => [ERA_T[i], ERA_T[i + 1], () => sceneEra(i)]);
+const SHOT_TITLES = ['1969: LO, then a crash', '1971: email and the @', '1991: the first website', '1998: dial-up, 56k',
+  '1999: Wi-Fi', '2005: broadband, video streams', '2007: the internet in your pocket', 'today: the whole word gets through'];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'morph-chain',
+  shots: YEARS.map((y, i) => ({ id: i + 1, key: y.toLowerCase(), era: i, t0: ERA_T[i], t1: ERA_T[i + 1], title: SHOT_TITLES[i] })),
+  cuts: [],
+  morphs: M,
+  cues: CU,
+  acts: [
+    { name: '1 LO', role: 'build', t0: 0, t1: CU.m1 },
+    { name: '2 The decades', role: 'journey', t0: CU.m1, t1: CU.silence },
+    { name: '3 Hold', role: 'silence', t0: CU.silence, t1: CU.hit - 0.125 },
+    { name: '4 LOGIN', role: 'gift', t0: CU.hit - 0.125, t1: CU.end + 0.6 },
+    { name: '5 Out', role: 'goodbye', t0: CU.end + 0.6, t1: DURATION },
+  ],
+  board: [
+    { t: CU.crash + 0.3, title: '1969: LO... crash', sound: 'teletype clicks, a crunch', next: 'the O becomes the @' },
+    { t: CU.at + 0.4, title: '1971: email and the @', sound: 'a hop blip, a ding on @', next: 'the @ becomes a globe' },
+    { t: CU.web + 0.4, title: '1991: the first website', sound: 'square arps', next: 'the globe becomes a modem' },
+    { t: CU.dial + 0.2, title: '1998: 56k, homes dial in', sound: 'modem screech', next: 'the modem becomes Wi-Fi arcs' },
+    { t: CU.wifi + 0.6, title: '1999: Wi-Fi', sound: 'rising arps', next: 'the arcs become a play button' },
+    { t: CU.video + 0.4, title: '2005: video streams', sound: 'groove', next: 'the player becomes a phone' },
+    { t: CU.pocket + 0.3, title: '2007: in your pocket', sound: 'groove', next: 'the phone stays; the world sharpens' },
+    { t: CU.hit - 0.3, title: 'today: LOGI_ ... (silence)', sound: 'near-silence', next: 'the N' },
+    { t: CU.end + 0.8, title: 'LOGIN: the whole word', sound: 'loudest hit', next: 'loops to 1969' },
+  ],
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;

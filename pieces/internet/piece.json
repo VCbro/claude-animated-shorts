@@ -1,0 +1,9 @@
+{
+  "name": "internet",
+  "title": "A short history of the internet",
+  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 47.5, "frames": 1140 },
+  "storyFormat": "F2 morph chain across 8 eras, voice-led (7 shape morphs, 0 hard cuts)",
+  "style": "pixel",
+  "voice": { "file": "voice/voice.wav", "music": -12 },
+  "review": { "safe": { "top": 240, "bottom": 420, "right": 140 }, "refs": {} }
+}

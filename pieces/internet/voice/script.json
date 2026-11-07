@@ -1,0 +1,12 @@
+{ "lead": 0.7, "tail": 2.0, "lines": [
+  { "id": "y69a",  "text": "1969. A computer at U C L A tries to send the word login to Stanford.", "after": 0.35 },
+  { "id": "y69b",  "text": "It gets out L, O... and crashes.", "after": 0.7 },
+  { "id": "y71",   "text": "1971. Ray Tomlinson sends email between machines, and picks the at sign.", "after": 0.5 },
+  { "id": "y91",   "text": "1991. Tim Berners-Lee puts the first website online.", "after": 0.5 },
+  { "id": "y98",   "text": "1998. The fifty-six K modem standard. Homes dial in.", "after": 0.5 },
+  { "id": "y99",   "text": "1999. Wireless gets a name: Wi-Fi.", "after": 0.5 },
+  { "id": "y05",   "text": "2005. Most home users have high speed, and video streams.", "after": 0.5 },
+  { "id": "y07",   "text": "2007. The internet fits in your pocket.", "after": 0.5 },
+  { "id": "today", "text": "Today, about nine in ten Americans carry one.", "after": 1.8 },
+  { "id": "end",   "text": "And this time, the whole word gets through.", "speed": 0.82 }
+] }
