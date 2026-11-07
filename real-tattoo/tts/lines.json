@@ -1,0 +1,64 @@
+[
+ {
+  "id": "v01",
+  "text": "Every real tattoo starts as a single line on paper.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v02",
+  "text": "The artist draws it, and redraws it, until every curve sits right.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v03",
+  "text": "A purple stencil carries the design onto clean skin.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v04",
+  "text": "Then, the machine. Its needles strike up to three thousand times a minute.",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "asr": "Then, the machine. Its needles strike up to 3,000 times a minute."
+ },
+ {
+  "id": "v05",
+  "text": "Each stroke leaves ink about one and a half millimeters below the surface.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v06",
+  "text": "Too shallow, and it fades. Too deep, and it blurs.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v07",
+  "text": "Down here, the body's own cells catch the pigment, and hold it in place.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v08",
+  "text": "Linework first. Then shading. Then color.",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "asr": "Line work first, then shading, then color."
+ },
+ {
+  "id": "v09",
+  "text": "In about two weeks, the surface heals over.",
+  "voice": "am_michael",
+  "speed": 0.92
+ },
+ {
+  "id": "v10",
+  "text": "And the line from that first page stays for life.",
+  "voice": "am_michael",
+  "speed": 0.92
+ }
+]

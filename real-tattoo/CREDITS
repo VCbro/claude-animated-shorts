@@ -1,0 +1,9 @@
+One Line, For Life — credits for third-party assets
+
+Voice: Kokoro-82M text-to-speech (voice am_michael), via kokoro-onnx — Apache License 2.0. https://github.com/thewh1teagle/kokoro-onnx
+Speech check: faster-whisper with Whisper base.en — MIT License.
+Fonts (SIL Open Font License 1.1, from Google Fonts): Cormorant Garamond, Caveat, IBM Plex Mono.
+Music: original score, synthesized in code (physically modelled nylon guitar, upright bass, kalimba, music box; sine pad). No samples.
+Sound effects: synthesized in code (numpy/scipy). No recordings.
+Picture: drawn in code (Canvas 2D brush engine). The swallow-and-fern design is original.
+Tools: the Lemo-Opuscar library (MIT), three.js not used, playwright-core (Apache 2.0), FFmpeg (LGPL/GPL build).
