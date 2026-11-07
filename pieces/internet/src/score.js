@@ -21,12 +21,14 @@
       if (e >= 2 && i % 2 === 0) tri(t, BASS[(i / 2) % 8 | 0], 0.08 + e * 0.006, 0.22);
     }
   }
+  // a sustained bed under the decades, a little fuller each era (the plucks alone leave gaps under the voice)
+  for (let e = 1; e < 8; e++) { const t0 = ERA_T[e] - 0.2, t1 = Math.min(ERA_T[e + 1] + 0.2, stopAt); if (t1 > t0) pad(t0, t1, e < 4 ? ['D3', 'A3', 'Fs4'] : ['D3', 'A3', 'E4', 'Fs4'], 0.014 + e * 0.002, { type: 'triangle', cut: 900 + e * 120, att: 0.3, rel: 0.12, send: 0.15 }); }
   // the payoff: a stab, a sub and a coin-ish ding on the N, then a flat quiet chord
   chip(cu.hit, 'D5', 0.12, 0.45, -0.2); chip(cu.hit, 'Fs5', 0.1, 0.45, 0); chip(cu.hit, 'A5', 0.1, 0.45, 0.2);
   tri(cu.hit, 'D3', 0.3, 0.6); sub(cu.hit, 0.45);
   chip(cu.hit + 0.12, 'D6', 0.06, 0.35, 0.1);
   pad(cu.hit + 0.35, cu.end + 0.6, ['D3', 'A3', 'D4', 'Fs4'], 0.03, { type: 'triangle', cut: 1500, att: 0.3, rel: 0.4, send: 0.3 });
-  pad(cu.end + 0.4, DURATION + 0.4, ['D3', 'A3', 'Fs4'], 0.01, { type: 'triangle', cut: 1000, att: 0.5, rel: 0.8, send: 0.3 });
+  pad(cu.end + 0.4, DURATION + 0.4, ['D3', 'A3', 'Fs4'], 0.004, { type: 'triangle', cut: 1000, att: 0.5, rel: 0.8, send: 0.3 });
   to = 's';
   for (let e = 3; e < 8; e++) for (let t = Math.ceil(ERA_T[e] / BEAT) * BEAT + E8; t < Math.min(ERA_T[e + 1], stopAt) - 0.05; t += BEAT) hat(t, 0.012 + (e - 3) * 0.002);
   // 1969: the teletype types LOGIN, two letters travel, the crash

@@ -69,7 +69,7 @@ function era1969() {
   });
   hero(0, { look: TT < cu.letL ? [0, 0] : [-1, -1], mood: crashed ? 'wow' : 'smile', hop: crashed && TT < cu.crash + 0.5 ? 2 : 0 });
   yearCounter(0, g3, g0);
-  cap(TT < cu.crash ? 'UCLA > STANFORD' : 'LO... CRASH', 0, g3, g0, g2, 0.6);
+  cap(TT < cu.crash ? 'TO STANFORD' : 'LO... CRASH', 0, g3, g0, g2, 0.6);
 }
 
 // ---- 1971: two machines, a message hops between them, the @ (amber, 72x128)

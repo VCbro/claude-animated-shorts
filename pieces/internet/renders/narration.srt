@@ -1,0 +1,39 @@
+1
+00:00:00,700 --> 00:00:06,872
+1969. A computer at U C L A tries to send the word login to Stanford.
+
+2
+00:00:07,222 --> 00:00:09,252
+It gets out L, O... and crashes.
+
+3
+00:00:09,952 --> 00:00:15,714
+1971. Ray Tomlinson sends email between machines, and picks the at sign.
+
+4
+00:00:16,214 --> 00:00:20,496
+1991. Tim Berners-Lee puts the first website online.
+
+5
+00:00:20,996 --> 00:00:25,698
+1998. The fifty-six K modem standard. Homes dial in.
+
+6
+00:00:26,198 --> 00:00:29,770
+1999. Wireless gets a name: Wi-Fi.
+
+7
+00:00:30,270 --> 00:00:34,656
+2005. Most home users have high speed, and video streams.
+
+8
+00:00:35,156 --> 00:00:38,127
+2007. The internet fits in your pocket.
+
+9
+00:00:38,627 --> 00:00:41,353
+Today, about nine in ten Americans carry one.
+
+10
+00:00:43,153 --> 00:00:45,444
+And this time, the whole word gets through.
