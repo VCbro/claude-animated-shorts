@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How DNS works</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #050506; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  HOW DNS WORKS — 9:16, voice-led (~44s), 24fps, math style, motion on 1s.
+//  A name is read right to left: the resolver asks the root about ".", the .com server about "com", and
+//  example's own name server about "example"; the answer comes back and is cached for its TTL.
+//  Colour code (one meaning each, everywhere): "." / root purple, "com" / .com server green,
+//  "example" / its name server red, the answer (IP address) yellow, the resolver blue, the cache / TTL teal,
+//  the question (query dot) white.
+//  The voice is the clock: every cue below is read from VOICE (tools/voice.mjs -> voice.json).
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
+const DURATION = Math.round(VOICE.duration * 4) / 4;   // on the 16th grid
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const HAND = 'Cambria, "Cambria Math", "Latin Modern Roman", "CMU Serif", "STIX Two Text", "Times New Roman", Georgia, serif';
+const CX = 500;
+
+// ---- voice cues
+const VL = (id) => VOICE.lines.find((l) => l.id === id);
+function VW(id, word, n = 0) {   // when the n-th occurrence of `word` starts in line `id`
+  const norm = (w) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const ws = VL(id).words.filter((w) => norm(w.w) === norm(word));
+  return (ws[n] || ws[0] || { t0: VL(id).t0 }).t0;
+}
+const q4 = (t) => Math.round(t * 4) / 4;   // snap to the 8th grid (120 BPM)
+const CU = {
+  type: VW('open', 'type'), number: VW('number', 'number'),
+  resolver: VW('resolver', 'resolver'), asks: VW('resolver', 'asks'),
+  trick: VL('trick').t0, right: VW('trick', 'right'), left: VW('trick', 'left'),
+  m1: q4((VL('trick').t1 + VL('root').t0) / 2),
+  root: VL('root').t0, rootNo: VW('root', "doesn't"), rootCom: VW('root', 'com'),
+  tld: VL('tld').t0, tldNo: VW('tld', "doesn't"), tldEx: VW('tld', 'example'),
+  auth: VL('auth').t0, authEnd: VL('auth').t1,
+  answer: VL('answer').t0,
+  back: VL('back').t0, backBack: VW('back', 'back'), connects: VW('back', 'connects'), blink: VW('back', 'blink'),
+  m2: q4((VL('back').t1 + VL('cache').t0) / 2),
+  cache: VL('cache').t0, copy: VW('cache', 'copy'), ttl: VW('cache', 'time'),
+  end: VL('end').t0, already: VW('end', 'already'),
+};
+// the payoff hit: in the pause between "...name server" and "knows the answer", on the grid
+CU.hit = q4(CU.authEnd + 0.85);
+CU.silence = CU.authEnd + 0.08;
+
+const ERA_LIST = [[0, CU.m1, () => sceneAsk()], [CU.m1, CU.m2, () => sceneChain()], [CU.m2, DURATION, () => sceneCache()]];
+const SHOTS = [
+  ['ask',   0, 0, CU.m1, 'a name needs a number: your device asks a resolver; the name is read right to left'],
+  ['chain', 1, CU.m1, CU.m2, 'root -> .com -> example\'s server; the answer comes back'],
+  ['cache', 2, CU.m2, DURATION, 'the resolver keeps a copy for its TTL; next time, no hops'],
+];
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'morph-chain',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: [],
+  morphs: [CU.m1, CU.m2],
+  cues: CU,
+  acts: [
+    { name: '1 The question', role: 'build',   t0: 0, t1: CU.m1 },
+    { name: '2 The hops',     role: 'journey', t0: CU.m1, t1: CU.silence },
+    { name: '3 Hold',         role: 'silence', t0: CU.silence, t1: CU.hit },
+    { name: '4 The answer',   role: 'gift',    t0: CU.hit, t1: CU.back },
+    { name: '5 Cache + loop', role: 'goodbye', t0: CU.back, t1: DURATION },
+  ],
+  board: [
+    { t: CU.number + 1.0, title: 'a name, but no number', sound: 'quiet pad, typing ticks', next: 'the resolver appears' },
+    { t: CU.asks + 1.6, title: 'your device asks a resolver', sound: 'a pluck on the send', next: 'read the name right to left' },
+    { t: CU.left + 0.35, title: 'read right to left', sound: 'a rising sweep', next: 'the "." becomes the root (morph)' },
+    { t: CU.rootCom + 0.8, title: 'root: ask the .com servers', sound: 'pluck per hop', next: 'next hop' },
+    { t: CU.tldEx + 0.9, title: '.com: ask example\'s server', sound: 'pluck per hop', next: 'last hop' },
+    { t: CU.hit - 0.3, title: 'hold... (silence)', sound: 'near-silence', next: 'the answer' },
+    { t: CU.answer + 0.6, title: 'the answer', sound: 'loudest hit: stab + sub', next: 'answer travels back' },
+    { t: CU.blink + 0.3, title: 'the browser connects', sound: 'warm swell', next: 'the answer card becomes the cache (morph)' },
+    { t: CU.ttl + 1.0, title: 'cached for its TTL', sound: 'soft ticks', next: 'ask again' },
+    { t: DURATION - 0.6, title: 'next time: zero hops', sound: 'soft resolve', next: 'loops to the start' },
+  ],
+  narration: VOICE.lines.map((l) => ({ t0: l.t0, t1: l.t1, text: l.text })),
+};
+window.TIMELINE = TIMELINE;
