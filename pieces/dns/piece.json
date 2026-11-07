@@ -1,7 +1,7 @@
 {
   "name": "dns",
   "title": "How DNS works",
-  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 44.0, "frames": 1056 },
+  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 45.0, "frames": 1080 },
   "storyFormat": "morph chain, voice-led (3 scenes, 2 shape morphs)",
   "style": "math",
   "voice": { "file": "voice/voice.wav", "music": -12 },

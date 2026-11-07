@@ -11,8 +11,8 @@
   chime(cu.hit, [nz('D5'), nz('A5'), nz('Fs6')], 0.16);
   pluck(cu.hit, nz('D4'), 0.3, 0, 0.6, 3000, 0.0); pluck(cu.hit, nz('A4'), 0.26, 0.15, 0.6, 3000, 0.0);
   sub(cu.hit, 0.5);
-  pad(cu.hit + 0.35, cu.m2 + 0.3, ['D3', 'A3', 'D4', 'Fs4'], 0.03, { type: 'triangle', cut: 1300, att: 0.5, rel: 0.6, send: 0.3 });
-  pad(cu.m2 - 0.2, DURATION + 0.4, ['D3', 'A3', 'E4', 'A4'], 0.022, { type: 'triangle', cut: 1000, att: 0.6, rel: 0.6, send: 0.3 });
+  pad(cu.hit + 0.35, cu.back + 0.4, ['D3', 'A3', 'D4', 'Fs4'], 0.03, { type: 'triangle', cut: 1300, att: 0.5, rel: 0.6, send: 0.3 });
+  pad(cu.back + 0.2, DURATION + 0.4, ['D3', 'A3', 'E4', 'A4'], 0.009, { type: 'triangle', cut: 1000, att: 0.6, rel: 0.6, send: 0.3 });
   [['E5', 0], ['Fs5', E8], ['A5', BEAT]].forEach(([n, dt], i) => pluck(cu.already + dt, nz(n), 0.09, -0.2 + i * 0.2, 0.5, 3200, 0.35));
   to = 's';
   for (let i = 0; i < 7; i++) blip(cu.type + i * 0.12, 2200, 2000, 0.02, 0.012);           // typing ticks

@@ -62,10 +62,12 @@ function arrowTex(toks, x, y, size, p, o = {}) {
   return writeTex(toks, x0 + aw + gap, y, size, p, { align: 'left', alpha: al });
 }
 function drawAnswer(qP, ipP, al = 1) {
-  if (qP > 0 && ipP < 1) arrowTex([mn('?', QA)], CX, ANS_Y, 60, qP, { alpha: al * (1 - smoothM(ipP * 2)) });
-  if (ipP > 0) {
-    arrowTex([mn(IP, QA)], CX, ANS_Y, 60, ipP, { alpha: al });
-    writeText('(an illustrative address)', CX, ANS_Y + 44, 28, ipP, { color: MC.greyC, it: true, alpha: al });
+  // "?" fades out over the first half of ipP; the address is Written over the second half (never both at once)
+  if (qP > 0 && ipP < 0.5) arrowTex([mn('?', QA)], CX, ANS_Y, 60, qP, { alpha: al * (1 - smoothM(ipP * 2)) });
+  const wp = clamp(ipP * 2 - 1);
+  if (wp > 0) {
+    arrowTex([mn(IP, QA)], CX, ANS_Y, 60, wp, { alpha: al });
+    writeText('(an illustrative address)', CX, ANS_Y + 44, 28, wp, { color: MC.greyC, it: true, alpha: al });
   }
 }
 function drawLaptop(p = 1) {
