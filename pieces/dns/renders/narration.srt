@@ -1,0 +1,43 @@
+1
+00:00:00,900 --> 00:00:02,499
+You type example dot com.
+
+2
+00:00:02,849 --> 00:00:05,939
+But computers find each other by number, not by name.
+
+3
+00:00:06,439 --> 00:00:10,668
+So your device asks a resolver: a helper that does the looking-up for you.
+
+4
+00:00:11,168 --> 00:00:14,221
+The trick? A name is read from right to left.
+
+5
+00:00:15,221 --> 00:00:20,022
+First, a root server. It doesn't know the address, but it knows who runs dot com.
+
+6
+00:00:20,522 --> 00:00:24,921
+The dot com server doesn't know either, but it knows who's in charge of example.
+
+7
+00:00:25,421 --> 00:00:27,129
+And example's own name server...
+
+8
+00:00:28,629 --> 00:00:29,643
+knows the answer.
+
+9
+00:00:30,344 --> 00:00:34,792
+The resolver hands the number back, and your browser connects. Usually in a blink.
+
+10
+00:00:35,692 --> 00:00:40,094
+It also keeps a copy, for as long as the record's time to live allows.
+
+11
+00:00:40,694 --> 00:00:43,026
+So next time, the answer is already there.
