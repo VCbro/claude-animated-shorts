@@ -77,8 +77,8 @@ const TIMELINE = {
   acts: [
     { name: '1 The question', role: 'build',   t0: 0, t1: CU.m1 },
     { name: '2 The hops',     role: 'journey', t0: CU.m1, t1: CU.silence },
-    { name: '3 Hold',         role: 'silence', t0: CU.silence, t1: CU.hit },
-    { name: '4 The answer',   role: 'gift',    t0: CU.hit, t1: CU.back },
+    { name: '3 Hold',         role: 'silence', t0: CU.silence, t1: CU.hit - 0.125 },
+    { name: '4 The answer',   role: 'gift',    t0: CU.hit - 0.125, t1: CU.back },
     { name: '5 Cache + loop', role: 'goodbye', t0: CU.back, t1: DURATION },
   ],
   board: [

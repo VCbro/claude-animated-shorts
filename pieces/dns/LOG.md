@@ -17,3 +17,9 @@
 | 1 ask | name, `?`, resolver, read right to left, `.` → root | PASS (slow open, see the warning) |
 | 2 chain | 3 hops, 2 referrals, silence, answer, back to device | PASS |
 | 3 cache | TTL counting down, asked again, 0 hops | PASS |
+
+## Run 2 (user asked for suggestions 1, 2, 9 and 12)
+- **Done:** the device's screen types the name and pulses `?.?.?.?` (1); servers show a working arc and glow while they speak (2); the root and .com servers speak in a second voice, Kokoro `am_michael` (9); a 16:9 layout from the same piece, with servers as a staircase (12). Length is now 46.5 s.
+- **Sound:** after the second voice went in, the loudest moment moved away from the hit, and later the silence act's last window caught the hit's attack. The post-hit chord now ends before the "back" line, the hop plucks are quieter, and the silence act ends 0.125 s before the hit.
+- **Review (both formats):** cuts, morphs, narration (116 words), story arc 4/4 and text all PASS. Loudest moment at 29.8 s (−9.1 dBFS) after 1.0 s of silence; mix −14.2 LUFS, true peak −1.5 dBFS.
+- **Still open:** DEAD BEATS warns on 5 stretches. The added motion (arcs, glows, the pulsing `?`) is too small to move the whole-frame change measure. Fixing it would take bigger changes, such as a push-in or a scene change per beat.
