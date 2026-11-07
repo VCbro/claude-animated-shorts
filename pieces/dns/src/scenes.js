@@ -5,19 +5,24 @@
 // =====================================================================
 const QR = MC.purple, QC = MC.green, QE = MC.red, QA = MC.yellow, QV = MC.blue, QT = MC.teal, QQ = MC.white;
 const IP = '203.0.113.7';                     // a documentation address (RFC 5737): shown as illustrative
-const BAR = { x0: 80, x1: 920, y: 400 };      // the address bar; the name sits in it
-const NAME_SIZE = 76, ANS_Y = 512;            // the answer line under the bar
-const RES = [250, 900], RES_R = 78;           // the resolver
-const LAP = [250, 1200];                      // your device (the screen's centre)
-const SV = [                                   // the three servers, top to bottom = the order they are asked
-  { p: [770, 670], c: QR, inner: '.', size: 96, name: 'root server' },
-  { p: [770, 925], c: QC, inner: 'com', size: 44, name: '.com server' },
-  { p: [770, 1180], c: QE, inner: 'example', size: 34, name: "example's server" },
+// layout per format: 9:16 stacks the servers in a column on the right; 16:9 climbs them as a staircase
+const WIDE_L = FORMAT === '16:9';
+const BAR = WIDE_L ? { x0: 560, x1: 1300, y: 150 } : { x0: 80, x1: 920, y: 400 };   // the address bar; the name sits in it
+const NAME_SIZE = WIDE_L ? 72 : 76, ANS_Y = WIDE_L ? 248 : 512;                   // the answer line under the bar
+const RES = WIDE_L ? [330, 540] : [250, 900], RES_R = 78;                          // the resolver
+const LAP = WIDE_L ? [330, 830] : [250, 1200];                                     // your device (the screen's centre)
+const SVP = WIDE_L ? [[1100, 400], [1400, 560], [1700, 720]] : [[770, 670], [770, 925], [770, 1180]];
+const SV = [                                   // the three servers, in the order they are asked
+  { p: SVP[0], c: QR, inner: '.', size: 96, name: 'root server' },
+  { p: SVP[1], c: QC, inner: 'com', size: 44, name: '.com server' },
+  { p: SVP[2], c: QE, inner: 'example', size: 34, name: "example's server" },
 ];
 const SV_R = 80;
-const CARD = { x: 250, y: 1048, w: 300, h: 84 };             // the copy of the answer at the resolver (bridge object)
-const CACHE = { x: 655, y: 1000, w: 520, h: 300 };           // the cache record in the last scene
-const HERO = [565, 1395];
+const CARD = WIDE_L ? { x: 330, y: 690, w: 300, h: 84 } : { x: 250, y: 1048, w: 300, h: 84 };   // the copy of the answer at the resolver (bridge object)
+const CACHE = WIDE_L ? { x: 900, y: 560, w: 520, h: 300 } : { x: 655, y: 1000, w: 520, h: 300 }; // the cache record in the last scene
+const HERO = WIDE_L ? [760, 930] : [565, 1395];
+const ANS_CARD = WIDE_L ? [1430, 780] : [525, 1185];   // where the answer appears, beside example's server
+const CAP_Y = WIDE_L ? 1012 : 1460, CAP_SIZE = WIDE_L ? 44 : 48, HOPS_Y = WIDE_L ? 1012 : 1418, TAG_Y = WIDE_L ? 96 : 300;
 
 // ---- small helpers
 const at = (t0, d = 0.6) => runS(t0, d);
@@ -112,15 +117,33 @@ function reply(i, t0, c, words) {
   if (p <= 0) return;
   const [a, b] = edge(s.p, SV_R + 6, RES, RES_R + 6), off = [0, -18];
   mArrow(a[0] + off[0], a[1] + off[1], b[0] + off[0], b[1] + off[1], c, 4, p);
-  writeText(words, 545, s.p[1] - (i === 0 ? 30 : 58), 34, at(t0 + 0.2, 0.7), { it: true });
+  writeText(words, (a[0] + b[0]) / 2, (a[1] + b[1]) / 2 - 52, 34, at(t0 + 0.2, 0.7), { it: true });
 }
 // captions: the one whose time has come, Written on at its time (drawn last, at screen size)
 function captions(list) {
   let cur = null; for (const c of list) if (TT >= c[0]) cur = c;
   if (!cur) return;
-  DEFER.push(() => mathCard(cur[1], CX, 1460, 48, runS(cur[0], 0.8)));
+  DEFER.push(() => mathCard(cur[1], CX, CAP_Y, CAP_SIZE, runS(cur[0], 0.8)));
 }
-function hops(n, p = 1) { if (p > 0) readout([mn('hops', MC.greyA)], n, 0, 70, 1418, 42, { c: MC.white, p }); }
+function hops(n, p = 1) { if (p > 0) readout([mn('hops', MC.greyA)], n, 0, 70, HOPS_Y, 42, { c: MC.white, p }); }
+// the section tag, top left (the kit's mathTag sits at the 9:16 position)
+function tagM(str) {
+  DEFER.push(() => { const p = runS(E0 + 0.15, 0.7), w = textW(str, 40, { it: true }); writeText(str, 70, TAG_Y, 40, p, { align: 'left', it: true, color: MC.grey }); segLine(70, TAG_Y + 18, 70 + w, TAG_Y + 18, MC.greyD, 2.5, smoothM(p * 1.3 - 0.3)); });
+}
+// a server at work: an arc in its colour circles it while it looks the name up (u0..u1), a glow while it speaks
+function working(i, t0, t1) {
+  const a = clamp((TT - t0) / 0.3) * clamp((t1 - TT) / 0.3); if (a <= 0) return;
+  const s = SV[i], r = SV_R + 18, th = (TT - t0) * TAU / 1.1;
+  ctx.save(); ctx.globalAlpha = a; ctx.strokeStyle = s.c; ctx.lineWidth = 6; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.arc(s.p[0], s.p[1], r, th, th + 1.9); ctx.stroke();
+  ctx.globalAlpha = a * 0.5; ctx.beginPath(); ctx.arc(s.p[0], s.p[1], r, th + Math.PI, th + Math.PI + 0.9); ctx.stroke(); ctx.restore();
+}
+function speaking(i, t0, t1) {
+  const a = clamp((TT - t0) / 0.25) * clamp((t1 - TT) / 0.3); if (a <= 0) return;
+  const s = SV[i], k = 1 + 0.06 * Math.sin((TT - t0) * TAU * 2.2);
+  glowAt(s.p[0], s.p[1], SV_R * 1.9 * k, s.c, 0.35 * a);
+  for (const q of [1, 2]) { const u = ((TT - t0) * 0.9 + q * 0.5) % 1; ctx.save(); ctx.globalAlpha = a * (1 - u) * 0.8; ctx.strokeStyle = s.c; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(s.p[0], s.p[1], SV_R + 10 + u * 70, 0, TAU); ctx.stroke(); ctx.restore(); }
+}
 
 // ---- era 1: the question. A name, no number; your device asks a resolver; the name is read right to left.
 function sceneAsk() {
@@ -130,6 +153,15 @@ function sceneAsk() {
   drawUnderlines(L, at(cu.right, (cu.left - cu.right) + 0.6));
   drawAnswer(at(cu.number + 0.1, 0.6), 0);
   drawLaptop(1);
+  // the device's screen: the name typed, then the number it lacks; the "?" pulses while it waits
+  const [lx, ly] = LAP, typed = Math.floor(11 * clamp((TT - cu.type) / 0.9));
+  if (typed > 0) mText('example.com'.slice(0, typed), lx, ly - 8, 25, { font: MATH_MONO, color: MC.greyA });
+  const qs = at(cu.number + 0.2, 0.8);
+  if (qs > 0) {
+    const k = 1 + 0.25 * thereBack(clamp(((TT - cu.number - 1.0) % 1.2) / 0.6)) * (TT < cu.asks + 0.7 ? 1 : 0);
+    ctx.save(); ctx.translate(lx, ly + 34); ctx.scale(k, k); writeText([{ s: '?.?.?.?', c: QA }], 0, 0, 30, qs, { font: MATH_MONO }); ctx.restore();
+  }
+  if (TT >= cu.number + 0.9 && TT < cu.asks + 0.7) { const u = ((TT - cu.number - 0.9) % 1.2) / 0.6; if (u < 1) flashAt(CX + 52, ANS_Y - 20, u, QA, 26, 3); }
   drawResolver(at(cu.resolver - 0.1, 0.8));
   guide(LAP, 70, RES, RES_R, at(cu.resolver + 0.2, 0.6));
   const qd = trip(cu.asks + 0.1, 0.7, LAP, 70, RES, RES_R, QQ);
@@ -141,8 +173,8 @@ function sceneAsk() {
   }
   hops(0, at(cu.asks + 0.6, 0.5));
   const look = qd || (TT < cu.number ? [CX, BAR.y] : TT < cu.resolver ? [CX, ANS_Y] : TT < cu.trick ? RES : [g.x, BAR.y]);
-  piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.number + 0.3 && TT < cu.resolver ? 'wow' : 'calm' });
-  mathTag('how DNS works');
+  piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.number + 0.3 && TT < cu.resolver ? 'wow' : 'calm', hop: (TT - VW('number', 'name')) / 0.5 });
+  tagM('how DNS works');
   captions([
     [cu.number, [{ s: 'computers need a ' }, { s: 'number', c: QA }]],
     [cu.resolver, [{ s: 'a ' }, { s: 'resolver', c: QV }, { s: ' looks it up' }]],
@@ -166,6 +198,9 @@ function sceneChain() {
   drawServer(0, 1, (TT - cu.rootNo) / 0.6);
   drawServer(1, at(cu.tld - 0.35, 0.6), (TT - cu.tldNo) / 0.6);
   drawServer(2, at(cu.auth - 0.3, 0.6));
+  working(0, cu.root + 0.85, cu.rootSays); speaking(0, cu.rootSays, cu.rootSaysEnd);
+  working(1, cu.tld + 0.85, cu.tldSays); speaking(1, cu.tldSays, cu.tldSaysEnd);
+  working(2, cu.auth + 0.85, cu.hit);
   guide(RES, RES_R, SV[0].p, SV_R, 1);
   guide(RES, RES_R, SV[1].p, SV_R, at(cu.tld - 0.2, 0.5));
   guide(RES, RES_R, SV[2].p, SV_R, at(cu.auth - 0.15, 0.5));
@@ -178,7 +213,7 @@ function sceneChain() {
   const n = TT >= cu.auth + 0.85 ? 3 : TT >= cu.tld + 0.85 ? 2 : TT >= cu.root + 0.85 ? 1 : 0;
   hops(n);
   // the payoff: the answer, at example's own server
-  const ap = at(cu.hit, 0.35), S3 = SV[2].p, AC = [525, S3[1] + 5];
+  const ap = at(cu.hit, 0.35), S3 = SV[2].p, AC = ANS_CARD;
   if (ap > 0) {
     const k = indicateS((TT - cu.hit) / 0.5, 0.18);
     ctx.save(); ctx.translate(AC[0], AC[1]); ctx.scale(k, k);
@@ -198,7 +233,7 @@ function sceneChain() {
   const look = dot || (TT < cu.hit ? S3 : TT < cu.back ? AC : LAP);
   const mood = TT >= cu.hit && TT < cu.back ? 'wow' : TT >= cu.connects ? 'happy' : 'calm';
   piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood, hop: (TT - cu.connects) / 0.5 });
-  mathTag('how DNS works');
+  tagM('how DNS works');
   captions([
     [cu.root, [{ s: 'root', c: QR }, { s: ': ask ' }, { s: '.com', c: QC }]],
     [cu.tld, [{ s: '.com', c: QC }, { s: ': ask ' }, { s: 'example', c: QE }]],
@@ -239,7 +274,7 @@ function sceneCache() {
   hops(TT >= cu.end + 0.6 ? 0 : 3);
   const look = dot || (TT < cu.end ? [CACHE.x, CACHE.y] : [CX, ANS_Y]);
   piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.already ? 'happy' : 'calm', hop: (TT - cu.already - 0.2) / 0.5 });
-  mathTag('how DNS works');
+  tagM('how DNS works');
   captions([
     [cu.cache, [{ s: 'kept for its ' }, { s: 'time to live', c: QT }]],
     [cu.end, [{ s: 'next time: ' }, { s: '0', c: MC.white }, { s: ' hops' }]],

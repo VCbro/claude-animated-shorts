@@ -7,7 +7,7 @@
 <style>
   html, body { margin: 0; height: 100%; background: #050506; overflow: hidden; }
   body { display: flex; align-items: center; justify-content: center; }
-  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+  canvas { max-width: 100vw; max-height: 100vh; width: auto; height: auto; display: block; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -15,7 +15,7 @@
 <script>
 "use strict";
 // =====================================================================
-//  HOW DNS WORKS — 9:16, voice-led (~44s), 24fps, math style, motion on 1s.
+//  HOW DNS WORKS — 9:16 and 16:9 (?format=16:9), voice-led (~46s), 24fps, math style, motion on 1s.
 //  A name is read right to left: the resolver asks the root about ".", the .com server about "com", and
 //  example's own name server about "example"; the answer comes back and is cached for its TTL.
 //  Colour code (one meaning each, everywhere): "." / root purple, "com" / .com server green,
@@ -23,14 +23,17 @@
 //  the question (query dot) white.
 //  The voice is the clock: every cue below is read from VOICE (tools/voice.mjs -> voice.json).
 // =====================================================================
-const FPS = 24, W = 1080, H = 1920;
+const FORMATS = { '9:16': [1080, 1920], '16:9': [1920, 1080] };
+const FORMAT = new URLSearchParams(location.search).get('format') || '9:16';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+{ const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
 const DURATION = Math.round(VOICE.duration * 4) / 4;   // on the 16th grid
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
-const SAFE = { top: 240, bottom: 420, right: 140 };
+const SAFE = { '9:16': { top: 240, bottom: 420, right: 140 }, '16:9': { top: 60, bottom: 110, right: 60 } }[FORMAT];
 const HAND = 'Cambria, "Cambria Math", "Latin Modern Roman", "CMU Serif", "STIX Two Text", "Times New Roman", Georgia, serif';
-const CX = 500;
+const CX = FORMAT === '16:9' ? 930 : 500;
 
 // ---- voice cues
 const VL = (id) => VOICE.lines.find((l) => l.id === id);
@@ -45,8 +48,8 @@ const CU = {
   resolver: VW('resolver', 'resolver'), asks: VW('resolver', 'asks'),
   trick: VL('trick').t0, right: VW('trick', 'right'), left: VW('trick', 'left'),
   m1: q4((VL('trick').t1 + VL('root').t0) / 2),
-  root: VL('root').t0, rootNo: VW('root', "doesn't"), rootCom: VW('root', 'com'),
-  tld: VL('tld').t0, tldNo: VW('tld', "doesn't"), tldEx: VW('tld', 'example'),
+  root: VL('root').t0, rootSays: VL('rootSays').t0, rootSaysEnd: VL('rootSays').t1, rootNo: VW('rootSays', "don't"), rootCom: VW('rootSays', 'com'),
+  tld: VL('tld').t0, tldNo: VW('tld', "doesn't"), tldSays: VL('tldSays').t0, tldSaysEnd: VL('tldSays').t1, tldEx: VW('tldSays', 'example'),
   auth: VL('auth').t0, authEnd: VL('auth').t1,
   answer: VL('answer').t0,
   back: VL('back').t0, backBack: VW('back', 'back'), connects: VW('back', 'connects'), blink: VW('back', 'blink'),

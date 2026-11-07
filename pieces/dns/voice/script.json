@@ -1,13 +1,73 @@
-{ "lead": 0.9, "tail": 1.9, "lines": [
-  { "id": "open",     "text": "You type example dot com.", "after": 0.35 },
-  { "id": "number",   "text": "But computers find each other by number, not by name.", "after": 0.5 },
-  { "id": "resolver", "text": "So your device asks a resolver: a helper that does the looking-up for you.", "after": 0.5 },
-  { "id": "trick",    "text": "The trick? A name is read from right to left.", "after": 1.0 },
-  { "id": "root",     "text": "First, a root server. It doesn't know the address, but it knows who runs dot com.", "after": 0.5 },
-  { "id": "tld",      "text": "The dot com server doesn't know either, but it knows who's in charge of example.", "after": 0.5 },
-  { "id": "auth",     "text": "And example's own name server...", "after": 1.5 },
-  { "id": "answer",   "text": "knows the answer.", "after": 0.7 },
-  { "id": "back",     "text": "The resolver hands the number back, and your browser connects. Usually in a blink.", "after": 0.9 },
-  { "id": "cache",    "text": "It also keeps a copy, for as long as the record's time to live allows.", "after": 0.6 },
-  { "id": "end",      "text": "So next time, the answer is already there." }
-] }
+{
+ "lead": 0.9,
+ "tail": 1.9,
+ "lines": [
+  {
+   "id": "open",
+   "text": "You type example dot com.",
+   "after": 0.35
+  },
+  {
+   "id": "number",
+   "text": "But computers find each other by number, not by name.",
+   "after": 0.5
+  },
+  {
+   "id": "resolver",
+   "text": "So your device asks a resolver: a helper that does the looking-up for you.",
+   "after": 0.5
+  },
+  {
+   "id": "trick",
+   "text": "The trick? A name is read from right to left.",
+   "after": 1.0
+  },
+  {
+   "id": "root",
+   "text": "First, a root server.",
+   "after": 0.35
+  },
+  {
+   "id": "rootSays",
+   "voice": "am_michael",
+   "text": "I don't know that address. Ask the dot com servers.",
+   "after": 0.5
+  },
+  {
+   "id": "tld",
+   "text": "The dot com server doesn't know it either.",
+   "after": 0.35,
+   "speed": 0.82
+  },
+  {
+   "id": "tldSays",
+   "voice": "am_michael",
+   "text": "But I know who's in charge of example. Ask them.",
+   "after": 0.5
+  },
+  {
+   "id": "auth",
+   "text": "And example's own name server...",
+   "after": 1.5
+  },
+  {
+   "id": "answer",
+   "text": "knows the answer.",
+   "after": 0.7
+  },
+  {
+   "id": "back",
+   "text": "The resolver hands the number back, and your browser connects. Usually in a blink.",
+   "after": 0.9
+  },
+  {
+   "id": "cache",
+   "text": "It also keeps a copy, for as long as the record's time to live allows.",
+   "after": 0.6
+  },
+  {
+   "id": "end",
+   "text": "So next time, the answer is already there."
+  }
+ ]
+}

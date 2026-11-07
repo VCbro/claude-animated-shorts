@@ -7,7 +7,7 @@
 <style>
   html, body { margin: 0; height: 100%; background: #050506; overflow: hidden; }
   body { display: flex; align-items: center; justify-content: center; }
-  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+  canvas { max-width: 100vw; max-height: 100vh; width: auto; height: auto; display: block; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script>
 "use strict";
 // ---- voice.json (tools/voice.mjs): the voice-over's lines and word times
-const VOICE = {"duration":44.926,"lead":0.9,"tail":1.9,"lines":[{"id":"open","text":"You type example dot com.","t0":0.9,"t1":2.499,"words":[{"w":"You","t0":0.9,"t1":1.02,"est":true},{"w":"type","t0":1.02,"t1":1.28},{"w":"example","t0":1.28,"t1":1.74},{"w":"dot","t0":1.74,"t1":1.74,"est":true},{"w":"com.","t0":1.74,"t1":2.38}]},{"id":"number","text":"But computers find each other by number, not by name.","t0":2.849,"t1":5.939,"words":[{"w":"But","t0":2.84,"t1":2.96},{"w":"computers","t0":2.96,"t1":3.38},{"w":"find","t0":3.38,"t1":3.8},{"w":"each","t0":3.8,"t1":3.98},{"w":"other","t0":3.98,"t1":4.14},{"w":"by","t0":4.14,"t1":4.36},{"w":"number,","t0":4.36,"t1":4.7},{"w":"not","t0":5.06,"t1":5.32},{"w":"by","t0":5.32,"t1":5.54},{"w":"name.","t0":5.54,"t1":5.84}]},{"id":"resolver","text":"So your device asks a resolver: a helper that does the looking-up for you.","t0":6.439,"t1":10.668,"words":[{"w":"So","t0":6.42,"t1":6.6},{"w":"your","t0":6.6,"t1":6.72},{"w":"device","t0":6.72,"t1":7.16},{"w":"asks","t0":7.16,"t1":7.62},{"w":"a","t0":7.62,"t1":7.84},{"w":"resolver:","t0":7.84,"t1":8.28},{"w":"a","t0":8.82,"t1":8.94},{"w":"helper","t0":8.94,"t1":9.2},{"w":"that","t0":9.2,"t1":9.48},{"w":"does","t0":9.48,"t1":9.64},{"w":"the","t0":9.64,"t1":9.84},{"w":"looking-up","t0":9.84,"t1":10.22,"est":true},{"w":"for","t0":10.22,"t1":10.42},{"w":"you.","t0":10.42,"t1":10.64}]},{"id":"trick","text":"The trick? A name is read from right to left.","t0":11.168,"t1":14.221,"words":[{"w":"The","t0":11.16,"t1":11.32},{"w":"trick?","t0":11.32,"t1":11.64},{"w":"A","t0":11.98,"t1":12.12},{"w":"name","t0":12.12,"t1":12.38},{"w":"is","t0":12.38,"t1":12.62},{"w":"read","t0":12.62,"t1":12.92},{"w":"from","t0":12.92,"t1":13.18},{"w":"right","t0":13.18,"t1":13.48},{"w":"to","t0":13.48,"t1":13.72},{"w":"left.","t0":13.72,"t1":14.02}]},{"id":"root","text":"First, a root server. It doesn't know the address, but it knows who runs dot com.","t0":15.221,"t1":20.022,"words":[{"w":"First,","t0":15.22,"t1":15.56},{"w":"a","t0":15.74,"t1":15.86},{"w":"root","t0":15.86,"t1":16.04},{"w":"server.","t0":16.04,"t1":16.38},{"w":"It","t0":16.98,"t1":17.1},{"w":"doesn't","t0":17.1,"t1":17.34},{"w":"know","t0":17.34,"t1":17.5},{"w":"the","t0":17.5,"t1":17.64},{"w":"address,","t0":17.64,"t1":18.02},{"w":"but","t0":18.18,"t1":18.32},{"w":"it","t0":18.32,"t1":18.42},{"w":"knows","t0":18.42,"t1":18.62},{"w":"who","t0":18.62,"t1":18.9},{"w":"runs","t0":18.9,"t1":19.28},{"w":"dot","t0":19.28,"t1":19.28,"est":true},{"w":"com.","t0":19.28,"t1":19.82}]},{"id":"tld","text":"The dot com server doesn't know either, but it knows who's in charge of example.","t0":20.522,"t1":24.921,"words":[{"w":"The","t0":20.5,"t1":20.64},{"w":"dot","t0":20.64,"t1":20.64,"est":true},{"w":"com","t0":20.64,"t1":21.18},{"w":"server","t0":21.18,"t1":21.56},{"w":"doesn't","t0":21.56,"t1":21.92},{"w":"know","t0":21.92,"t1":22.1},{"w":"either,","t0":22.1,"t1":22.42},{"w":"but","t0":22.76,"t1":23.04},{"w":"it","t0":23.04,"t1":23.14},{"w":"knows","t0":23.14,"t1":23.38},{"w":"who's","t0":23.38,"t1":23.78},{"w":"in","t0":23.78,"t1":23.94},{"w":"charge","t0":23.94,"t1":24.18},{"w":"of","t0":24.18,"t1":24.4},{"w":"example.","t0":24.4,"t1":24.74}]},{"id":"auth","text":"And example's own name server...","t0":25.421,"t1":27.129,"words":[{"w":"And","t0":25.44,"t1":25.56},{"w":"example's","t0":25.56,"t1":26.2},{"w":"own","t0":26.2,"t1":26.4},{"w":"name","t0":26.4,"t1":26.62},{"w":"server...","t0":26.62,"t1":27.04}]},{"id":"answer","text":"knows the answer.","t0":28.629,"t1":29.643,"words":[{"w":"knows","t0":28.4,"t1":28.94},{"w":"the","t0":28.94,"t1":29.12},{"w":"answer.","t0":29.12,"t1":29.52}]},{"id":"back","text":"The resolver hands the number back, and your browser connects. Usually in a blink.","t0":30.344,"t1":34.792,"words":[{"w":"The","t0":30.42,"t1":30.44},{"w":"resolver","t0":30.44,"t1":30.86},{"w":"hands","t0":30.86,"t1":31.16},{"w":"the","t0":31.16,"t1":31.34},{"w":"number","t0":31.34,"t1":31.5},{"w":"back,","t0":31.5,"t1":31.84},{"w":"and","t0":32.14,"t1":32.18},{"w":"your","t0":32.18,"t1":32.3},{"w":"browser","t0":32.3,"t1":32.64},{"w":"connects.","t0":32.64,"t1":33.12},{"w":"Usually","t0":33.8,"t1":34.02},{"w":"in","t0":34.02,"t1":34.36},{"w":"a","t0":34.36,"t1":34.48},{"w":"blink.","t0":34.48,"t1":34.66}]},{"id":"cache","text":"It also keeps a copy, for as long as the record's time to live allows.","t0":35.692,"t1":40.094,"words":[{"w":"It","t0":35.68,"t1":35.82},{"w":"also","t0":35.82,"t1":36.14},{"w":"keeps","t0":36.14,"t1":36.44},{"w":"a","t0":36.44,"t1":36.64},{"w":"copy,","t0":36.64,"t1":36.92},{"w":"for","t0":37.44,"t1":37.6},{"w":"as","t0":37.6,"t1":37.76},{"w":"long","t0":37.76,"t1":37.96},{"w":"as","t0":37.96,"t1":38.16},{"w":"the","t0":38.16,"t1":38.34},{"w":"record's","t0":38.34,"t1":38.82},{"w":"time","t0":38.82,"t1":39.04},{"w":"to","t0":39.04,"t1":39.28},{"w":"live","t0":39.28,"t1":39.46},{"w":"allows.","t0":39.46,"t1":39.84}]},{"id":"end","text":"So next time, the answer is already there.","t0":40.694,"t1":43.026,"words":[{"w":"So","t0":40.68,"t1":40.86},{"w":"next","t0":40.86,"t1":41.08},{"w":"time,","t0":41.08,"t1":41.48},{"w":"the","t0":41.76,"t1":41.86},{"w":"answer","t0":41.86,"t1":42.18},{"w":"is","t0":42.18,"t1":42.38},{"w":"already","t0":42.38,"t1":42.64},{"w":"there.","t0":42.64,"t1":42.96}]}]};
+const VOICE = {"duration":46.583,"lead":0.9,"tail":1.9,"lines":[{"id":"open","text":"You type example dot com.","t0":0.9,"t1":2.499,"words":[{"w":"You","t0":0.9,"t1":1.02,"est":true},{"w":"type","t0":1.02,"t1":1.28},{"w":"example","t0":1.28,"t1":1.76},{"w":"dot","t0":1.76,"t1":1.76,"est":true},{"w":"com.","t0":1.76,"t1":2.38}]},{"id":"number","text":"But computers find each other by number, not by name.","t0":2.849,"t1":5.939,"words":[{"w":"But","t0":2.84,"t1":2.96},{"w":"computers","t0":2.96,"t1":3.38},{"w":"find","t0":3.38,"t1":3.8},{"w":"each","t0":3.8,"t1":4},{"w":"other","t0":4,"t1":4.12},{"w":"by","t0":4.12,"t1":4.36},{"w":"number,","t0":4.36,"t1":4.72},{"w":"not","t0":5.06,"t1":5.32},{"w":"by","t0":5.32,"t1":5.54},{"w":"name.","t0":5.54,"t1":5.84}]},{"id":"resolver","text":"So your device asks a resolver: a helper that does the looking-up for you.","t0":6.439,"t1":10.668,"words":[{"w":"So","t0":6.42,"t1":6.6},{"w":"your","t0":6.6,"t1":6.72},{"w":"device","t0":6.72,"t1":7.14},{"w":"asks","t0":7.14,"t1":7.62},{"w":"a","t0":7.62,"t1":7.84},{"w":"resolver:","t0":7.84,"t1":8.26},{"w":"a","t0":8.82,"t1":8.94},{"w":"helper","t0":8.94,"t1":9.2},{"w":"that","t0":9.2,"t1":9.46},{"w":"does","t0":9.46,"t1":9.64},{"w":"the","t0":9.64,"t1":9.84},{"w":"looking-up","t0":9.84,"t1":10.22,"est":true},{"w":"for","t0":10.22,"t1":10.42},{"w":"you.","t0":10.42,"t1":10.66}]},{"id":"trick","text":"The trick? A name is read from right to left.","t0":11.168,"t1":14.221,"words":[{"w":"The","t0":11.16,"t1":11.32},{"w":"trick?","t0":11.32,"t1":11.64},{"w":"A","t0":11.98,"t1":12.12},{"w":"name","t0":12.12,"t1":12.38},{"w":"is","t0":12.38,"t1":12.62},{"w":"read","t0":12.62,"t1":12.92},{"w":"from","t0":12.92,"t1":13.2},{"w":"right","t0":13.2,"t1":13.48},{"w":"to","t0":13.48,"t1":13.72},{"w":"left.","t0":13.72,"t1":14.04}]},{"id":"root","text":"First, a root server.","t0":15.221,"t1":16.597,"words":[{"w":"First,","t0":15.26,"t1":15.56},{"w":"a","t0":15.8,"t1":15.9},{"w":"root","t0":15.9,"t1":16.06},{"w":"server.","t0":16.06,"t1":16.46}]},{"id":"rootSays","text":"I don't know that address. Ask the dot com servers.","t0":16.947,"t1":20.232,"words":[{"w":"I","t0":17.04,"t1":17.06},{"w":"don't","t0":17.06,"t1":17.2},{"w":"know","t0":17.2,"t1":17.36},{"w":"that","t0":17.36,"t1":17.58},{"w":"address.","t0":17.58,"t1":17.96},{"w":"Ask","t0":18.56,"t1":18.72},{"w":"the","t0":18.72,"t1":18.94},{"w":"dot","t0":18.94,"t1":18.94,"est":true},{"w":"com","t0":18.94,"t1":19.48},{"w":"servers.","t0":19.48,"t1":20}]},{"id":"tld","text":"The dot com server doesn't know it either.","t0":20.732,"t1":23.158,"words":[{"w":"The","t0":20.6,"t1":20.86},{"w":"dot","t0":20.86,"t1":20.86,"est":true},{"w":"com","t0":20.86,"t1":21.42},{"w":"server","t0":21.42,"t1":21.9},{"w":"doesn't","t0":21.9,"t1":22.4},{"w":"know","t0":22.4,"t1":22.58},{"w":"it","t0":22.58,"t1":22.74},{"w":"either.","t0":22.74,"t1":23.04}]},{"id":"tldSays","text":"But I know who's in charge of example. Ask them.","t0":23.508,"t1":26.577,"words":[{"w":"But","t0":23.44,"t1":23.6},{"w":"I","t0":23.6,"t1":23.76},{"w":"know","t0":23.76,"t1":23.94},{"w":"who's","t0":23.94,"t1":24.3},{"w":"in","t0":24.3,"t1":24.44},{"w":"charge","t0":24.44,"t1":24.76},{"w":"of","t0":24.76,"t1":25},{"w":"example.","t0":25,"t1":25.34},{"w":"Ask","t0":26.02,"t1":26.2},{"w":"them.","t0":26.2,"t1":26.56}]},{"id":"auth","text":"And example's own name server...","t0":27.077,"t1":28.785,"words":[{"w":"And","t0":27.077,"t1":27.2,"est":true},{"w":"example's","t0":27.2,"t1":27.9},{"w":"own","t0":27.9,"t1":28.06},{"w":"name","t0":28.06,"t1":28.28},{"w":"server...","t0":28.28,"t1":28.72}]},{"id":"answer","text":"knows the answer.","t0":30.285,"t1":31.3,"words":[{"w":"knows","t0":30.2,"t1":30.6},{"w":"the","t0":30.6,"t1":30.78},{"w":"answer.","t0":30.78,"t1":31.18}]},{"id":"back","text":"The resolver hands the number back, and your browser connects. Usually in a blink.","t0":32,"t1":36.449,"words":[{"w":"The","t0":32,"t1":32.1},{"w":"resolver","t0":32.1,"t1":32.5},{"w":"hands","t0":32.5,"t1":32.82},{"w":"the","t0":32.82,"t1":33},{"w":"number","t0":33,"t1":33.16},{"w":"back,","t0":33.16,"t1":33.5},{"w":"and","t0":33.5,"t1":33.82},{"w":"your","t0":33.82,"t1":33.96},{"w":"browser","t0":33.96,"t1":34.3},{"w":"connects.","t0":34.3,"t1":34.8},{"w":"Usually","t0":35.46,"t1":35.7},{"w":"in","t0":35.7,"t1":36.02},{"w":"a","t0":36.02,"t1":36.14},{"w":"blink.","t0":36.14,"t1":36.32}]},{"id":"cache","text":"It also keeps a copy, for as long as the record's time to live allows.","t0":37.349,"t1":41.75,"words":[{"w":"It","t0":37.28,"t1":37.48},{"w":"also","t0":37.48,"t1":37.8},{"w":"keeps","t0":37.8,"t1":38.1},{"w":"a","t0":38.1,"t1":38.3},{"w":"copy,","t0":38.3,"t1":38.62},{"w":"for","t0":39.08,"t1":39.26},{"w":"as","t0":39.26,"t1":39.4},{"w":"long","t0":39.4,"t1":39.62},{"w":"as","t0":39.62,"t1":39.82},{"w":"the","t0":39.82,"t1":40},{"w":"record's","t0":40,"t1":40.48},{"w":"time","t0":40.48,"t1":40.7},{"w":"to","t0":40.7,"t1":40.94},{"w":"live","t0":40.94,"t1":41.1},{"w":"allows.","t0":41.1,"t1":41.48}]},{"id":"end","text":"So next time, the answer is already there.","t0":42.35,"t1":44.683,"words":[{"w":"So","t0":42.34,"t1":42.52},{"w":"next","t0":42.52,"t1":42.72},{"w":"time,","t0":42.72,"t1":43.12},{"w":"the","t0":43.42,"t1":43.52},{"w":"answer","t0":43.52,"t1":43.82},{"w":"is","t0":43.82,"t1":44.04},{"w":"already","t0":44.04,"t1":44.28},{"w":"there.","t0":44.28,"t1":44.62}]}]};
 // =====================================================================
-//  HOW DNS WORKS — 9:16, voice-led (~44s), 24fps, math style, motion on 1s.
+//  HOW DNS WORKS — 9:16 and 16:9 (?format=16:9), voice-led (~46s), 24fps, math style, motion on 1s.
 //  A name is read right to left: the resolver asks the root about ".", the .com server about "com", and
 //  example's own name server about "example"; the answer comes back and is cached for its TTL.
 //  Colour code (one meaning each, everywhere): "." / root purple, "com" / .com server green,
@@ -25,14 +25,17 @@ const VOICE = {"duration":44.926,"lead":0.9,"tail":1.9,"lines":[{"id":"open","te
 //  the question (query dot) white.
 //  The voice is the clock: every cue below is read from VOICE (tools/voice.mjs -> voice.json).
 // =====================================================================
-const FPS = 24, W = 1080, H = 1920;
+const FORMATS = { '9:16': [1080, 1920], '16:9': [1920, 1080] };
+const FORMAT = new URLSearchParams(location.search).get('format') || '9:16';
+const FPS = 24, [W, H] = FORMATS[FORMAT];
+{ const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
 const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;
 const DURATION = Math.round(VOICE.duration * 4) / 4;   // on the 16th grid
 const NFRAMES = Math.round(DURATION * FPS);
 const LOOP_T = NFRAMES / FPS;
-const SAFE = { top: 240, bottom: 420, right: 140 };
+const SAFE = { '9:16': { top: 240, bottom: 420, right: 140 }, '16:9': { top: 60, bottom: 110, right: 60 } }[FORMAT];
 const HAND = 'Cambria, "Cambria Math", "Latin Modern Roman", "CMU Serif", "STIX Two Text", "Times New Roman", Georgia, serif';
-const CX = 500;
+const CX = FORMAT === '16:9' ? 930 : 500;
 
 // ---- voice cues
 const VL = (id) => VOICE.lines.find((l) => l.id === id);
@@ -47,8 +50,8 @@ const CU = {
   resolver: VW('resolver', 'resolver'), asks: VW('resolver', 'asks'),
   trick: VL('trick').t0, right: VW('trick', 'right'), left: VW('trick', 'left'),
   m1: q4((VL('trick').t1 + VL('root').t0) / 2),
-  root: VL('root').t0, rootNo: VW('root', "doesn't"), rootCom: VW('root', 'com'),
-  tld: VL('tld').t0, tldNo: VW('tld', "doesn't"), tldEx: VW('tld', 'example'),
+  root: VL('root').t0, rootSays: VL('rootSays').t0, rootSaysEnd: VL('rootSays').t1, rootNo: VW('rootSays', "don't"), rootCom: VW('rootSays', 'com'),
+  tld: VL('tld').t0, tldNo: VW('tld', "doesn't"), tldSays: VL('tldSays').t0, tldSaysEnd: VL('tldSays').t1, tldEx: VW('tldSays', 'example'),
   auth: VL('auth').t0, authEnd: VL('auth').t1,
   answer: VL('answer').t0,
   back: VL('back').t0, backBack: VW('back', 'back'), connects: VW('back', 'connects'), blink: VW('back', 'blink'),
@@ -1014,19 +1017,24 @@ const STYLE = {
 // =====================================================================
 const QR = MC.purple, QC = MC.green, QE = MC.red, QA = MC.yellow, QV = MC.blue, QT = MC.teal, QQ = MC.white;
 const IP = '203.0.113.7';                     // a documentation address (RFC 5737): shown as illustrative
-const BAR = { x0: 80, x1: 920, y: 400 };      // the address bar; the name sits in it
-const NAME_SIZE = 76, ANS_Y = 512;            // the answer line under the bar
-const RES = [250, 900], RES_R = 78;           // the resolver
-const LAP = [250, 1200];                      // your device (the screen's centre)
-const SV = [                                   // the three servers, top to bottom = the order they are asked
-  { p: [770, 670], c: QR, inner: '.', size: 96, name: 'root server' },
-  { p: [770, 925], c: QC, inner: 'com', size: 44, name: '.com server' },
-  { p: [770, 1180], c: QE, inner: 'example', size: 34, name: "example's server" },
+// layout per format: 9:16 stacks the servers in a column on the right; 16:9 climbs them as a staircase
+const WIDE_L = FORMAT === '16:9';
+const BAR = WIDE_L ? { x0: 560, x1: 1300, y: 150 } : { x0: 80, x1: 920, y: 400 };   // the address bar; the name sits in it
+const NAME_SIZE = WIDE_L ? 72 : 76, ANS_Y = WIDE_L ? 248 : 512;                   // the answer line under the bar
+const RES = WIDE_L ? [330, 540] : [250, 900], RES_R = 78;                          // the resolver
+const LAP = WIDE_L ? [330, 830] : [250, 1200];                                     // your device (the screen's centre)
+const SVP = WIDE_L ? [[1100, 400], [1400, 560], [1700, 720]] : [[770, 670], [770, 925], [770, 1180]];
+const SV = [                                   // the three servers, in the order they are asked
+  { p: SVP[0], c: QR, inner: '.', size: 96, name: 'root server' },
+  { p: SVP[1], c: QC, inner: 'com', size: 44, name: '.com server' },
+  { p: SVP[2], c: QE, inner: 'example', size: 34, name: "example's server" },
 ];
 const SV_R = 80;
-const CARD = { x: 250, y: 1048, w: 300, h: 84 };             // the copy of the answer at the resolver (bridge object)
-const CACHE = { x: 655, y: 1000, w: 520, h: 300 };           // the cache record in the last scene
-const HERO = [565, 1395];
+const CARD = WIDE_L ? { x: 330, y: 690, w: 300, h: 84 } : { x: 250, y: 1048, w: 300, h: 84 };   // the copy of the answer at the resolver (bridge object)
+const CACHE = WIDE_L ? { x: 900, y: 560, w: 520, h: 300 } : { x: 655, y: 1000, w: 520, h: 300 }; // the cache record in the last scene
+const HERO = WIDE_L ? [760, 930] : [565, 1395];
+const ANS_CARD = WIDE_L ? [1430, 780] : [525, 1185];   // where the answer appears, beside example's server
+const CAP_Y = WIDE_L ? 1012 : 1460, CAP_SIZE = WIDE_L ? 44 : 48, HOPS_Y = WIDE_L ? 1012 : 1418, TAG_Y = WIDE_L ? 96 : 300;
 
 // ---- small helpers
 const at = (t0, d = 0.6) => runS(t0, d);
@@ -1121,15 +1129,33 @@ function reply(i, t0, c, words) {
   if (p <= 0) return;
   const [a, b] = edge(s.p, SV_R + 6, RES, RES_R + 6), off = [0, -18];
   mArrow(a[0] + off[0], a[1] + off[1], b[0] + off[0], b[1] + off[1], c, 4, p);
-  writeText(words, 545, s.p[1] - (i === 0 ? 30 : 58), 34, at(t0 + 0.2, 0.7), { it: true });
+  writeText(words, (a[0] + b[0]) / 2, (a[1] + b[1]) / 2 - 52, 34, at(t0 + 0.2, 0.7), { it: true });
 }
 // captions: the one whose time has come, Written on at its time (drawn last, at screen size)
 function captions(list) {
   let cur = null; for (const c of list) if (TT >= c[0]) cur = c;
   if (!cur) return;
-  DEFER.push(() => mathCard(cur[1], CX, 1460, 48, runS(cur[0], 0.8)));
+  DEFER.push(() => mathCard(cur[1], CX, CAP_Y, CAP_SIZE, runS(cur[0], 0.8)));
 }
-function hops(n, p = 1) { if (p > 0) readout([mn('hops', MC.greyA)], n, 0, 70, 1418, 42, { c: MC.white, p }); }
+function hops(n, p = 1) { if (p > 0) readout([mn('hops', MC.greyA)], n, 0, 70, HOPS_Y, 42, { c: MC.white, p }); }
+// the section tag, top left (the kit's mathTag sits at the 9:16 position)
+function tagM(str) {
+  DEFER.push(() => { const p = runS(E0 + 0.15, 0.7), w = textW(str, 40, { it: true }); writeText(str, 70, TAG_Y, 40, p, { align: 'left', it: true, color: MC.grey }); segLine(70, TAG_Y + 18, 70 + w, TAG_Y + 18, MC.greyD, 2.5, smoothM(p * 1.3 - 0.3)); });
+}
+// a server at work: an arc in its colour circles it while it looks the name up (u0..u1), a glow while it speaks
+function working(i, t0, t1) {
+  const a = clamp((TT - t0) / 0.3) * clamp((t1 - TT) / 0.3); if (a <= 0) return;
+  const s = SV[i], r = SV_R + 18, th = (TT - t0) * TAU / 1.1;
+  ctx.save(); ctx.globalAlpha = a; ctx.strokeStyle = s.c; ctx.lineWidth = 6; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.arc(s.p[0], s.p[1], r, th, th + 1.9); ctx.stroke();
+  ctx.globalAlpha = a * 0.5; ctx.beginPath(); ctx.arc(s.p[0], s.p[1], r, th + Math.PI, th + Math.PI + 0.9); ctx.stroke(); ctx.restore();
+}
+function speaking(i, t0, t1) {
+  const a = clamp((TT - t0) / 0.25) * clamp((t1 - TT) / 0.3); if (a <= 0) return;
+  const s = SV[i], k = 1 + 0.06 * Math.sin((TT - t0) * TAU * 2.2);
+  glowAt(s.p[0], s.p[1], SV_R * 1.9 * k, s.c, 0.35 * a);
+  for (const q of [1, 2]) { const u = ((TT - t0) * 0.9 + q * 0.5) % 1; ctx.save(); ctx.globalAlpha = a * (1 - u) * 0.8; ctx.strokeStyle = s.c; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(s.p[0], s.p[1], SV_R + 10 + u * 70, 0, TAU); ctx.stroke(); ctx.restore(); }
+}
 
 // ---- era 1: the question. A name, no number; your device asks a resolver; the name is read right to left.
 function sceneAsk() {
@@ -1139,6 +1165,15 @@ function sceneAsk() {
   drawUnderlines(L, at(cu.right, (cu.left - cu.right) + 0.6));
   drawAnswer(at(cu.number + 0.1, 0.6), 0);
   drawLaptop(1);
+  // the device's screen: the name typed, then the number it lacks; the "?" pulses while it waits
+  const [lx, ly] = LAP, typed = Math.floor(11 * clamp((TT - cu.type) / 0.9));
+  if (typed > 0) mText('example.com'.slice(0, typed), lx, ly - 8, 25, { font: MATH_MONO, color: MC.greyA });
+  const qs = at(cu.number + 0.2, 0.8);
+  if (qs > 0) {
+    const k = 1 + 0.25 * thereBack(clamp(((TT - cu.number - 1.0) % 1.2) / 0.6)) * (TT < cu.asks + 0.7 ? 1 : 0);
+    ctx.save(); ctx.translate(lx, ly + 34); ctx.scale(k, k); writeText([{ s: '?.?.?.?', c: QA }], 0, 0, 30, qs, { font: MATH_MONO }); ctx.restore();
+  }
+  if (TT >= cu.number + 0.9 && TT < cu.asks + 0.7) { const u = ((TT - cu.number - 0.9) % 1.2) / 0.6; if (u < 1) flashAt(CX + 52, ANS_Y - 20, u, QA, 26, 3); }
   drawResolver(at(cu.resolver - 0.1, 0.8));
   guide(LAP, 70, RES, RES_R, at(cu.resolver + 0.2, 0.6));
   const qd = trip(cu.asks + 0.1, 0.7, LAP, 70, RES, RES_R, QQ);
@@ -1150,8 +1185,8 @@ function sceneAsk() {
   }
   hops(0, at(cu.asks + 0.6, 0.5));
   const look = qd || (TT < cu.number ? [CX, BAR.y] : TT < cu.resolver ? [CX, ANS_Y] : TT < cu.trick ? RES : [g.x, BAR.y]);
-  piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.number + 0.3 && TT < cu.resolver ? 'wow' : 'calm' });
-  mathTag('how DNS works');
+  piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.number + 0.3 && TT < cu.resolver ? 'wow' : 'calm', hop: (TT - VW('number', 'name')) / 0.5 });
+  tagM('how DNS works');
   captions([
     [cu.number, [{ s: 'computers need a ' }, { s: 'number', c: QA }]],
     [cu.resolver, [{ s: 'a ' }, { s: 'resolver', c: QV }, { s: ' looks it up' }]],
@@ -1175,6 +1210,9 @@ function sceneChain() {
   drawServer(0, 1, (TT - cu.rootNo) / 0.6);
   drawServer(1, at(cu.tld - 0.35, 0.6), (TT - cu.tldNo) / 0.6);
   drawServer(2, at(cu.auth - 0.3, 0.6));
+  working(0, cu.root + 0.85, cu.rootSays); speaking(0, cu.rootSays, cu.rootSaysEnd);
+  working(1, cu.tld + 0.85, cu.tldSays); speaking(1, cu.tldSays, cu.tldSaysEnd);
+  working(2, cu.auth + 0.85, cu.hit);
   guide(RES, RES_R, SV[0].p, SV_R, 1);
   guide(RES, RES_R, SV[1].p, SV_R, at(cu.tld - 0.2, 0.5));
   guide(RES, RES_R, SV[2].p, SV_R, at(cu.auth - 0.15, 0.5));
@@ -1187,7 +1225,7 @@ function sceneChain() {
   const n = TT >= cu.auth + 0.85 ? 3 : TT >= cu.tld + 0.85 ? 2 : TT >= cu.root + 0.85 ? 1 : 0;
   hops(n);
   // the payoff: the answer, at example's own server
-  const ap = at(cu.hit, 0.35), S3 = SV[2].p, AC = [525, S3[1] + 5];
+  const ap = at(cu.hit, 0.35), S3 = SV[2].p, AC = ANS_CARD;
   if (ap > 0) {
     const k = indicateS((TT - cu.hit) / 0.5, 0.18);
     ctx.save(); ctx.translate(AC[0], AC[1]); ctx.scale(k, k);
@@ -1207,7 +1245,7 @@ function sceneChain() {
   const look = dot || (TT < cu.hit ? S3 : TT < cu.back ? AC : LAP);
   const mood = TT >= cu.hit && TT < cu.back ? 'wow' : TT >= cu.connects ? 'happy' : 'calm';
   piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood, hop: (TT - cu.connects) / 0.5 });
-  mathTag('how DNS works');
+  tagM('how DNS works');
   captions([
     [cu.root, [{ s: 'root', c: QR }, { s: ': ask ' }, { s: '.com', c: QC }]],
     [cu.tld, [{ s: '.com', c: QC }, { s: ': ask ' }, { s: 'example', c: QE }]],
@@ -1248,7 +1286,7 @@ function sceneCache() {
   hops(TT >= cu.end + 0.6 ? 0 : 3);
   const look = dot || (TT < cu.end ? [CACHE.x, CACHE.y] : [CX, ANS_Y]);
   piHero(HERO[0], HERO[1], 0.7, { key: 'pi', look, mood: TT >= cu.already ? 'happy' : 'calm', hop: (TT - cu.already - 0.2) / 0.5 });
-  mathTag('how DNS works');
+  tagM('how DNS works');
   captions([
     [cu.cache, [{ s: 'kept for its ' }, { s: 'time to live', c: QT }]],
     [cu.end, [{ s: 'next time: ' }, { s: '0', c: MC.white }, { s: ' hops' }]],
