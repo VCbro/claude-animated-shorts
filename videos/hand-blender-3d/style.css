@@ -1,3 +1,4 @@
+html { color-scheme: dark; }
 :root {
   --cyan: #36d6ff;
   --amber: #ffb347;
@@ -113,3 +114,38 @@ body.clean #stage.freecam #c { cursor: default; }
 #sceneNav { display: flex; gap: 0.5cqh; flex: 1; flex-wrap: wrap; }
 #sceneNav .nav span { color: var(--cyan); margin-right: 0.6cqh; font-weight: 600; }
 #sceneNav .nav.active { background: rgba(54,214,255,0.22); border-color: var(--cyan); }
+
+#sceneNav .nav em { font-style: normal; }
+.start-card .rotate { display: none; margin-top: 2.4cqh; font: 500 max(1.6cqh, 12px) Inter, sans-serif; color: var(--cyan); }
+
+/* ---------- small screens (phones): keep text readable, compact the HUD ---------- */
+.label .t { font-size: max(1.55cqh, 9px); }
+.label .s { font-size: max(1.2cqh, 7.5px); }
+.label .num { font-size: max(1.6cqh, 9px); }
+.label .tag { font-size: max(0.9cqh, 6px); }
+#caption { font-size: max(2.05cqh, 10.5px); }
+#sceneChip { font-size: max(1.45cqh, 8.5px); }
+#legend { font-size: max(1.2cqh, 8px); }
+#controls button, #time { font-size: max(1.3cqh, 12px); }
+.start-card .kicker { font-size: max(1.4cqh, 9px); }
+.start-card p { font-size: max(2cqh, 10px); }
+.start-card .hint { font-size: max(1.3cqh, 10px); }
+#startBtn { font-size: max(2cqh, 13px); }
+@media (max-width: 900px), (max-height: 500px) {
+  #sceneNav .nav em { display: none; }
+  #controls .row { gap: 6px; flex-wrap: nowrap; overflow-x: auto; }
+  #sceneNav { flex-wrap: nowrap; }
+  #controls button { padding: 4px 8px; }
+  #time { min-width: 0; }
+  .label .s, .label .tag { display: none; }
+  #legend { display: none; }
+  .start-card .hint { display: none; }
+  #caption { max-width: 92cqw; padding: 0.8cqh 1.6cqh; bottom: 19cqh; }
+  body.idle #caption { bottom: 4cqh; }
+}
+@media (orientation: portrait) and (pointer: coarse) {
+  .start-card .rotate { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #caption, #start, #controls { transition: none; }
+}

@@ -16,7 +16,8 @@ import { Sound } from './src/audio.js';
 import { createState, buildTimeline, SCENES, CAPTIONS, DURATION } from './src/timeline.js';
 
 const params = new URLSearchParams(location.search);
-const QUALITY = params.get('quality') || 'high'; // high | medium | low
+const IS_PHONE = matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 900;
+const QUALITY = params.get('quality') || (IS_PHONE ? 'medium' : 'high'); // high | medium | low
 const $ = (s) => document.querySelector(s);
 
 // ------------------------------------------------------------------ renderer
@@ -157,7 +158,7 @@ function resize() {
   const vw = window.innerWidth, vh = window.innerHeight;
   W = Math.min(vw, vh * 16 / 9); H = W * 9 / 16;
   stage.style.width = `${W}px`; stage.style.height = `${H}px`;
-  const pr = Math.min(window.devicePixelRatio || 1, 1920 / W) * (QUALITY === 'low' ? 0.75 : 1);
+  const pr = Math.min(window.devicePixelRatio || 1, 1920 / W, IS_PHONE ? 1.5 : 4) * (QUALITY === 'low' ? 0.75 : 1);
   renderer.setPixelRatio(pr);
   renderer.setSize(W, H, false);
   composer.setPixelRatio(pr);
@@ -252,7 +253,7 @@ let lastCaption = null, lastScene = -1;
 const navEl = $('#sceneNav');
 SCENES.forEach((s, i) => {
   const b = document.createElement('button');
-  b.className = 'nav'; b.innerHTML = `<span>${String(i + 1).padStart(2, '0')}</span>${s.name}`;
+  b.className = 'nav'; b.title = s.name; b.innerHTML = `<span>${String(i + 1).padStart(2, '0')}</span><em>${s.name}</em>`;
   b.addEventListener('click', () => { if (!started) begin(); tl.seek(s.t + 0.001); bladeAngle = 0; });
   navEl.appendChild(b);
 });
@@ -327,7 +328,7 @@ $('#startBtn').addEventListener('click', begin);
 playBtn.addEventListener('click', togglePlay);
 $('#restart').addEventListener('click', () => { if (!started) return begin(); tl.restart(); bladeAngle = 0; setPlayIcon(); });
 $('#fullscreen').addEventListener('click', () => {
-  if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen?.();
+  try { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen?.()?.catch?.(() => {}); } catch (e) { /* not available (e.g. iPhone) */ }
 });
 const orbitBtn = $('#orbit');
 function setFreeCam(on) {
@@ -368,7 +369,7 @@ window.addEventListener('keydown', (e) => {
 // auto-hide controls when the mouse is idle
 let idleTimer;
 const wake = () => { document.body.classList.remove('idle'); clearTimeout(idleTimer); idleTimer = setTimeout(() => document.body.classList.add('idle'), 2600); };
-window.addEventListener('pointermove', wake); wake();
+window.addEventListener('pointermove', wake); window.addEventListener('pointerdown', wake); wake();
 
 if (params.has('autostart')) begin();
 if (params.has('t')) { begin(); tl.seek(parseFloat(params.get('t'))); if (params.has('pause')) { tl.pause(); setPlayIcon(); } }
