@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How a Hand Blender Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="stage">
+    <canvas id="c"></canvas>
+
+    <div id="labels"></div>
+
+    <div id="shade"></div>
+    <div id="titles">
+      <div class="center">
+        <h1 id="title">HOW DOES A <em>HAND BLENDER</em> WORK?</h1>
+        <p id="titleSub">Inside the motor and the rotating blades</p>
+      </div>
+      <div class="center" id="chain">
+        <span id="c1">MOTOR</span><i id="a1">→</i><span id="c2">ROTATION</span><i id="a2">→</i><span id="c3">BLADES</span><i id="a3">→</i><span id="c4">BLENDING</span>
+      </div>
+      <div class="center outro">
+        <h2 id="outro1">NOW YOU KNOW HOW A <em>HAND BLENDER</em> WORKS!</h2>
+        <p id="outro2">ENGINEERING IS AMAZING!</p>
+      </div>
+    </div>
+
+    <div id="sceneChip"></div>
+    <div id="caption"></div>
+    <div id="legend">
+      <div><b class="sw part"></b>Real component</div>
+      <div><b class="sw vis"></b>Visual explanation (not a physical part)</div>
+    </div>
+    <div id="vignette"></div>
+    <div id="fade"></div>
+
+    <div id="start">
+      <div class="start-card">
+        <div class="kicker">3D ENGINEERING DOCUMENTARY · 60 s</div>
+        <h1>How an Electric <em>Hand Blender</em> Works</h1>
+        <p>Inside the motor and the rotating blades</p>
+        <button id="startBtn">▶&nbsp; Start Animation</button>
+        <div class="hint">Space play/pause · 1–7 scenes · O free orbit · H hide UI · F fullscreen · M sound</div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <div id="progress"><div id="ticks"></div><div id="progressFill"></div></div>
+      <div class="row">
+        <button id="play" class="icon paused" title="Play / Pause (Space)"><span class="i-play">▶</span><span class="i-pause">❚❚</span></button>
+        <button id="restart" class="icon" title="Restart (R)">↺</button>
+        <span id="time">0:00 / 1:00</span>
+        <div id="sceneNav"></div>
+        <button id="orbit" class="txt" title="Free camera orbit (O)">⟲ Orbit</button>
+        <button id="sound" class="icon" title="Sound (M)"><span class="on">🔊</span><span class="off">🔇</span></button>
+        <button id="hideUi" class="icon" title="Hide UI for recording (H)">◱</button>
+        <button id="fullscreen" class="icon" title="Fullscreen (F)">⛶</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
