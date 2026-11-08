@@ -377,6 +377,7 @@ export function buildBlender(M) {
   };
   const bellProfile = (y0, y1, n = 24) => Array.from({ length: n + 1 }, (_, i) => { const y = y0 + (y1 - y0) * (i / n); return new THREE.Vector2(bellR(y), y); });
   const bellMat = M.steel.clone(); bellMat.side = THREE.DoubleSide;
+  bellMat.color.set(0xc6ccd3); bellMat.roughness = 0.24; bellMat.clearcoat = 0; bellMat.envMapIntensity = 1.0;
   const top = lathe(bellProfile(-14.5, -16.0), bellMat); guard.add(top);
   for (let i = 0; i < 4; i++) { // 4 vent windows between 4 ribs
     const seg = lathe(bellProfile(-16.0, -18.0), bellMat, i * TAU / 4 + 0.62, TAU / 4 - 0.62, 24); guard.add(seg);

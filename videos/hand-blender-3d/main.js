@@ -224,7 +224,12 @@ function applyScene(dt, time) {
   scene.environmentIntensity = 0.32 * (1 - 0.5 * S.camLight);
   studio.key.intensity = 2.4 + S.glow * 2.5;
   studio.rings[0].material.opacity = 0.9 + S.glow;
-  bloom.strength = 0.4 + S.glow * 0.9;
+  // inside the guard / macro orbit: polished steel fills the frame, so keep bloom off it
+  bloom.strength = (0.4 + S.glow * 0.9) * (1 - 0.8 * S.macroDamp);
+  bloom.threshold = 0.9 + 0.5 * S.macroDamp;
+  studio.top.intensity = 1.4 * (1 - 0.7 * S.macroDamp);
+  studio.rimWarm.intensity = 1.1 * (1 - 0.8 * S.macroDamp);
+  studio.rimBlue.intensity = 2.2 * (1 - 0.4 * S.macroDamp);
   // DOF
   bokeh.uniforms.focus.value = camera.position.distanceTo(target);
   bokeh.uniforms.aperture.value = S.aperture;
@@ -367,4 +372,4 @@ window.addEventListener('pointermove', wake); wake();
 
 if (params.has('autostart')) begin();
 if (params.has('t')) { begin(); tl.seek(parseFloat(params.get('t'))); if (params.has('pause')) { tl.pause(); setPlayIcon(); } }
-window.__app = { tl, state, seek: (t) => tl.seek(t), pause: () => tl.pause() };
+window.__app = { tl, state, seek: (t) => tl.seek(t), pause: () => tl.pause(), B, bloom, studio, scene };

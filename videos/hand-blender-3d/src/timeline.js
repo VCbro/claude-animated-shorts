@@ -39,7 +39,7 @@ export function createState() {
     explode: 0, blenderY: 0, spin: 0, housing: 1,
     speed: 0, cut: 0, energy: 0, field: 0, torque: 0, trail: 0, rpm: 0,
     jar: 0, mix: 0, flowArrows: 0, flowEngage: 0,
-    camLight: 0, fade: 1, glow: 0,
+    camLight: 0, fade: 1, glow: 0, macroDamp: 0,
     lab: { explode: 0, motorA: 0, motorB: 0, visMotor: 0, coupling: 0, tube: 0, macro: 0, fluid: 0 },
   };
 }
@@ -108,6 +108,7 @@ export function buildTimeline(S) {
   // inside the bell, looking down at the blade
   set(C, 28.95, { az: 0.9, el: 0.95, dist: 2.6, ty: -17.6, fov: 55 });
   to(S, 28.95, 0.35, { fade: 0 }, 'power2.out');
+  set(S, 28.95, { macroDamp: 1 });
   to(S, 29.3, 1.6, { speed: 1 }, 'power2.in');
   to(S, 29.6, 0.8, { trail: 1 });
   cam(30.0, 0.9, { az: 0.31, el: 0.16, dist: 1.9, ty: -17.35 }, 'power2.inOut');
@@ -120,6 +121,7 @@ export function buildTimeline(S) {
   to(S.lab, 31.7, 0.4, { macro: 1 });
   to(S.lab, 33.4, 0.3, { macro: 0 });
   to(S, 33.4, 0.4, { rpm: 0 });
+  set(S, 34.0, { macroDamp: 0 });
 
   // ---------------- SCENE 5  BLENDING (34-46) ----------------
   to(S, 33.6, 0.4, { fade: 1 }, 'power2.in');
