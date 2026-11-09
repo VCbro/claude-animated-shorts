@@ -4,7 +4,7 @@ const [html, outDir] = process.argv.slice(2);
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await p.route('**/*', r => { const u = r.request().url(); if (u.startsWith('file:') || u.startsWith('data:')) return r.continue(); return r.abort(); });
   const css = fs.readFileSync(path.join(__dirname, 'fonts.css'), 'utf8');
-  const doc = '<!doctype html><html><head><meta charset="utf-8"><style>[hidden]{display:none!important}' + css + ' html,body{background:transparent!important} #frame{background:transparent!important} canvas,#dock,#hint,#err{display:none!important} #title .l{letter-spacing:.06em!important}</style></head><body class="rec portrait">' + fs.readFileSync(html, 'utf8').replace(/<script type="module">[\s\S]*<\/script>/, '') + '</body></html>';
+  const doc = '<!doctype html><html><head><meta charset="utf-8"><style>[hidden]{display:none!important}' + css + ' html,body{background:transparent!important} #frame{background:transparent!important} canvas,#dock,#hint,#err{display:none!important} #title .l{letter-spacing:.06em!important} *{transition:none!important}</style></head><body class="rec portrait">' + fs.readFileSync(html, 'utf8').replace(/<script type="module">[\s\S]*<\/script>/, '') + '</body></html>';
   const tmp = path.join(outDir, '_caps.html'); fs.writeFileSync(tmp, doc);
   await p.goto('file://' + tmp); await p.evaluate(() => document.fonts.ready);
   const src = fs.readFileSync(html, 'utf8'); const caps = eval(src.match(/const CAPS = (\[[\s\S]*?\n\]);/)[1]);
