@@ -7,11 +7,12 @@ from TTS.tts.models.xtts import Xtts
 
 model_dir, ref, out = sys.argv[1:4]
 os.makedirs(out, exist_ok=True)
-script = open(os.path.join(os.path.dirname(__file__), "..", "SCRIPT.md"), encoding="utf-8").read().split("```")[1]
+script_file = os.environ.get("SCRIPT", os.path.join(os.path.dirname(__file__), "..", "SCRIPT.md"))
+script = open(script_file, encoding="utf-8").read().split("```")[1]
 lines = [re.sub(r"^\s*\d+\.\s*", "", l).strip() for l in script.strip().splitlines() if l.strip()]
 # XTTS reads digits poorly in Hindi: the script already spells numbers; soften the dramatic pauses to commas
 lines = [l.replace("...", ",").replace(" — ", ", ").replace("—", ", ") for l in lines]
-assert len(lines) == 16, len(lines)
+assert len(lines) == int(os.environ.get("NLINES", 16)), len(lines)
 
 torch.set_num_threads(4)
 cfg = XttsConfig(); cfg.load_json(os.path.join(model_dir, "config.json"))
