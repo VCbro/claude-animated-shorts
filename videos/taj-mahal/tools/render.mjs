@@ -9,6 +9,6 @@ const chromiumOptions = { gl: "swangle" };
 const composition = await selectComposition({ serveUrl, id: "TajMahal", browserExecutable, chromiumOptions });
 const frameRange = range && range !== "all" ? range.split("-").map(Number) : null;
 const t0 = Date.now(); let last = 0;
-await renderMedia({ serveUrl, composition, codec: "h264", crf: 17, outputLocation: out, browserExecutable, chromiumOptions, concurrency: Number(conc), frameRange, timeoutInMilliseconds: 180000,
+await renderMedia({ serveUrl, composition, codec: "h264", crf: 17, outputLocation: out, browserExecutable, chromiumOptions, concurrency: Number(conc), frameRange, scale: Number(process.env.SCALE || 1), timeoutInMilliseconds: 180000,
   onProgress: ({ renderedFrames }) => { if (renderedFrames - last >= 30) { last = renderedFrames; console.log(`${renderedFrames} frames, ${((Date.now() - t0) / 1000).toFixed(0)}s`); } } });
 console.log("done", ((Date.now() - t0) / 1000).toFixed(0) + "s");

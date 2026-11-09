@@ -1,6 +1,6 @@
 #!/bin/bash
 # render the film in chunks of 330 frames; skip chunks that already exist
-cd "$(dirname "$0")/.."; mkdir -p out/chunks
+cd "$(dirname "$0")/.."; mkdir -p out/chunks; export SCALE=${SCALE:-1}
 N=$(node -e "console.log(Math.ceil(86.5*30))")
 for ((a=0; a<N; a+=330)); do
   b=$((a+329)); [ $b -ge $N ] && b=$((N-1))
