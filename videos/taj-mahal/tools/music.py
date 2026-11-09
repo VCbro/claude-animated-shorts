@@ -140,7 +140,7 @@ tirakita(L[8] - 1.0, 8)
 add(fx, L[8], boom(), 1.0)
 # 10-11  explanation: half-time pulse, quake hit on "भूकंप"
 groove(L[9], L[11] - .2, .6, half=True)
-add(fx, word_t("भूक", L[9]) - .02, boom(g=.6))
+add(fx, next(w["s"] for w in W if w["s"] > L[9] and w["w"].startswith(("भूक", "भुक", "भूकं"))) - .02, boom(g=.6))
 melody(L[10], L[11] - .4, YAMAN, [4, None, None, None, 2, None, None, None], step=M, g=.4)
 # 12  good news: light dayan-only groove
 t = L[11]

@@ -10,16 +10,17 @@ import { BlendFunction, BloomEffect, ToneMappingEffect, ToneMappingMode } from "
 import { World } from "./world";
 import { InkPass } from "./ink";
 import { MoodGrade } from "./grade";
-import { FPS, TOTAL, L, DURATION, SHOTS } from "./story";
+import { FPS, L, DURATION, SHOTS } from "./story";
+import { VIDEO_DURATION, storyTime } from "./timemap";
 
-export const FILM_FRAMES = TOTAL;
+export const FILM_FRAMES = Math.ceil(VIDEO_DURATION * FPS);
 const W = 1080, H = 1920;
 type Toggles = { ink: boolean; bloom: boolean; grade: boolean; msaa: number; shadows: boolean };
 const toggles = (): Toggles => ({ ink: false, bloom: true, grade: true, msaa: 4, shadows: true, ...((getInputProps() as { post?: Partial<Toggles> }).post ?? {}) });
 
 const Inner: React.FC = () => {
   const f = useCurrentFrame();
-  const t = f / FPS;
+  const t = storyTime(f / FPS);
   const { camera, scene, size } = useThree();
   const world = useMemo(() => new World(), []);
   const on = useMemo(toggles, []);
@@ -49,7 +50,7 @@ const Inner: React.FC = () => {
 
 export const Film: React.FC = () => {
   const f = useCurrentFrame();
-  const t = f / FPS;
+  const t = storyTime(f / FPS);
   const on = toggles();
   const dpr = (getInputProps() as { dpr?: number }).dpr;
   const black = Math.max(interpolate(t, [0, 0.5], [1, 0], { extrapolateRight: "clamp" }), interpolate(t, [DURATION - 1.0, DURATION - 0.1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
