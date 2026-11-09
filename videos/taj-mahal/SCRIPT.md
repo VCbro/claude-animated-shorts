@@ -62,3 +62,13 @@ Base shapes come from the ThreeJS-3D-Scenes dataset (scene ids in brackets), reb
 | 14 | Consequence | Old Shah Jahan at a Agra Fort window; across the river, the Taj in moonlight. (reflecting pool scene-002431) |
 | 15 | Twist setup | Inside the tomb: two cenotaphs side by side. |
 | 16 | Callback | Top-down symmetric view, centre line drawn; everything mirrors except Shah Jahan's cenotaph off to one side. Slow pull-out to the Taj. |
+
+## Voice (done)
+- Source: the user's TTS take (`voice/raw_tts.mp3`, 121.7 s). It read the line numbers aloud and left ~1.2 s gaps.
+- `tools/edit.py`: removes the 16 spoken numbers, line gaps 0.5 s, in-line pauses at most 0.55 s.
+- Deeper voice: pitch -2 semitones (median F0 136 → 119 Hz), tempo ×1.08, bass +4 dB at 110 Hz, de-ess, compressor.
+- Result `voice/voice_deep.mp3`, 84.8 s. Line start times in `voice/line_starts.json`, word times in `voice/words.json`
+  (faster-whisper medium; words in line 3 still need hand-fixing before the shot plan).
+- Score (`tools/music.py`, all synthesized, original): tanpura drone, keherwa tabla through the construction lines,
+  santoor-like plucks in Yaman, Bhairavi plucks for the sad ending, hits on the hook, the snap, "भूकंप", "बुरी ख़बर" and the
+  last word. Ducked -7 dB under the voice, ~9 dB under on average. Mix at -14 LUFS: `voice/taj_mahal_voice_beats.mp3`.
