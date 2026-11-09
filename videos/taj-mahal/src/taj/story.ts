@@ -62,9 +62,9 @@ export const SHOTS: Shot[] = [
   // 2 Burhanpur, night: the bedside
   { id: "bed", a: L[1], b: 10.0, light: "night", cam: (t, u) => creep({ pos: P(PALACE, -3.0, 2.0, 3.8), look: P(PALACE, 1.6, 0.8, -2.2), fov: 50 }, u, 0.08) },
   // 3 close on Shah Jahan; the lamp goes out on "चल बसीं"
-  { id: "grief", a: 10.0, b: L[2], light: "night", cam: (t, u) => creep({ pos: P(PALACE, 0.0, 1.05, 1.5), look: P(PALACE, 1.0, 0.85, -1.4), fov: 36 }, u, 0.12) },
+  { id: "grief", a: 10.0, b: L[2], light: "night", cam: (t, u) => creep({ pos: P(PALACE, -0.9, 1.35, 1.2), look: P(PALACE, 0.3, 0.95, -1.4), fov: 40 }, u, 0.12) },
   // 4a morning: the vow
-  { id: "vow", a: L[2], b: 16.6, light: "morning", cam: (t, u) => creep({ pos: P(PALACE, -0.4, 1.55, 3.3), look: P(PALACE, -0.5, 1.35, -0.8), fov: 40 }, u, 0.1) },
+  { id: "vow", a: L[2], b: 16.6, light: "morning", cam: (t, u) => creep({ pos: P(PALACE, -0.4, 1.6, 3.4), look: P(PALACE, -0.5, 1.4, -0.8), fov: 42 }, u, 0.1) },
   // 4b the plan draws itself
   { id: "plan", a: 16.6, b: L[3], light: "morning", cam: (t, u) => ({ pos: lerp3(P(PALACE, -0.5, 2.5, 1.35), P(PALACE, -0.5, 2.1, 1.0), glide(u)), look: P(PALACE, -0.5, 0.8, 0.15), fov: 44 }) },
   // 5 Agra, the river bank, 20,000 workers: aerial glide from over the river to the site
@@ -92,7 +92,7 @@ export const SHOTS: Shot[] = [
   // 13 good news: the workers wave both hands
   { id: "hands", a: L[11], b: 62.75, light: "day", cam: (t, u) => creep({ pos: [5.6, 1.6, 33], look: [3.0, 3.6, 12], fov: 46 }, u, 0.08) },
   // 14a bad news: Aurangzeb
-  { id: "aurangzeb", a: 62.75, b: 65.4, light: "crypt", cam: (t, u) => creep({ pos: P(FORTIN, 0, 1.6, 1.4), look: P(FORTIN, 0, 1.5, -1.5), fov: 36 }, u, 0.12) },
+  { id: "aurangzeb", a: 62.75, b: 65.4, light: "crypt", cam: (t, u) => creep({ pos: P(FORTIN, 0.3, 1.75, 1.6), look: P(FORTIN, 0, 1.55, -1.5), fov: 40 }, u, 0.12) },
   // 14b the door slams
   { id: "door", a: 65.4, b: L[13], light: "crypt", cam: (t, u) => creep({ pos: P(FORTIN, 0.6, 1.6, 3.4), look: P(FORTIN, 0, 1.5, -5), fov: 44 }, u, 0.08) },
   // 15 eight years at the window, the Taj across the river

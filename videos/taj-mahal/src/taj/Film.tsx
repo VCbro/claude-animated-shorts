@@ -15,7 +15,7 @@ import { FPS, TOTAL, L, DURATION, SHOTS } from "./story";
 export const FILM_FRAMES = TOTAL;
 const W = 1080, H = 1920;
 type Toggles = { ink: boolean; bloom: boolean; grade: boolean; msaa: number; shadows: boolean };
-const toggles = (): Toggles => ({ ink: true, bloom: true, grade: true, msaa: 0, shadows: true, ...((getInputProps() as { post?: Partial<Toggles> }).post ?? {}) });
+const toggles = (): Toggles => ({ ink: false, bloom: true, grade: true, msaa: 4, shadows: true, ...((getInputProps() as { post?: Partial<Toggles> }).post ?? {}) });
 
 const Inner: React.FC = () => {
   const f = useCurrentFrame();
@@ -32,7 +32,8 @@ const Inner: React.FC = () => {
   }), [camera, scene]);
   useEffect(() => () => fx.ink.dispose(), [fx]);
   const lk = world.update(t, camera as THREE.PerspectiveCamera, { w: size.width, h: size.height });
-  fx.grade.set(...lk.grade);
+  const g = lk.grade;
+  fx.grade.set(g[0] * 1.03, 1.0, g[2] * 0.9, [g[3][0] * 0.5, g[3][1] * 0.5, g[3][2] * 0.5], [g[4][0] * 0.6, g[4][1] * 0.6, g[4][2] * 0.6], 0.1);
   return (
     <>
       <primitive object={world.root} dispose={null} />
@@ -59,7 +60,7 @@ export const Film: React.FC = () => {
   void SHOTS;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
-      <ThreeCanvas width={W} height={H} {...(dpr ? { dpr } : {})} shadows={on.shadows} gl={{ antialias: false, stencil: false, powerPreference: "high-performance" }} camera={{ fov: 45, near: 0.1, far: 2000 }}>
+      <ThreeCanvas width={W} height={H} {...(dpr ? { dpr } : {})} shadows={on.shadows ? "soft" : false} gl={{ antialias: false, stencil: false, powerPreference: "high-performance" }} camera={{ fov: 45, near: 0.1, far: 2000 }}>
         <Inner />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#fff", opacity: flash }} />}

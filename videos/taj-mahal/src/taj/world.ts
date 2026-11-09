@@ -4,7 +4,8 @@
 import * as THREE from "three";
 import { Pen, fxPuff } from "./toon";
 import { NOINK } from "./ink";
-import { drawPerson, drawLying, drawElephant, drawCamel, drawPlan, drawInlay, drawJali, Pose, Who } from "./chars";
+import { drawPlan, drawInlay, drawJali, Pose } from "./chars";
+import { Person, Elephant, Camel, FigPose } from "./figures";
 import {
   V3, L, W, Light, PALACE, QUARRY, YARD, FORTIN, CRYPT, Y_TER, Y_PL, PL, TOMB, CHAMF, WALL_H, ROOF, MINARETS, RIVER_Z0, RIVER_Z1,
   FORT, TO_TAJ, RAMP_Z0, RAMP_Z1, RAMP_H, rampY, elephantZ, camelX, camAt, shotAt, buildAt, leanAt, fallAt, quakeAt, centreLineAt,
@@ -26,11 +27,12 @@ const GRAD = (() => {
   const d = new Uint8Array([105, 105, 105, 255, 185, 185, 185, 255, 255, 255, 255, 255]);
   const t = new THREE.DataTexture(d, 3, 1, THREE.RGBAFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t;
 })();
-const toon = (c: string | THREE.Color, extra: THREE.MeshToonMaterialParameters = {}) => new THREE.MeshToonMaterial({ color: c, gradientMap: GRAD, ...extra });
+const toon = (c: string | THREE.Color, extra: THREE.MeshStandardMaterialParameters = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.8, metalness: 0, ...extra });
+void GRAD;
 const noink = <T extends THREE.Object3D>(o: T) => { o.traverse((c) => c.layers.set(NOINK)); return o; };
 const shadowed = <T extends THREE.Object3D>(o: T, cast = true) => { o.traverse((c) => { if ((c as THREE.Mesh).isMesh) { c.castShadow = cast; c.receiveShadow = true; } }); return o; };
 const box = (w: number, h: number, d: number, m: THREE.Material, x = 0, y = 0, z = 0) => { const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); b.position.set(x, y + h / 2, z); return b; };
-const INKC = "#2a2430";
+const INKC = "#a39888";
 
 /** pointed (four-centred-ish) arch outline, base y0, springing at ys, apex at ya, half-width w; canvas coords */
 const archPath = (g: CanvasRenderingContext2D, cx: number, y0: number, w: number, ys: number, ya: number) => {
@@ -98,7 +100,8 @@ export const lookAt = (t: number): Look => {
 };
 
 // ---------------- card actors ----------------
-type Actor = { key: string; draw: (p: Pen) => void; tw: number; th: number; dw: number; dh: number; pos: V3; w: number; h: number; mode?: "yaw" | "full"; heading?: V3; shadow?: number; add?: boolean; light?: number };
+type Fig = { kind: "person" | "elephant" | "camel"; who: string; pose: FigPose; phase?: number; seed?: number; yaw?: number; facing?: number };
+type Actor = { fig?: Fig; key: string; draw: (p: Pen) => void; tw: number; th: number; dw: number; dh: number; pos: V3; w: number; h: number; mode?: "yaw" | "full"; heading?: V3; shadow?: number; add?: boolean; light?: number };
 type Slot = { mesh: THREE.Mesh; mat: THREE.MeshBasicMaterial; shadow: THREE.Mesh };
 const PERSON_H = 1.9;
 
@@ -115,7 +118,8 @@ export class World {
   garden = new THREE.Group(); site!: THREE.Mesh; ramp = new THREE.Group(); blocks: THREE.Group[] = []; centre!: THREE.Mesh;
   // other sets
   lamp!: THREE.PointLight; cryptLamp!: THREE.PointLight; fortLamp!: THREE.PointLight; windowPane!: THREE.MeshBasicMaterial;
-  planMesh!: THREE.Mesh; table!: THREE.Mesh; inlayMesh!: THREE.Mesh; stick!: THREE.Group; doors: THREE.Group[] = []; cryptLine!: THREE.Mesh; sjTomb!: THREE.MeshToonMaterial;
+  planMesh!: THREE.Mesh; table!: THREE.Mesh; inlayMesh!: THREE.Mesh; stick!: THREE.Group; doors: THREE.Group[] = []; cryptLine!: THREE.Mesh; sjTomb!: THREE.MeshStandardMaterial;
+  people: THREE.Group[] = []; rigs: Person[] = []; eles: Elephant[] = []; camels: Camel[] = [];
   slots: Slot[] = []; texCache = new Map<string, THREE.CanvasTexture>(); blob!: THREE.Texture;
 
   constructor() {
@@ -251,7 +255,7 @@ export class World {
       for (const x of [110, 914]) for (const y of [380, 720]) recessArch(c, x, y, 70, y - 150, y - 250, "#5a3a32", "#8a5a46", "#f1ebe0");
       c.strokeStyle = INKC; c.lineWidth = 5; c.strokeRect(4, 4, 1016, 792);
     });
-    const front = new THREE.MeshToonMaterial({ color: "#ffffff", map: face, gradientMap: GRAD });
+    const front = toon("#ffffff", { map: face });
     const mats = [red, red, red, red, front, front];
     const body = new THREE.Mesh(new THREE.BoxGeometry(26, 20, 10), mats); body.position.set(0, 10, 112); g.add(body);
     for (let i = 0; i < 7; i++) g.add(this.chhatri(0.55, -9 + i * 3, 20, 107.5, "#f4f0e8"));
@@ -617,12 +621,12 @@ export class World {
     const ceil = new THREE.Mesh(new THREE.PlaneGeometry(16, 16), toon("#e8e1d4")); ceil.rotation.x = Math.PI / 2; ceil.position.set(cx, 6.5, cz); g.add(ceil);
     // jali screen
     const jt = canvasTex(512, 512, drawJali);
-    const jm = new THREE.MeshToonMaterial({ color: "#ffffff", map: jt, alphaTest: 0.5, side: THREE.DoubleSide, gradientMap: GRAD });
+    const jm = toon("#ffffff", { map: jt, alphaTest: 0.5, side: THREE.DoubleSide });
     const r = 3.1, js = 2 * r * Math.tan(Math.PI / 8);
     for (let i = 0; i < 8; i++) { const a = (i / 8) * Math.PI * 2; if (i <= 1) continue; const m = new THREE.Mesh(new THREE.PlaneGeometry(js, 1.9), jm); m.position.set(cx + Math.sin(a) * r, 0.95, cz + Math.cos(a) * r); m.rotation.y = a; g.add(m); }
     // cenotaphs: hers on the centre line, his to the west
     const inlay = canvasTex(256, 512, (c) => { c.fillStyle = "#f4f1ea"; c.fillRect(0, 0, 256, 512); c.strokeStyle = INKC; c.lineWidth = 4; c.strokeRect(10, 10, 236, 492); for (let i = 0; i < 7; i++) { const y = 50 + i * 68; c.fillStyle = ["#c23b2e", "#2c4f9e", "#2f8a5a", "#e0a42a"][i % 4]; for (let k = 0; k < 5; k++) { const a = (k / 5) * Math.PI * 2; c.beginPath(); c.ellipse(128 + Math.cos(a) * 26, y + Math.sin(a) * 22, 14, 9, a, 0, Math.PI * 2); c.fill(); } } });
-    const tomb = (x: number, s: number, m: THREE.MeshToonMaterial) => {
+    const tomb = (x: number, s: number, m: THREE.MeshStandardMaterial) => {
       const t = new THREE.Group();
       t.add(box(1.4 * s, 0.32, 2.6 * s, toon("#efeae0"), 0, 0, 0));
       t.add(box(1.1 * s, 0.38, 2.3 * s, m, 0, 0.32, 0));
@@ -670,13 +674,16 @@ export class World {
     const s = shotAt(t).id, A: Actor[] = [];
     const q = (x: number, n = 8) => Math.floor((((x % 1) + 1) % 1) * n) / n;
     const person = (pose: Pose, pos: V3, hero = false, heading?: V3, scale = 1): Actor => {
-      const res = hero ? 1 : 0.55;
-      return { key: "p" + JSON.stringify(pose) + res, draw: (p) => drawPerson(p, pose), tw: Math.round(600 * res), th: Math.round(1000 * res), dw: 600, dh: 1000,
-        pos: [pos[0], pos[1] - 0.025 * PERSON_H * scale, pos[2]], w: 0.6 * PERSON_H * scale, h: PERSON_H * scale, heading, shadow: 0.9 * scale };
+      void hero; void scale;
+      const fp: FigPose = { mode: pose.mode === "stroll" || pose.mode === "march" ? "walk" : pose.mode === "sit" ? "sit" : "stand", walk: pose.phase, cheer: pose.cheer, hammer: pose.hammer, wave: pose.wave, headTilt: pose.headTilt, sad: pose.expr === "nervous" };
+      const fig: Fig = { kind: "person", who: pose.who, pose: fp, yaw: heading ? Math.atan2(heading[0], heading[2]) : undefined, facing: pose.facing ?? 0 };
+      if (heading === undefined && fp.mode === "walk") fig.yaw = (pose.facing ?? 1) > 0 ? Math.PI / 2 : -Math.PI / 2;
+      return { fig, key: "", draw: () => {}, tw: 0, th: 0, dw: 0, dh: 0, pos, w: 0, h: 0 };
     };
+    const lying = (who: string, pos: V3, yaw: number): Actor => ({ fig: { kind: "person", who, pose: { mode: "lie" }, yaw }, key: "", draw: () => {}, tw: 0, th: 0, dw: 0, dh: 0, pos, w: 0, h: 0 });
     const [px, , pz] = PALACE, [qx, , qz] = QUARRY, [yx, , yz] = YARD, [fx, , fz] = FORTIN;
     if (s === "bed" || s === "grief") {
-      A.push({ key: "mumtaz", draw: (p) => drawLying(p, "mumtaz", "neutral", 1), tw: 800, th: 480, dw: 1000, dh: 600, pos: [px + 2.0, 0.5, pz - 2.65], w: 1.9, h: 1.14 });
+      A.push(lying("mumtaz", [px + 2.85, 0.68, pz - 2.6], Math.PI / 2));
       A.push(person({ who: "sj", view: "front", expr: "nervous", mode: "sit", facing: 1, headTilt: 7, blink: t > W.died + 0.3 ? 1 : blinkAt(t, 1) }, [px + 0.05, 0, pz - 1.0], true));
       const k = lampAt(t);
       if (k > 0.02) A.push({ key: `flame${Math.floor(t * 12) % 3}`, draw: (p) => { const f = Math.floor(t * 12) % 3; p.ell(100, 150 - f * 4, 40, 70 + f * 6, "#ffcf5a", 0); p.ell(100, 165, 22, 40, "#fff4c8", 0); }, tw: 100, th: 128, dw: 200, dh: 256, pos: [px + 4.0, 1.15, pz - 3.4], w: 0.16 * k, h: 0.2 * k, add: true });
@@ -698,7 +705,7 @@ export class World {
     if (s === "elephants" || s === "ramp") {
       for (let i = 0; i < 6; i++) {
         const z = elephantZ(i, t), y = rampY(z);
-        A.push({ key: `ele${i % 3}_${q(t * 0.55 + i * 0.3)}`, draw: (p) => drawElephant(p, q(t * 0.55 + i * 0.3), i), tw: 600, th: 480, dw: 1000, dh: 800, pos: [0.2, y - 0.08, z], w: 4.4, h: 3.5, heading: [0, 0, -1], shadow: 3.4 });
+        A.push({ fig: { kind: "elephant", who: "", pose: {}, phase: (t * 0.55 + i * 0.3) % 1, seed: i, yaw: Math.PI }, key: "", draw: () => {}, tw: 0, th: 0, dw: 0, dh: 0, pos: [0.2, y, z], w: 0, h: 0 });
         const bz = z + 3.9; this.blocks[i].position.set(0.2, rampY(bz), bz); this.blocks[i].rotation.x = Math.atan2(RAMP_H, RAMP_Z0 - RAMP_Z1);
         if (i % 2 === 0) A.push(person({ who: `w${i + 3}`, view: "side", expr: "neutral", mode: "march", phase: q(t * 1.0 + i * 0.25) }, [2.4, rampY(z - 1.0), z - 1.0], s === "elephants", [0, 0, -1]));
       }
@@ -706,14 +713,14 @@ export class World {
     if (s === "caravan") {
       for (let i = 0; i < 5; i++) {
         const x = camelX(i, t);
-        A.push({ key: `camel${i % 3}_${q(t * 0.7 + i * 0.37)}`, draw: (p) => drawCamel(p, q(t * 0.7 + i * 0.37), i), tw: 560, th: 504, dw: 1000, dh: 900, pos: [x, 0, 40], w: 3.1, h: 2.8, heading: [1, 0, 0], shadow: 2.6 });
+        A.push({ fig: { kind: "camel", who: "", pose: {}, phase: (t * 0.7 + i * 0.37) % 1, seed: i, yaw: Math.PI / 2 }, key: "", draw: () => {}, tw: 0, th: 0, dw: 0, dh: 0, pos: [x, 0, 40], w: 0, h: 0 });
       }
       A.push(person({ who: "w4", view: "side", expr: "smile", mode: "march", phase: q(t * 1.25) }, [camelX(1, t) - 1.6, 0, 42.2], true, [1, 0, 0]));
     }
     if (s === "inlay") A.push(person({ who: "w5", view: "front", expr: "smile", mode: "stand", hammer: Math.round(Math.abs(Math.sin(t * 4)) * 4) / 4, facing: 0, blink: blinkAt(t, 5) }, [qx + 20, 0, qz + 9.2], true));
     if (s === "lean") A.push(person({ who: "w2", view: "front", expr: t > W.tilt ? "grin" : "smile", mode: "stand", facing: -1, headTilt: t > W.tilt ? -6 * Math.abs(Math.sin((t - W.tilt) * 5)) : 0, blink: blinkAt(t, 2) }, [17.4, 0, 33.6], true));
     if (s === "yard" || s === "stick") {
-      A.push({ key: "kid", draw: (p) => drawLying(p, "kid", "smile_closed", 1), tw: 800, th: 480, dw: 1000, dh: 600, pos: [yx - 0.1, 0.43, yz], w: 1.9, h: 1.14 });
+      A.push(lying("kid", [yx + 0.45, 0.55, yz], Math.PI / 2));
       const holding = t > W.danda - 0.5 && t < W.gire - 0.2;
       A.push(person({ who: "father", view: "front", expr: t > 56.9 ? "relief" : "smile", mode: "stand", facing: -1, wave: holding ? 0.2 : undefined, blink: blinkAt(t, 4) }, [yx + 1.3, 0, yz - 0.95], true));
       if (t > 56.68 && t < 57.6) { const k = (t - 56.68) / 0.9; A.push({ key: `puff${Math.floor(k * 6)}`, draw: (p) => fxPuff(p, Math.floor(k * 6) / 6), tw: 256, th: 256, dw: 300, dh: 300, pos: [yx + 2.6, 0, yz + 0.35], w: 0.9, h: 0.9 }); }
@@ -832,7 +839,28 @@ export class World {
     const d = (doorAt(t) * Math.PI) / 180; this.doors[0].rotation.y = d; this.doors[1].rotation.y = -d;
     // cards
     const right = new THREE.Vector3().setFromMatrixColumn(cam.matrixWorld, 0); right.y = 0; right.normalize();
-    const acts = this.actors(t);
+    const all = this.actors(t), acts = all.filter((a) => !a.fig), figs = all.filter((a) => a.fig);
+    let np = 0, ne = 0, nc = 0;
+    for (const a of figs) {
+      const f = a.fig!;
+      const yaw = f.yaw ?? Math.atan2(cam.position.x - a.pos[0], cam.position.z - a.pos[2]) + (f.facing ?? 0) * 0.55;
+      let obj: THREE.Object3D;
+      if (f.kind === "person") {
+        if (!this.rigs[np]) { const r = new Person(); const h = new THREE.Group(); h.add(r.root); this.rigs.push(r); this.people.push(h); this.root.add(h); }
+        const r = this.rigs[np]; r.dress(f.who); r.pose(f.pose); obj = this.people[np++];
+        r.root.rotation.x = f.pose.mode === "lie" ? -Math.PI / 2 : 0;
+      } else if (f.kind === "elephant") {
+        if (!this.eles[ne]) { const e = new Elephant(ne); this.eles.push(e); this.root.add(e.root); }
+        this.eles[ne].pose(f.phase ?? 0); obj = this.eles[ne++].root;
+      } else {
+        if (!this.camels[nc]) { const c2 = new Camel(nc); this.camels.push(c2); this.root.add(c2.root); }
+        this.camels[nc].pose(f.phase ?? 0); obj = this.camels[nc++].root;
+      }
+      obj.visible = true; obj.position.set(...a.pos); obj.rotation.y = yaw;
+    }
+    this.people.forEach((h, i) => { if (i >= np) h.visible = false; });
+    this.eles.forEach((e, i) => { if (i >= ne) e.root.visible = false; });
+    this.camels.forEach((e, i) => { if (i >= nc) e.root.visible = false; });
     this.slots.forEach((sl, i) => {
       const a = acts[i];
       sl.mesh.visible = !!a; sl.shadow.visible = !!a && !!a.shadow;
