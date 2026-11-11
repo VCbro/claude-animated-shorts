@@ -1,0 +1,709 @@
+{
+ "fps": 30,
+ "duration": 52.56,
+ "frames": 1577,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 2.969,
+   "cap": "Aapke pankhe mein teen hi blade kyun hote hain?",
+   "hl": [
+    "teen"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aapke",
+     "t": 0.25
+    },
+    {
+     "w": "pankhe",
+     "t": 0.644
+    },
+    {
+     "w": "mein",
+     "t": 1.038
+    },
+    {
+     "w": "teen",
+     "t": 1.235
+    },
+    {
+     "w": "hi",
+     "t": 1.432
+    },
+    {
+     "w": "blade",
+     "t": 1.629
+    },
+    {
+     "w": "kyun",
+     "t": 2.023
+    },
+    {
+     "w": "hote",
+     "t": 2.22
+    },
+    {
+     "w": "hain?",
+     "t": 2.615
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 3.069,
+   "t1": 4.409,
+   "cap": "Chaar ya paanch kyun nahi?",
+   "hl": [
+    "Chaar",
+    "paanch"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Chaar",
+     "t": 3.069
+    },
+    {
+     "w": "ya",
+     "t": 3.266
+    },
+    {
+     "w": "paanch",
+     "t": 3.463
+    },
+    {
+     "w": "kyun",
+     "t": 3.66
+    },
+    {
+     "w": "nahi?",
+     "t": 3.857
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 4.609,
+   "t1": 9.023,
+   "cap": "Zyada blade matlab zyada hawa? Nahi. Asli khel andar chhupa hai.",
+   "hl": [
+    "andar"
+   ],
+   "red": [
+    "Nahi."
+   ],
+   "words": [
+    {
+     "w": "Zyada",
+     "t": 4.609
+    },
+    {
+     "w": "blade",
+     "t": 5.003
+    },
+    {
+     "w": "matlab",
+     "t": 5.397
+    },
+    {
+     "w": "zyada",
+     "t": 5.791
+    },
+    {
+     "w": "hawa?",
+     "t": 6.185
+    },
+    {
+     "w": "Nahi.",
+     "t": 6.737
+    },
+    {
+     "w": "Asli",
+     "t": 7.289
+    },
+    {
+     "w": "khel",
+     "t": 7.683
+    },
+    {
+     "w": "andar",
+     "t": 7.88
+    },
+    {
+     "w": "chhupa",
+     "t": 8.274
+    },
+    {
+     "w": "hai.",
+     "t": 8.668
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 9.273,
+   "t1": 15.854,
+   "cap": "Andar hai ek motor. Taambe ki coil mein bijli jaati hai, aur chumbak ki taaqat poore pankhe ko ghumaati hai.",
+   "hl": [
+    "motor.",
+    "coil",
+    "chumbak"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Andar",
+     "t": 9.273
+    },
+    {
+     "w": "hai",
+     "t": 9.667
+    },
+    {
+     "w": "ek",
+     "t": 9.864
+    },
+    {
+     "w": "motor.",
+     "t": 10.061
+    },
+    {
+     "w": "Taambe",
+     "t": 10.613
+    },
+    {
+     "w": "ki",
+     "t": 11.007
+    },
+    {
+     "w": "coil",
+     "t": 11.204
+    },
+    {
+     "w": "mein",
+     "t": 11.401
+    },
+    {
+     "w": "bijli",
+     "t": 11.598
+    },
+    {
+     "w": "jaati",
+     "t": 11.992
+    },
+    {
+     "w": "hai,",
+     "t": 12.386
+    },
+    {
+     "w": "aur",
+     "t": 12.741
+    },
+    {
+     "w": "chumbak",
+     "t": 12.938
+    },
+    {
+     "w": "ki",
+     "t": 13.332
+    },
+    {
+     "w": "taaqat",
+     "t": 13.529
+    },
+    {
+     "w": "poore",
+     "t": 13.923
+    },
+    {
+     "w": "pankhe",
+     "t": 14.317
+    },
+    {
+     "w": "ko",
+     "t": 14.711
+    },
+    {
+     "w": "ghumaati",
+     "t": 14.908
+    },
+    {
+     "w": "hai.",
+     "t": 15.5
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 16.104,
+   "t1": 21.543,
+   "cap": "Har blade hawa ko neeche dhakelta hai. Lekin har blade motor par bojh bhi badhaata hai.",
+   "hl": [
+    "neeche"
+   ],
+   "red": [
+    "bojh"
+   ],
+   "words": [
+    {
+     "w": "Har",
+     "t": 16.104
+    },
+    {
+     "w": "blade",
+     "t": 16.301
+    },
+    {
+     "w": "hawa",
+     "t": 16.695
+    },
+    {
+     "w": "ko",
+     "t": 17.089
+    },
+    {
+     "w": "neeche",
+     "t": 17.286
+    },
+    {
+     "w": "dhakelta",
+     "t": 17.681
+    },
+    {
+     "w": "hai.",
+     "t": 18.272
+    },
+    {
+     "w": "Lekin",
+     "t": 18.626
+    },
+    {
+     "w": "har",
+     "t": 19.02
+    },
+    {
+     "w": "blade",
+     "t": 19.217
+    },
+    {
+     "w": "motor",
+     "t": 19.612
+    },
+    {
+     "w": "par",
+     "t": 20.006
+    },
+    {
+     "w": "bojh",
+     "t": 20.203
+    },
+    {
+     "w": "bhi",
+     "t": 20.4
+    },
+    {
+     "w": "badhaata",
+     "t": 20.597
+    },
+    {
+     "w": "hai.",
+     "t": 21.188
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 21.793,
+   "t1": 26.403,
+   "cap": "Paanch blade lagao, toh motor thak jaati hai, aur pankha dheema pad jaata hai.",
+   "hl": [],
+   "red": [
+    "thak",
+    "dheema"
+   ],
+   "words": [
+    {
+     "w": "Paanch",
+     "t": 21.793
+    },
+    {
+     "w": "blade",
+     "t": 21.99
+    },
+    {
+     "w": "lagao,",
+     "t": 22.384
+    },
+    {
+     "w": "toh",
+     "t": 22.935
+    },
+    {
+     "w": "motor",
+     "t": 23.133
+    },
+    {
+     "w": "thak",
+     "t": 23.527
+    },
+    {
+     "w": "jaati",
+     "t": 23.724
+    },
+    {
+     "w": "hai,",
+     "t": 24.118
+    },
+    {
+     "w": "aur",
+     "t": 24.472
+    },
+    {
+     "w": "pankha",
+     "t": 24.669
+    },
+    {
+     "w": "dheema",
+     "t": 25.064
+    },
+    {
+     "w": "pad",
+     "t": 25.458
+    },
+    {
+     "w": "jaata",
+     "t": 25.655
+    },
+    {
+     "w": "hai.",
+     "t": 26.049
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 26.603,
+   "t1": 30.623,
+   "cap": "Do blade lagao, toh pankha tez ghoomega, par hawa kam dega.",
+   "hl": [],
+   "red": [
+    "kam"
+   ],
+   "words": [
+    {
+     "w": "Do",
+     "t": 26.603
+    },
+    {
+     "w": "blade",
+     "t": 26.8
+    },
+    {
+     "w": "lagao,",
+     "t": 27.195
+    },
+    {
+     "w": "toh",
+     "t": 27.746
+    },
+    {
+     "w": "pankha",
+     "t": 27.943
+    },
+    {
+     "w": "tez",
+     "t": 28.337
+    },
+    {
+     "w": "ghoomega,",
+     "t": 28.534
+    },
+    {
+     "w": "par",
+     "t": 29.283
+    },
+    {
+     "w": "hawa",
+     "t": 29.48
+    },
+    {
+     "w": "kam",
+     "t": 29.874
+    },
+    {
+     "w": "dega.",
+     "t": 30.071
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 30.923,
+   "t1": 35.692,
+   "cap": "Teen blade mein sabse sahi santulan hai. Tez raftaar, bharpoor hawa, kam kharch.",
+   "hl": [
+    "Teen",
+    "raftaar,",
+    "hawa,",
+    "kharch."
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Teen",
+     "t": 30.923
+    },
+    {
+     "w": "blade",
+     "t": 31.12
+    },
+    {
+     "w": "mein",
+     "t": 31.514
+    },
+    {
+     "w": "sabse",
+     "t": 31.711
+    },
+    {
+     "w": "sahi",
+     "t": 32.105
+    },
+    {
+     "w": "santulan",
+     "t": 32.5
+    },
+    {
+     "w": "hai.",
+     "t": 33.091
+    },
+    {
+     "w": "Tez",
+     "t": 33.445
+    },
+    {
+     "w": "raftaar,",
+     "t": 33.642
+    },
+    {
+     "w": "bharpoor",
+     "t": 34.194
+    },
+    {
+     "w": "hawa,",
+     "t": 34.588
+    },
+    {
+     "w": "kam",
+     "t": 35.14
+    },
+    {
+     "w": "kharch.",
+     "t": 35.337
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 35.992,
+   "t1": 41.824,
+   "cap": "Thande deshon mein chaar paanch blade waale pankhe milte hain, kyunki wahan bas halki hawa chahiye.",
+   "hl": [
+    "Thande",
+    "halki"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Thande",
+     "t": 35.992
+    },
+    {
+     "w": "deshon",
+     "t": 36.386
+    },
+    {
+     "w": "mein",
+     "t": 36.78
+    },
+    {
+     "w": "chaar",
+     "t": 36.977
+    },
+    {
+     "w": "paanch",
+     "t": 37.174
+    },
+    {
+     "w": "blade",
+     "t": 37.371
+    },
+    {
+     "w": "waale",
+     "t": 37.765
+    },
+    {
+     "w": "pankhe",
+     "t": 38.159
+    },
+    {
+     "w": "milte",
+     "t": 38.553
+    },
+    {
+     "w": "hain,",
+     "t": 38.947
+    },
+    {
+     "w": "kyunki",
+     "t": 39.302
+    },
+    {
+     "w": "wahan",
+     "t": 39.696
+    },
+    {
+     "w": "bas",
+     "t": 40.09
+    },
+    {
+     "w": "halki",
+     "t": 40.287
+    },
+    {
+     "w": "hawa",
+     "t": 40.681
+    },
+    {
+     "w": "chahiye.",
+     "t": 41.075
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 42.074,
+   "t1": 45.857,
+   "cap": "Aur Bharat ki garmi mein? Tez hawa. Isliye, teen blade.",
+   "hl": [
+    "Tez",
+    "teen"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 42.074
+    },
+    {
+     "w": "Bharat",
+     "t": 42.271
+    },
+    {
+     "w": "ki",
+     "t": 42.665
+    },
+    {
+     "w": "garmi",
+     "t": 42.862
+    },
+    {
+     "w": "mein?",
+     "t": 43.256
+    },
+    {
+     "w": "Tez",
+     "t": 43.611
+    },
+    {
+     "w": "hawa.",
+     "t": 43.808
+    },
+    {
+     "w": "Isliye,",
+     "t": 44.36
+    },
+    {
+     "w": "teen",
+     "t": 45.109
+    },
+    {
+     "w": "blade.",
+     "t": 45.306
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 46.157,
+   "t1": 51.359,
+   "cap": "Follow aur subscribe karo. Aur batao, tumhare ghar ke pankhe mein kitne blade hain?",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 46.157
+    },
+    {
+     "w": "aur",
+     "t": 46.551
+    },
+    {
+     "w": "subscribe",
+     "t": 46.749
+    },
+    {
+     "w": "karo.",
+     "t": 47.34
+    },
+    {
+     "w": "Aur",
+     "t": 47.891
+    },
+    {
+     "w": "batao,",
+     "t": 48.088
+    },
+    {
+     "w": "tumhare",
+     "t": 48.64
+    },
+    {
+     "w": "ghar",
+     "t": 49.231
+    },
+    {
+     "w": "ke",
+     "t": 49.428
+    },
+    {
+     "w": "pankhe",
+     "t": 49.625
+    },
+    {
+     "w": "mein",
+     "t": 50.019
+    },
+    {
+     "w": "kitne",
+     "t": 50.217
+    },
+    {
+     "w": "blade",
+     "t": 50.611
+    },
+    {
+     "w": "hain?",
+     "t": 51.005
+    }
+   ]
+  }
+ ]
+}
