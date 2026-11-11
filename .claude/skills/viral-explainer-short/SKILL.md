@@ -52,6 +52,11 @@ For "ye cheez aisi kyun hai / kaise kaam karti hai" topics about an object, when
   named part positions (`AT`), current dots along a path (`flow`, `upto`, path positions `U`), glows for state
   (`charge`, `sw`, `heat`), a `cheap` variant for asli-vs-naqli, and `WallSetup` for the outside shots.
   2D helpers in that story.tsx: `Wave` (scope card: AC / DC / chopped) and `HeatWaves`.
+- Realistic 3D shot types on the same object (samples 7-12, `videos/charger-garam/src/Samples.tsx`, render with
+  `COMP=Samples node tools/stills.mjs out/sample_ 0,1,2,3,4,5 1`): **exploded view** (`explode` 0→1: parts lift off, shell
+  slides aside), **cutaway** (`cut`: clipping plane through the shell), **labelled parts** (straight-on camera + lime
+  leader lines; screen px = 540 + x·(1920 / visible height)), **macro close-up** (camera inside the shell, fov 40),
+  **glass shell + current**, **real room**. Mix 3-4 of these per reel instead of repeating one framing.
 - The creator sends ONE mp3 from ElevenLabs. Its pauses match the script punctuation: list them with
   `ffmpeg -af silencedetect=n=-35dB:d=0.18`, map sentence ends to lines, set each line's `src`, engine `take`, speed 1.08.
 - `tools/audio.py` prints -14 LUFS but ffmpeg measures the mix about 4 dB hotter: after rendering, remux with

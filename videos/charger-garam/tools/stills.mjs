@@ -8,7 +8,7 @@ const browserExecutable = process.env.CHROME_PATH || "/opt/pw-browsers/chromium_
 fs.mkdirSync(path.dirname(prefix), { recursive: true });
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
 const inputProps = { audio: false };
-const composition = await selectComposition({ serveUrl, id: "Short", inputProps, browserExecutable, chromiumOptions: { gl: "swangle" } });
+const composition = await selectComposition({ serveUrl, id: process.env.COMP || "Short", inputProps, browserExecutable, chromiumOptions: { gl: "swangle" } });
 const frames = list.split(",").map(Number);
 const outs = [];
 for (const frame of frames) {

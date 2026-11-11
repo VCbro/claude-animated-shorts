@@ -14,7 +14,8 @@ import { W, H } from "../kit/theme";
  *   ferrite transformer → output diode + capacitors → USB port, with an optocoupler across the isolation gap.
  * Built upright (pins at +y, USB at -y) so the current runs top → bottom in a vertical frame.
  * Numbers drive it: open (shell solid → glass), flow/upto (current dots), sw (switch blink), charge (capacitor glow),
- * heat (hot parts glow), shellHeat (outside glow), cheap (the fake: tan board, parts missing).
+ * heat (hot parts glow), shellHeat (outside glow), cheap (the fake: tan board, parts missing),
+ * explode (0..1 exploded view: parts lift off the board, shell slides aside), cut (x of a clipping plane: cutaway shell).
  */
 type V3 = [number, number, number];
 export const CH = { hv: "#FF5A2A", lv: "#C4F23C", hot: "#FF3B1F", cyan: "#5FD8FF" };
@@ -59,19 +60,21 @@ const GEO = (() => ({ shell: new RoundedBoxGeometry(1.0, 1.4, 0.62, 6, 0.11), pl
 const SHELL_EDGES = new THREE.EdgesGeometry(GEO.shell, 30);
 const mixc = (a: string, b: string, k: number) => "#" + new THREE.Color(a).lerp(new THREE.Color(b), Math.max(0, Math.min(1, k))).getHexString();
 
-const Box: React.FC<{ at: readonly number[]; size: V3; color: string; z?: number; rough?: number; metal?: number; glow?: string; glowK?: number }> = ({ at, size, color, z = 0, rough = 0.55, metal = 0, glow = "#000000", glowK = 0 }) => (
-  <mesh position={[at[0], at[1], BZ + z + size[2] / 2]} castShadow><boxGeometry args={size} /><meshPhysicalMaterial color={color} roughness={rough} metalness={metal} clearcoat={0.3} emissive={glow} emissiveIntensity={glowK} /></mesh>
+/** 0..1: every part with a `lift` rises off the board by lift × explode (exploded view). */
+const Ex = React.createContext(0);
+const Box: React.FC<{ lift?: number; at: readonly number[]; size: V3; color: string; z?: number; rough?: number; metal?: number; glow?: string; glowK?: number }> = ({ lift = 0, at, size, color, z = 0, rough = 0.55, metal = 0, glow = "#000000", glowK = 0 }) => (
+  <mesh position={[at[0], at[1], BZ + z + size[2] / 2 + lift * React.useContext(Ex)]} castShadow><boxGeometry args={size} /><meshPhysicalMaterial color={color} roughness={rough} metalness={metal} clearcoat={0.3} emissive={glow} emissiveIntensity={glowK} /></mesh>
 );
 /** Cylinder lying along `axis` (x or z) sitting on the board. */
-const Cyl: React.FC<{ at: readonly number[]; r: number; len: number; axis?: "x" | "z"; color: string; z?: number; rough?: number; metal?: number; glow?: string; glowK?: number; children?: React.ReactNode }> = ({ at, r, len, axis = "x", color, z = 0, rough = 0.45, metal = 0, glow = "#000000", glowK = 0, children }) => (
-  <group position={[at[0], at[1], BZ + z + (axis === "x" ? r : len / 2)]} rotation={axis === "x" ? [0, 0, Math.PI / 2] : [Math.PI / 2, 0, 0]}>
+const Cyl: React.FC<{ lift?: number; at: readonly number[]; r: number; len: number; axis?: "x" | "z"; color: string; z?: number; rough?: number; metal?: number; glow?: string; glowK?: number; children?: React.ReactNode }> = ({ lift = 0, at, r, len, axis = "x", color, z = 0, rough = 0.45, metal = 0, glow = "#000000", glowK = 0, children }) => (
+  <group position={[at[0], at[1], BZ + z + (axis === "x" ? r : len / 2) + lift * React.useContext(Ex)]} rotation={axis === "x" ? [0, 0, Math.PI / 2] : [Math.PI / 2, 0, 0]}>
     <mesh castShadow><cylinderGeometry args={[r, r, len, 32]} /><meshPhysicalMaterial color={color} roughness={rough} metalness={metal} clearcoat={0.5} emissive={glow} emissiveIntensity={glowK} /></mesh>
     {children}
   </group>
 );
 
-export type ChargerP = { open?: number; flow?: number; upto?: number; sw?: number; charge?: number; heat?: number; shellHeat?: number; cheap?: boolean };
-export const Charger: React.FC<ChargerP & { position?: V3; rotation?: V3; scale?: number }> = ({ open = 0, flow = 0, upto = 1, sw = 0, charge = 0, heat = 0, shellHeat = 0, cheap = false, position, rotation, scale }) => {
+export type ChargerP = { explode?: number; cut?: number; open?: number; flow?: number; upto?: number; sw?: number; charge?: number; heat?: number; shellHeat?: number; cheap?: boolean };
+export const Charger: React.FC<ChargerP & { position?: V3; rotation?: V3; scale?: number }> = ({ explode = 0, cut, open = 0, flow = 0, upto = 1, sw = 0, charge = 0, heat = 0, shellHeat = 0, cheap = false, position, rotation, scale }) => {
   const f = useCurrentFrame();
   const halo = useHalo(), pcb = usePcb(cheap);
   const k = cheap ? 0.72 : 1;
@@ -80,42 +83,42 @@ export const Charger: React.FC<ChargerP & { position?: V3; rotation?: V3; scale?
   ) : null;
   const n = Math.round(10 + flow * 30), speed = 0.1 + flow * 0.3;
   return (
-    <group position={position} rotation={rotation} scale={scale}>
+    <group position={position} rotation={rotation} scale={scale}><Ex.Provider value={explode}>
       {/* board */}
       <mesh position={[0, 0, BZ - 0.016]}><boxGeometry args={[0.88, 1.26, 0.03]} /><meshStandardMaterial color={cheap ? "#8E6B3A" : "#0F4A2A"} roughness={0.6} /></mesh>
       <mesh position={[0, 0, BZ]}><planeGeometry args={[0.88, 1.26]} /><meshPhysicalMaterial map={pcb} roughness={0.38} clearcoat={0.6} clearcoatRoughness={0.3} /></mesh>
       {/* AC pins (brass) + leads down to the board */}
-      {[AT.pinL, AT.pinR].map((p, i) => <group key={i}>
+      {[AT.pinL, AT.pinR].map((p, i) => <group key={i} position={[0, 0.55 * explode, 0]}>
         <mesh position={[p[0], 0.93, 0]} castShadow><cylinderGeometry args={[0.048, 0.048, 0.46, 24]} /><meshStandardMaterial color="#D9B25A" metalness={0.95} roughness={0.22} /></mesh>
         <mesh position={[p[0], 0.69, BZ / 2]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.014, 0.014, 0.2, 8]} /><meshStandardMaterial color="#C8CCD0" metalness={0.9} roughness={0.3} /></mesh>
       </group>)}
-      {!cheap && <Cyl at={AT.fuse} r={0.036} len={0.2} color="#D9CFB4" z={0.02}><mesh><cylinderGeometry args={[0.038, 0.038, 0.03, 20]} /><meshStandardMaterial color="#B8442E" /></mesh></Cyl>}
-      <Box at={AT.bridge} size={[0.22, 0.15, 0.075]} color="#18181B" rough={0.35} />
-      {!cheap && <Cyl at={AT.coil} r={0.075} len={0.1} axis="z" color="#2A2A2E"><mesh><cylinderGeometry args={[0.082, 0.082, 0.07, 28]} /><meshStandardMaterial color="#C8742C" metalness={0.8} roughness={0.35} /></mesh></Cyl>}
+      {!cheap && <Cyl lift={0.5} at={AT.fuse} r={0.036} len={0.2} color="#D9CFB4" z={0.02}><mesh><cylinderGeometry args={[0.038, 0.038, 0.03, 20]} /><meshStandardMaterial color="#B8442E" /></mesh></Cyl>}
+      <Box lift={0.7} at={AT.bridge} size={[0.22, 0.15, 0.075]} color="#18181B" rough={0.35} />
+      {!cheap && <Cyl lift={0.45} at={AT.coil} r={0.075} len={0.1} axis="z" color="#2A2A2E"><mesh><cylinderGeometry args={[0.082, 0.082, 0.07, 28]} /><meshStandardMaterial color="#C8742C" metalness={0.8} roughness={0.35} /></mesh></Cyl>}
       {/* the big 400 V electrolytic capacitor */}
-      <Cyl at={AT.cap} r={0.14 * k} len={0.44 * k} color="#1D2B52" glow={CH.cyan} glowK={charge * 0.22}>
+      <Cyl lift={1.0} at={AT.cap} r={0.14 * k} len={0.44 * k} color="#1D2B52" glow={CH.cyan} glowK={charge * 0.22}>
         <mesh position={[0, 0.06 * k, 0]}><cylinderGeometry args={[0.142 * k, 0.142 * k, 0.07 * k, 32, 1, true, 0, 1.3]} /><meshStandardMaterial color="#D5DAE2" roughness={0.5} side={THREE.DoubleSide} /></mesh>
         <mesh position={[0, 0.221 * k, 0]}><cylinderGeometry args={[0.128 * k, 0.128 * k, 0.004, 32]} /><meshStandardMaterial color="#C9CDD2" metalness={0.9} roughness={0.3} /></mesh>
       </Cyl>
-      <Box at={AT.ic} size={[0.14, 0.1, 0.035]} color="#151517" rough={0.3} />
+      <Box lift={0.55} at={AT.ic} size={[0.14, 0.1, 0.035]} color="#151517" rough={0.3} />
       {/* MOSFET switch with its metal tab */}
-      <Box at={AT.fet} size={[0.13, 0.17, 0.05]} color="#161618" rough={0.3} glow={heat > 0.05 ? CH.hot : CH.lv} glowK={Math.max(heat * 0.9, sw * 1.2)} />
-      <Box at={[AT.fet[0], AT.fet[1] + 0.115]} size={[0.13, 0.06, 0.018]} color="#C4C8CC" metal={0.9} rough={0.3} />
+      <Box lift={0.75} at={AT.fet} size={[0.13, 0.17, 0.05]} color="#161618" rough={0.3} glow={heat > 0.05 ? CH.hot : CH.lv} glowK={Math.max(heat * 0.9, sw * 1.2)} />
+      <Box lift={0.75} at={[AT.fet[0], AT.fet[1] + 0.115]} size={[0.13, 0.06, 0.018]} color="#C4C8CC" metal={0.9} rough={0.3} />
       {/* flyback transformer: ferrite core + yellow tape over the windings */}
-      <group scale={[k, k, k]} position={[AT.trafo[0] * (1 - k), AT.trafo[1] * (1 - k), BZ * (1 - k)]}>
+      <group scale={[k, k, k]} position={[AT.trafo[0] * (1 - k), AT.trafo[1] * (1 - k), BZ * (1 - k) + 1.25 * explode]}>
         <Box at={AT.trafo} size={[0.5, 0.42, 0.03]} color="#111113" />
         <Box at={AT.trafo} size={[0.46, 0.34, 0.3]} color="#2C2C31" z={0.03} rough={0.7} glow={CH.hot} glowK={heat * 0.35} />
         <Box at={AT.trafo} size={[0.3, 0.39, 0.33]} color="#F0BF2C" z={0.02} rough={0.42} glow={CH.hot} glowK={heat * 0.45} />
         <Box at={[AT.trafo[0], AT.trafo[1] - 0.2]} size={[0.26, 0.012, 0.24]} color="#C8742C" z={0.06} metal={0.8} rough={0.4} />
       </group>
-      {!cheap && <Box at={AT.opto} size={[0.09, 0.13, 0.05]} color="#E9E6DC" rough={0.4} />}
-      <Box at={AT.diode} size={[0.12, 0.16, 0.05]} color="#161618" rough={0.3} glow={CH.hot} glowK={heat * 0.8} />
-      <Box at={[AT.diode[0], AT.diode[1] + 0.11]} size={[0.12, 0.055, 0.018]} color="#C4C8CC" metal={0.9} rough={0.3} />
-      <Cyl at={AT.cap2} r={0.078 * k} len={0.2} axis="z" color="#26262A"><mesh position={[0, 0.101, 0]}><cylinderGeometry args={[0.07 * k, 0.07 * k, 0.004, 24]} /><meshStandardMaterial color="#C9CDD2" metalness={0.9} roughness={0.3} /></mesh></Cyl>
-      {!cheap && <Cyl at={AT.cap3} r={0.05} len={0.16} axis="z" color="#3A2E1A"><mesh position={[0, 0.081, 0]}><cylinderGeometry args={[0.044, 0.044, 0.004, 20]} /><meshStandardMaterial color="#C9CDD2" metalness={0.9} roughness={0.3} /></mesh></Cyl>}
+      {!cheap && <Box lift={0.5} at={AT.opto} size={[0.09, 0.13, 0.05]} color="#E9E6DC" rough={0.4} />}
+      <Box lift={0.7} at={AT.diode} size={[0.12, 0.16, 0.05]} color="#161618" rough={0.3} glow={CH.hot} glowK={heat * 0.8} />
+      <Box lift={0.7} at={[AT.diode[0], AT.diode[1] + 0.11]} size={[0.12, 0.055, 0.018]} color="#C4C8CC" metal={0.9} rough={0.3} />
+      <Cyl lift={0.85} at={AT.cap2} r={0.078 * k} len={0.2} axis="z" color="#26262A"><mesh position={[0, 0.101, 0]}><cylinderGeometry args={[0.07 * k, 0.07 * k, 0.004, 24]} /><meshStandardMaterial color="#C9CDD2" metalness={0.9} roughness={0.3} /></mesh></Cyl>
+      {!cheap && <Cyl lift={0.6} at={AT.cap3} r={0.05} len={0.16} axis="z" color="#3A2E1A"><mesh position={[0, 0.081, 0]}><cylinderGeometry args={[0.044, 0.044, 0.004, 20]} /><meshStandardMaterial color="#C9CDD2" metalness={0.9} roughness={0.3} /></mesh></Cyl>}
       {/* USB-A port */}
-      <Box at={AT.usb} size={[0.32, 0.26, 0.15]} color="#C9CDD2" metal={0.95} rough={0.25} />
-      <Box at={[AT.usb[0], AT.usb[1] - 0.02]} size={[0.24, 0.2, 0.04]} color="#F4F4F0" z={0.055} />
+      <Box lift={0.35} at={AT.usb} size={[0.32, 0.26, 0.15]} color="#C9CDD2" metal={0.95} rough={0.25} />
+      <Box lift={0.35} at={[AT.usb[0], AT.usb[1] - 0.02]} size={[0.24, 0.2, 0.04]} color="#F4F4F0" z={0.055} />
 
       {/* glows: capacitor charge, switch, heat */}
       <Glow at={AT.cap} color={CH.cyan} s={0.8} o={charge * 0.3} />
@@ -132,13 +135,13 @@ export const Charger: React.FC<ChargerP & { position?: V3; rotation?: V3; scale?
       })}
 
       {/* shell: white plastic that turns to glass */}
-      <mesh geometry={GEO.shell} position={[0, 0, 0.01]} castShadow={open < 0.3} renderOrder={5}>
-        <meshPhysicalMaterial color={mixc("#F4F3EE", "#BFE9FF", open)} roughness={0.28} clearcoat={1} clearcoatRoughness={0.15} transparent opacity={lerp(open, [0, 1], [1, 0.07])} depthWrite={open < 0.02}
+      <mesh geometry={GEO.shell} position={[1.35 * explode, 0, 0.01 + 0.5 * explode]} rotation={[0, -0.5 * explode, 0]} castShadow={open < 0.3} renderOrder={5}>
+        <meshPhysicalMaterial side={cut === undefined ? THREE.FrontSide : THREE.DoubleSide} clippingPlanes={cut === undefined ? [] : [new THREE.Plane(new THREE.Vector3(-1, 0, 0), cut)]} color={mixc("#F4F3EE", "#BFE9FF", open)} roughness={0.28} clearcoat={1} clearcoatRoughness={0.15} transparent opacity={lerp(open, [0, 1], [1, 0.07])} depthWrite={open < 0.02}
           emissive={CH.hot} emissiveIntensity={shellHeat * 0.42} />
       </mesh>
       {open > 0.3 && <lineSegments geometry={SHELL_EDGES} position={[0, 0, 0.01]}><lineBasicMaterial color="#9FE3FF" transparent opacity={0.55 * open} /></lineSegments>}
       <Glow at={[0, 0]} color={CH.hot} s={1.9 + shellHeat * 0.5} o={shellHeat * 0.26} z={0.5} />
-    </group>
+    </Ex.Provider></group>
   );
 };
 
@@ -164,7 +167,7 @@ const Rig: React.FC<{ exposure: number; dur: number; from: V3; to: V3; look: V3;
   const f = useCurrentFrame();
   const { camera, gl, scene } = useThree();
   useMemo(() => {
-    gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = exposure; gl.shadowMap.type = THREE.PCFSoftShadowMap;
+    gl.localClippingEnabled = true; gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = exposure; gl.shadowMap.type = THREE.PCFSoftShadowMap;
     scene.environment = new THREE.PMREMGenerator(gl).fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = 0.55;
   }, [gl, scene]);
   const k = lerp(f, [0, dur], [0, 1]);
