@@ -1,14 +1,14 @@
-{"title": "Pankhe mein 3 hi blade kyun?", "pace": 1.0, "engine": "files",
+{"title": "Pankhe mein 3 hi blade kyun?", "pace": 1.0, "engine": "take", "voice_src": "voice/clean.wav", "speed": 1.08,
  "lines": [
-  {"id": "L1", "tts": "आपके पंखे में तीन ही ब्लेड क्यों होते हैं?", "cap": "Aapke pankhe mein teen hi blade kyun hote hain?", "hl": ["teen"], "gap": 0.0},
-  {"id": "L2", "tts": "चार या पाँच क्यों नहीं?", "cap": "Chaar ya paanch kyun nahi?", "hl": ["Chaar", "paanch"], "gap": 0.1},
-  {"id": "L3", "tts": "ज़्यादा ब्लेड मतलब ज़्यादा हवा? नहीं। असली खेल अंदर छुपा है।", "cap": "Zyada blade matlab zyada hawa? Nahi. Asli khel andar chhupa hai.", "red": ["Nahi."], "hl": ["andar"], "gap": 0.2},
-  {"id": "L4", "tts": "अंदर है एक मोटर। तांबे की कॉइल में बिजली जाती है, और चुंबक की ताक़त पूरे पंखे को घुमाती है।", "cap": "Andar hai ek motor. Taambe ki coil mein bijli jaati hai, aur chumbak ki taaqat poore pankhe ko ghumaati hai.", "hl": ["motor.", "coil", "chumbak"], "gap": 0.25},
-  {"id": "L5", "tts": "हर ब्लेड हवा को नीचे धकेलता है। लेकिन हर ब्लेड मोटर पर बोझ भी बढ़ाता है।", "cap": "Har blade hawa ko neeche dhakelta hai. Lekin har blade motor par bojh bhi badhaata hai.", "hl": ["neeche"], "red": ["bojh"], "gap": 0.25},
-  {"id": "L6", "tts": "पाँच ब्लेड लगाओ, तो मोटर थक जाती है, और पंखा धीमा पड़ जाता है।", "cap": "Paanch blade lagao, toh motor thak jaati hai, aur pankha dheema pad jaata hai.", "red": ["thak", "dheema"], "gap": 0.25},
-  {"id": "L7", "tts": "दो ब्लेड लगाओ, तो पंखा तेज़ घूमेगा, पर हवा कम देगा।", "cap": "Do blade lagao, toh pankha tez ghoomega, par hawa kam dega.", "red": ["kam"], "gap": 0.2},
-  {"id": "L8", "tts": "तीन ब्लेड में सबसे सही संतुलन है। तेज़ रफ़्तार, भरपूर हवा, कम ख़र्च।", "cap": "Teen blade mein sabse sahi santulan hai. Tez raftaar, bharpoor hawa, kam kharch.", "hl": ["Teen", "raftaar,", "hawa,", "kharch."], "gap": 0.3},
-  {"id": "L9", "tts": "ठंडे देशों में चार पाँच ब्लेड वाले पंखे मिलते हैं, क्योंकि वहाँ बस हल्की हवा चाहिए।", "cap": "Thande deshon mein chaar paanch blade waale pankhe milte hain, kyunki wahan bas halki hawa chahiye.", "hl": ["Thande", "halki"], "gap": 0.3},
-  {"id": "L10", "tts": "और भारत की गर्मी में? तेज़ हवा। इसलिए, तीन ब्लेड।", "cap": "Aur Bharat ki garmi mein? Tez hawa. Isliye, teen blade.", "hl": ["Tez", "teen"], "gap": 0.25},
-  {"id": "L11", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम्हारे घर के पंखे में कितने ब्लेड हैं?", "cap": "Follow aur subscribe karo. Aur batao, tumhare ghar ke pankhe mein kitne blade hain?", "hl": ["Follow", "subscribe"], "gap": 0.3}
+  {"id": "L1", "tts": "आपके पंखे में तीन ही ब्लेड क्यों होते हैं?", "cap": "Aapke pankhe mein teen hi blade kyun hote hain?", "hl": ["teen"], "gap": 0.0, "src": [[0.0, 2.34]]},
+  {"id": "L2", "tts": "चार या पाँच क्यों नहीं?", "cap": "Chaar ya paanch kyun nahi?", "hl": ["Chaar", "paanch"], "gap": 0.1, "src": [[2.8, 4.13]]},
+  {"id": "L3", "tts": "ज़्यादा ब्लेड मतलब ज़्यादा हवा? नहीं। असली खेल अंदर छुपा है।", "cap": "Zyada blade matlab zyada hawa? Nahi. Asli khel andar chhupa hai.", "red": ["Nahi."], "hl": ["andar"], "gap": 0.2, "src": [[4.6, 9.43]]},
+  {"id": "L4", "tts": "अंदर है एक मोटर। तांबे की कॉइल में बिजली जाती है, और चुंबक की ताक़त पूरे पंखे को घुमाती है।", "cap": "Andar hai ek motor. Taambe ki coil mein bijli jaati hai, aur chumbak ki taaqat poore pankhe ko ghumaati hai.", "hl": ["motor.", "coil", "chumbak"], "gap": 0.25, "src": [[9.91, 16.09]]},
+  {"id": "L5", "tts": "हर ब्लेड हवा को नीचे धकेलता है। लेकिन हर ब्लेड मोटर पर बोझ भी बढ़ाता है।", "cap": "Har blade hawa ko neeche dhakelta hai. Lekin har blade motor par bojh bhi badhaata hai.", "hl": ["neeche"], "red": ["bojh"], "gap": 0.25, "src": [[16.58, 21.62]]},
+  {"id": "L6", "tts": "पाँच ब्लेड लगाओ, तो मोटर थक जाती है, और पंखा धीमा पड़ जाता है।", "cap": "Paanch blade lagao, toh motor thak jaati hai, aur pankha dheema pad jaata hai.", "red": ["thak", "dheema"], "gap": 0.25, "src": [[22.15, 25.87]]},
+  {"id": "L7", "tts": "दो ब्लेड लगाओ, तो पंखा तेज़ घूमेगा, पर हवा कम देगा।", "cap": "Do blade lagao, toh pankha tez ghoomega, par hawa kam dega.", "red": ["kam"], "gap": 0.2, "src": [[26.31, 29.87]]},
+  {"id": "L8", "tts": "तीन ब्लेड में सबसे सही संतुलन है। तेज़ रफ़्तार, भरपूर हवा, कम ख़र्च।", "cap": "Teen blade mein sabse sahi santulan hai. Tez raftaar, bharpoor hawa, kam kharch.", "hl": ["Teen", "raftaar,", "hawa,", "kharch."], "gap": 0.3, "src": [[30.34, 35.78]]},
+  {"id": "L9", "tts": "ठंडे देशों में चार पाँच ब्लेड वाले पंखे मिलते हैं, क्योंकि वहाँ बस हल्की हवा चाहिए।", "cap": "Thande deshon mein chaar paanch blade waale pankhe milte hain, kyunki wahan bas halki hawa chahiye.", "hl": ["Thande", "halki"], "gap": 0.3, "src": [[36.24, 40.78]]},
+  {"id": "L10", "tts": "और भारत की गर्मी में? तेज़ हवा। इसलिए, तीन ब्लेड।", "cap": "Aur Bharat ki garmi mein? Tez hawa. Isliye, teen blade.", "hl": ["Tez", "teen"], "gap": 0.25, "src": [[41.25, 45.29]]},
+  {"id": "L11", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम्हारे घर के पंखे में कितने ब्लेड हैं?", "cap": "Follow aur subscribe karo. Aur batao, tumhare ghar ke pankhe mein kitne blade hain?", "hl": ["Follow", "subscribe"], "gap": 0.3, "src": [[45.71, 50.21]]}
  ]}
