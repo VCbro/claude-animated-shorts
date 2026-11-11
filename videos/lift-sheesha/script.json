@@ -1,13 +1,13 @@
 {"title": "Lift mein sheesha kyun?", "pace": 1.0, "engine": "take", "voice_src": "voice/clean.wav", "speed": 1.08,
  "lines": [
-  {"id": "L1", "tts": "लिफ़्ट में शीशा क्यों लगाते हैं?", "cap": "Lift mein sheesha kyun lagaate hain?", "gap": 0.0},
-  {"id": "L2", "tts": "बाल ठीक करने के लिए? नहीं। इसके पीछे तीन बड़ी वजहें हैं।", "cap": "Baal theek karne ke liye? Nahi. Iske peeche teen badi wajah hain.", "gap": 0.15},
-  {"id": "L3", "tts": "पहली वजह, घबराहट। लिफ़्ट एक छोटा सा बंद डिब्बा है।", "cap": "Pehli wajah, ghabrahat. Lift ek chhota sa band dabba hai.", "gap": 0.25},
-  {"id": "L4", "tts": "शीशा लगते ही वही जगह दुगनी बड़ी दिखती है, और घुटन कम लगती है।", "cap": "Sheesha lagte hi wahi jagah dugni badi dikhti hai, aur ghutan kam lagti hai.", "gap": 0.2},
-  {"id": "L5", "tts": "दूसरी वजह, सुरक्षा। शीशे में आप बिना मुड़े देख सकते हैं, कि पीछे कौन खड़ा है।", "cap": "Doosri wajah, suraksha. Sheeshe mein aap bina mude dekh sakte hain, ki peeche kaun khada hai.", "gap": 0.25},
-  {"id": "L6", "tts": "तीसरी और सबसे ज़रूरी वजह, व्हीलचेयर।", "cap": "Teesri aur sabse zaroori wajah, wheelchair.", "gap": 0.25},
-  {"id": "L7", "tts": "लिफ़्ट में व्हीलचेयर घुमाने की जगह नहीं होती। शीशे में पीछे देखकर, वो सीधे उल्टा बाहर निकल आते हैं।", "cap": "Lift mein wheelchair ghumaane ki jagah nahi hoti. Sheeshe mein peeche dekhkar, wo seedhe ulta bahar nikal aate hain.", "gap": 0.2},
-  {"id": "L8", "tts": "और एक मज़ेदार बात। शीशे में ख़ुद को देखते हुए, इंतज़ार छोटा लगता है।", "cap": "Aur ek mazedaar baat. Sheeshe mein khud ko dekhte hue, intezaar chhota lagta hai.", "gap": 0.25},
-  {"id": "L9", "tts": "तो अगली बार लिफ़्ट में शीशा दिखे, तो याद रखना। ये सजावट नहीं, सुरक्षा है।", "cap": "Toh agli baar lift mein sheesha dikhe, toh yaad rakhna. Ye sajaawat nahi, suraksha hai.", "gap": 0.3},
-  {"id": "L10", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम लिफ़्ट में सबसे पहले क्या देखते हो?", "cap": "Follow aur subscribe karo. Aur batao, tum lift mein sabse pehle kya dekhte ho?", "gap": 0.3}
+  {"id": "L1", "tts": "लिफ़्ट में शीशा क्यों लगाते हैं?", "cap": "Lift mein sheesha kyun lagaate hain?", "gap": 0.0, "src": [[0.0, 1.86]]},
+  {"id": "L2", "tts": "बाल ठीक करने के लिए? नहीं। इसके पीछे तीन बड़ी वजहें हैं।", "cap": "Baal theek karne ke liye? Nahi. Iske peeche teen badi wajah hain.", "gap": 0.15, "src": [[2.35, 6.58]]},
+  {"id": "L3", "tts": "पहली वजह, घबराहट। लिफ़्ट एक छोटा सा बंद डिब्बा है।", "cap": "Pehli wajah, ghabrahat. Lift ek chhota sa band dabba hai.", "gap": 0.25, "src": [[7.14, 11.04]]},
+  {"id": "L4", "tts": "शीशा लगते ही वही जगह दुगनी बड़ी दिखती है, और घुटन कम लगती है।", "cap": "Sheesha lagte hi wahi jagah dugni badi dikhti hai, aur ghutan kam lagti hai.", "gap": 0.2, "src": [[11.5, 15.83]]},
+  {"id": "L5", "tts": "दूसरी वजह, सुरक्षा। शीशे में आप बिना मुड़े देख सकते हैं, कि पीछे कौन खड़ा है।", "cap": "Doosri wajah, suraksha. Sheeshe mein aap bina mude dekh sakte hain, ki peeche kaun khada hai.", "gap": 0.25, "src": [[16.39, 22.02]]},
+  {"id": "L6", "tts": "तीसरी और सबसे ज़रूरी वजह, व्हीलचेयर।", "cap": "Teesri aur sabse zaroori wajah, wheelchair.", "gap": 0.25, "src": [[22.56, 25.37]]},
+  {"id": "L7", "tts": "लिफ़्ट में व्हीलचेयर घुमाने की जगह नहीं होती। शीशे में पीछे देखकर, वो सीधे उल्टा बाहर निकल आते हैं।", "cap": "Lift mein wheelchair ghumaane ki jagah nahi hoti. Sheeshe mein peeche dekhkar, wo seedhe ulta bahar nikal aate hain.", "gap": 0.2, "src": [[26.0, 31.97]]},
+  {"id": "L8", "tts": "और एक मज़ेदार बात। शीशे में ख़ुद को देखते हुए, इंतज़ार छोटा लगता है।", "cap": "Aur ek mazedaar baat. Sheeshe mein khud ko dekhte hue, intezaar chhota lagta hai.", "gap": 0.25, "src": [[32.57, 37.29]]},
+  {"id": "L9", "tts": "तो अगली बार लिफ़्ट में शीशा दिखे, तो याद रखना। ये सजावट नहीं, सुरक्षा है।", "cap": "Toh agli baar lift mein sheesha dikhe, toh yaad rakhna. Ye sajaawat nahi, suraksha hai.", "gap": 0.3, "src": [[37.86, 42.58]]},
+  {"id": "L10", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम लिफ़्ट में सबसे पहले क्या देखते हो?", "cap": "Follow aur subscribe karo. Aur batao, tum lift mein sabse pehle kya dekhte ho?", "gap": 0.3, "src": [[43.15, 47.4]]}
  ]}
