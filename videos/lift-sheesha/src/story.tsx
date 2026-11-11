@@ -73,7 +73,7 @@ const S5: React.FC<SceneP> = ({ o, d }) => {
 const S6: React.FC<SceneP> = ({ o, d }) => {
   const f = useCurrentFrame();
   return <Black><DotWall />
-    <CineStage dur={d} from={[1.6, 1.3, 3.4]} to={[1.3, 1.1, 2.9]} lookAt={[0, 0.62, 0]} fov={30} env={0.5}>
+    <CineStage dur={d} from={[2.0, 1.5, 4.6]} to={[1.7, 1.3, 4.0]} lookAt={[0, 0.72, 0]} fov={30} env={0.5}>
       <hemisphereLight args={["#9FC8C4", "#1A120A", 0.5]} /><directionalLight position={[3, 4, 4]} color="#FFE2B8" intensity={2.6} castShadow shadow-mapSize={[1024, 1024]} /><directionalLight position={[-3, 2, -3]} color="#49D6D0" intensity={2} />
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[30, 30]} /><meshStandardMaterial color="#0B1416" roughness={0.35} metalness={0.4} /></mesh>
       <Wheelchair rotation={[0, -0.5 + f / 120, 0]} />
