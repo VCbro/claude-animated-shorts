@@ -1,0 +1,723 @@
+{
+ "fps": 30,
+ "duration": 44.322,
+ "frames": 1330,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 2.051,
+   "cap": "Aapka charger garam kyun ho jaata hai?",
+   "hl": [],
+   "red": [
+    "garam"
+   ],
+   "words": [
+    {
+     "w": "Aapka",
+     "t": 0.26
+    },
+    {
+     "w": "charger",
+     "t": 0.64
+    },
+    {
+     "w": "garam",
+     "t": 0.95
+    },
+    {
+     "w": "kyun",
+     "t": 1.23
+    },
+    {
+     "w": "ho",
+     "t": 1.39
+    },
+    {
+     "w": "jaata",
+     "t": 1.52
+    },
+    {
+     "w": "hai?",
+     "t": 1.8
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 2.201,
+   "t1": 5.272,
+   "cap": "Kya ye kharaab ho raha hai? Nahi. Jawab iske andar hai.",
+   "hl": [
+    "andar"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Kya",
+     "t": 2.231
+    },
+    {
+     "w": "ye",
+     "t": 2.381
+    },
+    {
+     "w": "kharaab",
+     "t": 2.511
+    },
+    {
+     "w": "ho",
+     "t": 2.941
+    },
+    {
+     "w": "raha",
+     "t": 3.071
+    },
+    {
+     "w": "hai?",
+     "t": 3.331
+    },
+    {
+     "w": "Nahi.",
+     "t": 3.641
+    },
+    {
+     "w": "Jawab",
+     "t": 4.131
+    },
+    {
+     "w": "iske",
+     "t": 4.411
+    },
+    {
+     "w": "andar",
+     "t": 4.771
+    },
+    {
+     "w": "hai.",
+     "t": 5.061
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 5.522,
+   "t1": 10.27,
+   "cap": "Deewar se aati hai do sau tees volt ki bijli. Par aapke phone ko chahiye sirf paanch volt.",
+   "hl": [
+    "paanch"
+   ],
+   "red": [
+    "tees"
+   ],
+   "words": [
+    {
+     "w": "Deewar",
+     "t": 5.522
+    },
+    {
+     "w": "se",
+     "t": 5.862
+    },
+    {
+     "w": "aati",
+     "t": 6.012
+    },
+    {
+     "w": "hai",
+     "t": 6.322
+    },
+    {
+     "w": "do",
+     "t": 6.492
+    },
+    {
+     "w": "sau",
+     "t": 6.642
+    },
+    {
+     "w": "tees",
+     "t": 6.812
+    },
+    {
+     "w": "volt",
+     "t": 7.122
+    },
+    {
+     "w": "ki",
+     "t": 7.302
+    },
+    {
+     "w": "bijli.",
+     "t": 7.462
+    },
+    {
+     "w": "Par",
+     "t": 7.792
+    },
+    {
+     "w": "aapke",
+     "t": 8.152
+    },
+    {
+     "w": "phone",
+     "t": 8.522
+    },
+    {
+     "w": "ko",
+     "t": 8.842
+    },
+    {
+     "w": "chahiye",
+     "t": 9.002
+    },
+    {
+     "w": "sirf",
+     "t": 9.352
+    },
+    {
+     "w": "paanch",
+     "t": 9.542
+    },
+    {
+     "w": "volt.",
+     "t": 9.892
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 10.52,
+   "t1": 14.448,
+   "cap": "Toh charger pehle bijli ko seedha karta hai, aur is bade capacitor mein bharta hai.",
+   "hl": [
+    "seedha",
+    "capacitor"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Toh",
+     "t": 10.54
+    },
+    {
+     "w": "charger",
+     "t": 10.7
+    },
+    {
+     "w": "pehle",
+     "t": 11.01
+    },
+    {
+     "w": "bijli",
+     "t": 11.31
+    },
+    {
+     "w": "ko",
+     "t": 11.59
+    },
+    {
+     "w": "seedha",
+     "t": 11.72
+    },
+    {
+     "w": "karta",
+     "t": 12.02
+    },
+    {
+     "w": "hai,",
+     "t": 12.3
+    },
+    {
+     "w": "aur",
+     "t": 12.49
+    },
+    {
+     "w": "is",
+     "t": 12.83
+    },
+    {
+     "w": "bade",
+     "t": 12.96
+    },
+    {
+     "w": "capacitor",
+     "t": 13.23
+    },
+    {
+     "w": "mein",
+     "t": 13.77
+    },
+    {
+     "w": "bharta",
+     "t": 13.94
+    },
+    {
+     "w": "hai.",
+     "t": 14.26
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 14.698,
+   "t1": 19.046,
+   "cap": "Phir ek chhota sa switch, use ek second mein hazaaron baar chaalu band karta hai.",
+   "hl": [
+    "switch,",
+    "hazaaron"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Phir",
+     "t": 14.718
+    },
+    {
+     "w": "ek",
+     "t": 14.898
+    },
+    {
+     "w": "chhota",
+     "t": 15.108
+    },
+    {
+     "w": "sa",
+     "t": 15.588
+    },
+    {
+     "w": "switch,",
+     "t": 15.728
+    },
+    {
+     "w": "use",
+     "t": 15.938
+    },
+    {
+     "w": "ek",
+     "t": 16.498
+    },
+    {
+     "w": "second",
+     "t": 16.738
+    },
+    {
+     "w": "mein",
+     "t": 17.058
+    },
+    {
+     "w": "hazaaron",
+     "t": 17.258
+    },
+    {
+     "w": "baar",
+     "t": 17.728
+    },
+    {
+     "w": "chaalu",
+     "t": 17.908
+    },
+    {
+     "w": "band",
+     "t": 18.278
+    },
+    {
+     "w": "karta",
+     "t": 18.458
+    },
+    {
+     "w": "hai.",
+     "t": 18.778
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 19.296,
+   "t1": 22.88,
+   "cap": "Aur ye peela transformer, voltage ko ghataakar paanch volt bana deta hai.",
+   "hl": [
+    "transformer,",
+    "paanch"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 19.316
+    },
+    {
+     "w": "ye",
+     "t": 19.466
+    },
+    {
+     "w": "peela",
+     "t": 19.666
+    },
+    {
+     "w": "transformer,",
+     "t": 19.946
+    },
+    {
+     "w": "voltage",
+     "t": 20.426
+    },
+    {
+     "w": "ko",
+     "t": 21.006
+    },
+    {
+     "w": "ghataakar",
+     "t": 21.136
+    },
+    {
+     "w": "paanch",
+     "t": 21.606
+    },
+    {
+     "w": "volt",
+     "t": 21.926
+    },
+    {
+     "w": "bana",
+     "t": 22.086
+    },
+    {
+     "w": "deta",
+     "t": 22.356
+    },
+    {
+     "w": "hai.",
+     "t": 22.616
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 23.18,
+   "t1": 27.812,
+   "cap": "Par is kaam mein thodi bijli barbaad hoti hai. Aur wahi barbaad bijli, garmi ban jaati hai.",
+   "hl": [],
+   "red": [
+    "barbaad",
+    "garmi"
+   ],
+   "words": [
+    {
+     "w": "Par",
+     "t": 23.19
+    },
+    {
+     "w": "is",
+     "t": 23.34
+    },
+    {
+     "w": "kaam",
+     "t": 23.5
+    },
+    {
+     "w": "mein",
+     "t": 23.67
+    },
+    {
+     "w": "thodi",
+     "t": 23.84
+    },
+    {
+     "w": "bijli",
+     "t": 24.29
+    },
+    {
+     "w": "barbaad",
+     "t": 24.58
+    },
+    {
+     "w": "hoti",
+     "t": 24.9
+    },
+    {
+     "w": "hai.",
+     "t": 25.22
+    },
+    {
+     "w": "Aur",
+     "t": 25.63
+    },
+    {
+     "w": "wahi",
+     "t": 25.78
+    },
+    {
+     "w": "barbaad",
+     "t": 26.05
+    },
+    {
+     "w": "bijli,",
+     "t": 26.37
+    },
+    {
+     "w": "garmi",
+     "t": 26.66
+    },
+    {
+     "w": "ban",
+     "t": 27.12
+    },
+    {
+     "w": "jaati",
+     "t": 27.28
+    },
+    {
+     "w": "hai.",
+     "t": 27.57
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 28.062,
+   "t1": 30.623,
+   "cap": "Fast charging mein taaqat zyada, toh garmi bhi zyada.",
+   "hl": [
+    "Fast"
+   ],
+   "red": [
+    "garmi"
+   ],
+   "words": [
+    {
+     "w": "Fast",
+     "t": 28.122
+    },
+    {
+     "w": "charging",
+     "t": 28.292
+    },
+    {
+     "w": "mein",
+     "t": 28.622
+    },
+    {
+     "w": "taaqat",
+     "t": 28.792
+    },
+    {
+     "w": "zyada,",
+     "t": 29.152
+    },
+    {
+     "w": "toh",
+     "t": 29.442
+    },
+    {
+     "w": "garmi",
+     "t": 29.762
+    },
+    {
+     "w": "bhi",
+     "t": 30.052
+    },
+    {
+     "w": "zyada.",
+     "t": 30.202
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 30.923,
+   "t1": 34.514,
+   "cap": "Halka garam hona normal hai. Par haath na rakh pao, toh turant nikaal do.",
+   "hl": [
+    "normal"
+   ],
+   "red": [
+    "nikaal"
+   ],
+   "words": [
+    {
+     "w": "Halka",
+     "t": 30.973
+    },
+    {
+     "w": "garam",
+     "t": 31.253
+    },
+    {
+     "w": "hona",
+     "t": 31.533
+    },
+    {
+     "w": "normal",
+     "t": 31.803
+    },
+    {
+     "w": "hai.",
+     "t": 32.103
+    },
+    {
+     "w": "Par",
+     "t": 32.433
+    },
+    {
+     "w": "haath",
+     "t": 32.583
+    },
+    {
+     "w": "na",
+     "t": 32.763
+    },
+    {
+     "w": "rakh",
+     "t": 32.903
+    },
+    {
+     "w": "pao,",
+     "t": 33.073
+    },
+    {
+     "w": "toh",
+     "t": 33.273
+    },
+    {
+     "w": "turant",
+     "t": 33.413
+    },
+    {
+     "w": "nikaal",
+     "t": 34.003
+    },
+    {
+     "w": "do.",
+     "t": 34.303
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 34.764,
+   "t1": 38.633,
+   "cap": "Aur saste naqli charger se bacho. Unmein suraksha ke purze kam hote hain.",
+   "hl": [],
+   "red": [
+    "naqli",
+    "kam"
+   ],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 34.774
+    },
+    {
+     "w": "saste",
+     "t": 34.934
+    },
+    {
+     "w": "naqli",
+     "t": 35.234
+    },
+    {
+     "w": "charger",
+     "t": 35.594
+    },
+    {
+     "w": "se",
+     "t": 35.924
+    },
+    {
+     "w": "bacho.",
+     "t": 36.074
+    },
+    {
+     "w": "Unmein",
+     "t": 36.374
+    },
+    {
+     "w": "suraksha",
+     "t": 36.884
+    },
+    {
+     "w": "ke",
+     "t": 37.344
+    },
+    {
+     "w": "purze",
+     "t": 37.484
+    },
+    {
+     "w": "kam",
+     "t": 37.834
+    },
+    {
+     "w": "hote",
+     "t": 38.094
+    },
+    {
+     "w": "hain.",
+     "t": 38.414
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "t0": 38.933,
+   "t1": 42.722,
+   "cap": "Follow aur subscribe karo. Aur batao, tumhara charger kitna garam hota hai?",
+   "hl": [
+    "Follow",
+    "subscribe"
+   ],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 38.983
+    },
+    {
+     "w": "aur",
+     "t": 39.263
+    },
+    {
+     "w": "subscribe",
+     "t": 39.403
+    },
+    {
+     "w": "karo.",
+     "t": 39.823
+    },
+    {
+     "w": "Aur",
+     "t": 40.293
+    },
+    {
+     "w": "batao,",
+     "t": 40.433
+    },
+    {
+     "w": "tumhara",
+     "t": 40.693
+    },
+    {
+     "w": "charger",
+     "t": 41.273
+    },
+    {
+     "w": "kitna",
+     "t": 41.563
+    },
+    {
+     "w": "garam",
+     "t": 41.943
+    },
+    {
+     "w": "hota",
+     "t": 42.213
+    },
+    {
+     "w": "hai?",
+     "t": 42.493
+    }
+   ]
+  }
+ ]
+}

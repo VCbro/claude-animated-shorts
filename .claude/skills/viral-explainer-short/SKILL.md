@@ -45,6 +45,17 @@ For "ye cheez aisi kyun hai / kaise kaam karti hai" topics about an object, when
 - Shot pattern (12 shots, ~50 s): real hook → real "why not more?" → real wrong guess + red stamp → x-ray dive into the
   object → x-ray mechanism close-up → 2-3 x-ray tests (too many / too few) → real answer with 3 pills → real comparison →
   real payoff → end card. Labels stay kit Chip/Pill/Stamp; on real shots give chips the dark `INKBG` background.
+- **Insides must look like the real thing** (creator, 2026-11-11, `videos/charger-garam/`): when the topic is electronics or
+  a machine, model the actual parts in their real colours and real order under a shell that fades from solid to glass
+  (`open` 0→1), on the dark ground with product lighting (`CStage mode="studio"`). Look up the real layout first and
+  write it at the top of the object file. `src/three/Charger.tsx` is the pattern: a PCB canvas texture with traces,
+  named part positions (`AT`), current dots along a path (`flow`, `upto`, path positions `U`), glows for state
+  (`charge`, `sw`, `heat`), a `cheap` variant for asli-vs-naqli, and `WallSetup` for the outside shots.
+  2D helpers in that story.tsx: `Wave` (scope card: AC / DC / chopped) and `HeatWaves`.
+- The creator sends ONE mp3 from ElevenLabs. Its pauses match the script punctuation: list them with
+  `ffmpeg -af silencedetect=n=-35dB:d=0.18`, map sentence ends to lines, set each line's `src`, engine `take`, speed 1.08.
+- `tools/audio.py` prints -14 LUFS but ffmpeg measures the mix about 4 dB hotter: after rendering, remux with
+  `-c:v copy -af volume=-4dB` and check with `ebur128`.
 - Stills cost ~4 s (real) and ~1.5 s (x-ray) each at full size on software GL.
 - No voice yet? `python3 tools/draft_timeline.py` writes an estimated timeline from script.json so the picture can be
   built and checked first. When the creator sends ONE mp3 of the whole script (their ElevenLabs export), convert it to

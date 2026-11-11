@@ -1,0 +1,14 @@
+{"title": "Charger garam kyun hota hai?", "pace": 1.0, "engine": "take", "voice_src": "voice/clean.wav", "speed": 1.08,
+ "lines": [
+  {"id": "L1", "tts": "आपका चार्जर गरम क्यों हो जाता है?", "cap": "Aapka charger garam kyun ho jaata hai?", "red": ["garam"], "gap": 0.0, "src": [[0.0, 1.92]]},
+  {"id": "L2", "tts": "क्या ये ख़राब हो रहा है? नहीं। जवाब इसके अंदर है।", "cap": "Kya ye kharaab ho raha hai? Nahi. Jawab iske andar hai.", "hl": ["andar"], "gap": 0.15, "src": [[2.31, 5.9]]},
+  {"id": "L3", "tts": "दीवार से आती है दो सौ तीस वोल्ट की बिजली। पर आपके फ़ोन को चाहिए सिर्फ़ पाँच वोल्ट।", "cap": "Deewar se aati hai do sau tees volt ki bijli. Par aapke phone ko chahiye sirf paanch volt.", "red": ["tees"], "hl": ["paanch"], "gap": 0.25, "src": [[6.35, 11.67]]},
+  {"id": "L4", "tts": "तो चार्जर पहले बिजली को सीधा करता है, और इस बड़े कैपेसिटर में भरता है।", "cap": "Toh charger pehle bijli ko seedha karta hai, aur is bade capacitor mein bharta hai.", "hl": ["seedha", "capacitor"], "gap": 0.25, "src": [[12.09, 16.42]]},
+  {"id": "L5", "tts": "फिर एक छोटा सा स्विच, उसे एक सेकंड में हज़ारों बार चालू बंद करता है।", "cap": "Phir ek chhota sa switch, use ek second mein hazaaron baar chaalu band karta hai.", "hl": ["switch,", "hazaaron"], "gap": 0.25, "src": [[16.9, 21.51]]},
+  {"id": "L6", "tts": "और ये पीला ट्रांसफ़ॉर्मर, वोल्टेज को घटाकर पाँच वोल्ट बना देता है।", "cap": "Aur ye peela transformer, voltage ko ghataakar paanch volt bana deta hai.", "hl": ["transformer,", "paanch"], "gap": 0.25, "src": [[21.94, 25.79]]},
+  {"id": "L7", "tts": "पर इस काम में थोड़ी बिजली बर्बाद होती है। और वही बर्बाद बिजली, गर्मी बन जाती है।", "cap": "Par is kaam mein thodi bijli barbaad hoti hai. Aur wahi barbaad bijli, garmi ban jaati hai.", "red": ["barbaad", "garmi"], "gap": 0.3, "src": [[26.27, 31.43]]},
+  {"id": "L8", "tts": "फ़ास्ट चार्जिंग में ताक़त ज़्यादा, तो गर्मी भी ज़्यादा।", "cap": "Fast charging mein taaqat zyada, toh garmi bhi zyada.", "hl": ["Fast"], "red": ["garmi"], "gap": 0.25, "src": [[31.9, 34.68]]},
+  {"id": "L9", "tts": "हल्का गरम होना नॉर्मल है। पर हाथ ना रख पाओ, तो तुरंत निकाल दो।", "cap": "Halka garam hona normal hai. Par haath na rakh pao, toh turant nikaal do.", "hl": ["normal"], "red": ["nikaal"], "gap": 0.3, "src": [[35.18, 39.16]]},
+  {"id": "L10", "tts": "और सस्ते नक़ली चार्जर से बचो। उनमें सुरक्षा के पुर्ज़े कम होते हैं।", "cap": "Aur saste naqli charger se bacho. Unmein suraksha ke purze kam hote hain.", "red": ["naqli", "kam"], "gap": 0.25, "src": [[39.56, 43.88]]},
+  {"id": "L11", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम्हारा चार्जर कितना गरम होता है?", "cap": "Follow aur subscribe karo. Aur batao, tumhara charger kitna garam hota hai?", "hl": ["Follow", "subscribe"], "gap": 0.3, "src": [[44.35, 48.68]]}
+ ]}
