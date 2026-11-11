@@ -1,5 +1,4 @@
 import React from "react";
-import "@fontsource/anton/400.css";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { io } from "./anim";
 import { F } from "./theme";

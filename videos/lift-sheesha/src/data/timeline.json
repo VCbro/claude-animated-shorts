@@ -1,0 +1,611 @@
+{
+ "fps": 30,
+ "duration": 48.6,
+ "frames": 1459,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 2.181,
+   "cap": "Lift mein sheesha kyun lagaate hain?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Lift",
+     "t": 0.25
+    },
+    {
+     "w": "mein",
+     "t": 0.447
+    },
+    {
+     "w": "sheesha",
+     "t": 0.644
+    },
+    {
+     "w": "kyun",
+     "t": 1.038
+    },
+    {
+     "w": "lagaate",
+     "t": 1.235
+    },
+    {
+     "w": "hain?",
+     "t": 1.826
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 2.331,
+   "t1": 6.548,
+   "cap": "Baal theek karne ke liye? Nahi. Iske peeche teen badi wajah hain.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Baal",
+     "t": 2.331
+    },
+    {
+     "w": "theek",
+     "t": 2.528
+    },
+    {
+     "w": "karne",
+     "t": 2.725
+    },
+    {
+     "w": "ke",
+     "t": 3.119
+    },
+    {
+     "w": "liye?",
+     "t": 3.316
+    },
+    {
+     "w": "Nahi.",
+     "t": 3.868
+    },
+    {
+     "w": "Iske",
+     "t": 4.42
+    },
+    {
+     "w": "peeche",
+     "t": 4.814
+    },
+    {
+     "w": "teen",
+     "t": 5.208
+    },
+    {
+     "w": "badi",
+     "t": 5.405
+    },
+    {
+     "w": "wajah",
+     "t": 5.799
+    },
+    {
+     "w": "hain.",
+     "t": 6.193
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 6.798,
+   "t1": 10.423,
+   "cap": "Pehli wajah, ghabrahat. Lift ek chhota sa band dabba hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Pehli",
+     "t": 6.798
+    },
+    {
+     "w": "wajah,",
+     "t": 7.192
+    },
+    {
+     "w": "ghabrahat.",
+     "t": 7.744
+    },
+    {
+     "w": "Lift",
+     "t": 8.492
+    },
+    {
+     "w": "ek",
+     "t": 8.689
+    },
+    {
+     "w": "chhota",
+     "t": 8.886
+    },
+    {
+     "w": "sa",
+     "t": 9.281
+    },
+    {
+     "w": "band",
+     "t": 9.478
+    },
+    {
+     "w": "dabba",
+     "t": 9.675
+    },
+    {
+     "w": "hai.",
+     "t": 10.069
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 10.623,
+   "t1": 15.471,
+   "cap": "Sheesha lagte hi wahi jagah dugni badi dikhti hai, aur ghutan kam lagti hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Sheesha",
+     "t": 10.623
+    },
+    {
+     "w": "lagte",
+     "t": 11.017
+    },
+    {
+     "w": "hi",
+     "t": 11.412
+    },
+    {
+     "w": "wahi",
+     "t": 11.609
+    },
+    {
+     "w": "jagah",
+     "t": 12.003
+    },
+    {
+     "w": "dugni",
+     "t": 12.397
+    },
+    {
+     "w": "badi",
+     "t": 12.791
+    },
+    {
+     "w": "dikhti",
+     "t": 13.185
+    },
+    {
+     "w": "hai,",
+     "t": 13.579
+    },
+    {
+     "w": "aur",
+     "t": 13.934
+    },
+    {
+     "w": "ghutan",
+     "t": 14.131
+    },
+    {
+     "w": "kam",
+     "t": 14.525
+    },
+    {
+     "w": "lagti",
+     "t": 14.722
+    },
+    {
+     "w": "hai.",
+     "t": 15.116
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 15.721,
+   "t1": 21.474,
+   "cap": "Doosri wajah, suraksha. Sheeshe mein aap bina mude dekh sakte hain, ki peeche kaun khada hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Doosri",
+     "t": 15.721
+    },
+    {
+     "w": "wajah,",
+     "t": 16.115
+    },
+    {
+     "w": "suraksha.",
+     "t": 16.667
+    },
+    {
+     "w": "Sheeshe",
+     "t": 17.415
+    },
+    {
+     "w": "mein",
+     "t": 17.809
+    },
+    {
+     "w": "aap",
+     "t": 18.006
+    },
+    {
+     "w": "bina",
+     "t": 18.203
+    },
+    {
+     "w": "mude",
+     "t": 18.598
+    },
+    {
+     "w": "dekh",
+     "t": 18.992
+    },
+    {
+     "w": "sakte",
+     "t": 19.189
+    },
+    {
+     "w": "hain,",
+     "t": 19.583
+    },
+    {
+     "w": "ki",
+     "t": 19.937
+    },
+    {
+     "w": "peeche",
+     "t": 20.134
+    },
+    {
+     "w": "kaun",
+     "t": 20.529
+    },
+    {
+     "w": "khada",
+     "t": 20.726
+    },
+    {
+     "w": "hai.",
+     "t": 21.12
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 21.724,
+   "t1": 24.404,
+   "cap": "Teesri aur sabse zaroori wajah, wheelchair.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Teesri",
+     "t": 21.724
+    },
+    {
+     "w": "aur",
+     "t": 22.118
+    },
+    {
+     "w": "sabse",
+     "t": 22.316
+    },
+    {
+     "w": "zaroori",
+     "t": 22.71
+    },
+    {
+     "w": "wajah,",
+     "t": 23.301
+    },
+    {
+     "w": "wheelchair.",
+     "t": 23.852
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 24.604,
+   "t1": 31.58,
+   "cap": "Lift mein wheelchair ghumaane ki jagah nahi hoti. Sheeshe mein peeche dekhkar, wo seedhe ulta bahar nikal aate hain.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Lift",
+     "t": 24.604
+    },
+    {
+     "w": "mein",
+     "t": 24.801
+    },
+    {
+     "w": "wheelchair",
+     "t": 24.998
+    },
+    {
+     "w": "ghumaane",
+     "t": 25.392
+    },
+    {
+     "w": "ki",
+     "t": 25.983
+    },
+    {
+     "w": "jagah",
+     "t": 26.181
+    },
+    {
+     "w": "nahi",
+     "t": 26.575
+    },
+    {
+     "w": "hoti.",
+     "t": 26.969
+    },
+    {
+     "w": "Sheeshe",
+     "t": 27.52
+    },
+    {
+     "w": "mein",
+     "t": 27.915
+    },
+    {
+     "w": "peeche",
+     "t": 28.112
+    },
+    {
+     "w": "dekhkar,",
+     "t": 28.506
+    },
+    {
+     "w": "wo",
+     "t": 29.057
+    },
+    {
+     "w": "seedhe",
+     "t": 29.254
+    },
+    {
+     "w": "ulta",
+     "t": 29.649
+    },
+    {
+     "w": "bahar",
+     "t": 30.043
+    },
+    {
+     "w": "nikal",
+     "t": 30.437
+    },
+    {
+     "w": "aate",
+     "t": 30.831
+    },
+    {
+     "w": "hain.",
+     "t": 31.225
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 31.83,
+   "t1": 36.637,
+   "cap": "Aur ek mazedaar baat. Sheeshe mein khud ko dekhte hue, intezaar chhota lagta hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 31.83
+    },
+    {
+     "w": "ek",
+     "t": 32.027
+    },
+    {
+     "w": "mazedaar",
+     "t": 32.224
+    },
+    {
+     "w": "baat.",
+     "t": 32.815
+    },
+    {
+     "w": "Sheeshe",
+     "t": 33.169
+    },
+    {
+     "w": "mein",
+     "t": 33.564
+    },
+    {
+     "w": "khud",
+     "t": 33.761
+    },
+    {
+     "w": "ko",
+     "t": 33.958
+    },
+    {
+     "w": "dekhte",
+     "t": 34.155
+    },
+    {
+     "w": "hue,",
+     "t": 34.549
+    },
+    {
+     "w": "intezaar",
+     "t": 34.903
+    },
+    {
+     "w": "chhota",
+     "t": 35.495
+    },
+    {
+     "w": "lagta",
+     "t": 35.889
+    },
+    {
+     "w": "hai.",
+     "t": 36.283
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 36.937,
+   "t1": 42.297,
+   "cap": "Toh agli baar lift mein sheesha dikhe, toh yaad rakhna. Ye sajaawat nahi, suraksha hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Toh",
+     "t": 36.937
+    },
+    {
+     "w": "agli",
+     "t": 37.134
+    },
+    {
+     "w": "baar",
+     "t": 37.529
+    },
+    {
+     "w": "lift",
+     "t": 37.726
+    },
+    {
+     "w": "mein",
+     "t": 37.923
+    },
+    {
+     "w": "sheesha",
+     "t": 38.12
+    },
+    {
+     "w": "dikhe,",
+     "t": 38.514
+    },
+    {
+     "w": "toh",
+     "t": 39.066
+    },
+    {
+     "w": "yaad",
+     "t": 39.263
+    },
+    {
+     "w": "rakhna.",
+     "t": 39.46
+    },
+    {
+     "w": "Ye",
+     "t": 40.011
+    },
+    {
+     "w": "sajaawat",
+     "t": 40.208
+    },
+    {
+     "w": "nahi,",
+     "t": 40.8
+    },
+    {
+     "w": "suraksha",
+     "t": 41.351
+    },
+    {
+     "w": "hai.",
+     "t": 41.942
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 42.597,
+   "t1": 47.405,
+   "cap": "Follow aur subscribe karo. Aur batao, tum lift mein sabse pehle kya dekhte ho?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 42.597
+    },
+    {
+     "w": "aur",
+     "t": 42.991
+    },
+    {
+     "w": "subscribe",
+     "t": 43.188
+    },
+    {
+     "w": "karo.",
+     "t": 43.779
+    },
+    {
+     "w": "Aur",
+     "t": 44.331
+    },
+    {
+     "w": "batao,",
+     "t": 44.528
+    },
+    {
+     "w": "tum",
+     "t": 45.08
+    },
+    {
+     "w": "lift",
+     "t": 45.277
+    },
+    {
+     "w": "mein",
+     "t": 45.474
+    },
+    {
+     "w": "sabse",
+     "t": 45.671
+    },
+    {
+     "w": "pehle",
+     "t": 46.065
+    },
+    {
+     "w": "kya",
+     "t": 46.459
+    },
+    {
+     "w": "dekhte",
+     "t": 46.656
+    },
+    {
+     "w": "ho?",
+     "t": 47.05
+    }
+   ]
+  }
+ ]
+}

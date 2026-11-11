@@ -1,0 +1,671 @@
+{
+ "fps": 30,
+ "duration": 51.78,
+ "frames": 1554,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 2.181,
+   "cap": "Gas cylinder laal hi kyun hota hai?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Gas",
+     "t": 0.25
+    },
+    {
+     "w": "cylinder",
+     "t": 0.447
+    },
+    {
+     "w": "laal",
+     "t": 0.841
+    },
+    {
+     "w": "hi",
+     "t": 1.038
+    },
+    {
+     "w": "kyun",
+     "t": 1.235
+    },
+    {
+     "w": "hota",
+     "t": 1.432
+    },
+    {
+     "w": "hai?",
+     "t": 1.826
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 2.331,
+   "t1": 6.548,
+   "cap": "Neela, hara ya peela kyun nahi? Iske peeche poora vigyaan hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Neela,",
+     "t": 2.331
+    },
+    {
+     "w": "hara",
+     "t": 2.883
+    },
+    {
+     "w": "ya",
+     "t": 3.277
+    },
+    {
+     "w": "peela",
+     "t": 3.474
+    },
+    {
+     "w": "kyun",
+     "t": 3.868
+    },
+    {
+     "w": "nahi?",
+     "t": 4.065
+    },
+    {
+     "w": "Iske",
+     "t": 4.617
+    },
+    {
+     "w": "peeche",
+     "t": 5.011
+    },
+    {
+     "w": "poora",
+     "t": 5.405
+    },
+    {
+     "w": "vigyaan",
+     "t": 5.799
+    },
+    {
+     "w": "hai.",
+     "t": 6.193
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 6.798,
+   "t1": 12.0,
+   "cap": "Laal rang ka matlab hai khatra. Andar bhari hai LPG, jo bahut jaldi aag pakadti hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Laal",
+     "t": 6.798
+    },
+    {
+     "w": "rang",
+     "t": 6.995
+    },
+    {
+     "w": "ka",
+     "t": 7.192
+    },
+    {
+     "w": "matlab",
+     "t": 7.389
+    },
+    {
+     "w": "hai",
+     "t": 7.783
+    },
+    {
+     "w": "khatra.",
+     "t": 7.98
+    },
+    {
+     "w": "Andar",
+     "t": 8.532
+    },
+    {
+     "w": "bhari",
+     "t": 8.926
+    },
+    {
+     "w": "hai",
+     "t": 9.32
+    },
+    {
+     "w": "LPG,",
+     "t": 9.517
+    },
+    {
+     "w": "jo",
+     "t": 9.872
+    },
+    {
+     "w": "bahut",
+     "t": 10.069
+    },
+    {
+     "w": "jaldi",
+     "t": 10.463
+    },
+    {
+     "w": "aag",
+     "t": 10.857
+    },
+    {
+     "w": "pakadti",
+     "t": 11.054
+    },
+    {
+     "w": "hai.",
+     "t": 11.645
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 12.25,
+   "t1": 15.166,
+   "cap": "Aur laal rang door se sabse jaldi nazar aata hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 12.25
+    },
+    {
+     "w": "laal",
+     "t": 12.447
+    },
+    {
+     "w": "rang",
+     "t": 12.644
+    },
+    {
+     "w": "door",
+     "t": 12.841
+    },
+    {
+     "w": "se",
+     "t": 13.038
+    },
+    {
+     "w": "sabse",
+     "t": 13.235
+    },
+    {
+     "w": "jaldi",
+     "t": 13.629
+    },
+    {
+     "w": "nazar",
+     "t": 14.023
+    },
+    {
+     "w": "aata",
+     "t": 14.417
+    },
+    {
+     "w": "hai.",
+     "t": 14.811
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 15.416,
+   "t1": 21.997,
+   "cap": "Andar gas nahi, dabaakar banaya gaya taral bhara hota hai. Bahar aate hi wo gas ban jaata hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Andar",
+     "t": 15.416
+    },
+    {
+     "w": "gas",
+     "t": 15.81
+    },
+    {
+     "w": "nahi,",
+     "t": 16.007
+    },
+    {
+     "w": "dabaakar",
+     "t": 16.559
+    },
+    {
+     "w": "banaya",
+     "t": 17.15
+    },
+    {
+     "w": "gaya",
+     "t": 17.741
+    },
+    {
+     "w": "taral",
+     "t": 18.135
+    },
+    {
+     "w": "bhara",
+     "t": 18.529
+    },
+    {
+     "w": "hota",
+     "t": 18.923
+    },
+    {
+     "w": "hai.",
+     "t": 19.317
+    },
+    {
+     "w": "Bahar",
+     "t": 19.672
+    },
+    {
+     "w": "aate",
+     "t": 20.066
+    },
+    {
+     "w": "hi",
+     "t": 20.46
+    },
+    {
+     "w": "wo",
+     "t": 20.657
+    },
+    {
+     "w": "gas",
+     "t": 20.854
+    },
+    {
+     "w": "ban",
+     "t": 21.051
+    },
+    {
+     "w": "jaata",
+     "t": 21.249
+    },
+    {
+     "w": "hai.",
+     "t": 21.643
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 22.247,
+   "t1": 25.124,
+   "cap": "Ek aur raaz. LPG ki apni koi gandh nahi hoti.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Ek",
+     "t": 22.247
+    },
+    {
+     "w": "aur",
+     "t": 22.444
+    },
+    {
+     "w": "raaz.",
+     "t": 22.641
+    },
+    {
+     "w": "LPG",
+     "t": 22.996
+    },
+    {
+     "w": "ki",
+     "t": 23.193
+    },
+    {
+     "w": "apni",
+     "t": 23.39
+    },
+    {
+     "w": "koi",
+     "t": 23.784
+    },
+    {
+     "w": "gandh",
+     "t": 23.981
+    },
+    {
+     "w": "nahi",
+     "t": 24.178
+    },
+    {
+     "w": "hoti.",
+     "t": 24.572
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 25.374,
+   "t1": 32.192,
+   "cap": "Isliye usmein ek tez badbu waala chemical milaya jaata hai, taaki leak hote hi aapko pata chal jaaye.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Isliye",
+     "t": 25.374
+    },
+    {
+     "w": "usmein",
+     "t": 25.965
+    },
+    {
+     "w": "ek",
+     "t": 26.359
+    },
+    {
+     "w": "tez",
+     "t": 26.556
+    },
+    {
+     "w": "badbu",
+     "t": 26.753
+    },
+    {
+     "w": "waala",
+     "t": 27.148
+    },
+    {
+     "w": "chemical",
+     "t": 27.542
+    },
+    {
+     "w": "milaya",
+     "t": 28.133
+    },
+    {
+     "w": "jaata",
+     "t": 28.724
+    },
+    {
+     "w": "hai,",
+     "t": 29.118
+    },
+    {
+     "w": "taaki",
+     "t": 29.473
+    },
+    {
+     "w": "leak",
+     "t": 29.867
+    },
+    {
+     "w": "hote",
+     "t": 30.064
+    },
+    {
+     "w": "hi",
+     "t": 30.458
+    },
+    {
+     "w": "aapko",
+     "t": 30.655
+    },
+    {
+     "w": "pata",
+     "t": 31.049
+    },
+    {
+     "w": "chal",
+     "t": 31.443
+    },
+    {
+     "w": "jaaye.",
+     "t": 31.64
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "t0": 32.442,
+   "t1": 37.486,
+   "cap": "Aur ghar waala cylinder laal, toh dukaan aur hotel waala bada cylinder neela hota hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 32.442
+    },
+    {
+     "w": "ghar",
+     "t": 32.639
+    },
+    {
+     "w": "waala",
+     "t": 32.836
+    },
+    {
+     "w": "cylinder",
+     "t": 33.23
+    },
+    {
+     "w": "laal,",
+     "t": 33.624
+    },
+    {
+     "w": "toh",
+     "t": 33.979
+    },
+    {
+     "w": "dukaan",
+     "t": 34.176
+    },
+    {
+     "w": "aur",
+     "t": 34.57
+    },
+    {
+     "w": "hotel",
+     "t": 34.767
+    },
+    {
+     "w": "waala",
+     "t": 35.161
+    },
+    {
+     "w": "bada",
+     "t": 35.555
+    },
+    {
+     "w": "cylinder",
+     "t": 35.949
+    },
+    {
+     "w": "neela",
+     "t": 36.343
+    },
+    {
+     "w": "hota",
+     "t": 36.737
+    },
+    {
+     "w": "hai.",
+     "t": 37.132
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "t0": 37.786,
+   "t1": 45.077,
+   "cap": "Gas ki badbu aaye, toh maachis ya switch mat chhuo. Khidki kholo, regulator band karo, aur unnees sau chhah par call karo.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Gas",
+     "t": 37.786
+    },
+    {
+     "w": "ki",
+     "t": 37.983
+    },
+    {
+     "w": "badbu",
+     "t": 38.18
+    },
+    {
+     "w": "aaye,",
+     "t": 38.574
+    },
+    {
+     "w": "toh",
+     "t": 39.126
+    },
+    {
+     "w": "maachis",
+     "t": 39.323
+    },
+    {
+     "w": "ya",
+     "t": 39.717
+    },
+    {
+     "w": "switch",
+     "t": 39.914
+    },
+    {
+     "w": "mat",
+     "t": 40.111
+    },
+    {
+     "w": "chhuo.",
+     "t": 40.308
+    },
+    {
+     "w": "Khidki",
+     "t": 40.663
+    },
+    {
+     "w": "kholo,",
+     "t": 41.057
+    },
+    {
+     "w": "regulator",
+     "t": 41.609
+    },
+    {
+     "w": "band",
+     "t": 42.397
+    },
+    {
+     "w": "karo,",
+     "t": 42.594
+    },
+    {
+     "w": "aur",
+     "t": 43.146
+    },
+    {
+     "w": "unnees",
+     "t": 43.343
+    },
+    {
+     "w": "sau",
+     "t": 43.737
+    },
+    {
+     "w": "chhah",
+     "t": 43.934
+    },
+    {
+     "w": "par",
+     "t": 44.131
+    },
+    {
+     "w": "call",
+     "t": 44.328
+    },
+    {
+     "w": "karo.",
+     "t": 44.525
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "t0": 45.377,
+   "t1": 50.579,
+   "cap": "Follow aur subscribe karo. Aur batao, tumhare ghar ka cylinder kitne din chalta hai?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Follow",
+     "t": 45.377
+    },
+    {
+     "w": "aur",
+     "t": 45.771
+    },
+    {
+     "w": "subscribe",
+     "t": 45.968
+    },
+    {
+     "w": "karo.",
+     "t": 46.559
+    },
+    {
+     "w": "Aur",
+     "t": 47.111
+    },
+    {
+     "w": "batao,",
+     "t": 47.308
+    },
+    {
+     "w": "tumhare",
+     "t": 47.86
+    },
+    {
+     "w": "ghar",
+     "t": 48.451
+    },
+    {
+     "w": "ka",
+     "t": 48.648
+    },
+    {
+     "w": "cylinder",
+     "t": 48.845
+    },
+    {
+     "w": "kitne",
+     "t": 49.239
+    },
+    {
+     "w": "din",
+     "t": 49.633
+    },
+    {
+     "w": "chalta",
+     "t": 49.83
+    },
+    {
+     "w": "hai?",
+     "t": 50.224
+    }
+   ]
+  }
+ ]
+}

@@ -92,6 +92,16 @@ amber key + teal rim, fog falling off within 3-5 units, glowing current; hero sh
 A full reel mixes both: 13 for the first 2-3 shots, 14 for the middle, 13 for the advice and close.
 Samples: `videos/charger-garam/src/Cine.tsx` (4 shots × 4 s; `npx remotion render src/index.ts Cine out/cine.mp4`).
 
+Cinematic reels so far: `videos/cylinder-lal/` (kitchen at night + hero/cutaway cylinder, gas and odourant as sprite
+clouds) and `videos/lift-sheesha/` (lift cabin with a real planar-reflection mirror via three's `Reflector`, a landing
+seen through the doors, plain white mannequin `Figure`s, a `Wheelchair`). Lessons:
+- Inside a small room, put the camera OUTSIDE looking in through an opening; a camera inside sees only one wall.
+- A mirror only reads as a mirror when something recognisable is reflected: a lit space behind the camera and a figure
+  seen from the back whose front shows in the glass.
+- People are plain mannequins (one pale colour, no face). Never try for a realistic human with primitives.
+- Fonts' css imports live in `src/fonts.ts` only; a css import inside the kit breaks `tools/cues.mjs`.
+- CTA shot = `CineTitle ["Follow +", "Subscribe"]` + a red handle pill + the question as `CineLabel` (no phone end card).
+
 Limits to tell the creator: realistic people and animals (patients, a doctor, a dog) cannot be built from three.js
 primitives. Those shots need generated footage (the Higgsfield connector, which spends the creator's credits: ask
 first) or must be told with props, silhouettes and hands-free framing instead.

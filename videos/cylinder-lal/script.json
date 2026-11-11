@@ -1,0 +1,13 @@
+{"title": "Cylinder laal hi kyun hota hai?", "pace": 1.0, "engine": "take", "voice_src": "voice/clean.wav", "speed": 1.08,
+ "lines": [
+  {"id": "L1", "tts": "गैस सिलेंडर लाल ही क्यों होता है?", "cap": "Gas cylinder laal hi kyun hota hai?", "gap": 0.0},
+  {"id": "L2", "tts": "नीला, हरा या पीला क्यों नहीं? इसके पीछे पूरा विज्ञान है।", "cap": "Neela, hara ya peela kyun nahi? Iske peeche poora vigyaan hai.", "gap": 0.15},
+  {"id": "L3", "tts": "लाल रंग का मतलब है ख़तरा। अंदर भरी है एल पी जी, जो बहुत जल्दी आग पकड़ती है।", "cap": "Laal rang ka matlab hai khatra. Andar bhari hai LPG, jo bahut jaldi aag pakadti hai.", "gap": 0.25},
+  {"id": "L4", "tts": "और लाल रंग दूर से सबसे जल्दी नज़र आता है।", "cap": "Aur laal rang door se sabse jaldi nazar aata hai.", "gap": 0.25},
+  {"id": "L5", "tts": "अंदर गैस नहीं, दबाकर बनाया गया तरल भरा होता है। बाहर आते ही वो गैस बन जाता है।", "cap": "Andar gas nahi, dabaakar banaya gaya taral bhara hota hai. Bahar aate hi wo gas ban jaata hai.", "gap": 0.25},
+  {"id": "L6", "tts": "एक और राज़। एल पी जी की अपनी कोई गंध नहीं होती।", "cap": "Ek aur raaz. LPG ki apni koi gandh nahi hoti.", "gap": 0.25},
+  {"id": "L7", "tts": "इसलिए उसमें एक तेज़ बदबू वाला केमिकल मिलाया जाता है, ताकि लीक होते ही आपको पता चल जाए।", "cap": "Isliye usmein ek tez badbu waala chemical milaya jaata hai, taaki leak hote hi aapko pata chal jaaye.", "gap": 0.25},
+  {"id": "L8", "tts": "और घर वाला सिलेंडर लाल, तो दुकान और होटल वाला बड़ा सिलेंडर नीला होता है।", "cap": "Aur ghar waala cylinder laal, toh dukaan aur hotel waala bada cylinder neela hota hai.", "gap": 0.25},
+  {"id": "L9", "tts": "गैस की बदबू आए, तो माचिस या स्विच मत छुओ। खिड़की खोलो, रेगुलेटर बंद करो, और उन्नीस सौ छह पर कॉल करो।", "cap": "Gas ki badbu aaye, toh maachis ya switch mat chhuo. Khidki kholo, regulator band karo, aur unnees sau chhah par call karo.", "gap": 0.3},
+  {"id": "L10", "tts": "फ़ॉलो और सब्सक्राइब करो। और बताओ, तुम्हारे घर का सिलेंडर कितने दिन चलता है?", "cap": "Follow aur subscribe karo. Aur batao, tumhare ghar ka cylinder kitne din chalta hai?", "gap": 0.3}
+ ]}
