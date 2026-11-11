@@ -66,6 +66,36 @@ For "ye cheez aisi kyun hai / kaise kaam karti hai" topics about an object, when
   built and checked first. When the creator sends ONE mp3 of the whole script (their ElevenLabs export), convert it to
   `voice/clean.wav` and use the `take` engine below.
 
+## Styles 13 and 14: cinematic 3D (creator's request, 2026-11-11)
+The creator showed two reference reels (a dark cinematic medical-explainer look) and asked for that look as styles 13
+and 14: "ye topic, 13 number par banao". The references were studied for technique only and are not stored. Use the
+look and the grammar below with our own topic, script, shots and handle; never reuse their lines, shot ideas or name.
+
+Shared grammar (both styles), all in `src/kit/Cine.tsx` + `src/three/CineStage.tsx`:
+- Picture: low-key 3D, one key light + one coloured rim + practical point lights, fog for depth, slow push-in on every
+  shot (`CineStage`, no default lights). Cut every 2-3 s (measured: ~43 cuts in 116 s and ~35 in 78 s).
+- Grade: `CineGrade tone=teal|red|amber` = split-tone tint + heavy vignette + top/bottom falloff + animated grain.
+  Palette: near-black, teal-green shadows, amber highlights, one red accent for the danger/subject.
+- Type: `CineTitle` (Anton caps, off-white `#EFE7D6` or red `#E4503A`, short red underline, top of frame, 1-2 lines,
+  2-5 words), `CineLabel` (small letter-spaced typewriter caps on a dark or red box, low in the frame), `CineHandle`
+  (our handle, tiny, top centre). No chips/pills/HUD from the lime kit in these styles. Language: Hinglish caps.
+- English-style one-idea titles per shot: the title is the thought, the label is the fact.
+
+**13 · Cinematic Story 3D**: real places and props tell the story: a room at night, a desk, a door, a building, an
+object in use. Light through blinds (`BlindsLight`), a glowing practical (phone, bulb, the hot subject), deep shadows.
+Use for hooks, "ghar me kya hota hai" beats, do/don't advice and the ending.
+
+**14 · Cinematic Macro 3D**: inside the object, shot like a macro lens: camera low and close among the real parts,
+amber key + teal rim, fog falling off within 3-5 units, glowing current; hero shots of one glossy object in front of
+`DotWall` (exploded view, turning slowly); info on in-world screens. Use for "andar kya hota hai" and comparisons.
+
+A full reel mixes both: 13 for the first 2-3 shots, 14 for the middle, 13 for the advice and close.
+Samples: `videos/charger-garam/src/Cine.tsx` (4 shots × 4 s; `npx remotion render src/index.ts Cine out/cine.mp4`).
+
+Limits to tell the creator: realistic people and animals (patients, a doctor, a dog) cannot be built from three.js
+primitives. Those shots need generated footage (the Higgsfield connector, which spends the creator's credits: ask
+first) or must be told with props, silhouettes and hands-free framing instead.
+
 ## Pipeline
 1. **Topic → facts → SCRIPT.md.** Pick a trending, money- or safety-relevant topic in India (scams, rights, hidden
    charges, phone or UPI tricks, govt services). Get 3-6 verified facts with sources.
@@ -140,6 +170,7 @@ For "ye cheez aisi kyun hai / kaise kaam karti hai" topics about an object, when
 | `EndCard`, `Poll` | Follow → Following ✓, yes/no comment bait |
 | `Airliner3D inflate stress round shake`, `SkinPanel3D round heat lines crack split`, `Clouds3D` (three/Plane.tsx) | our own generic jet (pivot at centre, frame it from ~9-10 units away for vertical), fuselage skin close-up with a live stress heat-map, flowing stress lines, a growing crack and a tear-apart with debris |
 | `Stage look=real/xray/toon`, `Fan`, `Air`, `RealRoom`, `Room` (three/Fan.tsx) | outside/inside 3D: one object in three looks with a moving camera; copy it for a new object |
+| `CineStage`, `BlindsLight` (three/CineStage.tsx), `CineTitle`, `CineLabel`, `CineHandle`, `CineGrade`, `DotWall` (kit/Cine.tsx) | styles 13/14: cinematic low-key 3D with film grade and Anton titles |
 | `Studio3D` + `Phone3D`, `QrStand`, `Dispenser3D`, `Table`, `useCanvasTex`, `drawQR` | real 3D product shots (three.js PBR, transparent canvas over Bokeh) |
 
 To add a new 3D object (a petrol dispenser, ATM, SIM card, gas cylinder, electricity meter), build it in `src/three/` from

@@ -1,4 +1,31 @@
-{"name":"viral-explainer-short","private":true,"type":"module",
- "scripts":{"studio":"remotion studio src/index.ts","stills":"node tools/stills.mjs","render":"bash tools/render.sh"},
- "dependencies":{"@fontsource/inter":"5.2.5","@fontsource/jetbrains-mono":"5.2.5","@react-three/fiber":"9.1.2","@remotion/cli":"4.0.540","@remotion/renderer":"4.0.540","@remotion/bundler":"4.0.540","@remotion/three":"4.0.540","react":"19.1.0","react-dom":"19.1.0","remotion":"4.0.540","three":"0.171.0"},
- "devDependencies":{"@types/react":"19.1.2","@types/three":"0.171.0","typescript":"5.8.3","world-atlas":"2.0.2","topojson-client":"3.1.0"}}
+{
+ "name": "viral-explainer-short",
+ "private": true,
+ "type": "module",
+ "scripts": {
+  "studio": "remotion studio src/index.ts",
+  "stills": "node tools/stills.mjs",
+  "render": "bash tools/render.sh"
+ },
+ "dependencies": {
+  "@fontsource/inter": "5.2.5",
+  "@fontsource/jetbrains-mono": "5.2.5",
+  "@react-three/fiber": "9.1.2",
+  "@remotion/cli": "4.0.540",
+  "@remotion/renderer": "4.0.540",
+  "@remotion/bundler": "4.0.540",
+  "@remotion/three": "4.0.540",
+  "react": "19.1.0",
+  "react-dom": "19.1.0",
+  "remotion": "4.0.540",
+  "three": "0.171.0",
+  "@fontsource/anton": "5.2.5"
+ },
+ "devDependencies": {
+  "@types/react": "19.1.2",
+  "@types/three": "0.171.0",
+  "typescript": "5.8.3",
+  "world-atlas": "2.0.2",
+  "topojson-client": "3.1.0"
+ }
+}
