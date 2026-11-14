@@ -73,8 +73,13 @@ const S2: React.FC<SceneP> = ({ o, d }) => {
   </Black>;
 };
 // 3 ── A B C D = the four quarters
-const S3: React.FC<SceneP> = ({ o }) => (
-  <Black><DotWall color="#7A2A20" bg="#120605" />
+const S3: React.FC<SceneP> = ({ o, d }) => (
+  <Black bg="#120605">
+    {/* keeps moving behind the list: a slow orbit over the collar and its code */}
+    <CineStage dur={d} from={camAt(1.9, 3.4)} to={[Math.cos(PHI + 0.9) * 1.6, 3.2, Math.sin(PHI + 0.9) * 1.6]} lookAt={[0, 2.3, 0]} fov={40} exposure={1.4} env={0.5} shadows={false}>
+      <HeroLights rim="#FF3B1F" /><GasCylinder code="A-26" mark={0.7} />
+    </CineStage>
+    <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,3,3,.88) 0%, rgba(10,3,3,.6) 60%, rgba(10,3,3,0) 82%)" }} />
     <CineGrade tone="red" vignette={0.7} /><CineHandle text={H_} />
     <CineTitle at={0} lines={["Akshar = mahina"]} size={104} y={200} />
     <Row at={G(o, hit("L3", "A"))} y={480} k="A" v="JAN – MARCH" hot />
