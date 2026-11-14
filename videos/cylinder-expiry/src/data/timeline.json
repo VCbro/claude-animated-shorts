@@ -1,0 +1,477 @@
+{
+ "fps": 30,
+ "duration": 38.23,
+ "frames": 1147,
+ "lines": [
+  {
+   "id": "L1",
+   "t0": 0.25,
+   "t1": 3.915,
+   "cap": "Ruko! Tumhare cylinder ki taareekh nikal toh nahi gayi?",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Ruko!",
+     "t": 0.25
+    },
+    {
+     "w": "Tumhare",
+     "t": 0.802
+    },
+    {
+     "w": "cylinder",
+     "t": 1.393
+    },
+    {
+     "w": "ki",
+     "t": 1.787
+    },
+    {
+     "w": "taareekh",
+     "t": 1.984
+    },
+    {
+     "w": "nikal",
+     "t": 2.378
+    },
+    {
+     "w": "toh",
+     "t": 2.772
+    },
+    {
+     "w": "nahi",
+     "t": 2.969
+    },
+    {
+     "w": "gayi?",
+     "t": 3.363
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "t0": 4.065,
+   "t1": 10.567,
+   "cap": "Cylinder ke upar, in teen pattiyon mein se ek ke andar, ek code likha hota hai. Jaise, A chhabbees.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Cylinder",
+     "t": 4.065
+    },
+    {
+     "w": "ke",
+     "t": 4.459
+    },
+    {
+     "w": "upar,",
+     "t": 4.656
+    },
+    {
+     "w": "in",
+     "t": 5.208
+    },
+    {
+     "w": "teen",
+     "t": 5.405
+    },
+    {
+     "w": "pattiyon",
+     "t": 5.602
+    },
+    {
+     "w": "mein",
+     "t": 6.193
+    },
+    {
+     "w": "se",
+     "t": 6.39
+    },
+    {
+     "w": "ek",
+     "t": 6.587
+    },
+    {
+     "w": "ke",
+     "t": 6.784
+    },
+    {
+     "w": "andar,",
+     "t": 6.981
+    },
+    {
+     "w": "ek",
+     "t": 7.533
+    },
+    {
+     "w": "code",
+     "t": 7.73
+    },
+    {
+     "w": "likha",
+     "t": 8.124
+    },
+    {
+     "w": "hota",
+     "t": 8.518
+    },
+    {
+     "w": "hai.",
+     "t": 8.912
+    },
+    {
+     "w": "Jaise,",
+     "t": 9.267
+    },
+    {
+     "w": "A",
+     "t": 9.819
+    },
+    {
+     "w": "chhabbees.",
+     "t": 10.016
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "t0": 10.767,
+   "t1": 17.191,
+   "cap": "A matlab January se March. B, April se June. C, July se September. D, October se December.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "A",
+     "t": 10.767
+    },
+    {
+     "w": "matlab",
+     "t": 10.965
+    },
+    {
+     "w": "January",
+     "t": 11.359
+    },
+    {
+     "w": "se",
+     "t": 11.753
+    },
+    {
+     "w": "March.",
+     "t": 11.95
+    },
+    {
+     "w": "B,",
+     "t": 12.304
+    },
+    {
+     "w": "April",
+     "t": 12.659
+    },
+    {
+     "w": "se",
+     "t": 13.053
+    },
+    {
+     "w": "June.",
+     "t": 13.25
+    },
+    {
+     "w": "C,",
+     "t": 13.802
+    },
+    {
+     "w": "July",
+     "t": 14.157
+    },
+    {
+     "w": "se",
+     "t": 14.354
+    },
+    {
+     "w": "September.",
+     "t": 14.551
+    },
+    {
+     "w": "D,",
+     "t": 15.3
+    },
+    {
+     "w": "October",
+     "t": 15.654
+    },
+    {
+     "w": "se",
+     "t": 16.245
+    },
+    {
+     "w": "December.",
+     "t": 16.442
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "t0": 17.391,
+   "t1": 22.357,
+   "cap": "Aur number, saal bataata hai. Yaani A chhabbees, matlab March do hazaar chhabbees tak.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Aur",
+     "t": 17.391
+    },
+    {
+     "w": "number,",
+     "t": 17.588
+    },
+    {
+     "w": "saal",
+     "t": 18.14
+    },
+    {
+     "w": "bataata",
+     "t": 18.337
+    },
+    {
+     "w": "hai.",
+     "t": 18.928
+    },
+    {
+     "w": "Yaani",
+     "t": 19.283
+    },
+    {
+     "w": "A",
+     "t": 19.677
+    },
+    {
+     "w": "chhabbees,",
+     "t": 19.874
+    },
+    {
+     "w": "matlab",
+     "t": 20.426
+    },
+    {
+     "w": "March",
+     "t": 20.82
+    },
+    {
+     "w": "do",
+     "t": 21.017
+    },
+    {
+     "w": "hazaar",
+     "t": 21.214
+    },
+    {
+     "w": "chhabbees",
+     "t": 21.608
+    },
+    {
+     "w": "tak.",
+     "t": 22.002
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "t0": 22.557,
+   "t1": 27.956,
+   "cap": "Ye gas ki expiry nahi hai. Ye wo taareekh hai, jab tak cylinder ki jaanch honi zaroori hai.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Ye",
+     "t": 22.557
+    },
+    {
+     "w": "gas",
+     "t": 22.754
+    },
+    {
+     "w": "ki",
+     "t": 22.951
+    },
+    {
+     "w": "expiry",
+     "t": 23.148
+    },
+    {
+     "w": "nahi",
+     "t": 23.542
+    },
+    {
+     "w": "hai.",
+     "t": 23.936
+    },
+    {
+     "w": "Ye",
+     "t": 24.291
+    },
+    {
+     "w": "wo",
+     "t": 24.488
+    },
+    {
+     "w": "taareekh",
+     "t": 24.685
+    },
+    {
+     "w": "hai,",
+     "t": 25.079
+    },
+    {
+     "w": "jab",
+     "t": 25.433
+    },
+    {
+     "w": "tak",
+     "t": 25.631
+    },
+    {
+     "w": "cylinder",
+     "t": 25.828
+    },
+    {
+     "w": "ki",
+     "t": 26.222
+    },
+    {
+     "w": "jaanch",
+     "t": 26.419
+    },
+    {
+     "w": "honi",
+     "t": 26.616
+    },
+    {
+     "w": "zaroori",
+     "t": 27.01
+    },
+    {
+     "w": "hai.",
+     "t": 27.601
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "t0": 28.156,
+   "t1": 32.964,
+   "cap": "Taareekh nikal chuki ho, toh cylinder mat lo. Delivery waale se doosra maango.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Taareekh",
+     "t": 28.156
+    },
+    {
+     "w": "nikal",
+     "t": 28.55
+    },
+    {
+     "w": "chuki",
+     "t": 28.944
+    },
+    {
+     "w": "ho,",
+     "t": 29.338
+    },
+    {
+     "w": "toh",
+     "t": 29.693
+    },
+    {
+     "w": "cylinder",
+     "t": 29.89
+    },
+    {
+     "w": "mat",
+     "t": 30.284
+    },
+    {
+     "w": "lo.",
+     "t": 30.481
+    },
+    {
+     "w": "Delivery",
+     "t": 30.835
+    },
+    {
+     "w": "waale",
+     "t": 31.427
+    },
+    {
+     "w": "se",
+     "t": 31.821
+    },
+    {
+     "w": "doosra",
+     "t": 32.018
+    },
+    {
+     "w": "maango.",
+     "t": 32.412
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "t0": 33.164,
+   "t1": 37.026,
+   "cap": "Abhi jaakar apna cylinder dekho, aur code comment mein likho.",
+   "hl": [],
+   "red": [],
+   "words": [
+    {
+     "w": "Abhi",
+     "t": 33.164
+    },
+    {
+     "w": "jaakar",
+     "t": 33.558
+    },
+    {
+     "w": "apna",
+     "t": 33.952
+    },
+    {
+     "w": "cylinder",
+     "t": 34.346
+    },
+    {
+     "w": "dekho,",
+     "t": 34.74
+    },
+    {
+     "w": "aur",
+     "t": 35.292
+    },
+    {
+     "w": "code",
+     "t": 35.489
+    },
+    {
+     "w": "comment",
+     "t": 35.883
+    },
+    {
+     "w": "mein",
+     "t": 36.277
+    },
+    {
+     "w": "likho.",
+     "t": 36.474
+    }
+   ]
+  }
+ ]
+}

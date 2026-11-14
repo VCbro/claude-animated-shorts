@@ -6,11 +6,14 @@ import * as THREE from "three";
  * Indian LPG cylinder, built to the real silhouette: domed steel body with a weld seam, foot ring, three-stay collar
  * (handle ring) and a brass valve; optional regulator + orange hose. Stands on y=0, about 2.05 units tall, r≈0.62.
  * cut=true slices the front half away to show the liquid inside (LPG is stored as a liquid under pressure).
+ * code: test-due code painted inside one stay ("A-26") · mark: 0..1 highlight ring around it
  * level: liquid height 0..1 · vapour: 0..1 gas leaving the valve · stink: 0..1 turns that gas yellow-green (odourant)
  */
 type V3 = [number, number, number];
 const BODY = new THREE.LatheGeometry([[0, 0.12], [0.3, 0.13], [0.5, 0.2], [0.6, 0.34], [0.62, 0.5], [0.62, 1.3], [0.6, 1.46], [0.5, 1.6], [0.3, 1.69], [0.12, 1.72], [0, 1.72]].map(([r, y]) => new THREE.Vector2(r, y)), 64);
 const INNER = new THREE.LatheGeometry([[0, 0.15], [0.3, 0.16], [0.48, 0.23], [0.575, 0.36], [0.595, 0.5], [0.595, 1.3], [0.575, 1.44], [0.48, 1.57], [0.3, 1.66], [0, 1.69]].map(([r, y]) => new THREE.Vector2(r, y)), 64);
+/** Angle (rad) of the stay that carries the code; its inner face looks back at the valve. */
+export const STAY0 = 0.5;
 const CUT = [new THREE.Plane(new THREE.Vector3(0, 0, -1), 0)];
 
 const useTex = () => useMemo(() => {
@@ -25,10 +28,16 @@ const useTex = () => useMemo(() => {
   return { halo, wear };
 }, []);
 
-export const GasCylinder: React.FC<{ color?: string; position?: V3; rotation?: V3; scale?: number | V3; cut?: boolean; level?: number; regulator?: boolean; vapour?: number; stink?: number; glow?: number }> =
-  ({ color = "#C4161C", position, rotation, scale, cut = false, level = 0.72, regulator = false, vapour = 0, stink = 0, glow = 0 }) => {
+export const GasCylinder: React.FC<{ color?: string; position?: V3; rotation?: V3; scale?: number | V3; cut?: boolean; level?: number; regulator?: boolean; vapour?: number; stink?: number; glow?: number; code?: string; mark?: number; markColor?: string }> =
+  ({ color = "#C4161C", position, rotation, scale, cut = false, level = 0.72, regulator = false, vapour = 0, stink = 0, glow = 0, code, mark = 0, markColor = "#C4F23C" }) => {
     const f = useCurrentFrame();
     const { halo, wear } = useTex();
+    const codeTex = useMemo(() => {
+      if (!code) return null;
+      const c = document.createElement("canvas"); c.width = 400; c.height = 260; const g = c.getContext("2d")!;
+      g.fillStyle = "#F4EFE2"; g.font = "900 150px Arial, Helvetica, sans-serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(code, 200, 138);
+      const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+    }, [code]);
     const hose = useMemo(() => new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(0.2, 2.02, 0), new THREE.Vector3(0.55, 2.05, 0.05), new THREE.Vector3(0.9, 2.4, 0.1), new THREE.Vector3(1.3, 3.0, -0.2), new THREE.Vector3(1.7, 3.05, -0.5)]), 50, 0.035, 10), []);
     const paint = (extra = {}) => <meshPhysicalMaterial color={color} map={wear} roughness={0.34} metalness={0.25} clearcoat={0.7} clearcoatRoughness={0.3} side={cut ? THREE.DoubleSide : THREE.FrontSide} clippingPlanes={cut ? CUT : []} emissive={color} emissiveIntensity={glow * 0.5} {...extra} />;
     const ly = 0.2 + level * 1.25;
@@ -41,7 +50,12 @@ export const GasCylinder: React.FC<{ color?: string; position?: V3; rotation?: V
         <mesh position={[0, 0.09, 0]} castShadow><cylinderGeometry args={[0.5, 0.5, 0.18, 48, 1, true]} />{paint({ side: THREE.DoubleSide })}</mesh>
         <mesh position={[0, 0.005, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.5, 0.018, 8, 48]} />{paint()}</mesh>
         {/* collar: three stays + handle ring */}
-        {[0, 1, 2].map((i) => <mesh key={i} position={[Math.cos((i * 2 * Math.PI) / 3 + 0.5) * 0.34, 1.76, Math.sin((i * 2 * Math.PI) / 3 + 0.5) * 0.34]} rotation={[0, -((i * 2 * Math.PI) / 3 + 0.5), 0]} castShadow><boxGeometry args={[0.03, 0.26, 0.16]} />{paint()}</mesh>)}
+        {[0, 1, 2].map((i) => <group key={i} position={[Math.cos((i * 2 * Math.PI) / 3 + STAY0) * 0.34, 1.76, Math.sin((i * 2 * Math.PI) / 3 + STAY0) * 0.34]} rotation={[0, -((i * 2 * Math.PI) / 3 + STAY0), 0]}>
+          <mesh castShadow><boxGeometry args={[0.03, 0.26, 0.22]} />{paint()}</mesh>
+          {/* test-due code, painted on the inner side of one stay (the side facing the valve) */}
+          {i === 0 && codeTex && <mesh position={[-0.0165, 0.0, 0]} rotation={[0, -Math.PI / 2, 0]}><planeGeometry args={[0.2, 0.13]} /><meshBasicMaterial map={codeTex} transparent toneMapped={false} opacity={0.95} /></mesh>}
+          {i === 0 && codeTex && mark > 0.02 && <mesh position={[-0.02, 0, 0]} rotation={[0, -Math.PI / 2, 0]}><ringGeometry args={[0.13 + (1 - mark) * 0.2, 0.145 + (1 - mark) * 0.2, 48]} /><meshBasicMaterial color={markColor} toneMapped={false} transparent opacity={mark} side={THREE.DoubleSide} /></mesh>}
+        </group>)}
         <mesh position={[0, 1.95, 0]} castShadow><cylinderGeometry args={[0.36, 0.36, 0.16, 48, 1, true]} />{paint({ side: THREE.DoubleSide })}</mesh>
         <mesh position={[0, 2.03, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.36, 0.022, 8, 48]} />{paint()}</mesh>
         {/* brass valve */}
