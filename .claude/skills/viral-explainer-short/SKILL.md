@@ -8,6 +8,26 @@ description: Make a 45-80 s vertical Hinglish "dark 3D explainer" reel for Insta
 Read `references/STYLE_BIBLE.md` first: the measured format, the 9-beat script and the picture vocabulary.
 The project template is in `template/` (copy it to `videos/<name>/`, then `npm install`). It is the same code as the proven demo `videos/qr-scam/` in the repo (33 s, "QR scan karte hi paise gaye"). Second reel: `videos/upi-galti-se/` (50 s, fake-credit SMS scam, Kokoro voice). Third: `videos/petrol-density/` (56 s, density + filter paper, 3D dispenser). Fourth: `videos/battery-80/` (69 s, the creator's own voice, karaoke captions). Fifth: `videos/plane-window/` (58 s, own voice at speed 1.22, 8 three.js shots).
 
+## Reach rules v2 (2026-11-14, after 9 public shorts all stalled at 500-1,700 views; see `CHANNEL_LOG.md`)
+Better pictures did not raise views, so the next changes are to topic, hook and length. Check `CHANNEL_LOG.md` first
+and add a dated block with the current numbers whenever you look at the channel.
+- **Topic must pass the stakes test.** Pick it only if the viewer loses or risks something by not knowing, or can act on
+  it today: danger at home, money, a thing to check right now ("abhi check karo"), or a belief that is wrong.
+  "X aisa kyun hota hai?" about a harmless object (red cylinder, warm charger, lift mirror) is mild curiosity: skip it.
+- **Hook = the stake in six words or fewer, on screen in frame 1, while something already moves.** No slow push-in on a
+  still object and no dark empty frame. Say the consequence first ("Ye cylinder expire ho chuka hai?"), then the question.
+- **Length 22-32 s**: 7-8 voice lines, about 70 words, one idea per line, no "ek aur raaz" side facts. A shorter reel
+  that is watched to the end beats a 45 s one that is swiped at 20 s.
+- **End on the action or a loop**, not a recap: the last line tells the viewer what to check or do, then one question
+  for comments. Keep "Follow aur subscribe karo" to the final 2 seconds.
+- **First frame bright enough to read in the feed.** Styles 13/14 are dark: open on the brightest, most colourful shot
+  and keep the title large; use the dark shots for the middle.
+- **Reuse models for series.** A second and third short on an object that already exists (cylinder, lift, charger, fan)
+  costs a script and shots only, and a series gives viewers a reason to open the channel.
+- Hashtags: `#shorts` plus 3-5 on-topic ones. Never unrelated tags.
+- After each upload ask the creator for two numbers from YouTube Studio at 48 hours: "Viewed vs swiped away" and
+  average view duration. Log them. Topics and hooks are judged on those, not on the render.
+
 ## Hard rules
 - **2D flat-illustration by default** (creator's request, 2026-11-06; proven on `videos/kila-raaz/`). Lean recipe, low token cost:
   1. ONE topic file `src/scenes/<Topic>.tsx` with 4-6 flat SVG props (thick ink outline `ink`, palette `P` from `kit/Flat2D.tsx`),
