@@ -10,7 +10,10 @@ from scipy.signal import butter, sosfilt, resample_poly
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = 48000
-V = json.load(open(f"{ROOT}/voice/lines.json"))
+LANG = os.environ.get("VLANG", "en")
+VDIR = "voice_hi" if LANG == "hi" else "voice"
+SUF = "_hi" if LANG == "hi" else ""
+V = json.load(open(f"{ROOT}/{VDIR}/lines.json"))
 LINE = {l["id"]: l for l in V["lines"]}
 END = V["duration"] + 1.4
 N = int(round(END * SR))
@@ -20,6 +23,7 @@ rng = np.random.default_rng(7)
 def T(i): return LINE[i]["start"]
 def norm(s): return re.sub(r"[^a-z']", "", s.lower())
 def wt(i, w, nth=0):
+    if w in LINE[i].get("cues", {}): return LINE[i]["cues"][w]
     ws = [x for x in LINE[i]["words"] if norm(x["w"]) == norm(w)]
     return ws[min(nth, len(ws) - 1)]["t"]
 
@@ -190,7 +194,7 @@ tank_at = tOn + 0.5 + 0  # front reaches the tank ~3.9 s; a splash there
 both(lp(rng.standard_normal(int(0.8 * SR)), 2500) * env(int(0.8 * SR), 0.02, 0.25), 3.85, 0.25)
 
 # ----------------------------------------------------------------------------- voice + mix
-v, vsr = sf.read(f"{ROOT}/voice/voice.wav", dtype="float32")
+v, vsr = sf.read(f"{ROOT}/{VDIR}/voice.wav", dtype="float32")
 v = resample_poly(v, SR, vsr) if vsr != SR else v
 voice = np.zeros(N); voice[: min(N, len(v))] = v[:N]
 # duck the music under speech (smoothed speech envelope)
@@ -203,7 +207,7 @@ music *= duck[:, None]
 mix = music * db(-9) + sfx * db(-4) + np.stack([voice, voice], 1) * db(0)
 mix *= 0.89 / (np.abs(mix).max() + 1e-9)
 os.makedirs(f"{ROOT}/audio", exist_ok=True)
-sf.write(f"{ROOT}/audio/mix.wav", mix.astype(np.float32), SR, subtype="PCM_24")
-sf.write(f"{ROOT}/audio/music.wav", (music * db(-9)).astype(np.float32), SR, subtype="PCM_24")
-sf.write(f"{ROOT}/audio/sfx.wav", (sfx * db(-4)).astype(np.float32), SR, subtype="PCM_24")
-print(f"mix {END:.2f} s -> audio/mix.wav")
+sf.write(f"{ROOT}/audio/mix{SUF}.wav", mix.astype(np.float32), SR, subtype="PCM_24")
+sf.write(f"{ROOT}/audio/music{SUF}.wav", (music * db(-9)).astype(np.float32), SR, subtype="PCM_24")
+sf.write(f"{ROOT}/audio/sfx{SUF}.wav", (sfx * db(-4)).astype(np.float32), SR, subtype="PCM_24")
+print(f"mix {END:.2f} s -> audio/mix{SUF}.wav")

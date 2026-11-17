@@ -5,9 +5,12 @@ import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { Labels } from './explode.js';
 import { buildPump, buildSite, DIM } from './pump.js';
-import { VOICE } from './lines.js';
 
 const params = new URLSearchParams(location.search);
+const { VOICE } = await import(params.get('lang') === 'hi' ? './lines_hi.js' : './lines.js');
+const TX = VOICE.text || {};
+if (TX.font) document.documentElement.classList.add('lang-' + TX.font);
+if (TX.title) document.getElementById('title').innerHTML = TX.title;
 const W = 1080, H = 1920;
 
 // ----------------------------------------------------------------------------- timing helpers
@@ -16,6 +19,7 @@ const T = (id) => LINE[id].start;
 const TE = (id) => LINE[id].end;
 const norm = (s) => s.toLowerCase().replace(/[^a-z']/g, '');
 function wt(id, word, nth = 0) {          // time of a word in a line
+  if (LINE[id].cues && word in LINE[id].cues) return LINE[id].cues[word];
   const ws = LINE[id].words.filter((w) => norm(w.w) === norm(word));
   if (!ws.length) throw new Error(`no word ${word} in ${id}`);
   return ws[Math.min(nth, ws.length - 1)].t;
@@ -290,7 +294,7 @@ function updatePower(t, vis) {
 // ----------------------------------------------------------------------------- labels (exploded-view Labels)
 const labels = new Labels(document.querySelector('.labels'), camera, canvas, { margin: 56, gap: 14 });
 const allItems = [];
-function label(obj, text, note, anchor, a, b) { const it = labels.add(obj, text, { note, anchor }); it.win = [a, b]; allItems.push(it); }
+function label(obj, text, note, anchor, a, b) { const tr = TX.labels?.[text]; if (tr) [text, note] = tr; const it = labels.add(obj, text, { note, anchor }); it.win = [a, b]; allItems.push(it); }
 label(P.parts.housing, 'Electric motor', 'makes the spin', [-0.2, 0.125, 0.04], wt('two', 'electric'), T('stator') - 0.2);
 label(P.parts.casing, 'Pump', 'moves the water', [DIM.ductX, -0.12, 0.12], wt('two', 'pump'), T('stator') - 0.2);
 label(P.root, 'Shaft', 'one shaft for both', [-0.02, 0.014, 0], wt('two', 'shaft'), wt('two', 'electric') - 0.1);
@@ -308,7 +312,7 @@ for (const l of VOICE.lines) {
   let cur = [];
   l.words.forEach((w, i) => {
     cur.push(w);
-    const end = /[.,?!]$/.test(w.w) || cur.length === 3 || i === l.words.length - 1;
+    const end = /[.,?!\u0964\u2014]$/.test(w.w) || cur.length === 3 || i === l.words.length - 1;
     if (end) { CHUNKS.push({ words: cur, line: l }); cur = []; }
   });
 }
@@ -323,7 +327,7 @@ function updateCaptions(t) {
   const key = c ? c.t0 : '';
   if (key !== capKey) {
     capKey = key;
-    capEl.innerHTML = c ? c.words.map((w) => `<span>${w.w.replace(/[.,?!]$/, '').replace(/</g, '')}</span>`).join(' ') : '';
+    capEl.innerHTML = c ? c.words.map((w) => `<span>${w.w.replace(/[.,?!\u0964\u2014"]/g, '').replace(/</g, '')}</span>`).join(' ') : '';
   }
   if (!c) return;
   const spans = capEl.children;
@@ -337,7 +341,7 @@ function updateCaptions(t) {
   });
 }
 const titleEl = document.getElementById('title'), rpmEl = document.getElementById('rpm'), stateEl = document.getElementById('state'), chainEl = document.getElementById('chain');
-const CHAIN = [['Electricity', wt('outro', 'electricity')], ['Magnetism', wt('outro', 'magnetism')], ['Spin', wt('outro', 'spin')], ['Pressure', wt('outro', 'pressure')]];
+const CHAIN = ['electricity', 'magnetism', 'spin', 'pressure'].map((c, i) => [(TX.chain || ['Electricity', 'Magnetism', 'Spin', 'Pressure'])[i], wt('outro', c)]);
 chainEl.innerHTML = CHAIN.map(([w], i) => (i ? '<i>▼</i>' : '') + `<div>${w}</div>`).join('');
 function show(el, o, y = 0) { el.style.opacity = o.toFixed(3); el.style.visibility = o > 0.002 ? 'visible' : 'hidden'; if (y) el.style.translate = `0 ${y}px`; }
 function updateOverlays(t) {
@@ -351,10 +355,10 @@ function updateOverlays(t) {
   // state chips
   let st = '', so = 0, colr = '#fff';
   const p0 = wt('volute', 'pressure');
-  if (t > p0 - 0.3 && t < T('push') + 0.4) { st = 'Speed ➜ Pressure'; so = win(t, p0, T('push'), 0.2); colr = '#ffd23f'; }
+  if (t > p0 - 0.3 && t < T('push') + 0.4) { st = TX.speed || 'Speed ➜ Pressure'; so = win(t, p0, T('push'), 0.2); colr = '#ffd23f'; }
   const a0 = wt('prime', 'air'), w0 = wt('prime', 'water');
-  if (t > a0 - 0.3 && t < w0 - 0.05) { st = 'Air ✗ no flow'; so = win(t, a0, w0 - 0.1, 0.15); colr = '#ff6b5e'; }
-  if (t > w0 - 0.1 && t < T('outro') + 0.3) { st = 'Water ✓ flows'; so = win(t, w0, T('outro'), 0.15); colr = '#5fe08a'; }
+  if (t > a0 - 0.3 && t < w0 - 0.05) { st = TX.air || 'Air ✗ no flow'; so = win(t, a0, w0 - 0.1, 0.15); colr = '#ff6b5e'; }
+  if (t > w0 - 0.1 && t < T('outro') + 0.3) { st = TX.water || 'Water ✓ flows'; so = win(t, w0, T('outro'), 0.15); colr = '#5fe08a'; }
   stateEl.textContent = st; stateEl.style.color = colr; show(stateEl, so);
   // outro chain
   const cv = 1 - ramp(t, VOICE.duration - 0.1, VOICE.duration + 0.2);
