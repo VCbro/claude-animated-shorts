@@ -13,9 +13,9 @@ import numpy as np, soundfile as sf
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = sys.argv[1] if len(sys.argv) > 1 else f"{ROOT}/voice_hi/elevenlabs.mp3"
 LEAD = 0.45
-TEMPO = 1.25      # speed-up of the voice (pitch kept)
-GAP_IN = 0.10     # longest pause kept inside a line, s (before speed-up)
-GAP_LINE = 0.22   # longest pause kept between lines, s (before speed-up)
+TEMPO = 1.4       # speed-up of the voice (pitch kept)
+GAP_IN = 0.06     # longest pause kept inside a line, s (before speed-up)
+GAP_LINE = 0.15   # longest pause kept between lines, s (before speed-up)
 PAD = 0.05        # audio kept around each spoken segment, s
 IDS = ["hook", "question", "install", "deep", "motor", "intake", "stages", "diffuser", "pressure", "valve", "why", "outro"]
 # a line boundary the pause-based alignment gets wrong, checked by ear/phrase length: start time of a line
