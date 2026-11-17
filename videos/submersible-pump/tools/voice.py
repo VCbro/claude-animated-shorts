@@ -15,23 +15,23 @@ from kokoro_onnx import Kokoro
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 M = os.environ.get("MODELS", "/home/user/models")
-VOICE, SPEED = "af_heart", 1.08
+VOICE, SPEED = "af_heart", 1.22
 LEAD = 0.45  # silence before the first line
 
 # (id, text, pause after in s)
 LINES = [
-    ("hook",     "This pump lives two hundred feet underground. Completely underwater.", 0.3),
-    ("question", "So how does it push water all the way up to your house? Let's go down and see.", 0.4),
-    ("install",  "Workers lower it into the borewell, hanging from its pipe, with the power cable tied alongside.", 0.3),
-    ("deep",     "Down it goes, past soil, sand and rock, until it sits well below the water level.", 0.4),
-    ("motor",    "At the bottom is a sealed electric motor. The water flowing past it keeps it cool.", 0.3),
-    ("intake",   "Above that, the intake. A mesh screen lets water in, and keeps sand out.", 0.35),
-    ("stages",   "Then the real trick. Not one impeller, but a whole stack of them, called stages.", 0.3),
-    ("diffuser", "Each impeller flings the water outward, and a diffuser guides it up into the next one.", 0.3),
-    ("pressure", "Every stage adds more pressure. More stages, the deeper it can lift.", 0.4),
-    ("valve",    "At the top, a check valve stops the water from falling back when the pump switches off.", 0.4),
-    ("why",      "Why push from below? A pump on the surface can only suck water up about eight meters. Pushing has no such limit.", 0.4),
-    ("outro",    "Motor at the bottom. Stages stacked up. Pressure, all the way to your tank.", 0.9),
+    ("hook",     "This pump lives two hundred feet underground. Completely underwater.", 0.18),
+    ("question", "So how does it push water all the way up to your house?", 0.24),
+    ("install",  "Workers lower it into the borewell on its pipe, with the power cable alongside.", 0.18),
+    ("deep",     "Down it goes, past soil, sand and rock, deep below the water level.", 0.24),
+    ("motor",    "At the bottom is a sealed electric motor. The water flowing past it keeps it cool.", 0.18),
+    ("intake",   "Above that, the intake. A mesh screen lets water in, and keeps sand out.", 0.21),
+    ("stages",   "Then the real trick. Not one impeller, but a whole stack of them, called stages.", 0.18),
+    ("diffuser", "Each impeller flings the water outward, and a diffuser guides it up into the next one.", 0.18),
+    ("pressure", "Every stage adds more pressure. More stages, the deeper it can lift.", 0.24),
+    ("valve",    "At the top, a check valve stops the water falling back when the pump switches off.", 0.24),
+    ("why",      "Why push from below? A surface pump can only suck water up about eight meters. Pushing has no limit.", 0.24),
+    ("outro",    "Motor at the bottom. Stages stacked up. Pressure, all the way to your tank.", 0.54),
 ]
 
 

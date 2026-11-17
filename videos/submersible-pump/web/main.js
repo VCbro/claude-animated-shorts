@@ -442,6 +442,7 @@ function updateOverlays(t) {
   const v0 = wt('valve', 'stops');
   if (t > v0 && t < T('why')) { st = TX.off || 'Pump off ➜ valve shut'; so = win(t, wt('valve', 'falling') - 0.1, T('why') - 0.15, 0.15); colr = '#ffd23f'; }
   stateEl.textContent = st; stateEl.style.color = colr; show(stateEl, so);
+  stateEl.style.top = t > T('why') - 0.2 && t < T('outro') ? '1470px' : '300px';
   // "8 m" tag beside the bracket
   const pv = win(t, wt('why', 'eight') - 0.1, T('outro') - 0.1, 0.2);
   show(pinEl, pv);
