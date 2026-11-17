@@ -57,7 +57,13 @@ def stills(out, times):
 
 def chunk(args):
     idx, f0, f1, fps, path = args
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "mjpeg", "-i", "-",
+    # resume: keep a chunk that already holds all its frames
+    if os.path.exists(path):
+        r = subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v", "-show_entries",
+                            "stream=nb_read_packets", "-of", "csv=p=0", path], capture_output=True, text=True)
+        if r.stdout.strip() == str(f1 - f0):
+            print(f"[w{idx}] done already", flush=True); return path
+    cmd =["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "mjpeg", "-i", "-",
            "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p", "-r", str(fps),
            "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", path]
     ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
