@@ -13,6 +13,10 @@ import numpy as np, soundfile as sf
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = sys.argv[1] if len(sys.argv) > 1 else f"{ROOT}/voice_hi/elevenlabs.mp3"
 LEAD = 0.45
+TEMPO = 1.25      # speed-up of the voice (pitch kept)
+GAP_IN = 0.10     # longest pause kept inside a line, s (before speed-up)
+GAP_LINE = 0.22   # longest pause kept between lines, s (before speed-up)
+PAD = 0.05        # audio kept around each spoken segment, s
 IDS = ["hook", "question", "two", "stator", "field", "impeller", "eye", "fling", "volute", "push", "prime", "outro"]
 # a line boundary the pause-based alignment gets wrong, checked by ear/phrase length: start time of a line
 FIX_START = {"outro": 68.10}
@@ -63,18 +67,42 @@ def main():
         al[i]["segs"] = [s for s in segs_all if t0 - 0.01 <= s[0] <= hi]
     for a in al: a["start"], a["end"] = a["segs"][0][0], a["segs"][-1][1]
 
-    # audio with the same lead-in as the English cut
-    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", SRC, "-ac", "1", "-ar", "24000", "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    # tighten: cut every pause down (GAP_IN inside a line, GAP_LINE between lines), then speed up
+    # the whole voice by TEMPO (pitch kept); all segment times are mapped to the new timeline
+    SR = 24000
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", SRC, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
     a = np.frombuffer(pcm, np.float32)
-    v = np.concatenate([np.zeros(int(LEAD * 24000), np.float32), a])
-    sf.write(f"{ROOT}/voice_hi/voice.wav", v, 24000, subtype="PCM_16")
-    total = len(v) / 24000
+    fade = np.linspace(0, 1, int(0.006 * SR), dtype=np.float32)
+    parts, cur, prev_e, newsegs = [], 0.0, None, []
+    for li, ln in enumerate(al):
+        ns = []
+        for j, (s, e) in enumerate(ln["segs"]):
+            if prev_e is not None:
+                cap = GAP_IN if j else GAP_LINE
+                g = min(max(s - prev_e - 2 * PAD, 0.0), cap)
+                parts.append(np.zeros(int(g * SR), np.float32)); cur += int(g * SR) / SR
+            lo, hi = max(0, int((s - PAD) * SR)), min(len(a), int((e + PAD) * SR))
+            piece = a[lo:hi].copy(); piece[:len(fade)] *= fade; piece[-len(fade):] *= fade[::-1]
+            t0 = cur + (s - lo / SR); parts.append(piece); cur += len(piece) / SR
+            ns.append((t0, t0 + (e - s))); prev_e = e
+        newsegs.append(ns)
+    parts.append(np.zeros(int(0.25 * SR), np.float32))
+    tight = np.concatenate(parts)
+    tmp = f"{ROOT}/voice_hi/tight.wav"
+    sf.write(tmp, tight, SR, subtype="FLOAT")
+    fast = subprocess.run(["ffmpeg", "-v", "error", "-i", tmp, "-af", f"atempo={TEMPO}", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+                          capture_output=True, check=True).stdout
+    os.remove(tmp)
+    v = np.concatenate([np.zeros(int(LEAD * SR), np.float32), np.frombuffer(fast, np.float32)])
+    sf.write(f"{ROOT}/voice_hi/voice.wav", v, SR, subtype="PCM_16")
+    total = len(v) / SR
+    print(f"source {len(a) / SR:.2f} s -> tightened {len(tight) / SR:.2f} s -> x{TEMPO} {total:.2f} s (with lead)")
 
     lines = []
-    for lid, a in zip(IDS, al):
+    for lid, a, ns in zip(IDS, al, newsegs):
         words = [w for w in a["text"].split() if norm(w)]
         # spoken time only: place words by cumulative syllables along the speech, then map back
-        segs = [(s + LEAD, e + LEAD) for s, e in a["segs"]]
+        segs = [(s / TEMPO + LEAD, e / TEMPO + LEAD) for s, e in ns]
         speech = sum(e - s for s, e in segs)
         wts = [syl(w) + (1.2 if re.search(r"[।?,—]$", w) else 0) for w in words]
         W = sum(wts); acc = 0; wl = []
