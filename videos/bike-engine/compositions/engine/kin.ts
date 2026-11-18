@@ -39,7 +39,7 @@ export function where(lang: Lang, sec: number) {
 }
 
 // ---- the crank angle (degrees, unwrapped; cycle phase 0 = TDC at the start of intake) -----------------------------
-const V_RUN = 1080;  // deg/s while it runs fast (a cycle every 2/3 s, so the flashes read)
+const V_RUN = 600;   // deg/s while it runs fast: the piston passes ~3 times a second, under the flash limit
 const V_DRIVE = 600;
 
 export function crankDeg(lang: Lang, sec: number): number {
@@ -75,6 +75,14 @@ export function crankDeg(lang: Lang, sec: number): number {
       return strokeBase + 720 + ramp + (t > a ? V_DRIVE * (t - a) : 0);
     }
   }
+}
+/** The drivetrain's phase: the crank angle plus a whole number of cycles, so the gears, chain and wheel keep the angles
+ *  they had when the opening ran at 1080 deg/s (frames rendered then still line up with frames rendered now). */
+export function drivePhaseDeg(lang: Lang, deg: number) {
+  const s = slots(lang);
+  const T = (id: Beat) => s[id].t1 - s[id].t0;
+  const target = (v: number) => Math.ceil((v * T("hook") + v * T("reveal") * 0.6 * 0.5) / 720) * 720;
+  return deg + target(1080) - target(V_RUN);
 }
 export const phase = (deg: number) => ((deg % 720) + 720) % 720;
 

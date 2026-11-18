@@ -10,7 +10,7 @@ import { Camera3d } from "raea/camera";
 import { AXIS, CAM, CAST, DIM, DRIVE, PARTS, SEAT } from "./geom";
 import {
   BEATS, Beat, LINKS, Lang, PATH_EX, PATH_IN, PITCH, along, camAngle, chainAt, chainTravel, charge, clamp01, crankDeg,
-  crankState, driveAngles, hash, lerp, slots, smooth, smoother, span, valveLift, where,
+  crankState, driveAngles, drivePhaseDeg, hash, lerp, slots, smooth, smoother, span, valveLift, where,
 } from "./kin";
 import { COPY } from "./copy";
 
@@ -118,7 +118,7 @@ export function EngineFilm({ lang }: { lang: Lang }) {
   const deg = crankDeg(lang, sec);
   const cs = crankState(deg);
   const ch = charge(deg);
-  const dr = driveAngles(deg);
+  const dr = driveAngles(drivePhaseDeg(lang, deg));
   const pose = cameraAt(lang, sec);
   const open = openness(lang, sec);
   const o = smoother(open);

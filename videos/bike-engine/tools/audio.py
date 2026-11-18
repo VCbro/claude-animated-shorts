@@ -30,7 +30,7 @@ def slots(t):
 
 
 def crank_deg(s, sec):
-    V_RUN, V_DRIVE = 1080, 600
+    V_RUN, V_DRIVE = 600, 600
     T = lambda k: s[k][1] - s[k][0]
     hook_end = V_RUN * T("hook")
     target = math.ceil((hook_end + V_RUN * T("reveal") * 0.6 * 0.5) / 720) * 720
