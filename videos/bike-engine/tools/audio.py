@@ -39,7 +39,8 @@ def env(n, a, r):  # attack / exponential release, in seconds
     return np.minimum(1, t / max(a, 1e-4)) * np.exp(-t / max(r, 1e-4))
 def add(buf, x, at, gain=1.0):
     i = int(at * SR)
-    if i >= len(buf): return
+    if i < 0: x = x[-i:]; i = 0
+    if i >= len(buf) or len(x) == 0: return
     x = x[: len(buf) - i]
     buf[i: i + len(x)] += x * gain
 def db(x): return 10 ** (x / 20)
