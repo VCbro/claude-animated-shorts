@@ -31,8 +31,21 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 FONTS_DIR = HERE / "fonts"
 CACHE = Path(os.environ.get("GTA6CLIPPER_CACHE", Path.home() / ".cache" / "gta6clipper"))
-W, H = 1080, 1920
-FPS = 30
+BASE_W, BASE_H = 1080, 1920   # subtitle (ASS) coordinate space; libass scales it to the output size
+W, H = 1080, 1920             # output size, set by --res
+FPS = 30                      # output fps, set by --fps
+RES = {"1080": (1080, 1920), "1440": (1440, 2560), "4k": (2160, 3840)}
+LOOKS = {  # applied after scaling, before text (so text stays clean)
+    "real": "eq=contrast=1.04:saturation=1.06:gamma=0.98,cas=0.45",
+    "vivid": "eq=contrast=1.08:saturation=1.22,cas=0.5",
+    "none": "null",
+}
+
+
+def configure(res, fps):
+    global W, H, FPS
+    W, H = RES[res]
+    FPS = int(fps)
 
 # Words that usually mean "something exciting is happening" in GTA content.
 HYPE_WORDS = {
@@ -83,6 +96,8 @@ def probe(path):
         "width": int(v["width"]) if v else 0,
         "height": int(v["height"]) if v else 0,
         "has_audio": a is not None,
+        "fps": (lambda n, d: float(n) / float(d) if float(d) else 0.0)(*v["avg_frame_rate"].split("/"))
+               if v and v.get("avg_frame_rate", "0/0") != "0/0" else 0.0,
     }
 
 
@@ -115,8 +130,8 @@ def cmd_fetch(args):
     dst = work / "source.mp4"
     if is_url(args.source):
         tmpl = str(work / "dl.%(ext)s")
-        cmd = ["yt-dlp", "-f", f"bv*[height<={args.max_height}]+ba/b[height<={args.max_height}]/b",
-               "--merge-output-format", "mp4", "--no-playlist", "-o", tmpl,
+        cmd = ["yt-dlp", "-f", "bv*+ba/b", "-S", f"res:{args.max_height},fps,vbr",
+               "--merge-output-format", "mkv", "--no-playlist", "-o", tmpl,
                "--write-info-json", args.source]
         if args.cookies:
             cmd[1:1] = ["--cookies", args.cookies]
@@ -144,7 +159,10 @@ def cmd_fetch(args):
     if src.parent == work and src != dst:
         src.unlink(missing_ok=True)
     p = probe(dst)
-    log(f"source ready: {dst} {p['width']}x{p['height']} {p['duration']:.1f}s")
+    log(f"source ready: {dst} {p['width']}x{p['height']} {p.get('fps', 0):.0f}fps {p['duration']:.1f}s")
+    if p["height"] < 1080:
+        log(f"WARNING: source is only {p['height']}p (WhatsApp/compressed?). 4K output will be upscaled, "
+            "not true 4K detail. Use the original file or a YouTube link for best quality.")
     return dst
 
 
@@ -470,7 +488,7 @@ def build_ass(words, clip_s, clip_e, hook, opts):
     hook_secs = dur if opts["hook_secs"] <= 0 else min(opts["hook_secs"], dur)
     cap_y = opts["cap_y"]
     lines = [
-        "[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0",
+        "[Script Info]", "ScriptType: v4.00+", f"PlayResX: {BASE_W}", f"PlayResY: {BASE_H}", "WrapStyle: 0",
         "ScaledBorderAndShadow: yes", "",
         "[V4+ Styles]",
         "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, "
@@ -486,7 +504,7 @@ def build_ass(words, clip_s, clip_e, hook, opts):
     if hook:
         txt = ass_escape(hook.upper())
         lines.append(f"Dialogue: 2,{ass_time(0)},{ass_time(hook_secs)},Hook,,0,0,0,,"
-                     f"{{\\pos({W // 2},{opts['hook_y']})\\fscx60\\fscy60\\t(0,180,\\fscx108\\fscy108)"
+                     f"{{\\pos({BASE_W // 2},{opts['hook_y']})\\fscx60\\fscy60\\t(0,180,\\fscx108\\fscy108)"
                      f"\\t(180,300,\\fscx100\\fscy100)}}{txt}")
     if opts["captions"]:
         ws = [dict(w, start=w["start"] - clip_s, end=w["end"] - clip_s) for w in words
@@ -504,7 +522,7 @@ def build_ass(words, clip_s, clip_e, hook, opts):
                         parts.append(t)
                 pop = "\\fscx85\\fscy85\\t(0,90,\\fscx100\\fscy100)" if j == 0 else ""
                 lines.append(f"Dialogue: 1,{ass_time(t0)},{ass_time(min(t1, dur))},Cap,,0,0,0,,"
-                             f"{{\\pos({W // 2},{cap_y}){pop}}}" + " ".join(parts))
+                             f"{{\\pos({BASE_W // 2},{cap_y}){pop}}}" + " ".join(parts))
     return "\n".join(lines) + "\n"
 
 
@@ -548,34 +566,43 @@ def render_clip(src, info, clip, words, out_mp4, opts, workdir):
     ass.write_text(build_ass(words, s, e, clip.get("hook", ""), dict(
         opts, cap_y=opts["cap_y"] if opts["cap_y"] else (1480 if mode == "blur" else 1340))), encoding="utf-8")
     vin = "[0:v]"
-    pre = f"{vin}fps={FPS},setsar=1"
+    src_fps = info.get("fps") or 30
+    if FPS > src_fps + 1 and opts["interp"]:
+        # real motion interpolation (smooth 60fps from a 24/30fps source), done at source size = faster
+        rate = f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff"
+    else:
+        rate = f"fps={FPS}"
+    pre = f"{vin}{rate},setsar=1"
+    sc = ":flags=lanczos"
     if mode == "blur":
         keep = float(clip.get("zoom", opts["zoom"]))  # fraction of width kept in the sharp middle band
         fg_w = int(sw * keep) // 2 * 2
         vf = (f"{pre},split[a][b];"
               f"[a]scale=270:480:force_original_aspect_ratio=increase,crop=270:480,gblur=sigma=12,"
               f"scale={W}:{H},eq=brightness=-0.12:saturation=1.3[bg];"
-              f"[b]crop={fg_w}:{sh}:{(sw - fg_w) // 2}:0,scale={W}:-2[fg];"
-              f"[bg][fg]overlay=(W-w)/2:(H-h)/2-60[v0]")
+              f"[b]crop={fg_w}:{sh}:{(sw - fg_w) // 2}:0,scale={W}:-2{sc}[fg];"
+              f"[bg][fg]overlay=(W-w)/2:(H-h)/2-{60 * H // BASE_H}[v00]")
     else:
         crop_w = int(sh * 9 / 16) // 2 * 2
         if crop_w > sw:  # already vertical / narrow source
-            vf = f"{pre},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}[v0]"
+            vf = f"{pre},scale={W}:{H}:force_original_aspect_ratio=increase{sc},crop={W}:{H}[v00]"
         elif mode == "track":
             cmds = workdir / (out_mp4.stem + ".cmd")
             cmds.write_text("".join(f"{t:.3f} crop x {int(x)};\n" for t, x in
                                     track_centers(src, s, e, sw, sh, crop_w)))
             cpath = str(cmds).replace("\\", "/").replace(":", "\\:")
             vf = (f"{pre},sendcmd=f='{cpath}',crop={crop_w}:{sh}:{(sw - crop_w) // 2}:0,"
-                  f"scale={W}:{H}[v0]")
+                  f"scale={W}:{H}{sc}[v00]")
         else:  # fill: static centre crop
-            vf = f"{pre},crop={crop_w}:{sh}:{(sw - crop_w) // 2}:0,scale={W}:{H}[v0]"
+            vf = f"{pre},crop={crop_w}:{sh}:{(sw - crop_w) // 2}:0,scale={W}:{H}{sc}[v00]"
     apath = str(ass).replace("\\", "/").replace(":", "\\:")
     fdir = str(FONTS_DIR).replace("\\", "/").replace(":", "\\:")
+    vf += f";[v00]{LOOKS[opts['look']]}[v0]"
     vf += f";[v0]ass='{apath}':fontsdir='{fdir}'[v1]"
     if opts["progress_bar"]:
-        vf += (f";color=c={opts['bar_color']}:s={W}x14:r={FPS}:d={dur:.3f}[bar];"
-               f"[v1][bar]overlay=x='-w+w*t/{dur:.3f}':y=H-14:shortest=1[v]")
+        bh = 14 * H // BASE_H
+        vf += (f";color=c={opts['bar_color']}:s={W}x{bh}:r={FPS}:d={dur:.3f}[bar];"
+               f"[v1][bar]overlay=x='-w+w*t/{dur:.3f}':y=H-{bh}:shortest=1[v]")
     else:
         vf += ";[v1]null[v]"
     cmd = ["ffmpeg", "-y", "-v", "error", "-stats", "-ss", f"{s:.3f}", "-t", f"{dur:.3f}", "-i", str(src),
@@ -583,12 +610,40 @@ def render_clip(src, info, clip, words, out_mp4, opts, workdir):
     if info["has_audio"]:
         cmd += ["-map", "0:a:0", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000",
                 "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-c:v", "libx264", "-preset", opts["preset"], "-crf", str(opts["crf"]), "-maxrate", "14M", "-bufsize", "28M", "-pix_fmt", "yuv420p",
-            "-profile:v", "high", "-movflags", "+faststart", "-t", f"{dur:.3f}", str(out_mp4)]
+    # YouTube-recommended style: high bitrate, closed GOP of half the frame rate, 2 B-frames
+    mx = {2160: 68, 1440: 30, 1080: 14}[W] if W in (2160, 1440, 1080) else 14
+    cmd += ["-c:v", "libx264", "-preset", opts["preset"], "-crf", str(opts["crf"]),
+            "-maxrate", f"{mx}M", "-bufsize", f"{mx * 2}M", "-pix_fmt", "yuv420p", "-profile:v", "high",
+            "-r", str(FPS), "-g", str(FPS // 2), "-bf", "2", "-flags", "+cgop",
+            "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
+            "-movflags", "+faststart", "-t", f"{dur:.3f}", str(out_mp4)]
     run(cmd)
     # Preview frame for QA
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{min(1.5, dur / 2):.2f}", "-i", str(out_mp4),
-                    "-frames:v", "1", "-vf", "scale=540:-2", str(out_mp4.with_suffix(".jpg"))])
+    if opts.get("preview", True):
+        make_preview(out_mp4, dur)
+
+
+def make_preview(mp4, dur):
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{min(1.5, dur / 2):.2f}", "-i", str(mp4),
+                    "-frames:v", "1", "-vf", "scale=540:-2", str(mp4.with_suffix(".jpg"))])
+
+
+def render_with_teaser(src, info, c, words, out, opts, tmp):
+    """First seconds = the best/most shocking moment with the hook text, then the full reel."""
+    t0, t1 = map(float, c["teaser"])
+    t1 = min(t1, t0 + opts["teaser_max"])
+    a, b = tmp / (out.stem + "_teaser.mp4"), tmp / (out.stem + "_main.mp4")
+    render_clip(src, info, dict(c, start=t0, end=t1), words, a,
+                dict(opts, hook_secs=0, progress_bar=False, preview=False), tmp)
+    render_clip(src, info, dict(c, hook=c.get("main_hook", "")), words, b,
+                dict(opts, hook_secs=0, preview=False), tmp)
+    lst = tmp / (out.stem + ".txt")
+    lst.write_text(f"file '{a.resolve()}'\nfile '{b.resolve()}'\n")
+    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
+         "-movflags", "+faststart", str(out)])
+    dur = (t1 - t0) + float(c["end"]) - float(c["start"])
+    make_preview(out, dur)
+    return dur
 
 
 def hex_to_ass(hx):
@@ -604,13 +659,17 @@ def render_opts(args):
         "highlight": hex_to_ass(args.highlight), "hook_box": hex_to_ass(args.hook_box).replace("&H00", "&H00"),
         "hook_secs": args.hook_secs, "captions": not args.no_captions, "progress_bar": not args.no_bar,
         "bar_color": "0x" + args.highlight.lstrip("#"), "preset": args.preset, "crf": args.crf,
+        "look": args.look, "interp": not args.no_interp, "teaser_max": args.teaser_max,
     }
 
 
 def cmd_render(args, plan=None):
+    configure(args.res, args.fps)
     work = Path(args.work)
     src = work / "source.mp4"
     info = probe(src)
+    log(f"output {W}x{H} @ {FPS}fps, look={args.look}, source {info['width']}x{info['height']} "
+        f"@ {info['fps']:.0f}fps")
     tr = json.loads((work / "transcript.json").read_text()) if (work / "transcript.json").exists() else {"words": []}
     words = tr["words"]
     if plan is None:
@@ -625,9 +684,13 @@ def cmd_render(args, plan=None):
         slug = re.sub(r"[^a-z0-9]+", "-", (c.get("title") or c.get("hook") or f"clip{i}").lower()).strip("-")[:40]
         out = outdir / f"{i:02d}_{slug or 'clip'}.mp4"
         log(f"render {i}/{len(plan)}: {fmt_ts(c['start'])}-{fmt_ts(c['end'])} -> {out.name}")
-        render_clip(src, info, c, words, out, opts, tmp)
+        if c.get("teaser"):
+            dur = render_with_teaser(src, info, c, words, out, opts, tmp)
+        else:
+            render_clip(src, info, c, words, out, opts, tmp)
+            dur = float(c["end"]) - float(c["start"])
         rows.append({"file": str(out), "start": c["start"], "end": c["end"],
-                     "duration": round(float(c["end"]) - float(c["start"]), 1),
+                     "duration": round(dur, 1), "teaser": c.get("teaser", ""),
                      "hook": c.get("hook", ""), "title": c.get("title", ""),
                      "description": c.get("description", ""), "hashtags": c.get("hashtags", ""),
                      "score": c.get("score", "")})
@@ -668,16 +731,21 @@ def add_render_args(p):
     g.add_argument("--zoom", type=float, default=0.86, help="blur mode: fraction of width kept (0.6-1.0)")
     g.add_argument("--font", default="Anton")
     g.add_argument("--cap-size", type=int, default=118)
-    g.add_argument("--hook-size", type=int, default=86)
+    g.add_argument("--hook-size", type=int, default=112)
     g.add_argument("--hook-y", type=int, default=380)
     g.add_argument("--cap-y", type=int, default=0, help="caption centre y (0 = auto)")
     g.add_argument("--highlight", default="#FFE600", help="active word + progress bar colour")
     g.add_argument("--hook-box", default="#E6007E", help="hook box colour (Vice City pink)")
-    g.add_argument("--hook-secs", type=float, default=0, help="show hook for N s (0 = whole clip)")
+    g.add_argument("--hook-secs", type=float, default=5, help="show hook for first N s (0 = whole clip)")
+    g.add_argument("--res", default="4k", choices=list(RES), help="output size 9:16 (default 4k = 2160x3840)")
+    g.add_argument("--fps", type=int, default=60, help="output fps (default 60)")
+    g.add_argument("--look", default="real", choices=list(LOOKS), help="colour/sharpness look")
+    g.add_argument("--no-interp", action="store_true", help="no motion interpolation (just duplicate frames)")
+    g.add_argument("--teaser-max", type=float, default=5, help="max length of the hook teaser (s)")
     g.add_argument("--no-captions", action="store_true")
     g.add_argument("--no-bar", action="store_true")
     g.add_argument("--preset", default="medium")
-    g.add_argument("--crf", type=int, default=19)
+    g.add_argument("--crf", type=int, default=17)
 
 
 def add_analyze_args(p):
@@ -693,7 +761,7 @@ def add_analyze_args(p):
 def add_fetch_args(p):
     p.add_argument("source", help="YouTube URL or local video file")
     p.add_argument("-o", "--out", required=True, help="work folder")
-    p.add_argument("--max-height", type=int, default=1080)
+    p.add_argument("--max-height", type=int, default=2160, help="2160 = 4K source (default)")
     p.add_argument("--cookies", help="cookies.txt for yt-dlp (age-gated / bot-check videos)")
 
 
