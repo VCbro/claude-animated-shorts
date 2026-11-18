@@ -1,0 +1,49 @@
+{
+  "beats": [
+    {
+      "id": "hook",
+      "en": "Every time you twist the throttle, tiny explosions go off inside your bike's engine. At highway speed, about fifty every second.",
+      "hi": "जब भी आप बाइक का एक्सीलेरेटर घुमाते हैं, इंजन के अंदर छोटे-छोटे धमाके होते हैं। तेज़ रफ़्तार पर, एक सेकंड में लगभग पचास।"
+    },
+    {
+      "id": "reveal",
+      "en": "Most bikes run on a single-cylinder, four-stroke engine like this one. Let's cut it open.",
+      "hi": "ज़्यादातर बाइकों में ऐसा ही सिंगल-सिलेंडर, फोर-स्ट्रोक इंजन होता है। चलिए, इसे काटकर अंदर देखते हैं।"
+    },
+    {
+      "id": "parts",
+      "en": "A piston slides inside the cylinder. A connecting rod links it to the crankshaft. On top sit two valves and a spark plug.",
+      "hi": "सिलेंडर के अंदर पिस्टन ऊपर-नीचे चलता है। कनेक्टिंग रॉड इसे क्रैंकशाफ्ट से जोड़ती है। ऊपर दो वाल्व और एक स्पार्क प्लग लगे हैं।"
+    },
+    {
+      "id": "intake",
+      "en": "Stroke one, intake. The piston moves down, the intake valve opens, and a mix of air and petrol is pulled in.",
+      "hi": "पहला स्ट्रोक, इनटेक। पिस्टन नीचे जाता है, इनटेक वाल्व खुलता है, और हवा और पेट्रोल का मिश्रण अंदर खिंच आता है।"
+    },
+    {
+      "id": "compression",
+      "en": "Stroke two, compression. Both valves close, and the piston squeezes the mixture into about a tenth of the space.",
+      "hi": "दूसरा स्ट्रोक, कम्प्रेशन। दोनों वाल्व बंद हो जाते हैं, और पिस्टन मिश्रण को दबाकर लगभग दसवें हिस्से में भर देता है।"
+    },
+    {
+      "id": "power",
+      "en": "Stroke three, power. The spark plug fires, the mixture burns, and the pressure slams the piston down.",
+      "hi": "तीसरा स्ट्रोक, पावर। स्पार्क प्लग चिंगारी देता है, मिश्रण जल उठता है, और दबाव पिस्टन को ज़ोर से नीचे धकेलता है।"
+    },
+    {
+      "id": "exhaust",
+      "en": "Stroke four, exhaust. The exhaust valve opens, and the rising piston pushes the burnt gas out to the silencer.",
+      "hi": "चौथा स्ट्रोक, एग्ज़ॉस्ट। एग्ज़ॉस्ट वाल्व खुलता है, और ऊपर आता पिस्टन जली हुई गैस को साइलेंसर की ओर बाहर धकेल देता है।"
+    },
+    {
+      "id": "drive",
+      "en": "The crankshaft turns that push into spin. It flows through the gearbox and the chain, all the way to the rear wheel.",
+      "hi": "क्रैंकशाफ्ट इस धक्के को घुमाव में बदल देता है। यह घुमाव गियरबॉक्स और चेन से होकर, पिछले पहिये तक पहुँचता है।"
+    },
+    {
+      "id": "outro",
+      "en": "Two turns of the crank, one power stroke. Suck, squeeze, bang, blow. Over and over again.",
+      "hi": "क्रैंक के दो चक्कर, एक पावर स्ट्रोक। खींचो, दबाओ, जलाओ, निकालो। और यही बार-बार।"
+    }
+  ]
+}

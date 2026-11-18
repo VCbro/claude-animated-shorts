@@ -1,0 +1,105 @@
+// generated from timing.json by tools/make_voice.py
+export const TIMING = {
+ "en": {
+  "voice": "vits-piper-en_US-ryan-high",
+  "beats": [
+   {
+    "id": "hook",
+    "start": 0.6,
+    "end": 7.183
+   },
+   {
+    "id": "reveal",
+    "start": 7.733,
+    "end": 12.342
+   },
+   {
+    "id": "parts",
+    "start": 12.892,
+    "end": 19.44
+   },
+   {
+    "id": "intake",
+    "start": 19.99,
+    "end": 26.41
+   },
+   {
+    "id": "compression",
+    "start": 26.96,
+    "end": 33.288
+   },
+   {
+    "id": "power",
+    "start": 33.838,
+    "end": 39.399
+   },
+   {
+    "id": "exhaust",
+    "start": 39.949,
+    "end": 46.207
+   },
+   {
+    "id": "drive",
+    "start": 46.757,
+    "end": 52.782
+   },
+   {
+    "id": "outro",
+    "start": 53.332,
+    "end": 59.788
+   }
+  ],
+  "total": 61.388
+ },
+ "hi": {
+  "voice": "vits-piper-hi_IN-pratham-medium",
+  "beats": [
+   {
+    "id": "hook",
+    "start": 0.6,
+    "end": 8.749
+   },
+   {
+    "id": "reveal",
+    "start": 9.299,
+    "end": 15.812
+   },
+   {
+    "id": "parts",
+    "start": 16.362,
+    "end": 24.251
+   },
+   {
+    "id": "intake",
+    "start": 24.801,
+    "end": 32.734
+   },
+   {
+    "id": "compression",
+    "start": 33.284,
+    "end": 40.703
+   },
+   {
+    "id": "power",
+    "start": 41.253,
+    "end": 48.629
+   },
+   {
+    "id": "exhaust",
+    "start": 49.178,
+    "end": 56.695
+   },
+   {
+    "id": "drive",
+    "start": 57.245,
+    "end": 64.147
+   },
+   {
+    "id": "outro",
+    "start": 64.697,
+    "end": 71.17
+   }
+  ],
+  "total": 72.77
+ }
+} as const;
