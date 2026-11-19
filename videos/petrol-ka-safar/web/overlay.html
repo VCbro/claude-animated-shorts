@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<title>Petrol Ka Safar overlay</title>
+<style>
+  @font-face { font-family: B; font-weight: 800; src: url(/node_modules/@fontsource/baloo-2/files/baloo-2-devanagari-800-normal.woff2) format("woff2"); }
+  @font-face { font-family: B; font-weight: 800; src: url(/node_modules/@fontsource/baloo-2/files/baloo-2-latin-800-normal.woff2) format("woff2"); }
+  @font-face { font-family: B; font-weight: 600; src: url(/node_modules/@fontsource/baloo-2/files/baloo-2-devanagari-600-normal.woff2) format("woff2"); }
+  @font-face { font-family: B; font-weight: 600; src: url(/node_modules/@fontsource/baloo-2/files/baloo-2-latin-600-normal.woff2) format("woff2"); }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; font-family: B, sans-serif; color: #fff; }
+  #cap { position: absolute; left: 70px; width: 760px; text-align: left; font-weight: 800; font-size: 62px; line-height: 1.22;
+    text-shadow: 0 3px 0 rgba(0,0,0,.65), 0 0 18px rgba(0,0,0,.7); }
+  #cap span { display: inline; }
+  #cap span.on { color: #ffd166; }
+  #cap .box { display: inline; padding: 4px 14px 2px; border-radius: 12px; background: rgba(8,12,18,.55); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  svg { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+  .lab { position: absolute; padding: 6px 20px 4px; border-radius: 16px; background: rgba(10,14,20,.86); box-shadow: 0 0 0 2px rgba(255,255,255,.22);
+    white-space: nowrap; }
+  .lab b { display: block; font-weight: 800; font-size: 46px; color: #ffd166; line-height: 1.2; }
+  .lab i { display: block; font-style: normal; font-weight: 600; font-size: 28px; color: #dfe6ee; line-height: 1.2; }
+  .chip { position: absolute; padding: 8px 26px 6px; border-radius: 20px; background: rgba(10,14,20,.86); font-weight: 800; font-size: 40px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,.2); white-space: nowrap; }
+  #title { position: absolute; left: 0; right: 0; text-align: center; font-weight: 800; font-size: 96px; line-height: 1.15;
+    text-shadow: 0 5px 0 rgba(0,0,0,.5), 0 0 40px rgba(0,0,0,.6); }
+  #title small { display: block; font-size: 44px; font-weight: 600; color: #ffe1a1; }
+</style>
+</head>
+<body>
+<svg id="lines"></svg>
+<div id="labs"></div>
+<div id="chips"></div>
+<div id="title"></div>
+<div id="cap"></div>
+<script type="module">
+const D = await (await fetch('/out/overlay.json')).json();
+const VO = await (await fetch('/voice/lines.json')).json();
+const CAPS = await (await fetch('/out/captions.json')).json();
+const FPS = D.fps;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const sstep = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+const T = (id) => VO.lines.find((l) => l.id === id).start;
+const CAP_TOP = { low: 1270, top: 190, botleft: 1330, below: 1500 };
+const CHIP_POS = { rate: [null, 300], lower: [null, 1120], slow: [null, 170], note: [null, 300] };
+
+function renderAt(f) {
+  const d = D.frames[Math.min(f, D.frames.length - 1)];
+  const t = f / FPS;
+  // captions
+  const c = CAPS.find((c) => t >= c.t0 && t < c.t1);
+  const cap = $('cap');
+  if (c) {
+    const mode = d.cap === 'top' && d.scene === 'shut' ? 'botleft' : (d.cap === 'top' && d.scene === 'nozzle' ? 'botleft' : d.cap);
+    cap.style.top = CAP_TOP[mode] + 'px';
+    cap.innerHTML = '<span class="box">' + c.words.map((w, i) => {
+      const on = t >= w.t - 0.03 && (i === c.words.length - 1 || t < c.words[i + 1].t - 0.03);
+      return `<span class="${on ? 'on' : ''}">${w.w}</span>`;
+    }).join(' ') + '</span>';
+    cap.style.opacity = Math.min(1, (t - c.t0) / 0.08, (c.t1 - t) / 0.08);
+  } else cap.innerHTML = '';
+  // labels with leader lines
+  let svg = '', html = '';
+  for (const L of d.labels) {
+    const w = 40 + L.text.length * 26, dx = L.side === 'left' ? -150 - w : 150, dy = -120;
+    let bx = clamp(L.x + dx, 40, 1040 - w), by = clamp(L.y + dy - 40, 120, 1780);
+    const ex = L.side === 'left' ? bx + w : bx, ey = by + 42;
+    svg += `<g opacity="${L.a}"><line x1="${L.x}" y1="${L.y}" x2="${ex}" y2="${ey}" stroke="#fff" stroke-width="4"/>` +
+           `<circle cx="${L.x}" cy="${L.y}" r="11" fill="none" stroke="#ffd166" stroke-width="5"/><circle cx="${L.x}" cy="${L.y}" r="4" fill="#fff"/></g>`;
+    html += `<div class="lab" style="left:${bx}px;top:${by}px;opacity:${L.a}"><b>${L.text}</b>${L.sub ? `<i>${L.sub}</i>` : ''}</div>`;
+  }
+  $('lines').innerHTML = svg; $('labs').innerHTML = html;
+  // chips
+  $('chips').innerHTML = d.chips.map((c) => {
+    const [x, y] = CHIP_POS[c.id] || [null, 300];
+    const style = c.id === 'lower' ? `left:70px;top:${y}px;font-size:42px;color:#ffe1a1` : c.id === 'slow' ? `right:60px;top:${y}px;font-size:34px;color:#9fd3ff` :
+      `left:50%;transform:translateX(-50%);top:${y}px`;
+    return `<div class="chip" style="${style};opacity:${c.a}">${c.text}</div>`;
+  }).join('');
+  // titles
+  const ti = $('title');
+  const endT = d.endt;
+  if (t < T('start') - 0.45) {
+    const a = sstep((t - 1.5) / 0.35) * (1 - sstep((t - (T('start') - 0.8)) / 0.3));
+    ti.style.top = '250px'; ti.style.opacity = a; ti.style.fontSize = '88px';
+    ti.innerHTML = 'ये क्लिक कैसे होती है?';
+  } else if (t > endT) {
+    ti.style.top = '300px'; ti.style.opacity = sstep((t - endT) / 0.5); ti.style.fontSize = '120px';
+    ti.innerHTML = 'पेट्रोल का सफ़र<small>टैंकर → टैंक → पंप → मीटर → नोज़ल</small>';
+  } else { ti.style.opacity = 0; ti.innerHTML = ''; }
+}
+window.__renderAt = renderAt;
+window.__frames = D.frames.length;
+await document.fonts.ready;
+renderAt(0);
+window.__ready = true;
+</script>
+</body>
+</html>

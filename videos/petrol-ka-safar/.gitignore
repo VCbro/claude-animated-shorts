@@ -1,0 +1,7 @@
+node_modules
+out/
+audio/*.wav
+voice/*.wav
+deliver/*.mp4
+__pycache__/
+*.blend1
