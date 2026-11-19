@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Poppins, DejaVu Sans, Arial">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="55%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="b1" x1="0" x2="1"><stop offset="0" stop-color="#c62828"/><stop offset=".5" stop-color="#ef5350"/><stop offset="1" stop-color="#8e0000"/></linearGradient>
+    <linearGradient id="b2" x1="0" x2="1"><stop offset="0" stop-color="#2e7d32"/><stop offset=".5" stop-color="#66bb6a"/><stop offset="1" stop-color="#1b5e20"/></linearGradient>
+    <linearGradient id="b3" x1="0" x2="1"><stop offset="0" stop-color="#4527a0"/><stop offset=".5" stop-color="#7e57c2"/><stop offset="1" stop-color="#311b92"/></linearGradient>
+    <linearGradient id="page" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fffef8"/><stop offset="1" stop-color="#f1e8cf"/></linearGradient>
+    <radialGradient id="bub1" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#ffd54f"/><stop offset="1" stop-color="#ff8f00"/></radialGradient>
+    <radialGradient id="bub2" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#4fc3f7"/><stop offset="1" stop-color="#0277bd"/></radialGradient>
+    <radialGradient id="bub3" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#f48fb1"/><stop offset="1" stop-color="#ad1457"/></radialGradient>
+    <filter id="s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-opacity=".32"/></filter>
+  </defs>
+  <ellipse cx="300" cy="230" rx="280" ry="170" fill="url(#glow)"/>
+  <g filter="url(#s)">
+    <rect x="170" y="300" width="260" height="36" rx="6" fill="url(#b1)"/><rect x="180" y="306" width="240" height="7" fill="#fff8e1" opacity=".85"/>
+    <rect x="185" y="265" width="235" height="36" rx="6" fill="url(#b2)"/><rect x="195" y="271" width="215" height="7" fill="#fff8e1" opacity=".85"/>
+    <rect x="178" y="230" width="245" height="36" rx="6" fill="url(#b3)"/><rect x="188" y="236" width="225" height="7" fill="#fff8e1" opacity=".85"/>
+  </g>
+  <text x="300" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">GRAMMAR</text>
+  <text x="300" y="293" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">VOCABULARY</text>
+  <text x="300" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">SPEAKING · WRITING</text>
+  <g filter="url(#s)">
+    <path d="M300 95 C255 78 200 82 170 95 L170 205 C200 192 255 190 300 208 Z" fill="url(#page)" stroke="#c9b27a" stroke-width="2"/>
+    <path d="M300 95 C345 78 400 82 430 95 L430 205 C400 192 345 190 300 208 Z" fill="url(#page)" stroke="#c9b27a" stroke-width="2"/>
+  </g>
+  <text x="235" y="160" text-anchor="middle" font-size="44" font-weight="800" fill="#c62828">Aa</text>
+  <text x="365" y="158" text-anchor="middle" font-size="40" font-weight="800" fill="#1565c0">Bb</text>
+  <text x="235" y="188" text-anchor="middle" font-size="12" fill="#6d4c41">I can learn.</text>
+  <text x="365" y="188" text-anchor="middle" font-size="12" fill="#6d4c41">I will speak.</text>
+  <g filter="url(#s)">
+    <path d="M40 90 h120 a18 18 0 0 1 18 18 v34 a18 18 0 0 1 -18 18 h-80 l-22 20 v-20 h-18 a18 18 0 0 1 -18 -18 v-34 a18 18 0 0 1 18 -18z" fill="url(#bub1)"/>
+    <path d="M440 70 h120 a18 18 0 0 1 18 18 v34 a18 18 0 0 1 -18 18 h-18 v20 l-22 -20 h-80 a18 18 0 0 1 -18 -18 v-34 a18 18 0 0 1 18 -18z" fill="url(#bub2)"/>
+    <path d="M455 230 h100 a16 16 0 0 1 16 16 v30 a16 16 0 0 1 -16 16 h-16 v18 l-20 -18 h-64 a16 16 0 0 1 -16 -16 v-30 a16 16 0 0 1 16 -16z" fill="url(#bub3)"/>
+    <circle cx="80" cy="280" r="36" fill="url(#bub2)"/>
+  </g>
+  <text x="100" y="132" text-anchor="middle" font-size="22" font-weight="800" fill="#4e2a00">Hello!</text>
+  <text x="500" y="112" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">How are you?</text>
+  <text x="505" y="268" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">Thank you!</text>
+  <text x="80" y="292" text-anchor="middle" font-size="34" font-weight="800" fill="#fff">✓</text>
+</svg>
