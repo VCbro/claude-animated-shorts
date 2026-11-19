@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0638"/><stop offset="0.55" stop-color="#3b0a5c"/><stop offset="1" stop-color="#0b0218"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd23f"/><stop offset="0.45" stop-color="#ff6b3d"/><stop offset="1" stop-color="#ff2e88"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#ffe3f2"/><stop offset="1" stop-color="#ff5fae"/>
+    </linearGradient>
+    <clipPath id="circ"><circle cx="540" cy="540" r="540"/></clipPath>
+    <clipPath id="sunclip"><circle cx="540" cy="470" r="250"/></clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowc" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g clip-path="url(#circ)">
+    <rect width="1080" height="1080" fill="url(#bg)"/>
+    <!-- stars -->
+    <g fill="#fff" opacity="0.7">
+      <circle cx="150" cy="200" r="3"/><circle cx="880" cy="160" r="2.5"/><circle cx="960" cy="320" r="2"/>
+      <circle cx="110" cy="380" r="2"/><circle cx="300" cy="120" r="2"/><circle cx="760" cy="90" r="2"/>
+    </g>
+    <!-- sun with retro stripes -->
+    <g clip-path="url(#sunclip)" filter="url(#glow)">
+      <rect x="290" y="220" width="500" height="500" fill="url(#sun)"/>
+      <g fill="#3b0a5c">
+        <rect x="290" y="500" width="500" height="10"/><rect x="290" y="540" width="500" height="15"/>
+        <rect x="290" y="582" width="500" height="20"/><rect x="290" y="628" width="500" height="26"/>
+        <rect x="290" y="680" width="500" height="40"/>
+      </g>
+    </g>
+    <!-- neon grid floor -->
+    <g stroke="#00e5ff" stroke-width="3" opacity="0.75" filter="url(#glow)">
+      <line x1="0" y1="700" x2="1080" y2="700"/>
+      <line x1="0" y1="740" x2="1080" y2="740"/><line x1="0" y1="795" x2="1080" y2="795"/>
+      <line x1="0" y1="870" x2="1080" y2="870"/><line x1="0" y1="970" x2="1080" y2="970"/>
+      <line x1="540" y1="700" x2="540" y2="1080"/>
+      <line x1="540" y1="700" x2="200" y2="1080"/><line x1="540" y1="700" x2="880" y2="1080"/>
+      <line x1="540" y1="700" x2="-150" y2="1080"/><line x1="540" y1="700" x2="1230" y2="1080"/>
+    </g>
+    <rect x="0" y="700" width="1080" height="380" fill="#0b0218" opacity="0.35"/>
+    <!-- palms -->
+    <g fill="#0b0218">
+      <path d="M190 700 C200 600 205 520 225 430 L235 432 C220 520 218 610 214 700 Z"/>
+      <path d="M228 430 C180 400 120 410 80 450 C130 425 180 425 228 438 Z"/>
+      <path d="M228 430 C200 380 150 360 100 365 C150 380 190 400 226 440 Z"/>
+      <path d="M230 430 C260 380 320 365 370 380 C320 385 275 405 234 440 Z"/>
+      <path d="M232 432 C280 420 340 440 375 480 C330 455 280 445 232 442 Z"/>
+      <path d="M229 430 C230 380 245 340 275 315 C255 350 242 390 235 438 Z"/>
+      <path d="M880 700 C875 610 870 540 850 470 L860 467 C882 540 890 610 900 700 Z"/>
+      <path d="M853 468 C900 445 955 455 990 490 C945 470 900 468 856 478 Z"/>
+      <path d="M853 468 C830 425 785 410 740 418 C785 428 822 445 851 478 Z"/>
+      <path d="M856 468 C880 425 925 410 965 420 C925 428 890 445 860 478 Z"/>
+      <path d="M852 470 C810 465 760 485 735 520 C775 498 815 485 853 480 Z"/>
+    </g>
+    <!-- wordmark -->
+    <g font-family="'Anton', Impact, 'Bebas Neue', 'Arial Black', sans-serif" text-anchor="middle">
+      <text x="540" y="830" font-size="190" fill="#ff2e88" opacity="0.9" filter="url(#glowc)" letter-spacing="6">VICE</text>
+      <text x="540" y="822" font-size="190" fill="url(#txt)" stroke="#2a0040" stroke-width="6" paint-order="stroke" letter-spacing="6">VICE</text>
+      <text x="540" y="935" font-size="96" fill="#00e5ff" filter="url(#glowc)" letter-spacing="22">CLIPZ</text>
+    </g>
+    <!-- play badge -->
+    <g filter="url(#glowc)">
+      <circle cx="540" cy="250" r="52" fill="#0b0218" stroke="#00e5ff" stroke-width="6"/>
+      <path d="M522 222 L522 278 L572 250 Z" fill="#00e5ff"/>
+    </g>
+  </g>
+  <circle cx="540" cy="540" r="534" fill="none" stroke="#ff2e88" stroke-width="12" opacity="0.9"/>
+</svg>
