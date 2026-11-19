@@ -1,0 +1,361 @@
+[
+  {
+    "code": "MSN",
+    "title": "Medical-Surgical Nursing (MSN)",
+    "demo_pdf": "pdf/MSN_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/MSN_demo_cover.png",
+    "demo_pages": 10,
+    "sample_pages": 8,
+    "full_notes_pages": 158,
+    "full_mcq_pages": 0,
+    "chapters": 20,
+    "mcqs": "330+",
+    "highlights": [
+      "All body systems – disorders & nursing care",
+      "Drugs & antidotes, normal values",
+      "Emergency & critical care",
+      "330+ MCQs with answer keys"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      16,
+      52,
+      53,
+      60,
+      113,
+      151
+    ],
+    "mcq_pages_used": []
+  },
+  {
+    "code": "FON",
+    "title": "Fundamentals of Nursing",
+    "demo_pdf": "pdf/FON_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/FON_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 123,
+    "full_mcq_pages": 68,
+    "chapters": 20,
+    "mcqs": "699",
+    "highlights": [
+      "Nursing procedures step-by-step",
+      "Vital signs, asepsis, medication administration",
+      "First aid & documentation",
+      "699 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      50,
+      62,
+      75,
+      97
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      6,
+      62
+    ]
+  },
+  {
+    "code": "CHN",
+    "title": "Child Health (Paediatric) Nursing",
+    "demo_pdf": "pdf/CHN_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/CHN_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 102,
+    "full_mcq_pages": 64,
+    "chapters": 19,
+    "mcqs": "640",
+    "highlights": [
+      "Growth & development milestones",
+      "Newborn care, IMNCI, immunisation",
+      "Paediatric disorders & drug doses",
+      "640 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      4,
+      39,
+      56,
+      88
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      58
+    ]
+  },
+  {
+    "code": "OBG",
+    "title": "Midwifery & Obstetrical Nursing (OBG)",
+    "demo_pdf": "pdf/OBG_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/OBG_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 102,
+    "full_mcq_pages": 67,
+    "chapters": 20,
+    "mcqs": "670",
+    "highlights": [
+      "Pregnancy, labour & puerperium",
+      "High-risk pregnancy & obstetric emergencies",
+      "Gynaecology & family planning",
+      "670 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      4,
+      35,
+      55,
+      71
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      61
+    ]
+  },
+  {
+    "code": "COMH",
+    "title": "Community Health Nursing",
+    "demo_pdf": "pdf/COMH_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/COMH_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 78,
+    "full_mcq_pages": 58,
+    "chapters": 17,
+    "mcqs": "580",
+    "highlights": [
+      "Epidemiology & health indicators",
+      "National health programmes (latest)",
+      "Communicable diseases & IDSP",
+      "580 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      10,
+      33,
+      39,
+      61
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      52
+    ]
+  },
+  {
+    "code": "MHN",
+    "title": "Mental Health (Psychiatric) Nursing",
+    "demo_pdf": "pdf/MHN_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/MHN_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 60,
+    "full_mcq_pages": 43,
+    "chapters": 12,
+    "mcqs": "430",
+    "highlights": [
+      "Psychiatric terms & MSE",
+      "Psychopharmacology & ECT",
+      "All major disorders + MHCA 2017",
+      "430 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      10,
+      23,
+      31,
+      41
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      37
+    ]
+  },
+  {
+    "code": "PHARMA",
+    "title": "Pharmacology for Nurses",
+    "demo_pdf": "pdf/PHARMA_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/PHARMA_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 64,
+    "full_mcq_pages": 40,
+    "chapters": 10,
+    "mcqs": "400",
+    "highlights": [
+      "Dose & drip-rate calculations",
+      "All drug groups & side effects",
+      "Antidote master table, high-alert drugs",
+      "400 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      9,
+      31,
+      37,
+      50
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      34
+    ]
+  },
+  {
+    "code": "AP",
+    "title": "Anatomy & Physiology",
+    "demo_pdf": "pdf/AP_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/AP_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 66,
+    "full_mcq_pages": 46,
+    "chapters": 13,
+    "mcqs": "460",
+    "highlights": [
+      "All body systems with physiology",
+      "Normal values master table",
+      "Largest / smallest / longest table",
+      "460 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      9,
+      35,
+      44,
+      50
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      4,
+      5,
+      40
+    ]
+  },
+  {
+    "code": "MICRO",
+    "title": "Microbiology & Infection Control",
+    "demo_pdf": "pdf/MICRO_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/MICRO_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 66,
+    "full_mcq_pages": 36,
+    "chapters": 10,
+    "mcqs": "370",
+    "highlights": [
+      "Bacteria, viruses, fungi, parasites",
+      "Sterilisation, BMW 2016, hand hygiene",
+      "Vaccines, cold chain, specimen collection",
+      "370 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      9,
+      35,
+      41,
+      49
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      6,
+      7,
+      30
+    ]
+  },
+  {
+    "code": "NUTRI",
+    "title": "Nutrition & Dietetics",
+    "demo_pdf": "pdf/NUTRI_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/NUTRI_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 62,
+    "full_mcq_pages": 36,
+    "chapters": 10,
+    "mcqs": "370",
+    "highlights": [
+      "Nutrients & RDA (ICMR-NIN 2020)",
+      "Malnutrition, SAM & breastfeeding",
+      "Therapeutic diets & national programmes",
+      "370 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      4,
+      26,
+      37,
+      52
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      6,
+      7,
+      30
+    ]
+  },
+  {
+    "code": "GUJ",
+    "title": "ગુજરાતી વ્યાકરણ (Gujarati Vyakaran)",
+    "demo_pdf": "pdf/GUJ_DEMO_GSSSB.pdf",
+    "cover_image": "cover_images/GUJ_demo_cover.png",
+    "demo_pages": 13,
+    "sample_pages": 11,
+    "full_notes_pages": 59,
+    "full_mcq_pages": 45,
+    "chapters": 13,
+    "mcqs": "460",
+    "highlights": [
+      "સંધિ, સમાસ, અલંકાર, છંદ",
+      "રૂઢિપ્રયોગ, કહેવત, જોડણી",
+      "સમાનાર્થી, વિરોધી, શબ્દસમૂહ",
+      "460 MCQs + 100-Q mock test"
+    ],
+    "notes_pages_used": [
+      1,
+      2,
+      14,
+      25,
+      32,
+      37
+    ],
+    "mcq_pages_used": [
+      1,
+      2,
+      6,
+      7,
+      39
+    ]
+  }
+]
