@@ -1,0 +1,5 @@
+voice/*.wav
+out/
+audio/*.wav
+deliver/*.mp4
+node_modules
