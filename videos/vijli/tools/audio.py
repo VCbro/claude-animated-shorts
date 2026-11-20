@@ -63,7 +63,7 @@ def bowed(notes, t0, dur_each=0.9, g=0.09):
         s = int(i * dur_each * SR); out[s:s + n] += y * e
     add(score, t0, out, g)
 SC = [D * 2 * r for r in (1, 1.0595, 1.189, 1.335, 1.498, 1.587, 1.782, 2)]  # D Eb F G A Bb C D
-PHRASE = [SC[0], SC[2], SC[3], SC[4], SC[3], SC[2], SC[1], SC[0]]
+PHRASE = [SC[0], SC[2], SC[3], SC[4], SC[2], SC[0]]
 muk = os.path.join(ROOT, "voice/mukhda.mp3")
 slots = [0.6, K["pause_mukhda2"] + 0.3, K["outro"] + 0.3]
 if os.path.exists(muk):

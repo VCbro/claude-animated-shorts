@@ -171,12 +171,10 @@ function ledger(t, a, rows, o = {}) {
 // ================================================================== SCENES
 const T = (n) => A(n);
 const PI_ = K.pause_intro, PS = K.pause_storm, PM = K.pause_mukhda2, OUT = K.outro;
-function mukhda(t, a, b, y = 760) {
-  const u = win(t, a + 0.8, b - 0.3, 0.8);
-  text('<span class="guj">હાજી કાસમ, તારી વીજળી રે</span>', 960, y, { size: 74, a: u, style: 'text-shadow:0 4px 30px rgba(0,0,0,.85)' });
-  text('<span class="guj">મધદરિયે વેરણ થઈ.</span>', 960, y + 92, { size: 74, a: u, style: 'text-shadow:0 4px 30px rgba(0,0,0,.85)' });
-  text('हाजी कासम, तुम्हारी वीजळी बीच समंदर में उजड़ गई', 960, y + 182, { size: 34, a: u * R(t, a + 1.6, 0.8), color: '#f5d79b', cls: 'ttl' });
-  text('<span class="tag">पारंपरिक गुजराती लोकगीत · मुखड़ा</span>', 960, y - 80, { size: 22, a: u });
+function mukhda(t, a, b, y = 760) { // instrumental folk phrase only; the Hindi meaning on screen
+  const u = win(t, a + 0.6, b - 0.3, 0.8);
+  text('<span class="tag">पारंपरिक गुजराती लोकगीत</span>', 960, y - 40, { size: 22, a: u });
+  text('“हाजी कासम, तुम्हारी वीजळी बीच समंदर में उजड़ गई”', 960, y + 40, { size: 50, a: u * R(t, a + 1.0, 0.8), color: '#f5d79b', cls: 'ttl' });
 }
 
 // ---------- intro: the song
@@ -374,7 +372,7 @@ const SRC = [
   ['लोकगीत', 'संकलन: झवेरचंद मेघाणी, રઢિયાળી રાત — aksharnaad.com; gu.wikisource.org'],
 ];
 add(T('outro'), END + 1, (t) => {
-  const o = T('outro'), credits = o + 9;
+  const o = T('outro'), credits = o + 6;
   if (t < credits + 0.5) { card01(t, o, { cam: [[o, 960, 540, 1.0], [credits, 960, 540, 1.06]] }); shade(0.35); mukhda(t, o - 0.6, credits, 700); }
   if (t > credits - 0.5) {
     const a = R(t, credits - 0.5, 1.0);
