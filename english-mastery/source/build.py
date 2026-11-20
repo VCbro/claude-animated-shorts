@@ -115,6 +115,8 @@ def preprocess(md_text):
         prev = out[-1] if out else ''
         if is_item and prev.strip() and not re.match(r'^\s*(- |\d+\. |<|\|)', prev) and not prev.startswith('   '):
             out.append('')
+        if line.startswith('|') and prev.strip() and not prev.lstrip().startswith(('|', '<')):
+            out.append('')  # a table needs a blank line before it
         out.append(line)
     return '\n'.join(out)
 

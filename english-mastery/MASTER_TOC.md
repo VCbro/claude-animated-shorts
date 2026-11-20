@@ -4,7 +4,7 @@
 
 Status: ✅ complete · 🟡 in progress · ⬜ not started
 
-## Volume 1 – Foundation English (Part A) · Foundation
+## Volume 1 – Foundation English (Part A) · Foundation · ✅ COMPLETE
 | # | Chapter | Status |
 |---|---|---|
 | ★ | How to Use This Notebook – Study Routes & Series Map | ✅ |
@@ -12,12 +12,12 @@ Status: ✅ complete · 🟡 in progress · ⬜ not started
 | 1 | The English Alphabet: Letters, Vowels & Consonants | ✅ |
 | 2 | Letter Sounds, Syllables & Spelling Basics | ✅ |
 | 3 | Capital Letters & Punctuation | ✅ |
-| 4 | Words, Word Order, Subject & Predicate | ⬜ |
-| 5 | Phrase, Clause & Sentence | ⬜ |
-| 6 | Kinds of Sentences | ⬜ |
-| 7 | Questions, Negatives & Short Answers | ⬜ |
-| 8 | Be, Have & Do – Basic Use | ⬜ |
-| ★ | Part A Revision Quiz | ⬜ |
+| 4 | Words, Word Order, Subject & Predicate | ✅ |
+| 5 | Phrase, Clause & Sentence | ✅ |
+| 6 | Kinds of Sentences | ✅ |
+| 7 | Questions, Negatives & Short Answers | ✅ |
+| 8 | Be, Have & Do – Basic Use | ✅ |
+| ★ | Part A Revision Quiz | ✅ |
 
 ## Volume 2 – Parts of Speech (Part B) · Foundation → Intermediate
 | # | Chapter | Status |
@@ -143,4 +143,4 @@ Status: ✅ complete · 🟡 in progress · ⬜ not started
 | 93 | A–Z Topic Index | ⬜ |
 | 94 | Progress Tracker & 30-Day / 90-Day Study Plans | ⬜ |
 
-**Last completed chapter: 3 – Capital Letters & Punctuation.** Next: Chapter 4 – Words, Word Order, Subject & Predicate.
+**Last completed chapter: 8 – Be, Have & Do – Basic Use (+ Part A Revision Quiz). Volume 1 complete.** Next: Chapter 9 – Nouns: Kinds, Countable & Uncountable (Volume 2).

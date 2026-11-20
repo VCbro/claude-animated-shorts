@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" font-family="Poppins, 'Noto Sans', sans-serif">
+  <rect width="760" height="230" fill="#ffffff"/>
+  <g font-size="15" text-anchor="middle">
+    <!-- step boxes -->
+    <rect x="10" y="40" width="160" height="110" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <text x="90" y="70" font-weight="700" fill="#1565c0" font-size="18">WORD</text>
+    <text x="90" y="100" font-style="italic">train</text>
+    <text x="90" y="132" font-size="12" fill="#555">one unit of meaning</text>
+
+    <rect x="200" y="40" width="160" height="110" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="280" y="70" font-weight="700" fill="#2e7d32" font-size="18">PHRASE</text>
+    <text x="280" y="100" font-style="italic" font-size="13">the early morning train</text>
+    <text x="280" y="132" font-size="12" fill="#555">no subject + verb</text>
+
+    <rect x="390" y="40" width="170" height="110" rx="14" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+    <text x="475" y="70" font-weight="700" fill="#e65100" font-size="18">CLAUSE</text>
+    <text x="475" y="100" font-style="italic" font-size="13">when the train arrived</text>
+    <text x="475" y="132" font-size="12" fill="#555">subject + verb</text>
+
+    <rect x="590" y="40" width="160" height="110" rx="14" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+    <text x="670" y="70" font-weight="700" fill="#6a1b9a" font-size="18">SENTENCE</text>
+    <text x="670" y="96" font-style="italic" font-size="13">The train arrived</text>
+    <text x="670" y="114" font-style="italic" font-size="13">on time.</text>
+    <text x="670" y="138" font-size="12" fill="#555">complete meaning</text>
+  </g>
+  <g fill="#455a64">
+    <path d="M172 95 H192" stroke="#455a64" stroke-width="3"/><polygon points="190,87 200,95 190,103"/>
+    <path d="M362 95 H382" stroke="#455a64" stroke-width="3"/><polygon points="380,87 390,95 380,103"/>
+    <path d="M562 95 H582" stroke="#455a64" stroke-width="3"/><polygon points="580,87 590,95 580,103"/>
+  </g>
+  <text x="380" y="195" text-anchor="middle" font-size="14" fill="#37474f">bigger and more complete →  a sentence needs a subject, a finite verb and complete meaning</text>
+</svg>

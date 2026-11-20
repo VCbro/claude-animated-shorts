@@ -8,7 +8,7 @@
 
 | Volume | PDF | DOCX | Status |
 |---|---|---|---|
-| 1 – Foundation English | [`pdf/EMN_Vol01_Foundation_English.pdf`](pdf/EMN_Vol01_Foundation_English.pdf) | [`docx/EMN_Vol01_Foundation_English.docx`](docx/EMN_Vol01_Foundation_English.docx) | 🟡 in progress (How to use, Diagnostic Test, Chapters 1–3 done) |
+| 1 – Foundation English | [`pdf/EMN_Vol01_Foundation_English.pdf`](pdf/EMN_Vol01_Foundation_English.pdf) | [`docx/EMN_Vol01_Foundation_English.docx`](docx/EMN_Vol01_Foundation_English.docx) | ✅ complete – 89 pages (How to use, Diagnostic Test, Chapters 1–8, Part A Revision Quiz) |
 
 ## Rebuild
 ```bash
