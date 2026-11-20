@@ -84,8 +84,8 @@ function bridge(t, o = {}) {
     const top = [], bot = [];
     for (let x = x0; x <= x1 + 0.01; x += 4) { top.push(P(x, archT(x))); bot.push(P(x, archB(x))); }
     ctx.beginPath(); top.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); bot.reverse().forEach(([x, y]) => ctx.lineTo(x, y)); ctx.closePath();
-    ctx.fillStyle = 'rgba(30,34,42,.35)'; ctx.fill();
-    line(top.map((p) => p), steel, 7, glow * 30); line(bot.reverse(), steel, 7, glow * 30);
+    ctx.fillStyle = 'rgba(40,46,58,.7)'; ctx.fill();
+    line(top.map((p) => p), steel, 10, glow * 30); line(bot.reverse(), steel, 10, glow * 30);
     for (let x = Math.ceil(x0 / 16.7) * 16.7; x <= x1; x += 16.7) { const k = Math.round(x / 16.7);
       line([P(x, archB(x)), P(x + (k % 2 ? 16.7 : -16.7) * 0.5, archT(x + (k % 2 ? 8 : -8)))], dark, 3); line([P(x, archB(x)), P(x, archT(x))], dark, 3); }
   };
@@ -105,17 +105,17 @@ function bridge(t, o = {}) {
   }
 }
 function trainOn(xm, o = {}) { // a modern train on the deck, front at xm (metres), moving right
-  const cars = o.cars ?? 8, len = 23;
+  const cars = o.cars ?? 8, len = 52; // drawn ~2.3x real size so it reads at this scale
   for (let i = 0; i < cars; i++) {
     const x1 = xm - i * (len + 1), x0 = x1 - len; if (x1 < BL - 5 || x0 > BR + 5) continue;
-    const [a, y] = P(x0, DECK + 1), [b] = P(x1, DECK + 1), hgt = 4.2 * S;
+    const [a, y] = P(x0, DECK + 1), [b] = P(x1, DECK + 1), hgt = 10 * S;
     ctx.save(); ctx.beginPath();
     if (i === 0) { ctx.moveTo(a, y); ctx.lineTo(b - hgt * 0.4, y); ctx.quadraticCurveTo(b + hgt * 0.6, y, b - hgt * 0.2, y - hgt); ctx.lineTo(a, y - hgt); ctx.closePath(); }
     else ctx.rect(a + 1, y - hgt, b - a - 2, hgt);
     ctx.fillStyle = lin(0, y - hgt, 0, y, [[0, '#ffffff'], [0.6, '#e9edf3'], [1, '#9aa4b2']]); ctx.fill(); ctx.restore();
     ctx.fillStyle = '#1f4fa3'; ctx.fillRect(a + 1, y - hgt * 0.42, b - a - 2, hgt * 0.16);
     ctx.fillStyle = '#27344a'; for (let k = 0; k < 4; k++) ctx.fillRect(a + 4 + k * (b - a - 8) / 4, y - hgt * 0.85, (b - a - 8) / 4 - 3, hgt * 0.3);
-    if (i === 0) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = rad(b, y - hgt * 0.4, 0, 60, [[0, 'rgba(255,240,200,.8)'], [1, 'rgba(255,240,200,0)']]); ctx.beginPath(); ctx.arc(b, y - hgt * 0.4, 60, 0, TAU); ctx.fill(); ctx.restore(); }
+    if (i === 0) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = rad(b, y - hgt * 0.4, 0, 34, [[0, 'rgba(255,240,200,.9)'], [1, 'rgba(255,240,200,0)']]); ctx.beginPath(); ctx.arc(b, y - hgt * 0.4, 34, 0, TAU); ctx.fill(); ctx.restore(); }
   }
 }
 function dim(x0, y0, x1, y1, txt, a, o = {}) { // dimension line in world px with label (screen text)
@@ -159,7 +159,7 @@ add(0, T('h_go'), (t) => {
   camKeys(t, [[0, 960, 640, 1.25], [T('h_this'), 960, 560, 0.86], [T('h_359'), 960, 700, 0.8], [T('h_world'), 960, 560, 0.86], [T('h_go'), 960, 560, 0.9]]);
   peaks(2, t); gorge(t); bridge(t);
   trainOn(BL + (t - 0.5) * 32, { cars: 8 });
-  fog(t, 760, 1.0, 10, 14);
+  fog(t, 780, 0.55, 8, 14);
   dim(...P(-80, 0), ...P(-80, DECK), '359 मीटर', win(t, T('h_359'), T('h_world') + 0.6, 0.4), { dx: -120 });
   eiffel(80, R(t, T('h_eiffel'), 1.2) * (1 - R(t, T('h_world') + 0.4, 0.5)));
   label('एफ़िल टावर ~330 m', ...P(80, 330), 140, -90, win(t, T('h_eiffel') + 0.8, T('h_world') + 0.4, 0.3));
@@ -173,7 +173,7 @@ add(0, T('h_go'), (t) => {
   text('आँधी? भूकंप? <span style="color:#ffd166">फिर भी खड़ा कैसे?</span>', 960, 190, { size: 76, cls: 'ttl', a: q });
 });
 add(T('h_go'), T('c1'), (t) => {
-  valley(t, { fog: 1.2 }); camKeys(t, [[T('h_go'), 960, 560, 0.9], [T('c1'), 960, 520, 0.95]]); peaks(2, t); gorge(t); bridge(t); trainOn(BL + (t - 0.5) * 32); fog(t, 700, 1.2, 12, 14);
+  valley(t, { fog: 1.2 }); camKeys(t, [[T('h_go'), 960, 560, 0.9], [T('c1'), 960, 520, 0.95]]); peaks(2, t); gorge(t); bridge(t); trainOn(BL + (t - 0.5) * 32); fog(t, 760, 0.7, 10, 14);
   screen(); const v = R(t, T('h_go') + 0.2, 0.7);
   ctx.fillStyle = `rgba(5,8,18,${0.35 * v})`; ctx.fillRect(0, 0, W, H);
   text('<span class="chap" style="font-size:34px">एक डॉक्यूमेंट्री</span>', 960, 360, { size: 34, a: v });
@@ -304,7 +304,7 @@ add(T('c4'), T('c5'), (t) => {
   if (rd > 0) { const [ax, ay] = P(-90, archT(-90)), [bx, by] = P(-90, archB(-90)); ctx.save(); ctx.globalAlpha = rd; line([[ax, ay], [bx, by]], '#ff6b5b', 9, 20); ctx.restore();
     const pts = []; for (let k = 0; k <= 30; k++) { const x = -HALF + k * (2 * HALF / 30); pts.push(P(x, archT(x))); } flow(pts, t, '#7dffb0', { a: rd, speed: 300, gap: 34, r: 5 }); }
   screen();
-  if (quake > 0) { panel(1360, 80, 500, 200, quake); const pts = []; for (let i = 0; i <= 120; i++) { const x = 1390 + i * 3.7; pts.push([x, 190 + 60 * quake * Math.sin(i * 0.9 + t * 30) * Math.exp(-((i - 60) / 40) ** 2)]); } ctx.save(); ctx.globalAlpha = quake; line(pts, '#ff6b5b', 3, 10); ctx.restore(); text('भूकंप-संवेदनशील इलाक़ा', 1610, 110, { size: 28, a: quake, color: '#ffb0a8' }); }
+  if (quake > 0) { panel(1360, 80, 500, 200, quake); const pts = []; for (let i = 0; i <= 120; i++) { const x = 1390 + i * 3.7; pts.push([x, 190 + 60 * quake * Math.sin(i * 0.9 + t * 30) * Math.exp(-(((i - 60) / 40) ** 2))]); } ctx.save(); ctx.globalAlpha = quake; line(pts, '#ff6b5b', 3, 10); ctx.restore(); text('भूकंप-संवेदनशील इलाक़ा', 1610, 110, { size: 28, a: quake, color: '#ffb0a8' }); }
   // chord cross-section inset: hollow steel box filling with concrete
   const cs = win(t, T('c4_concrete'), T('c4_redund') + 0.2, 0.4);
   panel(1260, 560, 600, 380, cs);
@@ -343,12 +343,12 @@ add(T('c5'), T('n0'), (t) => {
   }
   if (t < T('c5_window') - 0.2) {
     valley(t); camKeys(t, [[T('c5_2025') - 0.2, 960, 560, 0.86], [T('c5_window'), 1000, 560, 0.95]]); peaks(2, t); gorge(t); bridge(t, { glow: 0.3 });
-    trainOn(BL + (t - T('c5_2025') + 2) * 70, { cars: 8 }); fog(t, 760, 0.9, 10, 14);
+    trainOn(BL + (t - T('c5_2025') + 2) * 70, { cars: 8 }); fog(t, 780, 0.55, 8, 14);
     screen(); text('<span class="big" style="color:#ffd166">2025</span> · कश्मीर घाटी के लिए नियमित ट्रेनें', 960, 160, { size: 64, cls: 'ttl', a: R(t, T('c5_2025'), 0.5) });
     return;
   }
   // train-window view: the valley far below, clouds drifting
-  valley(t, { fog: 1.6 }); cam(960 + (t - T('c5_window')) * 30, 520, 1.25); peaks(2, t); gorge(t); fog(t, 640, 1.4, 14, 40);
+  valley(t, { fog: 0.6 }); cam(960 + (t - T('c5_window')) * 30, 560, 1.15); peaks(2, t); gorge(t); fog(t, 700, 0.55, 8, 40);
   screen();
   ctx.fillStyle = '#2a2f38'; ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.roundRect(260, 150, 1400, 760, 90); ctx.fill('evenodd');
   ctx.strokeStyle = '#59616c'; ctx.lineWidth = 18; rr(260, 150, 1400, 760, 90); ctx.stroke();
@@ -359,7 +359,7 @@ add(T('c5'), T('n0'), (t) => {
 add(T('n0'), END + 1, (t) => {
   valley(t, { fog: 1.1 });
   camKeys(t, [[T('n0'), 960, 600, 1.15], [T('n_title'), 960, 560, 0.84], [END, 960, 560, 0.8]]);
-  peaks(2, t); gorge(t); bridge(t, { glow: R(t, T('n_proud'), 1.0) * 0.4 }); trainOn(BL + (t - T('n0')) * 34, { cars: 8 }); fog(t, 760, 1.1, 10, 14);
+  peaks(2, t); gorge(t); bridge(t, { glow: R(t, T('n_proud'), 1.0) * 0.4 }); trainOn(BL + (t - T('n0')) * 34, { cars: 8 }); fog(t, 780, 0.6, 8, 14);
   screen();
   const v = R(t, T('n_title'), 0.8);
   ctx.fillStyle = `rgba(5,8,18,${0.3 * v})`; ctx.fillRect(0, 0, W, H);

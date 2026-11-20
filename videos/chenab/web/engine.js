@@ -172,7 +172,7 @@ export function renderAt(t) {
     main.setTransform(1, 0, 0, 1, 0, 0); main.globalAlpha = s.a <= 0 ? 1 : a; main.drawImage(c, 0, 0, W, H);
   });
   ctx = main; main.globalAlpha = 1;
-  main.save(); main.globalCompositeOperation = 'overlay'; main.globalAlpha = 0.07;
+  main.save(); main.globalCompositeOperation = 'overlay'; main.globalAlpha = 0.035;
   const ox = Math.floor(rnd(Math.floor(t * 30)) * 256), oy = Math.floor(rnd(Math.floor(t * 30) + 5) * 256);
   for (let x = -ox; x < W; x += 256) for (let y = -oy; y < H; y += 256) main.drawImage(grain, x, y);
   main.restore();
