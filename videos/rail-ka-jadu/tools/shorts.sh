@@ -22,7 +22,8 @@ body{{margin:0;width:1080px;height:1920px;background:transparent;font-family:B}}
 .t b{{color:#ffd166}}</style><div class=t>{t1}<br><b>{t2}</b></div>"""
 with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium-1243/chrome-linux64/chrome")
-    p = b.new_page(viewport={"width": 1080, "height": 1920}); p.set_content(html); p.wait_for_timeout(300)
+    hp = out + ".html"; open(hp, "w").write("<meta charset=utf-8>" + html)
+    p = b.new_page(viewport={"width": 1080, "height": 1920}); p.goto("file://" + hp); p.evaluate("document.fonts.ready.then(()=>1)"); p.wait_for_timeout(300)
     p.screenshot(path=out, omit_background=True); b.close()
 PY
   ffmpeg -y -loglevel error -ss "$ss" -to "$to" -i "$SRC" -i "$TT.png" -filter_complex \
