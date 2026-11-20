@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" font-family="Poppins, 'Noto Sans', 'Noto Sans Devanagari', sans-serif">
+<rect width="780" height="200" fill="#fff"/>
+<rect x="8" y="20" width="82" height="120" rx="12" fill="#ad1457" opacity="0.12" stroke="#ad1457" stroke-width="2"/>
+<text x="49.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#ad1457">O</text>
+<text x="49.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ad1457">Opinion</text>
+<text x="49.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">राय</text>
+<text x="49.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">lovely</text>
+<rect x="96" y="20" width="82" height="120" rx="12" fill="#6a1b9a" opacity="0.12" stroke="#6a1b9a" stroke-width="2"/>
+<text x="137.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#6a1b9a">S</text>
+<text x="137.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6a1b9a">Size</text>
+<text x="137.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">आकार</text>
+<text x="137.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">small</text>
+<rect x="184" y="20" width="82" height="120" rx="12" fill="#283593" opacity="0.12" stroke="#283593" stroke-width="2"/>
+<text x="225.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#283593">A</text>
+<text x="225.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#283593">Age</text>
+<text x="225.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">उम्र</text>
+<text x="225.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">old</text>
+<rect x="272" y="20" width="82" height="120" rx="12" fill="#0277bd" opacity="0.12" stroke="#0277bd" stroke-width="2"/>
+<text x="313.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#0277bd">S</text>
+<text x="313.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0277bd">Shape</text>
+<text x="313.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">आकृति</text>
+<text x="313.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">round</text>
+<rect x="360" y="20" width="82" height="120" rx="12" fill="#00838f" opacity="0.12" stroke="#00838f" stroke-width="2"/>
+<text x="401.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#00838f">C</text>
+<text x="401.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#00838f">Colour</text>
+<text x="401.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">रंग</text>
+<text x="401.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">brown</text>
+<rect x="448" y="20" width="82" height="120" rx="12" fill="#2e7d32" opacity="0.12" stroke="#2e7d32" stroke-width="2"/>
+<text x="489.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#2e7d32">O</text>
+<text x="489.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2e7d32">Origin</text>
+<text x="489.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">मूल</text>
+<text x="489.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">Indian</text>
+<rect x="536" y="20" width="82" height="120" rx="12" fill="#ef6c00" opacity="0.12" stroke="#ef6c00" stroke-width="2"/>
+<text x="577.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#ef6c00">M</text>
+<text x="577.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ef6c00">Material</text>
+<text x="577.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">पदार्थ</text>
+<text x="577.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">wooden</text>
+<rect x="624" y="20" width="82" height="120" rx="12" fill="#c62828" opacity="0.12" stroke="#c62828" stroke-width="2"/>
+<text x="665.0" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#c62828">P</text>
+<text x="665.0" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c62828">Purpose</text>
+<text x="665.0" y="92" text-anchor="middle" font-size="12" fill="#5d4037">उपयोग</text>
+<text x="665.0" y="124" text-anchor="middle" font-size="14" font-style="italic" fill="#263238">dining</text>
+<rect x="712" y="20" width="62" height="120" rx="12" fill="#37474f"/><text x="743" y="85" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">NOUN</text><text x="743" y="124" text-anchor="middle" font-size="13" font-style="italic" fill="#fff">table</text>
+<text x="390" y="175" text-anchor="middle" font-size="15" fill="#37474f">a lovely small old round brown Indian wooden dining table  →  usually only 2–3 adjectives</text></svg>

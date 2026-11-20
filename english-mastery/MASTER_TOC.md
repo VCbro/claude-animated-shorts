@@ -21,22 +21,23 @@ Status: ✅ complete · 🟡 in progress · ⬜ not started
 | 8 | Be, Have & Do – Basic Use | ✅ |
 | ★ | Part A Revision Quiz | ✅ |
 
-## Volume 2 – Parts of Speech (Part B) · Foundation → Intermediate
+## Volume 2 – Parts of Speech (Part B) · Foundation → Intermediate · ✅ COMPLETE
 | # | Chapter | Status |
 |---|---|---|
-| 9 | Nouns: Kinds, Countable & Uncountable | ⬜ |
-| 10 | Singular, Plural & Gender | ⬜ |
-| 11 | Possessives | ⬜ |
-| 12 | Pronouns & Pronoun Reference | ⬜ |
-| 13 | Articles: A, An, The & Zero Article | ⬜ |
-| 14 | Determiners & Quantifiers (some/any, much/many, few/a few, little/a little, each/every) | ⬜ |
-| 15 | Adjectives & Adjective Order | ⬜ |
-| 16 | Degrees of Comparison | ⬜ |
-| 17 | Adverbs & Their Position | ⬜ |
-| 18 | Prepositions (incl. between/among, dependent prepositions) | ⬜ |
-| 19 | Conjunctions | ⬜ |
-| 20 | Interjections | ⬜ |
-| ★ | Part B Revision Quiz | ⬜ |
+| ★ | About this Volume + Quick check of Volume 1 | ✅ |
+| 9 | Nouns: Kinds, Countable & Uncountable | ✅ |
+| 10 | Singular, Plural & Gender | ✅ |
+| 11 | Possessives | ✅ |
+| 12 | Pronouns & Pronoun Reference | ✅ |
+| 13 | Articles: A, An, The & Zero Article | ✅ |
+| 14 | Determiners & Quantifiers (some/any, much/many, few/a few, little/a little, each/every) | ✅ |
+| 15 | Adjectives & Adjective Order | ✅ |
+| 16 | Degrees of Comparison | ✅ |
+| 17 | Adverbs & Their Position | ✅ |
+| 18 | Prepositions (incl. between/among, dependent prepositions) | ✅ |
+| 19 | Conjunctions | ✅ |
+| 20 | Interjections | ✅ |
+| ★ | Part B Revision Quiz | ✅ |
 
 ## Volume 3 – Verbs, Tenses & Sentence Building (Part C) · Intermediate
 | # | Chapter | Status |
@@ -145,4 +146,4 @@ Status: ✅ complete · 🟡 in progress · ⬜ not started
 | 93 | A–Z Topic Index | ⬜ |
 | 94 | Progress Tracker & 30-Day / 90-Day Study Plans | ⬜ |
 
-**Last completed chapter: 8 – Be, Have & Do – Basic Use (+ Part A Revision Quiz). Volume 1 complete.** Next: Chapter 9 – Nouns: Kinds, Countable & Uncountable (Volume 2).
+**Last completed chapter: 20 – Interjections (+ Part B Revision Quiz). Volumes 1–2 complete.** Next: Chapter 21 – Main & Helping Verbs, Verb Forms (Volume 3).

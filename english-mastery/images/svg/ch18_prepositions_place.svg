@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" font-family="Poppins, 'Noto Sans', 'Noto Sans Devanagari', sans-serif">
+<rect width="800" height="330" fill="#fff"/>
+<rect x="10" y="10" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="72" y="40" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<rect x="77" y="52" width="50" height="34" fill="#d7ccc8"/>
+<circle cx="102" cy="70" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="102" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">in</text>
+<text x="102" y="155" text-anchor="middle" font-size="12" fill="#8a4b00">अंदर</text>
+<rect x="207" y="10" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="269" y="40" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="299" cy="29" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="299" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">on</text>
+<text x="299" y="155" text-anchor="middle" font-size="12" fill="#8a4b00">ऊपर (सतह)</text>
+<rect x="404" y="10" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="466" y="40" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="496" cy="102" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="496" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">under</text>
+<text x="496" y="155" text-anchor="middle" font-size="12" fill="#8a4b00">नीचे</text>
+<rect x="601" y="10" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="663" y="40" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="693" cy="22" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="693" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">above</text>
+<text x="693" y="155" text-anchor="middle" font-size="12" fill="#8a4b00">ऊपर (हवा में)</text>
+<rect x="10" y="170" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="25" y="200" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<rect x="120" y="200" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="102" cy="238" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="102" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">between</text>
+<text x="102" y="315" text-anchor="middle" font-size="12" fill="#8a4b00">दो के बीच</text>
+<rect x="207" y="170" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="269" y="200" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="344" cy="238" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="299" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">next to</text>
+<text x="299" y="315" text-anchor="middle" font-size="12" fill="#8a4b00">बगल में</text>
+<rect x="404" y="170" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<rect x="466" y="200" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<circle cx="496" cy="252" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<text x="496" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">in front of</text>
+<text x="496" y="315" text-anchor="middle" font-size="12" fill="#8a4b00">सामने</text>
+<rect x="601" y="170" width="185" height="150" rx="12" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.5"/>
+<circle cx="711" cy="198" r="11" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+<rect x="663" y="200" width="60" height="50" rx="4" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/>
+<text x="693" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#0d47a1">behind</text>
+<text x="693" y="315" text-anchor="middle" font-size="12" fill="#8a4b00">पीछे</text>
+</svg>
