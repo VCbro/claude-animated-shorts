@@ -1,0 +1,56 @@
+[
+ {
+  "i": 0,
+  "text": "When you turn the key in the ignition,",
+  "start": 0.0,
+  "dur": 1.711
+ },
+ {
+  "i": 1,
+  "text": "it completes a circuit to the battery,",
+  "start": 1.951,
+  "dur": 1.764
+ },
+ {
+  "i": 2,
+  "text": "which sends a burst of electricity to the starter motor.",
+  "start": 3.835,
+  "dur": 2.963
+ },
+ {
+  "i": 3,
+  "text": "The starter spins the flywheel, turning the crankshaft and moving the pistons up and down.",
+  "start": 6.918,
+  "dur": 4.766
+ },
+ {
+  "i": 4,
+  "text": "As they move, fuel injectors spray gasoline into the cylinders.",
+  "start": 11.804,
+  "dur": 3.813
+ },
+ {
+  "i": 5,
+  "text": "Then the spark plugs fire,",
+  "start": 15.737,
+  "dur": 1.38
+ },
+ {
+  "i": 6,
+  "text": "igniting the fuel in a small, controlled explosion.",
+  "start": 17.237,
+  "dur": 2.907
+ },
+ {
+  "i": 7,
+  "text": "That blast shoves the piston down, and the engine keeps spinning on its own.",
+  "start": 20.264,
+  "dur": 4.139
+ },
+ {
+  "i": 8,
+  "text": "The starter lets go, and the car is running.",
+  "start": 24.523,
+  "dur": 2.482
+ }
+]
