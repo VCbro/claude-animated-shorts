@@ -87,11 +87,20 @@ def idx_of(phrase, after_i=0):
     raise SystemExit("warp phrase not found: " + phrase)
 i_never = idx_of("वैतरणा बंबई नहीं पहुँची।") + 3
 i_again = idx_of("अब मुखड़ा एक बार फिर सुनिए।") + 5
-PAUSES = [dict(name="intro", voice_t=0.0, dur=6.5), dict(name="storm", voice_t=E[i_never] + 0.25, dur=11.0),
-          dict(name="mukhda2", voice_t=E[i_again] + 0.2, dur=6.5)]
+from scipy.io import wavfile as _wf
+_sr, _a = _wf.read(P("voice/v16.wav")); _a = _a.astype(float)
+def quiet(t, span=0.45):  # quietest 20 ms point near t (a real gap between words)
+    best, bt = 1e18, t
+    for k in range(int((t - span) * 100), int((t + span) * 100)):
+        i = int(k / 100 * _sr); e = float((_a[i:i + int(0.02 * _sr)] ** 2).mean()) if i > 0 else 1e18
+        if e < best: best, bt = e, k / 100
+    return bt
+PAUSES = [dict(name="intro", voice_t=0.0, dur=6.5), dict(name="storm", voice_t=quiet(E[i_never]), dur=11.0),
+          dict(name="mukhda2", voice_t=quiet(E[i_again]), dur=6.5)]
 def warp(x):
     return x + sum(p["dur"] for p in PAUSES if x >= p["voice_t"] - 1e-6)
 T = [warp(x) for x in T]; E = [warp(x) for x in E]
+E = [min(e, t0 + 2.5) for t0, e in zip(T, E)]  # a word never spans a pause
 OUTRO = 30.0
 FILM_END = warp(DUR) + OUTRO
 for p in PAUSES: p["film_t"] = round(warp(p["voice_t"]) - p["dur"], 3)

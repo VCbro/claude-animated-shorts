@@ -59,13 +59,13 @@ function paperRect(x, y, w, h, o = {}) {
 }
 
 // ---------- archive card for photo 01 (aspect kept)
-const P1 = { w: 1060 };
+const P1 = { w: 900 };
 function card01(t, a, o = {}) {
   desk();
   const im = IMG[1], pw = P1.w, ph = pw * im.height / im.width;
   const cw = pw + 90, chh = ph + 190;
   camKeys(t, o.cam || [[a, 960, 540, 1.0], [a + 12, 960, 540, 1.06]]);
-  const cx = 960 - cw / 2, cy = 520 - chh / 2;
+  const cx = 960 - cw / 2, cy = 470 - chh / 2;
   paperRect(cx, cy, cw, chh);
   ctx.save(); ctx.fillStyle = '#1a140e'; ctx.fillRect(cx + 45 - 3, cy + 45 - 3, pw + 6, ph + 6);
   ctx.filter = 'sepia(.25) contrast(1.05)'; ctx.drawImage(im, cx + 45, cy + 45, pw, ph); ctx.filter = 'none'; ctx.restore();
@@ -97,13 +97,13 @@ function report(t, a, keys, hl = {}) {
   const under = (u0, u1, v, a2) => { if (a2 <= 0.01) return; const [x0, y0] = Q(u0, v), [x1] = Q(u0 + (u1 - u0) * clamp(a2), v);
     ctx.save(); ctx.strokeStyle = 'rgba(200,40,30,.85)'; ctx.lineWidth = 3 / CAM.z; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y0); ctx.stroke(); ctx.restore(); };
   // dim everything except row 3 when focused
-  if (hl.dim) { ctx.save(); ctx.fillStyle = `rgba(20,12,4,${0.45 * hl.dim})`; const [x0, y0] = Q(225, 505), [x1, y1] = Q(812, 568);
+  if (hl.dim) { ctx.save(); ctx.fillStyle = `rgba(20,12,4,${0.45 * hl.dim})`; const [x0, y0] = Q(296, 350), [x1, y1] = Q(790, 400);
     ctx.fillRect(x, y, w, y0 - y); ctx.fillRect(x, y1, w, y + h - y1); ctx.fillRect(x, y0, x0 - x, y1 - y0); ctx.fillRect(x1, y0, x + w - x1, y1 - y0); ctx.restore(); }
-  box(355, 168, 505, 192, hl.head || 0); box(250, 196, 690, 232, hl.head || 0);
-  box(228, 508, 812, 566, hl.row || 0);
-  box(268, 512, 512, 530, hl.name || 0, 'rgba(200,40,30,');
-  under(525, 805, 527, hl.cyc || 0);
-  under(525, 805, 540, hl.sup || 0); under(525, 805, 553, hl.sup2 || 0); under(525, 690, 565, hl.sup3 || 0);
+  box(360, 126, 505, 150, hl.head || 0); box(255, 150, 705, 180, hl.head || 0);
+  box(298, 351, 788, 399, hl.row || 0);
+  box(392, 354, 474, 369, hl.name || 0, 'rgba(200,40,30,');
+  under(525, 782, 365.5, hl.cyc || 0);
+  under(528, 782, 375, hl.sup || 0); under(528, 782, 384.5, hl.sup2 || 0); under(528, 652, 393.5, hl.sup3 || 0);
   tag(tagOf(3), t, a);
   return Q;
 }
@@ -122,7 +122,7 @@ function sub(pts, u) { const P = pts.map((p) => PX(...p)); let L = 0; const seg 
   let s = clamp(u) * L; const out = [P[0]]; for (let i = 1; i < P.length; i++) { if (s >= seg[i - 1]) { out.push(P[i]); s -= seg[i - 1]; } else { const f = s / seg[i - 1]; out.push([lerp(P[i - 1][0], P[i][0], f), lerp(P[i - 1][1], P[i][1], f)]); break; } } return out; }
 function mapBase() {
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#1a130c'; ctx.fillRect(0, 0, W, H); ctx.restore();
-  const [x0, y0] = PX(67.6, 24.6), [x1, y1] = PX(74, 18.2);
+  const [x0, y0] = PX(66.0, 25.6), [x1, y1] = PX(75.5, 17.0);
   ctx.save(); ctx.fillStyle = ctx.createPattern(PAPER, 'repeat'); ctx.fillRect(x0, y0, x1 - x0, y1 - y0);
   ctx.fillStyle = 'rgba(86,120,118,.32)'; ctx.fillRect(x0, y0, x1 - x0, y1 - y0);                       // sea tint
   for (let i = 0; i < 26; i++) { ctx.strokeStyle = 'rgba(60,90,90,.12)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x0, y0 + i * 80); ctx.bezierCurveTo(x0 + 600, y0 + i * 80 - 20, x0 + 1200, y0 + i * 80 + 20, x1, y0 + i * 80); ctx.stroke(); }
@@ -208,7 +208,8 @@ add(T('p_photo'), T('b_1885'), (t) => {
   label('डेक पर लोग', ...P(205, 118), 130, -120, win(t, T('p_deck'), T('p_last') + 0.5, 0.4));
   label('VAITARNA', ...P(258, 152), 120, 110, R(t, T('p_name') - 0.2, 0.4), 'जहाज़ बनाने वालों के रिकॉर्ड का नाम: वैतरणा');
   screen();
-  text('आखिरी यात्रा से पहले की तस्वीर', 960, 120, { size: 46, cls: 'ttl', a: win(t, T('p_last'), T('p_name') + 0.8, 0.5) });
+  const la = win(t, T('p_last'), T('p_name') + 0.8, 0.5); panel(610, 70, 700, 90, la, 'rgba(20,14,8,.85)');
+  text('आखिरी यात्रा से पहले की तस्वीर', 960, 115, { size: 44, cls: 'ttl', a: la });
 });
 // ---------- 1885, Grangemouth
 add(T('b_1885'), T('b_light'), (t) => {
@@ -222,7 +223,7 @@ add(T('b_1885'), T('b_light'), (t) => {
 add(T('b_light'), T('d_date'), (t) => {
   card01(t, T('b_light'), { cam: [[T('b_light'), 960, 540, 1.0], [T('d_date'), 960, 520, 1.08]], capA: 0.5 });
   ctx.save(); ctx.globalCompositeOperation = 'lighter'; const g = R(t, T('b_light') + 0.5, 1.2) * (0.85 + 0.15 * Math.sin(t * 3));
-  for (const [u, v] of [[140, 112], [180, 112], [220, 114], [100, 118]]) { const x = 960 - 575 + 45 + u / 320 * 1060, y = 520 - (1060 * 214 / 320 + 190) / 2 + 45 + v / 214 * (1060 * 214 / 320);
+  for (const [u, v] of [[140, 112], [180, 112], [220, 114], [100, 118]]) { const x = 960 - (900 + 90) / 2 + 45 + u / 320 * 900, y = 470 - (900 * 214 / 320 + 190) / 2 + 45 + v / 214 * (900 * 214 / 320);
     ctx.fillStyle = rad(x, y, 0, 70, [[0, `rgba(255,230,160,${0.55 * g})`], [1, 'rgba(255,230,160,0)']]); ctx.beginPath(); ctx.arc(x, y, 70, 0, TAU); ctx.fill(); }
   ctx.restore();
   screen();
@@ -281,8 +282,8 @@ add(T('x_never'), T('r_page'), (t) => {
 // ---------- the inquiry report
 add(T('r_page'), T('w_where'), (t) => {
   const Q0 = 960;
-  const keys = [[T('r_page'), 960, 540, 1.0], [T('r_head') + 0.2, 960, 300, 1.7], [T('r_row') - 0.2, 960, 300, 1.7], [T('r_row') + 0.8, 1010, 470, 2.3],
-                [T('r_court'), 1150, 470, 2.6], [T('r_next'), 1150, 482, 2.6], [T('r_future'), 1100, 480, 2.2], [T('w_where'), 1050, 480, 2.0]];
+  const keys = [[T('r_page'), 960, 540, 1.0], [T('r_head') + 0.2, 960, 170, 1.9], [T('r_row') - 0.2, 960, 200, 1.7], [T('r_row') + 0.8, 1050, 352, 2.3],
+                [T('r_court'), 1090, 350, 2.8], [T('r_next'), 1090, 356, 2.8], [T('r_future'), 1100, 356, 2.4], [T('w_where'), 1060, 356, 2.2]];
   report(t, T('r_page'), keys, { head: win(t, T('r_head'), T('r_row'), 0.4), row: R(t, T('r_row'), 0.4), dim: R(t, T('r_row') + 0.4, 0.8),
     name: win(t, T('r_spell'), T('r_court') + 0.6, 0.3), cyc: (t - T('r_cyclone')) / 1.2, sup: (t - T('r_super') - 0.3) / 1.4, sup2: (t - T('r_super') - 1.4) / 1.4, sup3: (t - T('r_super') - 2.6) / 1.0 });
   screen();
@@ -327,7 +328,7 @@ add(T('w_deck'), T('s_report'), (t) => {
 // ---------- report vs song
 add(T('s_report'), T('s_baraat'), (t) => {
   if (t < T('s_song') + 0.2) {
-    report(t, T('s_report'), [[T('s_report'), 1010, 480, 2.0], [T('s_song'), 1010, 480, 2.1]], { row: 1, dim: 1 });
+    report(t, T('s_report'), [[T('s_report'), 1050, 352, 2.0], [T('s_song'), 1050, 352, 2.1]], { row: 1, dim: 1 });
   } else seq(t, [[16, T('s_song') - 0.2, T('s_baraat'), { z0: 1.0, z1: 1.08, f0: [0.5, 0.5] }]]);
 });
 add(T('s_baraat'), T('k_calls'), (t) => {
@@ -360,7 +361,7 @@ add(T('u_again'), T('e_road'), (t) => {
 add(T('e_road'), T('outro'), (t) => {
   if (t < T('e_photo')) seq(t, [[5, T('e_road') - 0.4, T('e_home'), { z0: 1.0, z1: 1.15, f0: [0.66, 0.5], f1: [0.68, 0.45] }], [14, T('e_home'), T('e_photo'), { z0: 1.12, z1: 1.02, f0: [0.45, 0.55] }]]);
   else if (t < T('e_report')) card01(t, T('e_photo'), { cam: [[T('e_photo'), 960, 520, 1.12], [T('e_report'), 960, 540, 1.0]] });
-  else if (t < T('e_guj')) report(t, T('e_report'), [[T('e_report'), 1010, 480, 2.0], [T('e_guj'), 1010, 480, 2.2]], { row: 1, dim: 1 });
+  else if (t < T('e_guj')) report(t, T('e_report'), [[T('e_report'), 1050, 352, 2.0], [T('e_guj'), 1050, 352, 2.2]], { row: 1, dim: 1 });
   else seq(t, [[16, T('e_guj') - 0.4, T('outro'), { z0: 1.05, z1: 1.18, f0: [0.86, 0.6], f1: [0.86, 0.62] }]]);
 });
 // ---------- outro: last mukhda over the photo, then sources
@@ -375,7 +376,7 @@ const SRC = [
 ];
 add(T('outro'), END + 1, (t) => {
   const o = T('outro'), credits = o + 7.5;
-  if (t < credits + 0.5) { card01(t, o, { cam: [[o, 960, 540, 1.0], [credits, 960, 540, 1.06]] }); shade(0.35); mukhda(t, o - 0.6, credits, 700); }
+  if (t < credits + 0.5) { card01(t, o, { cam: [[o, 960, 540, 1.0], [credits, 960, 540, 1.06]], capA: 0 }); shade(0.62); mukhda(t, o - 0.6, credits, 470); }
   if (t > credits - 0.5) {
     const a = R(t, credits - 0.5, 1.0);
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = a; ctx.fillStyle = '#100b07'; ctx.fillRect(0, 0, W, H); ctx.restore();

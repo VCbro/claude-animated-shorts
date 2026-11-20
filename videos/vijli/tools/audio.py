@@ -79,7 +79,7 @@ for a, b in ((K["h0"] - 0.5, K["g_old"]), (K["d_mandvi"], K["d_dwarka"] + 1), (K
 amb = sea * sea_mask * 0.22
 ps = K["pause_storm"]
 storm = (band(N, 200, 3000) * 0.5 + band(N, 2500, 9000) * 0.25) * env_win(ps + 1.0, ps + 9.2, 1.5, 1.8)
-amb += storm * 0.35
+amb += storm * 0.7
 for k in range(3):  # distant thunder
     tt0 = ps + 2.2 + k * 2.6; n = int(3 * SR); t = np.arange(n) / SR
     add(amb, tt0, band(n, 25, 180) * np.exp(-t * 1.3) * (0.4 - k * 0.08))
@@ -94,7 +94,8 @@ ker = np.ones(int(0.3 * SR)) / int(0.3 * SR)
 venv = np.convolve(np.abs(voice), ker, "same"); venv /= venv.max() + 1e-9
 vact = np.clip(venv * 4, 0, 1)
 fade = np.minimum(1, tg / 1.5) * np.minimum(1, (END - tg) / 3.0)
-out = 0.95 * voice + score * (1 - 0.45 * vact) * 0.9 * fade + amb * (1 - 0.4 * vact) * fade
+cred = 1 + 1.2 * np.clip((tg - (K['outro'] + 7.5)) / 2.0, 0, 1)  # let the score carry the credits
+out = 0.95 * voice + score * (1 - 0.45 * vact) * 0.9 * fade * cred + amb * (1 - 0.4 * vact) * fade
 out = np.tanh(out * 1.1) / np.tanh(1.1)
 st = np.stack([out, out], 1); st[:, 1] = np.roll(st[:, 1], 9)
 wavfile.write(os.path.join(ROOT, "audio/mix.wav"), SR, (st / np.abs(st).max() * 0.9 * 32767).astype(np.int16))
