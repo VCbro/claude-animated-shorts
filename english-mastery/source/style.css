@@ -125,3 +125,15 @@ h3 strong { color: #fff59d; }
 
 .cover .ctitle { font-family: Poppins; font-weight: 800; font-size: 40pt; line-height: 1.05; margin: 12px 0 4px; text-shadow: 0 4px 14px rgba(0,0,0,.35); }
 .cover .ctitle span { color: #ffeb3b; }
+
+/* ---- Hindi support (bilingual edition) ---- */
+.hi { font-family: 'Noto Sans Devanagari', 'Noto Sans', sans-serif; background: #fff6ec; border-left: 4px solid #ef6c00;
+      border-radius: 0 8px 8px 0; padding: 1.2mm 3mm 1.2mm 9mm; margin: 1.6mm 0; color: #4e2a00; font-size: 9.6pt; line-height: 1.55;
+      position: relative; break-inside: avoid; }
+.hi::before { content: 'हिं'; position: absolute; left: 1.6mm; top: 1.3mm; font-weight: 700; color: #fff; background: #ef6c00;
+      border-radius: 50%; width: 5.2mm; height: 5.2mm; font-size: 7pt; display: flex; align-items: center; justify-content: center; }
+.hi p { margin: 0; }
+.legend .hi { grid-column: 1 / -1; margin: 0; }
+.hititle { font-family: 'Noto Sans Devanagari', Poppins, sans-serif; font-weight: 600; color: var(--c1); font-size: 12.5pt; margin: -3mm 0 3mm; }
+.toc .th { display: block; font-family: 'Noto Sans Devanagari', sans-serif; font-size: 9pt; color: #8a4b00; font-weight: 600; }
+.hl { display: inline-block; font-family: 'Noto Sans Devanagari', sans-serif; color: #8a4b00; font-size: 9.2pt; }

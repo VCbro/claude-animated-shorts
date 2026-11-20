@@ -2,6 +2,8 @@
 
 **Grammar • Vocabulary • Spoken English • Writing • Exam Practice** · Beginner → Advanced · 9 volumes
 
+**Bilingual edition (English + हिंदी):** every rule, example, common mistake, practice instruction and answer explanation has simple Hindi (orange "हिं" strips, Hindi chapter titles, Hindi "Why" columns). English sentences stay in English.
+
 Status: ✅ complete · 🟡 in progress · ⬜ not started
 
 ## Volume 1 – Foundation English (Part A) · Foundation · ✅ COMPLETE

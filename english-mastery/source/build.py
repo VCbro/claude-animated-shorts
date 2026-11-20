@@ -24,6 +24,8 @@ Extra Markdown syntax (boxes – each label stays readable in grayscale):
   @fig file.svg | caption      image from ../images/svg
   @lines N                     N blank writing lines for handwritten answers
   @pagebreak                   force a new page
+  @hi text                     Hindi explanation line (हिंदी में समझ) – styled block
+  <!-- hi: हिंदी शीर्षक -->      Hindi chapter title (shown under the chapter title and in the contents)
   " (a) .. (b) .. (c) .. (d) .."  line under a numbered question = MCQ options
 """
 import glob, html, os, re, subprocess, sys
@@ -104,6 +106,10 @@ def preprocess(md_text):
         if m:
             out.append('<div class="lines">' + '<span></span>' * int(m.group(1)) + '</div>')
             continue
+        m = re.match(r'^@hi\s+(.*)$', line)
+        if m:
+            out += ['', '<div class="hi" markdown="1">', '', m.group(1), '', '</div>', '']
+            continue
         if line.strip() == '@pagebreak':
             out.append('<div class="pb"></div>')
             continue
@@ -139,6 +145,7 @@ def build(vol, docx=True):
         title = re.search(r'^# (.+)$', text, re.M).group(1).strip()
         desc = (re.search(r'<!-- desc: (.*?) -->', text) or [None, ''])[1]
         levels = (re.search(r'<!-- level: (.*?) -->', text) or [None, ''])[1]
+        hi_title = (re.search(r'<!-- hi: (.*?) -->', text) or [None, ''])[1]
         num = int(base[:2]) if base[:2].isdigit() and base[:2] not in ('00', '99') else None
         nch += 1 if num else 0
         nq += len(re.findall(r'^\d+\. ', text, re.M))
@@ -150,10 +157,11 @@ def build(vol, docx=True):
         badges = level_badges(levels)
         label = f'Chapter {num}' if num else ''
         sections.append(f'<section class="chapter" id="{anchor}" style="--c1:{c1};--c2:{c2}">'
-                        f'<h1 {numattr}>{html.escape(title)}</h1>'
+                        f'<h1 {numattr}>{html.escape(title)}</h1>' +
+                        (f'<div class="hititle">{html.escape(hi_title)}</div>' if hi_title else '') +
                         f'<div class="chmeta">{f"<b>{label}</b>" if label else ""}{badges}</div>\n{body}\n</section>')
         toc.append(f'<li style="--c1:{c1}"><a href="#{anchor}"><span class="n">{num if num else "★"}</span>'
-                   f'<span class="t">{html.escape(title)} {badges}<span class="d">{html.escape(desc)}</span></span></a></li>')
+                   f'<span class="t">{html.escape(title)} {badges}' + (f'<span class="th">{html.escape(hi_title)}</span>' if hi_title else '') + f'<span class="d">{html.escape(desc)}</span></span></a></li>')
 
     cover = f'''<div class="cover">
   <span class="tag">VOLUME {vol} · {cfg["level"].upper()}</span>
@@ -161,7 +169,7 @@ def build(vol, docx=True):
   <div class="sub">Grammar • Vocabulary • Spoken English • Writing • Exam Practice</div>
   <div class="vol"><b>Volume {vol}</b> — {cfg["title"]}<small>{cfg["sub"]}</small></div>
   <img class="art" src="../images/svg/cover_art.svg">
-  <div class="chips"><span>{nch} chapters</span><span>{nq}+ practice items</span><span>Answer key with explanations</span><span>Simple Hindi support</span><span>Print &amp; phone friendly</span></div>
+  <div class="chips"><span>{nch} chapters</span><span>{nq}+ practice items</span><span>Answer key with explanations</span><span>हिंदी + English समझ</span><span>Print &amp; phone friendly</span></div>
   <div class="foot">Self-study edition · Beginner to Advanced</div>
   <div class="teacher"><img src="../images/svg/avatar_teacher.svg"><div><b>Asha Ma'am</b><small>Your English mentor</small></div></div>
 </div>'''
@@ -175,6 +183,7 @@ def build(vol, docx=True):
   <div class="box practice"><div class="bt"><span class="ic">✎</span>PRACTICE</div>write your answers here</div>
   <div class="box hindi"><div class="bt"><span class="ic">हि</span>HINDI HELP</div>आसान हिंदी में समझ</div>
   <div class="box ans"><div class="bt"><span class="ic">✓</span>ANSWER KEY</div>check &amp; correct yourself</div>
+  <div class="hi"><p>हिंदी पट्टी – हर नियम के नीचे आसान हिंदी में समझ</p></div>
 </div>
 <p class="lvkey">Levels: <span class="lv lv-f">Foundation</span> <span class="lv lv-i">Intermediate</span> <span class="lv lv-a">Advanced</span> <span class="lv lv-x">Exam Focus</span></p>'''
     toc_html = f'<div class="toc"><h2>Contents – Volume {vol}</h2><ol>{"".join(toc)}</ol><h3 class="legh">How to read the boxes</h3>{legend}</div>'
@@ -196,6 +205,7 @@ def build(vol, docx=True):
         d = d.replace('<img class="art" src="../images/png/cover_art.png">', '<img src="../images/png/cover_art.png" style="width:12cm">')
         d = re.sub(r'<span class="lv ([\w-]+)">', r' <span class="lv \1">[', d).replace('</span><span class="d">', '</span> — <span class="d">')
         d = re.sub(r'(\[(?:Foundation|Intermediate|Advanced|Exam Focus))</span>', r'\1]</span>', d)
+        d = re.sub(r'<div class="hi">\s*<p>', '<div class="hi"><p><b>[हिंदी] </b>', d)            # Hindi strip label
         d = re.sub(r'<span class="ic">[^<]*</span>', '', d)                                    # box icons → plain label
         d = d.replace('</span><span class="t">', '. </span><span class="t">')
         open(docx_html, 'w', encoding='utf-8').write(d)

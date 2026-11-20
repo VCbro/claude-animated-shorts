@@ -1,13 +1,15 @@
 # Part A Revision Quiz – Chapters 1 to 8
 <!-- level: Foundation -->
+<!-- hi: भाग A दोहराई क्विज़ – Chapter 1 से 8 -->
 <!-- desc: 50 mixed questions (40 MCQ + 10 written) covering the whole of Volume 1 · answer key with chapter references · score guide -->
 
-:::goals How to use this quiz
+:::goals How to use this quiz · इस क्विज़ का इस्तेमाल कैसे करें
 Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about **35 minutes**) without looking back at the chapters. Then check the answer key – each answer shows the **chapter** to revise if you got it wrong.
 **Total:** 50 marks · **Pass mark:** 35 (70%)
+@hi Chapter 1–8 पूरे करने के **बाद** यह क्विज़ एक बार में (लगभग 35 मिनट) बिना किताब देखे कीजिए। फिर उत्तर मिलाइए – हर उत्तर के साथ लिखा है कि गलत होने पर **कौन-सा chapter** दोहराना है। कुल 50 अंक, पास होने के लिए 35।
 :::
 
-:::practice Section 1 – Letters, sounds and spelling (Ch 1–2)
+:::practice Section 1 – Letters, sounds and spelling (Ch 1–2) · अक्षर, आवाज़ और spelling
 1. How many vowel letters are there in the English alphabet?
  (a) 4 (b) 5 (c) 6 (d) 7
 2. In which word does **y** work as a vowel?
@@ -24,7 +26,7 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
  (a) swiming (b) swimming (c) swimeing (d) swimmming
 :::
 
-:::practice Section 2 – Capitals and punctuation (Ch 3)
+:::practice Section 2 – Capitals and punctuation (Ch 3) · capital और विराम-चिह्न
 8. Choose the correctly written sentence.
  (a) we visited agra in june. (b) We visited Agra in June. (c) We visited agra in June. (d) We Visited Agra In June.
 9. Choose the correct sentence.
@@ -37,7 +39,7 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
  (a) The girls hostel is new. (b) The girl's hostel is new (for many girls). (c) The girls' hostel is new. (d) The girls's hostel is new.
 :::
 
-:::practice Section 3 – Word order, phrases and clauses (Ch 4–5)
+:::practice Section 3 – Word order, phrases and clauses (Ch 4–5) · शब्द-क्रम, phrase और clause
 13. Choose the correct order.
  (a) I every Sunday visit my aunt. (b) I visit every Sunday my aunt. (c) I visit my aunt every Sunday. (d) My aunt I visit every Sunday.
 14. Choose the correct order.
@@ -60,7 +62,7 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
  (a) The bus is late. (b) Because the bus was late. (c) We waited because the bus was late. (d) Wait for the bus.
 :::
 
-:::practice Section 4 – Kinds of sentences (Ch 6)
+:::practice Section 4 – Kinds of sentences (Ch 6) · वाक्य के प्रकार
 23. *Please keep your phones on silent.* is:
  (a) declarative (b) interrogative (c) imperative (d) exclamatory
 24. Choose the correct exclamation.
@@ -75,7 +77,7 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
  (a) to go (b) going (c) go (d) went
 :::
 
-:::practice Section 5 – Questions, negatives, be/have/do (Ch 7–8)
+:::practice Section 5 – Questions, negatives, be/have/do (Ch 7–8) · सवाल, नकार, be/have/do
 29. ______ your father work on Saturdays?
  (a) Do (b) Does (c) Is (d) Are
 30. Choose the correct question.
@@ -102,7 +104,7 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
  (a) Did (b) Do (c) Have (d) Are
 :::
 
-:::practice Section 6 – Written questions
+:::practice Section 6 – Written questions · लिखित प्रश्न
 41. Correct the capitals and punctuation: *mr sharma lives in bhopal he works at sbi*
 @lines 2
 42. Rearrange: *a cake / for her birthday / my mother / made / yesterday*
@@ -127,55 +129,55 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
 
 @pagebreak
 
-:::ans ANSWER KEY – Part A Revision Quiz
+:::ans ANSWER KEY – Part A Revision Quiz · उत्तर और समझ
 **Section 1**
-**1-b** a, e, i, o, u (Ch 1)
-**2-c** In *gym*, **y** makes the /ɪ/ vowel sound. (Ch 1)
-**3-b** *hour* starts with a vowel sound (silent *h*). (Ch 1–2)
-**4-b** *i before e except after c* → *receive*. (Ch 2)
-**5-b** The *k* in *knife* is silent. (Ch 2)
-**6-c** e-du-ca-tion = 4 syllables. (Ch 2)
-**7-b** One vowel + one consonant at the end of a one-syllable word → double the consonant. (Ch 2)
+**1-b** a, e, i, o, u – पाँच vowel letters। (Ch 1)
+**2-c** *gym* (जिम) में **y** "इ" की आवाज़ देता है → vowel। (Ch 1)
+**3-b** *hour* में h silent है, आवाज़ "आ" से शुरू → *an hour*। (Ch 1–2)
+**4-b** *c* के बाद *ei* → *receive*। (Ch 2)
+**5-b** *knife* (नाइफ़) में *k* silent। (Ch 2)
+**6-c** e-du-ca-tion = 4 syllables। (Ch 2)
+**7-b** एक syllable, छोटा vowel + एक व्यंजन → m दोहराओ → *swimming*। (Ch 2)
 **Section 2**
-**8-b** Sentence start, place names and months take capitals. (Ch 3)
-**9-b** *It's* = *it is*. (Ch 3)
-**10-a** Commas separate items in a list (the comma before *and* is the optional serial comma). (Ch 3)
-**11-a** Days of the week take capitals; seasons do not. (Ch 3)
-**12-c** Plural noun ending in *s* → apostrophe after the *s*. (Ch 3)
+**8-b** वाक्य की शुरुआत, जगह का नाम और महीना – तीनों में capital। (Ch 3)
+**9-b** *It's* = it is। (Ch 3)
+**10-a** सूची की चीज़ों के बीच comma (*and* से पहले वाला comma वैकल्पिक है)। (Ch 3)
+**11-a** दिन (*Monday*) में capital; मौसम में नहीं। (Ch 3)
+**12-c** -s वाले बहुवचन में s के बाद apostrophe: *girls'*। (Ch 3)
 **Section 3**
-**13-c** S + V + O + time. (Ch 4)
-**14-b** Verb + object, then manner. (Ch 4)
-**15-a** The complete subject. (Ch 4)
-**16-c** Commands have the understood subject *you*. (Ch 4)
-**17-c** No subject + verb. (Ch 5)
-**18-c** Subject + verb, but begins with *because*. (Ch 5)
-**19-b** *because of* + noun phrase. (Ch 5)
-**20-b** Two independent clauses + *but*. (Ch 5)
-**21-c** Dependent clause (*When I reached home*) + main clause. (Ch 5)
-**22-b** It has no main clause. (Ch 5)
+**13-c** कर्ता + क्रिया + कर्म + समय। (Ch 4)
+**14-b** क्रिया + कर्म, फिर तरीक़ा। (Ch 4)
+**15-a** पूरा कर्ता (complete subject)। (Ch 4)
+**16-c** आदेश में छिपा कर्ता *you*। (Ch 4)
+**17-c** कर्ता + क्रिया नहीं → phrase। (Ch 5)
+**18-c** कर्ता + क्रिया है, पर *because* से शुरू → आश्रित उपवाक्य। (Ch 5)
+**19-b** *because of* + noun phrase। (Ch 5)
+**20-b** दो स्वतंत्र उपवाक्य + *but* → compound। (Ch 5)
+**21-c** आश्रित (*When I reached home*) + मुख्य उपवाक्य → complex। (Ch 5)
+**22-b** इसमें मुख्य उपवाक्य नहीं → fragment। (Ch 5)
 **Section 4**
-**23-c** A request. (Ch 6)
-**24-b** *food* is uncountable → no *a*. (Ch 6)
-**25-b** *How* + adjective + subject + verb. (Ch 6)
-**26-a** Same tense; *What a hot day* → *a very hot day*. (Ch 6)
-**27-c** *Could you …, please?* (Ch 6)
-**28-c** *Let's* + base verb. (Ch 6)
+**23-c** अनुरोध → imperative। (Ch 6)
+**24-b** *food* गिना नहीं जाता → *a* नहीं। (Ch 6)
+**25-b** *How* + विशेषण + कर्ता + क्रिया। (Ch 6)
+**26-a** वही काल; *What a hot day* → *a very hot day*। (Ch 6)
+**27-c** *Could you …, please?* सबसे विनम्र। (Ch 6)
+**28-c** *Let's* + मूल क्रिया। (Ch 6)
 **Section 5**
-**29-b** *your father* = he → *Does*. (Ch 7)
-**30-b** Q-A-S-V order. (Ch 7)
-**31-b** Subject question – no *did*. (Ch 7)
-**32-b** *didn't* + base verb. (Ch 7)
-**33-b** Only one negative word. (Ch 7)
-**34-a** *Is* question → *isn't* answer. (Ch 7)
-**35-b** *When* asks about time/date. (Ch 7)
-**36-b** *a lot of people* is plural → *were* (past). (Ch 8)
-**37-c** Possession, he → *has*. (Ch 8)
-**38-b** Age uses *be*. (Ch 8)
-**39-b** *make noise*. (Ch 8)
-**40-c** Present perfect: *Have* + past participle. (Ch 8)
+**29-b** *your father* = he → *Does*। (Ch 7)
+**30-b** Q-A-S-V क्रम। (Ch 7)
+**31-b** कर्ता वाला सवाल – *did* नहीं। (Ch 7)
+**32-b** *didn't* + मूल क्रिया। (Ch 7)
+**33-b** एक ही नकारात्मक शब्द। (Ch 7)
+**34-a** *Is* वाले सवाल का उत्तर *isn't* से। (Ch 7)
+**35-b** *When* = कब (समय/तारीख़)। (Ch 7)
+**36-b** *a lot of people* बहुवचन → *were* (भूतकाल)। (Ch 8)
+**37-c** "पास होना", he → *has*। (Ch 8)
+**38-b** उम्र के लिए *be*। (Ch 8)
+**39-b** *make noise* (शोर मचाना)। (Ch 8)
+**40-c** Present perfect: *Have* + तीसरा रूप। (Ch 8)
 **Section 6**
-41. *Mr Sharma lives in Bhopal. He works at SBI.* (AmE: *Mr.* Sharma) (Ch 3)
-42. *My mother made a cake for her birthday yesterday.* (*for my birthday* if the cake was for you) (Ch 4)
+41. *Mr Sharma lives in Bhopal. He works at SBI.* (अमेरिकी: *Mr.* Sharma) (Ch 3)
+42. *My mother made a cake for her birthday yesterday.* (केक आपके लिए था तो *for my birthday*) (Ch 4)
 43. *The tall building near the river* | *is a hospital.* (Ch 4)
 44. *I took an umbrella because it was raining.* (Ch 5)
 45. *What a beautiful painting (it is)!* (Ch 6)
@@ -183,14 +185,14 @@ Take this quiz **after** finishing Chapters 1–8. Do it in one sitting (about *
 47. *When / What time does the meeting start?* (Ch 7)
 48. *They didn't buy a new car last month.* (Ch 7)
 49. *I have two pet dogs.* (Ch 8)
-50. Sample: *I am Neha Patel. I am from Surat and I have a younger brother. I study commerce, and I don't work yet.* (Ch 7–8)
+50. नमूना: *I am Neha Patel. I am from Surat and I have a younger brother. I study commerce, and I don't work yet.* (Ch 7–8)
 :::
 
-:::revision Score guide
-| Score | What it means | What to do next |
+:::revision Score guide · अंक के हिसाब से अगला क़दम
+| Score | What it means · मतलब | What to do next · आगे क्या करें |
 |---|---|---|
-| **45–50** | Excellent – Part A is strong | Start **Volume 2 – Parts of Speech** |
-| **35–44** | Good – a few gaps | Revise the chapters of the questions you missed, then go on to Volume 2 |
-| **25–34** | Fair – basics need practice | Redo the Practice sections of the weak chapters, then retake this quiz |
-| **below 25** | Restart Part A slowly | Study one chapter a day with the Hindi Help boxes; retake after a week |
+| **45–50** | Excellent – Part A is strong · बहुत बढ़िया | Start **Volume 2 – Parts of Speech** · Volume 2 शुरू कीजिए |
+| **35–44** | Good – a few gaps · अच्छा, थोड़ी कमी | Revise the chapters of the questions you missed, then go on to Volume 2 · गलत सवालों के chapters दोहराइए |
+| **25–34** | Fair – basics need practice · ठीक-ठाक | Redo the Practice sections of the weak chapters, then retake this quiz · कमज़ोर chapters की practice दोबारा कीजिए |
+| **below 25** | Restart Part A slowly · फिर से शुरू | Study one chapter a day with the Hindi Help boxes; retake after a week · रोज़ एक chapter, एक हफ़्ते बाद फिर क्विज़ |
 :::

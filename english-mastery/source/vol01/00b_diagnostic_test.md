@@ -1,14 +1,17 @@
 # Diagnostic Test – Find Your Starting Point
 <!-- level: Foundation, Intermediate, Advanced, Exam Focus -->
+<!-- hi: शुरुआती जाँच परीक्षा – आप कहाँ से शुरू करें -->
 <!-- desc: 40 questions in 5 sections (25–30 minutes) · answer key with explanations · which chapters to start with -->
 
-:::goals Why take this test?
+:::goals Why take this test? · यह test क्यों दें?
 This test shows **what you already know** and **where to start**. Do not use a dictionary or ask anyone. If you don't know an answer, leave it – a blank answer gives better information than a guess.
 
 **Time:** about 25–30 minutes · **Total:** 40 marks (1 mark each)
+
+@hi यह test बताता है कि आप **क्या पहले से जानते हैं** और **कहाँ से शुरू करें**। Dictionary या किसी की मदद न लें। जवाब न आए तो छोड़ दें – अंदाज़े से भरने के बजाय ख़ाली छोड़ना बेहतर जानकारी देता है। समय: 25–30 मिनट, कुल 40 अंक।
 :::
 
-:::practice Section 1 – Foundation (Q1–10)
+:::practice Section 1 – Foundation · बुनियाद (Q1–10)
 1. Which of these is a vowel?
  (a) b (b) e (c) t (d) m
 2. Choose the correctly written sentence.
@@ -31,7 +34,7 @@ This test shows **what you already know** and **where to start**. Do not use a d
  (a) in the morning (b) a cup of tea (c) The baby is sleeping. (d) when the bus came
 :::
 
-:::practice Section 2 – Parts of Speech (Q11–18)
+:::practice Section 2 – Parts of Speech · शब्द-भेद (Q11–18)
 11. I saw ___ elephant at the zoo.
  (a) a (b) an (c) the (d) no article
 12. There isn't ___ milk in the fridge.
@@ -50,7 +53,7 @@ This test shows **what you already know** and **where to start**. Do not use a d
  (a) wooden round big (b) big round wooden (c) round wooden big (d) wooden big round
 :::
 
-:::practice Section 3 – Verbs & Tenses (Q19–28)
+:::practice Section 3 – Verbs & Tenses · क्रिया और काल (Q19–28)
 19. Water ___ at 100 °C.
  (a) boil (b) boils (c) is boiling (d) boiled
 20. Look! The children ___ in the rain.
@@ -73,7 +76,7 @@ This test shows **what you already know** and **where to start**. Do not use a d
  (a) am meeting (b) meet (c) met (d) have met
 :::
 
-:::practice Section 4 – Advanced Grammar (Q29–34)
+:::practice Section 4 – Advanced Grammar · उच्च व्याकरण (Q29–34)
 29. Passive of *"They built this bridge in 1990."*
  (a) This bridge built in 1990. (b) This bridge was built in 1990. (c) This bridge is built by them in 1990. (d) This bridge has built in 1990.
 30. He said, "I am tired." → He said that he ___ tired.
@@ -88,7 +91,7 @@ This test shows **what you already know** and **where to start**. Do not use a d
  (a) he came (b) came he (c) did he come (d) he did come
 :::
 
-:::practice Section 5 – Vocabulary, Communication & Exam English (Q35–40)
+:::practice Section 5 – Vocabulary, Communication & Exam English · शब्दावली, बातचीत और परीक्षा (Q35–40)
 35. Synonym of **rapid**:
  (a) slow (b) quick (c) late (d) heavy
 36. Antonym of **ancient**:
@@ -105,50 +108,50 @@ This test shows **what you already know** and **where to start**. Do not use a d
 
 @pagebreak
 
-:::ans Answer Key – Diagnostic Test
-**1-b** *e* is a vowel (a, e, i, o, u). → Ch 1
-**2-b** A sentence starts with a capital; names (proper nouns) are capitalised. → Ch 3
-**3-c** *Where* question → question mark. → Ch 3
-**4-c** English order: Subject + Verb + Object/Place + Time. → Ch 4
-**5-b** *You* takes *are*. → Ch 8
-**6-b** *She/He/It* + *has*. → Ch 8
-**7-b** *He/She/It* questions in the simple present use *Does*. → Ch 7, 8
-**8-b** *I don't* (do not) + base verb. → Ch 7
-**9-a** Short answers don't contract at the end: *Yes, it is.* (not *Yes, it's.*) → Ch 7
-**10-c** It has a subject (*The baby*) and a verb (*is sleeping*) and complete meaning. → Ch 5
-**11-b** *elephant* starts with a vowel **sound** → *an*. → Ch 13
-**12-c** *any* in negatives; *milk* is uncountable (not *many/a few*). → Ch 14
-**13-c** Possessive *'s*: *my sister's book*. → Ch 11
-**14-c** *the + superlative* for one out of many. → Ch 16
-**15-b** *on* + day, *at* + clock time. → Ch 18
-**16-b** *among* for three or more (*between* for two – but see Ch 18 for exceptions). → Ch 18
-**17-b** *well* is the adverb of *good*. → Ch 17
-**18-b** Order: size → shape → material. → Ch 15
-**19-b** General truth → simple present; *water* is singular → *boils*. → Ch 25
-**20-c** *Look!* → action happening now → present continuous. → Ch 25
-**21-b** Completed action with present result → present perfect. → Ch 28
-**22-c** Finished past time (*last year*) → simple past, not present perfect. → Ch 28
-**23-c** Earlier of two past actions → past perfect. → Ch 26
-**24-b** *One of + plural noun* takes a **singular** verb. → Ch 24
-**25-a** Rule/obligation → *must*. → Ch 29
-**26-c** After a preposition (*at*) use **-ing**. → Ch 31
-**27-b** Positive statement → negative tag: *isn't she?* → Ch 30
-**28-a** Fixed personal plan → present continuous for future. → Ch 27
-**29-b** Past simple passive: *was/were + V3*. → Ch 37
-**30-c** Reported speech: *am → was* (backshift). → Ch 38
-**31-b** Second conditional: *If + past (were) … would*. → Ch 39
-**32-d** *whose* shows possession (*his car*). → Ch 34
-**33-b** Parallel -ing forms. → Ch 42
-**34-c** Negative opener *Not only* → inversion: *did he come*. → Ch 41
-**35-b** *rapid* = *quick*. → Ch 48
-**36-b** *ancient* ↔ *modern*. → Ch 48
-**37-b** Cold room → switch the AC **off**. *turn on* = start; *turn up* = increase. → Ch 52
-**38-a** *a piece of cake* = very easy (informal). → Ch 53
-**39-c** *Could you … please?* is polite and professional. → Ch 60, 66
-**40-a** *He doesn't know*. *He/She/It* + *doesn't*. → Ch 24, 78
+:::ans Answer Key – Diagnostic Test · उत्तर और समझ
+**1-b** *e* is a vowel (a, e, i, o, u). · *e स्वर है* → Ch 1
+**2-b** A sentence starts with a capital; names (proper nouns) are capitalised. · *वाक्य की शुरुआत और नाम में capital* → Ch 3
+**3-c** *Where* question → question mark. · *Where वाला सवाल → ?* → Ch 3
+**4-c** English order: Subject + Verb + Object/Place + Time. · *क्रम: कर्ता + क्रिया + जगह + समय* → Ch 4
+**5-b** *You* takes *are*. · *You के साथ are* → Ch 8
+**6-b** *She/He/It* + *has*. · *She/He/It के साथ has* → Ch 8
+**7-b** *He/She/It* questions in the simple present use *Does*. · *He/She/It वाले सवाल में Does* → Ch 7, 8
+**8-b** *I don't* (do not) + base verb. · *I don't + मूल क्रिया* → Ch 7
+**9-a** Short answers don't contract at the end: *Yes, it is.* (not *Yes, it's.*) · *हाँ वाले छोटे उत्तर में छोटा रूप नहीं: Yes, it is* → Ch 7
+**10-c** It has a subject (*The baby*) and a verb (*is sleeping*) and complete meaning. · *कर्ता + क्रिया + पूरा अर्थ = वाक्य* → Ch 5
+**11-b** *elephant* starts with a vowel **sound** → *an*. · *elephant vowel की आवाज़ से शुरू → an* → Ch 13
+**12-c** *any* in negatives; *milk* is uncountable (not *many/a few*). · *नकार में any; milk गिना नहीं जाता* → Ch 14
+**13-c** Possessive *'s*: *my sister's book*. · *का/की = 's: my sister's book* → Ch 11
+**14-c** *the + superlative* for one out of many. · *कई में से एक सबसे … → the + superlative* → Ch 16
+**15-b** *on* + day, *at* + clock time. · *दिन के साथ on, घड़ी के समय के साथ at* → Ch 18
+**16-b** *among* for three or more (*between* for two – but see Ch 18 for exceptions). · *तीन या ज़्यादा के बीच among (दो के बीच between)* → Ch 18
+**17-b** *well* is the adverb of *good*. · *good का adverb well है* → Ch 17
+**18-b** Order: size → shape → material. · *क्रम: आकार → रूप → पदार्थ* → Ch 15
+**19-b** General truth → simple present; *water* is singular → *boils*. · *सार्वभौमिक सत्य → simple present; water एकवचन → boils* → Ch 25
+**20-c** *Look!* → action happening now → present continuous. · *Look! → अभी हो रहा काम → present continuous* → Ch 25
+**21-b** Completed action with present result → present perfect. · *पूरा हुआ काम जिसका असर अभी है → present perfect* → Ch 28
+**22-c** Finished past time (*last year*) → simple past, not present perfect. · *last year जैसा बीता समय → simple past* → Ch 28
+**23-c** Earlier of two past actions → past perfect. · *भूतकाल के दो कामों में पहले वाला → past perfect* → Ch 26
+**24-b** *One of + plural noun* takes a **singular** verb. · *One of + बहुवचन संज्ञा → एकवचन क्रिया* → Ch 24
+**25-a** Rule/obligation → *must*. · *नियम/ज़रूरी → must* → Ch 29
+**26-c** After a preposition (*at*) use **-ing**. · *preposition (at) के बाद -ing* → Ch 31
+**27-b** Positive statement → negative tag: *isn't she?* · *सकारात्मक वाक्य → नकारात्मक tag* → Ch 30
+**28-a** Fixed personal plan → present continuous for future. · *तय योजना → भविष्य के लिए present continuous* → Ch 27
+**29-b** Past simple passive: *was/were + V3*. · *past simple passive: was/were + V3* → Ch 37
+**30-c** Reported speech: *am → was* (backshift). · *reported speech में am → was* → Ch 38
+**31-b** Second conditional: *If + past (were) … would*. · *second conditional: If + were … would* → Ch 39
+**32-d** *whose* shows possession (*his car*). · *whose = जिसका* → Ch 34
+**33-b** Parallel -ing forms. · *एक जैसी -ing बनावट (parallel)* → Ch 42
+**34-c** Negative opener *Not only* → inversion: *did he come*. · *Not only शुरुआत में → उलटा क्रम: did he come* → Ch 41
+**35-b** *rapid* = *quick*. · *rapid = तेज़ = quick* → Ch 48
+**36-b** *ancient* ↔ *modern*. · *ancient (प्राचीन) ↔ modern (आधुनिक)* → Ch 48
+**37-b** Cold room → switch the AC **off**. *turn on* = start; *turn up* = increase. · *ठंडा कमरा → AC बंद करो = switch off* → Ch 52
+**38-a** *a piece of cake* = very easy (informal). · *a piece of cake = बहुत आसान* → Ch 53
+**39-c** *Could you … please?* is polite and professional. · *Could you … please? = विनम्र* → Ch 60, 66
+**40-a** *He doesn't know*. *He/She/It* + *doesn't*. · *He/She/It के साथ doesn't* → Ch 24, 78
 :::
 
-## What your score means
+## What your score means · आपके अंक का मतलब
 
 | Section | Your score | If you scored less than … | Start with |
 |---|---|---|---|
@@ -163,6 +166,8 @@ This test shows **what you already know** and **where to start**. Do not use a d
 - **16–28:** Revise Volume 1 quickly (do only the practice sections), then study Volumes 2 and 3 carefully.
 - **29–35:** Your base is good. Focus on the chapters linked to your wrong answers, then Volumes 4, 5 and 7.
 - **36–40:** Excellent! Go to Volume 4 and the Exam Focus chapters, and use the reference volume for revision.
+
+@hi **0–15:** Chapter 1 से शुरू करें, Route 1 या 2 अपनाएँ, एक chapter 2–3 दिन में। **16–28:** Volume 1 की सिर्फ़ practice जल्दी करें, फिर Volume 2 और 3 ध्यान से। **29–35:** आधार अच्छा है – गलत उत्तरों वाले chapters, फिर Volume 4, 5, 7। **36–40:** बहुत बढ़िया! Volume 4 और Exam Focus chapters पर जाएँ।
 
 :::hindi Hindi Help – आसान भाषा में
 जिस section में कम marks आए, वहीं से पढ़ाई शुरू करें। Answer key में हर जवाब के आगे **chapter number** दिया है – गलत सवाल वाले chapter सबसे पहले पढ़ें। 4 हफ़्ते बाद यही test दोबारा दें और score की तुलना करें।
