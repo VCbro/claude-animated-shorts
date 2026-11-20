@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" font-family="Poppins, 'Noto Sans', 'Noto Sans Devanagari', sans-serif">
+  <rect width="760" height="250" fill="#fff"/>
+  <rect x="10" y="10" width="365" height="230" rx="16" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="192" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#2e7d32">COUNTABLE · गिनने योग्य</text>
+  <g fill="#43a047"><circle cx="70" cy="85" r="18"/><circle cx="120" cy="85" r="18"/><circle cx="170" cy="85" r="18"/></g>
+  <text x="235" y="92" font-size="15" fill="#1b5e20">3 eggs · 2 bags</text>
+  <g font-size="14" fill="#263238">
+    <text x="30" y="135">✓ a / an  →  an egg, a bag</text>
+    <text x="30" y="160">✓ plural  →  eggs, bags</text>
+    <text x="30" y="185">✓ many · a few · How many?</text>
+    <text x="30" y="210">✓ verb: is / are</text>
+  </g>
+  <rect x="385" y="10" width="365" height="230" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="567" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#1565c0">UNCOUNTABLE · न गिनने योग्य</text>
+  <path d="M430 70 h40 l-5 40 h-30 z" fill="#90caf9" stroke="#1565c0" stroke-width="2"/>
+  <path d="M432 82 h36" stroke="#1e88e5" stroke-width="10"/>
+  <text x="490" y="92" font-size="15" fill="#0d47a1">water · milk · advice</text>
+  <g font-size="14" fill="#263238">
+    <text x="405" y="135">✗ a / an  ·  ✗ plural (-s)</text>
+    <text x="405" y="160">✓ much · a little · How much?</text>
+    <text x="405" y="185">✓ a glass of water, a piece of advice</text>
+    <text x="405" y="210">✓ verb: always is</text>
+  </g>
+</svg>
