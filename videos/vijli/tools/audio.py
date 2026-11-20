@@ -68,7 +68,7 @@ muk = os.path.join(ROOT, "voice/mukhda.mp3")
 slots = [0.6, K["pause_mukhda2"] + 0.3, K["outro"] + 0.3]
 if os.path.exists(muk):
     m = load(muk); m /= np.abs(m).max() + 1e-9
-    for s in slots: add(voice, s + 1.6, m[:int(6.0 * SR)])
+    for s in slots: add(voice, s + 1.2, m[:int(6.0 * SR)])
 for s in slots: bowed(PHRASE, s, 0.88, 0.05 if os.path.exists(muk) else 0.085)
 # ---------------------------------------------------------------- ambience
 sea = band(N, 60, 900) * 0.5 + band(N, 900, 4000) * 0.12
