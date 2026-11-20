@@ -455,6 +455,7 @@ add(A('e0'), A('e_motors'), (t) => {
   ctx.restore();
   text('रफ़्तार + ताक़त', 1510, 290, { size: 34, a: ua, color: '#c9d6ff' });
   text('एक्सीलरेटर जैसा', 1510, 600, { size: 30, a: da, color: '#ffd166' });
+  chapter(t, A('e0'), 2, 'इंजन के अंदर');
 });
 add(A('e_motors'), A('e_hp'), (t) => {
   // motors on the bogies drive the wheels through gears
@@ -508,7 +509,6 @@ add(A('e_hp'), A('t0'), (t) => {
     ctx.fillStyle = '#0b1630'; ctx.beginPath(); ctx.arc(-14, 9, 6, 0, TAU); ctx.arc(14, 9, 6, 0, TAU); ctx.fill(); ctx.restore();
   }
   text('= लगभग <b style="color:#59d6ff">100 कारें</b>', 1395, 900, { size: 54, a: R(t, ca, 0.4), cls: 'ttl' });
-  chapter(t, A('e0'), 2, 'इंजन के अंदर');
 });
 
 // ---------- TURNING (the conical wheel)
