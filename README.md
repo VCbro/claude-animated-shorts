@@ -31,3 +31,6 @@ Claude then follows `SKILL.md`: topic and facts, then script, then voice, then t
 
 ## License
 The code and docs are MIT (see `LICENSE`). The reference frames are included for style study only.
+
+## Also in this repo: Product Motion System
+`motion-system/` is a separate, reusable pipeline for **product motion videos**. It takes a campaign JSON brief and produces validated MP4s in 16:9, 1:1 and 9:16, with hook and CTA variants, contact-sheet QA and a delivery manifest. It also has a Canvas `seek(t)` demo of deterministic frame rendering. See [`motion-system/README.md`](motion-system/README.md); the Claude Code skill is `.claude/skills/product-motion/`.

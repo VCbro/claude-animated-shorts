@@ -1,0 +1,2 @@
+Inter / Inter Display (rsms.me/inter) and JetBrains Mono are licensed under the SIL Open Font License 1.1.
+Bundled so renders never depend on system or network fonts.

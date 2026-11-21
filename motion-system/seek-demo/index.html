@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>seek(t) demo</title>
+<style>
+  html, body { margin: 0; background: #0e0f12; }
+  canvas { display: block; width: 100vw; height: auto; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// Deterministic frame rendering: every pixel is a pure function of t (seconds).
+// No requestAnimationFrame state, no Math.random, no Date.now. seek(4) always draws the same frame.
+const W = 1920, H = 1080, DURATION = 8;
+const ctx = document.getElementById('c').getContext('2d');
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const range = (t, a, b) => clamp((t - a) / (b - a));
+const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+const easeInOut = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+// Critically-damped-ish spring evaluated in closed form (so it is seekable).
+const spring = (x, k = 9) => (x <= 0 ? 0 : 1 - Math.exp(-k * x) * (1 + k * x * 0.6) * Math.cos(x * 6) );
+// Seeded hash in place of Math.random: same input, same output.
+const hash = (n) => { const s = Math.sin(n * 127.1) * 43758.5453; return s - Math.floor(s); };
+
+function roundRect(x, y, w, h, r) {
+  ctx.beginPath(); ctx.roundRect(x, y, w, h, r);
+}
+
+function seek(t) {
+  t = clamp(t, 0, DURATION);
+  ctx.fillStyle = '#0e0f12'; ctx.fillRect(0, 0, W, H);
+
+  // Background grid, slow drift tied to t
+  ctx.strokeStyle = 'rgba(255,255,255,0.04)'; ctx.lineWidth = 1;
+  const off = (t * 12) % 80;
+  for (let x = -80 + off; x < W; x += 80) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = 0; y < H; y += 80) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+  // Title (0.2s - 1.2s)
+  const ti = easeOut(range(t, 0.2, 1.2));
+  ctx.globalAlpha = ti;
+  ctx.fillStyle = '#f4f1ea';
+  ctx.font = '600 84px Inter, "Helvetica Neue", Arial, sans-serif';
+  ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('Every frame is a function of t', 160, 260 + (1 - ti) * 30);
+  ctx.font = '400 36px Inter, "Helvetica Neue", Arial, sans-serif';
+  ctx.fillStyle = '#9a9690';
+  ctx.fillText('seek(t) draws the same image for the same t, every time.', 160, 330 + (1 - ti) * 30);
+  ctx.globalAlpha = 1;
+
+  // Progress bar: empty at t=3, partially filled at t=4, complete at t=5
+  const bx = 160, by = 470, bw = 1600, bh = 28;
+  ctx.fillStyle = '#23252b'; roundRect(bx, by, bw, bh, 14); ctx.fill();
+  const p = easeInOut(range(t, 3, 5));
+  if (p > 0) { ctx.fillStyle = '#e8c872'; roundRect(bx, by, Math.max(bh, bw * p), bh, 14); ctx.fill(); }
+  ctx.fillStyle = '#f4f1ea'; ctx.font = '500 30px ui-monospace, Menlo, monospace';
+  ctx.fillText(`progress ${(p * 100).toFixed(0).padStart(3, ' ')}%`, bx, by + 80);
+
+  // Bars that spring up in sequence (2.0s onward), heights from a seeded hash
+  const n = 12, gx = 160, gy = 920, gw = 1600, gap = 24;
+  const cw = (gw - gap * (n - 1)) / n;
+  for (let i = 0; i < n; i++) {
+    const s = clamp(spring(range(t, 1.6 + i * 0.12, 3.2 + i * 0.12) * 1.2), 0, 1.08);
+    const h = (120 + hash(i + 1) * 220) * s;
+    ctx.fillStyle = i % 4 === 3 ? '#e8c872' : '#3a3d46';
+    roundRect(gx + i * (cw + gap), gy - h, cw, h, 8); ctx.fill();
+  }
+
+  // Timecode
+  ctx.fillStyle = '#6b6863'; ctx.font = '500 28px ui-monospace, Menlo, monospace';
+  ctx.textAlign = 'right';
+  ctx.fillText(`t = ${t.toFixed(3)}s   frame ${Math.round(t * 30)}`, W - 160, 1010);
+  ctx.textAlign = 'left';
+}
+
+window.DURATION = DURATION;
+window.seek = seek;
+window.ready = document.fonts.ready.then(() => { seek(0); return true; });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "id": "tally-launch",
+  "fps": 30,
+  "brand": {
+    "name": "Tally",
+    "logo": "brands/tally/logo.svg",
+    "colors": {
+      "background": "#F3F0E9",
+      "surface": "#FFFFFF",
+      "ink": "#15161A",
+      "muted": "#6B6760",
+      "line": "#E2DDD3",
+      "accent": "#2B59D9",
+      "positive": "#1D7F55"
+    }
+  },
+  "approvedClaims": [
+    { "id": "forecast-90", "text": "Forecasts 90 days of cash", "source": "Fictional demo product - replace with your approved claim sheet" },
+    { "id": "accuracy", "text": "Within 3% of actuals", "source": "Fictional demo product - replace with your approved claim sheet" }
+  ],
+  "hooks": [
+    { "id": "a", "headline": "Know your cash before it moves.", "sub": "Tally forecasts 90 days of cash from your live accounts." },
+    { "id": "b", "headline": "Your runway, updated every morning.", "sub": "No spreadsheet. No month-end scramble." },
+    { "id": "c", "headline": "Stop rebuilding the forecast.", "sub": "Connect your bank once. Tally keeps it current." }
+  ],
+  "ctas": [
+    { "id": "trial", "line": "See your next 90 days.", "button": "Start free trial" },
+    { "id": "demo", "line": "Your finance team, a week ahead.", "button": "Book a demo" }
+  ],
+  "url": "tally.example.com",
+  "scenes": {
+    "title": { "duration": 4 },
+    "ui": {
+      "duration": 8,
+      "screenTitle": "Cash overview",
+      "nav": ["Overview", "Accounts", "Forecast", "Reports"],
+      "kpis": [
+        { "label": "Cash on hand", "value": 482300, "prefix": "$", "suffix": "", "delta": "+4.2%" },
+        { "label": "Monthly burn", "value": 61800, "prefix": "$", "suffix": "", "delta": "-2.1%" },
+        { "label": "Runway", "value": 7.8, "prefix": "", "suffix": " mo", "delta": "+0.4" }
+      ],
+      "series": [410, 428, 421, 446, 452, 439, 461, 470, 466, 482],
+      "button": "Run forecast",
+      "toast": "90-day forecast ready"
+    },
+    "data": {
+      "duration": 7,
+      "claimId": "accuracy",
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "values": [482, 455, 431, 468, 497, 523],
+      "unit": "k",
+      "caption": "Illustrative data for a fictional company"
+    },
+    "cta": { "duration": 6 }
+  }
+}

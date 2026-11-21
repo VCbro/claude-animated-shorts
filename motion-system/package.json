@@ -1,0 +1,31 @@
+{
+  "name": "motion-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated product motion design system: campaign JSON in, validated MP4s + delivery manifest out.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "validate": "tsx scripts/validate.ts",
+    "preview": "tsx scripts/preview.ts",
+    "render": "tsx scripts/render.ts",
+    "seek-demo": "node seek-demo/render.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "@remotion/zod-types": "4.0.545",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.545",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}
