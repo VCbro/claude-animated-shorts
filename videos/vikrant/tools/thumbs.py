@@ -3,12 +3,12 @@
 import os, subprocess, time
 from playwright.sync_api import sync_playwright
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PORT = 8830
+PORT = 8831
 srv = subprocess.Popen(["python3", os.path.join(ROOT, "tools/serve.py"), ROOT, "--port", str(PORT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 time.sleep(1)
-SHOTS = {"bg_eiffel": 15.6, "bg_train": 7.0, "bg_meet": 123.6, "bg_wide": 230.0}
+SHOTS = {"bg_land": 234.5, "bg_ski": 184.0, "bg_city": 133.0, "bg_hero": 26.5}
 FONT = """@font-face{font-family:B;font-weight:800;src:url(/node_modules/@fontsource/baloo-2/files/baloo-2-devanagari-800-normal.woff2);unicode-range:U+0900-097F}
-@font-face{font-family:B;font-weight:800;src:url(/node_modules/@fontsource/montserrat/files/montserrat-latin-900-normal.woff2);unicode-range:U+0000-00FF,U+2248}
+@font-face{font-family:B;font-weight:800;src:url(/node_modules/@fontsource/montserrat/files/montserrat-latin-900-normal.woff2);unicode-range:U+0000-00FF,U+2190-21FF,U+2248}
 *{margin:0;box-sizing:border-box}body{width:1280px;height:720px;overflow:hidden;font-family:B;background:#000}
 .bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .sh{position:absolute;inset:0}
@@ -17,21 +17,32 @@ FONT = """@font-face{font-family:B;font-weight:800;src:url(/node_modules/@fontso
 .tag{position:absolute;padding:8px 22px 2px;border-radius:14px;font-weight:800;font-size:40px;color:#111;background:#ffd23f;box-shadow:0 6px 20px rgba(0,0,0,.5)}
 .x{position:absolute;font-weight:800;color:#ff4b3e;-webkit-text-stroke:4px #000;paint-order:stroke fill}"""
 THUMBS = {
- "thumb1_eiffel": """<div class=bg style="background-image:url(/out/thumbsrc/bg_eiffel.png);background-position:50% 55%;background-size:118%"></div>
-  <div class=sh style="background:linear-gradient(0deg,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 40%),linear-gradient(90deg,rgba(0,0,0,.75) 0,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 70%)"></div>
-  <div class=txt style="left:44px;top:50px;font-size:118px">एफ़िल टावर</div>
-  <div class=txt style="left:44px;top:185px;font-size:118px"><span class=y>से भी ऊँचा!</span></div>
-  <div class=txt style="left:48px;top:470px;font-size:96px"><span class=c>359 m</span></div>
-  <div class=tag style="right:40px;bottom:40px">चिनाब ब्रिज 🇮🇳</div>""",
- "thumb2_clouds": """<div class=bg style="background-image:url(/out/thumbsrc/bg_train.png);background-position:30% 45%;background-size:150%"></div>
-  <div class=sh style="background:linear-gradient(0deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.2) 50%,rgba(0,0,0,0) 100%)"></div>
-  <div class=txt style="left:0;right:0;text-align:center;top:400px;font-size:120px">बादलों के <span class=y>ऊपर ट्रेन!</span></div>
-  <div class=txt style="left:0;right:0;text-align:center;top:560px;font-size:56px">दुनिया का सबसे ऊँचा रेलवे आर्च पुल</div>""",
- "thumb3_air": """<div class=bg style="background-image:url(/out/thumbsrc/bg_meet.png);background-position:50% 35%;background-size:125%"></div>
-  <div class=sh style="background:radial-gradient(circle at 50% 30%,rgba(0,0,0,0) 0,rgba(0,0,0,.45) 45%,rgba(0,0,0,.85) 90%)"></div>
-  <div class=txt style="left:0;right:0;text-align:center;top:380px;font-size:120px">हवा में <span class=y>कैसे बना?</span></div>
-  <div class=txt style="left:0;right:0;text-align:center;top:540px;font-size:58px">नीचे से कोई क्रेन नहीं पहुँच सकती थी</div>
-  <div class=tag style="left:40px;top:40px">चिनाब ब्रिज</div>""",
+ "hi_thumb1_3sec": """<div class=bg style="background-image:url(/out/thumbsrc/bg_land.png);background-position:22% 48%;background-size:160%"></div>
+  <div class=sh style="background:linear-gradient(90deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.25) 50%,rgba(0,0,0,0) 75%)"></div>
+  <div class=txt style="left:44px;top:40px;font-size:150px"><span class=y>3 सेकंड</span></div>
+  <div class=txt style="left:44px;top:205px;font-size:96px">में 250 से <span class=r>0!</span></div>
+  <div class=tag style="left:44px;bottom:44px">INS विक्रांत 🇮🇳</div>""",
+ "hi_thumb2_ski": """<div class=bg style="background-image:url(/out/thumbsrc/bg_ski.png);background-position:75% 40%;background-size:140%"></div>
+  <div class=sh style="background:linear-gradient(0deg,rgba(0,0,0,.85) 0,rgba(0,0,0,.15) 55%,rgba(0,0,0,0) 100%)"></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:400px;font-size:112px">इतने छोटे रनवे से <span class=y>उड़ान?</span></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:560px;font-size:56px">INS विक्रांत का स्की-जंप राज़</div>""",
+ "hi_thumb3_city": """<div class=bg style="background-image:url(/out/thumbsrc/bg_city.png);background-position:50% 50%;background-size:125%"></div>
+  <div class=sh style="background:radial-gradient(circle at 50% 55%,rgba(0,0,0,0) 0,rgba(0,0,0,.4) 50%,rgba(0,0,0,.85) 90%)"></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:40px;font-size:120px">समंदर पर <span class=y>तैरता शहर!</span></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:560px;font-size:64px"><span class=c>45,000 टन</span> · 2,000+ कमरे</div>""",
+ "en_thumb1_3sec": """<div class=bg style="background-image:url(/out/thumbsrc/bg_land.png);background-position:22% 48%;background-size:160%"></div>
+  <div class=sh style="background:linear-gradient(90deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.25) 50%,rgba(0,0,0,0) 75%)"></div>
+  <div class=txt style="left:44px;top:50px;font-size:120px">250 → <span class=r>0</span></div>
+  <div class=txt style="left:44px;top:200px;font-size:120px"><span class=y>IN 3 SEC!</span></div>
+  <div class=tag style="left:44px;bottom:44px">INS VIKRANT 🇮🇳</div>""",
+ "en_thumb2_ski": """<div class=bg style="background-image:url(/out/thumbsrc/bg_ski.png);background-position:75% 40%;background-size:140%"></div>
+  <div class=sh style="background:linear-gradient(0deg,rgba(0,0,0,.85) 0,rgba(0,0,0,.15) 55%,rgba(0,0,0,0) 100%)"></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:410px;font-size:104px">TAKE OFF FROM <span class=y>THIS?</span></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:560px;font-size:52px">The ski-jump secret of INS Vikrant</div>""",
+ "en_thumb3_city": """<div class=bg style="background-image:url(/out/thumbsrc/bg_city.png);background-position:50% 50%;background-size:125%"></div>
+  <div class=sh style="background:radial-gradient(circle at 50% 55%,rgba(0,0,0,0) 0,rgba(0,0,0,.4) 50%,rgba(0,0,0,.85) 90%)"></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:50px;font-size:104px">A <span class=y>FLOATING CITY</span></div>
+  <div class=txt style="left:0;right:0;text-align:center;top:560px;font-size:60px"><span class=c>45,000 tonnes</span> · Made in India</div>""",
 }
 try:
     with sync_playwright() as pw:

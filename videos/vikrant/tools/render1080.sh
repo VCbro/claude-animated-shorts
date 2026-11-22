@@ -13,6 +13,6 @@ wait
 ffmpeg -y -loglevel error -framerate $FPS -i out/frames/f%05d.jpg -i audio/mix.wav \
   -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high -pix_fmt yuv420p -r $FPS \
   -af "loudnorm=I=-14:TP=-1.5:LRA=11" -ar 48000 -c:a aac -b:a 256k -shortest -movflags +faststart \
-  -color_primaries bt709 -color_trc bt709 -colorspace bt709 deliver/chenab_bridge.mp4
-ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate:format=duration -of compact deliver/chenab_bridge.mp4
-ls -la deliver/chenab_bridge.mp4; echo ALLDONE
+  -color_primaries bt709 -color_trc bt709 -colorspace bt709 deliver/vikrant_hi.mp4
+ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate:format=duration -of compact deliver/vikrant_hi.mp4
+ls -la deliver/vikrant_hi.mp4; echo ALLDONE

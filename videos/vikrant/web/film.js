@@ -90,8 +90,8 @@ add(0, T('h_go'), (t) => {
   const ttl = win(t, T('h_this'), T('h_city') + 0.6, 0.5);
   text('INS विक्रांत'.replace('विक्रांत', L('विक्रांत', 'VIKRANT')), 960, 170, { size: 140, cls: 'ttl', a: ttl, scale: 0.94 + 0.06 * ttl });
   chip(L('भारत में डिज़ाइन · भारत में बना', 'Designed in India · Built in India'), 960, 290, ttl, { ring: 'rgba(255,153,51,.7)' });
-  bigNum('262', L('मीटर', 'metres'), 960, 200, win(t, T('h_city'), T('h_how'), 0.4));
-  text(L('इतने छोटे रनवे से <span style="color:#ffcf5a">उड़ान? लैंडिंग?</span>', 'Take off and land on <span style="color:#ffcf5a">such a short runway?</span>'), 960, 200, { size: 64, cls: 'ttl', a: win(t, T('h_how'), T('h_go') + 0.2, 0.4) });
+  bigNum('262', L('मीटर', 'metres'), 560, 200, win(t, T('h_city'), T('h_how'), 0.4));
+  text(L('इतने छोटे रनवे से <span style="color:#ffcf5a">उड़ान? लैंडिंग?</span>', 'Take off and land on <span style="color:#ffcf5a">such a short runway?</span>'), 960, 62, { size: 56, cls: 'ttl', a: win(t, T('h_how'), T('h_go') + 0.2, 0.4) });
 });
 add(T('h_go'), T('c1'), (t) => {
   sky(t, 'dusk'); cam(960, 560, 1.0); sea(t, 'dusk'); carrier(150, SEA + 30, 6, t);
@@ -114,7 +114,7 @@ add(T('c1'), T('c2'), (t) => {
   } else {
     const P = carrier(150, SEA + 30, 6, t);
     screen();
-    bigNum('2022', '', 960, 180, R(t, T('c1_2022'), 0.5), '#ffcf5a', 150);
+    bigNum('2022', '', 600, 180, R(t, T('c1_2022'), 0.5), '#ffcf5a', 150);
     label(L('कोचीन शिपयार्ड', 'Cochin Shipyard'), ...P(130, 20), -120, -150, win(t, T('c1_cochin'), T('c1_club') + 0.3, 0.4), L('डिज़ाइन: भारतीय नौसेना', 'Design: Indian Navy'));
     chip(L('भारत: अपना विमानवाहक पोत <b style="color:#ffcf5a">ख़ुद डिज़ाइन + निर्माण</b>', 'India: designs <b style="color:#ffcf5a">and builds</b> its own carrier'), 960, 300, R(t, T('c1_club'), 0.5), { ring: 'rgba(255,153,51,.7)' });
   }
@@ -219,7 +219,7 @@ add(T('c4'), T('c5'), (t) => {
   screen();
   speedHud(t, v, t > snag && t < bol ? Math.min(3, t - snag) : null, win(t, snag - 0.3, bol - 0.2, 0.3));
   chip(L('<span style="color:#ff8f7f">तार छूटा?</span> → फिर पूरी ताक़त, दोबारा उड़ान', '<span style="color:#ff8f7f">Missed the wires?</span> → full power, go around'), 960, 170, R(t, bol + 0.3, 0.4), { ring: 'rgba(255,107,91,.7)' });
-  text(L('ढाई सौ से ज़ीरो… <span style="color:#7dffb0">लगभग 3 सेकंड</span>', '250 to zero… <span style="color:#7dffb0">in about 3 seconds</span>'), 960, 170, { size: 60, cls: 'ttl', a: win(t, T('c4_stop'), bol, 0.4) });
+  text(L('ढाई सौ से ज़ीरो… <span style="color:#7dffb0">लगभग 3 सेकंड</span>', '250 to zero… <span style="color:#7dffb0">in about 3 seconds</span>'), 700, 300, { size: 60, cls: 'ttl', a: win(t, T('c4_stop'), bol, 0.4) });
   chapter(t, T('c4'), 4, L('तीन सेकंड का जादू', 'The three-second miracle'));
 });
 
