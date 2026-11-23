@@ -1,7 +1,7 @@
 # Claude Animated Shorts: a video and 3D skill pack for Claude Code
 
 Skills that turn Claude Code into a YouTube and Instagram animation studio, for Hindi and English.
-Most of it is drawn with code and rendered on your own computer, with no AI video generator and no stock footage.
+Everything is drawn with code and rendered on your own computer. **100% free:** no paid AI generator, no API credits, no stock footage.
 Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 
 ## 🇮🇳 Shuru kaise karein (Hinglish quick guide)
@@ -21,7 +21,7 @@ Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 | Kisi idea ka sundar isometric diagram (blog, thumbnail, reel) | `/anatomy` |
 | Machine ko khol ke dikhana (exploded view) | `/exploded-view` |
 | Kisi bhi web animation ko smooth 60fps video banana | `/frame-capture` |
-| Scroll karne pe chalne wali 3D website | `/scroll-world`, `/scroll-film` |
+| 3D page ko mobile/Safari pe check karna | `/site-check` |
 
 ---
 
@@ -107,6 +107,10 @@ For indoor machine close-ups use `/explainer-3d` with the `real` style and the `
 
 ## 3. `/cinematic-film`: evidence-wall documentary *(by exploraX, MIT)*
 
+![cinematic-film demo](assets/cinematic-film.gif)
+
+*Above: the skill's starter film rendered here with a free offline voice. Below: its documentary example (from the original repo).*
+
 ![cinematic-film cold open](assets/upstream/cinematic-film-cold-open.webp)
 
 | | |
@@ -120,11 +124,11 @@ Wikimedia Commons and records their licences. Looks: cork evidence wall, studio,
 **Prompts**
 ```
 /cinematic-film  90 second documentary about the Wright brothers' first flight
-/cinematic-film  Bhagat Singh ki kahani, evidence-wall style, Hindi voice from my MP3
+/cinematic-film  Bhagat Singh ki kahani, evidence-wall style, Hindi, meri ElevenLabs MP3 se
 /cinematic-film  Launch film for my product, studio look
 ```
 **You get:** an MP4 (16:9 or 9:16), 4 caption styles, an SRT, and `credits.md` for the photos.
-**Needs:** `pip install skia-python numpy pillow scipy`, plus ffmpeg.
+**Needs:** `pip install skia-python numpy pillow scipy`, plus ffmpeg. **Tested in this repo:** the starter film was built end to end with a free offline voice (Kokoro or `espeak-ng`). `scripts/check_setup.py` checks everything first, and `scripts/get_fonts.py` fetches free fonts.
 
 **vs `/documentary`:** use `/cinematic-film` for history and true crime built from real photos and documents.
 Use `/documentary` for machines, missions and engineering, where the drawing itself explains.
@@ -146,7 +150,7 @@ and can be exported as an A4 PDF.
 **For Shorts:** record the figure with `/frame-capture` → a crisp animated clip for B-roll or thumbnails.
 **Needs:** Node 20.10+ and Chrome. No npm packages.
 
-## 5-12. Open 3D Skills *(by exploraX, MIT)*: the toolkit the motor videos were built on
+## 5-8. Open 3D Skills *(by exploraX, MIT)*: the free toolkit the motor videos were built on
 
 ![open-3d skills](assets/upstream/open3d-cover.webp)
 
@@ -159,19 +163,9 @@ and can be exported as an A4 PDF.
 | `/threejs-scene` | Real-time 3D from code: buildings, vehicles, machines, landscapes, sky and sun, soft shadows, AO, bloom | `/threejs-scene a 3D model of the Chenab bridge at golden hour` |
 | `/exploded-view` | Opens a machine in stages, with x-ray shells, a section cut, and labels with leader lines | `/exploded-view show how a ceiling fan motor works` |
 | `/frame-capture` | Records any web animation to perfectly smooth 60 fps MP4; A-vs-B comparison videos | `/frame-capture record this page as a 30 second vertical video` |
-| `/scroll-film` | Scroll-scrubbed "Apple-style" film sections from rendered or AI clips | `/scroll-film make the hero play this clip as I scroll` |
-| `/motion-assets` | Plans and generates AI images and clips (Higgsfield, Runway, Kling, Veo) without wasting credits | `/motion-assets generate 3 hero clips for my bike website` |
-| `/alpha-cutout` | Turns a filmed or AI clip into a transparent video (alpha) | `/alpha-cutout remove the background from this clip` |
-| `/cursor-rig` | A painted character whose head follows the mouse | `/cursor-rig make my mascot look at the cursor` |
 | `/site-check` | Tests a 3D or animated page on phone, tablet and desktop, in Chrome and Safari | `/site-check check my 3D page on mobile` |
 
-`motion-assets`, `alpha-cutout`, `cursor-rig` and `scroll-film` can use **paid** AI generators (Higgsfield, Runway, Kling, Veo).
-Claude shows the cost before spending anything.
-
-## 13. `/scroll-world`: fly-through 3D world website *(by cyw, MIT)*
-A scroll-scrubbed landing page: as you scroll, the camera flies into each scene and on to the next, with no cuts.
-The scenes and clips are generated with Higgsfield / Seedance (**paid**, per clip).
-**Prompt:** `/scroll-world make a fly-through world website for my water-pump company`
+The paid-AI skills from that repo (`motion-assets`, `alpha-cutout`, `cursor-rig`, `scroll-film`) were left out on purpose: everything in this pack is free.
 
 ## 🎨 Taste palettes *(from taste-skill by Leonxlnx, MIT)*
 `taste-skill` is a website-design skill, so only its useful part is included: **64 curated colour palettes and
@@ -201,9 +195,7 @@ A 5-minute 2D documentary takes about 30-60 minutes on 4 CPU cores, and 3D reali
   documentary/     our documentary skill: template/ (2D, 5 themes), template-3d/ (realistic, 16:9 + 9:16), Vikrant example
   cinematic-film/  evidence-wall documentaries (MIT, exploraX)
   anatomy/         isometric object explainers (MIT, Ryan)
-  threejs-scene/ exploded-view/ frame-capture/ scroll-film/ motion-assets/ alpha-cutout/ cursor-rig/ site-check/
-                   Open 3D Skills (MIT, exploraX)
-  scroll-world/    fly-through world websites (MIT, cyw)
+  threejs-scene/ exploded-view/ frame-capture/ site-check/   Open 3D Skills, free ones only (MIT, exploraX)
 assets/            demo GIFs; assets/upstream/ = demo images from the original repos
 ```
 
@@ -211,6 +203,5 @@ assets/            demo GIFs; assets/upstream/ = demo images from the original r
 Everything here is MIT. Each imported skill keeps its original `LICENSE` file in its folder.
 - [cinematic-skill](https://github.com/Moh4696/cinematic-skill) and [open-3d-skills](https://github.com/Moh4696/open-3d-skills), © 2026 exploraX
 - [anatomy](https://github.com/wheresryan22/anatomy), © 2026 Ryan (PDFs and pre-built HTML pages were left out to keep the repo small; `node examples/<name>/build.mjs` rebuilds them)
-- [scroll-world](https://github.com/oso95/scroll-world), © 2026 cyw
 - [taste-skill](https://github.com/Leonxlnx/taste-skill), © 2026 Leonxlnx (palettes and type pairings only)
 - `explainer-3d` and `documentary`: this repo (MIT, see `LICENSE`)

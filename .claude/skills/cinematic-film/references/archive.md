@@ -4,7 +4,7 @@
 
 - **Archives** (history, real people, real events): the rest of this file.
 - **Your own** (product shots, team photos, screenshots, renders): drop the files in `assets/photos/` and give them a `"file"` entry in `photos.json`. Grade them `natural` so they keep their colour under one shared balance. Anyone recognisable needs to have agreed to appear.
-- **AI stills** (illustration, mood, things no camera saw): generate every still with one model and one style reference, so they read as a set. The `motion-assets` skill plans the prompts and the cost before spending anything. Never use AI images of real people, or as evidence of real events. Credit them in `credits.md` as AI-generated.
+- **AI stills** (illustration, mood, things no camera saw): generate every still with one model and one style reference, so they read as a set. In this pack, prefer free stills drawn in code or rendered with `threejs-scene` / `anatomy`.
 
 ## What is free to use (archives)
 

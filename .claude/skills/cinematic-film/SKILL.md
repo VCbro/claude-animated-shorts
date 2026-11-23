@@ -61,7 +61,7 @@ Stop for the user's approval at the four gates (marked **Gate**).
 3. **Images.** List every image in `photos.json`: its id, kind and where it comes from.
    - Archive images: `fetch_commons.py search`, `category` and `get`.
    - The user's own files: drop them in `<project>/assets/photos/`.
-   - AI stills: generate them in one style (the `motion-assets` skill plans and prices them).
+   - Illustrations: draw them in code (cards, diagrams, maps) or render them with `threejs-scene` / `anatomy` and save PNGs. This pack uses no paid generators.
    - `references/archive.md` covers other archives and the rights rules.
 4. **Scratch voice.** Run `tts_say.py`, then `split_takes.py`, then `build_narration.py`. Listen to every line `split_takes.py` flags. Now the timings are real.
 5. **Assets.** Run `make_map.py` if the story travels, then `prep_assets.py`.
@@ -98,4 +98,4 @@ python3 scripts/render.py --project wright --size 1280x720 --out out/draft.mp4 -
 
 ## Related skills
 
-From [Open 3D Skills](https://github.com/Moh4696/open-3d-skills): `motion-assets` plans and prices AI stills when a film needs illustration, and `frame-capture` records web pages instead of code-drawn films.
+In this pack: `threejs-scene` and `anatomy` make free illustrations and 3D stills for the board, and `frame-capture` records web pages instead of code-drawn films.
