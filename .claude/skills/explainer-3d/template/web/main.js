@@ -3,6 +3,7 @@
 // frame-exact recorder, ?t=12.3 for a still, otherwise it plays in real time.
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { applyTheme, themeName } from './themes.js';
 import { Labels } from './explode.js';
 import { buildPump, buildSite, DIM } from './pump.js';
 
@@ -46,7 +47,7 @@ renderer.setClearColor(0x000000, 0);
 const scene = new THREE.Scene();
 scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
 scene.environmentIntensity = 0.55;
-scene.add(new THREE.HemisphereLight('#cfe6ff', '#26323f', 0.9));
+const hemi = new THREE.HemisphereLight('#cfe6ff', '#26323f', 0.9); scene.add(hemi);
 const key = new THREE.DirectionalLight('#fff3e2', 2.6);
 key.position.set(1.6, 3.4, 2.4); key.castShadow = true;
 key.shadow.mapSize.set(2048, 2048);
@@ -54,6 +55,8 @@ Object.assign(key.shadow.camera, { left: -1.9, right: 1.9, top: 2.2, bottom: -1.
 key.shadow.bias = -0.0005; key.shadow.normalBias = 0.01; key.shadow.radius = 3;
 scene.add(key);
 const rim = new THREE.DirectionalLight('#7fc4ff', 1.2); rim.position.set(-2, 1.5, -1.5); scene.add(rim);
+const THEME = themeName();
+applyTheme(THEME, { renderer, scene, hemi, key, rim, THREE });
 
 const camera = new THREE.PerspectiveCamera(36, W / H, 0.01, 40);
 

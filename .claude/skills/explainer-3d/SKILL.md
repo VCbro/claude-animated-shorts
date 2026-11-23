@@ -1,6 +1,6 @@
 ---
 name: explainer-3d
-description: Make a 50-60 s vertical (1080x1920, 60 fps) 3D "how it works" YouTube Short / Reel of a machine (water motor, bike engine, submersible pump, AC, mixer...) in Hindi or English. The machine is built from code in three.js with x-ray shells, cutaways, exploded views, flow particles, labels with leader lines, word-synced captions, music and SFX. Use when the user types /explainer-3d, or asks for a 3D explainer short "like the motor video".
+description: Make a 50-60 s vertical (1080x1920, 60 fps) 3D "how it works" YouTube Short / Reel of a machine (water motor, bike engine, submersible pump, AC, mixer...) in Hindi or English. The machine is built from code in three.js with x-ray shells, cutaways, exploded views, flow particles, labels with leader lines, word-synced captions, music and SFX. Comes in 6 themes (studio, noir, blueprint, neon, clean, sunset). Use when the user types /explainer-3d, or asks for a 3D explainer short "like the motor video".
 ---
 
 # /explainer-3d: 3D machine explainer short (motor-video style)
@@ -20,6 +20,19 @@ python3 -m playwright install chromium        # or set CHROME_PATH
 #   https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0
 ```
 Live preview: `python3 tools/serve.py . --port 8000`, then open `http://127.0.0.1:8000/web/index.html?t=12` to freeze a moment.
+
+## Themes (pick one per video, or render two and let the user choose)
+`VTHEME=<name>` for `tools/render.py`, or `?theme=<name>` in the preview URL. Defined in `web/themes.js`:
+- `studio`: deep blue studio with yellow and cyan. The original water-motor look, safe for any machine.
+- `noir`: graphite black, warm gold light and a desaturated grade. Premium and luxury (cars, watches, engines).
+- `blueprint`: blue grid paper, monochrome-blue grade and mono labels. Engineering and "how it's designed".
+- `neon`: black with magenta/cyan rim lights and glowing captions. Tech, gadgets, gaming, AI hardware.
+- `clean`: a bright white Apple-style studio with dark captions. Home appliances and product explainers.
+- `sunset`: an orange-purple dusk gradient with a golden rim. Emotional and story hooks.
+
+A theme sets the backdrop, the 3D lights and exposure, a colour grade of the 3D layer only (captions stay sharp),
+and the caption, label and chip style. The model and timeline don't change, so a theme works for any machine.
+Add a theme by copying one entry in `THEMES`.
 
 ## 1. Script (`SCRIPT.md`)
 Facts first (with numbers you can source), then about 12 lines, each with **the picture** that goes with it:
@@ -60,7 +73,7 @@ python3 tools/audio.py                                        # synth score + SF
 python3 tools/render.py video out/video_silent.mp4 --fps 60 --workers 4      # frame-exact, parallel, resumable chunks
 bash tools/finalize.sh                                        # mux + -14 LUFS -> out/short.mp4, QA frames in out/qa/
 ```
-Hindi: `VLANG=hi python3 tools/render.py ...` and `VLANG=hi bash tools/finalize.sh` (they use `lines_hi.js`, `mix_hi.wav`).
+Theme: `VTHEME=noir python3 tools/render.py ...`. Hindi: `VLANG=hi python3 tools/render.py ...` and `VLANG=hi bash tools/finalize.sh` (they use `lines_hi.js`, `mix_hi.wav`).
 Software WebGL takes about 1-4 s per frame per worker. Check stills before every full render.
 
 ## 6. Deliver

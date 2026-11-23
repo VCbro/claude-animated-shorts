@@ -1,9 +1,9 @@
 ---
 name: documentary
-description: Make a premium 2D motion-graphics YouTube documentary (3-6 min, 1920x1080, 60 fps) in Hindi and/or English from the user's narration MP3, with word-synced captions, animated diagrams, labels, counters, chapter cards, a synthesized soundtrack, thumbnails and the YouTube title/description/tags. Use when the user types /documentary, or asks for a documentary / explainer film about a machine, place, mission or event (e.g. Chenab bridge, INS Vikrant, Chandrayaan-3, how trains work).
+description: Make a premium YouTube documentary (2D motion graphics in 5 themes, or 3D realistic with sky, ocean and film grade) (3-6 min, 1920x1080, 60 fps) in Hindi and/or English from the user's narration MP3, with word-synced captions, animated diagrams, labels, counters, chapter cards, a synthesized soundtrack, thumbnails and the YouTube title/description/tags. Use when the user types /documentary, or asks for a documentary / explainer film about a machine, place, mission or event (e.g. Chenab bridge, INS Vikrant, Chandrayaan-3, how trains work).
 ---
 
-# /documentary: 2D premium documentary
+# /documentary: premium documentary (2D themes or 3D realistic)
 
 Proven on: INS Vikrant (Hindi + English, 4:56 / 5:08), Chenab Bridge, Chandrayaan-3, Rail ka Jadu (4:08).
 Every scene is a pure function of time drawn on a canvas in headless Chromium, so Hindi text shapes correctly,
@@ -20,6 +20,36 @@ pip install -r requirements.txt   # playwright, faster-whisper, numpy, scipy
 python3 -m playwright install chromium   # skip if Chromium is already there (or set CHROME_PATH)
 ```
 ffmpeg must be on PATH. Set `CHROME_PATH` to use a specific Chromium.
+
+## Choose the look first (ask the user only if the topic doesn't make it obvious)
+Two engines, same pipeline (script → MP3 → Whisper timing → anchors → film → stills → sound → render):
+
+| Mode | Folder | Best for |
+|---|---|---|
+| **2D motion graphics** | `template/` | Machines, maps, timelines, numbers, how-it-works. Fast (~0.1 s/frame) |
+| **3D realistic** | `template-3d/` | Ships, aircraft, bridges, rockets, buildings, landscapes: anything that should feel "real" |
+
+**2D themes:** write the name in `out/theme.txt` (see `web/themes.js`).
+- `night`: deep navy with gold and cyan. The default, for defence, engineering and space.
+- `cinematic`: warm/teal film grade, 2.2:1 letterbox, serif titles, more grain. For emotional and story-led films.
+- `archive`: sepia film with grain and flicker, and serif type. For history and freedom-struggle films.
+- `neon`: black with a magenta/cyan glow. For tech, AI, space and gaming.
+- `news`: red caption box and white labels. For "breaking" explainers and current events.
+
+A theme changes the backdrop (`studio()`), a colour grade of the canvas, grain, vignette, letterbox and every
+caption/label/title style. `film.js` doesn't change, so you can test the same film in all 5 themes and pick the best.
+
+**3D realistic** (`template-3d/`, three.js): `engine3d.js` gives a physical sky with sun (`setSky({elevation, azimuth,
+turbidity, exposure...})` for dawn, noon, sunset or storm), a reflective ocean with a procedural normal map (no downloads),
+sun shadows that follow the hero (`sunFollow`), bloom, and a film grade with warm highlights, teal shadows, grain,
+vignette and a 2.2:1 letterbox. It also has `shot(t, keys, shake)` camera moves with a slight handheld drift, and DOM `text()` /
+`label(txt, point3D, dx, dy, a, sub)` / captions, so Hindi shapes correctly. `web/film.js` is a complete example: a 262 m
+carrier built from code (tapered hull with red boot-top, flight deck with ski-jump and markings, island, mast, radar,
+parked jets, wake) with 3 shots: a low hero dolly with the title, an aerial reveal with labels, and a jet launch.
+Rules for 3D: build the subject from code with real proportions; one slow, motivated camera move per line;
+low angles near the water look big; light from a low sun (elevation 3-8°) looks cinematic; check every shot as a still.
+Speed is about 2-5 s per frame with software WebGL, so render the 60 fps film overnight or at 30 fps (`--fps 30`).
+Setup is the same as for the 2D template (`npm install`, which includes three.js).
 
 ## 1. Topic and script (before any MP3)
 - Pick ONE strong, viral topic with a hook (a number, a mystery, a "how is this possible?"). Don't hand the user a long list.

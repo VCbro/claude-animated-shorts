@@ -21,32 +21,43 @@
     html.lang-hi #cap { font-size: 78px; line-height: 1.25; font-weight: 800; }
     html.lang-hi #title { font-size: 96px; line-height: 1.12; font-weight: 800; }
     html.lang-hi .label b, html.lang-hi .chip, html.lang-hi #chain div { font-weight: 800; }
-    :root { --y: #ffd23f; --c: #49d6ff; --ink: #0b1622; }
+    :root { --y: #ffd23f; --c: #49d6ff; --ink: #0b1622; --bg: #0a1520; --panel: rgba(8,18,30,.8); --txt: #fff; --sub: #d8e6f2; --stroke: #000;
+      --line: rgba(255,255,255,.85); --glow: none; --shadow: none; --font: "Mont", "Baloo", sans-serif; }
+    @font-face { font-family: "Mono"; font-weight: 700; src: url(/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+2190-21FF, U+2713-2717; }
+    @font-face { font-family: "Mono"; font-weight: 800; src: url(/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-800-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+2190-21FF, U+2713-2717; }
+    body, .label b, .chip, #chain div, #cap, #title { font-family: var(--font) !important; }
+    .theme-neon #cap span.on, .theme-neon #title em, .theme-neon .label b { text-shadow: var(--glow); }
+    .theme-clean .label, .theme-clean .chip, .theme-clean #chain div { box-shadow: var(--shadow), 0 0 0 2px rgba(17,22,28,.08) !important; }
+    .theme-clean #cap { -webkit-text-stroke: 0 !important; text-shadow: 0 4px 18px rgba(255,255,255,.9), 0 0 2px #fff !important; }
+    .theme-clean #title { text-shadow: none !important; }
+    .theme-blueprint .label, .theme-blueprint .chip, .theme-blueprint #chain div { border-radius: 6px !important; box-shadow: 0 0 0 3px rgba(255,255,255,.85) !important; }
+    .theme-blueprint #cap, .theme-blueprint #title { letter-spacing: .02em; }
+    .theme-noir #title, .theme-noir #cap span.on { text-shadow: 0 6px 0 rgba(0,0,0,.4), var(--glow); }
     * { box-sizing: border-box; }
-    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Mont", sans-serif; color: #fff;
-      background: radial-gradient(120% 75% at 50% 38%, #24415c 0%, #142739 48%, #0a1520 100%); }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Mont", sans-serif; color: var(--txt);
+      background: var(--bg); }
     canvas#gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
     .labels { position: fixed; inset: 0; }
-    .label { padding: 10px 18px 12px; border-radius: 18px; background: rgba(8, 18, 30, .78); box-shadow: 0 0 0 2px rgba(255,255,255,.14); }
+    .label { padding: 10px 18px 12px; border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 2px rgba(255,255,255,.14); }
     .label b { display: block; font-weight: 900; font-size: 46px; letter-spacing: .02em; text-transform: uppercase; color: var(--y); }
-    .label span { display: block; font-weight: 600; font-size: 31px; color: #d8e6f2; }
-    .leader { fill: none; stroke: rgba(255, 255, 255, .85); stroke-width: 3.5; }
+    .label span { display: block; font-weight: 600; font-size: 31px; color: var(--sub); }
+    .leader { fill: none; stroke: var(--line); stroke-width: 3.5; }
     #title { position: fixed; left: 0; right: 0; top: 150px; text-align: center; font-weight: 900; text-transform: uppercase;
       font-size: 86px; line-height: .98; letter-spacing: -.01em; text-shadow: 0 6px 0 rgba(0,0,0,.35), 0 0 40px rgba(0,0,0,.4); }
     #title em { font-style: normal; color: var(--c); }
     #cap { position: fixed; left: 60px; right: 60px; top: 1235px; text-align: center; font-weight: 900; text-transform: uppercase;
-      font-size: 74px; line-height: 1.08; letter-spacing: -.005em; -webkit-text-stroke: 3px #000; paint-order: stroke fill;
+      font-size: 74px; line-height: 1.08; letter-spacing: -.005em; -webkit-text-stroke: 3px var(--stroke); color: var(--txt); paint-order: stroke fill;
       text-shadow: 0 7px 0 rgba(0,0,0,.55), 0 0 30px rgba(0,0,0,.55); }
     #cap span { display: inline-block; margin: 0 .14em; transform-origin: 50% 70%; }
     #cap span.on { color: var(--y); }
     .chip { position: fixed; left: 50%; transform: translateX(-50%); padding: 16px 34px 18px; border-radius: 26px; white-space: nowrap;
-      font-weight: 900; font-size: 54px; text-transform: uppercase; background: rgba(8, 18, 30, .82); box-shadow: 0 0 0 3px rgba(255,255,255,.18); }
-    #rpm { top: 300px; } #rpm small { font-size: 32px; color: #9fb6c9; margin-left: 12px; }
+      font-weight: 900; font-size: 54px; text-transform: uppercase; color: var(--txt); background: var(--panel); box-shadow: 0 0 0 3px rgba(255,255,255,.18); }
+    #rpm { top: 300px; } #rpm small { font-size: 32px; color: var(--sub); margin-left: 12px; }
     #state { top: 300px; }
     #chain { position: fixed; left: 0; right: 0; top: 250px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-    #chain div { font-weight: 900; font-size: 64px; text-transform: uppercase; padding: 8px 34px 12px; border-radius: 22px; background: rgba(8,18,30,.8);
+    #chain div { font-weight: 900; font-size: 64px; text-transform: uppercase; padding: 8px 34px 12px; border-radius: 22px; color: var(--txt); background: var(--panel);
       box-shadow: 0 0 0 3px rgba(255,255,255,.16); }
-    #chain i { font-style: normal; font-size: 44px; color: #9fb6c9; line-height: .6; }
+    #chain i { font-style: normal; font-size: 44px; color: var(--sub); line-height: .6; }
   </style>
 </head>
 <body>
