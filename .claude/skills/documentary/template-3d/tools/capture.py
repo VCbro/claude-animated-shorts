@@ -14,9 +14,10 @@ time.sleep(1)
 try:
     with sync_playwright() as pw:
         b = pw.chromium.launch(executable_path=os.environ.get("CHROME_PATH") or None, args=["--disable-gpu-vsync", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"])
-        pg = b.new_page(viewport={"width": 1920, "height": 1080}, device_scale_factor=arg("--dpr", 1.0))
+        VW, VH = map(int, os.environ.get("VIEW", "1920x1080").split("x"))
+        pg = b.new_page(viewport={"width": VW, "height": VH}, device_scale_factor=arg("--dpr", 1.0))
         logs = []; pg.on("console", lambda m: logs.append(m.text)); pg.on("pageerror", lambda e: logs.append("ERR " + str(e)))
-        pg.goto(f"http://127.0.0.1:{PORT}/web/doc.html")
+        pg.goto(f"http://127.0.0.1:{PORT}/web/doc.html?size={VW}x{VH}")
         try: pg.wait_for_function("window.__ready === true", timeout=60000)
         except Exception: print("\n".join(logs)); raise
         if mode == "stills":

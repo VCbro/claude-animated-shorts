@@ -11,7 +11,11 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 export { THREE };
-export const W = 1920, H = 1080;
+// size: 1920x1080 (YouTube) by default; ?size=1080x1920 or VIEW=1080x1920 for capture.py -> vertical Shorts/Reels
+const _sz = (new URLSearchParams(location.search).get('size') || window.__VIEW || '1920x1080').split('x').map(Number);
+export const W = _sz[0], H = _sz[1];
+if (H > W) document.documentElement.classList.add('vertical');
+document.documentElement.style.setProperty('--W', W + 'px'); document.documentElement.style.setProperty('--H', H + 'px');
 export const K = await fetch('/out/anchors.json').then((r) => r.json()).catch(() => ({ END: 12 }));
 const CAPS = await fetch('/out/captions.json').then((r) => r.json()).catch(() => []);
 export const END = K.END;
@@ -94,7 +98,7 @@ composer.addPass(new RenderPass(scene, camera));
 export const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.35, 0.6, 0.85); composer.addPass(bloom);
 composer.addPass(new OutputPass());
 export const grade = new ShaderPass({
-  uniforms: { tDiffuse: { value: null }, uT: { value: 0 }, uBox: { value: 104 / 1080 }, uFade: { value: 1 }, uWarm: { value: 0.12 }, uVig: { value: 0.55 }, uGrain: { value: 0.05 } },
+  uniforms: { tDiffuse: { value: null }, uT: { value: 0 }, uBox: { value: W > H ? 104 / 1080 : 0 }, uFade: { value: 1 }, uWarm: { value: 0.12 }, uVig: { value: 0.55 }, uGrain: { value: 0.05 } },
   vertexShader: 'varying vec2 v; void main(){ v = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }',
   fragmentShader: `uniform sampler2D tDiffuse; uniform float uT, uBox, uFade, uWarm, uVig, uGrain; varying vec2 v;
     float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)))*43758.5453); }

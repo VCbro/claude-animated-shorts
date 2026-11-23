@@ -19,7 +19,8 @@ ARGS = ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-
 PORT = int(os.environ.get("PORT", "8765"))
 LANG = os.environ.get("VLANG", "en")
 THEME = os.environ.get("VTHEME", "")
-URL = f"http://127.0.0.1:{PORT}/web/index.html?record=1" + ("&lang=hi" if LANG == "hi" else "") + (f"&theme={THEME}" if THEME else "")
+STYLE = os.environ.get("VSTYLE", "")
+URL = f"http://127.0.0.1:{PORT}/web/index.html?record=1" + ("&lang=hi" if LANG == "hi" else "") + (f"&theme={THEME}" if THEME else "") + (f"&style={STYLE}" if STYLE else "")
 
 
 def start_server():
@@ -84,16 +85,16 @@ def video(out, fps, workers, t_from, t_to):
         b.close()
     t_to = dur if t_to is None else min(t_to, dur)
     f0, f1 = int(round(t_from * fps)), int(round(t_to * fps))
-    os.makedirs(os.path.join(ROOT, f"out/chunks_{LANG}{THEME}"), exist_ok=True)
+    os.makedirs(os.path.join(ROOT, f"out/chunks_{LANG}{THEME}{STYLE}"), exist_ok=True)
     n = f1 - f0
     # more chunks than workers, so a slow chunk does not hold everyone up
     nch = workers * 3
     bounds = [f0 + n * i // nch for i in range(nch + 1)]
-    jobs = [(i, bounds[i], bounds[i + 1], fps, os.path.join(ROOT, f"out/chunks_{LANG}{THEME}/c{i:03d}.mp4")) for i in range(nch)]
+    jobs = [(i, bounds[i], bounds[i + 1], fps, os.path.join(ROOT, f"out/chunks_{LANG}{THEME}{STYLE}/c{i:03d}.mp4")) for i in range(nch)]
     print(f"{n} frames ({t_from:.2f}-{t_to:.2f}s at {fps} fps) in {nch} chunks on {workers} workers")
     with ProcessPoolExecutor(workers) as ex:
         paths = list(ex.map(chunk, jobs))
-    lst = os.path.join(ROOT, f"out/chunks_{LANG}{THEME}/list.txt")
+    lst = os.path.join(ROOT, f"out/chunks_{LANG}{THEME}{STYLE}/list.txt")
     open(lst, "w").write("".join(f"file '{p}'\n" for p in paths))
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", out], check=True)
     print("wrote", out)

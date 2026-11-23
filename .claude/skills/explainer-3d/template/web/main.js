@@ -4,6 +4,7 @@
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { applyTheme, themeName } from './themes.js';
+import { applyStyle, syncStyle, styleName } from './styles.js';
 import { Labels } from './explode.js';
 import { buildPump, buildSite, DIM } from './pump.js';
 
@@ -394,7 +395,9 @@ function setXray(v) {
 const casingHome = P.parts.casing.position.clone(), frontHome = P.parts.frontCover.position.clone();
 const _dark = new THREE.Color('#3a2a22'), _red = new THREE.Color('#ff3b30'), _blue = new THREE.Color('#2f8bff'), _amber = new THREE.Color('#ff9a2e');
 
+let _styled = false;
 function renderAt(t) {
+  if (!_styled) { applyStyle(scene, styleName()); _styled = true; }   // render style (styles.js), once the scene is complete
   // switch
   S.toggle.rotation.x = -0.5 + 1.0 * ramp(t, tOn - 0.12, tOn);
   S.toggle.material.emissive.set(t > tOn ? '#5a0d06' : '#000000');
@@ -450,6 +453,7 @@ function renderAt(t) {
 
   const shot = setCamera(t);
   S.house.visible = shot === 0 || shot === 5;
+  syncStyle(t);
   renderer.render(scene, camera);
   updateOverlays(t);
 }

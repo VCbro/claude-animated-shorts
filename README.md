@@ -1,15 +1,31 @@
-# Claude Animated Shorts: 2 video skills for Claude Code
+# Claude Animated Shorts: a video and 3D skill pack for Claude Code
 
-Two skills that turn Claude Code into a YouTube animation studio for Hindi and English videos.
-Everything is drawn with code and rendered on your own computer. There's no AI video generator,
-no stock footage and no paid service. Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
+Skills that turn Claude Code into a YouTube and Instagram animation studio, for Hindi and English.
+Most of it is drawn with code and rendered on your own computer, with no AI video generator and no stock footage.
+Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 
-| Skill | Type this in Claude Code | You get | Looks |
-|---|---|---|---|
-| **3D machine explainer** | `/explainer-3d` | 50-60 s vertical Short (1080×1920, 60 fps) | 6 themes |
-| **Documentary** | `/documentary` | 3-6 min YouTube film (1920×1080, 60 fps) + thumbnails + YouTube text | 5 × 2D themes + 3D realistic |
+## 🇮🇳 Shuru kaise karein (Hinglish quick guide)
+1. **Install (ek baar):** neeche "Install" wale 3 commands chalao, phir Claude Code restart karo.
+2. **Skill chalao:** Claude Code mein `/` ke baad skill ka naam likho, phir aapko kya chahiye. Jaise:
+   `/explainer-3d Mixer grinder kaise kaam karta hai, toon style, sunset theme, Hindi Short`
+3. **Script lo:** Claude script deta hai (ElevenLabs v3 tags `[ ]` ke saath). ElevenLabs mein Eleven v3 model se MP3 banao aur Claude ko bhejo.
+4. **Video lo:** Claude timing set karke stills dikhata hai, phir render karke MP4, thumbnails aur title/description/tags deta hai.
+5. **Look badalna ho:** bas likho "noir theme try karo" ya "clay style mein dikhao". Claude 3-4 stills bana ke dikhayega, aap chuno.
+
+| Mujhe chahiye… | Skill |
+|---|---|
+| Machine ka 3D Short (motor, engine, AC…) | `/explainer-3d` |
+| 4-5 min ki documentary (2D ya 3D realistic) | `/documentary` |
+| Photo, map aur newspaper wali "evidence wall" documentary | `/cinematic-film` |
+| 3D realistic Short (jahaz, rocket, pul, car) | `/documentary` 3D mode, vertical mein (neeche dekho) |
+| Kisi idea ka sundar isometric diagram (blog, thumbnail, reel) | `/anatomy` |
+| Machine ko khol ke dikhana (exploded view) | `/exploded-view` |
+| Kisi bhi web animation ko smooth 60fps video banana | `/frame-capture` |
+| Scroll karne pe chalne wali 3D website | `/scroll-world`, `/scroll-film` |
 
 ---
+
+# 🎬 Video skills
 
 ## 1. `/explainer-3d`: 3D "how it works" Short (motor-video style)
 
@@ -17,67 +33,150 @@ no stock footage and no paid service. Bring a voice MP3 (ElevenLabs or any other
 
 *Water motor, bike engine and submersible pump, all made with this skill.*
 
-### 6 themes: same machine, one word changes the whole look
+### 11 styles: how the 3D is drawn
+![explainer-3d styles](assets/explainer-3d-styles.gif)
+
+| Style | Look | Use for |
+|---|---|---|
+| `real` | physically based metal and plastic (default) | realistic explainers |
+| `clay` | matte clay model | premium, Apple-keynote feel |
+| `toon` | cel shading + black ink outlines | cartoon, fun facts |
+| `pastel` | soft pastel toon | kids, friendly education |
+| `lowpoly` | flat-shaded facets | game-like, stylised |
+| `chrome` | polished metal everywhere | luxury, sci-fi |
+| `xray` | see-through glowing shells | inside views, scan feel |
+| `hologram` | cyan hologram + scanlines | future tech, sci-fi HUD |
+| `blueprint` | white technical lines on blue | engineering drawing |
+| `sketch` | paper model + pencil edges | whiteboard, hand-drawn |
+| `neonedge` | dark parts with glowing edges | cyberpunk, gaming |
+
+### 6 themes: colours, backdrop, light and captions
 ![explainer-3d themes](assets/explainer-3d-themes.gif)
 
-| Theme | Best for |
-|---|---|
-| `studio` | Default. Any machine (blue studio, yellow captions) |
-| `noir` | Premium: cars, engines, watches (black + gold) |
-| `blueprint` | Engineering / design: blueprint-blue grid, mono labels |
-| `neon` | Tech, gadgets, gaming (black + magenta/cyan glow) |
-| `clean` | Home appliances: white Apple-style studio |
-| `sunset` | Emotional / story hooks: warm dusk gradient |
+`studio` · `noir` · `blueprint` · `neon` · `clean` · `sunset`. **11 styles × 6 themes = 66 looks** for the same machine.
+Good pairs: `clay`+`clean`, `toon`+`sunset`, `chrome`+`noir`, `hologram`+`neon`, `sketch`+`clean`.
 
-**How to use**
+**Prompts**
 ```
-/explainer-3d  Mixer grinder kaise kaam karta hai, Hindi Short, neon theme
+/explainer-3d  Mixer grinder kaise kaam karta hai, Hindi Short
+/explainer-3d  How an AC cools a room, English, clay style, clean theme
+/explainer-3d  Bike ka carburetor, hologram style, neon theme
 ```
-1. Claude writes the facts and the script, line by line with the picture for each line, and gives you the Hindi script with ElevenLabs tags.
-2. You send the MP3, or ask for the free offline English voice.
-3. Claude builds the machine in 3D from code, times every move to the voice, checks stills, then renders.
-
-**What you get:** `short.mp4` (1080×1920, 60 fps, about 55 s, word-by-word captions, music and sound effects),
-a Shorts title, description, tags, and thumbnail ideas.
+**You get:** `short.mp4` (1080×1920, 60 fps, about 55 s, word-by-word captions, music and sound effects), a Shorts title,
+description, tags and thumbnail ideas. It needs Node and Python, and runs offline.
 
 ---
 
-## 2. `/documentary`: premium documentary
+## 2. `/documentary`: premium documentary (2D, or 3D realistic)
 
 ![documentary demo](assets/documentary.gif)
 
 *INS Vikrant, Chenab Bridge, Rail ka Jadu and Chandrayaan-3, all made with this skill (2D mode).*
 
-### NEW: 3D realistic mode
+### 3D realistic mode
 ![documentary 3D realistic](assets/documentary-3d.gif)
 
-A physical sky and sun, a reflective ocean, shadows, bloom and a cinematic film grade (letterbox, grain, warm/teal).
-The subject is built from code with real proportions; this demo is a 262 m aircraft carrier at sunset.
-Best for ships, aircraft, rockets, bridges and buildings: anything that should feel real.
+A physical sky and sun, a reflective ocean, shadows, bloom and a cinematic grade (letterbox, grain, warm/teal).
+The subject is built from code with real proportions. It works in **16:9** (YouTube) and **9:16** (Shorts, with `VIEW=1080x1920`).
 
-### 5 themes for 2D mode: the same film, a different mood
+### 5 themes for 2D mode
 ![documentary themes](assets/documentary-themes.gif)
 
-| Theme | Best for |
-|---|---|
-| `night` | Default. Defence, engineering, space (navy + gold) |
-| `cinematic` | Story-led and emotional films (film grade, letterbox, serif titles) |
-| `archive` | History and freedom struggle (sepia film, grain, flicker) |
-| `neon` | Tech, AI, space, gaming (black + glow) |
-| `news` | "Breaking" explainers, current events (red caption box) |
+`night` (defence, engineering) · `cinematic` (story-led) · `archive` (history, sepia film) · `neon` (tech, AI) · `news` (breaking explainers).
 
-**How to use**
+**Prompts**
 ```
-/documentary  INS Vikrant, 3D realistic
+/documentary  INS Vikrant ki kahani, 5 minute, Hindi
 /documentary  1857 ki kranti, archive theme
+/documentary  Chandrayaan-3 landing, 3D realistic
+/documentary  English version bhi banao        (after the Hindi one: same animation, English captions and text)
 ```
-1. Claude picks the angle, researches the facts and writes a 4-5 minute chapter script with ElevenLabs v3 emotion tags.
-2. You make the MP3 in ElevenLabs (Eleven v3) and send it.
-3. Claude times every word, animates every chapter, adds the soundtrack and renders.
-4. Want English too? Say "English version bhi banao": same animation, English text and captions, separate video.
+**You get:** `film.mp4` (1920×1080, 60 fps, about 200 MB for 5 minutes), `.srt` subtitles, 3 thumbnails, and `youtube.txt`
+(titles, description, chapters, tags, hashtags).
 
-**What you get:** `film.mp4` (1920×1080, 60 fps, about 200 MB for 5 minutes), `.srt` subtitles, 3 thumbnails, and
-`youtube.txt` with titles, description, chapters, tags and hashtags.
+### 🔥 How to make a 3D realistic Short
+```
+/documentary  Make a 50 second vertical 3D realistic Short: INS Vikrant at sunset, a jet launching off the ski-jump.
+              Use template-3d in vertical mode (VIEW=1080x1920), Hindi captions.
+```
+That's the best combination in this pack for "looks real": the 3D engine (sky, ocean, sun shadows, film grade) in
+9:16, with `/threejs-scene` rules for the model and lighting and `/frame-capture` for a perfectly smooth 60 fps render.
+For indoor machine close-ups use `/explainer-3d` with the `real` style and the `noir` or `studio` theme.
+
+---
+
+## 3. `/cinematic-film`: evidence-wall documentary *(by exploraX, MIT)*
+
+![cinematic-film cold open](assets/upstream/cinematic-film-cold-open.webp)
+
+| | |
+|---|---|
+| ![](assets/upstream/cinematic-film-wall.webp) | ![](assets/upstream/cinematic-film-explainer.webp) |
+
+One continuous camera glides over one designed world of photos, newspaper clippings, typeset documents, maps with routes,
+stamps, highlighter swipes and rolling counters, and each one lands on the narrator's word. It finds public-domain photos on
+Wikimedia Commons and records their licences. Looks: cork evidence wall, studio, blueprint/paper, night.
+
+**Prompts**
+```
+/cinematic-film  90 second documentary about the Wright brothers' first flight
+/cinematic-film  Bhagat Singh ki kahani, evidence-wall style, Hindi voice from my MP3
+/cinematic-film  Launch film for my product, studio look
+```
+**You get:** an MP4 (16:9 or 9:16), 4 caption styles, an SRT, and `credits.md` for the photos.
+**Needs:** `pip install skia-python numpy pillow scipy`, plus ffmpeg.
+
+**vs `/documentary`:** use `/cinematic-film` for history and true crime built from real photos and documents.
+Use `/documentary` for machines, missions and engineering, where the drawing itself explains.
+
+---
+
+# 🧩 3D and helper skills
+
+## 4. `/anatomy`: isometric "real object" explainers *(by Ryan, MIT)*
+
+| | | |
+|---|---|---|
+| ![](assets/upstream/anatomy-raptor-engine-firing.webp) | ![](assets/upstream/anatomy-raptor-engine-apart.webp) | ![](assets/upstream/anatomy-ripple-tank.webp) |
+
+It explains an idea by drawing it as a precise little machine: a rocket engine on a test stand, a ripple tank, a dial
+gauge or an arcade cabinet, with hundreds of small parts, correct shading and calm motion. It's interactive (SVG + WebGL)
+and can be exported as an A4 PDF.
+**Prompts:** `/anatomy explain how a rocket engine works, interactive` · `/anatomy how a token bucket rate limiter works`
+**For Shorts:** record the figure with `/frame-capture` → a crisp animated clip for B-roll or thumbnails.
+**Needs:** Node 20.10+ and Chrome. No npm packages.
+
+## 5-12. Open 3D Skills *(by exploraX, MIT)*: the toolkit the motor videos were built on
+
+![open-3d skills](assets/upstream/open3d-cover.webp)
+
+| | |
+|---|---|
+| ![](assets/upstream/motor-take-apart.webp) | ![](assets/upstream/pavilion-golden.webp) |
+
+| Skill | What it does | Example prompt |
+|---|---|---|
+| `/threejs-scene` | Real-time 3D from code: buildings, vehicles, machines, landscapes, sky and sun, soft shadows, AO, bloom | `/threejs-scene a 3D model of the Chenab bridge at golden hour` |
+| `/exploded-view` | Opens a machine in stages, with x-ray shells, a section cut, and labels with leader lines | `/exploded-view show how a ceiling fan motor works` |
+| `/frame-capture` | Records any web animation to perfectly smooth 60 fps MP4; A-vs-B comparison videos | `/frame-capture record this page as a 30 second vertical video` |
+| `/scroll-film` | Scroll-scrubbed "Apple-style" film sections from rendered or AI clips | `/scroll-film make the hero play this clip as I scroll` |
+| `/motion-assets` | Plans and generates AI images and clips (Higgsfield, Runway, Kling, Veo) without wasting credits | `/motion-assets generate 3 hero clips for my bike website` |
+| `/alpha-cutout` | Turns a filmed or AI clip into a transparent video (alpha) | `/alpha-cutout remove the background from this clip` |
+| `/cursor-rig` | A painted character whose head follows the mouse | `/cursor-rig make my mascot look at the cursor` |
+| `/site-check` | Tests a 3D or animated page on phone, tablet and desktop, in Chrome and Safari | `/site-check check my 3D page on mobile` |
+
+`motion-assets`, `alpha-cutout`, `cursor-rig` and `scroll-film` can use **paid** AI generators (Higgsfield, Runway, Kling, Veo).
+Claude shows the cost before spending anything.
+
+## 13. `/scroll-world`: fly-through 3D world website *(by cyw, MIT)*
+A scroll-scrubbed landing page: as you scroll, the camera flies into each scene and on to the next, with no cuts.
+The scenes and clips are generated with Higgsfield / Seedance (**paid**, per clip).
+**Prompt:** `/scroll-world make a fly-through world website for my water-pump company`
+
+## 🎨 Taste palettes *(from taste-skill by Leonxlnx, MIT)*
+`taste-skill` is a website-design skill, so only its useful part is included: **64 curated colour palettes and
+font pairings** (`reference/taste/palettes.json`, `type.json` inside both video skills). Claude uses them to build a
+new theme that looks professional: "naya theme banao, warm luxury palette se".
 
 ---
 
@@ -88,34 +187,30 @@ git clone https://github.com/VCbro/claude-animated-shorts.git
 mkdir -p ~/.claude/skills
 cp -r claude-animated-shorts/.claude/skills/* ~/.claude/skills/
 ```
-Then restart Claude Code and type `/explainer-3d` or `/documentary`.
+Restart Claude Code, then type `/` to see every skill.
 
-**You also need:** Node.js 18+, Python 3.10+ and ffmpeg. Each skill tells Claude the exact `npm install` and
-`pip install` commands, and Claude runs them in your new project the first time.
-A GPU isn't needed. Videos render with software WebGL; a 5-minute 2D documentary takes about 30-60 minutes on 4 CPU cores,
-while 3D realistic mode is slower (render at 30 fps, or leave it overnight).
+**You also need:** Node.js 20+, Python 3.10+ and ffmpeg. Each skill tells Claude the exact `npm install` and `pip install`
+commands, and Claude runs them in your new project the first time. A GPU isn't needed; everything renders with software WebGL.
+A 5-minute 2D documentary takes about 30-60 minutes on 4 CPU cores, and 3D realistic mode is slower (render at 30 fps or overnight).
 
 ## What's inside
 
 ```
 .claude/skills/
-  explainer-3d/   SKILL.md
-                  template/    the full water-motor project + web/themes.js (6 themes)
-                  examples/    bike engine and submersible pump (scene + timeline)
-                  reference/   three.js geometry, lighting, shaders, exploded views, frame capture
-  documentary/    SKILL.md
-                  template/    2D engine + web/themes.js (5 themes), Whisper timing, alignment, capture, sound, thumbnails
-                  template-3d/ 3D realistic engine (sky, ocean, shadows, bloom, film grade) + carrier example film
-                  examples/    the complete INS Vikrant film: script, anchors, film.js, audio
-assets/           demo GIFs
+  explainer-3d/    our 3D Short skill: template (water motor), web/themes.js (6), web/styles.js (11), examples, reference
+  documentary/     our documentary skill: template/ (2D, 5 themes), template-3d/ (realistic, 16:9 + 9:16), Vikrant example
+  cinematic-film/  evidence-wall documentaries (MIT, exploraX)
+  anatomy/         isometric object explainers (MIT, Ryan)
+  threejs-scene/ exploded-view/ frame-capture/ scroll-film/ motion-assets/ alpha-cutout/ cursor-rig/ site-check/
+                   Open 3D Skills (MIT, exploraX)
+  scroll-world/    fly-through world websites (MIT, cyw)
+assets/            demo GIFs; assets/upstream/ = demo images from the original repos
 ```
 
-## Tips
-- **Voice:** ElevenLabs **Eleven v3** with a deep narrator voice works best. Emotion tags in `[ ]` aren't spoken.
-- **Hindi + English:** upload as two separate videos and set "Video language" for each. YouTube's multi-language
-  audio feature isn't available on most channels.
-- **File size:** 1080p 60 fps keeps a 5-minute film around 200 MB, small enough to send in chat. 4K files are over 500 MB.
-- **Not sure about the theme?** Ask Claude to render 3 stills in different themes, then pick one.
-
-## License
-MIT (see `LICENSE`).
+## Credits and licences
+Everything here is MIT. Each imported skill keeps its original `LICENSE` file in its folder.
+- [cinematic-skill](https://github.com/Moh4696/cinematic-skill) and [open-3d-skills](https://github.com/Moh4696/open-3d-skills), © 2026 exploraX
+- [anatomy](https://github.com/wheresryan22/anatomy), © 2026 Ryan (PDFs and pre-built HTML pages were left out to keep the repo small; `node examples/<name>/build.mjs` rebuilds them)
+- [scroll-world](https://github.com/oso95/scroll-world), © 2026 cyw
+- [taste-skill](https://github.com/Leonxlnx/taste-skill), © 2026 Leonxlnx (palettes and type pairings only)
+- `explainer-3d` and `documentary`: this repo (MIT, see `LICENSE`)

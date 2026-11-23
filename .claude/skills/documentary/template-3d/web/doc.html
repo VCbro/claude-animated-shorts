@@ -14,10 +14,11 @@
   @font-face { font-family: T; src: url(/node_modules/@fontsource/tiro-devanagari-hindi/files/tiro-devanagari-hindi-devanagari-400-normal.woff2); unicode-range: U+0900-097F, U+200C-200D, U+25CC; }
   @font-face { font-family: T; src: url(/node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2); unicode-range: U+0000-00FF, U+2013-2022; }
   * { margin: 0; box-sizing: border-box; }
-  html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; font-family: B, sans-serif; color: #fff; font-variant-numeric: lining-nums; }
-  canvas { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  html, body { width: var(--W, 1920px); height: var(--H, 1080px); overflow: hidden; background: #000; font-family: B, sans-serif; color: #fff; font-variant-numeric: lining-nums; }
+  canvas { position: absolute; inset: 0; width: var(--W, 1920px); height: var(--H, 1080px); }
   #ui { position: absolute; inset: 0; pointer-events: none; }
-  svg { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  svg { position: absolute; inset: 0; width: var(--W, 1920px); height: var(--H, 1080px); }
+  .vertical #cap { bottom: 520px; font-size: 64px; left: 50px; right: 50px; white-space: normal; }
   .t { position: absolute; white-space: nowrap; }
   .ttl { font-family: T, B, serif; text-align: center; text-shadow: 0 4px 40px rgba(0,0,0,.75); }
   .kick { font-weight: 600; font-size: 28px; letter-spacing: 6px; text-transform: uppercase; color: #ffcf8a; }

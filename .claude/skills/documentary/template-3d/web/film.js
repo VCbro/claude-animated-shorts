@@ -1,7 +1,7 @@
 // Example 3D realistic film: an aircraft carrier (generic, INS Vikrant-like proportions, 262 m) at sea at sunset.
 // Shots: low hero dolly -> aerial reveal with labels -> jet launch off the ski-jump. Replace the model and the shot
 // list for a new subject; keep the engine. Times come from anchors (A('name')) when the film has a voice.
-import { THREE, scene, camera, setSky, sunFollow, shot, onFrame, start, text, label, win, R, eio, lerp, clamp, rnd, K, bloom } from './engine3d.js';
+import { THREE, scene, camera, setSky, sunFollow, shot, onFrame, start, text, label, win, R, eio, lerp, clamp, rnd, K, bloom, W, H } from './engine3d.js';
 
 const has = (n) => n in K;
 const at = (n, d) => (has(n) ? K[n] : d);          // anchor time, or a default for the demo
@@ -107,8 +107,8 @@ onFrame((t) => {
   else shot(t, [[tC, [sx + 255, 52, 110], [sx + 200, 24, 0], 32], [tC + 3.6, [sx + 300, 58, 120], [sx + 290, 40, 0], 34]], 0.1);   // side view of the bow: the jet runs up the ski-jump
 
   // titles + labels (screen text is DOM, so Hindi shapes correctly)
-  text('<div class="kick">Bharatiya Nausena · R11</div>', 960, 330, { size: 28, a: win(t, 0.6, tB - 0.2, 0.5), cls: '' });
-  text('INS विक्रांत', 960, 420, { size: 120, a: win(t, 0.8, tB - 0.2, 0.6) });
+  text('<div class="kick">Bharatiya Nausena · R11</div>', W / 2, H * 0.305, { size: 28, a: win(t, 0.6, tB - 0.2, 0.5), cls: '' });
+  text('INS विक्रांत', W / 2, H * 0.39, { size: W > H ? 120 : 110, a: win(t, 0.8, tB - 0.2, 0.6) });
   const P = (x, y, z) => new THREE.Vector3(sx + x, y, z);
   label('स्की-जंप', P(258, DECK_Y + 9, 0), 120, -120, win(t, tB + 0.6, tC - 0.2, 0.3), 'उड़ान के लिए मुड़ा रनवे');
   label('आइलैंड', P(161, DECK_Y + 30, -16), -150, -110, win(t, tB + 1.2, tC - 0.2, 0.3), 'जहाज़ का कंट्रोल');

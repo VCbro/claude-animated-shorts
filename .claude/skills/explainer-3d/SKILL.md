@@ -1,6 +1,6 @@
 ---
 name: explainer-3d
-description: Make a 50-60 s vertical (1080x1920, 60 fps) 3D "how it works" YouTube Short / Reel of a machine (water motor, bike engine, submersible pump, AC, mixer...) in Hindi or English. The machine is built from code in three.js with x-ray shells, cutaways, exploded views, flow particles, labels with leader lines, word-synced captions, music and SFX. Comes in 6 themes (studio, noir, blueprint, neon, clean, sunset). Use when the user types /explainer-3d, or asks for a 3D explainer short "like the motor video".
+description: Make a 50-60 s vertical (1080x1920, 60 fps) 3D "how it works" YouTube Short / Reel of a machine (water motor, bike engine, submersible pump, AC, mixer...) in Hindi or English. The machine is built from code in three.js with x-ray shells, cutaways, exploded views, flow particles, labels with leader lines, word-synced captions, music and SFX. Comes in 11 render styles (real, clay, toon, pastel, lowpoly, chrome, xray, hologram, blueprint, sketch, neonedge) x 6 colour themes (studio, noir, blueprint, neon, clean, sunset) = 66 looks. Use when the user types /explainer-3d, or asks for a 3D explainer short "like the motor video".
 ---
 
 # /explainer-3d: 3D machine explainer short (motor-video style)
@@ -33,6 +33,34 @@ Live preview: `python3 tools/serve.py . --port 8000`, then open `http://127.0.0.
 A theme sets the backdrop, the 3D lights and exposure, a colour grade of the 3D layer only (captions stay sharp),
 and the caption, label and chip style. The model and timeline don't change, so a theme works for any machine.
 Add a theme by copying one entry in `THEMES`.
+
+## Styles (HOW the 3D is drawn) — combine with any theme
+`VSTYLE=<name>` for `tools/render.py`, `?style=<name>` in the preview URL. Defined in `web/styles.js`; it restyles every
+part after the scene is built and follows the timeline's live colour/opacity changes, so it works on any machine.
+
+| Style | Look | Use for |
+|---|---|---|
+| `real` | physically based metal and plastic (default) | realistic explainers |
+| `clay` | matte clay model | premium product / Apple-keynote feel |
+| `toon` | cel shading + black ink outlines | cartoon / kids / fun facts |
+| `pastel` | soft pastel toon, grey outlines | friendly, educational, kids |
+| `lowpoly` | flat-shaded facets, saturated | game-like, stylised |
+| `chrome` | everything polished metal | luxury, sci-fi, "engine porn" |
+| `xray` | see-through glowing shells | inside views, medical-scan feel |
+| `hologram` | cyan additive hologram + scanlines | sci-fi HUD, future tech |
+| `blueprint` | white technical lines on dark blue | engineering drawing |
+| `sketch` | white paper model + pencil edges | whiteboard / hand-drawn |
+| `neonedge` | dark parts with glowing edges | Tron / cyberpunk / gaming |
+
+Good pairs: `real`+`studio`, `clay`+`clean`, `toon`+`sunset`, `chrome`+`noir`, `hologram`+`neon`, `blueprint`+`blueprint`, `sketch`+`clean`.
+Render 3-4 stills in different pairs and let the user pick before the full render.
+
+## 3D realistic Shorts (outdoor, cinematic)
+For subjects that should look real in a vertical Short (ships, aircraft, rockets, bridges, cars in a landscape), use the
+documentary skill's `template-3d/` engine in vertical mode: `VIEW=1080x1920 python3 tools/capture.py ...`
+(physical sky + sun, ocean, shadows, bloom, film grade; captions move up for 9:16). For indoor machine close-ups keep this
+template with `real` style + `studio`/`noir` theme and follow `reference/threejs-scene.md` (soft shadows, light presets).
+Pick colours/type from `reference/taste/palettes.json` and `type.json` (64 curated palettes, MIT, from taste-skill).
 
 ## 1. Script (`SCRIPT.md`)
 Facts first (with numbers you can source), then about 12 lines, each with **the picture** that goes with it:
