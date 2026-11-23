@@ -9,6 +9,7 @@ no stock footage and no paid service. Bring a voice MP3 (ElevenLabs or any other
 | **3D machine explainer** | `/explainer-3d` | 50-60 s vertical Short (1080×1920, 60 fps): a machine built in 3D, opened up, explained part by part |
 | **2D documentary** | `/documentary` | 3-6 min YouTube documentary (1920×1080, 60 fps) with chapters, diagrams, counters, captions and thumbnails |
 | **Cartoon story short** | `/cartoon-3d-short` | 55-90 s cartoon story: 2D characters in a painted 3D world, ink outlines, gliding camera |
+| **3D documentary case file** | `/case-file` | Prompts only: a full blueprint (timeline, scene table, image prompts, 30 s video prompts with sound, narration, edit checklist) for any AI image/video/voice tool |
 
 ---
 
@@ -69,6 +70,27 @@ It needs [Remotion](https://www.remotion.dev/) (installed with `npm install` in 
 
 ---
 
+## 4. `/case-file`: 3D documentary blueprint (prompts only)
+
+**How to use**
+```
+/case-file  Make me a documentary about the origin of Spider-Man. Treat it as a real incident.
+```
+Run `/case-file` with no idea to see the 5-step process first. Unlike the other skills it renders nothing:
+it gives you a cold, clinical "case file" in one reply, and you paste the prompts into the tools you use.
+
+| Step | What you get | Where it goes |
+|---|---|---|
+| 1. Case file | Title, timeline, chapters, scene table | Read it: this is the plan |
+| 2. Asset stills | One image prompt per character, location, prop | Any image model (Nano Banana, GPT Image, …) |
+| 3. Video blocks | One 30-second motion prompt per scene, sound design included | Any video model (Seedance 2.5 recommended) |
+| 4. Narration | One master voiceover script + voice card | Any text-to-speech tool |
+| 5. Edit | Assembly checklist, timestamp overlays | Any video editor |
+
+Two looks: **Incident Reconstruction** (low-poly 3D) and **Large-Scale Investigation** (night satellite maps).
+
+---
+
 ## Install (once)
 
 ```bash
@@ -76,7 +98,7 @@ git clone https://github.com/VCbro/claude-animated-shorts.git
 mkdir -p ~/.claude/skills
 cp -r claude-animated-shorts/.claude/skills/* ~/.claude/skills/
 ```
-Then restart Claude Code and type `/explainer-3d`, `/documentary` or `/cartoon-3d-short`.
+Then restart Claude Code and type `/explainer-3d`, `/documentary`, `/cartoon-3d-short` or `/case-file`.
 
 **You also need:** Node.js 18+, Python 3.10+ and ffmpeg. Each skill tells Claude the exact `npm install` and
 `pip install` commands, and Claude runs them in your new project the first time.
@@ -92,6 +114,7 @@ A GPU isn't needed. Videos render with software WebGL; a 5-minute documentary ta
                        examples/ (the complete INS Vikrant film: script, anchors, film.js, audio)
   cartoon-3d-short/    SKILL.md, templates/ (bridge short source, audio, QA scripts), references/ (style research),
                        examples/jadui-jungle-hindi/ (a complete Hindi cartoon project)
+  case-file/           SKILL.md, references/ (incident style, investigation style, narration)
 assets/                demo GIFs
 ```
 
