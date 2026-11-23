@@ -1,7 +1,0 @@
-voice/*.wav
-out/
-audio/*.wav
-deliver/*.mp4
-node_modules
-fonts/node_modules
-__pycache__/
