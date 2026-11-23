@@ -86,7 +86,8 @@ subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", os.path.join(ROOT, "voice/v
 _, v = wavfile.read(w); v = v.astype(np.float64) / 32768
 voice = np.zeros(N); voice[:min(N, len(v))] = v[:N]; voice /= np.abs(voice).max() + 1e-9
 ker = np.ones(int(0.3 * SR)) / int(0.3 * SR)
-venv = np.convolve(np.abs(voice), ker, "same"); venv /= venv.max() + 1e-9; vact = np.clip(venv * 4, 0, 1)
+_k = len(ker); _cs = np.cumsum(np.concatenate([np.zeros(_k // 2), np.abs(voice), np.zeros(_k - _k // 2)])); venv = ((_cs[_k:] - _cs[:-_k]) / _k)[:N];   # fast moving average (np.convolve here took minutes)
+ venv /= venv.max() + 1e-9; vact = np.clip(venv * 4, 0, 1)
 fade = np.minimum(1, tg / 1.5) * np.minimum(1, (END - tg) / 2.5)
 out = 0.95 * voice + score * (1 - 0.5 * vact) * 0.6 * fade + amb * (1 - 0.4 * vact) * 0.5 * fade + sfx * (1 - 0.3 * vact) * 0.6
 out = np.tanh(out * 1.1) / np.tanh(1.1)
