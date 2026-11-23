@@ -1,33 +1,105 @@
-# Claude Animated Shorts
+# Claude Animated Shorts: 3 video skills for Claude Code
 
-The free Claude skill from the video **"How to Make Viral Animated Shorts Using Claude (Full Workflow)"**.
+Three skills that turn Claude Code into a YouTube animation studio for Hindi and English videos.
+Everything is drawn with code and rendered on your own computer. There's no AI video generator,
+no stock footage and no paid service. Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 
-It makes 55-70 s vertical animated story shorts: 2D characters in a colourful 3D world, with ink outlines, a painted town, lens blur, gliding cameras, a march score and sound effects. Everything is rendered with three.js inside Remotion on your own PC, with no AI video generator.
+| Skill | Type this in Claude Code | You get |
+|---|---|---|
+| **3D machine explainer** | `/explainer-3d` | 50-60 s vertical Short (1080×1920, 60 fps): a machine built in 3D, opened up, explained part by part |
+| **2D documentary** | `/documentary` | 3-6 min YouTube documentary (1920×1080, 60 fps) with chapters, diagrams, counters, captions and thumbnails |
+| **Cartoon story short** | `/cartoon-3d-short` | 55-90 s cartoon story: 2D characters in a painted 3D world, ink outlines, gliding camera |
 
-Proven on **The Bridge That Fell for a Song**, a 67 s short about the 1831 Broughton bridge.
+---
+
+## 1. `/explainer-3d`: 3D "how it works" Short (motor-video style)
+
+![explainer-3d demo](assets/explainer-3d.gif)
+
+*Water motor, bike engine and submersible pump, all made with this skill.*
+
+**How to use**
+```
+/explainer-3d  How does a mixer grinder work? Hindi Short
+```
+1. Claude writes the facts and the script, line by line with the picture for each line, and gives you the Hindi script with ElevenLabs tags.
+2. You send the MP3, or ask for the free offline English voice.
+3. Claude builds the machine in 3D from code, times every move to the voice, checks stills, then renders.
+
+**What you get:** `short.mp4` (1080×1920, 60 fps, about 55 s, word-by-word captions, music and sound effects),
+a Shorts title, description, tags, and thumbnail ideas.
+
+---
+
+## 2. `/documentary`: 2D premium documentary
+
+![documentary demo](assets/documentary.gif)
+
+*INS Vikrant, Chenab Bridge, Rail ka Jadu and Chandrayaan-3, all made with this skill.*
+
+**How to use**
+```
+/documentary  INS Vikrant
+```
+1. Claude picks the angle, researches the facts and writes a 4-5 minute chapter script with ElevenLabs v3 emotion tags.
+2. You make the MP3 in ElevenLabs (Eleven v3) and send it.
+3. Claude times every word, animates every chapter, adds the soundtrack and renders.
+4. Want English too? Say "English version bhi banao": same animation, English text and captions, separate video.
+
+**What you get:** `film.mp4` (1920×1080, 60 fps, about 200 MB for 5 minutes), `.srt` subtitles, 3 thumbnails, and
+`youtube.txt` with titles, description, chapters, tags and hashtags.
+
+---
+
+## 3. `/cartoon-3d-short`: cartoon story short
+
+![cartoon demo](assets/cartoon-3d-short.gif)
+
+*From "जादुई जंगल का रहस्य", a Hindi cartoon short made with this skill.*
+
+**How to use**
+```
+/cartoon-3d-short  A short story about a clever crow and a thirsty fox, in Hindi
+```
+Claude writes the story and the script, designs the characters and the world, plans every camera shot, renders in
+chunks and mixes the voice, music and sound effects.
+
+**What you get:** the finished short (vertical or 16:9), the script, and the subtitle timings.
+It needs [Remotion](https://www.remotion.dev/) (installed with `npm install` in the project).
+
+---
+
+## Install (once)
+
+```bash
+git clone https://github.com/VCbro/claude-animated-shorts.git
+mkdir -p ~/.claude/skills
+cp -r claude-animated-shorts/.claude/skills/* ~/.claude/skills/
+```
+Then restart Claude Code and type `/explainer-3d`, `/documentary` or `/cartoon-3d-short`.
+
+**You also need:** Node.js 18+, Python 3.10+ and ffmpeg. Each skill tells Claude the exact `npm install` and
+`pip install` commands, and Claude runs them in your new project the first time.
+A GPU isn't needed. Videos render with software WebGL; a 5-minute documentary takes about 30-60 minutes on 4 CPU cores.
 
 ## What's inside
-| Path | What it is |
-|---|---|
-| `SKILL.md` | The skill: the full pipeline, every rule, every fix, and the final look values |
-| `templates/bridge/` | The full source of the bridge short: world, characters, ink, lens blur, grade, story/camera |
-| `templates/audio/` | The synthesized sound: SFX, march music, the mix with ducking and loudness |
-| `templates/scripts/` | Stills, side-by-side sheets, shot merge and frame-by-frame QA helpers |
-| `references/STYLE_BIBLE.md` | The script and visual formula measured from 20 reference shorts |
-| `references/reports/` | Seven measured reports: motion, depth, textures, characters, lighting, outlines, grade |
-| `references/frames/` | 38 full-size reference frames (540x960) to compare your frames against |
-| `references/sheets/` | 20 contact sheets, one per reference short, 60 frames each (1,200 frames) |
 
-## Install
-1. Copy this folder to `~/.claude/skills/cartoon-3d-short/` (clone it there, or download the ZIP).
-2. You need [Remotion](https://www.remotion.dev/) with `@remotion/three`, plus Node, Python 3 and ffmpeg.
-3. In Claude Code, say: *"Use the cartoon short skill and make a short about …"*.
+```
+.claude/skills/
+  explainer-3d/        SKILL.md, template/ (the full water-motor project), examples/ (bike engine, submersible pump),
+                       reference/ (three.js geometry, lighting, shaders, exploded views, frame capture)
+  documentary/         SKILL.md, template/ (2D engine, Whisper timing, alignment, capture, soundtrack, thumbnails),
+                       examples/ (the complete INS Vikrant film: script, anchors, film.js, audio)
+  cartoon-3d-short/    SKILL.md, templates/ (bridge short source, audio, QA scripts), references/ (style research),
+                       examples/jadui-jungle-hindi/ (a complete Hindi cartoon project)
+assets/                demo GIFs
+```
 
-Claude then follows `SKILL.md`: topic and facts, then script, then voice, then the shot plan in `story.ts`, then stills, then renders. Agents check your frames against the reports and the frames, and you get the final 2K render and sound mix.
-
-## Notes
-- Set `REMOTION_TMP` to a folder on a big drive. Every Remotion bundle copies `public/` (~1.3 GB) into the temp folder.
-- Story, characters and voice should always be your own. Use the references for the look, not the content.
+## Tips
+- **Voice:** ElevenLabs **Eleven v3** with a deep narrator voice works best. Emotion tags in `[ ]` aren't spoken.
+- **Hindi + English:** upload as two separate videos and set "Video language" for each. YouTube's multi-language
+  audio feature isn't available on most channels.
+- **File size:** 1080p 60 fps keeps a 5-minute film around 200 MB, small enough to send in chat. 4K files are over 500 MB.
 
 ## License
-The code and docs are MIT (see `LICENSE`). The reference frames are included for style study only.
+MIT (see `LICENSE`). The reference frames in `cartoon-3d-short/references/` are for style study only.
