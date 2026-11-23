@@ -70,24 +70,23 @@ It needs [Remotion](https://www.remotion.dev/) (installed with `npm install` in 
 
 ---
 
-## 4. `/case-file`: 3D documentary blueprint (prompts only)
+## 4. `/case-file`: photorealistic 3D/VFX documentary blueprint (prompts only)
 
 **How to use**
 ```
 /case-file  Make me a documentary about the origin of Spider-Man. Treat it as a real incident.
 ```
-Run `/case-file` with no idea to see the 5-step process first. Unlike the other skills it renders nothing:
-it gives you a cold, clinical "case file" in one reply, and you paste the prompts into the tools you use.
+Run `/case-file` with no idea to see the 5-phase process first. Unlike the other skills it renders nothing:
+it gives you a deadpan forensic "case file" of prompts written at feature-film VFX quality (anamorphic lens
+specs, PBR materials, ACEScg lighting, Houdini-style simulation cues), and you paste them into the tools you use.
 
-| Step | What you get | Where it goes |
+| Phase | Deliverable | Purpose |
 |---|---|---|
-| 1. Case file | Title, timeline, chapters, scene table | Read it: this is the plan |
-| 2. Asset stills | One image prompt per character, location, prop | Any image model (Nano Banana, GPT Image, …) |
-| 3. Video blocks | One 30-second motion prompt per scene, sound design included | Any video model (Seedance 2.5 recommended) |
-| 4. Narration | One master voiceover script + voice card | Any text-to-speech tool |
-| 5. Edit | Assembly checklist, timestamp overlays | Any video editor |
-
-Two looks: **Incident Reconstruction** (low-poly 3D) and **Large-Scale Investigation** (night satellite maps).
+| 1. Case Brief | Incident timeline & tone sheet | Locks timestamps, locations (`LOC-XX`), subjects (`CHAR-XX`), evidence (`PROP-XX`) |
+| 2. Asset Bible | Reference prompt plates (16:9) | Photorealistic character, location and macro prop sheets for consistency |
+| 3. Sequence Blueprints | Continuous 30 s single-scene prompts | 4-beat choreography with camera rigs, VFX sims and foley |
+| 4. Keyframe Chain | Start/end still prompts (16:9) | Beat-by-beat keyframes for image-to-video models (Veo, Runway, Kling) |
+| 5. Narration & Audio | Deadpan voiceover + foley cue sheet | Timecoded narration synced to room tone, micro-foley and sub-bass score |
 
 ---
 
@@ -114,7 +113,7 @@ A GPU isn't needed. Videos render with software WebGL; a 5-minute documentary ta
                        examples/ (the complete INS Vikrant film: script, anchors, film.js, audio)
   cartoon-3d-short/    SKILL.md, templates/ (bridge short source, audio, QA scripts), references/ (style research),
                        examples/jadui-jungle-hindi/ (a complete Hindi cartoon project)
-  case-file/           SKILL.md, references/ (incident style, investigation style, narration)
+  case-file/           SKILL.md, references/cinematic-3d-vfx.md (lens, PBR, lighting, VFX and negative-prompt spec)
 assets/                demo GIFs
 ```
 
