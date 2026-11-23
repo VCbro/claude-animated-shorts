@@ -31,6 +31,12 @@ Built from a 5:22 documentary about Al Capone, then opened up to any subject. Th
 
 Needs Python 3.9+, `pip install skia-python numpy pillow` (scipy optional) and ffmpeg. Run `scripts/check_setup.py` first; on Linux or Windows, also run `scripts/get_fonts.py` per project. All commands take `--project <folder>`.
 
+## Free voices (this pack)
+- Scratch or final English voice, offline and free: `python3 scripts/tts_say.py --project <p> --cmd 'python3 scripts/extra/kokoro_tts.py {txt} {out}'`
+  (needs `pip install kokoro-onnx soundfile` and the model files in `~/models`, see `explainer-3d/SKILL.md`). `espeak-ng` also works (`apt install espeak-ng`).
+- Hindi or a better final voice: record each take in ElevenLabs (or any TTS), save as `audio/takes/<take>.wav`, then `split_takes.py` + `build_narration.py`.
+- Always run `prep_assets.py` before the first render, even with no photos: it builds the board textures (studio, cork, paper...). Without them the render stalls.
+
 ## Pick the film
 
 | Kind | Look | Images | Typical items |

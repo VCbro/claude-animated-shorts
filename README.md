@@ -128,6 +128,17 @@ Wikimedia Commons and records their licences. Looks: cork evidence wall, studio,
 /cinematic-film  Launch film for my product, studio look
 ```
 **You get:** an MP4 (16:9 or 9:16), 4 caption styles, an SRT, and `credits.md` for the photos.
+
+**Try it yourself (free, about 2 minutes):**
+```bash
+cd ~/.claude/skills/cinematic-film/scripts
+pip install skia-python numpy pillow scipy && python3 check_setup.py
+python3 new_project.py ~/coffee && python3 get_fonts.py --project ~/coffee && python3 prep_assets.py --project ~/coffee
+python3 tts_say.py --project ~/coffee          # free espeak-ng voice (or --cmd with extra/kokoro_tts.py)
+python3 split_takes.py --project ~/coffee && python3 build_narration.py --project ~/coffee
+python3 render.py --project ~/coffee --cues && python3 build_sfx.py --project ~/coffee && python3 mix_soundtrack.py --project ~/coffee
+python3 render.py --project ~/coffee --size 1920x1080 --out out/film.mp4 --audio audio/mix.m4a
+```
 **Needs:** `pip install skia-python numpy pillow scipy`, plus ffmpeg. **Tested in this repo:** the starter film was built end to end with a free offline voice (Kokoro or `espeak-ng`). `scripts/check_setup.py` checks everything first, and `scripts/get_fonts.py` fetches free fonts.
 
 **vs `/documentary`:** use `/cinematic-film` for history and true crime built from real photos and documents.
