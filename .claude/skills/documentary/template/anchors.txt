@@ -1,2 +1,0 @@
-# name | phrase (exact words from deliver/script_hi.txt, in order)
-second | दूसरा हिस्सा

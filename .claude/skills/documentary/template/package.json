@@ -1,8 +1,0 @@
-{
-  "name": "documentary-film",
-  "private": true,
-  "dependencies": {
-    "@fontsource/baloo-2": "^5.3.0",
-    "@fontsource/montserrat": "^5.3.0"
-  }
-}
