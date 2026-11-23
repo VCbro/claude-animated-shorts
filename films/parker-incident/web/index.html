@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>The Parker Incident</title>
+  <script type="importmap">
+    { "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+    } }
+  </script>
+  <style>
+    @font-face { font-family: "Mono"; font-weight: 400; src: url(/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); }
+    @font-face { font-family: "Mono"; font-weight: 500; src: url(/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2) format("woff2"); }
+    @font-face { font-family: "Mono"; font-weight: 600; src: url(/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2) format("woff2"); }
+    @font-face { font-family: "Sans"; font-weight: 400; src: url(/node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2) format("woff2"); }
+    @font-face { font-family: "Sans"; font-weight: 500; src: url(/node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-500-normal.woff2) format("woff2"); }
+    :root { --cy: #3fdbe8; --ink: rgba(236, 241, 244, .92); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #000; color: var(--ink); font-family: "Mono", monospace; }
+    canvas#gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; filter: saturate(.8) contrast(1.05); }
+    #vig { position: fixed; inset: 0; pointer-events: none; background: radial-gradient(120% 95% at 50% 48%, rgba(0,0,0,0) 55%, rgba(0,0,0,.5) 100%); }
+    #grain { position: fixed; inset: 0; width: 100%; height: 100%; opacity: .085; mix-blend-mode: overlay; image-rendering: auto; }
+    #cctv { position: fixed; inset: 0; pointer-events: none; opacity: 0;
+      background: repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, rgba(0,0,0,.05) 1px 3px); }
+    .corner { position: fixed; width: 46px; height: 46px; border: 0 solid rgba(236,241,244,.75); }
+    .tl { left: 56px; top: 50px; border-left-width: 2px; border-top-width: 2px; }
+    .tr { right: 56px; top: 50px; border-right-width: 2px; border-top-width: 2px; }
+    .bl { left: 56px; bottom: 50px; border-left-width: 2px; border-bottom-width: 2px; }
+    .br { right: 56px; bottom: 50px; border-right-width: 2px; border-bottom-width: 2px; }
+    #camtag { position: fixed; right: 84px; top: 66px; font-size: 22px; font-weight: 500; letter-spacing: .14em; opacity: 0; }
+    #camtag i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #e8eef2; margin-left: 14px; vertical-align: 1px; }
+    #clock { position: fixed; left: 84px; bottom: 74px; font-size: 26px; font-weight: 500; letter-spacing: .12em; opacity: 0; }
+    #clock small { display: block; font-size: 16px; letter-spacing: .22em; opacity: .7; margin-bottom: 8px; }
+    #chapter { position: fixed; left: 84px; top: 96px; font-size: 18px; letter-spacing: .26em; opacity: 0; }
+    #chapter b { display: block; font-weight: 600; font-size: 30px; letter-spacing: .16em; margin-top: 8px; }
+    #sub { position: fixed; left: 0; right: 0; bottom: 70px; text-align: center; font-family: "Sans", sans-serif; font-weight: 500;
+      font-size: 34px; line-height: 1.3; color: #f2f5f7; text-shadow: 0 2px 8px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.9); padding: 0 420px; }
+    #mark { position: fixed; width: 80px; height: 80px; margin: -40px 0 0 -40px; opacity: 0; }
+    #mark::before, #mark::after { content: ""; position: absolute; inset: 0; border: 2px solid var(--cy);
+      clip-path: polygon(0 0, 30% 0, 30% 2px, 2px 2px, 2px 30%, 0 30%, 0 0, 100% 0, 100% 30%, calc(100% - 2px) 30%, calc(100% - 2px) 2px, 70% 2px, 70% 0, 100% 0, 100% 100%, 70% 100%, 70% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 70%, 100% 70%, 100% 100%, 0 100%, 0 70%, 2px 70%, 2px calc(100% - 2px), 30% calc(100% - 2px), 30% 100%, 0 100%); }
+    #mark span { position: absolute; left: 92px; top: 26px; white-space: nowrap; font-size: 18px; letter-spacing: .18em; color: var(--cy); }
+    #fade { position: fixed; inset: 0; background: #000; opacity: 1; }
+    .card { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; text-align: center; }
+    .card .k { font-size: 20px; letter-spacing: .5em; opacity: .7; }
+    .card .t { font-size: 74px; font-weight: 600; letter-spacing: .2em; margin: 22px 0 18px; }
+    .card .s { font-size: 22px; letter-spacing: .32em; opacity: .75; }
+    .card hr { width: 120px; border: 0; border-top: 2px solid var(--cy); margin: 26px 0 0; }
+  </style>
+</head>
+<body>
+  <canvas id="gl"></canvas>
+  <div id="cctv"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div></div>
+  <canvas id="grain" width="640" height="360"></canvas>
+  <div id="vig"></div>
+  <div id="mark"><span>SPECIMEN 8-C</span></div>
+  <div id="camtag"></div>
+  <div id="chapter"></div>
+  <div id="clock"></div>
+  <div id="sub"></div>
+  <div id="fade"></div>
+  <div class="card" id="open"><div class="k">CASE FILE</div><div class="t">0809-C</div><div class="s">EAST GENETICS LAB · AUGUST 9</div><hr></div>
+  <div class="card" id="end"><div class="k">CASE FILE 0809-C</div><div class="t">THE PARKER INCIDENT</div><div class="s">STATUS: FILE OPEN</div><hr></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
