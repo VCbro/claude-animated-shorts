@@ -1,2 +1,9 @@
-videos/
-node_modules/
+node_modules
+videos/**/out/
+videos/**/*.mp4
+videos/**/*.mov
+videos/**/*.wav
+videos/**/*.zip
+videos/**/*.blend1
+videos/_zips/
+__pycache__/

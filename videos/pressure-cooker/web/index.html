@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><link rel="icon" href="data:,">
+<title>Pressure Cooker</title>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+<style>
+  @font-face { font-family: B; font-weight: 800; src: url(/node_modules/@fontsource/baloo-2/files/baloo-2-devanagari-800-normal.woff2); unicode-range: U+0900-097F, U+200C-200D, U+25CC; }
+  @font-face { font-family: B; font-weight: 800; src: url(/node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2); unicode-range: U+0000-00FF, U+2013-2022, U+2190-21FF; }
+  @font-face { font-family: M; font-weight: 900; src: url(/node_modules/@fontsource/montserrat/files/montserrat-latin-900-normal.woff2); }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0706; font-family: B, sans-serif; color: #fff; }
+  canvas { position: fixed; inset: 0; width: 1080px; height: 1920px; }
+  #ui { position: fixed; inset: 0; pointer-events: none; }
+  .t { position: absolute; white-space: nowrap; transform: translate(-50%, -50%); }
+  .hook { font-weight: 800; font-size: 112px; line-height: 1.05; text-align: center; -webkit-text-stroke: 4px #000; paint-order: stroke fill;
+          text-shadow: 0 8px 0 rgba(0,0,0,.45), 0 0 40px rgba(0,0,0,.6); }
+  .hook em { font-style: normal; color: #ffb547; }
+  .chip { padding: 14px 32px 10px; border-radius: 24px; background: rgba(14,8,6,.82); box-shadow: 0 0 0 3px rgba(255,255,255,.18); font-weight: 800; font-size: 54px; }
+  .chip b { font-family: M; font-weight: 900; font-size: 84px; color: #ffb547; }
+  .lab { padding: 10px 22px 6px; border-radius: 16px; background: rgba(14,8,6,.84); box-shadow: 0 0 0 2px rgba(255,255,255,.2); font-weight: 800; font-size: 44px; color: #ffcf7a; }
+  .lab i { display: block; font-style: normal; font-size: 28px; color: #f3dcc8; }
+  .ok { color: #7cf09a; } .bad { color: #ff6b57; }
+  #cap { position: fixed; left: 50px; right: 50px; top: 1430px; text-align: center; font-weight: 800; font-size: 76px; line-height: 1.22;
+         -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 0 6px 0 rgba(0,0,0,.55), 0 0 26px rgba(0,0,0,.6); }
+  #cap span { display: inline-block; margin: 0 .12em; }
+  #cap span.on { color: #ffb547; transform: scale(1.08); }
+  svg { position: fixed; inset: 0; width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<svg id="lines"></svg>
+<div id="ui"></div>
+<div id="cap"></div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

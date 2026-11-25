@@ -1,0 +1,785 @@
+{
+ "duration": 48.933,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "This pump lives two hundred feet underground. Completely underwater.",
+   "start": 0.45,
+   "end": 3.867,
+   "words": [
+    {
+     "w": "This",
+     "t": 0.5
+    },
+    {
+     "w": "pump",
+     "t": 0.659
+    },
+    {
+     "w": "lives",
+     "t": 0.819
+    },
+    {
+     "w": "two",
+     "t": 1.138
+    },
+    {
+     "w": "hundred",
+     "t": 1.297
+    },
+    {
+     "w": "feet",
+     "t": 1.616
+    },
+    {
+     "w": "underground.",
+     "t": 1.776
+    },
+    {
+     "w": "Completely",
+     "t": 2.398
+    },
+    {
+     "w": "underwater.",
+     "t": 3.036
+    }
+   ]
+  },
+  {
+   "id": "question",
+   "text": "So how does it push water all the way up to your house?",
+   "start": 4.047,
+   "end": 6.362,
+   "words": [
+    {
+     "w": "So",
+     "t": 4.097
+    },
+    {
+     "w": "how",
+     "t": 4.246
+    },
+    {
+     "w": "does",
+     "t": 4.394
+    },
+    {
+     "w": "it",
+     "t": 4.543
+    },
+    {
+     "w": "push",
+     "t": 4.692
+    },
+    {
+     "w": "water",
+     "t": 4.84
+    },
+    {
+     "w": "all",
+     "t": 5.137
+    },
+    {
+     "w": "the",
+     "t": 5.286
+    },
+    {
+     "w": "way",
+     "t": 5.435
+    },
+    {
+     "w": "up",
+     "t": 5.583
+    },
+    {
+     "w": "to",
+     "t": 5.732
+    },
+    {
+     "w": "your",
+     "t": 5.881
+    },
+    {
+     "w": "house?",
+     "t": 6.029
+    }
+   ]
+  },
+  {
+   "id": "install",
+   "text": "Workers lower it into the borewell on its pipe, with the power cable alongside.",
+   "start": 6.602,
+   "end": 10.434,
+   "words": [
+    {
+     "w": "Workers",
+     "t": 6.652
+    },
+    {
+     "w": "lower",
+     "t": 6.972
+    },
+    {
+     "w": "it",
+     "t": 7.291
+    },
+    {
+     "w": "into",
+     "t": 7.451
+    },
+    {
+     "w": "the",
+     "t": 7.771
+    },
+    {
+     "w": "borewell",
+     "t": 7.931
+    },
+    {
+     "w": "on",
+     "t": 8.41
+    },
+    {
+     "w": "its",
+     "t": 8.57
+    },
+    {
+     "w": "pipe,",
+     "t": 8.73
+    },
+    {
+     "w": "with",
+     "t": 8.962
+    },
+    {
+     "w": "the",
+     "t": 9.122
+    },
+    {
+     "w": "power",
+     "t": 9.281
+    },
+    {
+     "w": "cable",
+     "t": 9.601
+    },
+    {
+     "w": "alongside.",
+     "t": 9.761
+    }
+   ]
+  },
+  {
+   "id": "deep",
+   "text": "Down it goes, past soil, sand and rock, deep below the water level.",
+   "start": 10.614,
+   "end": 14.053,
+   "words": [
+    {
+     "w": "Down",
+     "t": 10.664
+    },
+    {
+     "w": "it",
+     "t": 10.847
+    },
+    {
+     "w": "goes,",
+     "t": 11.03
+    },
+    {
+     "w": "past",
+     "t": 11.295
+    },
+    {
+     "w": "soil,",
+     "t": 11.478
+    },
+    {
+     "w": "sand",
+     "t": 11.743
+    },
+    {
+     "w": "and",
+     "t": 11.926
+    },
+    {
+     "w": "rock,",
+     "t": 12.109
+    },
+    {
+     "w": "deep",
+     "t": 12.375
+    },
+    {
+     "w": "below",
+     "t": 12.558
+    },
+    {
+     "w": "the",
+     "t": 12.924
+    },
+    {
+     "w": "water",
+     "t": 13.107
+    },
+    {
+     "w": "level.",
+     "t": 13.472
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "text": "At the bottom is a sealed electric motor. The water flowing past it keeps it cool.",
+   "start": 14.293,
+   "end": 18.493,
+   "words": [
+    {
+     "w": "At",
+     "t": 14.343
+    },
+    {
+     "w": "the",
+     "t": 14.508
+    },
+    {
+     "w": "bottom",
+     "t": 14.674
+    },
+    {
+     "w": "is",
+     "t": 15.004
+    },
+    {
+     "w": "a",
+     "t": 15.17
+    },
+    {
+     "w": "sealed",
+     "t": 15.335
+    },
+    {
+     "w": "electric",
+     "t": 15.666
+    },
+    {
+     "w": "motor.",
+     "t": 16.162
+    },
+    {
+     "w": "The",
+     "t": 16.641
+    },
+    {
+     "w": "water",
+     "t": 16.806
+    },
+    {
+     "w": "flowing",
+     "t": 17.137
+    },
+    {
+     "w": "past",
+     "t": 17.468
+    },
+    {
+     "w": "it",
+     "t": 17.633
+    },
+    {
+     "w": "keeps",
+     "t": 17.798
+    },
+    {
+     "w": "it",
+     "t": 17.963
+    },
+    {
+     "w": "cool.",
+     "t": 18.129
+    }
+   ]
+  },
+  {
+   "id": "intake",
+   "text": "Above that, the intake. A mesh screen lets water in, and keeps sand out.",
+   "start": 18.673,
+   "end": 22.282,
+   "words": [
+    {
+     "w": "Above",
+     "t": 18.723
+    },
+    {
+     "w": "that,",
+     "t": 19.079
+    },
+    {
+     "w": "the",
+     "t": 19.338
+    },
+    {
+     "w": "intake.",
+     "t": 19.516
+    },
+    {
+     "w": "A",
+     "t": 20.032
+    },
+    {
+     "w": "mesh",
+     "t": 20.21
+    },
+    {
+     "w": "screen",
+     "t": 20.389
+    },
+    {
+     "w": "lets",
+     "t": 20.567
+    },
+    {
+     "w": "water",
+     "t": 20.745
+    },
+    {
+     "w": "in,",
+     "t": 21.101
+    },
+    {
+     "w": "and",
+     "t": 21.359
+    },
+    {
+     "w": "keeps",
+     "t": 21.538
+    },
+    {
+     "w": "sand",
+     "t": 21.716
+    },
+    {
+     "w": "out.",
+     "t": 21.894
+    }
+   ]
+  },
+  {
+   "id": "stages",
+   "text": "Then the real trick. Not one impeller, but a whole stack of them, called stages.",
+   "start": 22.492,
+   "end": 26.302,
+   "words": [
+    {
+     "w": "Then",
+     "t": 22.542
+    },
+    {
+     "w": "the",
+     "t": 22.705
+    },
+    {
+     "w": "real",
+     "t": 22.869
+    },
+    {
+     "w": "trick.",
+     "t": 23.032
+    },
+    {
+     "w": "Not",
+     "t": 23.343
+    },
+    {
+     "w": "one",
+     "t": 23.506
+    },
+    {
+     "w": "impeller,",
+     "t": 23.833
+    },
+    {
+     "w": "but",
+     "t": 24.397
+    },
+    {
+     "w": "a",
+     "t": 24.56
+    },
+    {
+     "w": "whole",
+     "t": 24.724
+    },
+    {
+     "w": "stack",
+     "t": 24.887
+    },
+    {
+     "w": "of",
+     "t": 25.05
+    },
+    {
+     "w": "them,",
+     "t": 25.214
+    },
+    {
+     "w": "called",
+     "t": 25.451
+    },
+    {
+     "w": "stages.",
+     "t": 25.777
+    }
+   ]
+  },
+  {
+   "id": "diffuser",
+   "text": "Each impeller flings the water outward, and a diffuser guides it up into the next one.",
+   "start": 26.482,
+   "end": 30.701,
+   "words": [
+    {
+     "w": "Each",
+     "t": 26.532
+    },
+    {
+     "w": "impeller",
+     "t": 26.688
+    },
+    {
+     "w": "flings",
+     "t": 27.157
+    },
+    {
+     "w": "the",
+     "t": 27.314
+    },
+    {
+     "w": "water",
+     "t": 27.47
+    },
+    {
+     "w": "outward,",
+     "t": 27.783
+    },
+    {
+     "w": "and",
+     "t": 28.166
+    },
+    {
+     "w": "a",
+     "t": 28.322
+    },
+    {
+     "w": "diffuser",
+     "t": 28.478
+    },
+    {
+     "w": "guides",
+     "t": 28.947
+    },
+    {
+     "w": "it",
+     "t": 29.26
+    },
+    {
+     "w": "up",
+     "t": 29.416
+    },
+    {
+     "w": "into",
+     "t": 29.572
+    },
+    {
+     "w": "the",
+     "t": 29.885
+    },
+    {
+     "w": "next",
+     "t": 30.041
+    },
+    {
+     "w": "one.",
+     "t": 30.198
+    }
+   ]
+  },
+  {
+   "id": "pressure",
+   "text": "Every stage adds more pressure. More stages, the deeper it can lift.",
+   "start": 30.881,
+   "end": 34.599,
+   "words": [
+    {
+     "w": "Every",
+     "t": 30.931
+    },
+    {
+     "w": "stage",
+     "t": 31.495
+    },
+    {
+     "w": "adds",
+     "t": 31.683
+    },
+    {
+     "w": "more",
+     "t": 31.871
+    },
+    {
+     "w": "pressure.",
+     "t": 32.059
+    },
+    {
+     "w": "More",
+     "t": 32.604
+    },
+    {
+     "w": "stages,",
+     "t": 32.792
+    },
+    {
+     "w": "the",
+     "t": 33.252
+    },
+    {
+     "w": "deeper",
+     "t": 33.44
+    },
+    {
+     "w": "it",
+     "t": 33.816
+    },
+    {
+     "w": "can",
+     "t": 34.004
+    },
+    {
+     "w": "lift.",
+     "t": 34.192
+    }
+   ]
+  },
+  {
+   "id": "valve",
+   "text": "At the top, a check valve stops the water falling back when the pump switches off.",
+   "start": 34.839,
+   "end": 38.773,
+   "words": [
+    {
+     "w": "At",
+     "t": 34.889
+    },
+    {
+     "w": "the",
+     "t": 35.077
+    },
+    {
+     "w": "top,",
+     "t": 35.266
+    },
+    {
+     "w": "a",
+     "t": 35.539
+    },
+    {
+     "w": "check",
+     "t": 35.727
+    },
+    {
+     "w": "valve",
+     "t": 35.916
+    },
+    {
+     "w": "stops",
+     "t": 36.104
+    },
+    {
+     "w": "the",
+     "t": 36.293
+    },
+    {
+     "w": "water",
+     "t": 36.481
+    },
+    {
+     "w": "falling",
+     "t": 36.858
+    },
+    {
+     "w": "back",
+     "t": 37.235
+    },
+    {
+     "w": "when",
+     "t": 37.423
+    },
+    {
+     "w": "the",
+     "t": 37.612
+    },
+    {
+     "w": "pump",
+     "t": 37.8
+    },
+    {
+     "w": "switches",
+     "t": 37.989
+    },
+    {
+     "w": "off.",
+     "t": 38.365
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "text": "Why push from below? A surface pump can only suck water up about eight meters. Pushing has no limit.",
+   "start": 39.013,
+   "end": 44.265,
+   "words": [
+    {
+     "w": "Why",
+     "t": 39.063
+    },
+    {
+     "w": "push",
+     "t": 39.236
+    },
+    {
+     "w": "from",
+     "t": 39.41
+    },
+    {
+     "w": "below?",
+     "t": 39.583
+    },
+    {
+     "w": "A",
+     "t": 40.086
+    },
+    {
+     "w": "surface",
+     "t": 40.26
+    },
+    {
+     "w": "pump",
+     "t": 40.607
+    },
+    {
+     "w": "can",
+     "t": 40.78
+    },
+    {
+     "w": "only",
+     "t": 40.954
+    },
+    {
+     "w": "suck",
+     "t": 41.301
+    },
+    {
+     "w": "water",
+     "t": 41.474
+    },
+    {
+     "w": "up",
+     "t": 41.821
+    },
+    {
+     "w": "about",
+     "t": 41.994
+    },
+    {
+     "w": "eight",
+     "t": 42.341
+    },
+    {
+     "w": "meters.",
+     "t": 42.515
+    },
+    {
+     "w": "Pushing",
+     "t": 43.018
+    },
+    {
+     "w": "has",
+     "t": 43.365
+    },
+    {
+     "w": "no",
+     "t": 43.538
+    },
+    {
+     "w": "limit.",
+     "t": 43.712
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "text": "Motor at the bottom. Stages stacked up. Pressure, all the way to your tank.",
+   "start": 44.505,
+   "end": 48.393,
+   "words": [
+    {
+     "w": "Motor",
+     "t": 44.555
+    },
+    {
+     "w": "at",
+     "t": 44.897
+    },
+    {
+     "w": "the",
+     "t": 45.068
+    },
+    {
+     "w": "bottom.",
+     "t": 45.239
+    },
+    {
+     "w": "Stages",
+     "t": 45.735
+    },
+    {
+     "w": "stacked",
+     "t": 46.077
+    },
+    {
+     "w": "up.",
+     "t": 46.419
+    },
+    {
+     "w": "Pressure,",
+     "t": 46.744
+    },
+    {
+     "w": "all",
+     "t": 47.163
+    },
+    {
+     "w": "the",
+     "t": 47.334
+    },
+    {
+     "w": "way",
+     "t": 47.505
+    },
+    {
+     "w": "to",
+     "t": 47.676
+    },
+    {
+     "w": "your",
+     "t": 47.847
+    },
+    {
+     "w": "tank.",
+     "t": 48.018
+    }
+   ]
+  }
+ ]
+}

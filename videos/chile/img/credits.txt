@@ -1,0 +1,9 @@
+mine.jpg: "Mina San José de Copiapó en 2010.jpg" by desierto_atacama, CC BY-SA 2.0, via Wikimedia Commons
+note.png: "Estamos bien los 33.svg" by José Ojeda, Public domain, via Wikimedia Commons
+avalos.jpg: "Florencio Avalos (5076856843).jpg" by Secretaria  de Comunicaciones from Chile, CC BY 2.0, via Wikimedia Commons
+avalos2.jpg: "Florencio Avalos (5077449592).jpg" by Secretaria  de Comunicaciones from Chile, CC BY 2.0, via Wikimedia Commons
+the33.jpg: "Mina San José - Los 33 at Moneda Ceremony - Gobierno de Chile.jpg" by Gobierno de Chile, CC BY 2.0, via Wikimedia Commons
+satellite.jpg: "San Jose Mine, Chile.jpg" by Jesse Allen and Robert Simmon, Public domain, via Wikimedia Commons
+diagram.png: "Esquema Fenix-minero.svg" by Lufke, Public domain, via Wikimedia Commons
+hospital.jpg: "President Piñera and miners in Copiapó Hospital.jpg" by Gobierno de Chile, CC BY 2.0, via Wikimedia Commons
+capsule.jpg: "Fénix-2 en exhibición en Santiago.jpg" by Diode, Public domain, via Wikimedia Commons
