@@ -14,6 +14,7 @@ Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 
 | Mujhe chahiye… | Skill |
 |---|---|
+| Sachchi kahani ka cinematic 3D Short (Manjhi, Chile miners…) | `/3d-animator` |
 | Machine ka 3D Short (motor, engine, AC…) | `/explainer-3d` |
 | 4-5 min ki documentary (2D ya 3D realistic) | `/documentary` |
 | Photo, map aur newspaper wali "evidence wall" documentary | `/cinematic-film` |
@@ -23,9 +24,47 @@ Bring a voice MP3 (ElevenLabs or any other) and you get a finished video.
 | Kisi bhi web animation ko smooth 60fps video banana | `/frame-capture` |
 | 3D page ko mobile/Safari pe check karna | `/site-check` |
 
+## 📚 All skills (har skill ka alag README, prompt format aur demo)
+
+| Skill | Kya banata hai | Demo | README |
+|---|---|---|---|
+| `/3d-animator` 🆕 | Cinematic 3D true-story Shorts + real photos in paper-cut style | [▶ MP4](assets/demos/3d-animator.mp4) | [README](.claude/skills/3d-animator/README.md) |
+| `/explainer-3d` | 3D "how it works" machine Shorts, 66 looks | [▶ MP4](assets/demos/explainer-3d.mp4) | [README](.claude/skills/explainer-3d/README.md) |
+| `/documentary` | 3–6 min documentaries, 2D or 3D realistic | [▶ 2D](assets/demos/documentary-2d.mp4) · [▶ Short](assets/demos/documentary-3d-short.mp4) | [README](.claude/skills/documentary/README.md) |
+| `/cinematic-film` | Evidence-wall documentary from photos and documents | [GIF](assets/cinematic-film.gif) | [README](.claude/skills/cinematic-film/README.md) |
+| `/anatomy` | Isometric object explainers | [image](assets/upstream/anatomy-raptor-engine-firing.webp) | [README](.claude/skills/anatomy/README.md) |
+| `/threejs-scene` | Real-time 3D scenes from code | [image](assets/upstream/pavilion-golden.webp) | [README](.claude/skills/threejs-scene/README.md) |
+| `/exploded-view` | Machine exploded views | [image](assets/upstream/motor-exploded.webp) | [README](.claude/skills/exploded-view/README.md) |
+| `/frame-capture` | Smooth 60 fps recording of any web animation | [image](assets/upstream/motor-take-apart.webp) | [README](.claude/skills/frame-capture/README.md) |
+| `/site-check` | Test 3D pages on phone/Safari | [image](assets/upstream/pavilion-night.webp) | [README](.claude/skills/site-check/README.md) |
+
 ---
 
 # 🎬 Video skills
+
+## 0. `/3d-animator` 🆕: cinematic 3D true-story Shorts (Dashrath Manjhi style)
+
+![3d-animator demo](assets/3d-animator.gif)
+
+▶ **Demo videos:** [showreel](assets/demos/3d-animator.mp4) · [Chile 33 miners](assets/demos/3d-animator-chile.mp4) · [Arunima Sinha](assets/demos/3d-animator-arunima.mp4) · [Thai cave rescue](assets/demos/3d-animator-thai.mp4)
+
+Real 3D films from code: three.js rendered frame by frame with motion blur, depth of field, soft shadows, bloom and a film grade.
+People, terrain, caves, trains and rescue rigs are built procedurally; **real photos appear in paper-cut style only at the true-fact moments**.
+The voice sets the clock: Whisper word timings drive the captions, titles and every sound effect.
+
+**Prompt format**
+```
+/3d-animator  <kahani>, 3D cinematic, <60> sec vertical Short, Hindi
+              Hook: <first frame ka action>   Real photos: <kin facts pe>   Voice: <MP3 attach>
+```
+```
+/3d-animator  Chile ke 33 miners, 3D cinematic jaisa Manjhi, real photo sirf fact pe. Meri MP3 attach hai.
+/3d-animator  Arunima Sinha, hook: Everest summit pe tiranga, captions chhote, loop ending
+```
+**You get:** MP4 (1080×1920), `youtube.txt` (title, description with photo credits, tags, pin comment), thumbnail.
+ChatGPT/Codex ke saath use karna ho to: [CHATGPT_GUIDE.md](.claude/skills/3d-animator/CHATGPT_GUIDE.md).
+
+---
 
 ## 1. `/explainer-3d`: 3D "how it works" Short (motor-video style)
 
@@ -202,12 +241,13 @@ A 5-minute 2D documentary takes about 30-60 minutes on 4 CPU cores, and 3D reali
 
 ```
 .claude/skills/
+  3d-animator/     cinematic 3D story Shorts: cine.js toolkit, segmented renderer, 5 real Short examples
   explainer-3d/    our 3D Short skill: template (water motor), web/themes.js (6), web/styles.js (11), examples, reference
   documentary/     our documentary skill: template/ (2D, 5 themes), template-3d/ (realistic, 16:9 + 9:16), Vikrant example
   cinematic-film/  evidence-wall documentaries (MIT, exploraX)
   anatomy/         isometric object explainers (MIT, Ryan)
   threejs-scene/ exploded-view/ frame-capture/ site-check/   Open 3D Skills, free ones only (MIT, exploraX)
-assets/            demo GIFs; assets/upstream/ = demo images from the original repos
+assets/            demo GIFs; assets/demos/ = short demo MP4s; assets/upstream/ = demo images from the original repos
 ```
 
 ## Credits and licences
@@ -215,4 +255,4 @@ Everything here is MIT. Each imported skill keeps its original `LICENSE` file in
 - [cinematic-skill](https://github.com/Moh4696/cinematic-skill) and [open-3d-skills](https://github.com/Moh4696/open-3d-skills), © 2026 exploraX
 - [anatomy](https://github.com/wheresryan22/anatomy), © 2026 Ryan (PDFs and pre-built HTML pages were left out to keep the repo small; `node examples/<name>/build.mjs` rebuilds them)
 - [taste-skill](https://github.com/Leonxlnx/taste-skill), © 2026 Leonxlnx (palettes and type pairings only)
-- `explainer-3d` and `documentary`: this repo (MIT, see `LICENSE`)
+- `explainer-3d`, `documentary` and `3d-animator` examples: this repo (MIT, see `LICENSE`)
