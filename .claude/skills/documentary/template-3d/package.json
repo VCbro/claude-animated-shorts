@@ -1,0 +1,11 @@
+{
+  "name": "documentary-3d",
+  "private": true,
+  "dependencies": {
+    "three": "0.169.0",
+    "@fontsource/baloo-2": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@fontsource/tiro-devanagari-hindi": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0"
+  }
+}

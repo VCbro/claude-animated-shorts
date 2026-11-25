@@ -1,6 +1,8 @@
 // 2D documentary engine: canvas scenes as pure functions of time, DOM layer for shaped Hindi text,
 // crossfades, grain, vignette, word-highlight captions. A film module calls add(a, b, draw) for each scene
 // and then start(). Anchors (word times) come from out/anchors.json, captions from out/captions.json.
+import { loadTheme } from './themes.js';
+export const THEME = await loadTheme();     // look: out/theme.txt (see themes.js)
 export const K = await (await fetch('/out/anchors.json')).json();
 const CAPS = await (await fetch('/out/captions.json')).json();
 export const END = K.END;
@@ -129,13 +131,15 @@ export function panel(x, y, w, h, a = 1, col = 'rgba(12,20,36,.78)') {
 }
 
 
-export function studio(c1 = '#0b1630', c2 = '#04070f', glow = 'rgba(80,140,255,.18)') { // dark gradient + soft glow + faint grid
+export function studio(c1 = THEME.studio[0], c2 = THEME.studio[1], glow = THEME.studio[2]) { // theme gradient + soft glow + faint grid
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.fillStyle = lin(0, 0, 0, H, [[0, c1], [1, c2]]); ctx.fillRect(0, 0, W, H);
   ctx.fillStyle = rad(W * 0.5, H * 0.42, 0, 1100, [[0, glow], [1, 'rgba(0,0,0,0)']]); ctx.fillRect(0, 0, W, H);
-  ctx.strokeStyle = 'rgba(120,170,255,.06)'; ctx.lineWidth = 1;
-  for (let x = 0; x < W; x += 60) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
-  for (let y = 0; y < H; y += 60) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+  if (THEME.studio[3]) {
+    ctx.strokeStyle = THEME.studio[3]; ctx.lineWidth = 1;
+    for (let x = 0; x < W; x += 60) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    for (let y = 0; y < H; y += 60) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+  }
   ctx.restore();
 }
 export const screen = () => ctx.setTransform(1, 0, 0, 1, 0, 0); // draw in screen pixels again (after a camera)
@@ -172,11 +176,13 @@ export function renderAt(t) {
     main.setTransform(1, 0, 0, 1, 0, 0); main.globalAlpha = s.a <= 0 ? 1 : a; main.drawImage(c, 0, 0, W, H);
   });
   ctx = main; main.globalAlpha = 1;
-  main.save(); main.globalCompositeOperation = 'overlay'; main.globalAlpha = 0.035;
+  main.save(); main.globalCompositeOperation = 'overlay'; main.globalAlpha = THEME.grain;
   const ox = Math.floor(rnd(Math.floor(t * 30)) * 256), oy = Math.floor(rnd(Math.floor(t * 30) + 5) * 256);
   for (let x = -ox; x < W; x += 256) for (let y = -oy; y < H; y += 256) main.drawImage(grain, x, y);
   main.restore();
-  main.fillStyle = rad(W / 2, H / 2, H * 0.45, H * 1.05, [[0, 'rgba(0,0,0,0)'], [1, 'rgba(0,0,0,.55)']]); main.fillRect(0, 0, W, H);
+  main.fillStyle = rad(W / 2, H / 2, H * 0.45, H * 1.05, [[0, 'rgba(0,0,0,0)'], [1, `rgba(0,0,0,${THEME.vig})`]]); main.fillRect(0, 0, W, H);
+  if (THEME.flicker) { main.fillStyle = `rgba(0,0,0,${THEME.flicker * rnd(Math.floor(t * 24) + 77)})`; main.fillRect(0, 0, W, H); }
+  if (THEME.letterbox) { main.fillStyle = '#000'; main.fillRect(0, 0, W, THEME.letterbox); main.fillRect(0, H - THEME.letterbox, W, THEME.letterbox); }
   const fade = Math.min(1, t / 0.6, (END + 0.8 - t) / 0.8);
   if (fade < 1) { main.fillStyle = `rgba(0,0,0,${1 - Math.max(0, fade)})`; main.fillRect(0, 0, W, H); }
   UIel.innerHTML = UI.join(''); LNel.innerHTML = LINES.join('');
