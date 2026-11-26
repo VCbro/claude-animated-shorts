@@ -1,7 +1,7 @@
 // हनुमान और राम की हज़ारों अंगूठियाँ — a folk telling recorded by A.K. Ramanujan ("Three Hundred Rāmāyaṇas").
 // The divine figures are never modelled in 3D: they are real paintings (Raja Ravi Varma, Pahari) cut out as paper.
 // 3D carries only what 3D does well: marble, gold, light, the crack, the shaft, the netherworld, thousands of rings.
-import { THREE, V, TAU, W, H, film, scene, renderer, mat, add, rod, group, rock, photoCard, particles, fbm, pop, rise,
+import { THREE, V, TAU, W, H, film, scene, renderer, sun, mat, add, rod, group, rock, photoCard, particles, fbm, pop, rise,
   clamp, lerp, seg, smooth, easeOut, easeInOut, backOut, spring, hash } from './cine.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
@@ -120,11 +120,11 @@ for (const x of [-4.6, 4.6]) { const g = new THREE.PlaneGeometry(1.8, 7, 18, 1),
   g.computeVertexNormals(); add(g, mat(0x8a1a16, 0.55, 0, { side: THREE.DoubleSide }), x, 3.6, -11.1); }
 // diyas
 const flames = [];
-function diya(x, y, z, k = 1) {
+function diya(x, y, z, k = 1, tag = 'pal') {
   const pts = [[0, 0], [0.05, 0.005], [0.07, 0.025], [0.075, 0.04], [0.06, 0.035], [0, 0.03]].map(([r, h]) => new THREE.Vector2(r * k, h * k));
   add(new THREE.LatheGeometry(pts, 20), mat(0x8a4a2a, 0.8), x, y, z);
   const f = add(new THREE.SphereGeometry(0.012 * k, 10, 8), new THREE.MeshBasicMaterial({ color: HDR(9, 5, 1.6) }), x, y + 0.05 * k, z, scene, false); f.scale.set(1, 2.2, 1);
-  const L = new THREE.PointLight(0xffa850, 0.35 * k, 3.2 * k, 1.6); L.position.set(x, y + 0.09 * k, z); scene.add(L); flames.push({ f, L, s: x * 3 + z, k }); return f;
+  const L = new THREE.PointLight(0xffa850, 0.35 * k, 3.2 * k, 1.6); L.position.set(x, y + 0.09 * k, z); scene.add(L); flames.push({ f, L, s: x * 3 + z, k, tag }); return f;
 }
 for (const x of [-2.4, -1.6, 1.6, 2.4]) diya(x, 0.62, DAIS_Z + 1.05, 1.4);
 for (const x of [-1.2, 1.2]) diya(x, 0.0, DAIS_Z + 1.9, 1.2);
@@ -140,9 +140,9 @@ const nameTex = (() => { const c = cv(256, 256), g = c.getContext('2d'); g.fillS
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
 const RS = 0.026;                                     // ring radius (m)
 function ringParts(seg = 1) {
-  const band = new THREE.TorusGeometry(RS, RS * 0.2, 10 * seg, 28 * seg);
-  const bez = new THREE.CylinderGeometry(RS * 0.42, RS * 0.48, RS * 0.25, 18 * seg); bez.rotateX(Math.PI / 2); bez.rotateX(-Math.PI / 2); bez.translate(0, RS * 1.12, 0);
-  const plate = new THREE.CircleGeometry(RS * 0.38, 18 * seg); plate.rotateX(-Math.PI / 2); plate.translate(0, RS * 1.25 + 0.0003, 0);
+  const band = new THREE.TorusGeometry(RS, RS * 0.2, Math.round(10 * seg), Math.round(28 * seg));
+  const bez = new THREE.CylinderGeometry(RS * 0.42, RS * 0.48, RS * 0.25, Math.round(18 * seg)); bez.rotateX(Math.PI / 2); bez.rotateX(-Math.PI / 2); bez.translate(0, RS * 1.12, 0);
+  const plate = new THREE.CircleGeometry(RS * 0.38, Math.round(18 * seg)); plate.rotateX(-Math.PI / 2); plate.translate(0, RS * 1.25 + 0.0003, 0);
   return { metal: mergeGeometries([band, bez]), plate };
 }
 const heroParts = ringParts(2);
@@ -196,7 +196,7 @@ const thali = group(TH.x, TH.y, TH.z);
 const thaliKey = new THREE.SpotLight(0xffe2b0, 0, 8, 0.45, 0.6, 1.3); thaliKey.position.set(TH.x + 0.8, TH.y + 3.2, TH.z + 1.6); thaliKey.target.position.copy(TH);
 thaliKey.castShadow = true; thaliKey.shadow.mapSize.set(2048, 2048); thaliKey.shadow.bias = -0.0004; scene.add(thaliKey, thaliKey.target);
 // thousands of rings: heap on the thali, then a spiral rising into the dark
-const N = 2400, parts = ringParts(1);
+const N = 1500, parts = ringParts(0.75);
 const ringsM = new THREE.InstancedMesh(parts.metal, gold, N), platesM = new THREE.InstancedMesh(parts.plate, new THREE.MeshStandardMaterial({ map: nameTex, metalness: 0.9, roughness: 0.35, envMap: ENV }), N);
 ringsM.receiveShadow = true; platesM.receiveShadow = true; ringsM.frustumCulled = platesM.frustumCulled = false; scene.add(ringsM, platesM);
 const mound = (r) => 0.12 * Math.pow(Math.max(0, 1 - r / 0.62), 1.4);
@@ -226,7 +226,7 @@ const spiralL = [4, 10, 16, 22].map((h) => { const L = new THREE.PointLight(0xff
 // ---------------------------------------------------------------- the essay on a desk (real source)
 const DK = V(-300, 0, 0);
 add(new THREE.BoxGeometry(4, 0.12, 2.6), new THREE.MeshStandardMaterial({ color: 0x3a2214, roughness: 0.55 }), DK.x, DK.y - 0.06, DK.z);
-diya(DK.x + 0.55, DK.y, DK.z - 0.35, 1.3);
+diya(DK.x + 0.55, DK.y, DK.z - 0.35, 1.3, 'desk');
 const essayT = await photoCard('img/essay_title.png', { w: 0.62, tape: false });
 essayT.rotation.x = -Math.PI / 2; essayT.position.set(DK.x - 0.1, DK.y + 0.004, DK.z + 0.05); essayT.rotation.z = 0.06;
 const essayRing = new THREE.Group(); scene.add(essayRing); add(heroParts.metal, gold, 0, 0, 0, essayRing); add(heroParts.plate, new THREE.MeshStandardMaterial({ map: nameTex, metalness: 0.9, roughness: 0.35, envMap: ENV }), 0, 0, 0, essayRing);
@@ -316,7 +316,14 @@ const F = film({ total, keys: KEYS, exposure: 1.0, hits: [[18.98, 0.01], [20.36,
 const { on, onCam } = F;
 
 // ---------------------------------------------------------------- animation
+const LOC = (t) => (t >= 8 && t < 13) ? 'desk' : ((t >= 13 && t < 30.4) || (t >= 51 && t < 56.7)) ? 'pal' : (t >= 30.4 && t < 33) ? 'shaft' : 'pat';
+sun.visible = false; sun.castShadow = false;
 on((t) => {
+  const loc = LOC(t);
+  for (const { L, tag } of flames) L.visible = tag === loc || (loc === 'shaft' && false);
+  for (const { L } of torches) L.visible = loc === 'pat';
+  caveFill.visible = riverLight.visible = rim.visible = thaliKey.visible = ringGlow.visible = loc === 'pat'; spiralL.forEach((L) => (L.visible = loc === 'pat' && t >= 43 && t < 60.5));
+  palKey.visible = loc === 'pal'; deskKey.visible = loc === 'desk'; holeGlow.visible = loc === 'pal' || loc === 'shaft'; hanuLight.visible = loc !== 'desk';
   // flames flicker (deterministic)
   for (const { f, L, s, k } of flames) { const fl = 0.85 + 0.15 * Math.sin(t * 17 + s) * Math.sin(t * 11.3 + s * 2); f.scale.set(1, 2.2 * fl, 1); L.intensity = 0.35 * k * fl; }
   for (const { f, L, s } of torches) { const fl = 0.8 + 0.2 * Math.sin(t * 13 + s) * Math.sin(t * 7.7 + s); f.scale.set(1, 1.8 * fl, 1); L.intensity = 22 * fl; }

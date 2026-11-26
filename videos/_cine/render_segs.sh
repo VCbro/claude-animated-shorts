@@ -6,6 +6,6 @@ N=$(python3 -c "import math;print(math.ceil($TOTAL/9))")
 for i in $(seq 0 $((N-1))); do
   f=$((i*9)); to=$(python3 -c "print(min($TOTAL,($i+1)*9))")
   out=out/seg/s$i.mp4; [ -f $out.done ] && continue
-  node render.mjs --video --jpg --n=3 --crf=15 --from=$f --to=$to --out=$out >> out/render.log 2>&1 && touch $out.done
+  node render.mjs --video --jpg --n=${NSUB:-3} ${RSC:+--rs=$RSC} ${FPSV:+--fps=$FPSV} --crf=15 --from=$f --to=$to --out=$out >> out/render.log 2>&1 && touch $out.done
 done
 echo ALLDONE >> out/render.log
