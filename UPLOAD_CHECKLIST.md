@@ -55,7 +55,8 @@ Paths start at `videos/` in this repo's folder. The MP4 files are not in GitHub 
 |---|---|---|---|---|---|
 | [ ] | 34 | 🛰️ GPS आपको कैसे ढूँढता है | 60 s | `gps/deliver/gps.mp4` | `gps/deliver/youtube.txt` |
 | [ ] | 35 | ✈️ कोहरे में प्लेन कैसे उतरता है | 52 s | `fog-landing/deliver/fog_landing.mp4` | `fog-landing/deliver/youtube.txt` |
+| [ ] | 36 | 🌊 पनडुब्बी कैसे डूबती और ऊपर आती है | 53 s | `submarine/deliver/submarine.mp4` | `submarine/deliver/youtube.txt` |
 
-Voices ready, videos not made yet (say the number to build): #3 पनडुब्बी, #4 कवच, #5 UPI, #6 मेट्रो, #7 MRI, #8 EV बैटरी, #9 इजेक्शन सीट, #10 पंबन ब्रिज (`kct3d_scripts/voices/`).
+Voices ready, videos not made yet (say the number to build): #4 कवच, #5 UPI, #6 मेट्रो, #7 MRI, #8 EV बैटरी, #9 इजेक्शन सीट, #10 पंबन ब्रिज (`kct3d_scripts/voices/`).
 
 Not in the list: `petrol-ka-safar/deliver/petrol_ka_safar_preview.mp4` (a preview of #17). The Diljit Part 1 and Part 2 work is paused; it isn't a finished video.
