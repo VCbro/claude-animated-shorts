@@ -1,0 +1,4 @@
+earth.jpg: "Blue Marble 2002.jpg" by NASA, Public domain, via Wikimedia Commons
+gps3.jpg: "GPS Block IIIA.jpg" by U.S. Air Force / Lockheed Martin, Public domain, via Wikimedia Commons
+einstein.jpg: "Albert Einstein Head.jpg" by Oren Jack Turner (1947), Public domain, via Wikimedia Commons
+clock.jpg: "NIST-F2 cesium fountain atomic clock.jpg" by NIST, Public domain, via Wikimedia Commons
