@@ -1,0 +1,24 @@
+TITLE
+दो ट्रेनें, एक पटरी, आमने-सामने… और खुद रुक गईं! 😮 कवच कैसे काम करता है? #shorts
+
+DESCRIPTION
+भारत का अपना ट्रेन-टक्कर रोधी सिस्टम — कवच 🇮🇳🚆
+• पटरी पर लगे RFID टैग और इंजन के नीचे का रीडर — ट्रेन को हर पल अपनी सटीक जगह पता रहती है।
+• पटरी किनारे के रेडियो टावर सिग्नल और आस-पास की ट्रेनों की ख़बर इंजन तक भेजते हैं।
+• लाल सिग्नल पर ड्राइवर से देर हो जाए तो कवच पहले चेतावनी देता है, फिर खुद ब्रेक लगा देता है।
+• आमने-सामने ट्रेनें हों तो दोनों इंजनों के कवच आपस में बात करके दोनों को सुरक्षित दूरी पर रोक देते हैं।
+• 2022 के आमने-सामने वाले टेस्ट में ट्रेनें लगभग 380 मीटर दूर रुक गईं।
+
+📷 असली चित्र (Wikimedia Commons): "TCAS working graphical explanation" — Ministry of Railways (India), GODL-India (TCAS = कवच का पुराना नाम)
+3D दृश्य समझाने के लिए बनाए गए हैं; टैग, टावर और दूरियाँ सरल रूप में दिखाई गई हैं।
+
+#KaiseChaltaHai #Kavach #IndianRailways #train #technology #shorts
+
+TAGS
+kavach kya hai, kavach system, kavach train, indian railways kavach, train collision avoidance system, tcas indian railways, kavach kaise kaam karta hai, rfid train, loco pilot, train safety india, kaise chalta hai, 3d explainer hindi, science shorts hindi
+
+HASHTAGS
+#KaiseChaltaHai #Kavach #IndianRailways #train #shorts
+
+PIN COMMENT
+अब पटरी पर सिर्फ़ ड्राइवर की आँखें नहीं, एक डिजिटल कवच भी है 🛡️🚆 अगला वीडियो — UPI या बिना ड्राइवर की मेट्रो? 👇
