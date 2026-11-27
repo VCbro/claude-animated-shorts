@@ -1,0 +1,12 @@
+hook | आपने चाय
+qr | QR स्कैन
+step1 | पहला कदम
+npci | NPCI पता
+bank | फिर आपके
+secret | एक राज़
+yes | बैंक ने हाँ
+payee | NPCI ने तुरंत
+ding | पैसा जमा…
+fast | और ये सब
+stat | भारत में
+end | तो अगली बार

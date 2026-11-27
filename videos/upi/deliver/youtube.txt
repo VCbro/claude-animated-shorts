@@ -1,0 +1,23 @@
+TITLE
+₹10 भेजे… और 2 सेकंड में 5 कंप्यूटर जाग गए! 😮 UPI कैसे काम करता है? #shorts
+
+DESCRIPTION
+QR स्कैन किया, पिन डाला, "टिंग!"… पर उन 2 सेकंड में अंदर क्या हुआ? 📲
+• आपका ऐप रिक्वेस्ट NPCI को भेजता है — ये पूरे UPI का "ट्रैफ़िक-पुलिस" है।
+• NPCI पता करता है कि UPI आईडी किस बैंक की है, फिर आपके बैंक से पूछता है — पैसे हैं? पिन सही है?
+• राज़ की बात: आपका पिन न ऐप देखता है, न NPCI — उसे सिर्फ़ आपका बैंक जाँचता है।
+• बैंक ने हाँ कहा → आपके खाते से पैसा कटा → NPCI ने दुकानदार के बैंक को "जमा करो!" बोला → "टिंग!"
+• भारत में UPI से हर महीने 2,000 करोड़ से ज़्यादा बार पैसा भेजा जाता है।
+
+3D दृश्य और पात्र समझाने के लिए बनाए गए हैं; कोई असली ऐप/बैंक का लोगो इस्तेमाल नहीं किया गया।
+
+#KaiseChaltaHai #UPI #DigitalIndia #technology #finance #shorts
+
+TAGS
+upi kaise kaam karta hai, how upi works, upi hindi, npci, upi pin, upi payment process, qr code payment, digital payment india, upi transaction, kaise chalta hai, 3d explainer hindi, technology shorts hindi
+
+HASHTAGS
+#KaiseChaltaHai #UPI #DigitalIndia #technology #shorts
+
+PIN COMMENT
+अगली बार "टिंग" सुनो तो याद रखना — इसके पीछे पूरी एक रिले-रेस दौड़ी है 🏃📲 आपने आज कितने UPI पेमेंट किए? 👇
