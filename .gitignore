@@ -7,3 +7,4 @@ videos/**/*.zip
 videos/**/*.blend1
 videos/_zips/
 __pycache__/
+*.16k.wav
