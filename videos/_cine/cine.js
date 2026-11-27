@@ -194,6 +194,13 @@ export function film(CFG) {
     }
     for (const [a, b, s, y, col] of CFG.pills || []) { if (t < a || t > b + 0.2) continue; const k = seg(t, a, a + 0.3); pill(s, W / 2, y + 16 * (1 - backOut(k)), col || '#ffd24a', Math.min(1, k * 2) * (1 - seg(t, b, b + 0.2))); }
     if (CFG.overlay) CFG.overlay(cg, t, { txt, pill, proj, W, H });
+    if (CFG.brand) {          // channel handle (top-left) + thin progress bar (top edge)
+      const B = CFG.brand, col = B.color || '#ffd24a';
+      cg.save(); cg.fillStyle = 'rgba(255,255,255,0.18)'; cg.fillRect(0, 0, W, 8); cg.fillStyle = col; cg.fillRect(0, 0, W * clamp(t / total), 8);
+      cg.font = FONT(B.px || 36); cg.textAlign = 'left'; cg.textBaseline = 'middle'; cg.lineJoin = 'round'; cg.lineWidth = 7; cg.strokeStyle = 'rgba(0,0,0,0.75)';
+      const hx = 44, hy = 62; cg.globalAlpha = 0.92; cg.strokeText(B.handle, hx + 52, hy); cg.fillStyle = '#ffffff'; cg.fillText(B.handle, hx + 52, hy);
+      cg.fillStyle = col; cg.beginPath(); cg.arc(hx + 20, hy, 20, 0, 7); cg.fill(); cg.fillStyle = '#111'; cg.font = FONT(24); cg.textAlign = 'center'; cg.fillText('3D', hx + 20, hy + 2); cg.restore();
+    }
     const g = GROUPS.find((x) => t >= x.t0 && t < x.t1 + 0.1);
     if (g && t < total - 0.05) {
       cg.font = FONT(52); const sp = cg.measureText(' ').width, ws = g.map((w) => cg.measureText(w.w).width), tw = ws.reduce((a, b) => a + b, 0) + sp * (g.length - 1);
