@@ -12,8 +12,51 @@ const dotTex = (() => { const c = cv(64, 64), g = c.getContext('2d'), r = g.crea
 const GAUGE = 1.676, XMIN = -1500, XMAX = 1500;
 
 // ================================================================ land, track, OHE
-terrain((x, z) => (Math.abs(z) < 12 ? 0 : (fbm(x * 0.004, z * 0.004, 4) - 0.35) * 26 * smooth(clamp((Math.abs(z) - 12) / 160))) - 0.6,
-  (x, z, y) => { const n = fbm(x * 0.02, z * 0.02, 3); const f = Math.abs(z) < 7 ? [0.42, 0.38, 0.33] : (n > 0.55 ? [0.62, 0.55, 0.22] : [0.32, 0.46, 0.18]); return f; }, { size: 3600, seg: 220, warp: 0.6 });
+// ---- Indian fields: plots of wheat / tall grass / mustard / ploughed earth, earthen bunds (mendh) between them
+const PLOT_W = 70, PLOT_D = 34;
+const plotOf = (x, z) => { const side = z < 0 ? -1 : 1, az = Math.abs(z) - 6.5; if (az < 0 || az > 170) return null; const i = Math.floor((x + 5000) / PLOT_W), j = Math.floor(az / PLOT_D);
+  const h = hash(i * 7.31 + j * 13.7 + side * 3.1), type = h < 0.34 ? 'wheat' : h < 0.58 ? 'grass' : h < 0.82 ? 'mustard' : 'earth'; const lx = (x + 5000) - i * PLOT_W, lz = az - j * PLOT_D;
+  return { type, bund: lx < 1.2 || lz < 1.2, i, j, side }; };
+const GROUND = { wheat: [0.36, 0.44, 0.18], grass: [0.24, 0.42, 0.14], mustard: [0.3, 0.44, 0.14], earth: [0.42, 0.3, 0.2] };
+terrain((x, z) => { const az = Math.abs(z); if (az < 200) return -0.6 + (az < 8 ? 0 : 0.04 * Math.sin(x * 0.7) * (plotOf(x, z) && plotOf(x, z).type === 'earth' ? 1 : 0)); return -0.6 + (fbm(x * 0.003, z * 0.003, 4) - 0.35) * 10 * smooth(clamp((az - 220) / 300)); },
+  (x, z) => { if (Math.abs(z) < 6.5) return [0.42, 0.38, 0.33]; const p = plotOf(x, z); if (!p) return [0.36, 0.46, 0.22]; if (p.bund) return [0.48, 0.36, 0.24];
+    const c = GROUND[p.type], n = 0.04 * (fbm(x * 0.05, z * 0.05, 2) - 0.5); return [c[0] + n, c[1] + n, c[2] + n]; }, { size: 3600, seg: 420, warp: 0.6 });
+// crop clumps (instanced, sway in the wind)
+const windU = { value: 0 };
+function bladeClump(n, hgt) { const pos = [], col = []; for (let b = 0; b < n; b++) { const a = b / n * TAU + hash(b * 3.3), lean = 0.25 + 0.2 * hash(b), h = hgt * (0.75 + 0.5 * hash(b * 7)), w = 0.05;
+    const bx = Math.cos(a) * 0.08, bz = Math.sin(a) * 0.08, tx = bx + Math.cos(a) * lean * h * 0.5, tz = bz + Math.sin(a) * lean * h * 0.5;
+    pos.push(bx - w * Math.sin(a), 0, bz + w * Math.cos(a), bx + w * Math.sin(a), 0, bz - w * Math.cos(a), tx, h, tz); col.push(0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 1.15, 1.15, 1.15); }
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3)); g.computeVertexNormals(); return g; }
+const swayMat = (opts) => { const m = new THREE.MeshStandardMaterial({ vertexColors: true, side: THREE.DoubleSide, roughness: 0.85, ...opts });
+  m.onBeforeCompile = (sh) => { sh.uniforms.uTime = windU; sh.vertexShader = 'uniform float uTime;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n  vec4 ip = instanceMatrix[3]; transformed.x += sin(uTime * 1.7 + ip.x * 0.13 + ip.z * 0.09) * 0.13 * position.y; transformed.z += cos(uTime * 1.3 + ip.x * 0.07) * 0.06 * position.y;'); }; return m; };
+const CROPS = { wheat: { g: bladeClump(9, 1.05), c: new THREE.Color(0.78, 0.74, 0.34) }, grass: { g: bladeClump(7, 1.6), c: new THREE.Color(0.34, 0.62, 0.22) }, mustard: { g: bladeClump(6, 1.15), c: new THREE.Color(0.36, 0.58, 0.2) } };
+const cropPos = { wheat: [], grass: [], mustard: [] };
+for (let k = 0; k < 52000; k++) { const x = -720 + 1440 * hash(k * 1.37 + 0.11), side = hash(k * 2.71) < 0.5 ? -1 : 1, z = side * (7 + 108 * Math.pow(hash(k * 3.91 + 0.7), 1.25)); const p = plotOf(x, z); if (!p || p.bund || p.type === 'earth') continue; cropPos[p.type].push([x, z, k]); }
+const mustardTops = [];
+for (const [type, list] of Object.entries(cropPos)) { const im = new THREE.InstancedMesh(CROPS[type].g, swayMat({ color: CROPS[type].c }), list.length), m = new THREE.Matrix4(), q = new THREE.Quaternion();
+  list.forEach(([x, z, k], i) => { const sc = 0.8 + 0.5 * hash(k * 5.1); q.setFromAxisAngle(V(0, 1, 0), hash(k * 6.7) * TAU); m.compose(V(x, -0.6, z), q, V(sc, sc, sc)); im.setMatrixAt(i, m); if (type === 'mustard') mustardTops.push([x, z, sc]); });
+  im.frustumCulled = false; scene.add(im); }
+{ const g = new THREE.IcosahedronGeometry(0.11, 0), im = new THREE.InstancedMesh(g, new THREE.MeshStandardMaterial({ color: 0xffd21a, emissive: 0x5a4000, emissiveIntensity: 0.35, roughness: 0.6 }), mustardTops.length * 2), m = new THREE.Matrix4();
+  mustardTops.forEach(([x, z, sc], i) => { for (let r = 0; r < 2; r++) { m.makeTranslation(x + (hash(i * 3 + r) - 0.5) * 0.4, -0.6 + 1.05 * sc + 0.1 * r, z + (hash(i * 7 + r) - 0.5) * 0.4); im.setMatrixAt(i * 2 + r, m); } }); im.frustumCulled = false; scene.add(im); }
+// desi cows (zebu: hump, dewlap, curved horns) grazing in the fields
+const COWS = [];
+function cow(colHex, x, z, yaw) {
+  const g = new THREE.Group(), cm = mat(colHex, 0.75), dk = mat(0x2a2420, 0.7); g.position.set(x, -0.6, z); g.rotation.y = yaw; g.scale.setScalar(1.1); scene.add(g);
+  const body = add(new THREE.CapsuleGeometry(0.5, 1.3, 6, 16).rotateZ(Math.PI / 2), cm, 0, 1.25, 0, g); body.scale.set(1, 1, 0.82);
+  add(new THREE.SphereGeometry(0.3, 14, 10), cm, 0.55, 1.75, 0, g);                                   // hump
+  const neck = new THREE.Group(); neck.position.set(0.95, 1.45, 0); g.add(neck);
+  add(new THREE.CapsuleGeometry(0.22, 0.5, 4, 10).rotateZ(-0.9), cm, 0.25, -0.15, 0, neck);
+  const head = new THREE.Group(); head.position.set(0.55, -0.42, 0); neck.add(head);
+  add(new THREE.CapsuleGeometry(0.17, 0.42, 4, 10).rotateZ(Math.PI / 2 - 0.6), cm, 0.12, -0.08, 0, head); add(new THREE.SphereGeometry(0.13, 10, 8), mat(0x3a2a24, 0.6), 0.36, -0.28, 0, head);
+  for (const s of [-1, 1]) { add(new THREE.ConeGeometry(0.035, 0.32, 8).rotateX(s * 0.7), mat(0xd8cfc0, 0.5), -0.05, 0.12, s * 0.14, head); add(new THREE.SphereGeometry(0.07, 8, 6), cm, -0.06, -0.02, s * 0.2, head).scale.set(0.6, 0.4, 1.4); }
+  add(new THREE.BoxGeometry(0.5, 0.35, 0.08), cm, 0.75, 0.95, 0, g);                                      // dewlap
+  for (const [lx, lz] of [[0.6, 0.25], [0.6, -0.25], [-0.6, 0.25], [-0.6, -0.25]]) { add(new THREE.CylinderGeometry(0.08, 0.06, 0.95, 8), cm, lx, 0.5, lz, g); add(new THREE.CylinderGeometry(0.07, 0.07, 0.08, 8), dk, lx, 0.04, lz, g); }
+  const tail = new THREE.Group(); tail.position.set(-1.1, 1.45, 0); g.add(tail); add(new THREE.CylinderGeometry(0.025, 0.02, 0.9, 6), cm, 0, -0.45, 0, tail); add(new THREE.SphereGeometry(0.07, 8, 6), dk, 0, -0.92, 0, tail);
+  COWS.push({ g, neck, tail, ph: hash(x + z) * 6 }); return g;
+}
+for (const [c, x, z, yaw] of [[0xf3efe6, -120, 14, 0.4], [0xc9a27a, -96, -16, 2.6], [0xe9e4da, -62, 20, -0.9], [0xf3efe6, -30, -13, 1.8], [0xb9845a, 20, 15, 3.0], [0xf3efe6, 60, -18, 0.2],
+  [0xe9e4da, 150, 12, -1.2], [0xc9a27a, 215, -14, 2.2], [0xf3efe6, 245, 16, 0.9], [0xe9e4da, 300, -20, -2.4], [0xf3efe6, -190, 18, 1.4], [0xc9a27a, -230, -15, -0.6], [0xf3efe6, -160, -24, 2.9], [0xe9e4da, 110, 26, 0.6],
+  [0xf3efe6, -136, 10.5, 0.64], [0xc9a27a, -72, 12, 0.8], [0xf3efe6, -42, -11, -2.0], [0xe9e4da, 86, 13, 2.7], [0xf3efe6, 98, 18.5, -0.4], [0xc9a27a, 214, 12.5, 1.1], [0xf3efe6, -118, 25, 2.0], [0xe9e4da, -101, 23, -0.7]]) cow(c, x, z, yaw);
 add(new THREE.BoxGeometry(XMAX - XMIN, 0.5, 4.2), mat(0x6f6a64, 0.95), 0, -0.25, 0, scene, false).receiveShadow = true;
 const sleeperG = new THREE.BoxGeometry(0.25, 0.16, 2.8), NS = Math.floor((XMAX - XMIN) / 0.65);
 const sleepers = new THREE.InstancedMesh(sleeperG, mat(0x8a8580, 0.9), NS); { const m = new THREE.Matrix4(); for (let i = 0; i < NS; i++) { m.makeTranslation(XMIN + i * 0.65, 0.05, 0); sleepers.setMatrixAt(i, m); } } sleepers.receiveShadow = true; scene.add(sleepers);
@@ -21,8 +64,8 @@ const railM = new THREE.MeshStandardMaterial({ color: 0xb8bcc2, metalness: 0.9, 
 for (const s of [-1, 1]) add(new THREE.BoxGeometry(XMAX - XMIN, 0.16, 0.08), railM, 0, 0.21, s * GAUGE / 2, scene, false);
 for (let x = XMIN; x <= XMAX; x += 60) { rod(V(x, 0, -3.4), V(x, 7.2, -3.4), 0.13, mat(0x7a7f86, 0.6, 0.4)); rod(V(x, 6.8, -3.4), V(x, 6.6, 0.3), 0.05, mat(0x7a7f86, 0.6, 0.4)); }
 add(new THREE.BoxGeometry(XMAX - XMIN, 0.03, 0.03), mat(0x5a4a3a, 0.5, 0.8), 0, 5.6, 0, scene, false); add(new THREE.BoxGeometry(XMAX - XMIN, 0.03, 0.03), mat(0x5a4a3a, 0.5, 0.8), 0, 6.6, 0, scene, false);
-for (let i = 0; i < 90; i++) { const x = (hash(i) - 0.5) * 2600, z = (hash(i * 3) < 0.5 ? -1 : 1) * (18 + 140 * hash(i * 7)), y = 0; const tr = group(x, y, z);
-  add(new THREE.CylinderGeometry(0.25, 0.35, 3, 8), mat(0x5a3a22, 0.9), 0, 1.5, 0, tr); add(new THREE.SphereGeometry(2.2 + 1.5 * hash(i * 9), 12, 10), mat(0x2f5a22, 0.9), 0, 4.2, 0, tr); }
+for (let i = 0; i < 40; i++) { const x = (hash(i) - 0.5) * 2600, z = (hash(i * 3) < 0.5 ? -1 : 1) * (60 + 140 * hash(i * 7)), y = -0.6; const tr = group(x, y, z);
+  add(new THREE.CylinderGeometry(0.3, 0.45, 3.2, 8), mat(0x5a3a22, 0.9), 0, 1.6, 0, tr); for (const [dx, dy, r] of [[0, 4.6, 2.8], [-1.6, 3.9, 2.0], [1.7, 4.0, 2.1]]) add(new THREE.SphereGeometry(r + hash(i * 9), 12, 10), mat(0x2f5a22, 0.9), dx, dy, 0, tr); }
 // RFID tags between the rails (every 40 m here, real spacing is larger)
 const TAGS = []; for (let x = XMIN + 20; x < XMAX; x += 40) TAGS.push(x);
 const tagM = new THREE.InstancedMesh(new THREE.BoxGeometry(0.42, 0.1, 0.3), new THREE.MeshStandardMaterial({ color: 0xf2c21a, roughness: 0.5, emissive: 0x3a2a00, emissiveIntensity: 0.4 }), TAGS.length);
@@ -142,6 +185,7 @@ const { on, onCam } = F;
 
 // ---------------------------------------------------------------- animation
 on((t) => {
+  windU.value = t; COWS.forEach(({ neck, tail, ph }) => { neck.rotation.z = -0.25 - 0.18 * (0.5 + 0.5 * Math.sin(t * 0.9 + ph)); tail.rotation.x = 0.35 * Math.sin(t * 2.3 + ph); });
   const S = scene_(t);
   A.grp.visible = S.a.on; B.grp.visible = S.b.on;
   A.grp.position.set(S.a.x - 9.8, 0, 0); A.grp.rotation.y = 0;
