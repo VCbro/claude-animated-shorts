@@ -1,0 +1,25 @@
+TITLE
+आपका फ़ोन सैटेलाइट को कुछ नहीं भेजता… फिर भी GPS जानता है आप कहाँ हो! 😮 #shorts
+
+DESCRIPTION
+GPS असल में कैसे काम करता है? 🛰️
+• ~20,200 km ऊपर 30 से ज़्यादा GPS सैटेलाइट धरती का चक्कर लगाते हैं, हर एक में एटॉमिक घड़ी।
+• हर सैटेलाइट लगातार बताता है — "मैं यहाँ हूँ, और अभी इतना बजा है।" आपका फ़ोन सिर्फ़ सुनता है, कुछ भेजता नहीं।
+• सिग्नल को आने में ~1/15 सेकंड लगता है — इसी देरी से दूरी निकलती है।
+• 1 सैटेलाइट = एक गोला, 2 = घेरा, 3 = दो पॉइंट, 4 = घड़ी की गलती ठीक → आपकी सही जगह! 📍
+• आइंस्टीन का ट्विस्ट: सापेक्षता की वजह से ऊपर की घड़ियाँ रोज़ ~38 माइक्रोसेकंड तेज़ चलती हैं — ठीक न करें तो GPS रोज़ ~10 km ग़लत हो जाए। इसलिए सैटेलाइट की घड़ी (10.23 MHz) लॉन्च से पहले ही ज़रा धीमी सेट की जाती है।
+• भारत का अपना सिस्टम: नाविक (NavIC) 🇮🇳
+
+📷 असली तस्वीरें (Wikimedia Commons): "Blue Marble 2002" (NASA, Public domain) · "GPS Block IIIA" (U.S. Air Force, Public domain) · "NIST-F2 cesium fountain atomic clock" (NIST, Public domain) · "Albert Einstein Head" (Oren Jack Turner, 1947, Public domain)
+3D दृश्य समझाने के लिए बनाए गए हैं; दूरियाँ स्केल पर नहीं हैं।
+
+#GPS #KaiseChaltaHai #science #einstein #navic #isro #space #satellite #shorts
+
+TAGS
+gps kaise kaam karta hai, how gps works, gps hindi, gps satellite, gps relativity einstein, atomic clock gps, navic, isro navic, trilateration, science shorts hindi, kaise chalta hai, 3d explainer hindi, space science hindi, satellite kaise kaam karta hai
+
+HASHTAGS
+#GPS #KaiseChaltaHai #science #einstein #shorts
+
+PIN COMMENT
+अगली बार मैप खोलो तो याद रखना — आपकी जेब में आइंस्टीन काम कर रहे हैं 😄 अगला वीडियो किस पर चाहिए — कोहरे में प्लेन लैंडिंग, पनडुब्बी या कवच? 👇
