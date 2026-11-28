@@ -147,7 +147,7 @@ export function film(CFG) {
     camAt(t); const kk = k;
     camera.fov = fov; camera.position.copy(eye); camera.lookAt(look); camera.updateMatrixWorld(); camera.updateProjectionMatrix();
     if (n > 1) {
-      const F = eye.distanceTo(look), lens = Math.min(0.02, 0.006 * F) * (F > 60 ? 0.2 : 1) * (envNow.dof ?? 1);
+      const F = eye.distanceTo(look), lens = CFG.lens === false ? 0 : Math.min(0.02, 0.006 * F) * (F > 60 ? 0.2 : 1) * (envNow.dof ?? 1);
       const a = Math.sqrt(halton(k + 1, 2)) * lens, b = halton(k + 1, 3) * TAU, lx = Math.cos(b) * a, ly = Math.sin(b) * a;
       right.setFromMatrixColumn(camera.matrixWorld, 0); up.setFromMatrixColumn(camera.matrixWorld, 1);
       camera.position.addScaledVector(right, lx).addScaledVector(up, ly); camera.updateMatrixWorld();
@@ -227,7 +227,7 @@ export function film(CFG) {
         c = aces(c); c *= mix(1.0, 0.5, smoothstep(0.3, 0.95, length(d * vec2(0.85, 1.0)) * 1.45)); c = srgb(c);
         c += (h(vUv * 1000.0) - 0.5) * 0.035 * (1.0 - 0.5 * dot(c, vec3(0.33)));
         vec4 k = texture2D(cap, vUv); c = c * (1.0 - k.a) + k.rgb; gl_FragColor = vec4(c, 1.0); }`, depthTest: false, depthWrite: false }));
-  const SHUTTER = 0.5 / 30;
+  const SHUTTER = CFG.shutter ?? 0.5 / 30;
   function pose(t) { for (const f of anims) f(t); }
   function renderAt(t, n = 1) {
     pose(t); shoot(t, 0, 1); const ex = env(t); drawOverlay(t);
