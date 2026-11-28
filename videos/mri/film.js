@@ -24,7 +24,7 @@ add(new THREE.PlaneGeometry(11, 3.4).rotateY(-Math.PI / 2), wallM, 5, 1.7, 1.5, 
 for (const [z0, z1] of [[-4, -0.2], [2.6, 7]]) add(new THREE.PlaneGeometry(z1 - z0, 3.4).rotateY(Math.PI / 2), wallM, -5, 1.7, (z0 + z1) / 2, scene, false);
 add(new THREE.PlaneGeometry(2.8, 0.9).rotateY(Math.PI / 2), wallM, -5, 0.45, 1.2, scene, false); add(new THREE.PlaneGeometry(2.8, 1.2).rotateY(Math.PI / 2), wallM, -5, 2.8, 1.2, scene, false);
 add(new THREE.PlaneGeometry(2.8, 1.3).rotateY(Math.PI / 2), new THREE.MeshPhysicalMaterial({ color: 0x9fc4d8, transparent: true, opacity: 0.18, roughness: 0.02, envMap: ENV, envMapIntensity: 0.8, depthWrite: false }), -4.98, 1.55, 1.2, scene, false);
-add(new THREE.BoxGeometry(0.12, 1.42, 2.92), mat(0x8a96a3, 0.5, 0.4), -5, 1.55, 1.2, scene, false).scale.set(1, 1, 1);
+for (const y of [0.9, 2.2]) add(new THREE.BoxGeometry(0.14, 0.06, 2.92), mat(0x8a96a3, 0.5, 0.4), -5, y, 1.2, scene, false); for (const z of [-0.2, 2.6]) add(new THREE.BoxGeometry(0.14, 1.36, 0.06), mat(0x8a96a3, 0.5, 0.4), -5, 1.55, z, scene, false);
 // control room behind the window: desk, monitor (scan builds up here), keyboard
 add(new THREE.PlaneGeometry(4, 6).rotateX(-Math.PI / 2), mat(0x7a7e86, 0.7), -7, 0.001, 1.2, scene, false);
 add(new THREE.PlaneGeometry(6, 3.4).rotateY(Math.PI / 2), mat(0x3a4250, 0.9), -8.6, 1.7, 1.2, scene, false);
@@ -164,7 +164,7 @@ const KEYS = [
   [12.92, 12.92, m(-0.8, 2.3, 8.2), m(0, 1.5, 0), 44, MIC], [12.95, 17.0, m(0.8, 1.9, 8.8), m(0, 1.5, 0), 44, MIC],
   [17.1, 19.9, m(0, 1.7, 9.4), m(0, 1.5, 0), 44, MIC], [19.94, 23.9, m(-1.2, 2.4, 9.0), m(0, 1.7, 0), 46, MIC],
   [24.08, 24.08, m(0.6, 2.6, 10.2), m(0, 2.5, 0), 48, MIC], [24.1, 27.5, m(-0.4, 2.8, 9.6), m(0, 2.6, 0), 48, MIC],
-  [27.64, 27.64, V(-3.3, 1.55, 1.45), V(-6.25, 1.42, 1.2), 34, ROOM], [27.7, 33.2, V(-3.95, 1.48, 1.25), V(-6.25, 1.42, 1.2), 32, ROOM],
+  [27.64, 27.64, V(-2.3, 1.65, 2.3), V(-6.25, 1.35, 1.2), 38, ROOM], [27.7, 33.2, V(-2.9, 1.55, 1.75), V(-6.25, 1.38, 1.2), 36, ROOM],
   [33.38, 33.38, V(2.55, 1.95, 2.65), V(0, 1.12, 0), 40, XR], [33.4, 39.8, V(3.05, 1.45, 0.7), V(0, 1.12, 0), 38, XR],
   [39.98, 39.98, V(1.9, 1.5, 3.5), V(0, 1.15, 0.4), 44, XR], [40.0, 46.4, V(2.5, 1.55, 3.05), V(0, 1.15, 0.2), 42, XR],
   [46.58, 46.58, V(0, 1.4, 4.3), V(0, 1.15, 0), 40, ROOM], [46.6, 50.3, V(0.7, 1.38, 3.3), V(0, 1.15, 0), 40, ROOM],
