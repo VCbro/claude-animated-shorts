@@ -59,7 +59,9 @@ Paths start at `videos/` in this repo's folder. The MP4 files are not in GitHub 
 | [ ] | 37 | 🚆 कवच: टक्कर कैसे रुकती है | 52 s | `kavach/deliver/kavach.mp4` | `kavach/deliver/youtube.txt` |
 | [ ] | 38 | 📲 UPI: 2 सेकंड में पैसा कैसे पहुँचता है | 52 s | `upi/deliver/upi.mp4` | `upi/deliver/youtube.txt` |
 | [ ] | 39 | 🚇 बिना ड्राइवर की मेट्रो | 52 s | `metro/deliver/metro.mp4` | `metro/deliver/youtube.txt` |
+| [ ] | 40 | 🧲 MRI मशीन के अंदर | 52 s | `mri/deliver/mri.mp4` | `mri/deliver/youtube.txt` |
+| [ ] | 41 | 🔋 EV बैटरी में आग क्यों | 52 s | `evfire/deliver/evfire.mp4` | `evfire/deliver/youtube.txt` |
 
-Voices ready, videos not made yet (say the number to build): #7 MRI, #8 EV बैटरी, #9 इजेक्शन सीट, #10 पंबन ब्रिज (`kct3d_scripts/voices/`).
+Voices ready, videos not made yet (say the number to build): #9 इजेक्शन सीट, #10 पंबन ब्रिज (`kct3d_scripts/voices/`).
 
 Not in the list: `petrol-ka-safar/deliver/petrol_ka_safar_preview.mp4` (a preview of #17). The Diljit Part 1 and Part 2 work is paused; it isn't a finished video.
