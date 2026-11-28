@@ -1,0 +1,2 @@
+mri_machine.jpg: "MRI Scanner at Narayana Multispeciality Hospital, Jaipur.jpg", CC BY-SA 4.0, via Wikimedia Commons
+mri_scan.jpg: "Sagittal MRI scan of brain of patient with Chiari malformation.jpg", CC BY 2.0, via Wikimedia Commons

@@ -1,0 +1,25 @@
+TITLE
+एक छोटा सेल… और पूरी गाड़ी जल गई! 🔥 EV बैटरी में आग क्यों लगती है? #shorts
+
+DESCRIPTION
+EV बैटरी में आग क्यों लगती है? 🔋🔥
+• EV का बैटरी पैक बहुत सारे लिथियम-आयन सेल से बनता है। कई गाड़ियों में ये हज़ारों छोटे सेल होते हैं।
+• हर सेल के अंदर एक + परत (कैथोड), एक − परत (एनोड), और बीच में बेहद पतली दीवार, यानी सेपरेटर होती है।
+• सेल को चोट लगे, ज़्यादा चार्ज हो जाए या ज़्यादा गरम हो जाए, तो सेपरेटर पिघल सकता है। अंदर शॉर्ट सर्किट होता है और गर्मी बनती है।
+• गर्मी से अंदर का केमिकल और गरम होता जाता है। इसे थर्मल रनअवे कहते हैं। एक सेल सैकड़ों डिग्री तक पहुँचकर बगल वाले सेल को गरम करता है, और चेन-रिएक्शन शुरू हो जाता है।
+• इसीलिए हर EV में BMS (बैटरी मैनेजमेंट सिस्टम) होता है, जो हर सेल का तापमान और चार्ज देखता है और गड़बड़ होने पर करंट बंद कर देता है।
+• आप क्या करें: कंपनी का चार्जर इस्तेमाल करें, बैटरी को चोट से बचाएँ, और फूली या गरम बैटरी को चार्ज न करें।
+
+📷 असली तस्वीरें (Wikimedia Commons): EV battery Li-ion pack 16 kWh (Blaafarveværket museum, Norway), Wolfmann, CC BY 4.0 · "Lithium-Ion Cell cylindric", CC BY-SA 3.0
+3D दृश्य समझाने के लिए बनाए गए हैं।
+
+#KaiseChaltaHai #EV #ElectricVehicle #battery #safety #shorts
+
+TAGS
+ev battery fire, ev me aag kyu lagti hai, thermal runaway, lithium ion battery, battery separator, bms battery management system, electric car safety, electric scooter fire, kaise chalta hai, 3d explainer hindi, technology shorts hindi
+
+HASHTAGS
+#KaiseChaltaHai #EV #battery #safety #shorts
+
+PIN COMMENT
+आप अपनी EV या स्कूटर कहाँ चार्ज करते हो? 🔋 ये वीडियो उनको भेजो जिनके पास EV है 👇
